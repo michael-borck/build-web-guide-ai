@@ -1,5 +1,9 @@
 # Build Web, Guide AI: Business Web Development with AI
 
+<!-- BADGES:START -->
+[![book](https://img.shields.io/badge/-book-795548?style=flat-square)](https://github.com/topics/book) [![ai-assisted-development](https://img.shields.io/badge/-ai--assisted--development-blue?style=flat-square)](https://github.com/topics/ai-assisted-development) [![business-development](https://img.shields.io/badge/-business--development-blue?style=flat-square)](https://github.com/topics/business-development) [![css](https://img.shields.io/badge/-css-1572b6?style=flat-square)](https://github.com/topics/css) [![edtech](https://img.shields.io/badge/-edtech-4caf50?style=flat-square)](https://github.com/topics/edtech) [![html](https://img.shields.io/badge/-html-e34f26?style=flat-square)](https://github.com/topics/html) [![javascript](https://img.shields.io/badge/-javascript-f7df1e?style=flat-square)](https://github.com/topics/javascript) [![react](https://img.shields.io/badge/-react-61dafb?style=flat-square)](https://github.com/topics/react) [![web-development](https://img.shields.io/badge/-web--development-blue?style=flat-square)](https://github.com/topics/web-development) [![wordpress](https://img.shields.io/badge/-wordpress-blue?style=flat-square)](https://github.com/topics/wordpress)
+<!-- BADGES:END -->
+
 A practical guide to web development that embraces AI as your development partner while building real business solutions with HTML, CSS, JavaScript, WordPress, and React.
 
 ## About This Book
