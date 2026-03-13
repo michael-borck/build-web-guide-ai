@@ -7,6 +7,7 @@ book:
   subtitle: "Business Web Development with AI"
   author: "Michael Borck"
   date: today
+  license: "CC BY 4.0 (content), MIT (code examples)"
   description: "A practical approach to web development that embraces AI as your development partner while building real business solutions with HTML, CSS, JavaScript, WordPress, and React."
   cover-image: cover.png
   site-url: https://michael-borck.github.io/build-web-guide-ai
@@ -22,36 +23,36 @@ book:
 
     - part: "Part 0: Your AI Development Partnership"
       chapters:
-        - chapter-00-ai-web-partner.qmd
+        - chapter-ai-web-partner.qmd
 
     - part: "Part I: Web Foundations"
       chapters:
-        - chapter-01-structure.qmd
-        - chapter-02-presentation.qmd
-        - chapter-03-behaviour.qmd
-        - chapter-04-connection.qmd
+        - chapter-structure.qmd
+        - chapter-presentation.qmd
+        - chapter-behaviour.qmd
+        - chapter-connection.qmd
         - projects/project-portfolio.qmd
 
     - part: "Part II: Content Management for Business"
       chapters:
-        - chapter-05-why-cms.qmd
-        - chapter-06-wordpress-platform.qmd
-        - chapter-07-extending-platforms.qmd
-        - chapter-08-headless-architecture.qmd
+        - chapter-why-cms.qmd
+        - chapter-wordpress-platform.qmd
+        - chapter-extending-platforms.qmd
+        - chapter-headless-architecture.qmd
         - projects/project-business-site.qmd
 
     - part: "Part III: Modern Frontend Development"
       chapters:
-        - chapter-09-component-thinking.qmd
-        - chapter-10-rapid-development.qmd
-        - chapter-11-professional-practices.qmd
+        - chapter-component-thinking.qmd
+        - chapter-rapid-development.qmd
+        - chapter-professional-practices.qmd
         - projects/project-react-integration.qmd
 
     - part: "Part IV: The Professional Developer"
       chapters:
-        - chapter-12-emerging-technologies.qmd
-        - chapter-13-development-career.qmd
-        - chapter-14-ai-era-developer.qmd
+        - chapter-emerging-technologies.qmd
+        - chapter-development-career.qmd
+        - chapter-ai-era-developer.qmd
 
     - references.qmd
     - about-author.qmd
@@ -83,6 +84,14 @@ format:
     number-sections: true
     number-depth: 2
     highlight-style: github
+  pdf:
+    documentclass: book
+    toc: true
+    number-sections: true
+    colorlinks: true
+  epub:
+    toc: true
+    toc-depth: 3
 
 crossref:
   chapters: true

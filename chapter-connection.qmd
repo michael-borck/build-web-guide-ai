@@ -70,7 +70,7 @@ JSON (JavaScript Object Notation) is readable by humans and easily parsed by mac
 
 ```
 Continue the conversation:
-Show me what a JSON response might look like for a product catalog
+Show me what a JSON response might look like for a product catalogue
 with three items. Each item has a name, price, description, and
 whether it's in stock.
 ```

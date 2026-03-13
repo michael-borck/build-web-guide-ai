@@ -185,7 +185,7 @@ function calculateDiscount(price, percentage) {
 }
 
 // Works at runtime, but wrong results
-calculateDiscount("100", "10");  // "100" repeated 0.1 times = NaN-ish behavior
+calculateDiscount("100", "10");  // "100" repeated 0.1 times = NaN-ish behaviour
 calculateDiscount(100);          // NaN (percentage is undefined)
 ```
 
