@@ -1,0 +1,2177 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="A practical approach to web development that embraces AI as your development partner while building real business solutions with HTML, CSS, JavaScript, WordPress, and React.">
+
+<title>8&nbsp; WordPress as Platform – Build Web, Guide AI</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./chapter-extending-platforms.html" rel="next">
+<link href="./chapter-why-cms.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-7ac2f9da8c2617a4fdd15004b4601015.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-d5c24611f24218015e8fca33dc27a3d3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-5843e84163a10bdcc16362dd56f5f38a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-d5c24611f24218015e8fca33dc27a3d3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="assets/custom.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter-why-cms.html">Part II: Content Management for Business</a></li><li class="breadcrumb-item"><a href="./chapter-wordpress-platform.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">WordPress as Platform</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Build Web, Guide AI</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/michael-borck/build-web-guide-ai" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+    <a href="https://github.com/michael-borck/build-web-guide-ai" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./copyright.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Copyright</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./reading-list.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Weekly Reading List</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./acknowledgments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Acknowledgments</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part 0: Your AI Development Partnership</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-ai-web-partner.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Understanding Your AI Web Development Partner</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I: Web Foundations</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-presentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-behaviour.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Behaviour: JavaScript as User Interaction</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-connection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Connection: APIs as Business Integration</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./projects/project-portfolio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Project: Portfolio Website</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II: Content Management for Business</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-why-cms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Why CMS? The Business Value of Managed Content</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-wordpress-platform.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">WordPress as Platform</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-extending-platforms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Extending Platforms</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-headless-architecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Headless Architecture</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./projects/project-business-site.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Project: Business Website with WordPress</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III: Modern Frontend Development</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-component-thinking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Component Thinking: React</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-rapid-development.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Rapid Development: CSS Frameworks</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-professional-practices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Professional Practices</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./projects/project-react-integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Project: React Integration</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV: The Professional Developer</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-emerging-technologies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Evaluating Emerging Technologies</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-development-career.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Your Development Career</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-ai-era-developer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">The AI-Era Developer</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./about-author.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About the Author</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-concept-first" id="toc-the-concept-first" class="nav-link active" data-scroll-target="#the-concept-first"><span class="header-section-number">8.1</span> The Concept First</a></li>
+  <li><a href="#understanding-through-ecosystems" id="toc-understanding-through-ecosystems" class="nav-link" data-scroll-target="#understanding-through-ecosystems"><span class="header-section-number">8.2</span> Understanding Through Ecosystems</a></li>
+  <li><a href="#discovering-wordpress-with-your-ai-partner" id="toc-discovering-wordpress-with-your-ai-partner" class="nav-link" data-scroll-target="#discovering-wordpress-with-your-ai-partner"><span class="header-section-number">8.3</span> Discovering WordPress with Your AI Partner</a>
+  <ul class="collapse">
+  <li><a href="#exploration-1-platform-vs-software" id="toc-exploration-1-platform-vs-software" class="nav-link" data-scroll-target="#exploration-1-platform-vs-software">Exploration 1: Platform vs Software</a></li>
+  <li><a href="#exploration-2-theme-and-plugin-evaluation" id="toc-exploration-2-theme-and-plugin-evaluation" class="nav-link" data-scroll-target="#exploration-2-theme-and-plugin-evaluation">Exploration 2: Theme and Plugin Evaluation</a></li>
+  <li><a href="#exploration-3-wordpress-architecture" id="toc-exploration-3-wordpress-architecture" class="nav-link" data-scroll-target="#exploration-3-wordpress-architecture">Exploration 3: WordPress Architecture</a></li>
+  </ul></li>
+  <li><a href="#from-concept-to-code" id="toc-from-concept-to-code" class="nav-link" data-scroll-target="#from-concept-to-code"><span class="header-section-number">8.4</span> From Concept to Code</a>
+  <ul class="collapse">
+  <li><a href="#local-development-with-localwp" id="toc-local-development-with-localwp" class="nav-link" data-scroll-target="#local-development-with-localwp">Local Development with LocalWP</a></li>
+  <li><a href="#the-wordpress-admin-interface" id="toc-the-wordpress-admin-interface" class="nav-link" data-scroll-target="#the-wordpress-admin-interface">The WordPress Admin Interface</a></li>
+  <li><a href="#posts-vs-pages" id="toc-posts-vs-pages" class="nav-link" data-scroll-target="#posts-vs-pages">Posts vs Pages</a></li>
+  <li><a href="#understanding-themes" id="toc-understanding-themes" class="nav-link" data-scroll-target="#understanding-themes">Understanding Themes</a></li>
+  <li><a href="#the-template-hierarchy" id="toc-the-template-hierarchy" class="nav-link" data-scroll-target="#the-template-hierarchy">The Template Hierarchy</a></li>
+  <li><a href="#basic-customisation" id="toc-basic-customisation" class="nav-link" data-scroll-target="#basic-customisation">Basic Customisation</a></li>
+  <li><a href="#settings-that-matter" id="toc-settings-that-matter" class="nav-link" data-scroll-target="#settings-that-matter">Settings That Matter</a></li>
+  </ul></li>
+  <li><a href="#building-your-mental-model" id="toc-building-your-mental-model" class="nav-link" data-scroll-target="#building-your-mental-model"><span class="header-section-number">8.5</span> Building Your Mental Model</a>
+  <ul class="collapse">
+  <li><a href="#the-wordpress-stack" id="toc-the-wordpress-stack" class="nav-link" data-scroll-target="#the-wordpress-stack">The WordPress Stack</a></li>
+  <li><a href="#content-separation" id="toc-content-separation" class="nav-link" data-scroll-target="#content-separation">Content Separation</a></li>
+  <li><a href="#the-hook-system" id="toc-the-hook-system" class="nav-link" data-scroll-target="#the-hook-system">The Hook System</a></li>
+  </ul></li>
+  <li><a href="#business-applications" id="toc-business-applications" class="nav-link" data-scroll-target="#business-applications"><span class="header-section-number">8.6</span> Business Applications</a>
+  <ul class="collapse">
+  <li><a href="#market-demand" id="toc-market-demand" class="nav-link" data-scroll-target="#market-demand">Market Demand</a></li>
+  <li><a href="#cost-structure" id="toc-cost-structure" class="nav-link" data-scroll-target="#cost-structure">Cost Structure</a></li>
+  <li><a href="#flexibility" id="toc-flexibility" class="nav-link" data-scroll-target="#flexibility">Flexibility</a></li>
+  <li><a href="#when-wordpress-isnt-right" id="toc-when-wordpress-isnt-right" class="nav-link" data-scroll-target="#when-wordpress-isnt-right">When WordPress Isn’t Right</a></li>
+  </ul></li>
+  <li><a href="#practice-exercises" id="toc-practice-exercises" class="nav-link" data-scroll-target="#practice-exercises"><span class="header-section-number">8.7</span> Practice Exercises</a>
+  <ul class="collapse">
+  <li><a href="#exercise-6.1-local-setup-level-1" id="toc-exercise-6.1-local-setup-level-1" class="nav-link" data-scroll-target="#exercise-6.1-local-setup-level-1">Exercise 6.1: Local Setup (Level 1)</a></li>
+  <li><a href="#exercise-6.2-theme-exploration-level-2" id="toc-exercise-6.2-theme-exploration-level-2" class="nav-link" data-scroll-target="#exercise-6.2-theme-exploration-level-2">Exercise 6.2: Theme Exploration (Level 2)</a></li>
+  <li><a href="#exercise-6.3-content-structure-level-3" id="toc-exercise-6.3-content-structure-level-3" class="nav-link" data-scroll-target="#exercise-6.3-content-structure-level-3">Exercise 6.3: Content Structure (Level 3)</a></li>
+  <li><a href="#exercise-6.4-theme-evaluation-report-level-4" id="toc-exercise-6.4-theme-evaluation-report-level-4" class="nav-link" data-scroll-target="#exercise-6.4-theme-evaluation-report-level-4">Exercise 6.4: Theme Evaluation Report (Level 4)</a></li>
+  <li><a href="#exercise-6.5-platform-comparison-level-5" id="toc-exercise-6.5-platform-comparison-level-5" class="nav-link" data-scroll-target="#exercise-6.5-platform-comparison-level-5">Exercise 6.5: Platform Comparison (Level 5)</a></li>
+  </ul></li>
+  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary"><span class="header-section-number">8.8</span> Chapter Summary</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">8.9</span> Reflection</a></li>
+  <li><a href="#your-learning-journal" id="toc-your-learning-journal" class="nav-link" data-scroll-target="#your-learning-journal"><span class="header-section-number">8.10</span> Your Learning Journal</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">8.11</span> Next Steps</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/build-web-guide-ai/edit/main/chapter-wordpress-platform.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter-why-cms.html">Part II: Content Management for Business</a></li><li class="breadcrumb-item"><a href="./chapter-wordpress-platform.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">WordPress as Platform</span></a></li></ol></nav>
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title"><span id="sec-wordpress-platform" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">WordPress as Platform</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="the-concept-first" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="the-concept-first"><span class="header-section-number">8.1</span> The Concept First</h2>
+<p>WordPress powers over 40% of the web. That’s an extraordinary number—nearly half of all websites run on a single platform. Understanding why reveals something important about how technology decisions are made in business.</p>
+<p>WordPress isn’t just “blogging software.” It’s a <strong>platform</strong>—a foundation that others build upon. The distinction matters:</p>
+<ul>
+<li><strong>Software</strong> does specific things. You use it as-is.</li>
+<li><strong>A platform</strong> provides a foundation. An ecosystem builds on top of it.</li>
+</ul>
+<p>Your smartphone is a platform. The core provides basics (calls, settings), but the app ecosystem makes it powerful. You don’t judge your phone by its built-in apps alone—you judge it by what you can do with the apps others have built.</p>
+<p>WordPress works the same way. The core handles content management. Themes control appearance. Plugins add functionality. The ecosystem—over 60,000 plugins, thousands of themes—is what makes WordPress suitable for almost any website.</p>
+<p>Learning WordPress means learning to evaluate and assemble these pieces professionally.</p>
+</section>
+<section id="understanding-through-ecosystems" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="understanding-through-ecosystems"><span class="header-section-number">8.2</span> Understanding Through Ecosystems</h2>
+<p>Imagine opening a restaurant. You could:</p>
+<p><strong>Option A</strong>: Build everything from scratch. Design your own stoves, create your own recipes, invent your own point-of-sale system.</p>
+<p><strong>Option B</strong>: Use standard commercial kitchen equipment, adapt proven recipes, install established POS software, then focus your creativity on your unique menu and dining experience.</p>
+<p>Option B gets you open faster, with tested components, and lets you focus on what makes your restaurant special. This is platform thinking.</p>
+<p>WordPress provides the kitchen equipment. Themes provide the interior design. Plugins provide specialised tools (reservation systems, online ordering). You focus on your content and business logic.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>The Platform Evaluation Question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When evaluating any platform, ask: “How active is the ecosystem?” A platform with a dying ecosystem becomes a liability. WordPress’s ecosystem is massive and active—a significant factor in its dominance.</p>
+</div>
+</div>
+</section>
+<section id="discovering-wordpress-with-your-ai-partner" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="discovering-wordpress-with-your-ai-partner"><span class="header-section-number">8.3</span> Discovering WordPress with Your AI Partner</h2>
+<section id="exploration-1-platform-vs-software" class="level3">
+<h3 class="anchored" data-anchor-id="exploration-1-platform-vs-software">Exploration 1: Platform vs Software</h3>
+<p>Let’s clarify the distinction between platforms and ordinary software:</p>
+<pre><code>Ask your AI:
+What makes something a "platform" versus just "software"? Compare
+WordPress and Microsoft Word. Both help create documents. Why is
+WordPress a platform while Word is (primarily) software?</code></pre>
+<p>This should reveal characteristics of platforms:</p>
+<ul>
+<li>Third parties build on them</li>
+<li>An ecosystem of extensions exists</li>
+<li>The value increases as the ecosystem grows</li>
+<li>Users can customise without changing the core</li>
+</ul>
+<pre><code>Continue the conversation:
+What risks come with choosing a platform? What happens if the
+ecosystem declines or the platform changes direction?</code></pre>
+</section>
+<section id="exploration-2-theme-and-plugin-evaluation" class="level3">
+<h3 class="anchored" data-anchor-id="exploration-2-theme-and-plugin-evaluation">Exploration 2: Theme and Plugin Evaluation</h3>
+<p>The WordPress ecosystem contains gems and garbage. Professional evaluation skills are essential:</p>
+<pre><code>Ask your AI:
+How do I evaluate whether a WordPress theme or plugin is trustworthy
+and well-built? What specific signals indicate quality, and what red
+flags should make me cautious?</code></pre>
+<p>Quality signals include:</p>
+<ul>
+<li>Active development (recent updates)</li>
+<li>Large install base with good reviews</li>
+<li>Responsive support</li>
+<li>Clean code (if you can inspect it)</li>
+<li>Clear documentation</li>
+</ul>
+<p>Red flags include:</p>
+<ul>
+<li>No updates in over a year</li>
+<li>Few installations despite being old</li>
+<li>Poor reviews mentioning security or support</li>
+<li>Abandoned by developer</li>
+<li>Excessive permission requests</li>
+</ul>
+<pre><code>Continue the conversation:
+If I find two plugins that do the same thing, one with 100,000
+installs and one with 1,000 installs, is the popular one always
+better? When might the less popular option be the right choice?</code></pre>
+</section>
+<section id="exploration-3-wordpress-architecture" class="level3">
+<h3 class="anchored" data-anchor-id="exploration-3-wordpress-architecture">Exploration 3: WordPress Architecture</h3>
+<p>Understanding how WordPress is built helps with troubleshooting and customisation:</p>
+<pre><code>Ask your AI:
+Explain WordPress's architecture using a restaurant analogy. The
+database stores something, themes do something, plugins do something,
+and the WordPress core coordinates. What's each part doing in
+restaurant terms?</code></pre>
+<p>A typical analogy might map:</p>
+<ul>
+<li>Database = Storage (pantry, inventory, recipes)</li>
+<li>Core = Kitchen operations (combining ingredients into dishes)</li>
+<li>Themes = Dining room design (how food is presented)</li>
+<li>Plugins = Specialised equipment (espresso machine, wine fridge)</li>
+</ul>
+<pre><code>Continue the conversation:
+When something goes wrong on a WordPress site, how does understanding
+architecture help diagnose the problem? Give me an example.</code></pre>
+</section>
+</section>
+<section id="from-concept-to-code" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="from-concept-to-code"><span class="header-section-number">8.4</span> From Concept to Code</h2>
+<p>Let’s set up WordPress locally and understand its core components.</p>
+<section id="local-development-with-localwp" class="level3">
+<h3 class="anchored" data-anchor-id="local-development-with-localwp">Local Development with LocalWP</h3>
+<p>Never develop directly on a live website. Local development means:</p>
+<ul>
+<li>You can experiment without breaking anything</li>
+<li>You don’t need internet access</li>
+<li>Changes are instant (no upload time)</li>
+<li>You can test risky changes safely</li>
+</ul>
+<p><strong>LocalWP</strong> (formerly Local by Flywheel) is the simplest way to run WordPress locally:</p>
+<ol type="1">
+<li>Download from localwp.com</li>
+<li>Install and open</li>
+<li>Click “Create a new site”</li>
+<li>Choose a name, username, and password</li>
+<li>Wait for setup to complete</li>
+</ol>
+<p>That’s it. You now have a WordPress site running on your computer.</p>
+<p>LocalWP handles the complexity—PHP, MySQL, web server—behind a simple interface.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Alternatives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Other local development options include XAMPP, MAMP, and Docker-based setups. LocalWP is recommended for beginners because it’s WordPress-specific and handles configuration automatically.</p>
+</div>
+</div>
+</section>
+<section id="the-wordpress-admin-interface" class="level3">
+<h3 class="anchored" data-anchor-id="the-wordpress-admin-interface">The WordPress Admin Interface</h3>
+<p>Click “WP Admin” in LocalWP to access your site’s dashboard. This is the content management interface—where non-developers spend their time.</p>
+<p><strong>Dashboard Areas:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Area</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Dashboard</td>
+<td>Overview and quick actions</td>
+</tr>
+<tr class="even">
+<td>Posts</td>
+<td>Blog posts and news</td>
+</tr>
+<tr class="odd">
+<td>Media</td>
+<td>Images, files, uploads</td>
+</tr>
+<tr class="even">
+<td>Pages</td>
+<td>Static pages (About, Contact)</td>
+</tr>
+<tr class="odd">
+<td>Comments</td>
+<td>Reader comments (if enabled)</td>
+</tr>
+<tr class="even">
+<td>Appearance</td>
+<td>Themes, menus, widgets</td>
+</tr>
+<tr class="odd">
+<td>Plugins</td>
+<td>Add functionality</td>
+</tr>
+<tr class="even">
+<td>Users</td>
+<td>Account management</td>
+</tr>
+<tr class="odd">
+<td>Settings</td>
+<td>Site configuration</td>
+</tr>
+</tbody>
+</table>
+<p>Spend time exploring each area. Understanding the admin interface is essential—this is what you’ll train clients to use.</p>
+</section>
+<section id="posts-vs-pages" class="level3">
+<h3 class="anchored" data-anchor-id="posts-vs-pages">Posts vs Pages</h3>
+<p>WordPress has two main content types by default:</p>
+<p><strong>Posts</strong> are:</p>
+<ul>
+<li>Time-based (have publish dates)</li>
+<li>Categorised and tagged</li>
+<li>Appear in feeds and archives</li>
+<li>Good for: Blog articles, news, updates</li>
+</ul>
+<p><strong>Pages</strong> are:</p>
+<ul>
+<li>Timeless (no dates emphasised)</li>
+<li>Hierarchical (can have parent pages)</li>
+<li>Not categorised</li>
+<li>Good for: About, Contact, Services, static content</li>
+</ul>
+<p>The distinction isn’t technical capability—it’s organisational. Posts answer “What’s new?” Pages answer “What do we do?”</p>
+</section>
+<section id="understanding-themes" class="level3">
+<h3 class="anchored" data-anchor-id="understanding-themes">Understanding Themes</h3>
+<p>A WordPress theme controls:</p>
+<ul>
+<li>Visual appearance (colours, fonts, layout)</li>
+<li>Template structure (what appears where)</li>
+<li>Available features (some themes add functionality)</li>
+</ul>
+<p>The theme doesn’t contain your content—it presents your content. Change themes, and content remains while appearance transforms.</p>
+<p><strong>Exploring Themes:</strong></p>
+<ol type="1">
+<li>Go to Appearance → Themes</li>
+<li>Click “Add New”</li>
+<li>Browse featured, popular, or search for specific needs</li>
+<li>Use “Live Preview” to see a theme with your content</li>
+<li>Activate when ready</li>
+</ol>
+<p><strong>Theme Evaluation Criteria:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Factor</th>
+<th>Questions to Ask</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Purpose fit</td>
+<td>Is this designed for sites like yours?</td>
+</tr>
+<tr class="even">
+<td>Responsiveness</td>
+<td>Does it work well on mobile?</td>
+</tr>
+<tr class="odd">
+<td>Speed</td>
+<td>Is it lightweight or bloated?</td>
+</tr>
+<tr class="even">
+<td>Customisation</td>
+<td>Can you change colours/fonts without code?</td>
+</tr>
+<tr class="odd">
+<td>Updates</td>
+<td>Is it actively maintained?</td>
+</tr>
+<tr class="even">
+<td>Reviews</td>
+<td>What do other users say?</td>
+</tr>
+<tr class="odd">
+<td>Support</td>
+<td>Can you get help if needed?</td>
+</tr>
+</tbody>
+</table>
+<pre><code>Ask your AI:
+I'm building a site for a local bakery. What should I look for in a
+WordPress theme? What features matter, and what should I avoid?</code></pre>
+</section>
+<section id="the-template-hierarchy" class="level3">
+<h3 class="anchored" data-anchor-id="the-template-hierarchy">The Template Hierarchy</h3>
+<p>WordPress uses a template hierarchy to determine which template file displays content. Understanding this helps when you need to customise.</p>
+<pre><code>Specific                                      General
+───────────────────────────────────────────────────────►
+
+Single Post:
+single-post-{slug}.php → single-post.php → single.php → singular.php → index.php
+
+Single Page:
+page-{slug}.php → page-{id}.php → page.php → singular.php → index.php
+
+Archive:
+category-{slug}.php → category.php → archive.php → index.php</code></pre>
+<p>WordPress looks for the most specific template first, falling back to more general ones. This allows themes to have special templates for specific pages while using defaults for everything else.</p>
+<pre><code>Ask your AI:
+If I want my "About" page to look different from other pages, what
+file would I create in my theme? Walk me through how WordPress
+determines which template to use.</code></pre>
+</section>
+<section id="basic-customisation" class="level3">
+<h3 class="anchored" data-anchor-id="basic-customisation">Basic Customisation</h3>
+<p>Most modern themes include a Customiser (Appearance → Customise) for no-code adjustments:</p>
+<ul>
+<li>Site identity (logo, tagline)</li>
+<li>Colours</li>
+<li>Typography (some themes)</li>
+<li>Header/footer layout</li>
+<li>Homepage settings</li>
+<li>Menus</li>
+</ul>
+<p>The Customiser shows live previews—experiment freely before publishing changes.</p>
+<p><strong>Menus:</strong></p>
+<ol type="1">
+<li>Appearance → Menus</li>
+<li>Create a new menu</li>
+<li>Add pages, posts, custom links, or categories</li>
+<li>Arrange by dragging</li>
+<li>Assign to a theme location (Primary, Footer, etc.)</li>
+</ol>
+<p><strong>Widgets (if your theme uses them):</strong></p>
+<ol type="1">
+<li>Appearance → Widgets</li>
+<li>Drag widgets to sidebar/footer areas</li>
+<li>Configure each widget’s settings</li>
+</ol>
+</section>
+<section id="settings-that-matter" class="level3">
+<h3 class="anchored" data-anchor-id="settings-that-matter">Settings That Matter</h3>
+<p>In Settings, pay attention to:</p>
+<p><strong>General:</strong></p>
+<ul>
+<li>Site Title and Tagline (appears in browser tabs, search results)</li>
+<li>Timezone (affects scheduled posts)</li>
+</ul>
+<p><strong>Reading:</strong></p>
+<ul>
+<li>Homepage displays: Latest posts vs.&nbsp;static page</li>
+<li>Posts per page</li>
+</ul>
+<p><strong>Permalinks:</strong></p>
+<ul>
+<li>URL structure: Choose “Post name” for clean URLs (<code>/about/</code> instead of <code>/?p=123</code>)</li>
+<li>Change this early—changing later breaks existing links</li>
+</ul>
+<p><strong>Discussion:</strong></p>
+<ul>
+<li>Comment settings (enable/disable, moderation rules)</li>
+</ul>
+</section>
+</section>
+<section id="building-your-mental-model" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="building-your-mental-model"><span class="header-section-number">8.5</span> Building Your Mental Model</h2>
+<section id="the-wordpress-stack" class="level3">
+<h3 class="anchored" data-anchor-id="the-wordpress-stack">The WordPress Stack</h3>
+<pre><code>┌─────────────────────────────────────────┐
+│  Browser (What visitors see)             │
+├─────────────────────────────────────────┤
+│  Theme (Presentation layer)              │
+├─────────────────────────────────────────┤
+│  Plugins (Extended functionality)        │
+├─────────────────────────────────────────┤
+│  WordPress Core (Content engine)         │
+├─────────────────────────────────────────┤
+│  PHP + MySQL (Server technology)         │
+└─────────────────────────────────────────┘</code></pre>
+<p>When something goes wrong, think through these layers:</p>
+<ul>
+<li>Display issue? Probably theme</li>
+<li>Feature not working? Probably plugin</li>
+<li>General malfunction? Possibly core or server</li>
+<li>Can’t log in? Database or user settings</li>
+</ul>
+</section>
+<section id="content-separation" class="level3">
+<h3 class="anchored" data-anchor-id="content-separation">Content Separation</h3>
+<p>A key mental model: <strong>content lives in the database, presentation lives in the theme</strong>.</p>
+<pre><code>Database (content):
+├── Post: "Our Spring Menu"
+│   ├── Title
+│   ├── Body content
+│   ├── Featured image reference
+│   └── Categories, tags
+
+Theme (presentation):
+├── How to display a post
+│   ├── Where title appears
+│   ├── Image placement
+│   └── Typography, colours</code></pre>
+<p>This separation is why you can change themes without losing content.</p>
+</section>
+<section id="the-hook-system" class="level3">
+<h3 class="anchored" data-anchor-id="the-hook-system">The Hook System</h3>
+<p>WordPress allows code to “hook” into specific points in the execution flow. While you won’t write hooks yet, understanding they exist explains how plugins modify WordPress without changing core files:</p>
+<ul>
+<li>Plugins register functions to run at specific points</li>
+<li>WordPress calls these functions when reaching those points</li>
+<li>Multiple plugins can hook into the same point</li>
+</ul>
+<p>This architecture is why WordPress is extensible without modification—a key platform characteristic.</p>
+</section>
+</section>
+<section id="business-applications" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="business-applications"><span class="header-section-number">8.6</span> Business Applications</h2>
+<section id="market-demand" class="level3">
+<h3 class="anchored" data-anchor-id="market-demand">Market Demand</h3>
+<p>WordPress skills are in demand. Whether freelancing, agency work, or in-house roles, WordPress knowledge is marketable because:</p>
+<ul>
+<li>Huge market share means abundant projects</li>
+<li>Businesses have existing WordPress sites needing maintenance</li>
+<li>Lower barrier to entry than custom development</li>
+<li>Clients often specifically request WordPress</li>
+</ul>
+</section>
+<section id="cost-structure" class="level3">
+<h3 class="anchored" data-anchor-id="cost-structure">Cost Structure</h3>
+<p>For clients, WordPress offers:</p>
+<ul>
+<li>No licensing fees (open source)</li>
+<li>Lower development costs (existing ecosystem)</li>
+<li>Reduced maintenance costs (client self-service)</li>
+<li>Lower switching costs (many developers available)</li>
+</ul>
+</section>
+<section id="flexibility" class="level3">
+<h3 class="anchored" data-anchor-id="flexibility">Flexibility</h3>
+<p>The plugin ecosystem means you rarely need custom development:</p>
+<ul>
+<li>E-commerce: WooCommerce</li>
+<li>Forms: Gravity Forms, WPForms, Contact Form 7</li>
+<li>SEO: Yoast, RankMath</li>
+<li>Security: Wordfence, Sucuri</li>
+<li>Backup: UpdraftPlus, VaultPress</li>
+<li>Caching: WP Super Cache, W3 Total Cache</li>
+</ul>
+<p>Often, the professional skill is knowing which plugins to combine—not building from scratch.</p>
+</section>
+<section id="when-wordpress-isnt-right" class="level3">
+<h3 class="anchored" data-anchor-id="when-wordpress-isnt-right">When WordPress Isn’t Right</h3>
+<p>Professional judgment includes knowing when <em>not</em> to use WordPress:</p>
+<ul>
+<li>Highly custom web applications (better: custom framework)</li>
+<li>Real-time features (better: specialised platforms)</li>
+<li>Very simple one-page sites (better: static HTML or website builders)</li>
+<li>Maximum performance requirements (better: headless architecture)</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>ULO Connection
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This develops <strong>ULO 4</strong> (making and defending technology choices) and <strong>ULO 5</strong> (evaluating technologies). Choosing WordPress requires evaluating its ecosystem, understanding its architecture, and articulating why it’s appropriate (or not) for specific situations.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="practice-exercises" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="practice-exercises"><span class="header-section-number">8.7</span> Practice Exercises</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Exercise Levels
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Level 1</strong>: Direct application</li>
+<li><strong>Level 2</strong>: Minor modifications</li>
+<li><strong>Level 3</strong>: Combining concepts</li>
+<li><strong>Level 4</strong>: Problem-solving</li>
+<li><strong>Level 5</strong>: Open-ended design</li>
+</ul>
+</div>
+</div>
+<section id="exercise-6.1-local-setup-level-1" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-6.1-local-setup-level-1">Exercise 6.1: Local Setup (Level 1)</h3>
+<p>Install LocalWP and create a WordPress site called “Practice Site”:</p>
+<ol type="1">
+<li>Document the process with screenshots</li>
+<li>Log into the admin dashboard</li>
+<li>Create one page and one post</li>
+<li>Change the permalink structure to “Post name”</li>
+<li>Upload an image to the Media Library</li>
+</ol>
+<p>Verify everything works by viewing the site in your browser.</p>
+</section>
+<section id="exercise-6.2-theme-exploration-level-2" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-6.2-theme-exploration-level-2">Exercise 6.2: Theme Exploration (Level 2)</h3>
+<p>Using your Practice Site:</p>
+<ol type="1">
+<li>Install and preview three different free themes</li>
+<li>For each theme, document:
+<ul>
+<li>What kind of site it seems designed for</li>
+<li>What customisation options it offers</li>
+<li>How it handles responsiveness (test at different sizes)</li>
+</ul></li>
+<li>Choose one and activate it</li>
+<li>Use the Customiser to adjust site identity and colours</li>
+</ol>
+</section>
+<section id="exercise-6.3-content-structure-level-3" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-6.3-content-structure-level-3">Exercise 6.3: Content Structure (Level 3)</h3>
+<p>Create content for a fictional coffee shop on your Practice Site:</p>
+<ol type="1">
+<li>Create pages: Home, About, Menu, Contact</li>
+<li>Create a menu in Appearance → Menus and assign it</li>
+<li>Set the homepage to display a static page</li>
+<li>Create three blog posts about coffee (news, events, tips)</li>
+<li>Assign the posts to categories you create</li>
+</ol>
+<p>Evaluate: Is the content discoverable? Can a visitor navigate easily?</p>
+</section>
+<section id="exercise-6.4-theme-evaluation-report-level-4" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-6.4-theme-evaluation-report-level-4">Exercise 6.4: Theme Evaluation Report (Level 4)</h3>
+<p>Research three WordPress themes suitable for a professional services business (lawyer, accountant, consultant). For each:</p>
+<ol type="1">
+<li>Document key features</li>
+<li>Check last update date and developer responsiveness</li>
+<li>Read at least 5 reviews</li>
+<li>Test the demo for mobile responsiveness</li>
+<li>Identify potential limitations</li>
+</ol>
+<p>Write a 400-word recommendation explaining which theme you’d choose and why. Discuss trade-offs.</p>
+</section>
+<section id="exercise-6.5-platform-comparison-level-5" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-6.5-platform-comparison-level-5">Exercise 6.5: Platform Comparison (Level 5)</h3>
+<p>A client asks: “Should I use WordPress or Squarespace for my boutique hotel website?”</p>
+<p>Research both platforms and write a balanced comparison (500 words) addressing:</p>
+<ol type="1">
+<li>Cost (initial and ongoing)</li>
+<li>Ease of use for the client</li>
+<li>Design flexibility</li>
+<li>Booking system integration options</li>
+<li>Long-term maintenance considerations</li>
+<li>Your recommendation with justification</li>
+</ol>
+<p>This exercise develops technology evaluation skills (ULO 5).</p>
+</section>
+</section>
+<section id="chapter-summary" class="level2" data-number="8.8">
+<h2 data-number="8.8" class="anchored" data-anchor-id="chapter-summary"><span class="header-section-number">8.8</span> Chapter Summary</h2>
+<ul>
+<li>WordPress is a platform, not just software—its ecosystem is its value</li>
+<li>Professional evaluation of themes and plugins is an essential skill</li>
+<li>Local development with LocalWP provides a safe environment to learn</li>
+<li>Understanding WordPress architecture (core, themes, plugins, database) aids troubleshooting</li>
+<li>The template hierarchy determines which template displays content</li>
+<li>WordPress isn’t always the right choice—professional judgment matters</li>
+</ul>
+</section>
+<section id="reflection" class="level2" data-number="8.9">
+<h2 data-number="8.9" class="anchored" data-anchor-id="reflection"><span class="header-section-number">8.9</span> Reflection</h2>
+<p>Before moving to Chapter 7, ensure you can:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Explain the difference between a platform and software</label></li>
+<li><label><input type="checkbox">Set up WordPress locally using LocalWP</label></li>
+<li><label><input type="checkbox">Navigate the WordPress admin interface confidently</label></li>
+<li><label><input type="checkbox">Explain the difference between posts and pages</label></li>
+<li><label><input type="checkbox">Evaluate a theme’s quality using specific criteria</label></li>
+<li><label><input type="checkbox">Describe how the template hierarchy works</label></li>
+<li><label><input type="checkbox">Articulate when WordPress is and isn’t appropriate</label></li>
+</ul>
+</section>
+<section id="your-learning-journal" class="level2" data-number="8.10">
+<h2 data-number="8.10" class="anchored" data-anchor-id="your-learning-journal"><span class="header-section-number">8.10</span> Your Learning Journal</h2>
+<p>Record your responses to these prompts:</p>
+<ol type="1">
+<li><p><strong>Platform Thinking</strong>: What other platforms do you use daily? What makes their ecosystems valuable? How does this inform your understanding of WordPress?</p></li>
+<li><p><strong>Theme Exploration</strong>: What surprised you when exploring WordPress themes? What features seem most valuable for business sites?</p></li>
+<li><p><strong>AI Conversation Reflection</strong>: What question about WordPress architecture or evaluation did your AI partner help clarify?</p></li>
+<li><p><strong>Professional Judgment</strong>: If a client asked why they shouldn’t just use Wix, how would you respond? When <em>would</em> Wix be the better choice?</p></li>
+</ol>
+</section>
+<section id="next-steps" class="level2" data-number="8.11">
+<h2 data-number="8.11" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">8.11</span> Next Steps</h2>
+<p>You now understand WordPress as a platform and can set up and configure a basic site. In <a href="chapter-extending-platforms.html" class="quarto-xref"><span>Chapter 9</span></a>, we’ll explore how to extend WordPress with plugins—both using existing plugins professionally and understanding how they work.</p>
+<p>This knowledge is essential for customising WordPress to meet specific business requirements without starting from scratch.</p>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/michael-borck\.github\.io\/build-web-guide-ai");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./chapter-why-cms.html" class="pagination-link" aria-label="Why CMS? The Business Value of Managed Content">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Why CMS? The Business Value of Managed Content</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./chapter-extending-platforms.html" class="pagination-link" aria-label="Extending Platforms">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Extending Platforms</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># WordPress as Platform {#sec-wordpress-platform}</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Concept First</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>WordPress powers over 40% of the web. That's an extraordinary number—nearly half of all websites run on a single platform. Understanding why reveals something important about how technology decisions are made in business.</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>WordPress isn't just "blogging software." It's a **platform**—a foundation that others build upon. The distinction matters:</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Software** does specific things. You use it as-is.</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A platform** provides a foundation. An ecosystem builds on top of it.</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>Your smartphone is a platform. The core provides basics (calls, settings), but the app ecosystem makes it powerful. You don't judge your phone by its built-in apps alone—you judge it by what you can do with the apps others have built.</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>WordPress works the same way. The core handles content management. Themes control appearance. Plugins add functionality. The ecosystem—over 60,000 plugins, thousands of themes—is what makes WordPress suitable for almost any website.</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>Learning WordPress means learning to evaluate and assemble these pieces professionally.</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## Understanding Through Ecosystems</span></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>Imagine opening a restaurant. You could:</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>**Option A**: Build everything from scratch. Design your own stoves, create your own recipes, invent your own point-of-sale system.</span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>**Option B**: Use standard commercial kitchen equipment, adapt proven recipes, install established POS software, then focus your creativity on your unique menu and dining experience.</span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>Option B gets you open faster, with tested components, and lets you focus on what makes your restaurant special. This is platform thinking.</span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>WordPress provides the kitchen equipment. Themes provide the interior design. Plugins provide specialised tools (reservation systems, online ordering). You focus on your content and business logic.</span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Platform Evaluation Question</span></span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a>When evaluating any platform, ask: "How active is the ecosystem?" A platform with a dying ecosystem becomes a liability. WordPress's ecosystem is massive and active—a significant factor in its dominance.</span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a><span class="fu">## Discovering WordPress with Your AI Partner</span></span>
+<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exploration 1: Platform vs Software</span></span>
+<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a>Let's clarify the distinction between platforms and ordinary software:</span>
+<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
+<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a><span class="in">What makes something a "platform" versus just "software"? Compare</span></span>
+<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a><span class="in">WordPress and Microsoft Word. Both help create documents. Why is</span></span>
+<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a><span class="in">WordPress a platform while Word is (primarily) software?</span></span>
+<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a>This should reveal characteristics of platforms:</span>
+<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Third parties build on them</span>
+<span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>An ecosystem of extensions exists</span>
+<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The value increases as the ecosystem grows</span>
+<span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Users can customise without changing the core</span>
+<span id="cb12-54"><a href="#cb12-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-55"><a href="#cb12-55" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-56"><a href="#cb12-56" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
+<span id="cb12-57"><a href="#cb12-57" aria-hidden="true" tabindex="-1"></a><span class="in">What risks come with choosing a platform? What happens if the</span></span>
+<span id="cb12-58"><a href="#cb12-58" aria-hidden="true" tabindex="-1"></a><span class="in">ecosystem declines or the platform changes direction?</span></span>
+<span id="cb12-59"><a href="#cb12-59" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-60"><a href="#cb12-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-61"><a href="#cb12-61" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exploration 2: Theme and Plugin Evaluation</span></span>
+<span id="cb12-62"><a href="#cb12-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-63"><a href="#cb12-63" aria-hidden="true" tabindex="-1"></a>The WordPress ecosystem contains gems and garbage. Professional evaluation skills are essential:</span>
+<span id="cb12-64"><a href="#cb12-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-65"><a href="#cb12-65" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-66"><a href="#cb12-66" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
+<span id="cb12-67"><a href="#cb12-67" aria-hidden="true" tabindex="-1"></a><span class="in">How do I evaluate whether a WordPress theme or plugin is trustworthy</span></span>
+<span id="cb12-68"><a href="#cb12-68" aria-hidden="true" tabindex="-1"></a><span class="in">and well-built? What specific signals indicate quality, and what red</span></span>
+<span id="cb12-69"><a href="#cb12-69" aria-hidden="true" tabindex="-1"></a><span class="in">flags should make me cautious?</span></span>
+<span id="cb12-70"><a href="#cb12-70" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-71"><a href="#cb12-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-72"><a href="#cb12-72" aria-hidden="true" tabindex="-1"></a>Quality signals include:</span>
+<span id="cb12-73"><a href="#cb12-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-74"><a href="#cb12-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Active development (recent updates)</span>
+<span id="cb12-75"><a href="#cb12-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Large install base with good reviews</span>
+<span id="cb12-76"><a href="#cb12-76" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Responsive support</span>
+<span id="cb12-77"><a href="#cb12-77" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Clean code (if you can inspect it)</span>
+<span id="cb12-78"><a href="#cb12-78" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Clear documentation</span>
+<span id="cb12-79"><a href="#cb12-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-80"><a href="#cb12-80" aria-hidden="true" tabindex="-1"></a>Red flags include:</span>
+<span id="cb12-81"><a href="#cb12-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-82"><a href="#cb12-82" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>No updates in over a year</span>
+<span id="cb12-83"><a href="#cb12-83" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Few installations despite being old</span>
+<span id="cb12-84"><a href="#cb12-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Poor reviews mentioning security or support</span>
+<span id="cb12-85"><a href="#cb12-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Abandoned by developer</span>
+<span id="cb12-86"><a href="#cb12-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Excessive permission requests</span>
+<span id="cb12-87"><a href="#cb12-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-88"><a href="#cb12-88" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-89"><a href="#cb12-89" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
+<span id="cb12-90"><a href="#cb12-90" aria-hidden="true" tabindex="-1"></a><span class="in">If I find two plugins that do the same thing, one with 100,000</span></span>
+<span id="cb12-91"><a href="#cb12-91" aria-hidden="true" tabindex="-1"></a><span class="in">installs and one with 1,000 installs, is the popular one always</span></span>
+<span id="cb12-92"><a href="#cb12-92" aria-hidden="true" tabindex="-1"></a><span class="in">better? When might the less popular option be the right choice?</span></span>
+<span id="cb12-93"><a href="#cb12-93" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-94"><a href="#cb12-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-95"><a href="#cb12-95" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exploration 3: WordPress Architecture</span></span>
+<span id="cb12-96"><a href="#cb12-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-97"><a href="#cb12-97" aria-hidden="true" tabindex="-1"></a>Understanding how WordPress is built helps with troubleshooting and customisation:</span>
+<span id="cb12-98"><a href="#cb12-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-99"><a href="#cb12-99" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-100"><a href="#cb12-100" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
+<span id="cb12-101"><a href="#cb12-101" aria-hidden="true" tabindex="-1"></a><span class="in">Explain WordPress's architecture using a restaurant analogy. The</span></span>
+<span id="cb12-102"><a href="#cb12-102" aria-hidden="true" tabindex="-1"></a><span class="in">database stores something, themes do something, plugins do something,</span></span>
+<span id="cb12-103"><a href="#cb12-103" aria-hidden="true" tabindex="-1"></a><span class="in">and the WordPress core coordinates. What's each part doing in</span></span>
+<span id="cb12-104"><a href="#cb12-104" aria-hidden="true" tabindex="-1"></a><span class="in">restaurant terms?</span></span>
+<span id="cb12-105"><a href="#cb12-105" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-106"><a href="#cb12-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-107"><a href="#cb12-107" aria-hidden="true" tabindex="-1"></a>A typical analogy might map:</span>
+<span id="cb12-108"><a href="#cb12-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-109"><a href="#cb12-109" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Database = Storage (pantry, inventory, recipes)</span>
+<span id="cb12-110"><a href="#cb12-110" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Core = Kitchen operations (combining ingredients into dishes)</span>
+<span id="cb12-111"><a href="#cb12-111" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Themes = Dining room design (how food is presented)</span>
+<span id="cb12-112"><a href="#cb12-112" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Plugins = Specialised equipment (espresso machine, wine fridge)</span>
+<span id="cb12-113"><a href="#cb12-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-114"><a href="#cb12-114" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-115"><a href="#cb12-115" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
+<span id="cb12-116"><a href="#cb12-116" aria-hidden="true" tabindex="-1"></a><span class="in">When something goes wrong on a WordPress site, how does understanding</span></span>
+<span id="cb12-117"><a href="#cb12-117" aria-hidden="true" tabindex="-1"></a><span class="in">architecture help diagnose the problem? Give me an example.</span></span>
+<span id="cb12-118"><a href="#cb12-118" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-119"><a href="#cb12-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-120"><a href="#cb12-120" aria-hidden="true" tabindex="-1"></a><span class="fu">## From Concept to Code</span></span>
+<span id="cb12-121"><a href="#cb12-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-122"><a href="#cb12-122" aria-hidden="true" tabindex="-1"></a>Let's set up WordPress locally and understand its core components.</span>
+<span id="cb12-123"><a href="#cb12-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-124"><a href="#cb12-124" aria-hidden="true" tabindex="-1"></a><span class="fu">### Local Development with LocalWP</span></span>
+<span id="cb12-125"><a href="#cb12-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-126"><a href="#cb12-126" aria-hidden="true" tabindex="-1"></a>Never develop directly on a live website. Local development means:</span>
+<span id="cb12-127"><a href="#cb12-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-128"><a href="#cb12-128" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You can experiment without breaking anything</span>
+<span id="cb12-129"><a href="#cb12-129" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You don't need internet access</span>
+<span id="cb12-130"><a href="#cb12-130" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Changes are instant (no upload time)</span>
+<span id="cb12-131"><a href="#cb12-131" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You can test risky changes safely</span>
+<span id="cb12-132"><a href="#cb12-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-133"><a href="#cb12-133" aria-hidden="true" tabindex="-1"></a>**LocalWP** (formerly Local by Flywheel) is the simplest way to run WordPress locally:</span>
+<span id="cb12-134"><a href="#cb12-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-135"><a href="#cb12-135" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Download from localwp.com</span>
+<span id="cb12-136"><a href="#cb12-136" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Install and open</span>
+<span id="cb12-137"><a href="#cb12-137" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Click "Create a new site"</span>
+<span id="cb12-138"><a href="#cb12-138" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Choose a name, username, and password</span>
+<span id="cb12-139"><a href="#cb12-139" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Wait for setup to complete</span>
+<span id="cb12-140"><a href="#cb12-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-141"><a href="#cb12-141" aria-hidden="true" tabindex="-1"></a>That's it. You now have a WordPress site running on your computer.</span>
+<span id="cb12-142"><a href="#cb12-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-143"><a href="#cb12-143" aria-hidden="true" tabindex="-1"></a>LocalWP handles the complexity—PHP, MySQL, web server—behind a simple interface.</span>
+<span id="cb12-144"><a href="#cb12-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-145"><a href="#cb12-145" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb12-146"><a href="#cb12-146" aria-hidden="true" tabindex="-1"></a><span class="fu">## Alternatives</span></span>
+<span id="cb12-147"><a href="#cb12-147" aria-hidden="true" tabindex="-1"></a>Other local development options include XAMPP, MAMP, and Docker-based setups. LocalWP is recommended for beginners because it's WordPress-specific and handles configuration automatically.</span>
+<span id="cb12-148"><a href="#cb12-148" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb12-149"><a href="#cb12-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-150"><a href="#cb12-150" aria-hidden="true" tabindex="-1"></a><span class="fu">### The WordPress Admin Interface</span></span>
+<span id="cb12-151"><a href="#cb12-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-152"><a href="#cb12-152" aria-hidden="true" tabindex="-1"></a>Click "WP Admin" in LocalWP to access your site's dashboard. This is the content management interface—where non-developers spend their time.</span>
+<span id="cb12-153"><a href="#cb12-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-154"><a href="#cb12-154" aria-hidden="true" tabindex="-1"></a>**Dashboard Areas:**</span>
+<span id="cb12-155"><a href="#cb12-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-156"><a href="#cb12-156" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Area <span class="pp">|</span> Purpose <span class="pp">|</span></span>
+<span id="cb12-157"><a href="#cb12-157" aria-hidden="true" tabindex="-1"></a><span class="pp">|------|---------|</span></span>
+<span id="cb12-158"><a href="#cb12-158" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Dashboard <span class="pp">|</span> Overview and quick actions <span class="pp">|</span></span>
+<span id="cb12-159"><a href="#cb12-159" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Posts <span class="pp">|</span> Blog posts and news <span class="pp">|</span></span>
+<span id="cb12-160"><a href="#cb12-160" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Media <span class="pp">|</span> Images, files, uploads <span class="pp">|</span></span>
+<span id="cb12-161"><a href="#cb12-161" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Pages <span class="pp">|</span> Static pages (About, Contact) <span class="pp">|</span></span>
+<span id="cb12-162"><a href="#cb12-162" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Comments <span class="pp">|</span> Reader comments (if enabled) <span class="pp">|</span></span>
+<span id="cb12-163"><a href="#cb12-163" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Appearance <span class="pp">|</span> Themes, menus, widgets <span class="pp">|</span></span>
+<span id="cb12-164"><a href="#cb12-164" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Plugins <span class="pp">|</span> Add functionality <span class="pp">|</span></span>
+<span id="cb12-165"><a href="#cb12-165" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Users <span class="pp">|</span> Account management <span class="pp">|</span></span>
+<span id="cb12-166"><a href="#cb12-166" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Settings <span class="pp">|</span> Site configuration <span class="pp">|</span></span>
+<span id="cb12-167"><a href="#cb12-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-168"><a href="#cb12-168" aria-hidden="true" tabindex="-1"></a>Spend time exploring each area. Understanding the admin interface is essential—this is what you'll train clients to use.</span>
+<span id="cb12-169"><a href="#cb12-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-170"><a href="#cb12-170" aria-hidden="true" tabindex="-1"></a><span class="fu">### Posts vs Pages</span></span>
+<span id="cb12-171"><a href="#cb12-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-172"><a href="#cb12-172" aria-hidden="true" tabindex="-1"></a>WordPress has two main content types by default:</span>
+<span id="cb12-173"><a href="#cb12-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-174"><a href="#cb12-174" aria-hidden="true" tabindex="-1"></a>**Posts** are:</span>
+<span id="cb12-175"><a href="#cb12-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-176"><a href="#cb12-176" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Time-based (have publish dates)</span>
+<span id="cb12-177"><a href="#cb12-177" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Categorised and tagged</span>
+<span id="cb12-178"><a href="#cb12-178" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Appear in feeds and archives</span>
+<span id="cb12-179"><a href="#cb12-179" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Good for: Blog articles, news, updates</span>
+<span id="cb12-180"><a href="#cb12-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-181"><a href="#cb12-181" aria-hidden="true" tabindex="-1"></a>**Pages** are:</span>
+<span id="cb12-182"><a href="#cb12-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-183"><a href="#cb12-183" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Timeless (no dates emphasised)</span>
+<span id="cb12-184"><a href="#cb12-184" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hierarchical (can have parent pages)</span>
+<span id="cb12-185"><a href="#cb12-185" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Not categorised</span>
+<span id="cb12-186"><a href="#cb12-186" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Good for: About, Contact, Services, static content</span>
+<span id="cb12-187"><a href="#cb12-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-188"><a href="#cb12-188" aria-hidden="true" tabindex="-1"></a>The distinction isn't technical capability—it's organisational. Posts answer "What's new?" Pages answer "What do we do?"</span>
+<span id="cb12-189"><a href="#cb12-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-190"><a href="#cb12-190" aria-hidden="true" tabindex="-1"></a><span class="fu">### Understanding Themes</span></span>
+<span id="cb12-191"><a href="#cb12-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-192"><a href="#cb12-192" aria-hidden="true" tabindex="-1"></a>A WordPress theme controls:</span>
+<span id="cb12-193"><a href="#cb12-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-194"><a href="#cb12-194" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Visual appearance (colours, fonts, layout)</span>
+<span id="cb12-195"><a href="#cb12-195" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Template structure (what appears where)</span>
+<span id="cb12-196"><a href="#cb12-196" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Available features (some themes add functionality)</span>
+<span id="cb12-197"><a href="#cb12-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-198"><a href="#cb12-198" aria-hidden="true" tabindex="-1"></a>The theme doesn't contain your content—it presents your content. Change themes, and content remains while appearance transforms.</span>
+<span id="cb12-199"><a href="#cb12-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-200"><a href="#cb12-200" aria-hidden="true" tabindex="-1"></a>**Exploring Themes:**</span>
+<span id="cb12-201"><a href="#cb12-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-202"><a href="#cb12-202" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Go to Appearance → Themes</span>
+<span id="cb12-203"><a href="#cb12-203" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Click "Add New"</span>
+<span id="cb12-204"><a href="#cb12-204" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Browse featured, popular, or search for specific needs</span>
+<span id="cb12-205"><a href="#cb12-205" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Use "Live Preview" to see a theme with your content</span>
+<span id="cb12-206"><a href="#cb12-206" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Activate when ready</span>
+<span id="cb12-207"><a href="#cb12-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-208"><a href="#cb12-208" aria-hidden="true" tabindex="-1"></a>**Theme Evaluation Criteria:**</span>
+<span id="cb12-209"><a href="#cb12-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-210"><a href="#cb12-210" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Factor <span class="pp">|</span> Questions to Ask <span class="pp">|</span></span>
+<span id="cb12-211"><a href="#cb12-211" aria-hidden="true" tabindex="-1"></a><span class="pp">|--------|-----------------|</span></span>
+<span id="cb12-212"><a href="#cb12-212" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Purpose fit <span class="pp">|</span> Is this designed for sites like yours? <span class="pp">|</span></span>
+<span id="cb12-213"><a href="#cb12-213" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Responsiveness <span class="pp">|</span> Does it work well on mobile? <span class="pp">|</span></span>
+<span id="cb12-214"><a href="#cb12-214" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Speed <span class="pp">|</span> Is it lightweight or bloated? <span class="pp">|</span></span>
+<span id="cb12-215"><a href="#cb12-215" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Customisation <span class="pp">|</span> Can you change colours/fonts without code? <span class="pp">|</span></span>
+<span id="cb12-216"><a href="#cb12-216" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Updates <span class="pp">|</span> Is it actively maintained? <span class="pp">|</span></span>
+<span id="cb12-217"><a href="#cb12-217" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Reviews <span class="pp">|</span> What do other users say? <span class="pp">|</span></span>
+<span id="cb12-218"><a href="#cb12-218" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Support <span class="pp">|</span> Can you get help if needed? <span class="pp">|</span></span>
+<span id="cb12-219"><a href="#cb12-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-220"><a href="#cb12-220" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-221"><a href="#cb12-221" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
+<span id="cb12-222"><a href="#cb12-222" aria-hidden="true" tabindex="-1"></a><span class="in">I'm building a site for a local bakery. What should I look for in a</span></span>
+<span id="cb12-223"><a href="#cb12-223" aria-hidden="true" tabindex="-1"></a><span class="in">WordPress theme? What features matter, and what should I avoid?</span></span>
+<span id="cb12-224"><a href="#cb12-224" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-225"><a href="#cb12-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-226"><a href="#cb12-226" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Template Hierarchy</span></span>
+<span id="cb12-227"><a href="#cb12-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-228"><a href="#cb12-228" aria-hidden="true" tabindex="-1"></a>WordPress uses a template hierarchy to determine which template file displays content. Understanding this helps when you need to customise.</span>
+<span id="cb12-229"><a href="#cb12-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-230"><a href="#cb12-230" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-231"><a href="#cb12-231" aria-hidden="true" tabindex="-1"></a><span class="in">Specific                                      General</span></span>
+<span id="cb12-232"><a href="#cb12-232" aria-hidden="true" tabindex="-1"></a><span class="in">───────────────────────────────────────────────────────►</span></span>
+<span id="cb12-233"><a href="#cb12-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-234"><a href="#cb12-234" aria-hidden="true" tabindex="-1"></a><span class="in">Single Post:</span></span>
+<span id="cb12-235"><a href="#cb12-235" aria-hidden="true" tabindex="-1"></a><span class="in">single-post-{slug}.php → single-post.php → single.php → singular.php → index.php</span></span>
+<span id="cb12-236"><a href="#cb12-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-237"><a href="#cb12-237" aria-hidden="true" tabindex="-1"></a><span class="in">Single Page:</span></span>
+<span id="cb12-238"><a href="#cb12-238" aria-hidden="true" tabindex="-1"></a><span class="in">page-{slug}.php → page-{id}.php → page.php → singular.php → index.php</span></span>
+<span id="cb12-239"><a href="#cb12-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-240"><a href="#cb12-240" aria-hidden="true" tabindex="-1"></a><span class="in">Archive:</span></span>
+<span id="cb12-241"><a href="#cb12-241" aria-hidden="true" tabindex="-1"></a><span class="in">category-{slug}.php → category.php → archive.php → index.php</span></span>
+<span id="cb12-242"><a href="#cb12-242" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-243"><a href="#cb12-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-244"><a href="#cb12-244" aria-hidden="true" tabindex="-1"></a>WordPress looks for the most specific template first, falling back to more general ones. This allows themes to have special templates for specific pages while using defaults for everything else.</span>
+<span id="cb12-245"><a href="#cb12-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-246"><a href="#cb12-246" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-247"><a href="#cb12-247" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
+<span id="cb12-248"><a href="#cb12-248" aria-hidden="true" tabindex="-1"></a><span class="in">If I want my "About" page to look different from other pages, what</span></span>
+<span id="cb12-249"><a href="#cb12-249" aria-hidden="true" tabindex="-1"></a><span class="in">file would I create in my theme? Walk me through how WordPress</span></span>
+<span id="cb12-250"><a href="#cb12-250" aria-hidden="true" tabindex="-1"></a><span class="in">determines which template to use.</span></span>
+<span id="cb12-251"><a href="#cb12-251" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-252"><a href="#cb12-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-253"><a href="#cb12-253" aria-hidden="true" tabindex="-1"></a><span class="fu">### Basic Customisation</span></span>
+<span id="cb12-254"><a href="#cb12-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-255"><a href="#cb12-255" aria-hidden="true" tabindex="-1"></a>Most modern themes include a Customiser (Appearance → Customise) for no-code adjustments:</span>
+<span id="cb12-256"><a href="#cb12-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-257"><a href="#cb12-257" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Site identity (logo, tagline)</span>
+<span id="cb12-258"><a href="#cb12-258" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Colours</span>
+<span id="cb12-259"><a href="#cb12-259" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Typography (some themes)</span>
+<span id="cb12-260"><a href="#cb12-260" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Header/footer layout</span>
+<span id="cb12-261"><a href="#cb12-261" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Homepage settings</span>
+<span id="cb12-262"><a href="#cb12-262" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Menus</span>
+<span id="cb12-263"><a href="#cb12-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-264"><a href="#cb12-264" aria-hidden="true" tabindex="-1"></a>The Customiser shows live previews—experiment freely before publishing changes.</span>
+<span id="cb12-265"><a href="#cb12-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-266"><a href="#cb12-266" aria-hidden="true" tabindex="-1"></a>**Menus:**</span>
+<span id="cb12-267"><a href="#cb12-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-268"><a href="#cb12-268" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Appearance → Menus</span>
+<span id="cb12-269"><a href="#cb12-269" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Create a new menu</span>
+<span id="cb12-270"><a href="#cb12-270" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Add pages, posts, custom links, or categories</span>
+<span id="cb12-271"><a href="#cb12-271" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Arrange by dragging</span>
+<span id="cb12-272"><a href="#cb12-272" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Assign to a theme location (Primary, Footer, etc.)</span>
+<span id="cb12-273"><a href="#cb12-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-274"><a href="#cb12-274" aria-hidden="true" tabindex="-1"></a>**Widgets (if your theme uses them):**</span>
+<span id="cb12-275"><a href="#cb12-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-276"><a href="#cb12-276" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Appearance → Widgets</span>
+<span id="cb12-277"><a href="#cb12-277" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Drag widgets to sidebar/footer areas</span>
+<span id="cb12-278"><a href="#cb12-278" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Configure each widget's settings</span>
+<span id="cb12-279"><a href="#cb12-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-280"><a href="#cb12-280" aria-hidden="true" tabindex="-1"></a><span class="fu">### Settings That Matter</span></span>
+<span id="cb12-281"><a href="#cb12-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-282"><a href="#cb12-282" aria-hidden="true" tabindex="-1"></a>In Settings, pay attention to:</span>
+<span id="cb12-283"><a href="#cb12-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-284"><a href="#cb12-284" aria-hidden="true" tabindex="-1"></a>**General:**</span>
+<span id="cb12-285"><a href="#cb12-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-286"><a href="#cb12-286" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Site Title and Tagline (appears in browser tabs, search results)</span>
+<span id="cb12-287"><a href="#cb12-287" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Timezone (affects scheduled posts)</span>
+<span id="cb12-288"><a href="#cb12-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-289"><a href="#cb12-289" aria-hidden="true" tabindex="-1"></a>**Reading:**</span>
+<span id="cb12-290"><a href="#cb12-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-291"><a href="#cb12-291" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Homepage displays: Latest posts vs. static page</span>
+<span id="cb12-292"><a href="#cb12-292" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Posts per page</span>
+<span id="cb12-293"><a href="#cb12-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-294"><a href="#cb12-294" aria-hidden="true" tabindex="-1"></a>**Permalinks:**</span>
+<span id="cb12-295"><a href="#cb12-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-296"><a href="#cb12-296" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>URL structure: Choose "Post name" for clean URLs (<span class="in">`/about/`</span> instead of <span class="in">`/?p=123`</span>)</span>
+<span id="cb12-297"><a href="#cb12-297" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Change this early—changing later breaks existing links</span>
+<span id="cb12-298"><a href="#cb12-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-299"><a href="#cb12-299" aria-hidden="true" tabindex="-1"></a>**Discussion:**</span>
+<span id="cb12-300"><a href="#cb12-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-301"><a href="#cb12-301" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Comment settings (enable/disable, moderation rules)</span>
+<span id="cb12-302"><a href="#cb12-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-303"><a href="#cb12-303" aria-hidden="true" tabindex="-1"></a><span class="fu">## Building Your Mental Model</span></span>
+<span id="cb12-304"><a href="#cb12-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-305"><a href="#cb12-305" aria-hidden="true" tabindex="-1"></a><span class="fu">### The WordPress Stack</span></span>
+<span id="cb12-306"><a href="#cb12-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-307"><a href="#cb12-307" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-308"><a href="#cb12-308" aria-hidden="true" tabindex="-1"></a><span class="in">┌─────────────────────────────────────────┐</span></span>
+<span id="cb12-309"><a href="#cb12-309" aria-hidden="true" tabindex="-1"></a><span class="in">│  Browser (What visitors see)             │</span></span>
+<span id="cb12-310"><a href="#cb12-310" aria-hidden="true" tabindex="-1"></a><span class="in">├─────────────────────────────────────────┤</span></span>
+<span id="cb12-311"><a href="#cb12-311" aria-hidden="true" tabindex="-1"></a><span class="in">│  Theme (Presentation layer)              │</span></span>
+<span id="cb12-312"><a href="#cb12-312" aria-hidden="true" tabindex="-1"></a><span class="in">├─────────────────────────────────────────┤</span></span>
+<span id="cb12-313"><a href="#cb12-313" aria-hidden="true" tabindex="-1"></a><span class="in">│  Plugins (Extended functionality)        │</span></span>
+<span id="cb12-314"><a href="#cb12-314" aria-hidden="true" tabindex="-1"></a><span class="in">├─────────────────────────────────────────┤</span></span>
+<span id="cb12-315"><a href="#cb12-315" aria-hidden="true" tabindex="-1"></a><span class="in">│  WordPress Core (Content engine)         │</span></span>
+<span id="cb12-316"><a href="#cb12-316" aria-hidden="true" tabindex="-1"></a><span class="in">├─────────────────────────────────────────┤</span></span>
+<span id="cb12-317"><a href="#cb12-317" aria-hidden="true" tabindex="-1"></a><span class="in">│  PHP + MySQL (Server technology)         │</span></span>
+<span id="cb12-318"><a href="#cb12-318" aria-hidden="true" tabindex="-1"></a><span class="in">└─────────────────────────────────────────┘</span></span>
+<span id="cb12-319"><a href="#cb12-319" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-320"><a href="#cb12-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-321"><a href="#cb12-321" aria-hidden="true" tabindex="-1"></a>When something goes wrong, think through these layers:</span>
+<span id="cb12-322"><a href="#cb12-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-323"><a href="#cb12-323" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Display issue? Probably theme</span>
+<span id="cb12-324"><a href="#cb12-324" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Feature not working? Probably plugin</span>
+<span id="cb12-325"><a href="#cb12-325" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>General malfunction? Possibly core or server</span>
+<span id="cb12-326"><a href="#cb12-326" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Can't log in? Database or user settings</span>
+<span id="cb12-327"><a href="#cb12-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-328"><a href="#cb12-328" aria-hidden="true" tabindex="-1"></a><span class="fu">### Content Separation</span></span>
+<span id="cb12-329"><a href="#cb12-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-330"><a href="#cb12-330" aria-hidden="true" tabindex="-1"></a>A key mental model: **content lives in the database, presentation lives in the theme**.</span>
+<span id="cb12-331"><a href="#cb12-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-332"><a href="#cb12-332" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-333"><a href="#cb12-333" aria-hidden="true" tabindex="-1"></a><span class="in">Database (content):</span></span>
+<span id="cb12-334"><a href="#cb12-334" aria-hidden="true" tabindex="-1"></a><span class="in">├── Post: "Our Spring Menu"</span></span>
+<span id="cb12-335"><a href="#cb12-335" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── Title</span></span>
+<span id="cb12-336"><a href="#cb12-336" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── Body content</span></span>
+<span id="cb12-337"><a href="#cb12-337" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── Featured image reference</span></span>
+<span id="cb12-338"><a href="#cb12-338" aria-hidden="true" tabindex="-1"></a><span class="in">│   └── Categories, tags</span></span>
+<span id="cb12-339"><a href="#cb12-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-340"><a href="#cb12-340" aria-hidden="true" tabindex="-1"></a><span class="in">Theme (presentation):</span></span>
+<span id="cb12-341"><a href="#cb12-341" aria-hidden="true" tabindex="-1"></a><span class="in">├── How to display a post</span></span>
+<span id="cb12-342"><a href="#cb12-342" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── Where title appears</span></span>
+<span id="cb12-343"><a href="#cb12-343" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── Image placement</span></span>
+<span id="cb12-344"><a href="#cb12-344" aria-hidden="true" tabindex="-1"></a><span class="in">│   └── Typography, colours</span></span>
+<span id="cb12-345"><a href="#cb12-345" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-346"><a href="#cb12-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-347"><a href="#cb12-347" aria-hidden="true" tabindex="-1"></a>This separation is why you can change themes without losing content.</span>
+<span id="cb12-348"><a href="#cb12-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-349"><a href="#cb12-349" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Hook System</span></span>
+<span id="cb12-350"><a href="#cb12-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-351"><a href="#cb12-351" aria-hidden="true" tabindex="-1"></a>WordPress allows code to "hook" into specific points in the execution flow. While you won't write hooks yet, understanding they exist explains how plugins modify WordPress without changing core files:</span>
+<span id="cb12-352"><a href="#cb12-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-353"><a href="#cb12-353" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Plugins register functions to run at specific points</span>
+<span id="cb12-354"><a href="#cb12-354" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>WordPress calls these functions when reaching those points</span>
+<span id="cb12-355"><a href="#cb12-355" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Multiple plugins can hook into the same point</span>
+<span id="cb12-356"><a href="#cb12-356" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-357"><a href="#cb12-357" aria-hidden="true" tabindex="-1"></a>This architecture is why WordPress is extensible without modification—a key platform characteristic.</span>
+<span id="cb12-358"><a href="#cb12-358" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-359"><a href="#cb12-359" aria-hidden="true" tabindex="-1"></a><span class="fu">## Business Applications</span></span>
+<span id="cb12-360"><a href="#cb12-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-361"><a href="#cb12-361" aria-hidden="true" tabindex="-1"></a><span class="fu">### Market Demand</span></span>
+<span id="cb12-362"><a href="#cb12-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-363"><a href="#cb12-363" aria-hidden="true" tabindex="-1"></a>WordPress skills are in demand. Whether freelancing, agency work, or in-house roles, WordPress knowledge is marketable because:</span>
+<span id="cb12-364"><a href="#cb12-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-365"><a href="#cb12-365" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Huge market share means abundant projects</span>
+<span id="cb12-366"><a href="#cb12-366" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Businesses have existing WordPress sites needing maintenance</span>
+<span id="cb12-367"><a href="#cb12-367" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Lower barrier to entry than custom development</span>
+<span id="cb12-368"><a href="#cb12-368" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Clients often specifically request WordPress</span>
+<span id="cb12-369"><a href="#cb12-369" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-370"><a href="#cb12-370" aria-hidden="true" tabindex="-1"></a><span class="fu">### Cost Structure</span></span>
+<span id="cb12-371"><a href="#cb12-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-372"><a href="#cb12-372" aria-hidden="true" tabindex="-1"></a>For clients, WordPress offers:</span>
+<span id="cb12-373"><a href="#cb12-373" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-374"><a href="#cb12-374" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>No licensing fees (open source)</span>
+<span id="cb12-375"><a href="#cb12-375" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Lower development costs (existing ecosystem)</span>
+<span id="cb12-376"><a href="#cb12-376" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reduced maintenance costs (client self-service)</span>
+<span id="cb12-377"><a href="#cb12-377" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Lower switching costs (many developers available)</span>
+<span id="cb12-378"><a href="#cb12-378" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-379"><a href="#cb12-379" aria-hidden="true" tabindex="-1"></a><span class="fu">### Flexibility</span></span>
+<span id="cb12-380"><a href="#cb12-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-381"><a href="#cb12-381" aria-hidden="true" tabindex="-1"></a>The plugin ecosystem means you rarely need custom development:</span>
+<span id="cb12-382"><a href="#cb12-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-383"><a href="#cb12-383" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>E-commerce: WooCommerce</span>
+<span id="cb12-384"><a href="#cb12-384" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Forms: Gravity Forms, WPForms, Contact Form 7</span>
+<span id="cb12-385"><a href="#cb12-385" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>SEO: Yoast, RankMath</span>
+<span id="cb12-386"><a href="#cb12-386" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Security: Wordfence, Sucuri</span>
+<span id="cb12-387"><a href="#cb12-387" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Backup: UpdraftPlus, VaultPress</span>
+<span id="cb12-388"><a href="#cb12-388" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Caching: WP Super Cache, W3 Total Cache</span>
+<span id="cb12-389"><a href="#cb12-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-390"><a href="#cb12-390" aria-hidden="true" tabindex="-1"></a>Often, the professional skill is knowing which plugins to combine—not building from scratch.</span>
+<span id="cb12-391"><a href="#cb12-391" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-392"><a href="#cb12-392" aria-hidden="true" tabindex="-1"></a><span class="fu">### When WordPress Isn't Right</span></span>
+<span id="cb12-393"><a href="#cb12-393" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-394"><a href="#cb12-394" aria-hidden="true" tabindex="-1"></a>Professional judgment includes knowing when *not* to use WordPress:</span>
+<span id="cb12-395"><a href="#cb12-395" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-396"><a href="#cb12-396" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Highly custom web applications (better: custom framework)</span>
+<span id="cb12-397"><a href="#cb12-397" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Real-time features (better: specialised platforms)</span>
+<span id="cb12-398"><a href="#cb12-398" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Very simple one-page sites (better: static HTML or website builders)</span>
+<span id="cb12-399"><a href="#cb12-399" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Maximum performance requirements (better: headless architecture)</span>
+<span id="cb12-400"><a href="#cb12-400" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-401"><a href="#cb12-401" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb12-402"><a href="#cb12-402" aria-hidden="true" tabindex="-1"></a><span class="fu">## ULO Connection</span></span>
+<span id="cb12-403"><a href="#cb12-403" aria-hidden="true" tabindex="-1"></a>This develops **ULO 4** (making and defending technology choices) and **ULO 5** (evaluating technologies). Choosing WordPress requires evaluating its ecosystem, understanding its architecture, and articulating why it's appropriate (or not) for specific situations.</span>
+<span id="cb12-404"><a href="#cb12-404" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb12-405"><a href="#cb12-405" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-406"><a href="#cb12-406" aria-hidden="true" tabindex="-1"></a><span class="fu">## Practice Exercises</span></span>
+<span id="cb12-407"><a href="#cb12-407" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-408"><a href="#cb12-408" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb12-409"><a href="#cb12-409" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise Levels</span></span>
+<span id="cb12-410"><a href="#cb12-410" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 1**: Direct application</span>
+<span id="cb12-411"><a href="#cb12-411" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 2**: Minor modifications</span>
+<span id="cb12-412"><a href="#cb12-412" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 3**: Combining concepts</span>
+<span id="cb12-413"><a href="#cb12-413" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 4**: Problem-solving</span>
+<span id="cb12-414"><a href="#cb12-414" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 5**: Open-ended design</span>
+<span id="cb12-415"><a href="#cb12-415" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb12-416"><a href="#cb12-416" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-417"><a href="#cb12-417" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 6.1: Local Setup (Level 1)</span></span>
+<span id="cb12-418"><a href="#cb12-418" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-419"><a href="#cb12-419" aria-hidden="true" tabindex="-1"></a>Install LocalWP and create a WordPress site called "Practice Site":</span>
+<span id="cb12-420"><a href="#cb12-420" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-421"><a href="#cb12-421" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Document the process with screenshots</span>
+<span id="cb12-422"><a href="#cb12-422" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Log into the admin dashboard</span>
+<span id="cb12-423"><a href="#cb12-423" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Create one page and one post</span>
+<span id="cb12-424"><a href="#cb12-424" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Change the permalink structure to "Post name"</span>
+<span id="cb12-425"><a href="#cb12-425" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Upload an image to the Media Library</span>
+<span id="cb12-426"><a href="#cb12-426" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-427"><a href="#cb12-427" aria-hidden="true" tabindex="-1"></a>Verify everything works by viewing the site in your browser.</span>
+<span id="cb12-428"><a href="#cb12-428" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-429"><a href="#cb12-429" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 6.2: Theme Exploration (Level 2)</span></span>
+<span id="cb12-430"><a href="#cb12-430" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-431"><a href="#cb12-431" aria-hidden="true" tabindex="-1"></a>Using your Practice Site:</span>
+<span id="cb12-432"><a href="#cb12-432" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-433"><a href="#cb12-433" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Install and preview three different free themes</span>
+<span id="cb12-434"><a href="#cb12-434" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>For each theme, document:</span>
+<span id="cb12-435"><a href="#cb12-435" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>What kind of site it seems designed for</span>
+<span id="cb12-436"><a href="#cb12-436" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>What customisation options it offers</span>
+<span id="cb12-437"><a href="#cb12-437" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>How it handles responsiveness (test at different sizes)</span>
+<span id="cb12-438"><a href="#cb12-438" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Choose one and activate it</span>
+<span id="cb12-439"><a href="#cb12-439" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Use the Customiser to adjust site identity and colours</span>
+<span id="cb12-440"><a href="#cb12-440" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-441"><a href="#cb12-441" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 6.3: Content Structure (Level 3)</span></span>
+<span id="cb12-442"><a href="#cb12-442" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-443"><a href="#cb12-443" aria-hidden="true" tabindex="-1"></a>Create content for a fictional coffee shop on your Practice Site:</span>
+<span id="cb12-444"><a href="#cb12-444" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-445"><a href="#cb12-445" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Create pages: Home, About, Menu, Contact</span>
+<span id="cb12-446"><a href="#cb12-446" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Create a menu in Appearance → Menus and assign it</span>
+<span id="cb12-447"><a href="#cb12-447" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Set the homepage to display a static page</span>
+<span id="cb12-448"><a href="#cb12-448" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Create three blog posts about coffee (news, events, tips)</span>
+<span id="cb12-449"><a href="#cb12-449" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Assign the posts to categories you create</span>
+<span id="cb12-450"><a href="#cb12-450" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-451"><a href="#cb12-451" aria-hidden="true" tabindex="-1"></a>Evaluate: Is the content discoverable? Can a visitor navigate easily?</span>
+<span id="cb12-452"><a href="#cb12-452" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-453"><a href="#cb12-453" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 6.4: Theme Evaluation Report (Level 4)</span></span>
+<span id="cb12-454"><a href="#cb12-454" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-455"><a href="#cb12-455" aria-hidden="true" tabindex="-1"></a>Research three WordPress themes suitable for a professional services business (lawyer, accountant, consultant). For each:</span>
+<span id="cb12-456"><a href="#cb12-456" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-457"><a href="#cb12-457" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Document key features</span>
+<span id="cb12-458"><a href="#cb12-458" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Check last update date and developer responsiveness</span>
+<span id="cb12-459"><a href="#cb12-459" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Read at least 5 reviews</span>
+<span id="cb12-460"><a href="#cb12-460" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Test the demo for mobile responsiveness</span>
+<span id="cb12-461"><a href="#cb12-461" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Identify potential limitations</span>
+<span id="cb12-462"><a href="#cb12-462" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-463"><a href="#cb12-463" aria-hidden="true" tabindex="-1"></a>Write a 400-word recommendation explaining which theme you'd choose and why. Discuss trade-offs.</span>
+<span id="cb12-464"><a href="#cb12-464" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-465"><a href="#cb12-465" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 6.5: Platform Comparison (Level 5)</span></span>
+<span id="cb12-466"><a href="#cb12-466" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-467"><a href="#cb12-467" aria-hidden="true" tabindex="-1"></a>A client asks: "Should I use WordPress or Squarespace for my boutique hotel website?"</span>
+<span id="cb12-468"><a href="#cb12-468" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-469"><a href="#cb12-469" aria-hidden="true" tabindex="-1"></a>Research both platforms and write a balanced comparison (500 words) addressing:</span>
+<span id="cb12-470"><a href="#cb12-470" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-471"><a href="#cb12-471" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Cost (initial and ongoing)</span>
+<span id="cb12-472"><a href="#cb12-472" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Ease of use for the client</span>
+<span id="cb12-473"><a href="#cb12-473" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Design flexibility</span>
+<span id="cb12-474"><a href="#cb12-474" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Booking system integration options</span>
+<span id="cb12-475"><a href="#cb12-475" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Long-term maintenance considerations</span>
+<span id="cb12-476"><a href="#cb12-476" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>Your recommendation with justification</span>
+<span id="cb12-477"><a href="#cb12-477" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-478"><a href="#cb12-478" aria-hidden="true" tabindex="-1"></a>This exercise develops technology evaluation skills (ULO 5).</span>
+<span id="cb12-479"><a href="#cb12-479" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-480"><a href="#cb12-480" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chapter Summary</span></span>
+<span id="cb12-481"><a href="#cb12-481" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-482"><a href="#cb12-482" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>WordPress is a platform, not just software—its ecosystem is its value</span>
+<span id="cb12-483"><a href="#cb12-483" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Professional evaluation of themes and plugins is an essential skill</span>
+<span id="cb12-484"><a href="#cb12-484" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Local development with LocalWP provides a safe environment to learn</span>
+<span id="cb12-485"><a href="#cb12-485" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Understanding WordPress architecture (core, themes, plugins, database) aids troubleshooting</span>
+<span id="cb12-486"><a href="#cb12-486" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The template hierarchy determines which template displays content</span>
+<span id="cb12-487"><a href="#cb12-487" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>WordPress isn't always the right choice—professional judgment matters</span>
+<span id="cb12-488"><a href="#cb12-488" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-489"><a href="#cb12-489" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reflection</span></span>
+<span id="cb12-490"><a href="#cb12-490" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-491"><a href="#cb12-491" aria-hidden="true" tabindex="-1"></a>Before moving to Chapter 7, ensure you can:</span>
+<span id="cb12-492"><a href="#cb12-492" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-493"><a href="#cb12-493" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Explain the difference between a platform and software</span>
+<span id="cb12-494"><a href="#cb12-494" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Set up WordPress locally using LocalWP</span>
+<span id="cb12-495"><a href="#cb12-495" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Navigate the WordPress admin interface confidently</span>
+<span id="cb12-496"><a href="#cb12-496" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Explain the difference between posts and pages</span>
+<span id="cb12-497"><a href="#cb12-497" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Evaluate a theme's quality using specific criteria</span>
+<span id="cb12-498"><a href="#cb12-498" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Describe how the template hierarchy works</span>
+<span id="cb12-499"><a href="#cb12-499" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Articulate when WordPress is and isn't appropriate</span>
+<span id="cb12-500"><a href="#cb12-500" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-501"><a href="#cb12-501" aria-hidden="true" tabindex="-1"></a><span class="fu">## Your Learning Journal</span></span>
+<span id="cb12-502"><a href="#cb12-502" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-503"><a href="#cb12-503" aria-hidden="true" tabindex="-1"></a>Record your responses to these prompts:</span>
+<span id="cb12-504"><a href="#cb12-504" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-505"><a href="#cb12-505" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Platform Thinking**: What other platforms do you use daily? What makes their ecosystems valuable? How does this inform your understanding of WordPress?</span>
+<span id="cb12-506"><a href="#cb12-506" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-507"><a href="#cb12-507" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Theme Exploration**: What surprised you when exploring WordPress themes? What features seem most valuable for business sites?</span>
+<span id="cb12-508"><a href="#cb12-508" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-509"><a href="#cb12-509" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**AI Conversation Reflection**: What question about WordPress architecture or evaluation did your AI partner help clarify?</span>
+<span id="cb12-510"><a href="#cb12-510" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-511"><a href="#cb12-511" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Professional Judgment**: If a client asked why they shouldn't just use Wix, how would you respond? When *would* Wix be the better choice?</span>
+<span id="cb12-512"><a href="#cb12-512" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-513"><a href="#cb12-513" aria-hidden="true" tabindex="-1"></a><span class="fu">## Next Steps</span></span>
+<span id="cb12-514"><a href="#cb12-514" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-515"><a href="#cb12-515" aria-hidden="true" tabindex="-1"></a>You now understand WordPress as a platform and can set up and configure a basic site. In @sec-extending-platforms, we'll explore how to extend WordPress with plugins—both using existing plugins professionally and understanding how they work.</span>
+<span id="cb12-516"><a href="#cb12-516" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-517"><a href="#cb12-517" aria-hidden="true" tabindex="-1"></a>This knowledge is essential for customising WordPress to meet specific business requirements without starting from scratch.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/michael-borck/build-web-guide-ai/edit/main/chapter-wordpress-platform.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

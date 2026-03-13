@@ -1,1 +1,1 @@
-Sitemap: https://michaelborck-books.github.io/build-web-guide-ai/sitemap.xml
+Sitemap: https://michael-borck.github.io/build-web-guide-ai/sitemap.xml

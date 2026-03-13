@@ -1,91 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://michaelborck-books.github.io/build-web-guide-ai/index.html</loc>
-    <lastmod>2026-01-23T13:36:48.564Z</lastmod>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/index.html</loc>
+    <lastmod>2026-03-13T17:15:41.394Z</lastmod>
   </url>
   <url>
-    <loc>https://michaelborck-books.github.io/build-web-guide-ai/reading-list.html</loc>
-    <lastmod>2026-01-22T10:26:32.481Z</lastmod>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/copyright.html</loc>
+    <lastmod>2026-03-13T17:15:41.390Z</lastmod>
   </url>
   <url>
-    <loc>https://michaelborck-books.github.io/build-web-guide-ai/acknowledgments.html</loc>
-    <lastmod>2026-01-22T10:26:32.474Z</lastmod>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/reading-list.html</loc>
+    <lastmod>2026-03-13T17:15:41.394Z</lastmod>
   </url>
   <url>
-    <loc>https://michaelborck-books.github.io/build-web-guide-ai/chapter-00-ai-web-partner.html</loc>
-    <lastmod>2026-01-23T04:48:45.317Z</lastmod>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/acknowledgments.html</loc>
+    <lastmod>2026-03-13T17:15:41.388Z</lastmod>
   </url>
   <url>
-    <loc>https://michaelborck-books.github.io/build-web-guide-ai/chapter-01-structure.html</loc>
-    <lastmod>2026-01-22T11:02:53.196Z</lastmod>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/chapter-ai-web-partner.html</loc>
+    <lastmod>2026-03-13T17:15:41.404Z</lastmod>
   </url>
   <url>
-    <loc>https://michaelborck-books.github.io/build-web-guide-ai/chapter-02-presentation.html</loc>
-    <lastmod>2026-01-22T11:04:36.438Z</lastmod>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/chapter-structure.html</loc>
+    <lastmod>2026-03-13T17:15:41.386Z</lastmod>
   </url>
   <url>
-    <loc>https://michaelborck-books.github.io/build-web-guide-ai/chapter-03-behaviour.html</loc>
-    <lastmod>2026-01-22T11:06:20.350Z</lastmod>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/chapter-presentation.html</loc>
+    <lastmod>2026-03-13T17:15:41.395Z</lastmod>
   </url>
   <url>
-    <loc>https://michaelborck-books.github.io/build-web-guide-ai/chapter-04-connection.html</loc>
-    <lastmod>2026-01-22T11:08:02.702Z</lastmod>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/chapter-behaviour.html</loc>
+    <lastmod>2026-03-13T17:15:41.401Z</lastmod>
   </url>
   <url>
-    <loc>https://michaelborck-books.github.io/build-web-guide-ai/projects/project-portfolio.html</loc>
-    <lastmod>2026-01-22T11:09:21.724Z</lastmod>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/chapter-connection.html</loc>
+    <lastmod>2026-03-13T17:15:41.387Z</lastmod>
   </url>
   <url>
-    <loc>https://michaelborck-books.github.io/build-web-guide-ai/chapter-05-why-cms.html</loc>
-    <lastmod>2026-01-22T11:34:29.043Z</lastmod>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/projects/project-portfolio.html</loc>
+    <lastmod>2026-03-13T17:15:41.391Z</lastmod>
   </url>
   <url>
-    <loc>https://michaelborck-books.github.io/build-web-guide-ai/chapter-06-wordpress-platform.html</loc>
-    <lastmod>2026-01-22T11:36:12.327Z</lastmod>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/chapter-why-cms.html</loc>
+    <lastmod>2026-03-13T17:15:41.403Z</lastmod>
   </url>
   <url>
-    <loc>https://michaelborck-books.github.io/build-web-guide-ai/chapter-07-extending-platforms.html</loc>
-    <lastmod>2026-01-22T14:28:10.013Z</lastmod>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/chapter-wordpress-platform.html</loc>
+    <lastmod>2026-03-13T17:15:41.402Z</lastmod>
   </url>
   <url>
-    <loc>https://michaelborck-books.github.io/build-web-guide-ai/chapter-08-headless-architecture.html</loc>
-    <lastmod>2026-01-22T11:39:48.141Z</lastmod>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/chapter-extending-platforms.html</loc>
+    <lastmod>2026-03-13T17:15:41.397Z</lastmod>
   </url>
   <url>
-    <loc>https://michaelborck-books.github.io/build-web-guide-ai/projects/project-business-site.html</loc>
-    <lastmod>2026-01-22T11:41:05.691Z</lastmod>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/chapter-headless-architecture.html</loc>
+    <lastmod>2026-03-13T17:15:41.398Z</lastmod>
   </url>
   <url>
-    <loc>https://michaelborck-books.github.io/build-web-guide-ai/chapter-09-component-thinking.html</loc>
-    <lastmod>2026-01-22T11:57:08.905Z</lastmod>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/projects/project-business-site.html</loc>
+    <lastmod>2026-03-13T17:15:41.392Z</lastmod>
   </url>
   <url>
-    <loc>https://michaelborck-books.github.io/build-web-guide-ai/chapter-10-rapid-development.html</loc>
-    <lastmod>2026-01-22T11:58:49.253Z</lastmod>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/chapter-component-thinking.html</loc>
+    <lastmod>2026-03-13T17:15:41.389Z</lastmod>
   </url>
   <url>
-    <loc>https://michaelborck-books.github.io/build-web-guide-ai/chapter-11-professional-practices.html</loc>
-    <lastmod>2026-01-22T12:01:33.127Z</lastmod>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/chapter-rapid-development.html</loc>
+    <lastmod>2026-03-13T17:15:41.399Z</lastmod>
   </url>
   <url>
-    <loc>https://michaelborck-books.github.io/build-web-guide-ai/projects/project-react-integration.html</loc>
-    <lastmod>2026-01-22T12:02:48.850Z</lastmod>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/chapter-professional-practices.html</loc>
+    <lastmod>2026-03-13T17:15:41.385Z</lastmod>
   </url>
   <url>
-    <loc>https://michaelborck-books.github.io/build-web-guide-ai/chapter-12-emerging-technologies.html</loc>
-    <lastmod>2026-01-22T12:46:39.886Z</lastmod>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/projects/project-react-integration.html</loc>
+    <lastmod>2026-03-13T17:15:41.391Z</lastmod>
   </url>
   <url>
-    <loc>https://michaelborck-books.github.io/build-web-guide-ai/chapter-13-development-career.html</loc>
-    <lastmod>2026-01-22T12:49:56.509Z</lastmod>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/chapter-emerging-technologies.html</loc>
+    <lastmod>2026-03-13T17:15:41.400Z</lastmod>
   </url>
   <url>
-    <loc>https://michaelborck-books.github.io/build-web-guide-ai/chapter-14-ai-era-developer.html</loc>
-    <lastmod>2026-01-22T12:51:46.028Z</lastmod>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/chapter-development-career.html</loc>
+    <lastmod>2026-03-13T17:15:41.388Z</lastmod>
   </url>
   <url>
-    <loc>https://michaelborck-books.github.io/build-web-guide-ai/references.html</loc>
-    <lastmod>2026-01-22T10:26:32.481Z</lastmod>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/chapter-ai-era-developer.html</loc>
+    <lastmod>2026-03-13T17:15:41.393Z</lastmod>
+  </url>
+  <url>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/references.html</loc>
+    <lastmod>2026-03-13T17:15:41.400Z</lastmod>
+  </url>
+  <url>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/about-author.html</loc>
+    <lastmod>2026-03-13T17:15:41.404Z</lastmod>
+  </url>
+  <url>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/Build-Web,-Guide-AI.pdf</loc>
+    <lastmod>2026-03-13T17:32:49.712Z</lastmod>
+  </url>
+  <url>
+    <loc>https://michael-borck.github.io/build-web-guide-ai/Build-Web,-Guide-AI.epub</loc>
+    <lastmod>2026-03-13T17:32:56.205Z</lastmod>
   </url>
 </urlset>

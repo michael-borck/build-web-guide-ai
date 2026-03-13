@@ -1,0 +1,1973 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="A practical approach to web development that embraces AI as your development partner while building real business solutions with HTML, CSS, JavaScript, WordPress, and React.">
+
+<title>2&nbsp; Structure: HTML as Information Architecture – Build Web, Guide AI</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./chapter-presentation.html" rel="next">
+<link href="./chapter-ai-web-partner.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-7ac2f9da8c2617a4fdd15004b4601015.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-d5c24611f24218015e8fca33dc27a3d3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-5843e84163a10bdcc16362dd56f5f38a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-d5c24611f24218015e8fca33dc27a3d3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="assets/custom.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter-structure.html">Part I: Web Foundations</a></li><li class="breadcrumb-item"><a href="./chapter-structure.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Build Web, Guide AI</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/michael-borck/build-web-guide-ai" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+    <a href="https://github.com/michael-borck/build-web-guide-ai" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./copyright.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Copyright</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./reading-list.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Weekly Reading List</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./acknowledgments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Acknowledgments</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part 0: Your AI Development Partnership</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-ai-web-partner.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Understanding Your AI Web Development Partner</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I: Web Foundations</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-structure.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-presentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-behaviour.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Behaviour: JavaScript as User Interaction</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-connection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Connection: APIs as Business Integration</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./projects/project-portfolio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Project: Portfolio Website</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II: Content Management for Business</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-why-cms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Why CMS? The Business Value of Managed Content</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-wordpress-platform.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">WordPress as Platform</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-extending-platforms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Extending Platforms</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-headless-architecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Headless Architecture</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./projects/project-business-site.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Project: Business Website with WordPress</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III: Modern Frontend Development</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-component-thinking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Component Thinking: React</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-rapid-development.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Rapid Development: CSS Frameworks</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-professional-practices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Professional Practices</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./projects/project-react-integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Project: React Integration</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV: The Professional Developer</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-emerging-technologies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Evaluating Emerging Technologies</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-development-career.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Your Development Career</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-ai-era-developer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">The AI-Era Developer</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./about-author.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About the Author</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-concept-first" id="toc-the-concept-first" class="nav-link active" data-scroll-target="#the-concept-first"><span class="header-section-number">2.1</span> The Concept First</a></li>
+  <li><a href="#understanding-through-architecture" id="toc-understanding-through-architecture" class="nav-link" data-scroll-target="#understanding-through-architecture"><span class="header-section-number">2.2</span> Understanding Through Architecture</a></li>
+  <li><a href="#discovering-structure-with-your-ai-partner" id="toc-discovering-structure-with-your-ai-partner" class="nav-link" data-scroll-target="#discovering-structure-with-your-ai-partner"><span class="header-section-number">2.3</span> Discovering Structure with Your AI Partner</a>
+  <ul class="collapse">
+  <li><a href="#exploration-1-document-anatomy" id="toc-exploration-1-document-anatomy" class="nav-link" data-scroll-target="#exploration-1-document-anatomy">Exploration 1: Document Anatomy</a></li>
+  <li><a href="#exploration-2-semantic-meaning" id="toc-exploration-2-semantic-meaning" class="nav-link" data-scroll-target="#exploration-2-semantic-meaning">Exploration 2: Semantic Meaning</a></li>
+  <li><a href="#exploration-3-the-simplest-valid-page" id="toc-exploration-3-the-simplest-valid-page" class="nav-link" data-scroll-target="#exploration-3-the-simplest-valid-page">Exploration 3: The Simplest Valid Page</a></li>
+  </ul></li>
+  <li><a href="#from-concept-to-code" id="toc-from-concept-to-code" class="nav-link" data-scroll-target="#from-concept-to-code"><span class="header-section-number">2.4</span> From Concept to Code</a>
+  <ul class="collapse">
+  <li><a href="#the-document-container" id="toc-the-document-container" class="nav-link" data-scroll-target="#the-document-container">The Document Container</a></li>
+  <li><a href="#the-two-main-sections" id="toc-the-two-main-sections" class="nav-link" data-scroll-target="#the-two-main-sections">The Two Main Sections</a></li>
+  <li><a href="#semantic-content-elements" id="toc-semantic-content-elements" class="nav-link" data-scroll-target="#semantic-content-elements">Semantic Content Elements</a></li>
+  <li><a href="#common-semantic-elements" id="toc-common-semantic-elements" class="nav-link" data-scroll-target="#common-semantic-elements">Common Semantic Elements</a></li>
+  <li><a href="#headings-create-hierarchy" id="toc-headings-create-hierarchy" class="nav-link" data-scroll-target="#headings-create-hierarchy">Headings Create Hierarchy</a></li>
+  </ul></li>
+  <li><a href="#building-your-mental-model" id="toc-building-your-mental-model" class="nav-link" data-scroll-target="#building-your-mental-model"><span class="header-section-number">2.5</span> Building Your Mental Model</a>
+  <ul class="collapse">
+  <li><a href="#the-tree-structure" id="toc-the-tree-structure" class="nav-link" data-scroll-target="#the-tree-structure">The Tree Structure</a></li>
+  <li><a href="#tags-elements-and-attributes" id="toc-tags-elements-and-attributes" class="nav-link" data-scroll-target="#tags-elements-and-attributes">Tags, Elements, and Attributes</a></li>
+  <li><a href="#the-box-model-preview" id="toc-the-box-model-preview" class="nav-link" data-scroll-target="#the-box-model-preview">The Box Model Preview</a></li>
+  </ul></li>
+  <li><a href="#business-applications" id="toc-business-applications" class="nav-link" data-scroll-target="#business-applications"><span class="header-section-number">2.6</span> Business Applications</a>
+  <ul class="collapse">
+  <li><a href="#search-engine-optimisation-seo" id="toc-search-engine-optimisation-seo" class="nav-link" data-scroll-target="#search-engine-optimisation-seo">Search Engine Optimisation (SEO)</a></li>
+  <li><a href="#accessibility" id="toc-accessibility" class="nav-link" data-scroll-target="#accessibility">Accessibility</a></li>
+  <li><a href="#maintainability" id="toc-maintainability" class="nav-link" data-scroll-target="#maintainability">Maintainability</a></li>
+  <li><a href="#professional-credibility" id="toc-professional-credibility" class="nav-link" data-scroll-target="#professional-credibility">Professional Credibility</a></li>
+  </ul></li>
+  <li><a href="#practice-exercises" id="toc-practice-exercises" class="nav-link" data-scroll-target="#practice-exercises"><span class="header-section-number">2.7</span> Practice Exercises</a>
+  <ul class="collapse">
+  <li><a href="#exercise-1.1-document-analysis-level-1" id="toc-exercise-1.1-document-analysis-level-1" class="nav-link" data-scroll-target="#exercise-1.1-document-analysis-level-1">Exercise 1.1: Document Analysis (Level 1)</a></li>
+  <li><a href="#exercise-1.2-structure-first-level-2" id="toc-exercise-1.2-structure-first-level-2" class="nav-link" data-scroll-target="#exercise-1.2-structure-first-level-2">Exercise 1.2: Structure First (Level 2)</a></li>
+  <li><a href="#exercise-1.3-fix-the-structure-level-3" id="toc-exercise-1.3-fix-the-structure-level-3" class="nav-link" data-scroll-target="#exercise-1.3-fix-the-structure-level-3">Exercise 1.3: Fix the Structure (Level 3)</a></li>
+  <li><a href="#exercise-1.4-business-requirements-level-4" id="toc-exercise-1.4-business-requirements-level-4" class="nav-link" data-scroll-target="#exercise-1.4-business-requirements-level-4">Exercise 1.4: Business Requirements (Level 4)</a></li>
+  <li><a href="#exercise-1.5-semantic-debate-level-5" id="toc-exercise-1.5-semantic-debate-level-5" class="nav-link" data-scroll-target="#exercise-1.5-semantic-debate-level-5">Exercise 1.5: Semantic Debate (Level 5)</a></li>
+  </ul></li>
+  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary"><span class="header-section-number">2.8</span> Chapter Summary</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">2.9</span> Reflection</a></li>
+  <li><a href="#your-learning-journal" id="toc-your-learning-journal" class="nav-link" data-scroll-target="#your-learning-journal"><span class="header-section-number">2.10</span> Your Learning Journal</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">2.11</span> Next Steps</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/build-web-guide-ai/edit/main/chapter-structure.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter-structure.html">Part I: Web Foundations</a></li><li class="breadcrumb-item"><a href="./chapter-structure.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></a></li></ol></nav>
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title"><span id="sec-structure" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="the-concept-first" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="the-concept-first"><span class="header-section-number">2.1</span> The Concept First</h2>
+<p>Before we write any HTML, let’s understand what we’re really doing: <strong>organising information so both humans and machines can understand it</strong>.</p>
+<p>Every document you’ve ever read has structure. A book has chapters, sections, and paragraphs. A business report has headings, bullet points, and tables. A restaurant menu has categories, items, and descriptions. This structure isn’t decoration—it’s how we communicate meaning.</p>
+<p>HTML (HyperText Markup Language) is simply the language we use to describe document structure for the web. When you write HTML, you’re not designing how something looks—you’re declaring what something <em>is</em>.</p>
+<p>This distinction matters enormously. A heading isn’t big, bold text. A heading <em>is</em> a heading—a structural element that indicates hierarchy and importance. How it appears is a separate concern entirely.</p>
+</section>
+<section id="understanding-through-architecture" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="understanding-through-architecture"><span class="header-section-number">2.2</span> Understanding Through Architecture</h2>
+<p>Think of a well-designed building:</p>
+<ul>
+<li>The <strong>foundation</strong> supports everything above it</li>
+<li><strong>Walls and rooms</strong> divide space into meaningful areas</li>
+<li><strong>Signs and labels</strong> tell you what each area is for</li>
+<li><strong>Doors and corridors</strong> connect different spaces</li>
+<li><strong>Building codes</strong> ensure safety and accessibility</li>
+</ul>
+<p>Now think about a web page:</p>
+<ul>
+<li>The <strong>document declaration</strong> establishes what kind of document this is</li>
+<li><strong>Semantic elements</strong> divide content into meaningful sections</li>
+<li><strong>Tags</strong> label what each piece of content represents</li>
+<li><strong>Links</strong> connect pages and resources</li>
+<li><strong>Web standards</strong> ensure accessibility across devices</li>
+</ul>
+<p>The parallel is precise. An architect doesn’t just make a building that stands—they create spaces that people can navigate, understand, and use. A web developer doesn’t just make a page that displays—they create documents that humans can read and machines can process.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>The Architecture Mindset
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When you look at any web page, train yourself to see structure first, appearance second. Ask: “What are the meaningful sections here? How is the content organised? What is each element’s purpose?”</p>
+</div>
+</div>
+</section>
+<section id="discovering-structure-with-your-ai-partner" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="discovering-structure-with-your-ai-partner"><span class="header-section-number">2.3</span> Discovering Structure with Your AI Partner</h2>
+<p>Let’s use AI to explore these concepts before we see any code. Remember from Chapter 0: we’re using AI to build understanding, not to avoid learning.</p>
+<section id="exploration-1-document-anatomy" class="level3">
+<h3 class="anchored" data-anchor-id="exploration-1-document-anatomy">Exploration 1: Document Anatomy</h3>
+<p>Before we think about HTML at all, let’s think about documents:</p>
+<pre><code>Ask your AI:
+If I showed you a restaurant menu, what structural elements would you
+identify? Don't use any HTML terms yet—just describe the organisation
+you see in plain English.</code></pre>
+<p>Notice what your AI identifies: categories of food, individual items, descriptions, prices, perhaps special callouts for dietary information. This is structure—pure information architecture that exists independent of how it’s presented.</p>
+<p>Now follow up:</p>
+<pre><code>Continue the conversation:
+How would those same structural elements appear in a company's
+"About Us" page?</code></pre>
+<p>The specific content differs, but structural patterns repeat. Headings introduce sections. Paragraphs contain flowing text. Lists group related items. This pattern recognition is the foundation of HTML thinking.</p>
+</section>
+<section id="exploration-2-semantic-meaning" class="level3">
+<h3 class="anchored" data-anchor-id="exploration-2-semantic-meaning">Exploration 2: Semantic Meaning</h3>
+<p>The word “semantic” means “relating to meaning.” Semantic HTML uses elements that describe what content <em>is</em>, not how it should <em>look</em>.</p>
+<pre><code>Ask your AI:
+Explain "semantic HTML" using a library catalogue analogy. Why would
+a librarian care whether a book is labelled as "fiction" versus just
+"on shelf 3"?</code></pre>
+<p>This conversation should reveal why meaningful labels matter. A library where books are only identified by shelf location would be nearly useless. Similarly, a web page where content is only identified by its visual appearance loses meaning for search engines, screen readers, and future maintainers.</p>
+<p>Follow up:</p>
+<pre><code>Continue the conversation:
+What problems occur when web pages use visual-only structure—like
+making text big and bold instead of marking it as a heading?</code></pre>
+</section>
+<section id="exploration-3-the-simplest-valid-page" class="level3">
+<h3 class="anchored" data-anchor-id="exploration-3-the-simplest-valid-page">Exploration 3: The Simplest Valid Page</h3>
+<p>Now let’s see actual HTML, but the simplest possible version:</p>
+<pre><code>Ask your AI:
+Show me the absolute simplest valid HTML page that contains just a
+heading and a paragraph. Explain what each line does as if I've never
+seen code before.</code></pre>
+<p>Your AI should give you something like:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> html<span class="dt">&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> lang</span><span class="op">=</span><span class="st">"en"</span><span class="dt">&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> charset</span><span class="op">=</span><span class="st">"UTF-8"</span><span class="dt">&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>Page Title<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Welcome<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>This is a paragraph of text.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Don’t just accept this—have a conversation about it:</p>
+<pre><code>Continue the conversation:
+Why is lang="en" important? Who or what uses that information?</code></pre>
+<pre><code>Continue the conversation:
+What happens if I leave out the DOCTYPE? Would the page still display?</code></pre>
+<p>These conversations build understanding that copying code never provides.</p>
+</section>
+</section>
+<section id="from-concept-to-code" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="from-concept-to-code"><span class="header-section-number">2.4</span> From Concept to Code</h2>
+<p>Let’s build your HTML understanding progressively, starting from the absolute basics.</p>
+<section id="the-document-container" class="level3">
+<h3 class="anchored" data-anchor-id="the-document-container">The Document Container</h3>
+<p>Every HTML page starts with a declaration and a container:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> html<span class="dt">&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> lang</span><span class="op">=</span><span class="st">"en"</span><span class="dt">&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- Everything goes here --&gt;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The <code>&lt;!DOCTYPE html&gt;</code> tells browsers “this is a modern HTML document.” The <code>&lt;html&gt;</code> element is the root container for everything else. The <code>lang</code> attribute declares the language—essential for screen readers and translation tools.</p>
+</section>
+<section id="the-two-main-sections" class="level3">
+<h3 class="anchored" data-anchor-id="the-two-main-sections">The Two Main Sections</h3>
+<p>Inside the HTML container, every page has exactly two sections:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> html<span class="dt">&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> lang</span><span class="op">=</span><span class="st">"en"</span><span class="dt">&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">&lt;!-- Metadata: information ABOUT the page --&gt;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> charset</span><span class="op">=</span><span class="st">"UTF-8"</span><span class="dt">&gt;</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>My Business<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">&lt;!-- Content: what people actually see --&gt;</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The <code>&lt;head&gt;</code> contains metadata—information about the page that doesn’t appear on screen. The <code>&lt;body&gt;</code> contains the actual content visitors see and interact with.</p>
+<p>Think of it like a business letter: the <code>&lt;head&gt;</code> is the envelope with addresses and stamps, while the <code>&lt;body&gt;</code> is the letter inside.</p>
+</section>
+<section id="semantic-content-elements" class="level3">
+<h3 class="anchored" data-anchor-id="semantic-content-elements">Semantic Content Elements</h3>
+<p>Now let’s add meaningful content. HTML provides elements that describe <em>what</em> content is:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">header</span><span class="dt">&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Sunrise Café<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Fresh coffee, warm welcome<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">header</span><span class="dt">&gt;</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">main</span><span class="dt">&gt;</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">section</span><span class="dt">&gt;</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">h2</span><span class="dt">&gt;</span>Our Story<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Founded in 2019, Sunrise Café began with a simple</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>               belief: great coffee brings people together.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">section</span><span class="dt">&gt;</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">section</span><span class="dt">&gt;</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">h2</span><span class="dt">&gt;</span>Visit Us<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>123 Main Street, open daily from 7am to 5pm.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">section</span><span class="dt">&gt;</span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">main</span><span class="dt">&gt;</span></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">footer</span><span class="dt">&gt;</span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>© 2024 Sunrise Café<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">footer</span><span class="dt">&gt;</span></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Notice what we’ve communicated:</p>
+<ul>
+<li><code>&lt;header&gt;</code> — the introductory content for the page</li>
+<li><code>&lt;main&gt;</code> — the primary content (there should only be one)</li>
+<li><code>&lt;section&gt;</code> — distinct, thematically grouped content</li>
+<li><code>&lt;footer&gt;</code> — closing information</li>
+<li><code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code> — heading hierarchy (h1 is most important)</li>
+<li><code>&lt;p&gt;</code> — paragraphs of text</li>
+</ul>
+<p>A screen reader can now navigate this page by headings. Search engines understand what’s primary content versus footer material. Future developers can immediately grasp the page structure.</p>
+</section>
+<section id="common-semantic-elements" class="level3">
+<h3 class="anchored" data-anchor-id="common-semantic-elements">Common Semantic Elements</h3>
+<p>Here are the structural elements you’ll use most often:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Element</th>
+<th>Purpose</th>
+<th>Example Use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>&lt;header&gt;</code></td>
+<td>Introductory content</td>
+<td>Site branding, navigation</td>
+</tr>
+<tr class="even">
+<td><code>&lt;nav&gt;</code></td>
+<td>Navigation links</td>
+<td>Main menu, breadcrumbs</td>
+</tr>
+<tr class="odd">
+<td><code>&lt;main&gt;</code></td>
+<td>Primary page content</td>
+<td>The “meat” of the page</td>
+</tr>
+<tr class="even">
+<td><code>&lt;section&gt;</code></td>
+<td>Thematic grouping</td>
+<td>Chapters, tabbed content</td>
+</tr>
+<tr class="odd">
+<td><code>&lt;article&gt;</code></td>
+<td>Self-contained content</td>
+<td>Blog post, news story</td>
+</tr>
+<tr class="even">
+<td><code>&lt;aside&gt;</code></td>
+<td>Related but separate</td>
+<td>Sidebar, pull quote</td>
+</tr>
+<tr class="odd">
+<td><code>&lt;footer&gt;</code></td>
+<td>Closing content</td>
+<td>Copyright, contact links</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Common Mistake
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Don’t choose elements based on how they look by default. Choose them based on what the content <em>is</em>. A <code>&lt;section&gt;</code> isn’t “a box”—it’s a thematic grouping of content. Appearance is CSS’s job (Chapter 2).</p>
+</div>
+</div>
+</section>
+<section id="headings-create-hierarchy" class="level3">
+<h3 class="anchored" data-anchor-id="headings-create-hierarchy">Headings Create Hierarchy</h3>
+<p>Headings aren’t just “big text”—they create a document outline:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Sunrise Café<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span>           <span class="co">&lt;!-- Page title (one per page) --&gt;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">h2</span><span class="dt">&gt;</span>Our Menu<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span>           <span class="co">&lt;!-- Major section --&gt;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">h3</span><span class="dt">&gt;</span>Hot Drinks<span class="dt">&lt;/</span><span class="kw">h3</span><span class="dt">&gt;</span>     <span class="co">&lt;!-- Subsection --&gt;</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">h3</span><span class="dt">&gt;</span>Cold Drinks<span class="dt">&lt;/</span><span class="kw">h3</span><span class="dt">&gt;</span>    <span class="co">&lt;!-- Subsection --&gt;</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">h2</span><span class="dt">&gt;</span>Our Story<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span>          <span class="co">&lt;!-- Major section --&gt;</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">h2</span><span class="dt">&gt;</span>Contact Us<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span>         <span class="co">&lt;!-- Major section --&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This hierarchy should make sense as an outline. Don’t skip levels (no jumping from h2 to h4) and don’t use headings just to make text bigger.</p>
+<pre><code>Ask your AI:
+Show me a properly structured heading hierarchy for a small business
+website with pages for Home, Services, About, and Contact. Then show
+me a common mistake beginners make with headings.</code></pre>
+</section>
+</section>
+<section id="building-your-mental-model" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="building-your-mental-model"><span class="header-section-number">2.5</span> Building Your Mental Model</h2>
+<section id="the-tree-structure" class="level3">
+<h3 class="anchored" data-anchor-id="the-tree-structure">The Tree Structure</h3>
+<p>HTML forms a tree, like a family tree or organisation chart:</p>
+<pre><code>html
+├── head
+│   ├── meta
+│   └── title
+└── body
+    ├── header
+    │   ├── h1
+    │   └── p
+    ├── main
+    │   ├── section
+    │   │   ├── h2
+    │   │   └── p
+    │   └── section
+    │       ├── h2
+    │       └── p
+    └── footer
+        └── p</code></pre>
+<p>Elements contain other elements. This nesting creates relationships: the <code>&lt;h2&gt;</code> belongs to its <code>&lt;section&gt;</code>, which belongs to <code>&lt;main&gt;</code>, which belongs to <code>&lt;body&gt;</code>.</p>
+<pre><code>Ask your AI:
+Explain parent, child, and sibling relationships in HTML using a
+company organisational chart as an analogy.</code></pre>
+</section>
+<section id="tags-elements-and-attributes" class="level3">
+<h3 class="anchored" data-anchor-id="tags-elements-and-attributes">Tags, Elements, and Attributes</h3>
+<p>Let’s clarify terminology:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"about.html"</span><span class="dt">&gt;</span>About Us<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><strong>Tag</strong>: <code>&lt;a&gt;</code> is the opening tag, <code>&lt;/a&gt;</code> is the closing tag</li>
+<li><strong>Element</strong>: The complete unit from opening to closing tag, including content</li>
+<li><strong>Attribute</strong>: <code>href="about.html"</code> provides additional information</li>
+<li><strong>Content</strong>: “About Us” is the text content between tags</li>
+</ul>
+</section>
+<section id="the-box-model-preview" class="level3">
+<h3 class="anchored" data-anchor-id="the-box-model-preview">The Box Model Preview</h3>
+<p>Every HTML element creates an invisible box on the page. These boxes stack and nest according to the document structure. In Chapter 2, we’ll learn to control these boxes with CSS. For now, understand that structure creates boxes, and boxes create layout.</p>
+<pre><code>Ask your AI:
+If I put a section inside a main element, and two paragraphs inside
+that section, how many "boxes" have I created? Describe how they
+would stack.</code></pre>
+</section>
+</section>
+<section id="business-applications" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="business-applications"><span class="header-section-number">2.6</span> Business Applications</h2>
+<section id="search-engine-optimisation-seo" class="level3">
+<h3 class="anchored" data-anchor-id="search-engine-optimisation-seo">Search Engine Optimisation (SEO)</h3>
+<p>Search engines read your HTML structure to understand your content. A well-structured page with clear headings, semantic sections, and meaningful hierarchy ranks better than a soup of <code>&lt;div&gt;</code> elements.</p>
+<pre><code>Ask your AI:
+How do search engines like Google use HTML structure to understand
+what a page is about? What happens when structure is missing or
+confusing?</code></pre>
+</section>
+<section id="accessibility" class="level3">
+<h3 class="anchored" data-anchor-id="accessibility">Accessibility</h3>
+<p>Screen readers—software used by visually impaired people—navigate by structure. Users can jump between headings, skip to main content, or list all navigation links. Without semantic HTML, this navigation is impossible.</p>
+<p>This isn’t just ethical—it’s often legal. Many jurisdictions require accessible websites for businesses, government, and education.</p>
+</section>
+<section id="maintainability" class="level3">
+<h3 class="anchored" data-anchor-id="maintainability">Maintainability</h3>
+<p>Well-structured HTML is easier to update. When sections are clearly marked, finding and changing content takes minutes instead of hours. Six months from now, you (or someone else) will thank you for clean structure.</p>
+</section>
+<section id="professional-credibility" class="level3">
+<h3 class="anchored" data-anchor-id="professional-credibility">Professional Credibility</h3>
+<p>When potential employers or clients view your page source, structure tells them about your professionalism. Clean, semantic HTML signals someone who understands web fundamentals—not just someone who copied code until something worked.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>ULO Connection
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This develops <strong>ULO 1</strong> (design and evaluate effective web applications) and <strong>ULO 2</strong> (professional skills). Structure isn’t visible to casual viewers, but it’s visible to search engines, screen readers, developers, and anyone who inspects your code.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="practice-exercises" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="practice-exercises"><span class="header-section-number">2.7</span> Practice Exercises</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Exercise Levels
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Level 1</strong>: Direct application</li>
+<li><strong>Level 2</strong>: Minor modifications</li>
+<li><strong>Level 3</strong>: Combining concepts</li>
+<li><strong>Level 4</strong>: Problem-solving</li>
+<li><strong>Level 5</strong>: Open-ended design</li>
+</ul>
+</div>
+</div>
+<section id="exercise-1.1-document-analysis-level-1" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-1.1-document-analysis-level-1">Exercise 1.1: Document Analysis (Level 1)</h3>
+<p>Find a simple webpage (a local business, a restaurant, a small company). View its source (right-click → View Page Source). Identify:</p>
+<ol type="1">
+<li>The <code>&lt;!DOCTYPE&gt;</code> declaration</li>
+<li>The <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> sections</li>
+<li>At least three semantic elements (<code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>)</li>
+<li>The heading hierarchy (<code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>)</li>
+</ol>
+<p>Document your findings. Is this page well-structured or poorly structured? Why?</p>
+</section>
+<section id="exercise-1.2-structure-first-level-2" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-1.2-structure-first-level-2">Exercise 1.2: Structure First (Level 2)</h3>
+<p>Without writing any HTML, create a structural outline for a personal portfolio page. List:</p>
+<ul>
+<li>What would go in the header?</li>
+<li>What sections would the main content have?</li>
+<li>What information belongs in the footer?</li>
+<li>What’s the heading hierarchy?</li>
+</ul>
+<p>Then, with your AI partner, translate your outline into semantic HTML. Compare your outline with the final code—did the structure remain clear?</p>
+</section>
+<section id="exercise-1.3-fix-the-structure-level-3" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-1.3-fix-the-structure-level-3">Exercise 1.3: Fix the Structure (Level 3)</h3>
+<p>Here’s a poorly structured page. Identify the problems and rewrite it with proper semantic HTML:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"font-size: 32px; font-weight: bold;"</span><span class="dt">&gt;</span>My Business<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"font-size: 24px; font-weight: bold;"</span><span class="dt">&gt;</span>About<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="dt">&gt;</span>We are a great company.<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"font-size: 24px; font-weight: bold;"</span><span class="dt">&gt;</span>Contact<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="dt">&gt;</span>Email us at hello@example.com<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"font-size: 12px;"</span><span class="dt">&gt;</span>Copyright 2024<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>List each problem you find and explain why it matters.</p>
+</section>
+<section id="exercise-1.4-business-requirements-level-4" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-1.4-business-requirements-level-4">Exercise 1.4: Business Requirements (Level 4)</h3>
+<p>A local bakery asks you to create their website. They mention:</p>
+<ul>
+<li>They want their hours prominently displayed</li>
+<li>They have three categories of products (bread, pastries, cakes)</li>
+<li>They want to show their story and values</li>
+<li>They need contact information and a map</li>
+</ul>
+<p>Create a structural plan that addresses their requirements. Which semantic elements would you use for each requirement? Justify your choices in business terms—why does proper structure benefit this bakery?</p>
+</section>
+<section id="exercise-1.5-semantic-debate-level-5" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-1.5-semantic-debate-level-5">Exercise 1.5: Semantic Debate (Level 5)</h3>
+<p>Should a “team members” section on an About page use <code>&lt;article&gt;</code> for each person, or <code>&lt;section&gt;</code>, or neither?</p>
+<p>Research the HTML specification’s definitions for both elements. Have a conversation with your AI partner exploring arguments for each choice. Write a short recommendation (200-300 words) defending your position with evidence from web standards.</p>
+<p>This exercise has no single correct answer—it develops your ability to make and defend technical decisions (ULO 4).</p>
+</section>
+</section>
+<section id="chapter-summary" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="chapter-summary"><span class="header-section-number">2.8</span> Chapter Summary</h2>
+<ul>
+<li>HTML describes document structure, not appearance</li>
+<li>Semantic elements convey meaning to humans and machines</li>
+<li>Every page has <code>&lt;head&gt;</code> (metadata) and <code>&lt;body&gt;</code> (content)</li>
+<li>Headings create hierarchy—don’t skip levels or use them for styling</li>
+<li>Structure benefits SEO, accessibility, maintainability, and professionalism</li>
+<li>The structure you create is as important as the content you write</li>
+</ul>
+</section>
+<section id="reflection" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="reflection"><span class="header-section-number">2.9</span> Reflection</h2>
+<p>Before moving to Chapter 2, ensure you can:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Explain HTML’s purpose without using technical jargon</label></li>
+<li><label><input type="checkbox">Identify at least six semantic HTML elements and their purposes</label></li>
+<li><label><input type="checkbox">Describe the difference between semantic and presentational markup</label></li>
+<li><label><input type="checkbox">Create a document outline before writing code</label></li>
+<li><label><input type="checkbox">Explain why structure matters for business (SEO, accessibility, maintenance)</label></li>
+<li><label><input type="checkbox">View a page’s source and assess its structural quality</label></li>
+<li><label><input type="checkbox">Have a productive conversation with AI about HTML concepts</label></li>
+</ul>
+</section>
+<section id="your-learning-journal" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="your-learning-journal"><span class="header-section-number">2.10</span> Your Learning Journal</h2>
+<p>Record your responses to these prompts:</p>
+<ol type="1">
+<li><p><strong>Structure Spotting</strong>: Look at three websites you use regularly. What structural patterns do they share? What semantic elements can you identify?</p></li>
+<li><p><strong>AI Conversation Reflection</strong>: What was the most useful question you asked your AI partner in this chapter? What made it effective?</p></li>
+<li><p><strong>Concept Connection</strong>: How does HTML structure relate to other kinds of structure you encounter (documents, buildings, organisations)?</p></li>
+<li><p><strong>Lingering Questions</strong>: What aspects of HTML structure are still unclear? Write these as questions to explore with your AI partner.</p></li>
+</ol>
+</section>
+<section id="next-steps" class="level2" data-number="2.11">
+<h2 data-number="2.11" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">2.11</span> Next Steps</h2>
+<p>You now understand how to describe what content <em>is</em>. But a page with only HTML looks plain—black text on white background, default fonts, minimal layout.</p>
+<p>In <a href="chapter-presentation.html" class="quarto-xref"><span>Chapter 3</span></a>, we’ll explore CSS—how to control the visual presentation of our structured content. Structure and presentation are deliberately separate in web development, and understanding why is key to professional practice.</p>
+<p>The structure you’ve learned to create becomes the foundation that CSS styles. Good structure makes styling straightforward; poor structure makes it a struggle.</p>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/michael-borck\.github\.io\/build-web-guide-ai");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./chapter-ai-web-partner.html" class="pagination-link" aria-label="Understanding Your AI Web Development Partner">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Understanding Your AI Web Development Partner</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./chapter-presentation.html" class="pagination-link" aria-label="Presentation: CSS as Visual Communication">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Structure: HTML as Information Architecture {#sec-structure}</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Concept First</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>Before we write any HTML, let's understand what we're really doing: **organising information so both humans and machines can understand it**.</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>Every document you've ever read has structure. A book has chapters, sections, and paragraphs. A business report has headings, bullet points, and tables. A restaurant menu has categories, items, and descriptions. This structure isn't decoration—it's how we communicate meaning.</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>HTML (HyperText Markup Language) is simply the language we use to describe document structure for the web. When you write HTML, you're not designing how something looks—you're declaring what something *is*.</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>This distinction matters enormously. A heading isn't big, bold text. A heading *is* a heading—a structural element that indicates hierarchy and importance. How it appears is a separate concern entirely.</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Understanding Through Architecture</span></span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>Think of a well-designed building:</span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The **foundation** supports everything above it</span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Walls and rooms** divide space into meaningful areas</span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Signs and labels** tell you what each area is for</span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Doors and corridors** connect different spaces</span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Building codes** ensure safety and accessibility</span>
+<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a>Now think about a web page:</span>
+<span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-25"><a href="#cb20-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The **document declaration** establishes what kind of document this is</span>
+<span id="cb20-26"><a href="#cb20-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Semantic elements** divide content into meaningful sections</span>
+<span id="cb20-27"><a href="#cb20-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tags** label what each piece of content represents</span>
+<span id="cb20-28"><a href="#cb20-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Links** connect pages and resources</span>
+<span id="cb20-29"><a href="#cb20-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Web standards** ensure accessibility across devices</span>
+<span id="cb20-30"><a href="#cb20-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-31"><a href="#cb20-31" aria-hidden="true" tabindex="-1"></a>The parallel is precise. An architect doesn't just make a building that stands—they create spaces that people can navigate, understand, and use. A web developer doesn't just make a page that displays—they create documents that humans can read and machines can process.</span>
+<span id="cb20-32"><a href="#cb20-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-33"><a href="#cb20-33" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb20-34"><a href="#cb20-34" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Architecture Mindset</span></span>
+<span id="cb20-35"><a href="#cb20-35" aria-hidden="true" tabindex="-1"></a>When you look at any web page, train yourself to see structure first, appearance second. Ask: "What are the meaningful sections here? How is the content organised? What is each element's purpose?"</span>
+<span id="cb20-36"><a href="#cb20-36" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb20-37"><a href="#cb20-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-38"><a href="#cb20-38" aria-hidden="true" tabindex="-1"></a><span class="fu">## Discovering Structure with Your AI Partner</span></span>
+<span id="cb20-39"><a href="#cb20-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-40"><a href="#cb20-40" aria-hidden="true" tabindex="-1"></a>Let's use AI to explore these concepts before we see any code. Remember from Chapter 0: we're using AI to build understanding, not to avoid learning.</span>
+<span id="cb20-41"><a href="#cb20-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-42"><a href="#cb20-42" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exploration 1: Document Anatomy</span></span>
+<span id="cb20-43"><a href="#cb20-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-44"><a href="#cb20-44" aria-hidden="true" tabindex="-1"></a>Before we think about HTML at all, let's think about documents:</span>
+<span id="cb20-45"><a href="#cb20-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-46"><a href="#cb20-46" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-47"><a href="#cb20-47" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
+<span id="cb20-48"><a href="#cb20-48" aria-hidden="true" tabindex="-1"></a><span class="in">If I showed you a restaurant menu, what structural elements would you</span></span>
+<span id="cb20-49"><a href="#cb20-49" aria-hidden="true" tabindex="-1"></a><span class="in">identify? Don't use any HTML terms yet—just describe the organisation</span></span>
+<span id="cb20-50"><a href="#cb20-50" aria-hidden="true" tabindex="-1"></a><span class="in">you see in plain English.</span></span>
+<span id="cb20-51"><a href="#cb20-51" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-52"><a href="#cb20-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-53"><a href="#cb20-53" aria-hidden="true" tabindex="-1"></a>Notice what your AI identifies: categories of food, individual items, descriptions, prices, perhaps special callouts for dietary information. This is structure—pure information architecture that exists independent of how it's presented.</span>
+<span id="cb20-54"><a href="#cb20-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-55"><a href="#cb20-55" aria-hidden="true" tabindex="-1"></a>Now follow up:</span>
+<span id="cb20-56"><a href="#cb20-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-57"><a href="#cb20-57" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-58"><a href="#cb20-58" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
+<span id="cb20-59"><a href="#cb20-59" aria-hidden="true" tabindex="-1"></a><span class="in">How would those same structural elements appear in a company's</span></span>
+<span id="cb20-60"><a href="#cb20-60" aria-hidden="true" tabindex="-1"></a><span class="in">"About Us" page?</span></span>
+<span id="cb20-61"><a href="#cb20-61" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-62"><a href="#cb20-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-63"><a href="#cb20-63" aria-hidden="true" tabindex="-1"></a>The specific content differs, but structural patterns repeat. Headings introduce sections. Paragraphs contain flowing text. Lists group related items. This pattern recognition is the foundation of HTML thinking.</span>
+<span id="cb20-64"><a href="#cb20-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-65"><a href="#cb20-65" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exploration 2: Semantic Meaning</span></span>
+<span id="cb20-66"><a href="#cb20-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-67"><a href="#cb20-67" aria-hidden="true" tabindex="-1"></a>The word "semantic" means "relating to meaning." Semantic HTML uses elements that describe what content *is*, not how it should *look*.</span>
+<span id="cb20-68"><a href="#cb20-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-69"><a href="#cb20-69" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-70"><a href="#cb20-70" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
+<span id="cb20-71"><a href="#cb20-71" aria-hidden="true" tabindex="-1"></a><span class="in">Explain "semantic HTML" using a library catalogue analogy. Why would</span></span>
+<span id="cb20-72"><a href="#cb20-72" aria-hidden="true" tabindex="-1"></a><span class="in">a librarian care whether a book is labelled as "fiction" versus just</span></span>
+<span id="cb20-73"><a href="#cb20-73" aria-hidden="true" tabindex="-1"></a><span class="in">"on shelf 3"?</span></span>
+<span id="cb20-74"><a href="#cb20-74" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-75"><a href="#cb20-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-76"><a href="#cb20-76" aria-hidden="true" tabindex="-1"></a>This conversation should reveal why meaningful labels matter. A library where books are only identified by shelf location would be nearly useless. Similarly, a web page where content is only identified by its visual appearance loses meaning for search engines, screen readers, and future maintainers.</span>
+<span id="cb20-77"><a href="#cb20-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-78"><a href="#cb20-78" aria-hidden="true" tabindex="-1"></a>Follow up:</span>
+<span id="cb20-79"><a href="#cb20-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-80"><a href="#cb20-80" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-81"><a href="#cb20-81" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
+<span id="cb20-82"><a href="#cb20-82" aria-hidden="true" tabindex="-1"></a><span class="in">What problems occur when web pages use visual-only structure—like</span></span>
+<span id="cb20-83"><a href="#cb20-83" aria-hidden="true" tabindex="-1"></a><span class="in">making text big and bold instead of marking it as a heading?</span></span>
+<span id="cb20-84"><a href="#cb20-84" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-85"><a href="#cb20-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-86"><a href="#cb20-86" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exploration 3: The Simplest Valid Page</span></span>
+<span id="cb20-87"><a href="#cb20-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-88"><a href="#cb20-88" aria-hidden="true" tabindex="-1"></a>Now let's see actual HTML, but the simplest possible version:</span>
+<span id="cb20-89"><a href="#cb20-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-90"><a href="#cb20-90" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-91"><a href="#cb20-91" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
+<span id="cb20-92"><a href="#cb20-92" aria-hidden="true" tabindex="-1"></a><span class="in">Show me the absolute simplest valid HTML page that contains just a</span></span>
+<span id="cb20-93"><a href="#cb20-93" aria-hidden="true" tabindex="-1"></a><span class="in">heading and a paragraph. Explain what each line does as if I've never</span></span>
+<span id="cb20-94"><a href="#cb20-94" aria-hidden="true" tabindex="-1"></a><span class="in">seen code before.</span></span>
+<span id="cb20-95"><a href="#cb20-95" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-96"><a href="#cb20-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-97"><a href="#cb20-97" aria-hidden="true" tabindex="-1"></a>Your AI should give you something like:</span>
+<span id="cb20-98"><a href="#cb20-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-99"><a href="#cb20-99" aria-hidden="true" tabindex="-1"></a><span class="in">```html</span></span>
+<span id="cb20-100"><a href="#cb20-100" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;!</span>DOCTYPE html<span class="op">&gt;</span></span>
+<span id="cb20-101"><a href="#cb20-101" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>html lang<span class="op">=</span><span class="st">"en"</span><span class="op">&gt;</span></span>
+<span id="cb20-102"><a href="#cb20-102" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>head<span class="op">&gt;</span></span>
+<span id="cb20-103"><a href="#cb20-103" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>meta charset<span class="op">=</span><span class="st">"UTF-8"</span><span class="op">&gt;</span></span>
+<span id="cb20-104"><a href="#cb20-104" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>title<span class="op">&gt;</span>Page Title<span class="op">&lt;/</span>title<span class="op">&gt;</span></span>
+<span id="cb20-105"><a href="#cb20-105" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>head<span class="op">&gt;</span></span>
+<span id="cb20-106"><a href="#cb20-106" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>body<span class="op">&gt;</span></span>
+<span id="cb20-107"><a href="#cb20-107" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>h1<span class="op">&gt;</span>Welcome<span class="op">&lt;/</span>h1<span class="op">&gt;</span></span>
+<span id="cb20-108"><a href="#cb20-108" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>p<span class="op">&gt;</span>This is a paragraph of text<span class="op">.&lt;/</span>p<span class="op">&gt;</span></span>
+<span id="cb20-109"><a href="#cb20-109" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>body<span class="op">&gt;</span></span>
+<span id="cb20-110"><a href="#cb20-110" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>html<span class="op">&gt;</span></span>
+<span id="cb20-111"><a href="#cb20-111" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-112"><a href="#cb20-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-113"><a href="#cb20-113" aria-hidden="true" tabindex="-1"></a>Don't just accept this—have a conversation about it:</span>
+<span id="cb20-114"><a href="#cb20-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-115"><a href="#cb20-115" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-116"><a href="#cb20-116" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
+<span id="cb20-117"><a href="#cb20-117" aria-hidden="true" tabindex="-1"></a><span class="in">Why is lang="en" important? Who or what uses that information?</span></span>
+<span id="cb20-118"><a href="#cb20-118" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-119"><a href="#cb20-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-120"><a href="#cb20-120" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-121"><a href="#cb20-121" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
+<span id="cb20-122"><a href="#cb20-122" aria-hidden="true" tabindex="-1"></a><span class="in">What happens if I leave out the DOCTYPE? Would the page still display?</span></span>
+<span id="cb20-123"><a href="#cb20-123" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-124"><a href="#cb20-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-125"><a href="#cb20-125" aria-hidden="true" tabindex="-1"></a>These conversations build understanding that copying code never provides.</span>
+<span id="cb20-126"><a href="#cb20-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-127"><a href="#cb20-127" aria-hidden="true" tabindex="-1"></a><span class="fu">## From Concept to Code</span></span>
+<span id="cb20-128"><a href="#cb20-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-129"><a href="#cb20-129" aria-hidden="true" tabindex="-1"></a>Let's build your HTML understanding progressively, starting from the absolute basics.</span>
+<span id="cb20-130"><a href="#cb20-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-131"><a href="#cb20-131" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Document Container</span></span>
+<span id="cb20-132"><a href="#cb20-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-133"><a href="#cb20-133" aria-hidden="true" tabindex="-1"></a>Every HTML page starts with a declaration and a container:</span>
+<span id="cb20-134"><a href="#cb20-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-135"><a href="#cb20-135" aria-hidden="true" tabindex="-1"></a><span class="in">```html</span></span>
+<span id="cb20-136"><a href="#cb20-136" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;!</span>DOCTYPE html<span class="op">&gt;</span></span>
+<span id="cb20-137"><a href="#cb20-137" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>html lang<span class="op">=</span><span class="st">"en"</span><span class="op">&gt;</span></span>
+<span id="cb20-138"><a href="#cb20-138" aria-hidden="true" tabindex="-1"></a>  <span class="op">&lt;!--</span> Everything goes here <span class="op">--&gt;</span></span>
+<span id="cb20-139"><a href="#cb20-139" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>html<span class="op">&gt;</span></span>
+<span id="cb20-140"><a href="#cb20-140" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-141"><a href="#cb20-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-142"><a href="#cb20-142" aria-hidden="true" tabindex="-1"></a>The <span class="in">`&lt;!DOCTYPE html&gt;`</span> tells browsers "this is a modern HTML document." The <span class="in">`&lt;html&gt;`</span> element is the root container for everything else. The <span class="in">`lang`</span> attribute declares the language—essential for screen readers and translation tools.</span>
+<span id="cb20-143"><a href="#cb20-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-144"><a href="#cb20-144" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Two Main Sections</span></span>
+<span id="cb20-145"><a href="#cb20-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-146"><a href="#cb20-146" aria-hidden="true" tabindex="-1"></a>Inside the HTML container, every page has exactly two sections:</span>
+<span id="cb20-147"><a href="#cb20-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-148"><a href="#cb20-148" aria-hidden="true" tabindex="-1"></a><span class="in">```html</span></span>
+<span id="cb20-149"><a href="#cb20-149" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;!</span>DOCTYPE html<span class="op">&gt;</span></span>
+<span id="cb20-150"><a href="#cb20-150" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>html lang<span class="op">=</span><span class="st">"en"</span><span class="op">&gt;</span></span>
+<span id="cb20-151"><a href="#cb20-151" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>head<span class="op">&gt;</span></span>
+<span id="cb20-152"><a href="#cb20-152" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;!--</span> Metadata<span class="op">:</span> information ABOUT the page <span class="op">--&gt;</span></span>
+<span id="cb20-153"><a href="#cb20-153" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>meta charset<span class="op">=</span><span class="st">"UTF-8"</span><span class="op">&gt;</span></span>
+<span id="cb20-154"><a href="#cb20-154" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>title<span class="op">&gt;</span>My Business<span class="op">&lt;/</span>title<span class="op">&gt;</span></span>
+<span id="cb20-155"><a href="#cb20-155" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>head<span class="op">&gt;</span></span>
+<span id="cb20-156"><a href="#cb20-156" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>body<span class="op">&gt;</span></span>
+<span id="cb20-157"><a href="#cb20-157" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;!--</span> Content<span class="op">:</span> what people actually see <span class="op">--&gt;</span></span>
+<span id="cb20-158"><a href="#cb20-158" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>body<span class="op">&gt;</span></span>
+<span id="cb20-159"><a href="#cb20-159" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>html<span class="op">&gt;</span></span>
+<span id="cb20-160"><a href="#cb20-160" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-161"><a href="#cb20-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-162"><a href="#cb20-162" aria-hidden="true" tabindex="-1"></a>The <span class="in">`&lt;head&gt;`</span> contains metadata—information about the page that doesn't appear on screen. The <span class="in">`&lt;body&gt;`</span> contains the actual content visitors see and interact with.</span>
+<span id="cb20-163"><a href="#cb20-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-164"><a href="#cb20-164" aria-hidden="true" tabindex="-1"></a>Think of it like a business letter: the <span class="in">`&lt;head&gt;`</span> is the envelope with addresses and stamps, while the <span class="in">`&lt;body&gt;`</span> is the letter inside.</span>
+<span id="cb20-165"><a href="#cb20-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-166"><a href="#cb20-166" aria-hidden="true" tabindex="-1"></a><span class="fu">### Semantic Content Elements</span></span>
+<span id="cb20-167"><a href="#cb20-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-168"><a href="#cb20-168" aria-hidden="true" tabindex="-1"></a>Now let's add meaningful content. HTML provides elements that describe *what* content is:</span>
+<span id="cb20-169"><a href="#cb20-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-170"><a href="#cb20-170" aria-hidden="true" tabindex="-1"></a><span class="in">```html</span></span>
+<span id="cb20-171"><a href="#cb20-171" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>body<span class="op">&gt;</span></span>
+<span id="cb20-172"><a href="#cb20-172" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>header<span class="op">&gt;</span></span>
+<span id="cb20-173"><a href="#cb20-173" aria-hidden="true" tabindex="-1"></a>        <span class="op">&lt;</span>h1<span class="op">&gt;</span>Sunrise Café<span class="op">&lt;/</span>h1<span class="op">&gt;</span></span>
+<span id="cb20-174"><a href="#cb20-174" aria-hidden="true" tabindex="-1"></a>        <span class="op">&lt;</span>p<span class="op">&gt;</span>Fresh coffee<span class="op">,</span> warm welcome<span class="op">&lt;/</span>p<span class="op">&gt;</span></span>
+<span id="cb20-175"><a href="#cb20-175" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;/</span>header<span class="op">&gt;</span></span>
+<span id="cb20-176"><a href="#cb20-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-177"><a href="#cb20-177" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>main<span class="op">&gt;</span></span>
+<span id="cb20-178"><a href="#cb20-178" aria-hidden="true" tabindex="-1"></a>        <span class="op">&lt;</span>section<span class="op">&gt;</span></span>
+<span id="cb20-179"><a href="#cb20-179" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;</span>h2<span class="op">&gt;</span>Our Story<span class="op">&lt;/</span>h2<span class="op">&gt;</span></span>
+<span id="cb20-180"><a href="#cb20-180" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;</span>p<span class="op">&gt;</span>Founded in <span class="dv">2019</span><span class="op">,</span> Sunrise Café began with a simple</span>
+<span id="cb20-181"><a href="#cb20-181" aria-hidden="true" tabindex="-1"></a>               belief<span class="op">:</span> great coffee brings people together<span class="op">.&lt;/</span>p<span class="op">&gt;</span></span>
+<span id="cb20-182"><a href="#cb20-182" aria-hidden="true" tabindex="-1"></a>        <span class="op">&lt;/</span>section<span class="op">&gt;</span></span>
+<span id="cb20-183"><a href="#cb20-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-184"><a href="#cb20-184" aria-hidden="true" tabindex="-1"></a>        <span class="op">&lt;</span>section<span class="op">&gt;</span></span>
+<span id="cb20-185"><a href="#cb20-185" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;</span>h2<span class="op">&gt;</span>Visit Us<span class="op">&lt;/</span>h2<span class="op">&gt;</span></span>
+<span id="cb20-186"><a href="#cb20-186" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;</span>p<span class="op">&gt;</span><span class="dv">123</span> Main Street<span class="op">,</span> open daily from <span class="dv">7</span><span class="er">am</span> to <span class="dv">5</span><span class="er">pm.</span><span class="op">&lt;/</span>p<span class="op">&gt;</span></span>
+<span id="cb20-187"><a href="#cb20-187" aria-hidden="true" tabindex="-1"></a>        <span class="op">&lt;/</span>section<span class="op">&gt;</span></span>
+<span id="cb20-188"><a href="#cb20-188" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;/</span>main<span class="op">&gt;</span></span>
+<span id="cb20-189"><a href="#cb20-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-190"><a href="#cb20-190" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>footer<span class="op">&gt;</span></span>
+<span id="cb20-191"><a href="#cb20-191" aria-hidden="true" tabindex="-1"></a>        <span class="op">&lt;</span>p<span class="op">&gt;</span>© <span class="dv">2024</span> Sunrise Café<span class="op">&lt;/</span>p<span class="op">&gt;</span></span>
+<span id="cb20-192"><a href="#cb20-192" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;/</span>footer<span class="op">&gt;</span></span>
+<span id="cb20-193"><a href="#cb20-193" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>body<span class="op">&gt;</span></span>
+<span id="cb20-194"><a href="#cb20-194" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-195"><a href="#cb20-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-196"><a href="#cb20-196" aria-hidden="true" tabindex="-1"></a>Notice what we've communicated:</span>
+<span id="cb20-197"><a href="#cb20-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-198"><a href="#cb20-198" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`&lt;header&gt;`</span> — the introductory content for the page</span>
+<span id="cb20-199"><a href="#cb20-199" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`&lt;main&gt;`</span> — the primary content (there should only be one)</span>
+<span id="cb20-200"><a href="#cb20-200" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`&lt;section&gt;`</span> — distinct, thematically grouped content</span>
+<span id="cb20-201"><a href="#cb20-201" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`&lt;footer&gt;`</span> — closing information</span>
+<span id="cb20-202"><a href="#cb20-202" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`&lt;h1&gt;`</span>, <span class="in">`&lt;h2&gt;`</span> — heading hierarchy (h1 is most important)</span>
+<span id="cb20-203"><a href="#cb20-203" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`&lt;p&gt;`</span> — paragraphs of text</span>
+<span id="cb20-204"><a href="#cb20-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-205"><a href="#cb20-205" aria-hidden="true" tabindex="-1"></a>A screen reader can now navigate this page by headings. Search engines understand what's primary content versus footer material. Future developers can immediately grasp the page structure.</span>
+<span id="cb20-206"><a href="#cb20-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-207"><a href="#cb20-207" aria-hidden="true" tabindex="-1"></a><span class="fu">### Common Semantic Elements</span></span>
+<span id="cb20-208"><a href="#cb20-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-209"><a href="#cb20-209" aria-hidden="true" tabindex="-1"></a>Here are the structural elements you'll use most often:</span>
+<span id="cb20-210"><a href="#cb20-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-211"><a href="#cb20-211" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Element <span class="pp">|</span> Purpose <span class="pp">|</span> Example Use <span class="pp">|</span></span>
+<span id="cb20-212"><a href="#cb20-212" aria-hidden="true" tabindex="-1"></a><span class="pp">|---------|---------|-------------|</span></span>
+<span id="cb20-213"><a href="#cb20-213" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`&lt;header&gt;`</span> <span class="pp">|</span> Introductory content <span class="pp">|</span> Site branding, navigation <span class="pp">|</span></span>
+<span id="cb20-214"><a href="#cb20-214" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`&lt;nav&gt;`</span> <span class="pp">|</span> Navigation links <span class="pp">|</span> Main menu, breadcrumbs <span class="pp">|</span></span>
+<span id="cb20-215"><a href="#cb20-215" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`&lt;main&gt;`</span> <span class="pp">|</span> Primary page content <span class="pp">|</span> The "meat" of the page <span class="pp">|</span></span>
+<span id="cb20-216"><a href="#cb20-216" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`&lt;section&gt;`</span> <span class="pp">|</span> Thematic grouping <span class="pp">|</span> Chapters, tabbed content <span class="pp">|</span></span>
+<span id="cb20-217"><a href="#cb20-217" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`&lt;article&gt;`</span> <span class="pp">|</span> Self-contained content <span class="pp">|</span> Blog post, news story <span class="pp">|</span></span>
+<span id="cb20-218"><a href="#cb20-218" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`&lt;aside&gt;`</span> <span class="pp">|</span> Related but separate <span class="pp">|</span> Sidebar, pull quote <span class="pp">|</span></span>
+<span id="cb20-219"><a href="#cb20-219" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`&lt;footer&gt;`</span> <span class="pp">|</span> Closing content <span class="pp">|</span> Copyright, contact links <span class="pp">|</span></span>
+<span id="cb20-220"><a href="#cb20-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-221"><a href="#cb20-221" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
+<span id="cb20-222"><a href="#cb20-222" aria-hidden="true" tabindex="-1"></a><span class="fu">## Common Mistake</span></span>
+<span id="cb20-223"><a href="#cb20-223" aria-hidden="true" tabindex="-1"></a>Don't choose elements based on how they look by default. Choose them based on what the content *is*. A <span class="in">`&lt;section&gt;`</span> isn't "a box"—it's a thematic grouping of content. Appearance is CSS's job (Chapter 2).</span>
+<span id="cb20-224"><a href="#cb20-224" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb20-225"><a href="#cb20-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-226"><a href="#cb20-226" aria-hidden="true" tabindex="-1"></a><span class="fu">### Headings Create Hierarchy</span></span>
+<span id="cb20-227"><a href="#cb20-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-228"><a href="#cb20-228" aria-hidden="true" tabindex="-1"></a>Headings aren't just "big text"—they create a document outline:</span>
+<span id="cb20-229"><a href="#cb20-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-230"><a href="#cb20-230" aria-hidden="true" tabindex="-1"></a><span class="in">```html</span></span>
+<span id="cb20-231"><a href="#cb20-231" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>h1<span class="op">&gt;</span>Sunrise Café<span class="op">&lt;/</span>h1<span class="op">&gt;</span>           <span class="op">&lt;!--</span> Page title <span class="op">(</span>one per page<span class="op">)</span> <span class="op">--&gt;</span></span>
+<span id="cb20-232"><a href="#cb20-232" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>h2<span class="op">&gt;</span>Our Menu<span class="op">&lt;/</span>h2<span class="op">&gt;</span>           <span class="op">&lt;!--</span> Major section <span class="op">--&gt;</span></span>
+<span id="cb20-233"><a href="#cb20-233" aria-hidden="true" tabindex="-1"></a>        <span class="op">&lt;</span>h3<span class="op">&gt;</span>Hot Drinks<span class="op">&lt;/</span>h3<span class="op">&gt;</span>     <span class="op">&lt;!--</span> Subsection <span class="op">--&gt;</span></span>
+<span id="cb20-234"><a href="#cb20-234" aria-hidden="true" tabindex="-1"></a>        <span class="op">&lt;</span>h3<span class="op">&gt;</span>Cold Drinks<span class="op">&lt;/</span>h3<span class="op">&gt;</span>    <span class="op">&lt;!--</span> Subsection <span class="op">--&gt;</span></span>
+<span id="cb20-235"><a href="#cb20-235" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>h2<span class="op">&gt;</span>Our Story<span class="op">&lt;/</span>h2<span class="op">&gt;</span>          <span class="op">&lt;!--</span> Major section <span class="op">--&gt;</span></span>
+<span id="cb20-236"><a href="#cb20-236" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>h2<span class="op">&gt;</span>Contact Us<span class="op">&lt;/</span>h2<span class="op">&gt;</span>         <span class="op">&lt;!--</span> Major section <span class="op">--&gt;</span></span>
+<span id="cb20-237"><a href="#cb20-237" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-238"><a href="#cb20-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-239"><a href="#cb20-239" aria-hidden="true" tabindex="-1"></a>This hierarchy should make sense as an outline. Don't skip levels (no jumping from h2 to h4) and don't use headings just to make text bigger.</span>
+<span id="cb20-240"><a href="#cb20-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-241"><a href="#cb20-241" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-242"><a href="#cb20-242" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
+<span id="cb20-243"><a href="#cb20-243" aria-hidden="true" tabindex="-1"></a><span class="in">Show me a properly structured heading hierarchy for a small business</span></span>
+<span id="cb20-244"><a href="#cb20-244" aria-hidden="true" tabindex="-1"></a><span class="in">website with pages for Home, Services, About, and Contact. Then show</span></span>
+<span id="cb20-245"><a href="#cb20-245" aria-hidden="true" tabindex="-1"></a><span class="in">me a common mistake beginners make with headings.</span></span>
+<span id="cb20-246"><a href="#cb20-246" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-247"><a href="#cb20-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-248"><a href="#cb20-248" aria-hidden="true" tabindex="-1"></a><span class="fu">## Building Your Mental Model</span></span>
+<span id="cb20-249"><a href="#cb20-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-250"><a href="#cb20-250" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Tree Structure</span></span>
+<span id="cb20-251"><a href="#cb20-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-252"><a href="#cb20-252" aria-hidden="true" tabindex="-1"></a>HTML forms a tree, like a family tree or organisation chart:</span>
+<span id="cb20-253"><a href="#cb20-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-254"><a href="#cb20-254" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-255"><a href="#cb20-255" aria-hidden="true" tabindex="-1"></a><span class="in">html</span></span>
+<span id="cb20-256"><a href="#cb20-256" aria-hidden="true" tabindex="-1"></a><span class="in">├── head</span></span>
+<span id="cb20-257"><a href="#cb20-257" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── meta</span></span>
+<span id="cb20-258"><a href="#cb20-258" aria-hidden="true" tabindex="-1"></a><span class="in">│   └── title</span></span>
+<span id="cb20-259"><a href="#cb20-259" aria-hidden="true" tabindex="-1"></a><span class="in">└── body</span></span>
+<span id="cb20-260"><a href="#cb20-260" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── header</span></span>
+<span id="cb20-261"><a href="#cb20-261" aria-hidden="true" tabindex="-1"></a><span class="in">    │   ├── h1</span></span>
+<span id="cb20-262"><a href="#cb20-262" aria-hidden="true" tabindex="-1"></a><span class="in">    │   └── p</span></span>
+<span id="cb20-263"><a href="#cb20-263" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── main</span></span>
+<span id="cb20-264"><a href="#cb20-264" aria-hidden="true" tabindex="-1"></a><span class="in">    │   ├── section</span></span>
+<span id="cb20-265"><a href="#cb20-265" aria-hidden="true" tabindex="-1"></a><span class="in">    │   │   ├── h2</span></span>
+<span id="cb20-266"><a href="#cb20-266" aria-hidden="true" tabindex="-1"></a><span class="in">    │   │   └── p</span></span>
+<span id="cb20-267"><a href="#cb20-267" aria-hidden="true" tabindex="-1"></a><span class="in">    │   └── section</span></span>
+<span id="cb20-268"><a href="#cb20-268" aria-hidden="true" tabindex="-1"></a><span class="in">    │       ├── h2</span></span>
+<span id="cb20-269"><a href="#cb20-269" aria-hidden="true" tabindex="-1"></a><span class="in">    │       └── p</span></span>
+<span id="cb20-270"><a href="#cb20-270" aria-hidden="true" tabindex="-1"></a><span class="in">    └── footer</span></span>
+<span id="cb20-271"><a href="#cb20-271" aria-hidden="true" tabindex="-1"></a><span class="in">        └── p</span></span>
+<span id="cb20-272"><a href="#cb20-272" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-273"><a href="#cb20-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-274"><a href="#cb20-274" aria-hidden="true" tabindex="-1"></a>Elements contain other elements. This nesting creates relationships: the <span class="in">`&lt;h2&gt;`</span> belongs to its <span class="in">`&lt;section&gt;`</span>, which belongs to <span class="in">`&lt;main&gt;`</span>, which belongs to <span class="in">`&lt;body&gt;`</span>.</span>
+<span id="cb20-275"><a href="#cb20-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-276"><a href="#cb20-276" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-277"><a href="#cb20-277" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
+<span id="cb20-278"><a href="#cb20-278" aria-hidden="true" tabindex="-1"></a><span class="in">Explain parent, child, and sibling relationships in HTML using a</span></span>
+<span id="cb20-279"><a href="#cb20-279" aria-hidden="true" tabindex="-1"></a><span class="in">company organisational chart as an analogy.</span></span>
+<span id="cb20-280"><a href="#cb20-280" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-281"><a href="#cb20-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-282"><a href="#cb20-282" aria-hidden="true" tabindex="-1"></a><span class="fu">### Tags, Elements, and Attributes</span></span>
+<span id="cb20-283"><a href="#cb20-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-284"><a href="#cb20-284" aria-hidden="true" tabindex="-1"></a>Let's clarify terminology:</span>
+<span id="cb20-285"><a href="#cb20-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-286"><a href="#cb20-286" aria-hidden="true" tabindex="-1"></a><span class="in">```html</span></span>
+<span id="cb20-287"><a href="#cb20-287" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>a href<span class="op">=</span><span class="st">"about.html"</span><span class="op">&gt;</span>About Us<span class="op">&lt;/</span>a<span class="op">&gt;</span></span>
+<span id="cb20-288"><a href="#cb20-288" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-289"><a href="#cb20-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-290"><a href="#cb20-290" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tag**: <span class="in">`&lt;a&gt;`</span> is the opening tag, <span class="in">`&lt;/a&gt;`</span> is the closing tag</span>
+<span id="cb20-291"><a href="#cb20-291" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Element**: The complete unit from opening to closing tag, including content</span>
+<span id="cb20-292"><a href="#cb20-292" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Attribute**: <span class="in">`href="about.html"`</span> provides additional information</span>
+<span id="cb20-293"><a href="#cb20-293" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Content**: "About Us" is the text content between tags</span>
+<span id="cb20-294"><a href="#cb20-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-295"><a href="#cb20-295" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Box Model Preview</span></span>
+<span id="cb20-296"><a href="#cb20-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-297"><a href="#cb20-297" aria-hidden="true" tabindex="-1"></a>Every HTML element creates an invisible box on the page. These boxes stack and nest according to the document structure. In Chapter 2, we'll learn to control these boxes with CSS. For now, understand that structure creates boxes, and boxes create layout.</span>
+<span id="cb20-298"><a href="#cb20-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-299"><a href="#cb20-299" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-300"><a href="#cb20-300" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
+<span id="cb20-301"><a href="#cb20-301" aria-hidden="true" tabindex="-1"></a><span class="in">If I put a section inside a main element, and two paragraphs inside</span></span>
+<span id="cb20-302"><a href="#cb20-302" aria-hidden="true" tabindex="-1"></a><span class="in">that section, how many "boxes" have I created? Describe how they</span></span>
+<span id="cb20-303"><a href="#cb20-303" aria-hidden="true" tabindex="-1"></a><span class="in">would stack.</span></span>
+<span id="cb20-304"><a href="#cb20-304" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-305"><a href="#cb20-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-306"><a href="#cb20-306" aria-hidden="true" tabindex="-1"></a><span class="fu">## Business Applications</span></span>
+<span id="cb20-307"><a href="#cb20-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-308"><a href="#cb20-308" aria-hidden="true" tabindex="-1"></a><span class="fu">### Search Engine Optimisation (SEO)</span></span>
+<span id="cb20-309"><a href="#cb20-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-310"><a href="#cb20-310" aria-hidden="true" tabindex="-1"></a>Search engines read your HTML structure to understand your content. A well-structured page with clear headings, semantic sections, and meaningful hierarchy ranks better than a soup of <span class="in">`&lt;div&gt;`</span> elements.</span>
+<span id="cb20-311"><a href="#cb20-311" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-312"><a href="#cb20-312" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-313"><a href="#cb20-313" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
+<span id="cb20-314"><a href="#cb20-314" aria-hidden="true" tabindex="-1"></a><span class="in">How do search engines like Google use HTML structure to understand</span></span>
+<span id="cb20-315"><a href="#cb20-315" aria-hidden="true" tabindex="-1"></a><span class="in">what a page is about? What happens when structure is missing or</span></span>
+<span id="cb20-316"><a href="#cb20-316" aria-hidden="true" tabindex="-1"></a><span class="in">confusing?</span></span>
+<span id="cb20-317"><a href="#cb20-317" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-318"><a href="#cb20-318" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-319"><a href="#cb20-319" aria-hidden="true" tabindex="-1"></a><span class="fu">### Accessibility</span></span>
+<span id="cb20-320"><a href="#cb20-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-321"><a href="#cb20-321" aria-hidden="true" tabindex="-1"></a>Screen readers—software used by visually impaired people—navigate by structure. Users can jump between headings, skip to main content, or list all navigation links. Without semantic HTML, this navigation is impossible.</span>
+<span id="cb20-322"><a href="#cb20-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-323"><a href="#cb20-323" aria-hidden="true" tabindex="-1"></a>This isn't just ethical—it's often legal. Many jurisdictions require accessible websites for businesses, government, and education.</span>
+<span id="cb20-324"><a href="#cb20-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-325"><a href="#cb20-325" aria-hidden="true" tabindex="-1"></a><span class="fu">### Maintainability</span></span>
+<span id="cb20-326"><a href="#cb20-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-327"><a href="#cb20-327" aria-hidden="true" tabindex="-1"></a>Well-structured HTML is easier to update. When sections are clearly marked, finding and changing content takes minutes instead of hours. Six months from now, you (or someone else) will thank you for clean structure.</span>
+<span id="cb20-328"><a href="#cb20-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-329"><a href="#cb20-329" aria-hidden="true" tabindex="-1"></a><span class="fu">### Professional Credibility</span></span>
+<span id="cb20-330"><a href="#cb20-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-331"><a href="#cb20-331" aria-hidden="true" tabindex="-1"></a>When potential employers or clients view your page source, structure tells them about your professionalism. Clean, semantic HTML signals someone who understands web fundamentals—not just someone who copied code until something worked.</span>
+<span id="cb20-332"><a href="#cb20-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-333"><a href="#cb20-333" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb20-334"><a href="#cb20-334" aria-hidden="true" tabindex="-1"></a><span class="fu">## ULO Connection</span></span>
+<span id="cb20-335"><a href="#cb20-335" aria-hidden="true" tabindex="-1"></a>This develops **ULO 1** (design and evaluate effective web applications) and **ULO 2** (professional skills). Structure isn't visible to casual viewers, but it's visible to search engines, screen readers, developers, and anyone who inspects your code.</span>
+<span id="cb20-336"><a href="#cb20-336" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb20-337"><a href="#cb20-337" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-338"><a href="#cb20-338" aria-hidden="true" tabindex="-1"></a><span class="fu">## Practice Exercises</span></span>
+<span id="cb20-339"><a href="#cb20-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-340"><a href="#cb20-340" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb20-341"><a href="#cb20-341" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise Levels</span></span>
+<span id="cb20-342"><a href="#cb20-342" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 1**: Direct application</span>
+<span id="cb20-343"><a href="#cb20-343" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 2**: Minor modifications</span>
+<span id="cb20-344"><a href="#cb20-344" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 3**: Combining concepts</span>
+<span id="cb20-345"><a href="#cb20-345" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 4**: Problem-solving</span>
+<span id="cb20-346"><a href="#cb20-346" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 5**: Open-ended design</span>
+<span id="cb20-347"><a href="#cb20-347" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb20-348"><a href="#cb20-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-349"><a href="#cb20-349" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 1.1: Document Analysis (Level 1)</span></span>
+<span id="cb20-350"><a href="#cb20-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-351"><a href="#cb20-351" aria-hidden="true" tabindex="-1"></a>Find a simple webpage (a local business, a restaurant, a small company). View its source (right-click → View Page Source). Identify:</span>
+<span id="cb20-352"><a href="#cb20-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-353"><a href="#cb20-353" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>The <span class="in">`&lt;!DOCTYPE&gt;`</span> declaration</span>
+<span id="cb20-354"><a href="#cb20-354" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>The <span class="in">`&lt;head&gt;`</span> and <span class="in">`&lt;body&gt;`</span> sections</span>
+<span id="cb20-355"><a href="#cb20-355" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>At least three semantic elements (<span class="in">`&lt;header&gt;`</span>, <span class="in">`&lt;main&gt;`</span>, <span class="in">`&lt;footer&gt;`</span>, <span class="in">`&lt;nav&gt;`</span>, <span class="in">`&lt;section&gt;`</span>, <span class="in">`&lt;article&gt;`</span>)</span>
+<span id="cb20-356"><a href="#cb20-356" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>The heading hierarchy (<span class="in">`&lt;h1&gt;`</span> through <span class="in">`&lt;h6&gt;`</span>)</span>
+<span id="cb20-357"><a href="#cb20-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-358"><a href="#cb20-358" aria-hidden="true" tabindex="-1"></a>Document your findings. Is this page well-structured or poorly structured? Why?</span>
+<span id="cb20-359"><a href="#cb20-359" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-360"><a href="#cb20-360" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 1.2: Structure First (Level 2)</span></span>
+<span id="cb20-361"><a href="#cb20-361" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-362"><a href="#cb20-362" aria-hidden="true" tabindex="-1"></a>Without writing any HTML, create a structural outline for a personal portfolio page. List:</span>
+<span id="cb20-363"><a href="#cb20-363" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-364"><a href="#cb20-364" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What would go in the header?</span>
+<span id="cb20-365"><a href="#cb20-365" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What sections would the main content have?</span>
+<span id="cb20-366"><a href="#cb20-366" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What information belongs in the footer?</span>
+<span id="cb20-367"><a href="#cb20-367" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What's the heading hierarchy?</span>
+<span id="cb20-368"><a href="#cb20-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-369"><a href="#cb20-369" aria-hidden="true" tabindex="-1"></a>Then, with your AI partner, translate your outline into semantic HTML. Compare your outline with the final code—did the structure remain clear?</span>
+<span id="cb20-370"><a href="#cb20-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-371"><a href="#cb20-371" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 1.3: Fix the Structure (Level 3)</span></span>
+<span id="cb20-372"><a href="#cb20-372" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-373"><a href="#cb20-373" aria-hidden="true" tabindex="-1"></a>Here's a poorly structured page. Identify the problems and rewrite it with proper semantic HTML:</span>
+<span id="cb20-374"><a href="#cb20-374" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-375"><a href="#cb20-375" aria-hidden="true" tabindex="-1"></a><span class="in">```html</span></span>
+<span id="cb20-376"><a href="#cb20-376" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>html<span class="op">&gt;</span></span>
+<span id="cb20-377"><a href="#cb20-377" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>div<span class="op">&gt;</span></span>
+<span id="cb20-378"><a href="#cb20-378" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>div style<span class="op">=</span><span class="st">"font-size: 32px; font-weight: bold;"</span><span class="op">&gt;</span>My Business<span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
+<span id="cb20-379"><a href="#cb20-379" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>div style<span class="op">=</span><span class="st">"font-size: 24px; font-weight: bold;"</span><span class="op">&gt;</span>About<span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
+<span id="cb20-380"><a href="#cb20-380" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>div<span class="op">&gt;</span>We are a great company<span class="op">.&lt;/</span>div<span class="op">&gt;</span></span>
+<span id="cb20-381"><a href="#cb20-381" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>div style<span class="op">=</span><span class="st">"font-size: 24px; font-weight: bold;"</span><span class="op">&gt;</span>Contact<span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
+<span id="cb20-382"><a href="#cb20-382" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>div<span class="op">&gt;</span>Email us at hello@example<span class="op">.</span>com<span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
+<span id="cb20-383"><a href="#cb20-383" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>div style<span class="op">=</span><span class="st">"font-size: 12px;"</span><span class="op">&gt;</span>Copyright <span class="dv">2024</span><span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
+<span id="cb20-384"><a href="#cb20-384" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
+<span id="cb20-385"><a href="#cb20-385" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>html<span class="op">&gt;</span></span>
+<span id="cb20-386"><a href="#cb20-386" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-387"><a href="#cb20-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-388"><a href="#cb20-388" aria-hidden="true" tabindex="-1"></a>List each problem you find and explain why it matters.</span>
+<span id="cb20-389"><a href="#cb20-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-390"><a href="#cb20-390" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 1.4: Business Requirements (Level 4)</span></span>
+<span id="cb20-391"><a href="#cb20-391" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-392"><a href="#cb20-392" aria-hidden="true" tabindex="-1"></a>A local bakery asks you to create their website. They mention:</span>
+<span id="cb20-393"><a href="#cb20-393" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-394"><a href="#cb20-394" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>They want their hours prominently displayed</span>
+<span id="cb20-395"><a href="#cb20-395" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>They have three categories of products (bread, pastries, cakes)</span>
+<span id="cb20-396"><a href="#cb20-396" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>They want to show their story and values</span>
+<span id="cb20-397"><a href="#cb20-397" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>They need contact information and a map</span>
+<span id="cb20-398"><a href="#cb20-398" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-399"><a href="#cb20-399" aria-hidden="true" tabindex="-1"></a>Create a structural plan that addresses their requirements. Which semantic elements would you use for each requirement? Justify your choices in business terms—why does proper structure benefit this bakery?</span>
+<span id="cb20-400"><a href="#cb20-400" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-401"><a href="#cb20-401" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 1.5: Semantic Debate (Level 5)</span></span>
+<span id="cb20-402"><a href="#cb20-402" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-403"><a href="#cb20-403" aria-hidden="true" tabindex="-1"></a>Should a "team members" section on an About page use <span class="in">`&lt;article&gt;`</span> for each person, or <span class="in">`&lt;section&gt;`</span>, or neither?</span>
+<span id="cb20-404"><a href="#cb20-404" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-405"><a href="#cb20-405" aria-hidden="true" tabindex="-1"></a>Research the HTML specification's definitions for both elements. Have a conversation with your AI partner exploring arguments for each choice. Write a short recommendation (200-300 words) defending your position with evidence from web standards.</span>
+<span id="cb20-406"><a href="#cb20-406" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-407"><a href="#cb20-407" aria-hidden="true" tabindex="-1"></a>This exercise has no single correct answer—it develops your ability to make and defend technical decisions (ULO 4).</span>
+<span id="cb20-408"><a href="#cb20-408" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-409"><a href="#cb20-409" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chapter Summary</span></span>
+<span id="cb20-410"><a href="#cb20-410" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-411"><a href="#cb20-411" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>HTML describes document structure, not appearance</span>
+<span id="cb20-412"><a href="#cb20-412" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Semantic elements convey meaning to humans and machines</span>
+<span id="cb20-413"><a href="#cb20-413" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Every page has <span class="in">`&lt;head&gt;`</span> (metadata) and <span class="in">`&lt;body&gt;`</span> (content)</span>
+<span id="cb20-414"><a href="#cb20-414" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Headings create hierarchy—don't skip levels or use them for styling</span>
+<span id="cb20-415"><a href="#cb20-415" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Structure benefits SEO, accessibility, maintainability, and professionalism</span>
+<span id="cb20-416"><a href="#cb20-416" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The structure you create is as important as the content you write</span>
+<span id="cb20-417"><a href="#cb20-417" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-418"><a href="#cb20-418" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reflection</span></span>
+<span id="cb20-419"><a href="#cb20-419" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-420"><a href="#cb20-420" aria-hidden="true" tabindex="-1"></a>Before moving to Chapter 2, ensure you can:</span>
+<span id="cb20-421"><a href="#cb20-421" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-422"><a href="#cb20-422" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Explain HTML's purpose without using technical jargon</span>
+<span id="cb20-423"><a href="#cb20-423" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Identify at least six semantic HTML elements and their purposes</span>
+<span id="cb20-424"><a href="#cb20-424" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Describe the difference between semantic and presentational markup</span>
+<span id="cb20-425"><a href="#cb20-425" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Create a document outline before writing code</span>
+<span id="cb20-426"><a href="#cb20-426" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Explain why structure matters for business (SEO, accessibility, maintenance)</span>
+<span id="cb20-427"><a href="#cb20-427" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> View a page's source and assess its structural quality</span>
+<span id="cb20-428"><a href="#cb20-428" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Have a productive conversation with AI about HTML concepts</span>
+<span id="cb20-429"><a href="#cb20-429" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-430"><a href="#cb20-430" aria-hidden="true" tabindex="-1"></a><span class="fu">## Your Learning Journal</span></span>
+<span id="cb20-431"><a href="#cb20-431" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-432"><a href="#cb20-432" aria-hidden="true" tabindex="-1"></a>Record your responses to these prompts:</span>
+<span id="cb20-433"><a href="#cb20-433" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-434"><a href="#cb20-434" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Structure Spotting**: Look at three websites you use regularly. What structural patterns do they share? What semantic elements can you identify?</span>
+<span id="cb20-435"><a href="#cb20-435" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-436"><a href="#cb20-436" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**AI Conversation Reflection**: What was the most useful question you asked your AI partner in this chapter? What made it effective?</span>
+<span id="cb20-437"><a href="#cb20-437" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-438"><a href="#cb20-438" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Concept Connection**: How does HTML structure relate to other kinds of structure you encounter (documents, buildings, organisations)?</span>
+<span id="cb20-439"><a href="#cb20-439" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-440"><a href="#cb20-440" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Lingering Questions**: What aspects of HTML structure are still unclear? Write these as questions to explore with your AI partner.</span>
+<span id="cb20-441"><a href="#cb20-441" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-442"><a href="#cb20-442" aria-hidden="true" tabindex="-1"></a><span class="fu">## Next Steps</span></span>
+<span id="cb20-443"><a href="#cb20-443" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-444"><a href="#cb20-444" aria-hidden="true" tabindex="-1"></a>You now understand how to describe what content *is*. But a page with only HTML looks plain—black text on white background, default fonts, minimal layout.</span>
+<span id="cb20-445"><a href="#cb20-445" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-446"><a href="#cb20-446" aria-hidden="true" tabindex="-1"></a>In @sec-presentation, we'll explore CSS—how to control the visual presentation of our structured content. Structure and presentation are deliberately separate in web development, and understanding why is key to professional practice.</span>
+<span id="cb20-447"><a href="#cb20-447" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-448"><a href="#cb20-448" aria-hidden="true" tabindex="-1"></a>The structure you've learned to create becomes the foundation that CSS styles. Good structure makes styling straightforward; poor structure makes it a struggle.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/michael-borck/build-web-guide-ai/edit/main/chapter-structure.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
