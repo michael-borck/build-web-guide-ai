@@ -76,7 +76,7 @@ This book is part of a **"Learning with AI" collection** – resources designed 
 
 ### The AI Methodology Guide
 
-**[Conversation, Not Delegation: Mastering Human-AI Development](https://michael-borck.github.io/conversation-not-delegation)** provides the deep methodology for AI collaboration that this book applies to web development. If you want to understand *why* certain prompting approaches work, Conversation, Not Delegation is your guide.
+**[Converse Python, Partner AI: The Python Edition](https://michael-borck.github.io/converse-python-partner-ai)** provides the deep methodology for AI collaboration that this book applies to web development. If you want to understand *why* certain prompting approaches work, Converse Python, Partner AI is your guide.
 
 Key concepts from Intentional Prompting used throughout this book:
 
@@ -97,8 +97,8 @@ If you're also interested in Python development, explore the Python learning pat
 
 ```
                     ┌─────────────────────┐
-                    │   CONVERSATION,     │
-                    │  NOT DELEGATION     │
+                    │  CONVERSE PYTHON,   │
+                    │   PARTNER AI        │
                     │   (Methodology)     │
                     └─────────────────────┘
                            │
@@ -115,7 +115,7 @@ If you're also interested in Python development, explore the Python learning pat
                     (shared methodology)
 ```
 
-Start wherever matches your goals. The methodology from Conversation, Not Delegation enhances all paths.
+Start wherever matches your goals. The methodology from Converse Python, Partner AI enhances all paths.
 
 ## Source Code & Feedback
 
