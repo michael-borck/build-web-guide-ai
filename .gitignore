@@ -42,3 +42,4 @@ notes/*.md
 
 **/*.quarto_ipynb
 llm.txt
+rag-documents/
