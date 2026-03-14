@@ -10,6 +10,7 @@ book:
   license: "CC BY 4.0 (content), MIT (code examples)"
   description: "A practical approach to web development that embraces AI as your development partner while building real business solutions with HTML, CSS, JavaScript, WordPress, and React."
   cover-image: cover.png
+  favicon: favicon.svg
   site-url: https://michael-borck.github.io/build-web-guide-ai
   repo-url: https://github.com/michael-borck/build-web-guide-ai
   repo-branch: main
@@ -67,9 +68,6 @@ book:
         href: https://github.com/michael-borck/build-web-guide-ai
 
 bibliography: references.bib
-
-website:
-  favicon: favicon.svg
 
 format:
   html:
