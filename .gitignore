@@ -41,3 +41,4 @@ notes/*.md
 !notes/.gitkeep
 
 **/*.quarto_ipynb
+llm.txt
