@@ -68,6 +68,9 @@ book:
 
 bibliography: references.bib
 
+website:
+  favicon: favicon.svg
+
 format:
   html:
     theme:
