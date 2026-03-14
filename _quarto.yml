@@ -77,6 +77,7 @@ format:
       light: cosmo
       dark: darkly
     css: assets/custom.css
+    include-after-body: chatbot.html
     code-fold: false
     code-tools: true
     code-copy: hover
