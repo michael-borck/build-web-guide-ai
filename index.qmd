@@ -1,121 +1,57 @@
 # Preface {.unnumbered}
 
-## Building for Business in the AI Era
+## Why This Book Exists
 
-Welcome to *Build Web, Guide AI: Business Web Development with AI* – a practical guide to modern web development that embraces AI as your development partner while never losing sight of why we build: to solve real business problems.
+Most web development books teach you technologies. This one teaches you to think like a professional developer who happens to use specific technologies.
 
-### Why This Book Is Different
+That distinction matters because AI can write HTML, CSS, and JavaScript faster than you ever will. If your only skill is writing markup and code, you are competing with something that does not sleep. But if you can translate a business need into a technical requirement, evaluate whether a WordPress site or a React app is the right call, and explain your reasoning to a non-technical stakeholder — you have the skills that actually matter.
 
-Most web development books teach you technologies. This book teaches you to **think like a professional developer** who happens to use specific technologies.
+This book grew out of teaching business web and mobile technologies to students who were not computer science majors. They needed to build real things for real purposes, and they needed to understand enough about the technology to make professional decisions — not just follow tutorials. The exercises, case studies, and projects in these pages were tested in classrooms before they were written up.
 
-In a world where AI can generate code in seconds, the valuable skills are:
+## Who This Book Is For
 
-- **Understanding what to build** – translating business needs into technical requirements
-- **Evaluating technology choices** – knowing when WordPress beats React, or vice versa
-- **Communicating with stakeholders** – explaining technical decisions in business terms
-- **Iteratively improving** – knowing when "good enough" ships and when quality matters
-
-This book develops these skills while teaching you HTML, CSS, JavaScript, WordPress, and React.
-
-### The AI Partnership
-
-AI can write HTML, CSS, and JavaScript faster than you ever will. That's not a threat – it's a superpower.
-
-This book teaches you to:
-
-- **Architect solutions** that AI helps you build
-- **Evaluate AI output** with professional judgment
-- **Communicate requirements** clearly enough for AI to help
-- **Debug and improve** AI-generated code
-
-You're learning to be the architect. AI is your highly skilled assistant.
-
-### About This Book's Creation
-
-In the spirit of practicing what we teach, this book was created through human-AI collaboration. Every chapter represents a partnership between human expertise and AI assistance, with careful human oversight ensuring pedagogical quality and technical accuracy.
-
-### Your Learning Journey
-
-Over 12 weeks (or at your own pace), you'll progress from understanding web fundamentals to building integrated business applications. More importantly, you'll develop the professional judgment that makes you valuable in any technology stack.
-
-### Who This Book Is For
-
-- **Students** in business technology or web development courses
-- **Career changers** entering tech from business backgrounds
-- **Professionals** who need to understand web development for their roles
-- **Anyone** who wants to build web solutions with AI assistance
-
-### Prerequisites
-
-- Basic computer literacy
-- Curiosity about how websites work
-- Willingness to experiment and learn from mistakes
-- Access to AI tools (ChatGPT, Claude, or similar)
+- Students in business technology or web development courses
+- Career changers entering tech from business backgrounds
+- Professionals who need to understand web development for their roles
+- Anyone who wants to build web solutions with AI assistance
 
 No prior programming experience required. We start from scratch.
 
-### How to Use This Book
+## What This Book Is Not
 
-Each chapter follows a consistent pattern:
+This is not a computer science textbook. It does not cover algorithms, data structures, or computational theory. It teaches you to build things for the web, with enough understanding to make good decisions about how.
 
-1. **Concept First** – Understand the idea before the syntax
-2. **AI Exploration** – Discover patterns with AI assistance
-3. **Hands-On Practice** – Build something real
-4. **Business Connection** – Understand why this matters
-5. **Reflection** – Consolidate your learning
+It is not a framework-of-the-month guide. You will learn HTML, CSS, JavaScript, WordPress, and React — technologies chosen because they cover the spectrum from simple to complex and will remain relevant regardless of what is trending next year.
 
-Work through chapters in order. Each builds on the previous.
+It is not a book that treats AI as a novelty. AI is your development partner throughout. The book teaches you to architect solutions that AI helps you build, evaluate AI output with professional judgement, and communicate requirements clearly enough for AI to be useful.
 
-### Companion Course
+And it is not a book for people who want to become full-time frontend engineers. It is for people who want to understand web development well enough to lead projects, evaluate vendors, build prototypes, and make informed technology decisions in a business context.
 
-This book aligns with ISYS3004: Business Web and Mobile Technologies at Curtin University, but stands alone as a complete learning resource.
+## If You Are Feeling Uncertain
 
-## Related Resources
+You do not need to be "technical" to build for the web. That word gets used as a gatekeeper, but the reality is that web development is a learnable skill, not a personality trait. If you can write a clear email, you can learn to write a clear prompt. If you can organise a spreadsheet, you can learn to structure a web page. This book starts where you are.
 
-This book is part of a **"Learning with AI" collection** – resources designed to help you master modern development in the AI era.
+## How This Book Is Structured
 
-### The AI Methodology Guide
+The book progresses from foundations to full applications:
 
-**[Converse Python, Partner AI: The Python Edition](https://michael-borck.github.io/converse-python-partner-ai)** provides the deep methodology for AI collaboration that this book applies to web development. If you want to understand *why* certain prompting approaches work, Converse Python, Partner AI is your guide.
+**Part 0** introduces your AI development partnership — how to work with AI effectively from day one.
 
-Key concepts from Intentional Prompting used throughout this book:
+**Part 1** covers web fundamentals: HTML structure, CSS presentation, JavaScript behaviour. You understand the building blocks before assembling them.
 
-- **The Six-Step Methodology**: Restate → Identify I/O → Work by Hand → Pseudocode → Convert → Test
-- **Design before coding**: Understanding problems before asking AI for solutions
-- **Intentional prompts**: Directing AI with clarity and purpose
-- **Critical evaluation**: Reviewing AI output with professional judgment
+**Part 2** moves to platforms: WordPress for rapid development, content management, and extending with plugins and themes.
 
-### The Python Track
+**Part 3** introduces React for component-based applications, headless architecture, and modern development patterns.
 
-If you're also interested in Python development, explore the Python learning path:
+**Part 4** ties it all together: professional practices, emerging technologies, and building a development career.
 
-- **Think Python, Direct AI**: For absolute beginners learning computational thinking
-- **Code Python, Consult AI**: Focused Python fundamentals with AI integration
-- **Ship Python, Orchestrate AI**: Professional Python development practices
+Each chapter follows a consistent pattern: concept first, AI exploration, hands-on practice, business connection, reflection.
 
-### Book Progression
+## The Companion Books
 
-```
-                    ┌─────────────────────┐
-                    │  CONVERSE PYTHON,   │
-                    │   PARTNER AI        │
-                    │   (Methodology)     │
-                    └─────────────────────┘
-                           │
-            ┌──────────────┼──────────────┐
-            ▼              │              ▼
-    ┌───────────────┐      │      ┌───────────────┐
-    │  PYTHON TRACK │      │      │   WEB TRACK   │
-    │               │      │      │               │
-    │ Think Python  │      │      │ Build Web,    │
-    │ Code Python   │      │      │ Guide AI      │
-    │ Ship Python   │      │      │ (this book)   │
-    └───────────────┘      │      └───────────────┘
-                           │
-                    (shared methodology)
-```
+The methodology in this book draws on *Conversation, Not Delegation: How to Think With AI, Not Just Use It*, which covers the full framework for working with AI across any discipline. If you are also interested in Python development, the Python learning path (*Think Python, Direct AI* → *Code Python, Consult AI* → *Ship Python, Orchestrate AI*) applies the same methodology to programming.
 
-Start wherever matches your goals. The methodology from Converse Python, Partner AI enhances all paths.
+All titles are available at [books.borck.education](https://books.borck.education).
 
 ## Ways to Engage with This Book
 
@@ -132,18 +68,10 @@ The online version is always the most current.
 
 ## Source Code & Feedback
 
-**Source Code**
 All code examples and project files are available at:
 https://github.com/michael-borck/build-web-guide-ai
 
-**Feedback and Errata**
-Found an error? Have a suggestion? We welcome your feedback:
+Found an error? Have a suggestion?
 
 - Open an issue: https://github.com/michael-borck/build-web-guide-ai/issues
 - Email: michael@borck.me
-
-Your input helps improve this book for future readers.
-
----
-
-Let's build something meaningful together.
