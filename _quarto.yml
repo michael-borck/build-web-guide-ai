@@ -15,17 +15,14 @@ book:
   repo-url: https://github.com/michael-borck/build-web-guide-ai
   repo-branch: main
   repo-actions: [edit, issue]
-
   chapters:
     - index.qmd
     - copyright.qmd
     - reading-list.qmd
     - acknowledgments.qmd
-
     - part: "Part 0: Your AI Development Partnership"
       chapters:
         - chapter-ai-web-partner.qmd
-
     - part: "Part I: Web Foundations"
       chapters:
         - chapter-structure.qmd
@@ -33,7 +30,6 @@ book:
         - chapter-behaviour.qmd
         - chapter-connection.qmd
         - projects/project-portfolio.qmd
-
     - part: "Part II: Content Management for Business"
       chapters:
         - chapter-why-cms.qmd
@@ -41,23 +37,19 @@ book:
         - chapter-extending-platforms.qmd
         - chapter-headless-architecture.qmd
         - projects/project-business-site.qmd
-
     - part: "Part III: Modern Frontend Development"
       chapters:
         - chapter-component-thinking.qmd
         - chapter-rapid-development.qmd
         - chapter-professional-practices.qmd
         - projects/project-react-integration.qmd
-
     - part: "Part IV: The Professional Developer"
       chapters:
         - chapter-emerging-technologies.qmd
         - chapter-development-career.qmd
         - chapter-ai-era-developer.qmd
-
     - references.qmd
     - about-author.qmd
-
   page-navigation: true
   sidebar:
     style: docked
@@ -66,6 +58,19 @@ book:
     tools:
       - icon: github
         href: https://github.com/michael-borck/build-web-guide-ai
+  other-links:
+    - text: Download PDF
+      icon: file-pdf
+      href: build-web-guide-ai.pdf
+    - text: Download EPUB
+      icon: book
+      href: build-web-guide-ai.epub
+    - text: Download llm.txt
+      icon: robot
+      href: llm.txt
+    - text: DeepWiki
+      icon: search
+      href: https://deepwiki.com/michael-borck/build-web-guide-ai
 
 bibliography: references.bib
 
@@ -86,14 +91,6 @@ format:
     number-sections: true
     number-depth: 2
     highlight-style: github
-  pdf:
-    documentclass: book
-    toc: true
-    number-sections: true
-    colorlinks: true
-  epub:
-    toc: true
-    toc-depth: 3
 
 crossref:
   chapters: true
