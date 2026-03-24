@@ -117,6 +117,19 @@ If you're also interested in Python development, explore the Python learning pat
 
 Start wherever matches your goals. The methodology from Converse Python, Partner AI enhances all paths.
 
+## Ways to Engage with This Book
+
+This book is available in several formats. Pick whichever fits how you work and learn.
+
+- **Read it online.** The full book is freely available at the companion website, with dark mode, search, and navigation.
+- **Read it on paper or e-reader.** Available as a paperback and ebook through Amazon KDP.
+- **Converse with it.** The online edition includes a chatbot grounded in the book's content.
+- **Feed it to your own AI.** The `llm.txt` file provides a clean text version of the entire book, ready to paste into ChatGPT, Claude, or any AI tool.
+- **Run the code.** All code examples and project files are available on GitHub.
+- **Browse all books.** This book is part of a series. See all titles at [books.borck.education](https://books.borck.education).
+
+The online version is always the most current.
+
 ## Source Code & Feedback
 
 **Source Code**
