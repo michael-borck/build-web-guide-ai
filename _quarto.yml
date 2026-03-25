@@ -1,6 +1,8 @@
 project:
   type: book
   output-dir: _book
+  resources:
+    - tools/**
 
 book:
   title: "Build Web, Guide AI"
