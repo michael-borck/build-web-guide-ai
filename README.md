@@ -90,6 +90,7 @@ This book is part of the [books.borck.education](https://books.borck.education) 
 | `copyright-page.tex` | Copyright page for PDF |
 | `pdf-header.tex` | LaTeX header for PDF |
 | `epub-styles.css` | EPUB styles |
+| `appendices/` | Appendix content |
 | `rag-documents/` | Generated RAG chunks for chatbot |
 | `_book/` | Rendered output (gitignored) |
 | `_print_source/` | Generated print source (gitignored) |
