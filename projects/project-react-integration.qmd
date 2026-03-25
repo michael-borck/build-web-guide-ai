@@ -6,8 +6,6 @@ Part III taught you component thinking, CSS frameworks, and professional practic
 
 This project bridges backend content management with modern frontend development. You'll make architectural decisions, implement a complete application, and document your approach—skills that directly translate to professional frontend development roles.
 
-**Aligned with**: Assessment 3 in ISYS3004
-
 ## Learning Outcomes Addressed
 
 - **ULO 1**: Design and implement effective web applications

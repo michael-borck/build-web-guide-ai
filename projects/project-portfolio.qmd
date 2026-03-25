@@ -6,8 +6,6 @@ Your first substantial project brings together everything from Part I: Structure
 
 This isn't just an academic exercise. A well-crafted portfolio is one of the most valuable tools for launching a career in web development or digital business.
 
-**Aligned with**: Assessment 1 in ISYS3004
-
 ## Learning Outcomes Addressed
 
 - **ULO 1**: Design, implement, and evaluate effective business web applications

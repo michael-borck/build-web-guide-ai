@@ -6,8 +6,6 @@ Part II taught you to think about content management strategically: when to use 
 
 This project simulates a real client engagement. You'll analyse requirements, make technology decisions, implement a solution, and document your choices professionally. The deliverables mirror what you'd provide to an actual client.
 
-**Aligned with**: Assessment 2 in ISYS3004
-
 ## Learning Outcomes Addressed
 
 - **ULO 2**: Demonstrate project management and professional skills

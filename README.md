@@ -56,10 +56,6 @@ quarto render --to pdf
 quarto publish gh-pages
 ```
 
-## Course Alignment
-
-This book aligns with ISYS3004: Business Web and Mobile Technologies at Curtin University.
-
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) (to be created).
@@ -75,8 +71,6 @@ This book was created through human-AI collaboration. See [CLAUDE.md](CLAUDE.md)
 ## Author
 
 Michael Borck
-
-Curtin University
 
 ## Repository Structure
 
