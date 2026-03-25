@@ -46,3 +46,4 @@ rag-documents/
 
 # AnythingLLM workspace config
 .anythingllm.yml
+_print_source/
