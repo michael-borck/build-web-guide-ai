@@ -16,7 +16,7 @@ Let's discover how AI really works as a web development partner. This experiment
 
 Open your AI assistant (ChatGPT, Claude, or whatever you're using). Type this exactly:
 
-```
+```text
 Make a website
 ```
 
@@ -26,7 +26,7 @@ What did you get? The AI probably asked questions or made assumptions. This is y
 
 Now try:
 
-```
+```text
 Make a business website
 ```
 
@@ -36,7 +36,7 @@ You likely got a massive amount of HTML, CSS, maybe JavaScript – a complete bu
 
 Now try:
 
-```
+```text
 I'm learning web development. Show me the absolute simplest HTML page that displays a business name and tagline. Nothing else.
 ```
 
@@ -62,7 +62,7 @@ Much clearer! **AI responds to your learning needs when you express them clearly
 
 Finally, try:
 
-```
+```text
 Explain how a web page is structured, using a building analogy, before showing any code
 ```
 
@@ -123,7 +123,7 @@ A working website isn't the goal. Understanding how and why it works is. Use AI 
 
 ### Part I (Chapters 1-4): AI as Concept Explorer
 
-```
+```text
 Example prompts:
 - "Explain semantic HTML using a library analogy"
 - "Show me 5 ways CSS can position elements, simplest first"
@@ -132,7 +132,7 @@ Example prompts:
 
 ### Part II (Chapters 5-8): AI as Implementation Assistant
 
-```
+```text
 Example prompts:
 - "I need a WordPress theme for a café. What questions should I ask before choosing?"
 - "Compare these two plugins for contact forms. What are the trade-offs?"
@@ -141,7 +141,7 @@ Example prompts:
 
 ### Part III (Chapters 9-11): AI as Code Producer
 
-```
+```text
 Example prompts:
 - "Create a React component that displays a list of products. Here's my design..."
 - "Convert this WordPress post display to a React component"
@@ -150,7 +150,7 @@ Example prompts:
 
 ### Part IV (Chapters 12-14): AI as Strategic Advisor
 
-```
+```text
 Example prompts:
 - "Compare PWAs vs native apps for a small retail business"
 - "What should a junior developer's portfolio demonstrate?"

@@ -44,7 +44,7 @@ In six months, you won't remember why you made certain decisions. Professional p
 
 ### Exploration 1: Why Version Control Matters
 
-```
+```text
 Ask your AI:
 Imagine a team of four developers working on the same website without
 version control. What problems would they face? How would they handle
@@ -59,7 +59,7 @@ This should reveal:
 - Fear of making changes
 - No history of what changed or why
 
-```
+```text
 Continue the conversation:
 Now explain how Git solves each of these problems. What mental model
 should I have for how Git works?
@@ -69,7 +69,7 @@ should I have for how Git works?
 
 Testing isn't about distrust—it's about **confidence**.
 
-```
+```text
 Ask your AI:
 A developer says "I tested it manually, it works." Why isn't that
 enough for professional work? What's the difference between manual
@@ -84,7 +84,7 @@ Key insights:
 - Tests document expected behaviour
 - Regression testing catches "breaking old stuff while adding new"
 
-```
+```text
 Continue the conversation:
 For a simple e-commerce site, what would be the most valuable things
 to test automatically? Where would you start?
@@ -98,7 +98,7 @@ Code is read far more than it's written. Every piece of code is communication wi
 - Teammates
 - Future maintainers
 
-```
+```text
 Ask your AI:
 What makes code "readable"? Show me an example of unreadable code and
 the same functionality written readably. What changed?
@@ -112,7 +112,7 @@ This reveals:
 - Consistent formatting
 - Small, focused functions
 
-```
+```text
 Continue the conversation:
 When should I write comments, and when does the code speak for itself?
 Give me guidelines for useful commenting.
@@ -120,7 +120,7 @@ Give me guidelines for useful commenting.
 
 ### Exploration 4: Documentation Purpose
 
-```
+```text
 Ask your AI:
 What's the difference between code comments, README files, and
 technical documentation? When do I need each, and what goes in each?
@@ -139,7 +139,7 @@ Different documentation serves different audiences:
 
 Git tracks changes to files over time. The mental model:
 
-```
+```text
 Working Directory → Staging Area → Repository
     (your files)     (ready to commit)  (permanent history)
 ```
@@ -214,7 +214,7 @@ git checkout main
 git merge feature/user-profiles
 ```
 
-```
+```text
 Ask your AI:
 What's the difference between merging and rebasing in Git? When would
 I use each? I want to understand the trade-offs.
@@ -326,7 +326,7 @@ describe('Counter', () => {
 });
 ```
 
-```
+```text
 Ask your AI:
 I've heard of unit tests, integration tests, and end-to-end tests.
 What's the difference? As a beginner, where should I focus my
@@ -446,7 +446,7 @@ How others can contribute.
 ## License
 
 MIT License
-```
+```text
 
 **Code documentation (JSDoc):**
 
@@ -469,7 +469,7 @@ function calculateTotal(subtotal, taxRate) {
 
 ### The Professional Practice Pyramid
 
-```
+```text
                    ┌──────────────────┐
                    │  Code Review     │  (Team quality)
                    ├──────────────────┤
@@ -487,7 +487,7 @@ Each layer builds on the one below. You can't effectively review code that isn't
 
 ### The Cost of Skipping Practices
 
-```
+```text
                     │
     Time spent      │         ████ Technical Debt
     debugging /     │      ████████
@@ -568,8 +568,8 @@ Code lives longer than developers expect:
 Professional practices from the start prevent painful migrations later.
 
 ::: {.callout-note}
-## ULO Connection
-This develops **ULO 2** (professional project management) and **ULO 1** (iteratively improving solutions). Professional practices aren't separate from development—they're how professionals develop. These skills are expected in any development role.
+## Skills You Are Building
+This develops **professional communication and project management** and **evaluating and improving solutions**. Professional practices aren't separate from development—they're how professionals develop. These skills are expected in any development role.
 :::
 
 ## Practice Exercises

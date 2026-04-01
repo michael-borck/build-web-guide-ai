@@ -34,7 +34,7 @@ When designing interactive features, think: "What might the user do?" (events) a
 
 The event-driven model is fundamental to understanding JavaScript. Let's explore it through analogy:
 
-```
+```text
 Ask your AI:
 Explain event-driven programming using a restaurant service analogy.
 The waiter doesn't constantly ask "Are you ready to order?" every
@@ -45,7 +45,7 @@ This should reveal the pattern: staff don't constantly poll customers. Instead, 
 
 Follow up:
 
-```
+```text
 Continue the conversation:
 What "events" happen on a typical webpage? List as many as you can
 think of—things users do that a page might respond to.
@@ -55,7 +55,7 @@ think of—things users do that a page might respond to.
 
 JavaScript interacts with pages through something called the DOM (Document Object Model). But what is it?
 
-```
+```text
 Ask your AI:
 What is the DOM? Explain it as if describing how a librarian has a
 catalogue system that represents all the books on the shelves. The
@@ -64,7 +64,7 @@ books are the actual HTML—what's the catalogue?
 
 The DOM is JavaScript's representation of your HTML structure. When you change the DOM, the page updates visually. It's the bridge between your code and what users see.
 
-```
+```text
 Continue the conversation:
 If I want to change the text inside a paragraph using JavaScript,
 am I changing the HTML file? Or something else? Walk me through
@@ -75,7 +75,7 @@ what actually happens.
 
 Here's a philosophy that separates professional developers from amateurs:
 
-```
+```text
 Ask your AI:
 Why should websites work without JavaScript? Explain the business
 case, not just the technical reasons. Consider: who can't use
@@ -84,7 +84,7 @@ JavaScript and why?
 
 This conversation should reveal important realities: some users disable JavaScript for security, some have slow connections where it fails to load, some use assistive technologies that struggle with JS-heavy sites, and some corporate firewalls block scripts. Building core functionality in HTML and CSS, then *enhancing* with JavaScript, serves more customers.
 
-```
+```text
 Continue the conversation:
 Give me an example of a feature built with progressive enhancement
 versus one that fails without JavaScript. What's the difference
@@ -167,7 +167,7 @@ const product = {
 };
 ```
 
-```
+```text
 Ask your AI:
 When would I use an array versus an object? Give me three real
 examples of data that fits each structure.
@@ -342,7 +342,7 @@ form.addEventListener('submit', function(event) {
 
 This validates as the user types and again on submission. Note: HTML5 provides `type="email"` validation too—JavaScript enhances the feedback, not replaces the baseline.
 
-```
+```text
 Ask your AI:
 Walk me through this form validation code line by line. What does
 event.preventDefault() do and why is it important here?
@@ -361,7 +361,7 @@ JavaScript doesn't run all at once. It:
 
 This is why you register event listeners—you're telling JavaScript "when this happens, run this code." The rest of the time, JavaScript is idle, waiting.
 
-```
+```text
 Ask your AI:
 Explain the JavaScript event loop using an office receptionist
 analogy. The receptionist handles visitors (events) but also has
@@ -372,7 +372,7 @@ other tasks. How do they prioritise?
 
 Reinforce this mental model from earlier chapters:
 
-```
+```text
 ┌─────────────────────────────────────┐
 │  JavaScript (Behaviour)              │  What responds
 ├─────────────────────────────────────┤
@@ -396,7 +396,7 @@ console.table(arrayOfObjects);                // Print tables
 
 Open DevTools (F12 or right-click → Inspect → Console) to see these messages. When something doesn't work, add `console.log()` statements to trace what's happening.
 
-```
+```text
 Ask your AI:
 What are common JavaScript debugging techniques? How do I figure out
 why my code isn't working?
@@ -426,8 +426,8 @@ Loading content without page refreshes (covered more in Chapter 4) makes applica
 JavaScript can track how users interact with your site: what they click, how far they scroll, where they spend time. This data informs business decisions. (Always be transparent about tracking and respect privacy.)
 
 ::: {.callout-note}
-## ULO Connection
-This develops **ULO 1** (effective web applications) and **ULO 3** (translating stakeholder needs). Interactive features must serve user needs—JavaScript for its own sake creates complexity without value. The ability to identify when interactivity helps versus hinders is professional judgment.
+## Skills You Are Building
+This develops **evaluating and improving solutions** and **translating stakeholder needs into technical requirements**. Interactive features must serve user needs—JavaScript for its own sake creates complexity without value. The ability to identify when interactivity helps versus hinders is professional judgment.
 :::
 
 ## Practice Exercises

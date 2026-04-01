@@ -16,7 +16,7 @@ This project bridges backend content management with modern frontend development
 
 In @sec-headless-architecture, you learned that headless WordPress separates content management (WordPress) from content presentation (your frontend). This project implements that architecture:
 
-```
+```text
 ┌────────────────┐     REST API     ┌────────────────┐
 │   WordPress    │ ───────────────► │   React App    │
 │   (Backend)    │    JSON Data     │   (Frontend)   │
@@ -86,7 +86,7 @@ Before writing code, document your approach:
 
 **Component Tree Example:**
 
-```
+```text
 App
 ├── Header
 │   ├── Logo
@@ -201,21 +201,21 @@ Create a README.md that includes:
 
 Use AI as a thinking partner, not a code generator:
 
-```
+```text
 Ask your AI:
 I'm fetching WordPress posts but the featured images aren't showing.
 Here's my code... Help me understand what's happening. What am I
 missing about how WordPress returns image data?
 ```
 
-```
+```text
 Ask your AI:
 I have a PostList component and a PostDetail component. When the user
 clicks a post, I need to show the detail. What are my options for
 handling this navigation? Walk me through the trade-offs.
 ```
 
-```
+```text
 Ask your AI:
 My component is getting complex with loading, error, and data states.
 Is there a pattern for handling this more cleanly? Show me options
@@ -324,21 +324,21 @@ This isn't about restricting AI use—it's about demonstrating that you **unders
 
 Begin with these conversations:
 
-```
+```text
 Ask your AI:
 I'm building a React app that fetches WordPress posts. What's the
 basic structure I should start with? Walk me through the component
 hierarchy and data flow.
 ```
 
-```
+```text
 Ask your AI:
 In a React app, I need to show a list of posts and then show details
 when one is clicked. What are my options for handling this without
 React Router? Explain the useState approach.
 ```
 
-```
+```text
 Ask your AI:
 My WordPress site is at [URL]. What does the REST API endpoint for
 posts look like? How do I get featured images included?
@@ -372,7 +372,7 @@ const imageUrl = post._embedded?.['wp:featuredmedia']?.[0]?.source_url;
 
 **Project structure suggestion:**
 
-```
+```text
 src/
 ├── components/
 │   ├── Header.jsx

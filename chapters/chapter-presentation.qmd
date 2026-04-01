@@ -29,7 +29,7 @@ Look at any website and ask: "What is this design trying to communicate?" Before
 
 ### Exploration 1: Why Separate Structure and Style?
 
-```
+```text
 Ask your AI:
 Why do we keep HTML (structure) and CSS (presentation) in separate
 languages? Explain using a newspaper analogy—the same news stories
@@ -40,7 +40,7 @@ This conversation should reveal the power of separation: one set of content, man
 
 Follow up:
 
-```
+```text
 Continue the conversation:
 What problems would occur if we put styling directly into HTML?
 What if every heading had to specify its own colour and size?
@@ -50,7 +50,7 @@ What if every heading had to specify its own colour and size?
 
 More than half of web traffic comes from mobile devices. But mobile-first isn't just about phones—it's a design philosophy.
 
-```
+```text
 Ask your AI:
 Explain mobile-first design as a business strategy, not just a
 technical approach. Why would designing for mobile first lead to
@@ -59,7 +59,7 @@ better experiences for everyone?
 
 Your AI should explain how mobile constraints force clarity: limited space means prioritising what matters, slow connections mean optimising performance, touch targets mean accessible interfaces. Designing for these constraints first creates better experiences everywhere.
 
-```
+```text
 Continue the conversation:
 What happens when companies design for desktop first and then try
 to "make it work" on mobile?
@@ -69,7 +69,7 @@ to "make it work" on mobile?
 
 Every page has multiple elements competing for attention. Visual hierarchy tells users what to look at first, second, third—guiding them through your content intentionally.
 
-```
+```text
 Ask your AI:
 How do designers create visual hierarchy—the sense that some
 elements are more important than others? What tools do they use
@@ -78,7 +78,7 @@ besides just making things bigger?
 
 This should reveal tools beyond size: colour contrast, whitespace, position, typography weight. A small red button can dominate over a large grey headline because colour attracts attention.
 
-```
+```text
 Continue the conversation:
 Show me a simple example of the same three elements (heading,
 paragraph, button) arranged with different visual hierarchies
@@ -137,7 +137,7 @@ CSS can live in three places:
 
 External stylesheets keep presentation separate from structure. One CSS file can style an entire website, and changes propagate everywhere instantly.
 
-```
+```text
 Ask your AI:
 What are the advantages and disadvantages of each method of adding
 CSS? When might you use each one?
@@ -175,7 +175,7 @@ Classes (`.classname`) are your workhorses—reusable styles you can apply to an
 
 Every HTML element generates a rectangular box. Understanding this box model is essential for layout:
 
-```
+```text
 ┌─────────────────────────────────────┐
 │             margin                   │
 │   ┌─────────────────────────────┐   │
@@ -216,7 +216,7 @@ By default, width and height don't include padding or border. A 200px box with 2
 This makes layout calculations much more intuitive.
 :::
 
-```
+```text
 Ask your AI:
 Explain the difference between padding and margin using a picture
 frame analogy. The picture is the content—what are the padding,
@@ -277,7 +277,7 @@ Card grid (with wrap):
 }
 ```
 
-```
+```text
 Ask your AI:
 Show me how to create a simple navigation bar with a logo on the
 left and three links on the right using flexbox. Explain each
@@ -333,7 +333,7 @@ Mobile-first means your base CSS is for mobile, then you add complexity for larg
 }
 ```
 
-```
+```text
 Ask your AI:
 Walk me through how a three-column desktop layout should adapt as
 the screen gets smaller. What should happen at each breakpoint
@@ -391,7 +391,7 @@ p { color: black; }           /* Specificity: 0,0,1 */
 #special { color: red; }      /* Specificity: 1,0,0 - wins over class */
 ```
 
-```
+```text
 Ask your AI:
 Why is understanding specificity important? What problems occur
 when developers don't understand how the cascade works?
@@ -449,7 +449,7 @@ Change the variable once, and every element using it updates instantly. This is 
 
 Studies consistently show that users judge website credibility in milliseconds, based primarily on visual design. Professional presentation builds trust; amateur presentation creates suspicion—regardless of how good the actual content is.
 
-```
+```text
 Ask your AI:
 What visual characteristics make a website feel "trustworthy" versus
 "suspicious"? Think about spacing, typography, colour, and layout.
@@ -464,8 +464,8 @@ If your site doesn't work on mobile, you're excluding over half your potential a
 Where users look determines what they do. Visual hierarchy guides attention to calls-to-action, important information, and conversion points. Poor hierarchy means users miss what matters.
 
 ::: {.callout-note}
-## ULO Connection
-This develops **ULO 1** (effective web applications) and **ULO 4** (technology selection). CSS choices affect user experience, brand perception, and business outcomes. The ability to evaluate and implement appropriate visual design is essential professional skill.
+## Skills You Are Building
+This develops **evaluating and improving solutions** and **making and defending technology choices**. CSS choices affect user experience, brand perception, and business outcomes. The ability to evaluate and implement appropriate visual design is essential professional skill.
 :::
 
 ## Practice Exercises

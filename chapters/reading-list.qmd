@@ -1,15 +1,6 @@
-# Weekly Reading List {.unnumbered}
+# Recommended Resources {.unnumbered}
 
-This reading list accompanies the 12-week course structure, combining chapters from this book, methodology from *Intentional Prompting*, and curated external resources.
-
-## How to Use This List
-
-Each week includes:
-
-- **Book Chapter**: Primary reading from this book
-- **Methodology**: Relevant chapter from *Intentional Prompting*
-- **Essential Reading**: Must-read external resources
-- **Deeper Dive**: Optional additional resources for those wanting more
+This reading list accompanies the book, combining curated external resources organised by topic. Use it alongside the chapters for different perspectives and official documentation.
 
 ::: {.callout-tip}
 ## Reading Strategy
@@ -18,17 +9,10 @@ Read the book chapter first to understand concepts, then explore external resour
 
 ---
 
-## Week 1: Foundations & AI Partnership
+## Getting Started with the Web
 
-### Focus
-Setting up your development environment and establishing your AI partnership approach.
-
-### Book Chapters
-- **Chapter 0**: Understanding Your AI Web Development Partner
-
-### Intentional Prompting
-- **Chapter 1**: Introduction
-- **Chapter 3**: Intentional Prompting Principles
+### Companion Chapter
+@sec-ai-web-partner
 
 ### Essential Reading
 
@@ -44,17 +28,10 @@ Setting up your development environment and establishing your AI partnership app
 
 ---
 
-## Week 2: HTML Structure
+## HTML Structure
 
-### Focus
-Semantic HTML and document structure as information architecture.
-
-### Book Chapters
-- **Chapter 1**: Structure: HTML as Information Architecture
-
-### Intentional Prompting
-- **Chapter 4**: The Six-Step Methodology (overview)
-- **Chapter 5**: Restate and Identify
+### Companion Chapter
+@sec-structure
 
 ### Essential Reading
 
@@ -71,17 +48,10 @@ Semantic HTML and document structure as information architecture.
 
 ---
 
-## Week 3: CSS Presentation
+## CSS Presentation
 
-### Focus
-Visual design, responsive layouts, and mobile-first development.
-
-### Book Chapters
-- **Chapter 2**: Presentation: CSS as Visual Communication
-
-### Intentional Prompting
-- **Chapter 6**: Work by Hand
-- **Chapter 7**: Pseudocode
+### Companion Chapter
+@sec-presentation
 
 ### Essential Reading
 
@@ -100,17 +70,10 @@ Visual design, responsive layouts, and mobile-first development.
 
 ---
 
-## Week 4: JavaScript Behaviour
+## JavaScript Behaviour
 
-### Focus
-Adding interactivity, DOM manipulation, and event handling.
-
-### Book Chapters
-- **Chapter 3**: Behaviour: JavaScript as User Interaction
-
-### Intentional Prompting
-- **Chapter 8**: Convert to Code
-- **Chapter 11**: Debugging with AI
+### Companion Chapter
+@sec-behaviour
 
 ### Essential Reading
 
@@ -128,17 +91,10 @@ Adding interactivity, DOM manipulation, and event handling.
 
 ---
 
-## Week 5: APIs & Data
+## APIs and Data
 
-### Focus
-Connecting to external services, fetching data, and working with JSON.
-
-### Book Chapters
-- **Chapter 4**: Connection: APIs as Business Integration
-
-### Intentional Prompting
-- **Chapter 9**: Test with Data
-- **Chapter 10**: Intentional Prompting Patterns
+### Companion Chapter
+@sec-connection
 
 ### Essential Reading
 
@@ -156,17 +112,10 @@ Connecting to external services, fetching data, and working with JSON.
 
 ---
 
-## Week 6: Portfolio Project & Accessibility
+## Accessibility
 
-### Focus
-Completing Assessment 1, accessibility fundamentals, and project review.
-
-### Book Chapters
-- **Project**: Portfolio Website
-- Review Chapters 1-4
-
-### Intentional Prompting
-- **Chapter 12**: Refactoring Strategies
+### Companion Chapter
+@sec-project-portfolio
 
 ### Essential Reading
 
@@ -183,17 +132,10 @@ Completing Assessment 1, accessibility fundamentals, and project review.
 
 ---
 
-## Week 7: Content Management Systems
+## Content Management Systems
 
-### Focus
-Understanding CMS value proposition and WordPress as a platform.
-
-### Book Chapters
-- **Chapter 5**: Why CMS? The Business Value of Managed Content
-- **Chapter 6**: WordPress as Platform
-
-### Intentional Prompting
-- **Chapter 13**: Case Studies (approach to complex projects)
+### Companion Chapters
+@sec-why-cms and @sec-wordpress-platform
 
 ### Essential Reading
 
@@ -210,16 +152,10 @@ Understanding CMS value proposition and WordPress as a platform.
 
 ---
 
-## Week 8: Extending WordPress
+## Extending WordPress
 
-### Focus
-Plugins, themes, and customisation strategies.
-
-### Book Chapters
-- **Chapter 7**: Extending Platforms
-
-### Intentional Prompting
-- **Chapter 14**: Scaling Complexity
+### Companion Chapter
+@sec-extending-platforms
 
 ### Essential Reading
 
@@ -236,37 +172,10 @@ Plugins, themes, and customisation strategies.
 
 ---
 
-## Week 9: Tuition-Free Week
+## Headless Architecture and REST APIs
 
-### Focus
-Self-directed learning and project catch-up.
-
-### Suggested Activities
-- Review previous chapters
-- Complete any outstanding exercises
-- Explore Intentional Prompting deeper
-- Experiment with WordPress customisation
-
-### Optional Reading
-
-| Resource | Topic | Link |
-|----------|-------|------|
-| Smashing Magazine | WordPress Articles | [Smashing: WordPress](https://www.smashingmagazine.com/category/wordpress/) |
-| CSS Tricks | Various | [CSS Tricks](https://css-tricks.com/) |
-| Dev.to | Web Development | [Dev.to](https://dev.to/) |
-
----
-
-## Week 10: WordPress REST API
-
-### Focus
-Headless architecture and API-first thinking.
-
-### Book Chapters
-- **Chapter 8**: Headless Architecture
-
-### Intentional Prompting
-- Review **Chapter 8-9**: Convert to Code, Test with Data
+### Companion Chapter
+@sec-headless-architecture
 
 ### Essential Reading
 
@@ -282,16 +191,10 @@ Headless architecture and API-first thinking.
 
 ---
 
-## Week 11: React Integration
+## React
 
-### Focus
-Component-based thinking and connecting React to WordPress.
-
-### Book Chapters
-- **Chapter 9**: Component Thinking: React
-
-### Intentional Prompting
-- **Chapter 12**: Refactoring Strategies (component extraction)
+### Companion Chapter
+@sec-component-thinking
 
 ### Essential Reading
 
@@ -308,17 +211,10 @@ Component-based thinking and connecting React to WordPress.
 
 ---
 
-## Week 12: Frameworks & Professional Practice
+## Frameworks and Professional Practice
 
-### Focus
-CSS frameworks, code quality, and professional development practices.
-
-### Book Chapters
-- **Chapter 10**: Rapid Development: CSS Frameworks
-- **Chapter 11**: Professional Practices
-
-### Intentional Prompting
-- **Chapter 15**: Teaching and Learning (reflection)
+### Companion Chapters
+@sec-rapid-development and @sec-professional-practices
 
 ### Essential Reading
 
@@ -335,19 +231,10 @@ CSS frameworks, code quality, and professional development practices.
 
 ---
 
-## Week 13: Future & Career
+## Emerging Technologies and Career
 
-### Focus
-Emerging technologies, portfolio building, and career positioning.
-
-### Book Chapters
-- **Chapter 12**: Evaluating Emerging Technologies
-- **Chapter 13**: Your Development Career
-- **Chapter 14**: The AI-Era Developer
-- **Project**: React Integration (final submission)
-
-### Intentional Prompting
-- **Chapter 16**: Future Directions
+### Companion Chapters
+@sec-emerging-technologies, @sec-development-career, and @sec-ai-era-developer
 
 ### Essential Reading
 

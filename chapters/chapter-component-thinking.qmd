@@ -48,7 +48,7 @@ When you see any interface, practice breaking it into components. A navigation b
 
 Let's practice component thinking before writing code:
 
-```
+```text
 Ask your AI:
 Look at a typical e-commerce product listing page (grid of products,
 filters on the side, pagination at bottom). How would you break this
@@ -58,7 +58,7 @@ contain which other components.
 
 Your diagram might look like:
 
-```
+```text
 ProductPage
 ├── FilterSidebar
 │   ├── CategoryFilter
@@ -73,7 +73,7 @@ ProductPage
 └── Pagination
 ```
 
-```
+```text
 Continue the conversation:
 For each component you identified, what data would it need? Where
 would that data come from?
@@ -83,7 +83,7 @@ would that data come from?
 
 React has two ways data lives in components: **state** (data the component owns and can change) and **props** (data passed from a parent).
 
-```
+```text
 Ask your AI:
 Explain the difference between state and props in React using a
 family analogy. Props are like what? State is like what? How do
@@ -95,7 +95,7 @@ A common analogy:
 - **Props** are like instructions parents give to children: "Here's your allowance amount, here's your bedtime." The child receives them but doesn't change them.
 - **State** is like the child's own possessions: "I have $5 saved, I'm currently awake." The child controls these and they can change.
 
-```
+```text
 Continue the conversation:
 For a shopping cart component, what would be props and what would
 be state? Walk me through why each belongs in its category.
@@ -105,7 +105,7 @@ be state? Walk me through why each belongs in its category.
 
 Data in React flows one direction: parent to child (downward).
 
-```
+```text
 Ask your AI:
 React data flows "one way"—from parent to child components. Why is
 this design choice valuable? What problems does it prevent compared
@@ -119,7 +119,7 @@ One-way data flow means:
 - Components are predictable
 - Changes don't cause cascading side effects
 
-```
+```text
 Continue the conversation:
 If data flows only downward, how does a child component communicate
 back to a parent? Give me a simple example.
@@ -288,7 +288,7 @@ function Counter() {
 
 When you call `setCount`, React re-renders the component with the new value. You don't manually update the DOM—React handles it.
 
-```
+```text
 Ask your AI:
 Walk me through what happens when I click the button in this Counter
 component. What does React do behind the scenes?
@@ -492,7 +492,7 @@ Each component is small, focused, and understandable. The composition creates th
 
 Your application forms a tree of components:
 
-```
+```text
 App
 ├── Header
 │   ├── Logo
@@ -511,7 +511,7 @@ Data flows down this tree. State lives in the component that "owns" it—often a
 
 If two sibling components need the same data, the state should live in their common parent:
 
-```
+```text
 Before (broken):                After (working):
 ProductFilter (has state)       ProductPage (has state)
 ProductList (needs state)       ├── ProductFilter (receives props)
@@ -523,7 +523,7 @@ This is called "lifting state up"—moving state to the lowest common ancestor.
 
 ### The Rendering Cycle
 
-```
+```text
 State Changes
      ↓
 React Re-renders Component
@@ -560,8 +560,8 @@ Components can be tested in isolation. Does `ProductCard` render correctly with 
 React components naturally form design systems. Your `Button`, `Card`, `Input`, and `Modal` components become a library that enforces consistency across the application.
 
 ::: {.callout-note}
-## ULO Connection
-This develops **ULO 1** (effective web applications) and **ULO 4** (technology selection). React's component model is influential across the industry—understanding it prepares you for Vue, Angular, and other frameworks that share similar concepts.
+## Skills You Are Building
+This develops **evaluating and improving solutions** and **making and defending technology choices**. React's component model is influential across the industry—understanding it prepares you for Vue, Angular, and other frameworks that share similar concepts.
 :::
 
 ## Practice Exercises

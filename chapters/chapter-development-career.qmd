@@ -43,7 +43,7 @@ Skills that people can see are worth more than skills they can't. A public proje
 
 ### Exploration 1: Portfolio Strategy
 
-```
+```text
 Ask your AI:
 I'm building a web development portfolio. What types of projects
 should I include? How do I make projects stand out when thousands
@@ -64,7 +64,7 @@ Key insights:
 - Increasing complexity showing growth
 - Business problems solved, not just technical exercises
 
-```
+```text
 Continue the conversation:
 I have the projects from this course—the portfolio site, WordPress
 business site, and React integration. How do I present these
@@ -75,7 +75,7 @@ professionally? What should I add or emphasise?
 
 You can't be excellent at everything. Positioning means being known for something specific.
 
-```
+```text
 Ask your AI:
 What does "positioning" mean for a developer's career? How do I
 choose what to be known for when I'm just starting out?
@@ -87,7 +87,7 @@ Positioning isn't limiting—it's focusing:
 - **Specialist value**: "I build accessible React applications" is memorable and referable
 - **Evolution**: Your positioning can change as you grow
 
-```
+```text
 Continue the conversation:
 Based on what I've learned in this course (HTML/CSS, JavaScript,
 WordPress, React), what are realistic positioning options for
@@ -98,7 +98,7 @@ someone entering the job market?
 
 Many developers dislike traditional networking. But professional relationships matter.
 
-```
+```text
 Ask your AI:
 I'm introverted and don't enjoy networking events. How can I
 build professional relationships authentically as a developer?
@@ -112,7 +112,7 @@ Developer-friendly relationship building:
 - **Write about learning**: Blog posts help others and demonstrate expertise
 - **Attend (or speak at) meetups**: Even quietly attending builds familiarity
 
-```
+```text
 Continue the conversation:
 What's the minimum viable networking for a junior developer?
 What activities have the highest return for the time invested?
@@ -122,7 +122,7 @@ What activities have the highest return for the time invested?
 
 Technology changes. Your learning must continue.
 
-```
+```text
 Ask your AI:
 How do I keep learning after formal education ends? How do I avoid
 tutorial hell—watching courses without building real skills?
@@ -135,7 +135,7 @@ Effective continuous learning:
 - **Depth over breadth**: Master one thing rather than sampling many
 - **Teach to learn**: Explaining forces understanding
 
-```
+```text
 Continue the conversation:
 How do I decide what to learn next? There are so many technologies.
 How do I prioritise without chasing every trend?
@@ -151,7 +151,7 @@ Your portfolio demonstrates capability. Structure it intentionally.
 
 **Portfolio website essentials:**
 
-```
+```text
 Portfolio Site
 ├── About
 │   ├── Brief professional introduction
@@ -298,7 +298,7 @@ Writing demonstrates expertise and aids learning.
 - Be concise (respect readers' time)
 - Proofread (errors undermine credibility)
 
-```
+```text
 Ask your AI:
 I want to write a blog post about something I learned while building
 my React project. Help me brainstorm topics that would be useful to
@@ -357,7 +357,7 @@ When asked to present work:
 
 ### Career Capital Accumulation
 
-```
+```text
                     Opportunities
                          ▲
                          │
@@ -384,7 +384,7 @@ All three types of capital reinforce each other. Skills let you build visible wo
 
 ### The Career Flywheel
 
-```
+```text
 Build Skills → Create Projects → Share Work → Build Relationships
      ▲                                                │
      │                                                │
@@ -395,7 +395,7 @@ Each element powers the next. Starting anywhere gets the wheel turning.
 
 ### Positioning Quadrant
 
-```
+```text
                     Specialist
                         │
             ┌───────────┼───────────┐
@@ -453,8 +453,8 @@ Think beyond the first job:
 Each stage requires different strategies. Early career is about learning and visibility. Later career is about leverage and impact.
 
 ::: {.callout-note}
-## ULO Connection
-This develops **ULO 2** (professional communication and project management). Career development isn't separate from technical work—it's how you translate technical capability into professional opportunity. These skills matter regardless of which technologies you ultimately work with.
+## Skills You Are Building
+This develops **professional communication and project management**. Career development isn't separate from technical work—it's how you translate technical capability into professional opportunity. These skills matter regardless of which technologies you ultimately work with.
 :::
 
 ## Practice Exercises

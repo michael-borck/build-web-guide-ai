@@ -186,14 +186,14 @@ Create a handover document that includes:
 
 Use AI as a consultant you're learning from:
 
-```
+```text
 Ask your AI:
 I'm choosing between Theme A and Theme B for a café website. Here's
 what I know about each... Help me think through the decision. What
 factors might I be missing?
 ```
 
-```
+```text
 Ask your AI:
 I need to customise the footer in my child theme to include business
 hours. Walk me through how to do this safely, and explain each step
@@ -290,21 +290,21 @@ Write a summary (300-400 words) as if presenting to the client:
 
 Begin with these conversations with your AI partner:
 
-```
+```text
 Ask your AI:
 I'm building a WordPress site for [your scenario]. Help me think
 through what questions I should be asking in the business analysis
 phase. What do I need to understand before making technology decisions?
 ```
 
-```
+```text
 Ask your AI:
 For a [type of business] website, what are the essential plugins I
 should consider? Not just what's popular, but what this specific
 type of business actually needs.
 ```
 
-```
+```text
 Ask your AI:
 I'm writing a handover document for a client. What should it include
 so they can manage their WordPress site independently? What do

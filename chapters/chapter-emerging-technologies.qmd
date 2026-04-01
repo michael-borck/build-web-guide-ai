@@ -37,7 +37,7 @@ New technologies typically follow a pattern: initial hype, peak of inflated expe
 
 ### Exploration 1: Building an Evaluation Framework
 
-```
+```text
 Ask your AI:
 Help me create a comprehensive framework for evaluating whether a
 business should adopt a new web technology. What categories of
@@ -76,7 +76,7 @@ A good framework might include:
 - Are there licensing costs?
 - What's the opportunity cost of adoption time?
 
-```
+```text
 Continue the conversation:
 Now apply this framework to evaluate whether a small business
 should adopt TypeScript for their JavaScript projects. Walk me
@@ -85,7 +85,7 @@ through each category.
 
 ### Exploration 2: Distinguishing Hype from Value
 
-```
+```text
 Ask your AI:
 How do you distinguish technology hype from genuine value? Give me
 examples from web development history—technologies that were hyped
@@ -107,7 +107,7 @@ This should reveal patterns:
 - Can be adopted incrementally
 - Users talk about problems solved, not features
 
-```
+```text
 Continue the conversation:
 What red flags should I watch for when evaluating a new JavaScript
 framework? What would make you cautious?
@@ -117,7 +117,7 @@ framework? What would make you cautious?
 
 Technologies change, but evaluation skills persist. Let's practice:
 
-```
+```text
 Ask your AI:
 What web technologies are currently gaining significant adoption?
 For each, explain: (1) what problem it solves, (2) what trade-offs
@@ -132,7 +132,7 @@ As of this book's writing, relevant technologies include:
 - **Progressive Web Apps (PWAs)**: Native-like web experiences
 - **AI-assisted development**: Code generation and assistance
 
-```
+```text
 Continue the conversation:
 For a team of three developers building a customer portal for a
 medium-sized business, which of these technologies would you
@@ -142,7 +142,7 @@ for now? Explain your reasoning.
 
 ### Exploration 4: Learning from History
 
-```
+```text
 Ask your AI:
 Tell me about technologies that were "must learn" five years ago
 but are now less relevant. What can we learn from this about
@@ -211,7 +211,7 @@ calculateDiscount(100);          // Error: Expected 2 arguments, but got 1
 - Solo projects with short lifespans
 - Teams with no TypeScript experience and tight deadlines
 
-```
+```text
 Ask your AI:
 I'm starting a new React project. It's a dashboard for internal use
 by about 50 employees, built by me and one other developer, expected
@@ -313,7 +313,7 @@ Modern frameworks offer server-side rendering and server components.
 
 **Mental model:**
 
-```
+```text
 Traditional SPA:
 Browser → Request HTML → Get minimal HTML
        → Download large JS bundle
@@ -327,7 +327,7 @@ Browser → Request HTML → Server renders full HTML
        → Interactivity ready
 ```
 
-```
+```text
 Ask your AI:
 My React app loads slowly because it fetches data after the page
 loads, showing spinners everywhere. Would server-side rendering
@@ -356,7 +356,7 @@ AI coding assistants are a current example of technology requiring evaluation.
 - What happens when AI is unavailable?
 - How do we review AI-generated code?
 
-```
+```text
 Ask your AI:
 As an AI, what limitations should I be aware of when using AI
 coding assistants? When should I trust AI suggestions versus
@@ -367,7 +367,7 @@ being sceptical?
 
 ### The Technology Adoption Curve
 
-```
+```text
                            Peak of
                            Inflated
                            Expectations
@@ -442,8 +442,8 @@ Evaluation skills help you:
 - **Stay relevant**: Recognise genuine shifts versus fads
 
 ::: {.callout-note}
-## ULO Connection
-This develops **ULO 5** (assessing emerging technologies through systematic evaluation). The ability to evaluate technologies objectively—separate from hype and personal preference—is essential for advising businesses on technology decisions.
+## Skills You Are Building
+This develops **assessing emerging technologies**. The ability to evaluate technologies objectively—separate from hype and personal preference—is essential for advising businesses on technology decisions.
 :::
 
 ## Practice Exercises

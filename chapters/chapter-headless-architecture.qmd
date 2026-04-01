@@ -47,7 +47,7 @@ The central kitchen can supply a fine dining restaurant, a casual café, and a f
 
 Every architecture has trade-offs. Let's explore them:
 
-```
+```text
 Ask your AI:
 Compare traditional WordPress versus headless WordPress architecture.
 What does each approach do well? What problems does each create?
@@ -70,7 +70,7 @@ This should reveal:
 - Multi-channel content delivery
 - Modern developer experience
 
-```
+```text
 Continue the conversation:
 When would a small business with limited technical resources choose
 headless? When would a tech company with developers still choose
@@ -81,7 +81,7 @@ traditional WordPress?
 
 The API is the contract between backend and frontend:
 
-```
+```text
 Ask your AI:
 Explain how the WordPress REST API works as a "contract" between the
 content backend and the frontend application. What does the frontend
@@ -97,7 +97,7 @@ The API contract specifies:
 
 Frontend developers can build against this contract without needing to understand PHP or WordPress internals.
 
-```
+```text
 Continue the conversation:
 What happens if WordPress changes its API in an update? How do you
 manage API versioning and prevent breaking the frontend?
@@ -107,7 +107,7 @@ manage API versioning and prevent breaking the frontend?
 
 Where does headless make practical sense?
 
-```
+```text
 Ask your AI:
 Give me three real-world scenarios where headless WordPress would
 be the right architecture choice, and explain why traditional
@@ -121,7 +121,7 @@ Common scenarios include:
 - Organisations integrating content into existing applications
 - Sites requiring the fastest possible load times (static generation)
 
-```
+```text
 Continue the conversation:
 What about a local bakery's website? Would headless make sense there?
 Why or why not?
@@ -343,7 +343,7 @@ Let's build a simple frontend that displays WordPress posts:
 
 Save this as an HTML file and open it in a browser. It fetches posts from your local WordPress site and displays them—completely independently of WordPress themes.
 
-```
+```text
 Ask your AI:
 Walk me through this code. What happens at each step? How would I
 modify it to also show the post date and author name?
@@ -433,7 +433,7 @@ For local development, both often run on localhost (different ports), which typi
 
 **Traditional WordPress:**
 
-```
+```text
 ┌────────────────────────────────────────┐
 │             WordPress                   │
 │  ┌─────────────┐  ┌─────────────────┐  │
@@ -448,7 +448,7 @@ For local development, both often run on localhost (different ports), which typi
 
 **Headless WordPress:**
 
-```
+```text
 ┌──────────────────┐        ┌─────────────────┐
 │    WordPress     │        │    Frontend     │
 │  ┌────────────┐  │  API   │  (React, etc.)  │
@@ -541,8 +541,8 @@ Modern frontend developers often prefer:
 Headless lets them use their preferred tools while leveraging WordPress's content management.
 
 ::: {.callout-note}
-## ULO Connection
-This develops **ULO 4** (selecting appropriate technologies) and **ULO 5** (evaluating emerging approaches). Headless architecture is a significant trend in web development. Understanding when it applies—and when it doesn't—demonstrates professional judgment.
+## Skills You Are Building
+This develops **making and defending technology choices** and **assessing emerging technologies**. Headless architecture is a significant trend in web development. Understanding when it applies—and when it doesn't—demonstrates professional judgment.
 :::
 
 ## Practice Exercises

@@ -8,7 +8,7 @@ book:
   title: "Build Web, Guide AI"
   subtitle: "Business Web Development with AI"
   author: "Michael Borck"
-  date: today
+  date: "last-modified"
   license: "CC BY 4.0 (content), MIT (code examples)"
   description: "A practical approach to web development that embraces AI as your development partner while building real business solutions with HTML, CSS, JavaScript, WordPress, and React."
   cover-image: cover.png

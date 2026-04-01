@@ -33,7 +33,7 @@ Paradoxically, constraints often speed up creative work. When you don't have to 
 
 Bootstrap and Tailwind represent fundamentally different approaches:
 
-```
+```text
 Ask your AI:
 Compare the philosophies behind Bootstrap and Tailwind CSS. Bootstrap
 gives you pre-built components. Tailwind gives you utility classes.
@@ -56,7 +56,7 @@ This should reveal:
 - Maximum flexibility
 - Requires more design decisions
 
-```
+```text
 Continue the conversation:
 I'm building a dashboard for a startup with tight deadlines. Which
 framework would you recommend and why?
@@ -66,7 +66,7 @@ framework would you recommend and why?
 
 How do limitations help?
 
-```
+```text
 Ask your AI:
 How do constraints help creativity? Apply this concept to CSS
 frameworks. Why might having fewer choices actually improve outcomes?
@@ -74,7 +74,7 @@ frameworks. Why might having fewer choices actually improve outcomes?
 
 Constraints reduce decision fatigue. When a framework says "primary buttons are this colour, secondary buttons are that colour," you're not spending mental energy on decisions that don't differentiate your product.
 
-```
+```text
 Continue the conversation:
 When do framework constraints become limiting? At what point should
 a project move away from a framework?
@@ -82,7 +82,7 @@ a project move away from a framework?
 
 ### Exploration 3: The "Generic" Problem
 
-```
+```text
 Ask your AI:
 A client says their Bootstrap site "looks like every other Bootstrap
 site." How would you respond? What can be done?
@@ -159,7 +159,7 @@ The grid is 12 columns wide. `col-md-4` means "4 columns wide on medium screens 
 <div class="d-block d-md-none">Visible on mobile, hidden on medium+</div>
 ```
 
-```
+```text
 Ask your AI:
 I want a navigation bar that collapses into a hamburger menu on
 mobile. Show me how to build this with Bootstrap.
@@ -260,7 +260,7 @@ For production, install Tailwind via npm and build a custom CSS file. The CDN is
 
 Tailwind's breakpoint prefixes: `sm:`, `md:`, `lg:`, `xl:`, `2xl:`.
 
-```
+```text
 Ask your AI:
 Build me a responsive navigation bar with Tailwind that has a logo
 on the left and links on the right, and stacks vertically on mobile.
@@ -400,7 +400,7 @@ Then use: `bg-brand`, `text-brand-dark`, etc.
 
 ### The Abstraction Spectrum
 
-```
+```text
 More Abstraction                            Less Abstraction
 (faster, less control)                      (slower, more control)
 ────────────────────────────────────────────────────────────────
@@ -438,7 +438,7 @@ Solutions:
 2. **Use @apply in CSS** (creates reusable classes)
 3. **Accept the trade-off** (markup complexity vs CSS complexity)
 
-```
+```text
 Ask your AI:
 When does Tailwind's utility approach become unmanageable? How do
 teams keep Tailwind codebases maintainable on large projects?
@@ -482,8 +482,8 @@ New team members can contribute faster when using standard frameworks:
 Modern frameworks are mobile-responsive out of the box. Bootstrap's grid and Tailwind's responsive prefixes handle responsive design that would take significant custom CSS.
 
 ::: {.callout-note}
-## ULO Connection
-This develops **ULO 4** (selecting and integrating technologies) and **ULO 1** (effective web applications). Framework selection is a business decision—speed vs. customisation, team skills, project timeline. Professional judgment means choosing appropriately, not defaulting to what you know.
+## Skills You Are Building
+This develops **making and defending technology choices** and **evaluating and improving solutions**. Framework selection is a business decision—speed vs. customisation, team skills, project timeline. Professional judgment means choosing appropriately, not defaulting to what you know.
 :::
 
 ## Practice Exercises

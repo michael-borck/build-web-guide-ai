@@ -57,7 +57,7 @@ If an existing solution meets 80% of requirements, adapting workflows to fit the
 
 When multiple plugins solve the same problem, how do you choose?
 
-```
+```text
 Ask your AI:
 I need a contact form plugin for a WordPress business site. Create
 a framework for evaluating options. What criteria matter, and how
@@ -74,7 +74,7 @@ Your evaluation framework should include:
 - Update frequency and developer reputation
 - Integration with other tools
 
-```
+```text
 Continue the conversation:
 What questions should I ask the client before recommending a contact
 form plugin? What requirements might change my recommendation?
@@ -84,7 +84,7 @@ form plugin? What requirements might change my recommendation?
 
 Let's work through a realistic scenario:
 
-```
+```text
 Ask your AI:
 A client runs a yoga studio and needs an online booking system.
 Students should book classes, see instructor schedules, and manage
@@ -101,7 +101,7 @@ This conversation should reveal:
 - Budget reality (short-term vs. long-term costs)
 - Client technical capacity (who maintains this?)
 
-```
+```text
 Continue the conversation:
 What if the client says "I want exactly what my competitor has but
 for half the price"? How do I manage expectations?
@@ -111,7 +111,7 @@ for half the price"? How do I manage expectations?
 
 Plugins have hidden costs:
 
-```
+```text
 Ask your AI:
 What is "plugin bloat" in WordPress? How do too many plugins create
 technical debt? Give me a concrete example of how this affects a
@@ -126,7 +126,7 @@ Technical debt accumulates when:
 - Security vulnerabilities compound
 - Nobody understands all the pieces
 
-```
+```text
 Continue the conversation:
 If I inherited a WordPress site with 47 plugins, how would I audit
 which ones are actually needed? What's a safe process?
@@ -136,7 +136,7 @@ which ones are actually needed? What's a safe process?
 
 AI is particularly effective at writing WordPress PHP code:
 
-```
+```text
 Ask your AI:
 I want to add a feature to my WordPress site that displays "This
 post was updated X days ago" at the top of posts that have been
@@ -152,7 +152,7 @@ This conversation should demonstrate:
 - How filters modify content in WordPress
 - Testing approach for custom PHP
 
-```
+```text
 Continue the conversation:
 Now I want to make this a simple plugin instead of putting it in
 functions.php. What changes are needed? What are the advantages
@@ -216,7 +216,7 @@ Most business WordPress sites need plugins in these categories:
 - WPForms, Gravity Forms, or Contact Form 7
 - Nearly every site needs contact forms
 
-```
+```text
 Ask your AI:
 For a small business WordPress site, what's the minimum set of
 plugins I should consider essential? What does each one protect
@@ -315,7 +315,7 @@ add_action('wp_enqueue_scripts', 'child_theme_enqueue_styles');
 
 Now any CSS you add to the child's `style.css` applies on top of the parent, and any template files you create in the child override the parent's versions.
 
-```
+```text
 Ask your AI:
 I want to change the footer on my WordPress site to include
 additional business information. Walk me through doing this
@@ -518,7 +518,7 @@ function custom_title($title) {
 add_filter('the_title', 'custom_title');
 ```
 
-```
+```text
 Ask your AI:
 I want to add a "Last updated" date below each blog post title on
 my WordPress site. Walk me through how to do this with a filter in
@@ -531,7 +531,7 @@ AI excels at writing WordPress plugins. Here's how to approach it:
 
 **Example: A plugin to display business hours**
 
-```
+```text
 Ask your AI:
 I need a WordPress plugin that:
 1. Adds a settings page where I can enter business hours for each day
@@ -726,7 +726,7 @@ Copy `single.php` from parent theme to child theme, then modify:
 <?php get_footer(); ?>
 ```
 
-```
+```text
 Ask your AI:
 I want to modify the archive page template in my child theme to
 display posts in a grid layout instead of a list. Show me how
@@ -756,7 +756,7 @@ Full custom rarely means starting from zero.
 
 ### The Extension Pyramid
 
-```
+```text
                    ┌───────────────┐
                    │ Custom Code   │  (Last resort)
                    ├───────────────┤
@@ -776,7 +776,7 @@ Start from the bottom: can WordPress core do it? Can a well-established free plu
 
 Every plugin creates a dependency:
 
-```
+```text
 Your Site
   └── Depends on Plugin A
         └── Depends on Plugin A's Developer
@@ -790,7 +790,7 @@ More plugins = more dependencies = more things that can break.
 
 When evaluating options:
 
-```
+```text
 True Cost = Upfront Cost + (Yearly Maintenance × Years) + Risk Cost
 
 Plugin:
@@ -844,8 +844,8 @@ Plugins are the most common WordPress security vulnerability. Your role:
 - Document which plugins are installed and why
 
 ::: {.callout-note}
-## ULO Connection
-This develops **ULO 4** (making and defending technology choices) and **ULO 1** (evaluating effective solutions). Professional plugin decisions require balancing features, costs, risks, and long-term maintenance—exactly the judgment businesses need from technology advisors.
+## Skills You Are Building
+This develops **making and defending technology choices** and **evaluating and improving solutions**. Professional plugin decisions require balancing features, costs, risks, and long-term maintenance—exactly the judgment businesses need from technology advisors.
 :::
 
 ## Practice Exercises

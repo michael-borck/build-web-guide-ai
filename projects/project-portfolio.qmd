@@ -68,7 +68,7 @@ The integration should be meaningful—it should serve a purpose for someone vie
 3. **Structure outline**: Sketch your page structure—what sections, what hierarchy?
 4. **Visual direction**: What atmosphere suits your professional identity?
 
-```
+```text
 Ask your AI:
 Help me plan a portfolio website structure. I want to showcase myself
 as [your professional focus]. What sections should I include, and
@@ -96,7 +96,7 @@ Apply styles mobile-first:
 4. Desktop breakpoint (multi-column where appropriate)
 5. Interactive states (hover, focus)
 
-```
+```text
 Ask your AI:
 Review this CSS for my portfolio. Am I following mobile-first
 principles? What could be simplified or improved?
@@ -160,7 +160,7 @@ This log demonstrates critical thinking—that you're directing the AI, not just
 
 ### Example Log Entry
 
-```
+```text
 Prompt: "Show me how to create a responsive navigation that collapses
 to a hamburger menu on mobile"
 
@@ -268,21 +268,21 @@ Before submitting, verify:
 
 Begin with these conversations with your AI partner:
 
-```
+```text
 Ask your AI:
 I'm planning a portfolio website to showcase my web development
 learning. Help me think through what sections I need and what each
 should communicate to someone considering hiring a junior developer.
 ```
 
-```
+```text
 Ask your AI:
 What makes a portfolio stand out? Not visually flashy features, but
 professional qualities that employers actually notice. What should
 I prioritise?
 ```
 
-```
+```text
 Ask your AI:
 I want to integrate an API into my portfolio. Help me evaluate
 options: GitHub API vs a weather API vs a quotes API. What would

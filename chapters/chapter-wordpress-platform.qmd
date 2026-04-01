@@ -38,7 +38,7 @@ When evaluating any platform, ask: "How active is the ecosystem?" A platform wit
 
 Let's clarify the distinction between platforms and ordinary software:
 
-```
+```text
 Ask your AI:
 What makes something a "platform" versus just "software"? Compare
 WordPress and Microsoft Word. Both help create documents. Why is
@@ -52,7 +52,7 @@ This should reveal characteristics of platforms:
 - The value increases as the ecosystem grows
 - Users can customise without changing the core
 
-```
+```text
 Continue the conversation:
 What risks come with choosing a platform? What happens if the
 ecosystem declines or the platform changes direction?
@@ -62,7 +62,7 @@ ecosystem declines or the platform changes direction?
 
 The WordPress ecosystem contains gems and garbage. Professional evaluation skills are essential:
 
-```
+```text
 Ask your AI:
 How do I evaluate whether a WordPress theme or plugin is trustworthy
 and well-built? What specific signals indicate quality, and what red
@@ -85,7 +85,7 @@ Red flags include:
 - Abandoned by developer
 - Excessive permission requests
 
-```
+```text
 Continue the conversation:
 If I find two plugins that do the same thing, one with 100,000
 installs and one with 1,000 installs, is the popular one always
@@ -96,7 +96,7 @@ better? When might the less popular option be the right choice?
 
 Understanding how WordPress is built helps with troubleshooting and customisation:
 
-```
+```text
 Ask your AI:
 Explain WordPress's architecture using a restaurant analogy. The
 database stores something, themes do something, plugins do something,
@@ -111,7 +111,7 @@ A typical analogy might map:
 - Themes = Dining room design (how food is presented)
 - Plugins = Specialised equipment (espresso machine, wine fridge)
 
-```
+```text
 Continue the conversation:
 When something goes wrong on a WordPress site, how does understanding
 architecture help diagnose the problem? Give me an example.
@@ -217,7 +217,7 @@ The theme doesn't contain your content—it presents your content. Change themes
 | Reviews | What do other users say? |
 | Support | Can you get help if needed? |
 
-```
+```text
 Ask your AI:
 I'm building a site for a local bakery. What should I look for in a
 WordPress theme? What features matter, and what should I avoid?
@@ -227,7 +227,7 @@ WordPress theme? What features matter, and what should I avoid?
 
 WordPress uses a template hierarchy to determine which template file displays content. Understanding this helps when you need to customise.
 
-```
+```text
 Specific                                      General
 ───────────────────────────────────────────────────────►
 
@@ -243,7 +243,7 @@ category-{slug}.php → category.php → archive.php → index.php
 
 WordPress looks for the most specific template first, falling back to more general ones. This allows themes to have special templates for specific pages while using defaults for everything else.
 
-```
+```text
 Ask your AI:
 If I want my "About" page to look different from other pages, what
 file would I create in my theme? Walk me through how WordPress
@@ -304,7 +304,7 @@ In Settings, pay attention to:
 
 ### The WordPress Stack
 
-```
+```text
 ┌─────────────────────────────────────────┐
 │  Browser (What visitors see)             │
 ├─────────────────────────────────────────┤
@@ -329,7 +329,7 @@ When something goes wrong, think through these layers:
 
 A key mental model: **content lives in the database, presentation lives in the theme**.
 
-```
+```text
 Database (content):
 ├── Post: "Our Spring Menu"
 │   ├── Title
@@ -399,8 +399,8 @@ Professional judgment includes knowing when *not* to use WordPress:
 - Maximum performance requirements (better: headless architecture)
 
 ::: {.callout-note}
-## ULO Connection
-This develops **ULO 4** (making and defending technology choices) and **ULO 5** (evaluating technologies). Choosing WordPress requires evaluating its ecosystem, understanding its architecture, and articulating why it's appropriate (or not) for specific situations.
+## Skills You Are Building
+This develops **making and defending technology choices** and **assessing emerging technologies**. Choosing WordPress requires evaluating its ecosystem, understanding its architecture, and articulating why it's appropriate (or not) for specific situations.
 :::
 
 ## Practice Exercises
@@ -475,7 +475,7 @@ Research both platforms and write a balanced comparison (500 words) addressing:
 5. Long-term maintenance considerations
 6. Your recommendation with justification
 
-This exercise develops technology evaluation skills (ULO 5).
+This exercise develops technology evaluation skills (assessing emerging technologies).
 
 ## Chapter Summary
 

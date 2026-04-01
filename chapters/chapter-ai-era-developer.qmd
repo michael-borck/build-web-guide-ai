@@ -54,7 +54,7 @@ As you develop expertise, the quality of questions you ask AI improves. Beginner
 
 Let's think critically about AI's limits:
 
-```
+```text
 Ask your AI:
 What aspects of software development are unlikely to be fully
 automated by AI in the foreseeable future? Be specific about why
@@ -73,7 +73,7 @@ Key areas that remain human:
 
 **Accountability**: When something goes wrong, humans are accountable. This responsibility shapes how we approach work in ways AI doesn't replicate.
 
-```
+```text
 Continue the conversation:
 For each area you mentioned, give me a concrete example from web
 development where human judgment was essential.
@@ -81,7 +81,7 @@ development where human judgment was essential.
 
 ### Exploration 2: Your Unique Value
 
-```
+```text
 Ask your AI:
 I'm a developer who works with AI tools. What's my unique value?
 What can I contribute that AI cannot? Be honest—don't just
@@ -96,7 +96,7 @@ Honest assessment of human value:
 - **Building relationships**: Clients hire people, not AI. Trust is human.
 - **Learning from failure**: You remember what didn't work and why. This wisdom guides future decisions.
 
-```
+```text
 Continue the conversation:
 What skills should I deliberately develop to remain valuable as
 AI capabilities expand? What's the best investment of my learning
@@ -105,7 +105,7 @@ time?
 
 ### Exploration 3: Effective AI Partnership
 
-```
+```text
 Ask your AI:
 How can developers work with AI most effectively? What practices
 lead to good outcomes? What mistakes should I avoid?
@@ -123,7 +123,7 @@ Effective AI partnership practices:
 
 **Stay critical**: Just because AI suggests something doesn't make it right. Evaluate every suggestion.
 
-```
+```text
 Continue the conversation:
 What are warning signs that I'm over-relying on AI? How do I
 maintain my own skills while using AI assistance?
@@ -131,7 +131,7 @@ maintain my own skills while using AI assistance?
 
 ### Exploration 4: The Future Partnership
 
-```
+```text
 Ask your AI:
 How might human-AI collaboration in software development evolve
 over the next 5-10 years? What should I prepare for?
@@ -159,7 +159,7 @@ Throughout this course, you've developed patterns for working with AI. Let's mak
 
 **Pattern 1: Exploration Before Implementation**
 
-```
+```text
 Poor: "Write me a shopping cart component"
 
 Better: "I need to implement a shopping cart. What approaches exist?
@@ -172,7 +172,7 @@ Explore options before committing. AI is excellent at laying out alternatives.
 
 **Pattern 2: Explain, Then Generate**
 
-```
+```text
 Poor: "Fix this bug" [pastes code]
 
 Better: "This component should filter products by category when the
@@ -185,7 +185,7 @@ Understanding before fixing leads to better solutions and learning.
 
 **Pattern 3: Incremental Building**
 
-```
+```text
 Poor: "Build a complete e-commerce site"
 
 Better:
@@ -199,7 +199,7 @@ Complex systems are built incrementally. AI helps with each step, not magic solu
 
 **Pattern 4: Context-Rich Requests**
 
-```
+```text
 Poor: "Make the button look better"
 
 Better: "This button is the primary call-to-action for signup. It's
@@ -297,7 +297,7 @@ Working with AI raises ethical questions:
 
 ### The Developer-AI Collaboration Spectrum
 
-```
+```text
 Full Manual                                      Full Automation
     │                                                  │
     ├────────┬────────┬────────┬────────┬────────────┤
@@ -316,7 +316,7 @@ Current AI is most valuable in the middle—enhancing your work, not replacing i
 
 ### The Skill Evolution Model
 
-```
+```text
 Traditional Developer         AI-Era Developer
 ─────────────────────        ─────────────────────
 Writing code                 Directing code creation
@@ -342,7 +342,7 @@ Skills that CHANGE form:
 
 ### The Partnership Maturity Model
 
-```
+```text
 Level 1: User
 - AI does tasks for you
 - You accept outputs uncritically
@@ -406,8 +406,8 @@ In an AI-augmented field:
 - **Demonstrate responsibility**: Show you can be trusted with AI tools
 
 ::: {.callout-note}
-## ULO Connection
-This develops all five ULOs—particularly **ULO 1** (evaluating and improving solutions) and **ULO 5** (assessing emerging technologies). Working effectively with AI is now a core professional skill, requiring the judgment, communication, and evaluation abilities developed throughout this course.
+## Skills You Are Building
+This develops all the core professional skills — particularly **evaluating and improving solutions** and **assessing emerging technologies**. Working effectively with AI is now a core professional skill, requiring the judgment, communication, and evaluation abilities developed throughout this book.
 :::
 
 ## Practice Exercises
@@ -423,7 +423,7 @@ This develops all five ULOs—particularly **ULO 1** (evaluating and improving s
 
 ### Exercise 14.1: AI Interaction Analysis (Level 1)
 
-Review your AI conversations from throughout this course:
+Review your AI conversations from throughout this book:
 
 1. Find three conversations where AI was most helpful
 2. Find one conversation where AI led you astray

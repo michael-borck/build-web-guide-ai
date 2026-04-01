@@ -41,7 +41,7 @@ When working with any API, first understand the contract: What can I request? Wh
 
 Let's build understanding before we see code:
 
-```
+```text
 Ask your AI:
 Explain REST APIs using a library system analogy. The library has
 books (resources). How would a REST API let someone check what
@@ -50,7 +50,7 @@ books exist, borrow a book, return a book, and add new books?
 
 This should reveal the core pattern: APIs expose *resources* (data) and let you perform *operations* on them. The operations typically map to HTTP methods: GET (read), POST (create), PUT/PATCH (update), DELETE (remove).
 
-```
+```text
 Continue the conversation:
 What's the difference between GET and POST requests? Why would you
 use one versus the other?
@@ -60,7 +60,7 @@ use one versus the other?
 
 APIs need a common language for data. That language is usually JSON.
 
-```
+```text
 Ask your AI:
 Why is JSON the standard format for web API data? What problem does
 it solve, and what did people use before JSON?
@@ -68,7 +68,7 @@ it solve, and what did people use before JSON?
 
 JSON (JavaScript Object Notation) is readable by humans and easily parsed by machines. It's become the universal format for web data exchange.
 
-```
+```text
 Continue the conversation:
 Show me what a JSON response might look like for a product catalogue
 with three items. Each item has a name, price, description, and
@@ -79,7 +79,7 @@ whether it's in stock.
 
 Network requests fail. Servers go down. Data doesn't match expectations. Professional applications handle these gracefully.
 
-```
+```text
 Ask your AI:
 What can go wrong when calling an API? List the different types of
 failures and explain what each HTTP status code range (2xx, 4xx, 5xx)
@@ -88,7 +88,7 @@ means.
 
 Understanding failure modes is essential. Your code must handle them or your users will see cryptic errors—or worse, a completely broken page.
 
-```
+```text
 Continue the conversation:
 How should a professional application respond to each type of failure?
 What should the user see?
@@ -186,7 +186,7 @@ Key elements:
 4. Create DOM elements for each item
 5. Handle errors with `try`/`catch`
 
-```
+```text
 Ask your AI:
 Walk me through this code step by step. What does forEach do?
 What does createElement do? What happens if the fetch fails?
@@ -346,7 +346,7 @@ You might encounter this error:
 
 **CORS** (Cross-Origin Resource Sharing) is a security feature. By default, JavaScript can only fetch from the same domain the page is on. To fetch from a different domain, that domain must explicitly allow it.
 
-```
+```text
 Ask your AI:
 Explain CORS in simple terms. Why does it exist? What's it protecting
 against?
@@ -369,7 +369,7 @@ Many APIs welcome frontend requests: JSONPlaceholder, OpenWeatherMap, GitHub API
 
 Every API interaction follows this pattern:
 
-```
+```text
 ┌──────────────┐     Request      ┌──────────────┐
 │              │ ──────────────▶  │              │
 │   Browser    │                  │    Server    │
@@ -387,7 +387,7 @@ Everything that can go wrong—network issues, server errors, malformed data—h
 
 ### Synchronous vs Asynchronous
 
-```
+```text
 Synchronous (blocking):
 Step 1 → Wait → Step 2 → Wait → Step 3
 
@@ -401,7 +401,7 @@ Step 1 → Start Step 2 (don't wait) → Step 3
 
 ### The Data Flow
 
-```
+```text
 API Response (JSON string)
         ↓
    response.json() (parse)
@@ -446,8 +446,8 @@ Connect your website to:
 APIs are how modern businesses connect their systems.
 
 ::: {.callout-note}
-## ULO Connection
-This develops **ULO 4** (select and integrate technologies) and **ULO 1** (design effective applications). API integration is fundamental to modern web development. Understanding how to evaluate, implement, and handle errors in API connections is essential professional knowledge.
+## Skills You Are Building
+This develops **making and defending technology choices** and **evaluating and improving solutions**. API integration is fundamental to modern web development. Understanding how to evaluate, implement, and handle errors in API connections is essential professional knowledge.
 :::
 
 ## Practice Exercises

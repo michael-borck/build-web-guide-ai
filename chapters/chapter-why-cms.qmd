@@ -50,7 +50,7 @@ A website is truly "done" when you can hand it to the client and they can manage
 
 When should a business build a custom-coded site versus use a CMS? This is a foundational business decision.
 
-```
+```text
 Ask your AI:
 When should a business build a completely custom website versus using
 a CMS like WordPress? Create a decision framework with criteria like
@@ -66,7 +66,7 @@ This conversation should reveal that CMS becomes increasingly valuable as:
 
 Follow up:
 
-```
+```text
 Continue the conversation:
 What are the trade-offs? What do you lose by using a CMS instead
 of building everything custom?
@@ -76,7 +76,7 @@ of building everything custom?
 
 Different people care about different things. Understanding stakeholder needs is essential for recommending solutions.
 
-```
+```text
 Ask your AI:
 In a website project for a small business, who are all the
 stakeholders? What does each stakeholder need, and what are their
@@ -90,7 +90,7 @@ Stakeholders typically include:
 - IT/Developer (wants maintainability, worries about security)
 - End users (want good experience, don't care how it's built)
 
-```
+```text
 Continue the conversation:
 How might these stakeholders have conflicting needs? How would you
 balance them when recommending a CMS solution?
@@ -100,7 +100,7 @@ balance them when recommending a CMS solution?
 
 Technology should serve content, not the other way around. Content strategy asks: What content do we need? Who creates it? How is it organised?
 
-```
+```text
 Ask your AI:
 Explain content strategy for a small business website. What questions
 should we answer before choosing any technology? Walk me through how
@@ -121,13 +121,13 @@ While this chapter focuses on concepts, let's understand what a CMS actually doe
 ### The Core Separation
 
 Without a CMS:
-```
+```text
 HTML File → Browser
 (Content is embedded in code)
 ```
 
 With a CMS:
-```
+```text
 Database (Content) + Templates (Design) → CMS Engine → HTML → Browser
 (Content and presentation are separate)
 ```
@@ -187,7 +187,7 @@ When evaluating whether a project needs a CMS:
 | Time to launch | Faster with templates | Longer but fully custom |
 | Unique requirements | Standard patterns work | Highly unusual needs |
 
-```
+```text
 Ask your AI:
 A local restaurant wants a website with their menu, location, and
 hours. They update the menu monthly. The owner isn't technical.
@@ -201,7 +201,7 @@ and what type might be appropriate.
 
 In a CMS, content isn't just text—it's structured data with defined fields:
 
-```
+```text
 Blog Post:
 ├── Title (text, required)
 ├── Content (rich text)
@@ -219,7 +219,7 @@ This structure enables:
 - Relationships (posts belong to categories)
 - Validation (required fields must be filled)
 
-```
+```text
 Ask your AI:
 For a small business website with services, team members, and
 testimonials, what content types would I need? What fields would
@@ -230,7 +230,7 @@ each content type have?
 
 Templates define how structured content becomes visual HTML:
 
-```
+```text
 Template: "Single Blog Post"
 ┌────────────────────────────────────┐
 │  {{ post.featured_image }}          │
@@ -302,8 +302,8 @@ Need to add 50 new product pages? With a CMS:
 Without a CMS: a developer writes and deploys 50 pages of HTML.
 
 ::: {.callout-note}
-## ULO Connection
-This develops **ULO 3** (translating stakeholder needs into technical requirements) and **ULO 4** (selecting appropriate technologies). Recommending a CMS isn't a technical decision—it's understanding who needs to do what and choosing architecture accordingly.
+## Skills You Are Building
+This develops **translating stakeholder needs into technical requirements** and **making and defending technology choices**. Recommending a CMS isn't a technical decision—it's understanding who needs to do what and choosing architecture accordingly.
 :::
 
 ## Practice Exercises
@@ -380,7 +380,7 @@ For each:
 2. Argue the case against using a CMS
 3. Make and defend your recommendation
 
-This exercise has no single correct answer—develop your ability to weigh trade-offs and justify decisions (ULO 4).
+This exercise has no single correct answer—develop your ability to weigh trade-offs and justify decisions (making and defending technology choices).
 
 ## Chapter Summary
 
