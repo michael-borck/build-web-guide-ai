@@ -2,11 +2,13 @@
 
 ## Why This Book Exists
 
-Most web development books teach you technologies. This one teaches you to think like a professional developer who happens to use specific technologies.
+Most web development books teach you technologies. This one teaches you to make technology decisions.
 
-That distinction matters because AI can write HTML, CSS, and JavaScript faster than you ever will. If your only skill is writing markup and code, you are competing with something that does not sleep. But if you can translate a business need into a technical requirement, evaluate whether a WordPress site or a React app is the right call, and explain your reasoning to a non-technical stakeholder. You have the skills that actually matter.
+AI can write HTML, CSS, and JavaScript faster than you ever will. If your only skill is writing markup, you are competing with something that does not sleep. But if you can evaluate whether a client needs a WordPress site or a React app, explain why to a non-technical stakeholder, and direct AI to build it correctly, you have the skills that actually matter.
 
-This book grew out of teaching business web and mobile technologies to students who were not computer science majors. They needed to build real things for real purposes, and they needed to understand enough about the technology to make professional decisions, not just follow tutorials. The exercises, case studies, and projects in these pages were tested in classrooms before they were written up.
+This book teaches web development as a business decision-making skill. Every chapter starts with the concept, not the code. You explore ideas through AI conversation before writing a single line. By the time you reach the syntax, you understand what it means and why it exists. That understanding is what lets you evaluate AI output, choose the right technology for the problem, and communicate your reasoning to people who do not write code.
+
+The book covers the full spectrum of web decisions: hand-coded HTML/CSS/JavaScript for control, WordPress for rapid deployment, headless architecture for flexibility, React for modern applications. You learn when to use each one, not just how.
 
 ## Who This Book Is For
 
@@ -45,7 +47,13 @@ The book progresses from foundations to full applications:
 
 **Part 4** ties it all together: professional practices, emerging technologies, and building a development career.
 
-Each chapter follows a consistent pattern: concept first, AI exploration, hands-on practice, business connection, reflection.
+Each chapter follows a consistent pattern:
+
+1. **Concept first.** A real-world analogy before any code. Restaurant menus for HTML structure, café atmospheres for CSS, ordering systems for APIs.
+2. **AI exploration.** Guided prompts where you explore the concept through conversation with your AI assistant. You build understanding before you build anything.
+3. **From concept to code.** The simplest implementation that demonstrates the idea. No walls of syntax.
+4. **Business connection.** Why this technology matters commercially. When to use it, when not to.
+5. **Practice and reflection.** Exercises levelled from direct application to open-ended design challenges, plus journal prompts for deeper thinking.
 
 ## Conventions Used in This Book
 
