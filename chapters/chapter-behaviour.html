@@ -944,7 +944,25 @@ other tasks. How do they prioritise?</code></pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">'The value is:'</span><span class="op">,</span> someVariable)<span class="op">;</span>  <span class="co">// Print values</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(<span class="st">'Something went wrong!'</span>)<span class="op">;</span>       <span class="co">// Print errors</span></span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">table</span>(arrayOfObjects)<span class="op">;</span>                <span class="co">// Print tables</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Open DevTools (F12 or right-click → Inspect → Console) to see these messages. When something doesn’t work, add <code>console.log()</code> statements to trace what’s happening.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Your Most Important Tool: Browser Developer Console">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Your Most Important Tool: Browser Developer Console
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Every modern browser has a built-in developer console. Open it with <strong>F12</strong> (or right-click any page and select <strong>Inspect</strong>). It has three tabs you will use constantly:</p>
+<ul>
+<li><strong>Elements</strong>: see the actual HTML and CSS the browser received. Useful for checking whether AI-generated markup is structured correctly, or why a style is not applying.</li>
+<li><strong>Console</strong>: see <code>console.log()</code> output, JavaScript errors, and warnings. This is where you debug behaviour.</li>
+<li><strong>Network</strong>: see every file and API request the page makes. Useful for debugging fetch calls and checking what data comes back.</li>
+</ul>
+<p>Get comfortable here. When AI gives you code that does not work, the dev console tells you <em>why</em>. It shows you what the browser actually received, not what you intended to send.</p>
+</div>
+</div>
 <pre class="text"><code>Ask your AI:
 What are common JavaScript debugging techniques? How do I figure out
 why my code isn't working?</code></pre>
@@ -1989,145 +2007,153 @@ why my code isn't working?</code></pre>
 <span id="cb28-394"><a href="#cb28-394" aria-hidden="true" tabindex="-1"></a>console<span class="op">.</span><span class="fu">table</span><span class="op">(</span>arrayOfObjects<span class="op">);</span>                <span class="co">// Print tables</span></span>
 <span id="cb28-395"><a href="#cb28-395" aria-hidden="true" tabindex="-1"></a>```</span>
 <span id="cb28-396"><a href="#cb28-396" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-397"><a href="#cb28-397" aria-hidden="true" tabindex="-1"></a>Open <span class="fu">DevTools</span> <span class="op">(</span>F12 or right<span class="op">-</span>click → Inspect → <span class="bu">Console</span><span class="op">)</span> to see these messages<span class="op">.</span> <span class="fu">When</span> something doesn<span class="er">'</span>t work<span class="op">,</span> add `console<span class="op">.</span><span class="fu">log</span><span class="op">()</span>` statements to trace what<span class="er">'</span>s happening<span class="op">.</span></span>
-<span id="cb28-398"><a href="#cb28-398" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-399"><a href="#cb28-399" aria-hidden="true" tabindex="-1"></a>```text</span>
-<span id="cb28-400"><a href="#cb28-400" aria-hidden="true" tabindex="-1"></a>Ask your AI<span class="op">:</span></span>
-<span id="cb28-401"><a href="#cb28-401" aria-hidden="true" tabindex="-1"></a>What are common JavaScript debugging techniques<span class="op">?</span> How <span class="cf">do</span> I figure out</span>
-<span id="cb28-402"><a href="#cb28-402" aria-hidden="true" tabindex="-1"></a>why my code isn<span class="er">'</span>t working<span class="op">?</span></span>
-<span id="cb28-403"><a href="#cb28-403" aria-hidden="true" tabindex="-1"></a>```</span>
-<span id="cb28-404"><a href="#cb28-404" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-405"><a href="#cb28-405" aria-hidden="true" tabindex="-1"></a>## Business Applications</span>
+<span id="cb28-397"><a href="#cb28-397" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span> <span class="op">{.</span><span class="fu">callout</span><span class="op">-</span>tip title<span class="op">=</span><span class="st">"Your Most Important Tool: Browser Developer Console"</span><span class="op">}</span></span>
+<span id="cb28-398"><a href="#cb28-398" aria-hidden="true" tabindex="-1"></a>Every modern browser has a built<span class="op">-</span>in developer console<span class="op">.</span> <span class="fu">Open</span> it with <span class="op">**</span>F12<span class="op">**</span> <span class="op">(</span>or right<span class="op">-</span>click any page and select <span class="op">**</span>Inspect<span class="op">**).</span> <span class="fu">It</span> has three tabs you will use constantly<span class="op">:</span></span>
+<span id="cb28-399"><a href="#cb28-399" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-400"><a href="#cb28-400" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Elements</span><span class="op">**:</span> see the actual <span class="bu">HTML</span> and <span class="bu">CSS</span> the browser received<span class="op">.</span> <span class="fu">Useful</span> <span class="cf">for</span> checking whether AI<span class="op">-</span>generated markup is structured correctly<span class="op">,</span> or why a style is not applying<span class="op">.</span></span>
+<span id="cb28-401"><a href="#cb28-401" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Console</span><span class="op">**:</span> see `console<span class="op">.</span><span class="fu">log</span><span class="op">()</span>` output<span class="op">,</span> JavaScript errors<span class="op">,</span> and warnings<span class="op">.</span> <span class="fu">This</span> is where you debug behaviour<span class="op">.</span></span>
+<span id="cb28-402"><a href="#cb28-402" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Network<span class="op">**:</span> see every file and API request the page makes<span class="op">.</span> <span class="fu">Useful</span> <span class="cf">for</span> debugging fetch calls and checking what data comes back<span class="op">.</span></span>
+<span id="cb28-403"><a href="#cb28-403" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-404"><a href="#cb28-404" aria-hidden="true" tabindex="-1"></a><span class="fu">Get</span> comfortable here<span class="op">.</span> <span class="fu">When</span> AI gives you code that does not work<span class="op">,</span> the dev console tells you <span class="op">*</span>why<span class="op">*.</span> <span class="fu">It</span> shows you what the browser actually received<span class="op">,</span> not what you intended to send<span class="op">.</span></span>
+<span id="cb28-405"><a href="#cb28-405" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span></span>
 <span id="cb28-406"><a href="#cb28-406" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-407"><a href="#cb28-407" aria-hidden="true" tabindex="-1"></a>### User Engagement</span>
-<span id="cb28-408"><a href="#cb28-408" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-409"><a href="#cb28-409" aria-hidden="true" tabindex="-1"></a>Interactive features keep users engaged<span class="op">.</span> <span class="fu">Think</span><span class="op">:</span> image galleries<span class="op">,</span> accordion FAQs<span class="op">,</span> live search filtering<span class="op">.</span> <span class="fu">Each</span> interaction is an opportunity to help users find what they need<span class="op">.</span></span>
-<span id="cb28-410"><a href="#cb28-410" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-411"><a href="#cb28-411" aria-hidden="true" tabindex="-1"></a>### Form Validation and <span class="bu">Data</span> Quality</span>
+<span id="cb28-407"><a href="#cb28-407" aria-hidden="true" tabindex="-1"></a>```text</span>
+<span id="cb28-408"><a href="#cb28-408" aria-hidden="true" tabindex="-1"></a>Ask your AI<span class="op">:</span></span>
+<span id="cb28-409"><a href="#cb28-409" aria-hidden="true" tabindex="-1"></a>What are common JavaScript debugging techniques<span class="op">?</span> How <span class="cf">do</span> I figure out</span>
+<span id="cb28-410"><a href="#cb28-410" aria-hidden="true" tabindex="-1"></a>why my code isn<span class="er">'</span>t working<span class="op">?</span></span>
+<span id="cb28-411"><a href="#cb28-411" aria-hidden="true" tabindex="-1"></a>```</span>
 <span id="cb28-412"><a href="#cb28-412" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-413"><a href="#cb28-413" aria-hidden="true" tabindex="-1"></a>Client<span class="op">-</span>side validation prevents bad data before it reaches your server<span class="op">.</span> <span class="fu">This</span> improves data quality<span class="op">,</span> reduces support requests<span class="op">,</span> and creates a smoother user experience<span class="op">.</span></span>
+<span id="cb28-413"><a href="#cb28-413" aria-hidden="true" tabindex="-1"></a>## Business Applications</span>
 <span id="cb28-414"><a href="#cb28-414" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-415"><a href="#cb28-415" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span> <span class="op">{.</span><span class="fu">callout</span><span class="op">-</span>warning<span class="op">}</span></span>
-<span id="cb28-416"><a href="#cb28-416" aria-hidden="true" tabindex="-1"></a>## <span class="bu">Security</span> Note</span>
-<span id="cb28-417"><a href="#cb28-417" aria-hidden="true" tabindex="-1"></a>Client<span class="op">-</span>side validation improves user experience<span class="op">,</span> but <span class="op">*</span>never<span class="op">*</span> trust it <span class="cf">for</span> security<span class="op">.</span> <span class="fu">Users</span> can disable JavaScript or modify your code<span class="op">.</span> <span class="fu">Always</span> validate on the server too<span class="op">.</span></span>
-<span id="cb28-418"><a href="#cb28-418" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span></span>
-<span id="cb28-419"><a href="#cb28-419" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-420"><a href="#cb28-420" aria-hidden="true" tabindex="-1"></a>### Dynamic Content</span>
-<span id="cb28-421"><a href="#cb28-421" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-422"><a href="#cb28-422" aria-hidden="true" tabindex="-1"></a>Loading content without page <span class="fu">refreshes</span> <span class="op">(</span>covered more in Chapter <span class="dv">4</span><span class="op">)</span> makes applications feel faster<span class="op">.</span> <span class="fu">Users</span> don<span class="er">'</span>t wait <span class="cf">for</span> full page reloads when they just need one small update<span class="op">.</span></span>
-<span id="cb28-423"><a href="#cb28-423" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-424"><a href="#cb28-424" aria-hidden="true" tabindex="-1"></a>### Analytics and User Behaviour</span>
-<span id="cb28-425"><a href="#cb28-425" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-426"><a href="#cb28-426" aria-hidden="true" tabindex="-1"></a>JavaScript can track how users interact with your site<span class="op">:</span> what they click<span class="op">,</span> how far they scroll<span class="op">,</span> where they spend time<span class="op">.</span> <span class="fu">This</span> data informs business decisions<span class="op">.</span> <span class="op">(</span>Always be transparent about tracking and respect privacy<span class="op">.)</span></span>
+<span id="cb28-415"><a href="#cb28-415" aria-hidden="true" tabindex="-1"></a>### User Engagement</span>
+<span id="cb28-416"><a href="#cb28-416" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-417"><a href="#cb28-417" aria-hidden="true" tabindex="-1"></a>Interactive features keep users engaged<span class="op">.</span> <span class="fu">Think</span><span class="op">:</span> image galleries<span class="op">,</span> accordion FAQs<span class="op">,</span> live search filtering<span class="op">.</span> <span class="fu">Each</span> interaction is an opportunity to help users find what they need<span class="op">.</span></span>
+<span id="cb28-418"><a href="#cb28-418" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-419"><a href="#cb28-419" aria-hidden="true" tabindex="-1"></a>### Form Validation and <span class="bu">Data</span> Quality</span>
+<span id="cb28-420"><a href="#cb28-420" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-421"><a href="#cb28-421" aria-hidden="true" tabindex="-1"></a>Client<span class="op">-</span>side validation prevents bad data before it reaches your server<span class="op">.</span> <span class="fu">This</span> improves data quality<span class="op">,</span> reduces support requests<span class="op">,</span> and creates a smoother user experience<span class="op">.</span></span>
+<span id="cb28-422"><a href="#cb28-422" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-423"><a href="#cb28-423" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span> <span class="op">{.</span><span class="fu">callout</span><span class="op">-</span>warning<span class="op">}</span></span>
+<span id="cb28-424"><a href="#cb28-424" aria-hidden="true" tabindex="-1"></a>## <span class="bu">Security</span> Note</span>
+<span id="cb28-425"><a href="#cb28-425" aria-hidden="true" tabindex="-1"></a>Client<span class="op">-</span>side validation improves user experience<span class="op">,</span> but <span class="op">*</span>never<span class="op">*</span> trust it <span class="cf">for</span> security<span class="op">.</span> <span class="fu">Users</span> can disable JavaScript or modify your code<span class="op">.</span> <span class="fu">Always</span> validate on the server too<span class="op">.</span></span>
+<span id="cb28-426"><a href="#cb28-426" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span></span>
 <span id="cb28-427"><a href="#cb28-427" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-428"><a href="#cb28-428" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span> <span class="op">{.</span><span class="fu">callout</span><span class="op">-</span>note<span class="op">}</span></span>
-<span id="cb28-429"><a href="#cb28-429" aria-hidden="true" tabindex="-1"></a>## Skills You Are Building</span>
-<span id="cb28-430"><a href="#cb28-430" aria-hidden="true" tabindex="-1"></a>This develops <span class="op">**</span>evaluating and improving solutions<span class="op">**</span> and <span class="op">**</span>translating stakeholder needs into technical requirements<span class="op">**.</span> <span class="fu">Interactive</span> features must serve user needs<span class="op">.</span> <span class="fu">JavaScript</span> <span class="cf">for</span> its own sake creates complexity without value<span class="op">.</span> <span class="fu">The</span> ability to identify when interactivity helps versus hinders is professional judgment<span class="op">.</span></span>
-<span id="cb28-431"><a href="#cb28-431" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span></span>
-<span id="cb28-432"><a href="#cb28-432" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-433"><a href="#cb28-433" aria-hidden="true" tabindex="-1"></a>## Practice Exercises</span>
-<span id="cb28-434"><a href="#cb28-434" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-435"><a href="#cb28-435" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span> <span class="op">{.</span><span class="fu">callout</span><span class="op">-</span>note<span class="op">}</span></span>
-<span id="cb28-436"><a href="#cb28-436" aria-hidden="true" tabindex="-1"></a>## Exercise Levels</span>
-<span id="cb28-437"><a href="#cb28-437" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">1</span><span class="op">**:</span> Direct application</span>
-<span id="cb28-438"><a href="#cb28-438" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">2</span><span class="op">**:</span> Minor modifications</span>
-<span id="cb28-439"><a href="#cb28-439" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">3</span><span class="op">**:</span> Combining concepts</span>
-<span id="cb28-440"><a href="#cb28-440" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">4</span><span class="op">**:</span> Problem<span class="op">-</span>solving</span>
-<span id="cb28-441"><a href="#cb28-441" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">5</span><span class="op">**:</span> Open<span class="op">-</span>ended design</span>
-<span id="cb28-442"><a href="#cb28-442" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span></span>
-<span id="cb28-443"><a href="#cb28-443" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-444"><a href="#cb28-444" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">3.1</span><span class="op">:</span> <span class="bu">Console</span> <span class="fu">Exploration</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">1</span><span class="op">)</span></span>
-<span id="cb28-445"><a href="#cb28-445" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-446"><a href="#cb28-446" aria-hidden="true" tabindex="-1"></a>Open any webpage and open the browser <span class="fu">console</span> <span class="op">(</span>F12 → <span class="bu">Console</span><span class="op">).</span> <span class="fu">Try</span> these<span class="op">:</span></span>
-<span id="cb28-447"><a href="#cb28-447" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-448"><a href="#cb28-448" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> <span class="bu">Type</span> `document<span class="op">.</span><span class="fu">title</span>` and press Enter<span class="op">.</span> <span class="fu">What</span> appears<span class="op">?</span></span>
-<span id="cb28-449"><a href="#cb28-449" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> <span class="bu">Type</span> `document<span class="op">.</span><span class="fu">querySelector</span><span class="op">(</span><span class="er">'</span>h1<span class="er">'</span><span class="op">)</span>` to find the main heading</span>
-<span id="cb28-450"><a href="#cb28-450" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> <span class="bu">Type</span> `document<span class="op">.</span><span class="fu">querySelector</span><span class="op">(</span><span class="er">'</span>h1<span class="er">'</span><span class="op">).</span><span class="fu">textContent</span> <span class="op">=</span> <span class="er">'</span>I changed <span class="kw">this</span><span class="op">!</span><span class="er">'</span>`</span>
+<span id="cb28-428"><a href="#cb28-428" aria-hidden="true" tabindex="-1"></a>### Dynamic Content</span>
+<span id="cb28-429"><a href="#cb28-429" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-430"><a href="#cb28-430" aria-hidden="true" tabindex="-1"></a>Loading content without page <span class="fu">refreshes</span> <span class="op">(</span>covered more in Chapter <span class="dv">4</span><span class="op">)</span> makes applications feel faster<span class="op">.</span> <span class="fu">Users</span> don<span class="er">'</span>t wait <span class="cf">for</span> full page reloads when they just need one small update<span class="op">.</span></span>
+<span id="cb28-431"><a href="#cb28-431" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-432"><a href="#cb28-432" aria-hidden="true" tabindex="-1"></a>### Analytics and User Behaviour</span>
+<span id="cb28-433"><a href="#cb28-433" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-434"><a href="#cb28-434" aria-hidden="true" tabindex="-1"></a>JavaScript can track how users interact with your site<span class="op">:</span> what they click<span class="op">,</span> how far they scroll<span class="op">,</span> where they spend time<span class="op">.</span> <span class="fu">This</span> data informs business decisions<span class="op">.</span> <span class="op">(</span>Always be transparent about tracking and respect privacy<span class="op">.)</span></span>
+<span id="cb28-435"><a href="#cb28-435" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-436"><a href="#cb28-436" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span> <span class="op">{.</span><span class="fu">callout</span><span class="op">-</span>note<span class="op">}</span></span>
+<span id="cb28-437"><a href="#cb28-437" aria-hidden="true" tabindex="-1"></a>## Skills You Are Building</span>
+<span id="cb28-438"><a href="#cb28-438" aria-hidden="true" tabindex="-1"></a>This develops <span class="op">**</span>evaluating and improving solutions<span class="op">**</span> and <span class="op">**</span>translating stakeholder needs into technical requirements<span class="op">**.</span> <span class="fu">Interactive</span> features must serve user needs<span class="op">.</span> <span class="fu">JavaScript</span> <span class="cf">for</span> its own sake creates complexity without value<span class="op">.</span> <span class="fu">The</span> ability to identify when interactivity helps versus hinders is professional judgment<span class="op">.</span></span>
+<span id="cb28-439"><a href="#cb28-439" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span></span>
+<span id="cb28-440"><a href="#cb28-440" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-441"><a href="#cb28-441" aria-hidden="true" tabindex="-1"></a>## Practice Exercises</span>
+<span id="cb28-442"><a href="#cb28-442" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-443"><a href="#cb28-443" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span> <span class="op">{.</span><span class="fu">callout</span><span class="op">-</span>note<span class="op">}</span></span>
+<span id="cb28-444"><a href="#cb28-444" aria-hidden="true" tabindex="-1"></a>## Exercise Levels</span>
+<span id="cb28-445"><a href="#cb28-445" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">1</span><span class="op">**:</span> Direct application</span>
+<span id="cb28-446"><a href="#cb28-446" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">2</span><span class="op">**:</span> Minor modifications</span>
+<span id="cb28-447"><a href="#cb28-447" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">3</span><span class="op">**:</span> Combining concepts</span>
+<span id="cb28-448"><a href="#cb28-448" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">4</span><span class="op">**:</span> Problem<span class="op">-</span>solving</span>
+<span id="cb28-449"><a href="#cb28-449" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">5</span><span class="op">**:</span> Open<span class="op">-</span>ended design</span>
+<span id="cb28-450"><a href="#cb28-450" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span></span>
 <span id="cb28-451"><a href="#cb28-451" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-452"><a href="#cb28-452" aria-hidden="true" tabindex="-1"></a>What happened<span class="op">?</span> Refresh the page<span class="op">,</span> is your change permanent<span class="op">?</span> Why or why not<span class="op">?</span></span>
+<span id="cb28-452"><a href="#cb28-452" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">3.1</span><span class="op">:</span> <span class="bu">Console</span> <span class="fu">Exploration</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">1</span><span class="op">)</span></span>
 <span id="cb28-453"><a href="#cb28-453" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-454"><a href="#cb28-454" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">3.2</span><span class="op">:</span> <span class="bu">Button</span> <span class="fu">Interaction</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">2</span><span class="op">)</span></span>
+<span id="cb28-454"><a href="#cb28-454" aria-hidden="true" tabindex="-1"></a>Open any webpage and open the browser <span class="fu">console</span> <span class="op">(</span>F12 → <span class="bu">Console</span><span class="op">).</span> <span class="fu">Try</span> these<span class="op">:</span></span>
 <span id="cb28-455"><a href="#cb28-455" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-456"><a href="#cb28-456" aria-hidden="true" tabindex="-1"></a>Create an <span class="bu">HTML</span> page with a button and a paragraph<span class="op">.</span> <span class="fu">Write</span> JavaScript that<span class="op">:</span></span>
-<span id="cb28-457"><a href="#cb28-457" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-458"><a href="#cb28-458" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Listens <span class="cf">for</span> clicks on the button</span>
-<span id="cb28-459"><a href="#cb28-459" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Changes the paragraph text when clicked</span>
-<span id="cb28-460"><a href="#cb28-460" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> Also changes the paragraph<span class="er">'</span>s <span class="fu">colour</span> <span class="op">(</span>via adding a <span class="kw">class</span><span class="op">)</span></span>
+<span id="cb28-456"><a href="#cb28-456" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> <span class="bu">Type</span> `document<span class="op">.</span><span class="fu">title</span>` and press Enter<span class="op">.</span> <span class="fu">What</span> appears<span class="op">?</span></span>
+<span id="cb28-457"><a href="#cb28-457" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> <span class="bu">Type</span> `document<span class="op">.</span><span class="fu">querySelector</span><span class="op">(</span><span class="er">'</span>h1<span class="er">'</span><span class="op">)</span>` to find the main heading</span>
+<span id="cb28-458"><a href="#cb28-458" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> <span class="bu">Type</span> `document<span class="op">.</span><span class="fu">querySelector</span><span class="op">(</span><span class="er">'</span>h1<span class="er">'</span><span class="op">).</span><span class="fu">textContent</span> <span class="op">=</span> <span class="er">'</span>I changed <span class="kw">this</span><span class="op">!</span><span class="er">'</span>`</span>
+<span id="cb28-459"><a href="#cb28-459" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-460"><a href="#cb28-460" aria-hidden="true" tabindex="-1"></a>What happened<span class="op">?</span> Refresh the page<span class="op">,</span> is your change permanent<span class="op">?</span> Why or why not<span class="op">?</span></span>
 <span id="cb28-461"><a href="#cb28-461" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-462"><a href="#cb28-462" aria-hidden="true" tabindex="-1"></a>Test it in your browser<span class="op">.</span> <span class="fu">Use</span> `console<span class="op">.</span><span class="fu">log</span><span class="op">()</span>` to confirm your click handler runs<span class="op">.</span></span>
+<span id="cb28-462"><a href="#cb28-462" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">3.2</span><span class="op">:</span> <span class="bu">Button</span> <span class="fu">Interaction</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">2</span><span class="op">)</span></span>
 <span id="cb28-463"><a href="#cb28-463" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-464"><a href="#cb28-464" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">3.3</span><span class="op">:</span> <span class="bu">Character</span> <span class="fu">Counter</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">3</span><span class="op">)</span></span>
+<span id="cb28-464"><a href="#cb28-464" aria-hidden="true" tabindex="-1"></a>Create an <span class="bu">HTML</span> page with a button and a paragraph<span class="op">.</span> <span class="fu">Write</span> JavaScript that<span class="op">:</span></span>
 <span id="cb28-465"><a href="#cb28-465" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-466"><a href="#cb28-466" aria-hidden="true" tabindex="-1"></a>Create a textarea with a character limit display<span class="op">,</span> like social media post composers<span class="op">:</span></span>
-<span id="cb28-467"><a href="#cb28-467" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-468"><a href="#cb28-468" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Show <span class="st">"0 / 280 characters"</span> below the textarea</span>
-<span id="cb28-469"><a href="#cb28-469" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Update the count as the user <span class="fu">types</span> <span class="op">(</span>use the `input` event<span class="op">)</span></span>
-<span id="cb28-470"><a href="#cb28-470" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> Change the counter colour to red when approaching or exceeding the limit</span>
-<span id="cb28-471"><a href="#cb28-471" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> Disable the submit button <span class="cf">if</span> over the limit</span>
-<span id="cb28-472"><a href="#cb28-472" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-473"><a href="#cb28-473" aria-hidden="true" tabindex="-1"></a>This combines DOM queries<span class="op">,</span> event listeners<span class="op">,</span> conditionals<span class="op">,</span> and <span class="kw">class</span> manipulation<span class="op">.</span></span>
-<span id="cb28-474"><a href="#cb28-474" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-475"><a href="#cb28-475" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">3.4</span><span class="op">:</span> Progressive Enhancement <span class="fu">Audit</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">4</span><span class="op">)</span></span>
-<span id="cb28-476"><a href="#cb28-476" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-477"><a href="#cb28-477" aria-hidden="true" tabindex="-1"></a>Find a website that heavily uses <span class="fu">JavaScript</span> <span class="op">(</span>a web application<span class="op">).</span> <span class="fu">Disable</span> JavaScript in your <span class="fu">browser</span> <span class="op">(</span>Settings → Privacy → JavaScript<span class="op">)</span> and <span class="cf">try</span> to use the site<span class="op">.</span></span>
-<span id="cb28-478"><a href="#cb28-478" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-479"><a href="#cb28-479" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> What still works<span class="op">?</span></span>
-<span id="cb28-480"><a href="#cb28-480" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> What breaks completely<span class="op">?</span></span>
-<span id="cb28-481"><a href="#cb28-481" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> For the broken features<span class="op">,</span> how could they have been built with progressive enhancement<span class="op">?</span></span>
+<span id="cb28-466"><a href="#cb28-466" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Listens <span class="cf">for</span> clicks on the button</span>
+<span id="cb28-467"><a href="#cb28-467" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Changes the paragraph text when clicked</span>
+<span id="cb28-468"><a href="#cb28-468" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> Also changes the paragraph<span class="er">'</span>s <span class="fu">colour</span> <span class="op">(</span>via adding a <span class="kw">class</span><span class="op">)</span></span>
+<span id="cb28-469"><a href="#cb28-469" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-470"><a href="#cb28-470" aria-hidden="true" tabindex="-1"></a>Test it in your browser<span class="op">.</span> <span class="fu">Use</span> `console<span class="op">.</span><span class="fu">log</span><span class="op">()</span>` to confirm your click handler runs<span class="op">.</span></span>
+<span id="cb28-471"><a href="#cb28-471" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-472"><a href="#cb28-472" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">3.3</span><span class="op">:</span> <span class="bu">Character</span> <span class="fu">Counter</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">3</span><span class="op">)</span></span>
+<span id="cb28-473"><a href="#cb28-473" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-474"><a href="#cb28-474" aria-hidden="true" tabindex="-1"></a>Create a textarea with a character limit display<span class="op">,</span> like social media post composers<span class="op">:</span></span>
+<span id="cb28-475"><a href="#cb28-475" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-476"><a href="#cb28-476" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Show <span class="st">"0 / 280 characters"</span> below the textarea</span>
+<span id="cb28-477"><a href="#cb28-477" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Update the count as the user <span class="fu">types</span> <span class="op">(</span>use the `input` event<span class="op">)</span></span>
+<span id="cb28-478"><a href="#cb28-478" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> Change the counter colour to red when approaching or exceeding the limit</span>
+<span id="cb28-479"><a href="#cb28-479" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> Disable the submit button <span class="cf">if</span> over the limit</span>
+<span id="cb28-480"><a href="#cb28-480" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-481"><a href="#cb28-481" aria-hidden="true" tabindex="-1"></a>This combines DOM queries<span class="op">,</span> event listeners<span class="op">,</span> conditionals<span class="op">,</span> and <span class="kw">class</span> manipulation<span class="op">.</span></span>
 <span id="cb28-482"><a href="#cb28-482" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-483"><a href="#cb28-483" aria-hidden="true" tabindex="-1"></a>Write a <span class="dv">300</span><span class="op">-</span>word assessment of <span class="kw">this</span> site<span class="er">'</span>s JavaScript dependency and its business implications<span class="op">.</span></span>
+<span id="cb28-483"><a href="#cb28-483" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">3.4</span><span class="op">:</span> Progressive Enhancement <span class="fu">Audit</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">4</span><span class="op">)</span></span>
 <span id="cb28-484"><a href="#cb28-484" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-485"><a href="#cb28-485" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">3.5</span><span class="op">:</span> Interactive Feature <span class="fu">Design</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">5</span><span class="op">)</span></span>
+<span id="cb28-485"><a href="#cb28-485" aria-hidden="true" tabindex="-1"></a>Find a website that heavily uses <span class="fu">JavaScript</span> <span class="op">(</span>a web application<span class="op">).</span> <span class="fu">Disable</span> JavaScript in your <span class="fu">browser</span> <span class="op">(</span>Settings → Privacy → JavaScript<span class="op">)</span> and <span class="cf">try</span> to use the site<span class="op">.</span></span>
 <span id="cb28-486"><a href="#cb28-486" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-487"><a href="#cb28-487" aria-hidden="true" tabindex="-1"></a>A local bookshop wants their website to have an interactive <span class="st">"Book Finder"</span> feature<span class="op">.</span> <span class="fu">Users</span> should be able to filter books by genre<span class="op">,</span> search by title<span class="op">,</span> and sort by price or rating<span class="op">.</span></span>
-<span id="cb28-488"><a href="#cb28-488" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-489"><a href="#cb28-489" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Design the <span class="bu">HTML</span> structure needed</span>
-<span id="cb28-490"><a href="#cb28-490" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Identify what events you<span class="er">'</span>d listen <span class="cf">for</span></span>
-<span id="cb28-491"><a href="#cb28-491" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> Describe what JavaScript would <span class="cf">do</span> <span class="cf">for</span> each interaction</span>
-<span id="cb28-492"><a href="#cb28-492" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> Consider<span class="op">:</span> what should work without JavaScript<span class="op">?</span></span>
-<span id="cb28-493"><a href="#cb28-493" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-494"><a href="#cb28-494" aria-hidden="true" tabindex="-1"></a>Don<span class="er">'</span>t write the full code<span class="op">,</span> design the approach<span class="op">.</span> <span class="fu">Document</span> your thinking<span class="op">,</span> then discuss your design with your AI partner<span class="op">.</span> <span class="fu">What</span> did they suggest differently<span class="op">?</span></span>
-<span id="cb28-495"><a href="#cb28-495" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-496"><a href="#cb28-496" aria-hidden="true" tabindex="-1"></a>## Chapter Summary</span>
-<span id="cb28-497"><a href="#cb28-497" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-498"><a href="#cb28-498" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> JavaScript adds behaviour<span class="op">,</span> the ability to respond to user actions</span>
-<span id="cb28-499"><a href="#cb28-499" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="bu">Event</span><span class="op">-</span>driven programming means listening <span class="cf">for</span> events and responding</span>
-<span id="cb28-500"><a href="#cb28-500" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> The DOM is JavaScript<span class="er">'</span>s <span class="kw">interface</span> to the page structure</span>
-<span id="cb28-501"><a href="#cb28-501" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Progressive enhancement builds on working <span class="bu">HTML</span><span class="op">/</span><span class="bu">CSS</span><span class="op">,</span> not replacing it</span>
-<span id="cb28-502"><a href="#cb28-502" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Debugging with `console<span class="op">.</span><span class="fu">log</span><span class="op">()</span>` helps trace problems</span>
-<span id="cb28-503"><a href="#cb28-503" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Interactive features should serve user needs<span class="op">,</span> not demonstrate technical skill</span>
-<span id="cb28-504"><a href="#cb28-504" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-505"><a href="#cb28-505" aria-hidden="true" tabindex="-1"></a>## Reflection</span>
-<span id="cb28-506"><a href="#cb28-506" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-507"><a href="#cb28-507" aria-hidden="true" tabindex="-1"></a>Before moving to Chapter <span class="dv">4</span><span class="op">,</span> ensure you can<span class="op">:</span></span>
-<span id="cb28-508"><a href="#cb28-508" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-509"><a href="#cb28-509" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Explain event<span class="op">-</span>driven programming in plain language</span>
-<span id="cb28-510"><a href="#cb28-510" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Write basic JavaScript<span class="op">:</span> variables<span class="op">,</span> functions<span class="op">,</span> conditionals</span>
-<span id="cb28-511"><a href="#cb28-511" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Find elements in the DOM using `querySelector`</span>
-<span id="cb28-512"><a href="#cb28-512" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Attach event listeners to respond to user actions</span>
-<span id="cb28-513"><a href="#cb28-513" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Modify element content<span class="op">,</span> classes<span class="op">,</span> and styles via JavaScript</span>
-<span id="cb28-514"><a href="#cb28-514" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Articulate why progressive enhancement matters <span class="cf">for</span> business</span>
-<span id="cb28-515"><a href="#cb28-515" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Use the browser console <span class="cf">for</span> basic debugging</span>
+<span id="cb28-487"><a href="#cb28-487" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> What still works<span class="op">?</span></span>
+<span id="cb28-488"><a href="#cb28-488" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> What breaks completely<span class="op">?</span></span>
+<span id="cb28-489"><a href="#cb28-489" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> For the broken features<span class="op">,</span> how could they have been built with progressive enhancement<span class="op">?</span></span>
+<span id="cb28-490"><a href="#cb28-490" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-491"><a href="#cb28-491" aria-hidden="true" tabindex="-1"></a>Write a <span class="dv">300</span><span class="op">-</span>word assessment of <span class="kw">this</span> site<span class="er">'</span>s JavaScript dependency and its business implications<span class="op">.</span></span>
+<span id="cb28-492"><a href="#cb28-492" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-493"><a href="#cb28-493" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">3.5</span><span class="op">:</span> Interactive Feature <span class="fu">Design</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">5</span><span class="op">)</span></span>
+<span id="cb28-494"><a href="#cb28-494" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-495"><a href="#cb28-495" aria-hidden="true" tabindex="-1"></a>A local bookshop wants their website to have an interactive <span class="st">"Book Finder"</span> feature<span class="op">.</span> <span class="fu">Users</span> should be able to filter books by genre<span class="op">,</span> search by title<span class="op">,</span> and sort by price or rating<span class="op">.</span></span>
+<span id="cb28-496"><a href="#cb28-496" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-497"><a href="#cb28-497" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Design the <span class="bu">HTML</span> structure needed</span>
+<span id="cb28-498"><a href="#cb28-498" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Identify what events you<span class="er">'</span>d listen <span class="cf">for</span></span>
+<span id="cb28-499"><a href="#cb28-499" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> Describe what JavaScript would <span class="cf">do</span> <span class="cf">for</span> each interaction</span>
+<span id="cb28-500"><a href="#cb28-500" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> Consider<span class="op">:</span> what should work without JavaScript<span class="op">?</span></span>
+<span id="cb28-501"><a href="#cb28-501" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-502"><a href="#cb28-502" aria-hidden="true" tabindex="-1"></a>Don<span class="er">'</span>t write the full code<span class="op">,</span> design the approach<span class="op">.</span> <span class="fu">Document</span> your thinking<span class="op">,</span> then discuss your design with your AI partner<span class="op">.</span> <span class="fu">What</span> did they suggest differently<span class="op">?</span></span>
+<span id="cb28-503"><a href="#cb28-503" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-504"><a href="#cb28-504" aria-hidden="true" tabindex="-1"></a>## Chapter Summary</span>
+<span id="cb28-505"><a href="#cb28-505" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-506"><a href="#cb28-506" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> JavaScript adds behaviour<span class="op">,</span> the ability to respond to user actions</span>
+<span id="cb28-507"><a href="#cb28-507" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="bu">Event</span><span class="op">-</span>driven programming means listening <span class="cf">for</span> events and responding</span>
+<span id="cb28-508"><a href="#cb28-508" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> The DOM is JavaScript<span class="er">'</span>s <span class="kw">interface</span> to the page structure</span>
+<span id="cb28-509"><a href="#cb28-509" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Progressive enhancement builds on working <span class="bu">HTML</span><span class="op">/</span><span class="bu">CSS</span><span class="op">,</span> not replacing it</span>
+<span id="cb28-510"><a href="#cb28-510" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Debugging with `console<span class="op">.</span><span class="fu">log</span><span class="op">()</span>` helps trace problems</span>
+<span id="cb28-511"><a href="#cb28-511" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Interactive features should serve user needs<span class="op">,</span> not demonstrate technical skill</span>
+<span id="cb28-512"><a href="#cb28-512" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-513"><a href="#cb28-513" aria-hidden="true" tabindex="-1"></a>## Reflection</span>
+<span id="cb28-514"><a href="#cb28-514" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-515"><a href="#cb28-515" aria-hidden="true" tabindex="-1"></a>Before moving to Chapter <span class="dv">4</span><span class="op">,</span> ensure you can<span class="op">:</span></span>
 <span id="cb28-516"><a href="#cb28-516" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-517"><a href="#cb28-517" aria-hidden="true" tabindex="-1"></a>## Your Learning Journal</span>
-<span id="cb28-518"><a href="#cb28-518" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-519"><a href="#cb28-519" aria-hidden="true" tabindex="-1"></a>Record your responses to these prompts<span class="op">:</span></span>
-<span id="cb28-520"><a href="#cb28-520" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-521"><a href="#cb28-521" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> <span class="op">**</span>Interaction Audit<span class="op">**:</span> Look at a website you use frequently<span class="op">.</span> <span class="fu">What</span> interactive features does it have<span class="op">?</span> For each one<span class="op">,</span> describe what event triggers it and what the response is<span class="op">.</span></span>
-<span id="cb28-522"><a href="#cb28-522" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-523"><a href="#cb28-523" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> <span class="op">**</span>Progressive Enhancement Thinking<span class="op">**:</span> Think of a common web <span class="fu">feature</span> <span class="op">(</span>like a dropdown menu or image carousel<span class="op">).</span> <span class="fu">How</span> would you build it so it works without JavaScript<span class="op">?</span></span>
+<span id="cb28-517"><a href="#cb28-517" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Explain event<span class="op">-</span>driven programming in plain language</span>
+<span id="cb28-518"><a href="#cb28-518" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Write basic JavaScript<span class="op">:</span> variables<span class="op">,</span> functions<span class="op">,</span> conditionals</span>
+<span id="cb28-519"><a href="#cb28-519" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Find elements in the DOM using `querySelector`</span>
+<span id="cb28-520"><a href="#cb28-520" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Attach event listeners to respond to user actions</span>
+<span id="cb28-521"><a href="#cb28-521" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Modify element content<span class="op">,</span> classes<span class="op">,</span> and styles via JavaScript</span>
+<span id="cb28-522"><a href="#cb28-522" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Articulate why progressive enhancement matters <span class="cf">for</span> business</span>
+<span id="cb28-523"><a href="#cb28-523" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Use the browser console <span class="cf">for</span> basic debugging</span>
 <span id="cb28-524"><a href="#cb28-524" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-525"><a href="#cb28-525" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> <span class="op">**</span>AI Conversation Reflection<span class="op">**:</span> What JavaScript concept was hardest to grasp<span class="op">?</span> What question to your AI partner helped clarify it<span class="op">?</span></span>
+<span id="cb28-525"><a href="#cb28-525" aria-hidden="true" tabindex="-1"></a>## Your Learning Journal</span>
 <span id="cb28-526"><a href="#cb28-526" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-527"><a href="#cb28-527" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> <span class="op">**</span>Business Value<span class="op">**:</span> When does adding JavaScript interactivity help users<span class="op">,</span> and when does it just add complexity<span class="op">?</span> Give examples of each<span class="op">.</span></span>
+<span id="cb28-527"><a href="#cb28-527" aria-hidden="true" tabindex="-1"></a>Record your responses to these prompts<span class="op">:</span></span>
 <span id="cb28-528"><a href="#cb28-528" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-529"><a href="#cb28-529" aria-hidden="true" tabindex="-1"></a>## Next Steps</span>
+<span id="cb28-529"><a href="#cb28-529" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> <span class="op">**</span>Interaction Audit<span class="op">**:</span> Look at a website you use frequently<span class="op">.</span> <span class="fu">What</span> interactive features does it have<span class="op">?</span> For each one<span class="op">,</span> describe what event triggers it and what the response is<span class="op">.</span></span>
 <span id="cb28-530"><a href="#cb28-530" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-531"><a href="#cb28-531" aria-hidden="true" tabindex="-1"></a>You can now build pages that respond to users<span class="op">.</span> <span class="fu">But</span> modern web applications <span class="cf">do</span> more<span class="op">,</span> they connect to services<span class="op">,</span> fetch data<span class="op">,</span> and send information to servers<span class="op">.</span></span>
+<span id="cb28-531"><a href="#cb28-531" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> <span class="op">**</span>Progressive Enhancement Thinking<span class="op">**:</span> Think of a common web <span class="fu">feature</span> <span class="op">(</span>like a dropdown menu or image carousel<span class="op">).</span> <span class="fu">How</span> would you build it so it works without JavaScript<span class="op">?</span></span>
 <span id="cb28-532"><a href="#cb28-532" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-533"><a href="#cb28-533" aria-hidden="true" tabindex="-1"></a><span class="fu">In</span> <span class="at">@sec</span><span class="op">-</span>connection<span class="op">,</span> we<span class="er">'</span>ll explore APIs<span class="op">,</span> how your JavaScript can request data from external services and submit data to be processed<span class="op">.</span> <span class="fu">This</span> transforms your pages from standalone documents into connected applications that interact with the wider web<span class="op">.</span></span>
+<span id="cb28-533"><a href="#cb28-533" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> <span class="op">**</span>AI Conversation Reflection<span class="op">**:</span> What JavaScript concept was hardest to grasp<span class="op">?</span> What question to your AI partner helped clarify it<span class="op">?</span></span>
 <span id="cb28-534"><a href="#cb28-534" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-535"><a href="#cb28-535" aria-hidden="true" tabindex="-1"></a><span class="fu">The</span> JavaScript fundamentals you<span class="er">'</span>ve learned become the foundation <span class="cf">for</span> asynchronous programming and data<span class="op">-</span>driven interfaces<span class="op">.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb28-535"><a href="#cb28-535" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> <span class="op">**</span>Business Value<span class="op">**:</span> When does adding JavaScript interactivity help users<span class="op">,</span> and when does it just add complexity<span class="op">?</span> Give examples of each<span class="op">.</span></span>
+<span id="cb28-536"><a href="#cb28-536" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-537"><a href="#cb28-537" aria-hidden="true" tabindex="-1"></a>## Next Steps</span>
+<span id="cb28-538"><a href="#cb28-538" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-539"><a href="#cb28-539" aria-hidden="true" tabindex="-1"></a>You can now build pages that respond to users<span class="op">.</span> <span class="fu">But</span> modern web applications <span class="cf">do</span> more<span class="op">,</span> they connect to services<span class="op">,</span> fetch data<span class="op">,</span> and send information to servers<span class="op">.</span></span>
+<span id="cb28-540"><a href="#cb28-540" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-541"><a href="#cb28-541" aria-hidden="true" tabindex="-1"></a><span class="fu">In</span> <span class="at">@sec</span><span class="op">-</span>connection<span class="op">,</span> we<span class="er">'</span>ll explore APIs<span class="op">,</span> how your JavaScript can request data from external services and submit data to be processed<span class="op">.</span> <span class="fu">This</span> transforms your pages from standalone documents into connected applications that interact with the wider web<span class="op">.</span></span>
+<span id="cb28-542"><a href="#cb28-542" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-543"><a href="#cb28-543" aria-hidden="true" tabindex="-1"></a><span class="fu">The</span> JavaScript fundamentals you<span class="er">'</span>ve learned become the foundation <span class="cf">for</span> asynchronous programming and data<span class="op">-</span>driven interfaces<span class="op">.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

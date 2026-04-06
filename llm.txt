@@ -19,6 +19,16 @@ This book teaches web development as a business decision-making skill. Every cha
 
 The book covers the full spectrum of web decisions: hand-coded HTML/CSS/JavaScript for control, WordPress for rapid deployment, headless architecture for flexibility, React for modern applications. You learn when to use each one, not just how.
 
+## If You Have Been Vibe Coding Websites
+
+You may have already built a website by prompting AI. For a simple landing page or portfolio, that works. AI generates the HTML, you paste it into a file, it looks fine.
+
+But as sites get more complex, questions arise that vibe coding cannot answer. Why does the layout break on mobile? Should this be a WordPress site or a custom build? How do I connect to an API without exposing credentials? Why is the page slow?
+
+This book gives you a look under the hood. Through simple projects, you learn how the parts fit together: how HTML structures content, how CSS controls presentation, how JavaScript adds behaviour, how APIs connect to external data. That understanding makes you better at guiding AI, whether you continue vibe coding or move toward more intentional development.
+
+If you are curious about what AI is actually producing, or if you have hit the point where prompting alone is not enough, this book is a good next step.
+
 ## Who This Book Is For
 
 - Professionals who need to understand web development for their roles
@@ -1390,7 +1400,13 @@ Each layer builds on the one below. JavaScript manipulates the DOM (HTML structu
 
 The browser console is your debugging friend:
 
-Open DevTools (F12 or right-click → Inspect → Console) to see these messages. When something doesn't work, add `console.log()` statements to trace what's happening.
+Every modern browser has a built-in developer console. Open it with F12 (or right-click any page and select Inspect). It has three tabs you will use constantly:
+
+- Elements: see the actual HTML and CSS the browser received. Useful for checking whether AI-generated markup is structured correctly, or why a style is not applying.
+- Console: see `console.log()` output, JavaScript errors, and warnings. This is where you debug behaviour.
+- Network: see every file and API request the page makes. Useful for debugging fetch calls and checking what data comes back.
+
+Get comfortable here. When AI gives you code that does not work, the dev console tells you why. It shows you what the browser actually received, not what you intended to send.
 
 ## Business Applications
 
