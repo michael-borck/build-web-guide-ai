@@ -10,6 +10,16 @@ This book teaches web development as a business decision-making skill. Every cha
 
 The book covers the full spectrum of web decisions: hand-coded HTML/CSS/JavaScript for control, WordPress for rapid deployment, headless architecture for flexibility, React for modern applications. You learn when to use each one, not just how.
 
+## If You Have Been Vibe Coding Websites
+
+You may have already built a website by prompting AI. For a simple landing page or portfolio, that works. AI generates the HTML, you paste it into a file, it looks fine.
+
+But as sites get more complex, questions arise that vibe coding cannot answer. Why does the layout break on mobile? Should this be a WordPress site or a custom build? How do I connect to an API without exposing credentials? Why is the page slow?
+
+This book gives you a look under the hood. Through simple projects, you learn how the parts fit together: how HTML structures content, how CSS controls presentation, how JavaScript adds behaviour, how APIs connect to external data. That understanding makes you better at guiding AI, whether you continue vibe coding or move toward more intentional development.
+
+If you are curious about what AI is actually producing, or if you have hit the point where prompting alone is not enough, this book is a good next step.
+
 ## Who This Book Is For
 
 - Professionals who need to understand web development for their roles
