@@ -2,7 +2,7 @@
 
 ## The Concept First
 
-In @sec-wordpress-platform, you learned that WordPress's value lies in its ecosystem. Now we'll learn to extend WordPress professionally—using plugins wisely, customising safely, and making business decisions about when to build versus when to buy.
+In @sec-wordpress-platform, you learned that WordPress's value lies in its ecosystem. Now we'll learn to extend WordPress professionally, using plugins wisely, customising safely, and making business decisions about when to build versus when to buy.
 
 Here's the tension: plugins make WordPress powerful, but plugins also create risk. Every plugin you add:
 
@@ -11,7 +11,7 @@ Here's the tension: plugins make WordPress powerful, but plugins also create ris
 - Might introduce security vulnerabilities
 - Adds complexity to troubleshoot
 
-Professional WordPress development isn't about installing the most plugins—it's about installing the *right* plugins and knowing when custom development makes more sense.
+Professional WordPress development isn't about installing the most plugins, it's about installing the *right* plugins and knowing when custom development makes more sense.
 
 ## Understanding Through Build vs Buy
 
@@ -181,10 +181,10 @@ Let's learn to extend WordPress professionally.
 
 **Managing plugins:**
 
-- Deactivate plugins you're not using (don't just leave them inactive—delete them)
+- Deactivate plugins you're not using (don't just leave them inactive, delete them)
 - Update plugins regularly (but test first on staging)
 - Document why each plugin is installed
-- Review plugins quarterly—needs change
+- Review plugins quarterly, needs change
 
 ### Essential Plugin Categories
 
@@ -193,12 +193,12 @@ Most business WordPress sites need plugins in these categories:
 **Security:**
 
 - Wordfence or Sucuri: Firewall, malware scanning, login protection
-- Essential—WordPress is a common target
+- Essential. WordPress is a common target
 
 **Backup:**
 
 - UpdraftPlus: Scheduled backups to cloud storage
-- Non-negotiable—databases get corrupted, hosts fail
+- Non-negotiable, databases get corrupted, hosts fail
 
 **Performance:**
 
@@ -348,7 +348,7 @@ Syntax errors in functions.php can break your entire site. Test on staging, and 
 
 ### PHP Fundamentals for WordPress
 
-WordPress is built on PHP. While you can accomplish a lot without writing PHP, understanding the basics opens up powerful customisation options—and AI is excellent at helping you write WordPress PHP code.
+WordPress is built on PHP. While you can accomplish a lot without writing PHP, understanding the basics opens up powerful customisation options, and AI is excellent at helping you write WordPress PHP code.
 
 **PHP basics:**
 
@@ -657,7 +657,7 @@ When asking AI to write WordPress plugins:
 1. Be specific about functionality
 2. Request comments explaining the code
 3. Test thoroughly on a staging site
-4. Review the code—understand what it does before installing
+4. Review the code, understand what it does before installing
 5. Ask AI to explain any parts you don't understand
 :::
 
@@ -845,7 +845,7 @@ Plugins are the most common WordPress security vulnerability. Your role:
 
 ::: {.callout-note}
 ## Skills You Are Building
-This develops **making and defending technology choices** and **evaluating and improving solutions**. Professional plugin decisions require balancing features, costs, risks, and long-term maintenance—exactly the judgment businesses need from technology advisors.
+This develops **making and defending technology choices** and **evaluating and improving solutions**. Professional plugin decisions require balancing features, costs, risks, and long-term maintenance, exactly the judgment businesses need from technology advisors.
 :::
 
 ## Practice Exercises
@@ -969,7 +969,7 @@ This exercise develops professional consulting skills.
 - Every extension decision weighs build vs. buy trade-offs
 - Plugin evaluation requires systematic criteria, not just feature lists
 - Child themes allow safe customisation that survives updates
-- PHP is WordPress's foundation—understanding basics enables deeper customisation
+- PHP is WordPress's foundation, understanding basics enables deeper customisation
 - The Loop and hooks (actions/filters) are core WordPress patterns
 - AI excels at writing WordPress plugins and theme customisations
 - Technical debt from plugins accumulates silently
@@ -1005,4 +1005,4 @@ Record your responses to these prompts:
 
 You now know how to extend WordPress wisely with plugins and child themes. But there's another approach entirely: using WordPress as a content backend while building the frontend with modern tools.
 
-In @sec-headless-architecture, we'll explore headless WordPress—using the WordPress REST API to power a React frontend. This bridges your CMS knowledge with the modern frontend skills from Part III and represents how many larger organisations use WordPress today.
+In @sec-headless-architecture, we'll explore headless WordPress, using the WordPress REST API to power a React frontend. This bridges your CMS knowledge with the modern frontend skills from Part III and represents how many larger organisations use WordPress today.

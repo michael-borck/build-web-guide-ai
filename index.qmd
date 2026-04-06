@@ -4,9 +4,9 @@
 
 Most web development books teach you technologies. This one teaches you to think like a professional developer who happens to use specific technologies.
 
-That distinction matters because AI can write HTML, CSS, and JavaScript faster than you ever will. If your only skill is writing markup and code, you are competing with something that does not sleep. But if you can translate a business need into a technical requirement, evaluate whether a WordPress site or a React app is the right call, and explain your reasoning to a non-technical stakeholder — you have the skills that actually matter.
+That distinction matters because AI can write HTML, CSS, and JavaScript faster than you ever will. If your only skill is writing markup and code, you are competing with something that does not sleep. But if you can translate a business need into a technical requirement, evaluate whether a WordPress site or a React app is the right call, and explain your reasoning to a non-technical stakeholder. You have the skills that actually matter.
 
-This book grew out of teaching business web and mobile technologies to students who were not computer science majors. They needed to build real things for real purposes, and they needed to understand enough about the technology to make professional decisions — not just follow tutorials. The exercises, case studies, and projects in these pages were tested in classrooms before they were written up.
+This book grew out of teaching business web and mobile technologies to students who were not computer science majors. They needed to build real things for real purposes, and they needed to understand enough about the technology to make professional decisions, not just follow tutorials. The exercises, case studies, and projects in these pages were tested in classrooms before they were written up.
 
 ## Who This Book Is For
 
@@ -21,7 +21,7 @@ No prior programming experience required. We start from scratch.
 
 This is not a computer science textbook. It does not cover algorithms, data structures, or computational theory. It teaches you to build things for the web, with enough understanding to make good decisions about how.
 
-It is not a framework-of-the-month guide. You will learn HTML, CSS, JavaScript, WordPress, and React — technologies chosen because they cover the spectrum from simple to complex and will remain relevant regardless of what is trending next year.
+It is not a framework-of-the-month guide. You will learn HTML, CSS, JavaScript, WordPress, and React, technologies chosen because they cover the spectrum from simple to complex and will remain relevant regardless of what is trending next year.
 
 It is not a book that treats AI as a novelty. AI is your development partner throughout. The book teaches you to architect solutions that AI helps you build, evaluate AI output with professional judgement, and communicate requirements clearly enough for AI to be useful.
 
@@ -35,7 +35,7 @@ You do not need to be "technical" to build for the web. That word gets used as a
 
 The book progresses from foundations to full applications:
 
-**Part 0** introduces your AI development partnership — how to work with AI effectively from day one.
+**Part 0** introduces your AI development partnership, how to work with AI effectively from day one.
 
 **Part 1** covers web fundamentals: HTML structure, CSS presentation, JavaScript behaviour. You understand the building blocks before assembling them.
 
@@ -64,15 +64,16 @@ Show me the simplest HTML page that displays a heading
 
 Throughout the chapters you will find:
 
-- **AI Explorations** — guided prompts for learning concepts through AI conversation
-- **Callout boxes** — tips, notes, and warnings highlighted for reference
-- **Practice Exercises** — levelled from direct application (Level 1) to open-ended design (Level 5)
-- **Learning Journal** — reflection prompts at the end of each chapter
+- **AI Explorations**: guided prompts for learning concepts through AI conversation
+- **Callout boxes**: tips, notes, and warnings highlighted for reference
+- **Practice Exercises**: levelled from direct application (Level 1) to open-ended design (Level 5)
+- **Learning Journal**: reflection prompts at the end of each chapter
 
 ## The Series
 
 This book is part of a series designed to help you master modern software development in the AI era.
 
+::: {.content-hidden when-format="epub"}
 ```{mermaid}
 %%| fig-width: 4
 flowchart TD
@@ -88,18 +89,19 @@ flowchart TD
     Think --> Code
     Code --> Ship
 ```
+:::
 
-**Conversation, Not Delegation** — the general methodology for working with AI across any discipline.
+**Conversation, Not Delegation**. The general methodology for working with AI across any discipline.
 
-**Converse Python, Partner AI** — intentional prompting methodology applied to software development.
+**Converse Python, Partner AI**: intentional prompting methodology applied to software development.
 
-**Think Python, Direct AI** — computational thinking for absolute beginners.
+**Think Python, Direct AI**: computational thinking for absolute beginners.
 
-**Code Python, Consult AI** — focused Python fundamentals with AI integration.
+**Code Python, Consult AI**: focused Python fundamentals with AI integration.
 
-**Ship Python, Orchestrate AI** — professional Python development practices and tooling.
+**Ship Python, Orchestrate AI**: professional Python development practices and tooling.
 
-**Build Web, Guide AI** (this book) — web development with AI as your development partner.
+**Build Web, Guide AI** (this book), web development with AI as your development partner.
 
 All titles are available at [books.borck.education](https://books.borck.education).
 

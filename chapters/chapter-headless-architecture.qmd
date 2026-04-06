@@ -4,7 +4,7 @@
 
 In previous chapters, WordPress handled everything: it stored content, managed users, and generated the HTML visitors see. The content management and the website delivery were one unified system.
 
-**Headless architecture** separates these concerns. WordPress becomes a *content backend*—storing and managing content—while a separate *frontend* application handles presentation. They communicate through APIs.
+**Headless architecture** separates these concerns. WordPress becomes a *content backend*, storing and managing content, while a separate *frontend* application handles presentation. They communicate through APIs.
 
 Why would you do this? Because sometimes you want:
 
@@ -34,11 +34,11 @@ Imagine a restaurant operation:
 - Each outlet can have different ambiance (different frontends)
 - Kitchen changes don't require redesigning dining rooms
 
-The central kitchen can supply a fine dining restaurant, a casual café, and a food truck—each with completely different presentations of the same underlying food.
+The central kitchen can supply a fine dining restaurant, a casual café, and a food truck, each with completely different presentations of the same underlying food.
 
 ::: {.callout-tip}
 ## Headless = API-First
-"Headless" means the CMS has no "head"—no built-in frontend. It's all backend. Content exits only through APIs, and something else (the "head") must display it.
+"Headless" means the CMS has no "head", no built-in frontend. It's all backend. Content exits only through APIs, and something else (the "head") must display it.
 :::
 
 ## Discovering Headless with Your AI Partner
@@ -341,7 +341,7 @@ Let's build a simple frontend that displays WordPress posts:
 </html>
 ```
 
-Save this as an HTML file and open it in a browser. It fetches posts from your local WordPress site and displays them—completely independently of WordPress themes.
+Save this as an HTML file and open it in a browser. It fetches posts from your local WordPress site and displays them, completely independently of WordPress themes.
 
 ```text
 Ask your AI:
@@ -403,7 +403,7 @@ fetch('/wp-json/wp/v2/posts', {
 
 ::: {.callout-warning}
 ## Security Note
-Never expose application passwords in frontend JavaScript—they'd be visible to anyone. Authentication is typically handled by a backend server that proxies requests to WordPress.
+Never expose application passwords in frontend JavaScript, they'd be visible to anyone. Authentication is typically handled by a backend server that proxies requests to WordPress.
 :::
 
 ### CORS Considerations
@@ -492,7 +492,7 @@ Headless adds complexity:
 - Some WordPress plugins don't work
 - More technical expertise required
 
-This complexity has costs. Headless is a tool—use it when benefits outweigh costs.
+This complexity has costs. Headless is a tool, use it when benefits outweigh costs.
 
 ## Business Applications
 
@@ -516,7 +516,7 @@ Headless frontends can be:
 - Cached at the edge (CDN)
 - Optimised specifically for performance
 
-This matters for SEO and user experience—Google measures page speed.
+This matters for SEO and user experience. Google measures page speed.
 
 ### Security Benefits
 
@@ -542,7 +542,7 @@ Headless lets them use their preferred tools while leveraging WordPress's conten
 
 ::: {.callout-note}
 ## Skills You Are Building
-This develops **making and defending technology choices** and **assessing emerging technologies**. Headless architecture is a significant trend in web development. Understanding when it applies—and when it doesn't—demonstrates professional judgment.
+This develops **making and defending technology choices** and **assessing emerging technologies**. Headless architecture is a significant trend in web development. Understanding when it applies, and when it doesn't, demonstrates professional judgment.
 :::
 
 ## Practice Exercises
@@ -561,7 +561,7 @@ This develops **making and defending technology choices** and **assessing emergi
 Using your local WordPress site:
 
 1. Open a browser and visit `/wp-json/wp/v2/posts`
-2. Explore the JSON structure—identify title, content, date, and other fields
+2. Explore the JSON structure, identify title, content, date, and other fields
 3. Try different endpoints: `/pages`, `/categories`, `/media`
 4. Add `?_embed` and observe how the response changes
 
@@ -667,4 +667,4 @@ You've completed Part II: Content Management for Business. You understand:
 
 In @sec-project-business-site, you'll build a complete WordPress business site, applying everything from this part. This project demonstrates your ability to make and implement technology decisions for real business needs.
 
-Then, in Part III, we'll build on the API knowledge from this chapter to create React frontends—bringing modern frontend development into your skillset.
+Then, in Part III, we'll build on the API knowledge from this chapter to create React frontends, bringing modern frontend development into your skillset.

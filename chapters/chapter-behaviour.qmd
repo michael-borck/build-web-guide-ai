@@ -2,11 +2,11 @@
 
 ## The Concept First
 
-HTML provides structure. CSS provides presentation. JavaScript provides **behaviour**—the ability to respond to user actions, update content dynamically, and create interactive experiences.
+HTML provides structure. CSS provides presentation. JavaScript provides **behaviour**, the ability to respond to user actions, update content dynamically, and create interactive experiences.
 
 Consider a contact form. HTML creates the fields and the submit button. CSS makes it look professional. But what happens when someone clicks "Submit"? What validates their input? What shows them a success message? That's JavaScript.
 
-JavaScript transforms static documents into dynamic applications. It's what makes modern web experiences feel responsive and alive—dropdown menus that expand, forms that validate as you type, content that loads without page refreshes.
+JavaScript transforms static documents into dynamic applications. It's what makes modern web experiences feel responsive and alive, dropdown menus that expand, forms that validate as you type, content that loads without page refreshes.
 
 But here's an important perspective: **JavaScript should enhance, not replace, structure and presentation**. A well-built page works without JavaScript. JavaScript makes it work *better*.
 
@@ -38,7 +38,7 @@ The event-driven model is fundamental to understanding JavaScript. Let's explore
 Ask your AI:
 Explain event-driven programming using a restaurant service analogy.
 The waiter doesn't constantly ask "Are you ready to order?" every
-second—how does the restaurant model work instead?
+second, how does the restaurant model work instead?
 ```
 
 This should reveal the pattern: staff don't constantly poll customers. Instead, customers signal (raise a hand, make eye contact) and staff respond. Events trigger responses.
@@ -48,7 +48,7 @@ Follow up:
 ```text
 Continue the conversation:
 What "events" happen on a typical webpage? List as many as you can
-think of—things users do that a page might respond to.
+think of, things users do that a page might respond to.
 ```
 
 ### Exploration 2: The DOM
@@ -59,7 +59,7 @@ JavaScript interacts with pages through something called the DOM (Document Objec
 Ask your AI:
 What is the DOM? Explain it as if describing how a librarian has a
 catalogue system that represents all the books on the shelves. The
-books are the actual HTML—what's the catalogue?
+books are the actual HTML, what's the catalogue?
 ```
 
 The DOM is JavaScript's representation of your HTML structure. When you change the DOM, the page updates visually. It's the bridge between your code and what users see.
@@ -126,7 +126,7 @@ let userName = 'Alex';        // Can be reassigned
 const maxItems = 10;          // Cannot be reassigned
 ```
 
-Use `const` by default—it prevents accidental changes. Use `let` only when you need to reassign the value.
+Use `const` by default, it prevents accidental changes. Use `let` only when you need to reassign the value.
 
 ```javascript
 const greeting = 'Welcome';    // Use const for values that won't change
@@ -217,7 +217,7 @@ const firstCard = document.querySelector('.card');
 const allCards = document.querySelectorAll('.card');
 ```
 
-`querySelector` uses CSS selector syntax—the same patterns you learned in Chapter 2. This consistency makes finding elements intuitive.
+`querySelector` uses CSS selector syntax, the same patterns you learned in Chapter 2. This consistency makes finding elements intuitive.
 
 ### Changing Elements
 
@@ -249,7 +249,7 @@ Instead of setting `element.style.color = 'red'`, add a class that has those sty
 
 ### Events: Responding to Users
 
-Events are things that happen—clicks, key presses, form submissions, page loads. Event listeners wait for specific events and run code when they occur:
+Events are things that happen, clicks, key presses, form submissions, page loads. Event listeners wait for specific events and run code when they occur:
 
 ```javascript
 const button = document.querySelector('#submit-button');
@@ -274,7 +274,7 @@ The pattern is: `element.addEventListener(eventType, handlerFunction)`
 
 ### A Complete Example: Toggle Menu
 
-Let's combine these concepts into a practical feature—a mobile navigation toggle:
+Let's combine these concepts into a practical feature, a mobile navigation toggle:
 
 ```html
 <button id="menu-toggle">Menu</button>
@@ -304,7 +304,7 @@ This is progressive enhancement: the HTML structure exists, the CSS hides the me
 
 ### Form Validation Example
 
-Here's a practical business example—validating an email field:
+Here's a practical business example, validating an email field:
 
 ```html
 <form id="contact-form">
@@ -340,7 +340,7 @@ form.addEventListener('submit', function(event) {
 });
 ```
 
-This validates as the user types and again on submission. Note: HTML5 provides `type="email"` validation too—JavaScript enhances the feedback, not replaces the baseline.
+This validates as the user types and again on submission. Note: HTML5 provides `type="email"` validation too. JavaScript enhances the feedback, not replaces the baseline.
 
 ```text
 Ask your AI:
@@ -359,7 +359,7 @@ JavaScript doesn't run all at once. It:
 3. When an event occurs, runs the handler
 4. Returns to waiting
 
-This is why you register event listeners—you're telling JavaScript "when this happens, run this code." The rest of the time, JavaScript is idle, waiting.
+This is why you register event listeners, you're telling JavaScript "when this happens, run this code." The rest of the time, JavaScript is idle, waiting.
 
 ```text
 Ask your AI:
@@ -427,7 +427,7 @@ JavaScript can track how users interact with your site: what they click, how far
 
 ::: {.callout-note}
 ## Skills You Are Building
-This develops **evaluating and improving solutions** and **translating stakeholder needs into technical requirements**. Interactive features must serve user needs—JavaScript for its own sake creates complexity without value. The ability to identify when interactivity helps versus hinders is professional judgment.
+This develops **evaluating and improving solutions** and **translating stakeholder needs into technical requirements**. Interactive features must serve user needs. JavaScript for its own sake creates complexity without value. The ability to identify when interactivity helps versus hinders is professional judgment.
 :::
 
 ## Practice Exercises
@@ -449,7 +449,7 @@ Open any webpage and open the browser console (F12 → Console). Try these:
 2. Type `document.querySelector('h1')` to find the main heading
 3. Type `document.querySelector('h1').textContent = 'I changed this!'`
 
-What happened? Refresh the page—is your change permanent? Why or why not?
+What happened? Refresh the page, is your change permanent? Why or why not?
 
 ### Exercise 3.2: Button Interaction (Level 2)
 
@@ -491,11 +491,11 @@ A local bookshop wants their website to have an interactive "Book Finder" featur
 3. Describe what JavaScript would do for each interaction
 4. Consider: what should work without JavaScript?
 
-Don't write the full code—design the approach. Document your thinking, then discuss your design with your AI partner. What did they suggest differently?
+Don't write the full code, design the approach. Document your thinking, then discuss your design with your AI partner. What did they suggest differently?
 
 ## Chapter Summary
 
-- JavaScript adds behaviour—the ability to respond to user actions
+- JavaScript adds behaviour, the ability to respond to user actions
 - Event-driven programming means listening for events and responding
 - The DOM is JavaScript's interface to the page structure
 - Progressive enhancement builds on working HTML/CSS, not replacing it
@@ -528,8 +528,8 @@ Record your responses to these prompts:
 
 ## Next Steps
 
-You can now build pages that respond to users. But modern web applications do more—they connect to services, fetch data, and send information to servers.
+You can now build pages that respond to users. But modern web applications do more, they connect to services, fetch data, and send information to servers.
 
-In @sec-connection, we'll explore APIs—how your JavaScript can request data from external services and submit data to be processed. This transforms your pages from standalone documents into connected applications that interact with the wider web.
+In @sec-connection, we'll explore APIs, how your JavaScript can request data from external services and submit data to be processed. This transforms your pages from standalone documents into connected applications that interact with the wider web.
 
 The JavaScript fundamentals you've learned become the foundation for asynchronous programming and data-driven interfaces.

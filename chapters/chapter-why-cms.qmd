@@ -2,7 +2,7 @@
 
 ## The Concept First
 
-In Part I, you built websites by writing code. Every heading, every paragraph, every image—you placed them precisely where they belonged. You had complete control.
+In Part I, you built websites by writing code. Every heading, every paragraph, every image, you placed them precisely where they belonged. You had complete control.
 
 But here's the business reality: most websites need regular content updates, and most content updates shouldn't require a developer.
 
@@ -15,7 +15,7 @@ Consider a small business website. The owner wants to:
 
 If every change requires editing HTML files and redeploying, that business has a problem. They either pay a developer for simple updates or let their site become stale.
 
-A **Content Management System (CMS)** solves this by separating content from code. The developer builds the structure and design once. Then, the business owner—without touching code—can create, edit, and publish content through a friendly interface.
+A **Content Management System (CMS)** solves this by separating content from code. The developer builds the structure and design once. Then, the business owner, without touching code, can create, edit, and publish content through a friendly interface.
 
 This isn't a technical convenience. It's a **business architecture decision** that affects costs, maintenance, and who controls what.
 
@@ -132,7 +132,7 @@ Database (Content) + Templates (Design) → CMS Engine → HTML → Browser
 (Content and presentation are separate)
 ```
 
-The CMS combines content from a database with design templates to generate the HTML that browsers display. Change the content in the database, and the generated HTML changes—without touching any code.
+The CMS combines content from a database with design templates to generate the HTML that browsers display. Change the content in the database, and the generated HTML changes, without touching any code.
 
 ### CMS Types
 
@@ -162,7 +162,7 @@ Not all CMSs work the same way:
 
 ### WordPress: The Dominant CMS
 
-WordPress powers over 40% of all websites. That's not a typo—nearly half of the web runs on this one platform.
+WordPress powers over 40% of all websites. That's not a typo, nearly half of the web runs on this one platform.
 
 Why? Because it hits a sweet spot:
 
@@ -172,7 +172,7 @@ Why? Because it hits a sweet spot:
 - **Accessible**: Non-developers can manage content
 - **Extensible**: Developers can customise deeply
 
-We'll spend Chapters 6-8 learning WordPress properly—not just how to use it, but how to evaluate it professionally and extend it when needed.
+We'll spend Chapters 6-8 learning WordPress properly, not just how to use it, but how to evaluate it professionally and extend it when needed.
 
 ### The CMS Decision Framework
 
@@ -199,7 +199,7 @@ and what type might be appropriate.
 
 ### Content as Structured Data
 
-In a CMS, content isn't just text—it's structured data with defined fields:
+In a CMS, content isn't just text, it's structured data with defined fields:
 
 ```text
 Blog Post:
@@ -259,7 +259,7 @@ These roles prevent accidents ("The intern deleted the homepage") and enable wor
 
 ### Client Handoff
 
-The true measure of a successful website project isn't launch day—it's whether the client can maintain it independently. A CMS-based site can be handed off with training:
+The true measure of a successful website project isn't launch day, it's whether the client can maintain it independently. A CMS-based site can be handed off with training:
 
 "Here's how you add a new blog post. Here's how you update your hours. Here's how you add a team member."
 
@@ -303,7 +303,7 @@ Without a CMS: a developer writes and deploys 50 pages of HTML.
 
 ::: {.callout-note}
 ## Skills You Are Building
-This develops **translating stakeholder needs into technical requirements** and **making and defending technology choices**. Recommending a CMS isn't a technical decision—it's understanding who needs to do what and choosing architecture accordingly.
+This develops **translating stakeholder needs into technical requirements** and **making and defending technology choices**. Recommending a CMS isn't a technical decision, it's understanding who needs to do what and choosing architecture accordingly.
 :::
 
 ## Practice Exercises
@@ -380,7 +380,7 @@ For each:
 2. Argue the case against using a CMS
 3. Make and defend your recommendation
 
-This exercise has no single correct answer—develop your ability to weigh trade-offs and justify decisions (making and defending technology choices).
+This exercise has no single correct answer, develop your ability to weigh trade-offs and justify decisions (making and defending technology choices).
 
 ## Chapter Summary
 
@@ -416,6 +416,6 @@ Record your responses to these prompts:
 
 ## Next Steps
 
-You now understand why CMS matters and when to use one. In @sec-wordpress-platform, we'll dive deep into WordPress—not as a blogging tool, but as a professional platform.
+You now understand why CMS matters and when to use one. In @sec-wordpress-platform, we'll dive deep into WordPress, not as a blogging tool, but as a professional platform.
 
-We'll set up a local development environment, understand WordPress's architecture, and learn to evaluate it critically. This isn't about clicking through menus—it's about understanding a platform that powers nearly half the web and knowing when it's the right (or wrong) choice for a project.
+We'll set up a local development environment, understand WordPress's architecture, and learn to evaluate it critically. This isn't about clicking through menus, it's about understanding a platform that powers nearly half the web and knowing when it's the right (or wrong) choice for a project.

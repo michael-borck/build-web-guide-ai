@@ -4,7 +4,7 @@
 
 Throughout this book, you've learned web development with AI as your partner. You've used AI to explore concepts, debug problems, generate code, and build understanding. Now, as we conclude, let's step back and ask: **What does it mean to be a developer in an era where AI can write code?**
 
-This isn't a question about job security—though that concern is understandable. It's a deeper question about **value, identity, and skill**.
+This isn't a question about job security, though that concern is understandable. It's a deeper question about **value, identity, and skill**.
 
 Consider what you've actually done in this course:
 
@@ -84,7 +84,7 @@ development where human judgment was essential.
 ```text
 Ask your AI:
 I'm a developer who works with AI tools. What's my unique value?
-What can I contribute that AI cannot? Be honest—don't just
+What can I contribute that AI cannot? Be honest, don't just
 reassure me.
 ```
 
@@ -312,7 +312,7 @@ Full Manual                                      Full Automation
          (effective)
 ```
 
-Current AI is most valuable in the middle—enhancing your work, not replacing it. Full automation remains unreliable for complex, context-dependent work.
+Current AI is most valuable in the middle, enhancing your work, not replacing it. Full automation remains unreliable for complex, context-dependent work.
 
 ### The Skill Evolution Model
 
@@ -370,7 +370,7 @@ Progress through these levels by maintaining your independent capability while l
 
 ### Productivity and Quality
 
-AI-assisted development can improve both speed and quality—if used well:
+AI-assisted development can improve both speed and quality, if used well:
 
 - **Speed**: Faster prototyping, less boilerplate
 - **Quality**: More time for design and review
@@ -407,7 +407,7 @@ In an AI-augmented field:
 
 ::: {.callout-note}
 ## Skills You Are Building
-This develops all the core professional skills — particularly **evaluating and improving solutions** and **assessing emerging technologies**. Working effectively with AI is now a core professional skill, requiring the judgment, communication, and evaluation abilities developed throughout this book.
+This develops all the core professional skills, particularly **evaluating and improving solutions** and **assessing emerging technologies**. Working effectively with AI is now a core professional skill, requiring the judgment, communication, and evaluation abilities developed throughout this book.
 :::
 
 ## Practice Exercises
@@ -528,9 +528,9 @@ You now have:
 - **Professional practices** for quality work
 - **Career frameworks** for ongoing growth
 
-More importantly, you have **the ability to learn**. Technologies will change. Frameworks will evolve. AI capabilities will expand. But your foundation—understanding how to think about problems, evaluate solutions, communicate with stakeholders, and collaborate with tools—remains valuable.
+More importantly, you have **the ability to learn**. Technologies will change. Frameworks will evolve. AI capabilities will expand. But your foundation, understanding how to think about problems, evaluate solutions, communicate with stakeholders, and collaborate with tools, remains valuable.
 
-The developers who thrive in the AI era won't be those who resist AI or those who depend on AI. They'll be those who partner with AI thoughtfully—maintaining their own judgment, understanding, and skills while leveraging AI to amplify their capability.
+The developers who thrive in the AI era won't be those who resist AI or those who depend on AI. They'll be those who partner with AI thoughtfully, maintaining their own judgment, understanding, and skills while leveraging AI to amplify their capability.
 
 You've built that foundation here.
 

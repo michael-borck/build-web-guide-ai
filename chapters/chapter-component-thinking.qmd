@@ -15,7 +15,7 @@ Components are self-contained pieces of UI. Each component:
 - Renders its own output
 - Can be reused anywhere
 
-This isn't just a technical convenience—it's a fundamentally different way of building interfaces. Once you think in components, you'll see every UI as a composition of reusable pieces.
+This isn't just a technical convenience, it's a fundamentally different way of building interfaces. Once you think in components, you'll see every UI as a composition of reusable pieces.
 
 ## Understanding Through LEGO
 
@@ -35,7 +35,7 @@ React components work identically:
 - You can update one component without touching others
 - Your code shows composition: components containing components
 
-A webpage isn't a monolithic HTML document—it's a tree of components, each responsible for its own piece of the interface.
+A webpage isn't a monolithic HTML document, it's a tree of components, each responsible for its own piece of the interface.
 
 ::: {.callout-tip}
 ## The Decomposition Instinct
@@ -107,7 +107,7 @@ Data in React flows one direction: parent to child (downward).
 
 ```text
 Ask your AI:
-React data flows "one way"—from parent to child components. Why is
+React data flows "one way", from parent to child components. Why is
 this design choice valuable? What problems does it prevent compared
 to data flowing any direction?
 ```
@@ -149,7 +149,7 @@ You need Node.js installed. Download from nodejs.org if you haven't already.
 
 ### JSX: HTML in JavaScript
 
-React uses JSX—a syntax that lets you write HTML-like code in JavaScript:
+React uses JSX, a syntax that lets you write HTML-like code in JavaScript:
 
 ```jsx
 function Welcome() {
@@ -217,7 +217,7 @@ function App() {
 }
 ```
 
-Three product cards appear—but they're all identical. To make them different, we need props.
+Three product cards appear, but they're all identical. To make them different, we need props.
 
 ### Props: Configuring Components
 
@@ -246,7 +246,7 @@ function App() {
 }
 ```
 
-Now each card displays different data. The component is **reusable**—same structure, different content.
+Now each card displays different data. The component is **reusable**, same structure, different content.
 
 Props can be any JavaScript value:
 
@@ -286,7 +286,7 @@ function Counter() {
 1. The current value (`count`)
 2. A function to update it (`setCount`)
 
-When you call `setCount`, React re-renders the component with the new value. You don't manually update the DOM—React handles it.
+When you call `setCount`, React re-renders the component with the new value. You don't manually update the DOM. React handles it.
 
 ```text
 Ask your AI:
@@ -443,7 +443,7 @@ function WordPressPosts() {
 
 ::: {.callout-warning}
 ## dangerouslySetInnerHTML
-WordPress returns HTML in `rendered` fields. React requires `dangerouslySetInnerHTML` to insert raw HTML. Only use this with trusted content (like your own WordPress site)—never with user input.
+WordPress returns HTML in `rendered` fields. React requires `dangerouslySetInnerHTML` to insert raw HTML. Only use this with trusted content (like your own WordPress site), never with user input.
 :::
 
 ### Component Composition
@@ -505,7 +505,7 @@ App
 └── Footer
 ```
 
-Data flows down this tree. State lives in the component that "owns" it—often a parent that passes it to children.
+Data flows down this tree. State lives in the component that "owns" it, often a parent that passes it to children.
 
 ### When State Should "Lift Up"
 
@@ -519,7 +519,7 @@ ProductList (needs state)       ├── ProductFilter (receives props)
  state? They're siblings!)
 ```
 
-This is called "lifting state up"—moving state to the lowest common ancestor.
+This is called "lifting state up", moving state to the lowest common ancestor.
 
 ### The Rendering Cycle
 
@@ -545,11 +545,11 @@ Build a `Button` component once with variants (primary, secondary, danger). Use 
 
 ### Maintainability
 
-When a feature needs updating, you know exactly which component to modify. Components are isolated—changes don't ripple unexpectedly.
+When a feature needs updating, you know exactly which component to modify. Components are isolated, changes don't ripple unexpectedly.
 
 ### Team Collaboration
 
-Different developers can work on different components simultaneously. The interface (props) defines how components connect—teams don't need to understand each other's implementation details.
+Different developers can work on different components simultaneously. The interface (props) defines how components connect, teams don't need to understand each other's implementation details.
 
 ### Testing
 
@@ -561,7 +561,7 @@ React components naturally form design systems. Your `Button`, `Card`, `Input`, 
 
 ::: {.callout-note}
 ## Skills You Are Building
-This develops **evaluating and improving solutions** and **making and defending technology choices**. React's component model is influential across the industry—understanding it prepares you for Vue, Angular, and other frameworks that share similar concepts.
+This develops **evaluating and improving solutions** and **making and defending technology choices**. React's component model is influential across the industry, understanding it prepares you for Vue, Angular, and other frameworks that share similar concepts.
 :::
 
 ## Practice Exercises
@@ -660,4 +660,4 @@ Record your responses to these prompts:
 
 You can now build component-based interfaces and fetch data from APIs. But styling components from scratch takes time.
 
-In @sec-rapid-development, we'll explore CSS frameworks—Bootstrap and Tailwind—that provide pre-built styles and utilities. Combined with React, these tools enable rapid professional development without designing every button and layout from scratch.
+In @sec-rapid-development, we'll explore CSS frameworks. Bootstrap and Tailwind, that provide pre-built styles and utilities. Combined with React, these tools enable rapid professional development without designing every button and layout from scratch.

@@ -2,14 +2,14 @@
 
 ## The Concept First
 
-In @sec-rapid-development, you learned to build interfaces quickly with CSS frameworks. But professional development isn't just about building features—it's about building **sustainable, reliable, collaborative systems**.
+In @sec-rapid-development, you learned to build interfaces quickly with CSS frameworks. But professional development isn't just about building features, it's about building **sustainable, reliable, collaborative systems**.
 
 Consider the difference:
 
 - **Hobbyist**: Gets the feature working, moves on
 - **Professional**: Gets the feature working, ensures it stays working, makes it easy for others to understand and modify
 
-Professional practices aren't bureaucracy—they're **risk management**. Every project eventually faces:
+Professional practices aren't bureaucracy, they're **risk management**. Every project eventually faces:
 
 - "It was working yesterday. What changed?"
 - "I can't remember why I wrote this code."
@@ -37,7 +37,7 @@ Software development is the same. Version control is measuring twice. Testing is
 
 ::: {.callout-tip}
 ## Professional Practice Serves Future You
-In six months, you won't remember why you made certain decisions. Professional practices create a trail for "future you" to follow. That's not extra work—it's insurance.
+In six months, you won't remember why you made certain decisions. Professional practices create a trail for "future you" to follow. That's not extra work, it's insurance.
 :::
 
 ## Discovering Professional Practices with Your AI Partner
@@ -67,7 +67,7 @@ should I have for how Git works?
 
 ### Exploration 2: The Testing Mindset
 
-Testing isn't about distrust—it's about **confidence**.
+Testing isn't about distrust, it's about **confidence**.
 
 ```text
 Ask your AI:
@@ -405,7 +405,7 @@ npx eslint --init
 npx eslint src/
 ```
 
-These tools enforce consistency automatically—no arguments about tabs vs spaces.
+These tools enforce consistency automatically, no arguments about tabs vs spaces.
 
 ### Documentation Essentials
 
@@ -526,7 +526,7 @@ Even solo projects benefit from version control and testing. The "team" includes
 
 ### Risk Reduction
 
-Version control isn't just convenience—it's business continuity:
+Version control isn't just convenience, it's business continuity:
 
 - Roll back problematic deployments
 - Trace when bugs were introduced
@@ -569,7 +569,7 @@ Professional practices from the start prevent painful migrations later.
 
 ::: {.callout-note}
 ## Skills You Are Building
-This develops **professional communication and project management** and **evaluating and improving solutions**. Professional practices aren't separate from development—they're how professionals develop. These skills are expected in any development role.
+This develops **professional communication and project management** and **evaluating and improving solutions**. Professional practices aren't separate from development, they're how professionals develop. These skills are expected in any development role.
 :::
 
 ## Practice Exercises

@@ -2,15 +2,15 @@
 
 ## The Concept First
 
-In @sec-presentation, you learned CSS from scratch—selectors, box model, flexbox, media queries. That foundation matters. But building every project from zero is slow, and consistency across large applications is hard.
+In @sec-presentation, you learned CSS from scratch, selectors, box model, flexbox, media queries. That foundation matters. But building every project from zero is slow, and consistency across large applications is hard.
 
 **CSS frameworks** solve this by providing pre-built styles, components, and design decisions. Instead of designing every button, input, and card yourself, you adopt tested patterns that work together.
 
-This isn't laziness—it's **leverage**. Professional developers use frameworks to move faster while maintaining quality. The skill is knowing when to use them, which to choose, and how to customise them for specific needs.
+This isn't laziness, it's **leverage**. Professional developers use frameworks to move faster while maintaining quality. The skill is knowing when to use them, which to choose, and how to customise them for specific needs.
 
 ## Understanding Through Design Systems
 
-Large organisations don't let every designer create their own button styles. They create **design systems**—documented collections of components, colours, typography, and patterns that ensure consistency.
+Large organisations don't let every designer create their own button styles. They create **design systems**, documented collections of components, colours, typography, and patterns that ensure consistency.
 
 Google has Material Design. Apple has Human Interface Guidelines. Salesforce has Lightning Design System. These define how interfaces should look and behave across products.
 
@@ -88,7 +88,7 @@ A client says their Bootstrap site "looks like every other Bootstrap
 site." How would you respond? What can be done?
 ```
 
-This reveals that frameworks are starting points, not endpoints. Customisation—colours, typography, spacing—transforms a generic framework site into something unique.
+This reveals that frameworks are starting points, not endpoints. Customisation, colours, typography, spacing, transforms a generic framework site into something unique.
 
 ## From Concept to Code
 
@@ -483,7 +483,7 @@ Modern frameworks are mobile-responsive out of the box. Bootstrap's grid and Tai
 
 ::: {.callout-note}
 ## Skills You Are Building
-This develops **making and defending technology choices** and **evaluating and improving solutions**. Framework selection is a business decision—speed vs. customisation, team skills, project timeline. Professional judgment means choosing appropriately, not defaulting to what you know.
+This develops **making and defending technology choices** and **evaluating and improving solutions**. Framework selection is a business decision, speed vs. customisation, team skills, project timeline. Professional judgment means choosing appropriately, not defaulting to what you know.
 :::
 
 ## Practice Exercises
@@ -506,7 +506,7 @@ Create an HTML page using Bootstrap that includes:
 3. A three-column grid of cards
 4. A footer with centred text
 
-Use only Bootstrap classes—no custom CSS.
+Use only Bootstrap classes, no custom CSS.
 
 ### Exercise 10.2: Tailwind Basics (Level 2)
 
@@ -591,6 +591,6 @@ Record your responses to these prompts:
 
 ## Next Steps
 
-You now have tools for rapid, consistent UI development. But professional work requires more than just building features—it requires practices that ensure quality, collaboration, and maintainability.
+You now have tools for rapid, consistent UI development. But professional work requires more than just building features, it requires practices that ensure quality, collaboration, and maintainability.
 
 In @sec-professional-practices, we'll cover version control with Git, testing basics, and code quality practices. These professional practices separate hobby projects from production-ready work and are expected in any development role.

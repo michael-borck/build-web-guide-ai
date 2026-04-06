@@ -2,16 +2,16 @@
 
 ## The Concept First
 
-WordPress powers over 40% of the web. That's an extraordinary number—nearly half of all websites run on a single platform. Understanding why reveals something important about how technology decisions are made in business.
+WordPress powers over 40% of the web. That's an extraordinary number, nearly half of all websites run on a single platform. Understanding why reveals something important about how technology decisions are made in business.
 
-WordPress isn't just "blogging software." It's a **platform**—a foundation that others build upon. The distinction matters:
+WordPress isn't just "blogging software." It's a **platform**, a foundation that others build upon. The distinction matters:
 
 - **Software** does specific things. You use it as-is.
 - **A platform** provides a foundation. An ecosystem builds on top of it.
 
-Your smartphone is a platform. The core provides basics (calls, settings), but the app ecosystem makes it powerful. You don't judge your phone by its built-in apps alone—you judge it by what you can do with the apps others have built.
+Your smartphone is a platform. The core provides basics (calls, settings), but the app ecosystem makes it powerful. You don't judge your phone by its built-in apps alone, you judge it by what you can do with the apps others have built.
 
-WordPress works the same way. The core handles content management. Themes control appearance. Plugins add functionality. The ecosystem—over 60,000 plugins, thousands of themes—is what makes WordPress suitable for almost any website.
+WordPress works the same way. The core handles content management. Themes control appearance. Plugins add functionality. The ecosystem, over 60,000 plugins, thousands of themes, is what makes WordPress suitable for almost any website.
 
 Learning WordPress means learning to evaluate and assemble these pieces professionally.
 
@@ -29,7 +29,7 @@ WordPress provides the kitchen equipment. Themes provide the interior design. Pl
 
 ::: {.callout-tip}
 ## The Platform Evaluation Question
-When evaluating any platform, ask: "How active is the ecosystem?" A platform with a dying ecosystem becomes a liability. WordPress's ecosystem is massive and active—a significant factor in its dominance.
+When evaluating any platform, ask: "How active is the ecosystem?" A platform with a dying ecosystem becomes a liability. WordPress's ecosystem is massive and active, a significant factor in its dominance.
 :::
 
 ## Discovering WordPress with Your AI Partner
@@ -140,7 +140,7 @@ Never develop directly on a live website. Local development means:
 
 That's it. You now have a WordPress site running on your computer.
 
-LocalWP handles the complexity—PHP, MySQL, web server—behind a simple interface.
+LocalWP handles the complexity. PHP, MySQL, web server, behind a simple interface.
 
 ::: {.callout-note}
 ## Alternatives
@@ -149,7 +149,7 @@ Other local development options include XAMPP, MAMP, and Docker-based setups. Lo
 
 ### The WordPress Admin Interface
 
-Click "WP Admin" in LocalWP to access your site's dashboard. This is the content management interface—where non-developers spend their time.
+Click "WP Admin" in LocalWP to access your site's dashboard. This is the content management interface, where non-developers spend their time.
 
 **Dashboard Areas:**
 
@@ -165,7 +165,7 @@ Click "WP Admin" in LocalWP to access your site's dashboard. This is the content
 | Users | Account management |
 | Settings | Site configuration |
 
-Spend time exploring each area. Understanding the admin interface is essential—this is what you'll train clients to use.
+Spend time exploring each area. Understanding the admin interface is essential, this is what you'll train clients to use.
 
 ### Posts vs Pages
 
@@ -185,7 +185,7 @@ WordPress has two main content types by default:
 - Not categorised
 - Good for: About, Contact, Services, static content
 
-The distinction isn't technical capability—it's organisational. Posts answer "What's new?" Pages answer "What do we do?"
+The distinction isn't technical capability, it's organisational. Posts answer "What's new?" Pages answer "What do we do?"
 
 ### Understanding Themes
 
@@ -195,7 +195,7 @@ A WordPress theme controls:
 - Template structure (what appears where)
 - Available features (some themes add functionality)
 
-The theme doesn't contain your content—it presents your content. Change themes, and content remains while appearance transforms.
+The theme doesn't contain your content, it presents your content. Change themes, and content remains while appearance transforms.
 
 **Exploring Themes:**
 
@@ -261,7 +261,7 @@ Most modern themes include a Customiser (Appearance → Customise) for no-code a
 - Homepage settings
 - Menus
 
-The Customiser shows live previews—experiment freely before publishing changes.
+The Customiser shows live previews, experiment freely before publishing changes.
 
 **Menus:**
 
@@ -294,7 +294,7 @@ In Settings, pay attention to:
 **Permalinks:**
 
 - URL structure: Choose "Post name" for clean URLs (`/about/` instead of `/?p=123`)
-- Change this early—changing later breaks existing links
+- Change this early, changing later breaks existing links
 
 **Discussion:**
 
@@ -354,7 +354,7 @@ WordPress allows code to "hook" into specific points in the execution flow. Whil
 - WordPress calls these functions when reaching those points
 - Multiple plugins can hook into the same point
 
-This architecture is why WordPress is extensible without modification—a key platform characteristic.
+This architecture is why WordPress is extensible without modification, a key platform characteristic.
 
 ## Business Applications
 
@@ -387,7 +387,7 @@ The plugin ecosystem means you rarely need custom development:
 - Backup: UpdraftPlus, VaultPress
 - Caching: WP Super Cache, W3 Total Cache
 
-Often, the professional skill is knowing which plugins to combine—not building from scratch.
+Often, the professional skill is knowing which plugins to combine, not building from scratch.
 
 ### When WordPress Isn't Right
 
@@ -479,12 +479,12 @@ This exercise develops technology evaluation skills (assessing emerging technolo
 
 ## Chapter Summary
 
-- WordPress is a platform, not just software—its ecosystem is its value
+- WordPress is a platform, not just software, its ecosystem is its value
 - Professional evaluation of themes and plugins is an essential skill
 - Local development with LocalWP provides a safe environment to learn
 - Understanding WordPress architecture (core, themes, plugins, database) aids troubleshooting
 - The template hierarchy determines which template displays content
-- WordPress isn't always the right choice—professional judgment matters
+- WordPress isn't always the right choice, professional judgment matters
 
 ## Reflection
 
@@ -512,6 +512,6 @@ Record your responses to these prompts:
 
 ## Next Steps
 
-You now understand WordPress as a platform and can set up and configure a basic site. In @sec-extending-platforms, we'll explore how to extend WordPress with plugins—both using existing plugins professionally and understanding how they work.
+You now understand WordPress as a platform and can set up and configure a basic site. In @sec-extending-platforms, we'll explore how to extend WordPress with plugins, both using existing plugins professionally and understanding how they work.
 
 This knowledge is essential for customising WordPress to meet specific business requirements without starting from scratch.

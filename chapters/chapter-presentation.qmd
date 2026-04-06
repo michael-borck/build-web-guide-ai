@@ -2,11 +2,11 @@
 
 ## The Concept First
 
-In @sec-structure, you learned to describe what content *is*. Now we'll control how content *looks*—but this isn't decoration. It's **visual communication**.
+In @sec-structure, you learned to describe what content *is*. Now we'll control how content *looks*, but this isn't decoration. It's **visual communication**.
 
 CSS (Cascading Style Sheets) determines colours, fonts, spacing, and layout. But these choices aren't arbitrary. Every visual decision communicates something: professionalism, playfulness, urgency, calm. A hospital website and a children's toy store might have identical HTML structure, but their CSS tells completely different stories.
 
-Here's the key insight: **structure and presentation are deliberately separate**. Your HTML says "this is a heading"—it doesn't say "this should be blue and 24 pixels tall." CSS handles appearance. This separation means you can completely redesign a website without touching its content, or update content without breaking the design.
+Here's the key insight: **structure and presentation are deliberately separate**. Your HTML says "this is a heading", it doesn't say "this should be blue and 24 pixels tall." CSS handles appearance. This separation means you can completely redesign a website without touching its content, or update content without breaking the design.
 
 ## Understanding Through Design
 
@@ -16,7 +16,7 @@ Think of two cafés with identical menus. Same coffee, same pastries, same price
 
 **Café B**: White walls, fluorescent lights, plastic chairs, printed menu in a laminated folder, no music.
 
-The *content* is identical—but would you feel the same about visiting each one? The atmosphere shapes your entire perception of the business. One feels welcoming and worth paying premium prices; the other feels like a waiting room.
+The *content* is identical, but would you feel the same about visiting each one? The atmosphere shapes your entire perception of the business. One feels welcoming and worth paying premium prices; the other feels like a waiting room.
 
 CSS is your website's atmosphere. The content (HTML) might be excellent, but if the presentation feels amateur, untrustworthy, or confusing, users leave.
 
@@ -32,7 +32,7 @@ Look at any website and ask: "What is this design trying to communicate?" Before
 ```text
 Ask your AI:
 Why do we keep HTML (structure) and CSS (presentation) in separate
-languages? Explain using a newspaper analogy—the same news stories
+languages? Explain using a newspaper analogy, the same news stories
 might appear in a broadsheet and a tabloid.
 ```
 
@@ -48,7 +48,7 @@ What if every heading had to specify its own colour and size?
 
 ### Exploration 2: Mobile-First as Business Strategy
 
-More than half of web traffic comes from mobile devices. But mobile-first isn't just about phones—it's a design philosophy.
+More than half of web traffic comes from mobile devices. But mobile-first isn't just about phones, it's a design philosophy.
 
 ```text
 Ask your AI:
@@ -67,11 +67,11 @@ to "make it work" on mobile?
 
 ### Exploration 3: Visual Hierarchy
 
-Every page has multiple elements competing for attention. Visual hierarchy tells users what to look at first, second, third—guiding them through your content intentionally.
+Every page has multiple elements competing for attention. Visual hierarchy tells users what to look at first, second, third, guiding them through your content intentionally.
 
 ```text
 Ask your AI:
-How do designers create visual hierarchy—the sense that some
+How do designers create visual hierarchy, the sense that some
 elements are more important than others? What tools do they use
 besides just making things bigger?
 ```
@@ -130,7 +130,7 @@ CSS can live in three places:
 </head>
 ```
 
-**Inline styles** (on individual elements—generally avoid):
+**Inline styles** (on individual elements, generally avoid):
 ```html
 <h1 style="color: navy;">Welcome</h1>
 ```
@@ -169,7 +169,7 @@ article p {
 }
 ```
 
-Classes (`.classname`) are your workhorses—reusable styles you can apply to any element. IDs (`#idname`) should be unique per page and are less commonly used in modern CSS.
+Classes (`.classname`) are your workhorses, reusable styles you can apply to any element. IDs (`#idname`) should be unique per page and are less commonly used in modern CSS.
 
 ### The Box Model
 
@@ -219,13 +219,13 @@ This makes layout calculations much more intuitive.
 ```text
 Ask your AI:
 Explain the difference between padding and margin using a picture
-frame analogy. The picture is the content—what are the padding,
+frame analogy. The picture is the content, what are the padding,
 border, and margin?
 ```
 
 ### Layout with Flexbox
 
-Flexbox is the modern way to arrange elements. It makes previously difficult tasks—like centring or equal-height columns—simple.
+Flexbox is the modern way to arrange elements. It makes previously difficult tasks, like centring or equal-height columns, simple.
 
 ```css
 .container {
@@ -421,7 +421,7 @@ When you look at a webpage, think in layers:
 2. **Style layer** (CSS): How it looks
 3. **Behaviour layer** (JavaScript, Chapter 3): How it responds
 
-CSS only controls layer 2. It can't create content or make things interactive—it controls visual presentation of whatever HTML provides.
+CSS only controls layer 2. It can't create content or make things interactive, it controls visual presentation of whatever HTML provides.
 
 ## Business Applications
 
@@ -447,7 +447,7 @@ Change the variable once, and every element using it updates instantly. This is 
 
 ### User Experience and Trust
 
-Studies consistently show that users judge website credibility in milliseconds, based primarily on visual design. Professional presentation builds trust; amateur presentation creates suspicion—regardless of how good the actual content is.
+Studies consistently show that users judge website credibility in milliseconds, based primarily on visual design. Professional presentation builds trust; amateur presentation creates suspicion, regardless of how good the actual content is.
 
 ```text
 Ask your AI:
@@ -457,7 +457,7 @@ What visual characteristics make a website feel "trustworthy" versus
 
 ### Mobile Reach
 
-If your site doesn't work on mobile, you're excluding over half your potential audience. Responsive design isn't a feature—it's a baseline requirement for any business website.
+If your site doesn't work on mobile, you're excluding over half your potential audience. Responsive design isn't a feature, it's a baseline requirement for any business website.
 
 ### Conversion and Visual Hierarchy
 
@@ -499,7 +499,7 @@ Take the semantic HTML page from Chapter 1's exercises. Create an external style
 3. Adds appropriate padding to sections
 4. Creates visual distinction between the main content and footer
 
-Focus on readability and visual hierarchy—not decoration.
+Focus on readability and visual hierarchy, not decoration.
 
 ### Exercise 2.3: Responsive Layout (Level 3)
 
@@ -573,8 +573,8 @@ Record your responses to these prompts:
 
 ## Next Steps
 
-You now control both structure (HTML) and presentation (CSS). But websites today aren't just documents to read—they're applications to interact with.
+You now control both structure (HTML) and presentation (CSS). But websites today aren't just documents to read, they're applications to interact with.
 
-In @sec-behaviour, we'll add JavaScript—the third pillar of web development. JavaScript lets pages respond to user actions: clicks, scrolls, form submissions. It transforms static documents into dynamic experiences.
+In @sec-behaviour, we'll add JavaScript, the third pillar of web development. JavaScript lets pages respond to user actions: clicks, scrolls, form submissions. It transforms static documents into dynamic experiences.
 
 The HTML structure and CSS styling you've learned become the canvas that JavaScript brings to life.

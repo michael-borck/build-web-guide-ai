@@ -2,7 +2,7 @@
 
 ## The Concept First
 
-In @sec-emerging-technologies, you learned to evaluate technologies systematically. But technical skills alone don't build careers—they create potential. Converting that potential into opportunities requires a different skill set: **professional development**.
+In @sec-emerging-technologies, you learned to evaluate technologies systematically. But technical skills alone don't build careers, they create potential. Converting that potential into opportunities requires a different skill set: **professional development**.
 
 Consider two developers with identical technical abilities:
 
@@ -32,7 +32,7 @@ Think of your career as a form of capital accumulation. You build different type
 - Contributions others can see
 - Your professional presence
 
-Most developers focus only on technical capital. But technical capital without social and reputation capital means opportunities don't find you—you have to chase every one.
+Most developers focus only on technical capital. But technical capital without social and reputation capital means opportunities don't find you, you have to chase every one.
 
 ::: {.callout-tip}
 ## The Visibility Principle
@@ -66,7 +66,7 @@ Key insights:
 
 ```text
 Continue the conversation:
-I have the projects from this course—the portfolio site, WordPress
+I have the projects from this course, the portfolio site, WordPress
 business site, and React integration. How do I present these
 professionally? What should I add or emphasise?
 ```
@@ -81,7 +81,7 @@ What does "positioning" mean for a developer's career? How do I
 choose what to be known for when I'm just starting out?
 ```
 
-Positioning isn't limiting—it's focusing:
+Positioning isn't limiting, it's focusing:
 
 - **Generalist trap**: "I do everything" means "Hire me for anything" which often means "Hire someone else who specialises"
 - **Specialist value**: "I build accessible React applications" is memorable and referable
@@ -125,7 +125,7 @@ Technology changes. Your learning must continue.
 ```text
 Ask your AI:
 How do I keep learning after formal education ends? How do I avoid
-tutorial hell—watching courses without building real skills?
+tutorial hell, watching courses without building real skills?
 ```
 
 Effective continuous learning:
@@ -219,7 +219,7 @@ Prioritised loading states and error handling for reliability.
 - Filter and search functionality
 
 **Challenges Overcome**: WordPress featured images required the
-`_embed` parameter—debugging this taught me to read API documentation
+`_embed` parameter, debugging this taught me to read API documentation
 more carefully and test endpoints directly.
 
 **What I Learned**: Headless architecture separates concerns
@@ -416,7 +416,7 @@ Different positions have different advantages:
 
 - **Specialist**: Higher rates, clearer referrals, deeper expertise
 - **Generalist**: More flexibility, broader opportunities, varied work
-- **Neither is better**—choose based on your preferences and market
+- **Neither is better**, choose based on your preferences and market
 
 ## Business Applications
 
@@ -454,7 +454,7 @@ Each stage requires different strategies. Early career is about learning and vis
 
 ::: {.callout-note}
 ## Skills You Are Building
-This develops **professional communication and project management**. Career development isn't separate from technical work—it's how you translate technical capability into professional opportunity. These skills matter regardless of which technologies you ultimately work with.
+This develops **professional communication and project management**. Career development isn't separate from technical work, it's how you translate technical capability into professional opportunity. These skills matter regardless of which technologies you ultimately work with.
 :::
 
 ## Practice Exercises
@@ -472,9 +472,9 @@ This develops **professional communication and project management**. Career deve
 
 Evaluate your current portfolio presence:
 
-1. Google your name—what comes up?
-2. Review your GitHub profile—what does it communicate?
-3. Check your LinkedIn—is it complete and current?
+1. Google your name, what comes up?
+2. Review your GitHub profile, what does it communicate?
+3. Check your LinkedIn, is it complete and current?
 4. List three things you could improve immediately
 
 ### Exercise 13.2: Project Case Study (Level 2)
@@ -494,7 +494,7 @@ Develop your professional positioning:
 2. Identify which combinations are distinctive
 3. Research job postings that match your skills
 4. Write a positioning statement (one sentence that describes what you do)
-5. Get feedback—is it clear? Memorable? Accurate?
+5. Get feedback, is it clear? Memorable? Accurate?
 
 ### Exercise 13.4: Content Creation (Level 4)
 
@@ -522,7 +522,7 @@ Develop a 12-month career strategy:
 - Positioning helps you be memorable and referable
 - Relationships develop through contribution, not just networking
 - Continuous learning requires intentional practice, not just consumption
-- Career development is a long game—invest consistently
+- Career development is a long game, invest consistently
 
 ## Reflection
 

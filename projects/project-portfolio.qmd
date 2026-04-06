@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Your first substantial project brings together everything from Part I: Structure (HTML), Presentation (CSS), Behaviour (JavaScript), and Connection (APIs). You'll build a personal portfolio website—a professional asset that demonstrates your capabilities to future employers or clients.
+Your first substantial project brings together everything from Part I: Structure (HTML), Presentation (CSS), Behaviour (JavaScript), and Connection (APIs). You'll build a personal portfolio website, a professional asset that demonstrates your capabilities to future employers or clients.
 
 This isn't just an academic exercise. A well-crafted portfolio is one of the most valuable tools for launching a career in web development or digital business.
 
@@ -57,7 +57,7 @@ Choose one or more:
 - **JSON data file**: If external APIs are problematic, create your own JSON file of project data and fetch it
 - **Other**: Any public API that adds genuine value (not just demonstrating you can fetch data)
 
-The integration should be meaningful—it should serve a purpose for someone viewing your portfolio, not just prove you can make an API call.
+The integration should be meaningful, it should serve a purpose for someone viewing your portfolio, not just prove you can make an API call.
 
 ## Project Approach
 
@@ -65,7 +65,7 @@ The integration should be meaningful—it should serve a purpose for someone vie
 
 1. **Define your audience**: Who will view this portfolio? What do they need?
 2. **Content inventory**: List all the content you'll need (text, images, project descriptions)
-3. **Structure outline**: Sketch your page structure—what sections, what hierarchy?
+3. **Structure outline**: Sketch your page structure, what sections, what hierarchy?
 4. **Visual direction**: What atmosphere suits your professional identity?
 
 ```text
@@ -84,7 +84,7 @@ Build your complete HTML structure before styling:
 3. Test that the content makes sense without any CSS
 4. Ensure heading hierarchy is logical (h1 → h2 → h3, no skipping)
 
-This phase should produce an "ugly but functional" page—all content present, properly structured, but unstyled.
+This phase should produce an "ugly but functional" page, all content present, properly structured, but unstyled.
 
 ### Phase 3: CSS Styling
 
@@ -156,7 +156,7 @@ Keep an AI collaboration log documenting:
 3. **AI errors or limitations**: What did AI get wrong? How did you know?
 4. **Learning moments**: What did the collaboration teach you?
 
-This log demonstrates critical thinking—that you're directing the AI, not just copying its output.
+This log demonstrates critical thinking, that you're directing the AI, not just copying its output.
 
 ### Example Log Entry
 

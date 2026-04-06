@@ -4,7 +4,7 @@
 
 Part III taught you component thinking, CSS frameworks, and professional practices. Now you'll bring it together: build a React frontend that consumes content from WordPress via the REST API, demonstrating headless architecture in action.
 
-This project bridges backend content management with modern frontend development. You'll make architectural decisions, implement a complete application, and document your approach—skills that directly translate to professional frontend development roles.
+This project bridges backend content management with modern frontend development. You'll make architectural decisions, implement a complete application, and document your approach, skills that directly translate to professional frontend development roles.
 
 ## Learning Outcomes Addressed
 
@@ -27,7 +27,7 @@ In @sec-headless-architecture, you learned that headless WordPress separates con
 └────────────────┘                  └────────────────┘
 ```
 
-Your React application will fetch and display content that's managed in WordPress—the same content model used by major publishers, e-commerce sites, and enterprise applications.
+Your React application will fetch and display content that's managed in WordPress, the same content model used by major publishers, e-commerce sites, and enterprise applications.
 
 ## Project Scenarios
 
@@ -246,7 +246,7 @@ Be clear about AI involvement:
 - Concepts you learned through AI conversation
 - Documentation created with AI assistance
 
-This isn't about restricting AI use—it's about demonstrating that you **understood** what you built.
+This isn't about restricting AI use, it's about demonstrating that you **understood** what you built.
 
 ## Evaluation Criteria
 
@@ -408,7 +408,7 @@ This project demonstrates skills employers look for:
 4. **User experience**: Loading states, error handling, responsive design
 5. **Professional practices**: Version control, documentation, code quality
 
-Headless architecture is increasingly common in enterprise development. Understanding how to build frontends that consume APIs—whether WordPress, a custom backend, or third-party services—is valuable regardless of your eventual specialisation.
+Headless architecture is increasingly common in enterprise development. Understanding how to build frontends that consume APIs, whether WordPress, a custom backend, or third-party services, is valuable regardless of your eventual specialisation.
 
 ## After Submission
 

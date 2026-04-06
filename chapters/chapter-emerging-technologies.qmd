@@ -6,7 +6,7 @@ In @sec-professional-practices, you learned practices that make developers effec
 
 This creates a challenge: **how do you evaluate new technologies without getting swept up in hype?**
 
-The answer isn't to know every new tool—that's impossible. The answer is developing a **systematic evaluation framework** that works for any technology. This meta-skill outlasts any specific tool.
+The answer isn't to know every new tool, that's impossible. The answer is developing a **systematic evaluation framework** that works for any technology. This meta-skill outlasts any specific tool.
 
 Consider the difference:
 
@@ -88,7 +88,7 @@ through each category.
 ```text
 Ask your AI:
 How do you distinguish technology hype from genuine value? Give me
-examples from web development history—technologies that were hyped
+examples from web development history, technologies that were hyped
 but didn't deliver, and technologies that seemed overhyped but
 proved genuinely valuable.
 ```
@@ -430,7 +430,7 @@ Clients often ask about new technologies. Professional response:
 
 **Poor**: "Yes, blockchain is great, we should use it."
 
-**Better**: "Let me understand your problem first. Blockchain solves specific problems—immutable record-keeping, decentralised consensus. Do you have those problems? If not, simpler solutions exist."
+**Better**: "Let me understand your problem first. Blockchain solves specific problems, immutable record-keeping, decentralised consensus. Do you have those problems? If not, simpler solutions exist."
 
 ### Career Development
 
@@ -443,7 +443,7 @@ Evaluation skills help you:
 
 ::: {.callout-note}
 ## Skills You Are Building
-This develops **assessing emerging technologies**. The ability to evaluate technologies objectively—separate from hype and personal preference—is essential for advising businesses on technology decisions.
+This develops **assessing emerging technologies**. The ability to evaluate technologies objectively, separate from hype and personal preference, is essential for advising businesses on technology decisions.
 :::
 
 ## Practice Exercises
@@ -545,4 +545,4 @@ Record your responses to these prompts:
 
 You now have tools to evaluate any technology that emerges. But technology skills alone don't build a career.
 
-In @sec-development-career, we'll focus on your professional development—building a portfolio, positioning yourself in the market, networking effectively, and planning continuous growth. Technical skill opens doors; professional skill keeps them open.
+In @sec-development-career, we'll focus on your professional development, building a portfolio, positioning yourself in the market, networking effectively, and planning continuous growth. Technical skill opens doors; professional skill keeps them open.

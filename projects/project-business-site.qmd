@@ -318,7 +318,7 @@ non-technical clients most need to know?
 3. **Using placeholder content**: "Lorem ipsum" signals incomplete work
 4. **Ignoring mobile**: Always test responsive behaviour
 5. **No documentation**: A site without documentation isn't ready for handover
-6. **Copying AI output blindly**: AI helps you understand—you make the decisions
+6. **Copying AI output blindly**: AI helps you understand, you make the decisions
 7. **Forgetting security**: Security and backup plugins are non-negotiable
 
 ## Professional Context
@@ -341,4 +341,4 @@ Your WordPress project demonstrates:
 - Practical WordPress implementation
 - Professional documentation
 
-Consider these as portfolio pieces—they show employers you can think beyond just code.
+Consider these as portfolio pieces, they show employers you can think beyond just code.
