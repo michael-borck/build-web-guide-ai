@@ -3628,8 +3628,9 @@ Let's build a simple frontend that displays WordPress posts:
             const container = document.querySelector('#posts-container');
 
             try {
+                const API = 'http://your-site.local';
                 const response = await fetch(
-                    'http://your-site.local/wp-json/wp/v2/posts?_embed&per_page=5'
+                    `${API}/wp-json/wp/v2/posts?_embed&per_page=5`
                 );
 
                 if (!response.ok) {

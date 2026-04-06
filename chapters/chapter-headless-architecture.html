@@ -918,52 +918,53 @@ Why or why not?</code></pre>
 <span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a>            <span class="kw">const</span> container <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'#posts-container'</span>)<span class="op">;</span></span>
 <span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a>            <span class="cf">try</span> {</span>
-<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a>                <span class="kw">const</span> response <span class="op">=</span> <span class="cf">await</span> <span class="fu">fetch</span>(</span>
-<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'http://your-site.local/wp-json/wp/v2/posts?_embed&amp;per_page=5'</span></span>
-<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a>                )<span class="op">;</span></span>
-<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> (<span class="op">!</span>response<span class="op">.</span><span class="at">ok</span>) {</span>
-<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="vs">`HTTP error: </span><span class="sc">${</span>response<span class="op">.</span><span class="at">status</span><span class="sc">}</span><span class="vs">`</span>)<span class="op">;</span></span>
-<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a>                }</span>
-<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a>                <span class="kw">const</span> posts <span class="op">=</span> <span class="cf">await</span> response<span class="op">.</span><span class="fu">json</span>()<span class="op">;</span></span>
-<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a>                <span class="co">// Clear loading message</span></span>
-<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a>                container<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="st">''</span><span class="op">;</span></span>
-<span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a>                <span class="co">// Render each post</span></span>
-<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a>                posts<span class="op">.</span><span class="fu">forEach</span>(post <span class="kw">=&gt;</span> {</span>
-<span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a>                    <span class="kw">const</span> card <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">'article'</span>)<span class="op">;</span></span>
-<span id="cb12-54"><a href="#cb12-54" aria-hidden="true" tabindex="-1"></a>                    card<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">add</span>(<span class="st">'post-card'</span>)<span class="op">;</span></span>
-<span id="cb12-55"><a href="#cb12-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-56"><a href="#cb12-56" aria-hidden="true" tabindex="-1"></a>                    <span class="co">// Get featured image if available</span></span>
-<span id="cb12-57"><a href="#cb12-57" aria-hidden="true" tabindex="-1"></a>                    <span class="kw">const</span> featuredImage <span class="op">=</span> post<span class="op">.</span><span class="at">_embedded</span><span class="op">?.</span>[<span class="st">'wp:featuredmedia'</span>]<span class="op">?.</span>[<span class="dv">0</span>]<span class="op">;</span></span>
-<span id="cb12-58"><a href="#cb12-58" aria-hidden="true" tabindex="-1"></a>                    <span class="kw">const</span> imageHtml <span class="op">=</span> featuredImage</span>
-<span id="cb12-59"><a href="#cb12-59" aria-hidden="true" tabindex="-1"></a>                        <span class="op">?</span> <span class="vs">`&lt;img src="</span><span class="sc">${</span>featuredImage<span class="op">.</span><span class="at">source_url</span><span class="sc">}</span><span class="vs">" alt="</span><span class="sc">${</span>featuredImage<span class="op">.</span><span class="at">alt_text</span> <span class="op">||</span> <span class="st">''</span><span class="sc">}</span><span class="vs">" style="max-width: 100%;"&gt;`</span></span>
-<span id="cb12-60"><a href="#cb12-60" aria-hidden="true" tabindex="-1"></a>                        <span class="op">:</span> <span class="st">''</span><span class="op">;</span></span>
-<span id="cb12-61"><a href="#cb12-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-62"><a href="#cb12-62" aria-hidden="true" tabindex="-1"></a>                    card<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`</span></span>
-<span id="cb12-63"><a href="#cb12-63" aria-hidden="true" tabindex="-1"></a><span class="vs">                        </span><span class="sc">${</span>imageHtml<span class="sc">}</span></span>
-<span id="cb12-64"><a href="#cb12-64" aria-hidden="true" tabindex="-1"></a><span class="vs">                        &lt;h2&gt;</span><span class="sc">${</span>post<span class="op">.</span><span class="at">title</span><span class="op">.</span><span class="at">rendered</span><span class="sc">}</span><span class="vs">&lt;/h2&gt;</span></span>
-<span id="cb12-65"><a href="#cb12-65" aria-hidden="true" tabindex="-1"></a><span class="vs">                        &lt;div&gt;</span><span class="sc">${</span>post<span class="op">.</span><span class="at">excerpt</span><span class="op">.</span><span class="at">rendered</span><span class="sc">}</span><span class="vs">&lt;/div&gt;</span></span>
-<span id="cb12-66"><a href="#cb12-66" aria-hidden="true" tabindex="-1"></a><span class="vs">                        &lt;a href="#"&gt;Read more&lt;/a&gt;</span></span>
-<span id="cb12-67"><a href="#cb12-67" aria-hidden="true" tabindex="-1"></a><span class="vs">                    `</span><span class="op">;</span></span>
-<span id="cb12-68"><a href="#cb12-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-69"><a href="#cb12-69" aria-hidden="true" tabindex="-1"></a>                    container<span class="op">.</span><span class="fu">appendChild</span>(card)<span class="op">;</span></span>
-<span id="cb12-70"><a href="#cb12-70" aria-hidden="true" tabindex="-1"></a>                })<span class="op">;</span></span>
-<span id="cb12-71"><a href="#cb12-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-72"><a href="#cb12-72" aria-hidden="true" tabindex="-1"></a>            } <span class="cf">catch</span> (error) {</span>
-<span id="cb12-73"><a href="#cb12-73" aria-hidden="true" tabindex="-1"></a>                container<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`</span></span>
-<span id="cb12-74"><a href="#cb12-74" aria-hidden="true" tabindex="-1"></a><span class="vs">                    &lt;p class="error"&gt;Failed to load posts: </span><span class="sc">${</span>error<span class="op">.</span><span class="at">message</span><span class="sc">}</span><span class="vs">&lt;/p&gt;</span></span>
-<span id="cb12-75"><a href="#cb12-75" aria-hidden="true" tabindex="-1"></a><span class="vs">                `</span><span class="op">;</span></span>
-<span id="cb12-76"><a href="#cb12-76" aria-hidden="true" tabindex="-1"></a>                <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(<span class="st">'Error loading posts:'</span><span class="op">,</span> error)<span class="op">;</span></span>
-<span id="cb12-77"><a href="#cb12-77" aria-hidden="true" tabindex="-1"></a>            }</span>
-<span id="cb12-78"><a href="#cb12-78" aria-hidden="true" tabindex="-1"></a>        }</span>
-<span id="cb12-79"><a href="#cb12-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-80"><a href="#cb12-80" aria-hidden="true" tabindex="-1"></a>        <span class="fu">loadPosts</span>()<span class="op">;</span></span>
-<span id="cb12-81"><a href="#cb12-81" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
-<span id="cb12-82"><a href="#cb12-82" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
-<span id="cb12-83"><a href="#cb12-83" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a>                <span class="kw">const</span> API <span class="op">=</span> <span class="st">'http://your-site.local'</span><span class="op">;</span></span>
+<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a>                <span class="kw">const</span> response <span class="op">=</span> <span class="cf">await</span> <span class="fu">fetch</span>(</span>
+<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a>                    <span class="vs">`</span><span class="sc">${</span>API<span class="sc">}</span><span class="vs">/wp-json/wp/v2/posts?_embed&amp;per_page=5`</span></span>
+<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a>                )<span class="op">;</span></span>
+<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> (<span class="op">!</span>response<span class="op">.</span><span class="at">ok</span>) {</span>
+<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="vs">`HTTP error: </span><span class="sc">${</span>response<span class="op">.</span><span class="at">status</span><span class="sc">}</span><span class="vs">`</span>)<span class="op">;</span></span>
+<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a>                }</span>
+<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a>                <span class="kw">const</span> posts <span class="op">=</span> <span class="cf">await</span> response<span class="op">.</span><span class="fu">json</span>()<span class="op">;</span></span>
+<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a>                <span class="co">// Clear loading message</span></span>
+<span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a>                container<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="st">''</span><span class="op">;</span></span>
+<span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a>                <span class="co">// Render each post</span></span>
+<span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a>                posts<span class="op">.</span><span class="fu">forEach</span>(post <span class="kw">=&gt;</span> {</span>
+<span id="cb12-54"><a href="#cb12-54" aria-hidden="true" tabindex="-1"></a>                    <span class="kw">const</span> card <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">'article'</span>)<span class="op">;</span></span>
+<span id="cb12-55"><a href="#cb12-55" aria-hidden="true" tabindex="-1"></a>                    card<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">add</span>(<span class="st">'post-card'</span>)<span class="op">;</span></span>
+<span id="cb12-56"><a href="#cb12-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-57"><a href="#cb12-57" aria-hidden="true" tabindex="-1"></a>                    <span class="co">// Get featured image if available</span></span>
+<span id="cb12-58"><a href="#cb12-58" aria-hidden="true" tabindex="-1"></a>                    <span class="kw">const</span> featuredImage <span class="op">=</span> post<span class="op">.</span><span class="at">_embedded</span><span class="op">?.</span>[<span class="st">'wp:featuredmedia'</span>]<span class="op">?.</span>[<span class="dv">0</span>]<span class="op">;</span></span>
+<span id="cb12-59"><a href="#cb12-59" aria-hidden="true" tabindex="-1"></a>                    <span class="kw">const</span> imageHtml <span class="op">=</span> featuredImage</span>
+<span id="cb12-60"><a href="#cb12-60" aria-hidden="true" tabindex="-1"></a>                        <span class="op">?</span> <span class="vs">`&lt;img src="</span><span class="sc">${</span>featuredImage<span class="op">.</span><span class="at">source_url</span><span class="sc">}</span><span class="vs">" alt="</span><span class="sc">${</span>featuredImage<span class="op">.</span><span class="at">alt_text</span> <span class="op">||</span> <span class="st">''</span><span class="sc">}</span><span class="vs">" style="max-width: 100%;"&gt;`</span></span>
+<span id="cb12-61"><a href="#cb12-61" aria-hidden="true" tabindex="-1"></a>                        <span class="op">:</span> <span class="st">''</span><span class="op">;</span></span>
+<span id="cb12-62"><a href="#cb12-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-63"><a href="#cb12-63" aria-hidden="true" tabindex="-1"></a>                    card<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`</span></span>
+<span id="cb12-64"><a href="#cb12-64" aria-hidden="true" tabindex="-1"></a><span class="vs">                        </span><span class="sc">${</span>imageHtml<span class="sc">}</span></span>
+<span id="cb12-65"><a href="#cb12-65" aria-hidden="true" tabindex="-1"></a><span class="vs">                        &lt;h2&gt;</span><span class="sc">${</span>post<span class="op">.</span><span class="at">title</span><span class="op">.</span><span class="at">rendered</span><span class="sc">}</span><span class="vs">&lt;/h2&gt;</span></span>
+<span id="cb12-66"><a href="#cb12-66" aria-hidden="true" tabindex="-1"></a><span class="vs">                        &lt;div&gt;</span><span class="sc">${</span>post<span class="op">.</span><span class="at">excerpt</span><span class="op">.</span><span class="at">rendered</span><span class="sc">}</span><span class="vs">&lt;/div&gt;</span></span>
+<span id="cb12-67"><a href="#cb12-67" aria-hidden="true" tabindex="-1"></a><span class="vs">                        &lt;a href="#"&gt;Read more&lt;/a&gt;</span></span>
+<span id="cb12-68"><a href="#cb12-68" aria-hidden="true" tabindex="-1"></a><span class="vs">                    `</span><span class="op">;</span></span>
+<span id="cb12-69"><a href="#cb12-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-70"><a href="#cb12-70" aria-hidden="true" tabindex="-1"></a>                    container<span class="op">.</span><span class="fu">appendChild</span>(card)<span class="op">;</span></span>
+<span id="cb12-71"><a href="#cb12-71" aria-hidden="true" tabindex="-1"></a>                })<span class="op">;</span></span>
+<span id="cb12-72"><a href="#cb12-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-73"><a href="#cb12-73" aria-hidden="true" tabindex="-1"></a>            } <span class="cf">catch</span> (error) {</span>
+<span id="cb12-74"><a href="#cb12-74" aria-hidden="true" tabindex="-1"></a>                container<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`</span></span>
+<span id="cb12-75"><a href="#cb12-75" aria-hidden="true" tabindex="-1"></a><span class="vs">                    &lt;p class="error"&gt;Failed to load posts: </span><span class="sc">${</span>error<span class="op">.</span><span class="at">message</span><span class="sc">}</span><span class="vs">&lt;/p&gt;</span></span>
+<span id="cb12-76"><a href="#cb12-76" aria-hidden="true" tabindex="-1"></a><span class="vs">                `</span><span class="op">;</span></span>
+<span id="cb12-77"><a href="#cb12-77" aria-hidden="true" tabindex="-1"></a>                <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(<span class="st">'Error loading posts:'</span><span class="op">,</span> error)<span class="op">;</span></span>
+<span id="cb12-78"><a href="#cb12-78" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb12-79"><a href="#cb12-79" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb12-80"><a href="#cb12-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-81"><a href="#cb12-81" aria-hidden="true" tabindex="-1"></a>        <span class="fu">loadPosts</span>()<span class="op">;</span></span>
+<span id="cb12-82"><a href="#cb12-82" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb12-83"><a href="#cb12-83" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb12-84"><a href="#cb12-84" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Save this as an HTML file and open it in a browser. It fetches posts from your local WordPress site and displays them, completely independently of WordPress themes.</p>
 <pre class="text"><code>Ask your AI:
 Walk me through this code. What happens at each step? How would I
@@ -2123,381 +2124,382 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-293"><a href="#cb21-293" aria-hidden="true" tabindex="-1"></a>            <span class="dt">const</span> container <span class="op">=</span> document<span class="op">.</span><span class="fu">querySelector</span><span class="op">(</span><span class="er">'</span>#posts<span class="op">-</span>container<span class="er">'</span><span class="op">);</span></span>
 <span id="cb21-294"><a href="#cb21-294" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-295"><a href="#cb21-295" aria-hidden="true" tabindex="-1"></a>            <span class="cf">try</span> <span class="op">{</span></span>
-<span id="cb21-296"><a href="#cb21-296" aria-hidden="true" tabindex="-1"></a>                <span class="dt">const</span> response <span class="op">=</span> await <span class="fu">fetch</span><span class="op">(</span></span>
-<span id="cb21-297"><a href="#cb21-297" aria-hidden="true" tabindex="-1"></a>                    <span class="er">'</span>http<span class="op">:</span><span class="co">//your-site.local/wp-json/wp/v2/posts?_embed&amp;per_page=5'</span></span>
-<span id="cb21-298"><a href="#cb21-298" aria-hidden="true" tabindex="-1"></a>                <span class="op">);</span></span>
-<span id="cb21-299"><a href="#cb21-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-300"><a href="#cb21-300" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> <span class="op">(!</span>response<span class="op">.</span><span class="fu">ok</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb21-301"><a href="#cb21-301" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span><span class="op">(</span>`HTTP error<span class="op">:</span> $<span class="op">{</span>response<span class="op">.</span><span class="fu">status</span><span class="op">}</span>`<span class="op">);</span></span>
-<span id="cb21-302"><a href="#cb21-302" aria-hidden="true" tabindex="-1"></a>                <span class="op">}</span></span>
-<span id="cb21-303"><a href="#cb21-303" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-304"><a href="#cb21-304" aria-hidden="true" tabindex="-1"></a>                <span class="dt">const</span> posts <span class="op">=</span> await response<span class="op">.</span><span class="fu">json</span><span class="op">();</span></span>
-<span id="cb21-305"><a href="#cb21-305" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-306"><a href="#cb21-306" aria-hidden="true" tabindex="-1"></a>                <span class="co">// Clear loading message</span></span>
-<span id="cb21-307"><a href="#cb21-307" aria-hidden="true" tabindex="-1"></a>                container<span class="op">.</span><span class="fu">innerHTML</span> <span class="op">=</span> <span class="er">''</span><span class="op">;</span></span>
-<span id="cb21-308"><a href="#cb21-308" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-309"><a href="#cb21-309" aria-hidden="true" tabindex="-1"></a>                <span class="co">// Render each post</span></span>
-<span id="cb21-310"><a href="#cb21-310" aria-hidden="true" tabindex="-1"></a>                posts<span class="op">.</span><span class="fu">forEach</span><span class="op">(</span>post <span class="op">=&gt;</span> <span class="op">{</span></span>
-<span id="cb21-311"><a href="#cb21-311" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">const</span> card <span class="op">=</span> document<span class="op">.</span><span class="fu">createElement</span><span class="op">(</span><span class="er">'</span>article<span class="er">'</span><span class="op">);</span></span>
-<span id="cb21-312"><a href="#cb21-312" aria-hidden="true" tabindex="-1"></a>                    card<span class="op">.</span><span class="fu">classList</span><span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="er">'</span>post<span class="op">-</span>card<span class="er">'</span><span class="op">);</span></span>
-<span id="cb21-313"><a href="#cb21-313" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-314"><a href="#cb21-314" aria-hidden="true" tabindex="-1"></a>                    <span class="co">// Get featured image if available</span></span>
-<span id="cb21-315"><a href="#cb21-315" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">const</span> featuredImage <span class="op">=</span> post<span class="op">.</span><span class="fu">_embedded</span><span class="op">?.[</span><span class="er">'</span>wp<span class="op">:</span>featuredmedia<span class="er">'</span><span class="op">]?.[</span><span class="dv">0</span><span class="op">];</span></span>
-<span id="cb21-316"><a href="#cb21-316" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">const</span> imageHtml <span class="op">=</span> featuredImage</span>
-<span id="cb21-317"><a href="#cb21-317" aria-hidden="true" tabindex="-1"></a>                        <span class="op">?</span> `<span class="op">&lt;</span>img src<span class="op">=</span><span class="st">"${featuredImage.source_url}"</span> alt<span class="op">=</span><span class="st">"${featuredImage.alt_text || ''}"</span> style<span class="op">=</span><span class="st">"max-width: 100%;"</span><span class="op">&gt;</span>`</span>
-<span id="cb21-318"><a href="#cb21-318" aria-hidden="true" tabindex="-1"></a>                        <span class="op">:</span> <span class="er">''</span><span class="op">;</span></span>
-<span id="cb21-319"><a href="#cb21-319" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-320"><a href="#cb21-320" aria-hidden="true" tabindex="-1"></a>                    card<span class="op">.</span><span class="fu">innerHTML</span> <span class="op">=</span> `</span>
-<span id="cb21-321"><a href="#cb21-321" aria-hidden="true" tabindex="-1"></a>                        $<span class="op">{</span>imageHtml<span class="op">}</span></span>
-<span id="cb21-322"><a href="#cb21-322" aria-hidden="true" tabindex="-1"></a>                        <span class="op">&lt;</span>h2<span class="op">&gt;</span>$<span class="op">{</span>post<span class="op">.</span><span class="fu">title</span><span class="op">.</span><span class="fu">rendered</span><span class="op">}&lt;/</span>h2<span class="op">&gt;</span></span>
-<span id="cb21-323"><a href="#cb21-323" aria-hidden="true" tabindex="-1"></a>                        <span class="op">&lt;</span>div<span class="op">&gt;</span>$<span class="op">{</span>post<span class="op">.</span><span class="fu">excerpt</span><span class="op">.</span><span class="fu">rendered</span><span class="op">}&lt;/</span>div<span class="op">&gt;</span></span>
-<span id="cb21-324"><a href="#cb21-324" aria-hidden="true" tabindex="-1"></a>                        <span class="op">&lt;</span>a href<span class="op">=</span><span class="st">"#"</span><span class="op">&gt;</span>Read more<span class="op">&lt;/</span>a<span class="op">&gt;</span></span>
-<span id="cb21-325"><a href="#cb21-325" aria-hidden="true" tabindex="-1"></a>                    `<span class="op">;</span></span>
-<span id="cb21-326"><a href="#cb21-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-327"><a href="#cb21-327" aria-hidden="true" tabindex="-1"></a>                    container<span class="op">.</span><span class="fu">appendChild</span><span class="op">(</span>card<span class="op">);</span></span>
-<span id="cb21-328"><a href="#cb21-328" aria-hidden="true" tabindex="-1"></a>                <span class="op">});</span></span>
-<span id="cb21-329"><a href="#cb21-329" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-330"><a href="#cb21-330" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span> <span class="cf">catch</span> <span class="op">(</span>error<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb21-331"><a href="#cb21-331" aria-hidden="true" tabindex="-1"></a>                container<span class="op">.</span><span class="fu">innerHTML</span> <span class="op">=</span> `</span>
-<span id="cb21-332"><a href="#cb21-332" aria-hidden="true" tabindex="-1"></a>                    <span class="op">&lt;</span>p <span class="kw">class</span><span class="op">=</span><span class="st">"error"</span><span class="op">&gt;</span>Failed to load posts<span class="op">:</span> $<span class="op">{</span>error<span class="op">.</span><span class="fu">message</span><span class="op">}&lt;/</span>p<span class="op">&gt;</span></span>
-<span id="cb21-333"><a href="#cb21-333" aria-hidden="true" tabindex="-1"></a>                `<span class="op">;</span></span>
-<span id="cb21-334"><a href="#cb21-334" aria-hidden="true" tabindex="-1"></a>                console<span class="op">.</span><span class="fu">error</span><span class="op">(</span><span class="er">'</span>Error loading posts<span class="op">:</span><span class="er">'</span><span class="op">,</span> error<span class="op">);</span></span>
-<span id="cb21-335"><a href="#cb21-335" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
-<span id="cb21-336"><a href="#cb21-336" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
-<span id="cb21-337"><a href="#cb21-337" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-338"><a href="#cb21-338" aria-hidden="true" tabindex="-1"></a>        <span class="fu">loadPosts</span><span class="op">();</span></span>
-<span id="cb21-339"><a href="#cb21-339" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;/</span>script<span class="op">&gt;</span></span>
-<span id="cb21-340"><a href="#cb21-340" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>body<span class="op">&gt;</span></span>
-<span id="cb21-341"><a href="#cb21-341" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>html<span class="op">&gt;</span></span>
-<span id="cb21-342"><a href="#cb21-342" aria-hidden="true" tabindex="-1"></a>```</span>
-<span id="cb21-343"><a href="#cb21-343" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-344"><a href="#cb21-344" aria-hidden="true" tabindex="-1"></a>Save <span class="kw">this</span> as an <span class="bu">HTML</span> file and open it in a browser<span class="op">.</span> <span class="fu">It</span> fetches posts from your local WordPress site and displays them<span class="op">,</span> completely independently of WordPress themes<span class="op">.</span></span>
-<span id="cb21-345"><a href="#cb21-345" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-346"><a href="#cb21-346" aria-hidden="true" tabindex="-1"></a>```text</span>
-<span id="cb21-347"><a href="#cb21-347" aria-hidden="true" tabindex="-1"></a>Ask your AI<span class="op">:</span></span>
-<span id="cb21-348"><a href="#cb21-348" aria-hidden="true" tabindex="-1"></a>Walk me through <span class="kw">this</span> code<span class="op">.</span> <span class="fu">What</span> happens at each step<span class="op">?</span> How would I</span>
-<span id="cb21-349"><a href="#cb21-349" aria-hidden="true" tabindex="-1"></a>modify it to also show the post date and author name<span class="op">?</span></span>
-<span id="cb21-350"><a href="#cb21-350" aria-hidden="true" tabindex="-1"></a>```</span>
-<span id="cb21-351"><a href="#cb21-351" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-352"><a href="#cb21-352" aria-hidden="true" tabindex="-1"></a>### Fetching a Single Post</span>
-<span id="cb21-353"><a href="#cb21-353" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-354"><a href="#cb21-354" aria-hidden="true" tabindex="-1"></a>To get a specific post by ID or slug<span class="op">:</span></span>
-<span id="cb21-355"><a href="#cb21-355" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-356"><a href="#cb21-356" aria-hidden="true" tabindex="-1"></a>```javascript</span>
-<span id="cb21-357"><a href="#cb21-357" aria-hidden="true" tabindex="-1"></a><span class="co">// By ID</span></span>
-<span id="cb21-358"><a href="#cb21-358" aria-hidden="true" tabindex="-1"></a><span class="fu">fetch</span><span class="op">(</span><span class="er">'</span><span class="op">/</span>wp<span class="op">-</span>json<span class="op">/</span>wp<span class="op">/</span>v2<span class="op">/</span>posts<span class="op">/</span><span class="dv">42</span><span class="er">'</span><span class="op">)</span></span>
-<span id="cb21-359"><a href="#cb21-359" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-360"><a href="#cb21-360" aria-hidden="true" tabindex="-1"></a><span class="co">// By slug</span></span>
-<span id="cb21-361"><a href="#cb21-361" aria-hidden="true" tabindex="-1"></a><span class="fu">fetch</span><span class="op">(</span><span class="er">'</span><span class="op">/</span>wp<span class="op">-</span>json<span class="op">/</span>wp<span class="op">/</span>v2<span class="op">/</span>posts<span class="op">?</span>slug<span class="op">=</span>welcome<span class="op">-</span>to<span class="op">-</span>our<span class="op">-</span>blog<span class="er">'</span><span class="op">)</span></span>
-<span id="cb21-362"><a href="#cb21-362" aria-hidden="true" tabindex="-1"></a>```</span>
-<span id="cb21-363"><a href="#cb21-363" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-364"><a href="#cb21-364" aria-hidden="true" tabindex="-1"></a>### Custom Post <span class="bu">Types</span></span>
-<span id="cb21-365"><a href="#cb21-365" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-366"><a href="#cb21-366" aria-hidden="true" tabindex="-1"></a>If WordPress has custom post <span class="fu">types</span> <span class="op">(</span>like <span class="st">"products"</span> or <span class="st">"events"</span><span class="op">),</span> they may need to be exposed via the API<span class="op">.</span> <span class="fu">In</span> a plugin or theme<span class="op">:</span></span>
-<span id="cb21-367"><a href="#cb21-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-368"><a href="#cb21-368" aria-hidden="true" tabindex="-1"></a>```php</span>
-<span id="cb21-369"><a href="#cb21-369" aria-hidden="true" tabindex="-1"></a><span class="co">// Register custom post type with REST API support</span></span>
-<span id="cb21-370"><a href="#cb21-370" aria-hidden="true" tabindex="-1"></a><span class="fu">register_post_type</span><span class="op">(</span><span class="er">'</span>product<span class="er">'</span><span class="op">,</span> <span class="fu">array</span><span class="op">(</span></span>
-<span id="cb21-371"><a href="#cb21-371" aria-hidden="true" tabindex="-1"></a>    <span class="er">'</span>public<span class="er">'</span> <span class="op">=&gt;</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb21-372"><a href="#cb21-372" aria-hidden="true" tabindex="-1"></a>    <span class="er">'</span>show_in_rest<span class="er">'</span> <span class="op">=&gt;</span> <span class="kw">true</span><span class="op">,</span>  <span class="co">// This exposes it to the API</span></span>
-<span id="cb21-373"><a href="#cb21-373" aria-hidden="true" tabindex="-1"></a>    <span class="er">'</span>rest_base<span class="er">'</span> <span class="op">=&gt;</span> <span class="er">'</span>products<span class="er">'</span><span class="op">,</span> <span class="co">// Endpoint: /wp-json/wp/v2/products</span></span>
-<span id="cb21-374"><a href="#cb21-374" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ... other arguments</span></span>
-<span id="cb21-375"><a href="#cb21-375" aria-hidden="true" tabindex="-1"></a><span class="op">));</span></span>
-<span id="cb21-376"><a href="#cb21-376" aria-hidden="true" tabindex="-1"></a>```</span>
-<span id="cb21-377"><a href="#cb21-377" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-378"><a href="#cb21-378" aria-hidden="true" tabindex="-1"></a>Once exposed<span class="op">,</span> fetch them like any other content<span class="op">:</span></span>
-<span id="cb21-379"><a href="#cb21-379" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-380"><a href="#cb21-380" aria-hidden="true" tabindex="-1"></a>```javascript</span>
-<span id="cb21-381"><a href="#cb21-381" aria-hidden="true" tabindex="-1"></a><span class="fu">fetch</span><span class="op">(</span><span class="er">'</span><span class="op">/</span>wp<span class="op">-</span>json<span class="op">/</span>wp<span class="op">/</span>v2<span class="op">/</span>products<span class="op">?</span>_embed<span class="er">'</span><span class="op">)</span></span>
-<span id="cb21-382"><a href="#cb21-382" aria-hidden="true" tabindex="-1"></a>```</span>
-<span id="cb21-383"><a href="#cb21-383" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-384"><a href="#cb21-384" aria-hidden="true" tabindex="-1"></a>### Authentication <span class="cf">for</span> Protected Content</span>
-<span id="cb21-385"><a href="#cb21-385" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-386"><a href="#cb21-386" aria-hidden="true" tabindex="-1"></a>Public content is accessible without authentication<span class="op">.</span> <span class="fu">For</span> <span class="kw">protected</span> content or write operations<span class="op">,</span> you need authentication<span class="op">.</span></span>
-<span id="cb21-387"><a href="#cb21-387" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-388"><a href="#cb21-388" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Application Passwords<span class="op">**</span> <span class="op">(</span>WordPress <span class="fl">5.6</span><span class="op">+):</span></span>
-<span id="cb21-389"><a href="#cb21-389" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-390"><a href="#cb21-390" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> In WordPress<span class="op">:</span> Users → Your Profile → Application Passwords</span>
-<span id="cb21-391"><a href="#cb21-391" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Generate a password <span class="cf">for</span> your application</span>
-<span id="cb21-392"><a href="#cb21-392" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> Use Basic Authentication in requests<span class="op">:</span></span>
-<span id="cb21-393"><a href="#cb21-393" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-394"><a href="#cb21-394" aria-hidden="true" tabindex="-1"></a>```javascript</span>
-<span id="cb21-395"><a href="#cb21-395" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> credentials <span class="op">=</span> <span class="fu">btoa</span><span class="op">(</span><span class="er">'</span>username<span class="op">:</span>application<span class="op">-</span>password<span class="er">'</span><span class="op">);</span></span>
-<span id="cb21-396"><a href="#cb21-396" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-397"><a href="#cb21-397" aria-hidden="true" tabindex="-1"></a><span class="fu">fetch</span><span class="op">(</span><span class="er">'</span><span class="op">/</span>wp<span class="op">-</span>json<span class="op">/</span>wp<span class="op">/</span>v2<span class="op">/</span>posts<span class="er">'</span><span class="op">,</span> <span class="op">{</span></span>
-<span id="cb21-398"><a href="#cb21-398" aria-hidden="true" tabindex="-1"></a>    headers<span class="op">:</span> <span class="op">{</span></span>
-<span id="cb21-399"><a href="#cb21-399" aria-hidden="true" tabindex="-1"></a>        <span class="er">'</span>Authorization<span class="er">'</span><span class="op">:</span> `Basic $<span class="op">{</span>credentials<span class="op">}</span>`</span>
-<span id="cb21-400"><a href="#cb21-400" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb21-401"><a href="#cb21-401" aria-hidden="true" tabindex="-1"></a><span class="op">});</span></span>
-<span id="cb21-402"><a href="#cb21-402" aria-hidden="true" tabindex="-1"></a>```</span>
-<span id="cb21-403"><a href="#cb21-403" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-404"><a href="#cb21-404" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span> <span class="op">{.</span><span class="fu">callout</span><span class="op">-</span>warning<span class="op">}</span></span>
-<span id="cb21-405"><a href="#cb21-405" aria-hidden="true" tabindex="-1"></a>## <span class="bu">Security</span> Note</span>
-<span id="cb21-406"><a href="#cb21-406" aria-hidden="true" tabindex="-1"></a>Never expose application passwords in frontend JavaScript<span class="op">,</span> they<span class="er">'</span>d be visible to anyone<span class="op">.</span> <span class="fu">Authentication</span> is typically handled by a backend server that proxies requests to WordPress<span class="op">.</span></span>
-<span id="cb21-407"><a href="#cb21-407" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span></span>
-<span id="cb21-408"><a href="#cb21-408" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-409"><a href="#cb21-409" aria-hidden="true" tabindex="-1"></a>### CORS Considerations</span>
-<span id="cb21-410"><a href="#cb21-410" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-411"><a href="#cb21-411" aria-hidden="true" tabindex="-1"></a>If your frontend and WordPress are on different domains<span class="op">,</span> you<span class="er">'</span>ll encounter CORS<span class="op">.</span> <span class="fu">WordPress</span> needs to allow requests from your frontend<span class="er">'</span>s origin<span class="op">.</span></span>
-<span id="cb21-412"><a href="#cb21-412" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-413"><a href="#cb21-413" aria-hidden="true" tabindex="-1"></a><span class="fu">A</span> plugin or functions<span class="op">.</span><span class="fu">php</span> snippet can enable CORS<span class="op">:</span></span>
-<span id="cb21-414"><a href="#cb21-414" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-415"><a href="#cb21-415" aria-hidden="true" tabindex="-1"></a>```php</span>
-<span id="cb21-416"><a href="#cb21-416" aria-hidden="true" tabindex="-1"></a><span class="co">// Allow CORS from specific origin</span></span>
-<span id="cb21-417"><a href="#cb21-417" aria-hidden="true" tabindex="-1"></a><span class="fu">add_action</span><span class="op">(</span><span class="er">'</span>rest_api_init<span class="er">'</span><span class="op">,</span> <span class="fu">function</span><span class="op">()</span> <span class="op">{</span></span>
-<span id="cb21-418"><a href="#cb21-418" aria-hidden="true" tabindex="-1"></a>    <span class="fu">remove_filter</span><span class="op">(</span><span class="er">'</span>rest_pre_serve_request<span class="er">'</span><span class="op">,</span> <span class="er">'</span>rest_send_cors_headers<span class="er">'</span><span class="op">);</span></span>
-<span id="cb21-419"><a href="#cb21-419" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_filter</span><span class="op">(</span><span class="er">'</span>rest_pre_serve_request<span class="er">'</span><span class="op">,</span> <span class="fu">function</span><span class="op">(</span>$value<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb21-420"><a href="#cb21-420" aria-hidden="true" tabindex="-1"></a>        <span class="fu">header</span><span class="op">(</span><span class="er">'</span>Access<span class="op">-</span><span class="bu">Control</span><span class="op">-</span>Allow<span class="op">-</span>Origin<span class="op">:</span> https<span class="op">:</span><span class="co">//your-frontend-domain.com');</span></span>
-<span id="cb21-421"><a href="#cb21-421" aria-hidden="true" tabindex="-1"></a>        <span class="fu">header</span><span class="op">(</span><span class="er">'</span>Access<span class="op">-</span><span class="bu">Control</span><span class="op">-</span>Allow<span class="op">-</span>Methods<span class="op">:</span> GET<span class="op">,</span> POST<span class="op">,</span> OPTIONS<span class="er">'</span><span class="op">);</span></span>
-<span id="cb21-422"><a href="#cb21-422" aria-hidden="true" tabindex="-1"></a>        <span class="fu">header</span><span class="op">(</span><span class="er">'</span>Access<span class="op">-</span><span class="bu">Control</span><span class="op">-</span>Allow<span class="op">-</span>Credentials<span class="op">:</span> true<span class="er">'</span><span class="op">);</span></span>
-<span id="cb21-423"><a href="#cb21-423" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> $value<span class="op">;</span></span>
-<span id="cb21-424"><a href="#cb21-424" aria-hidden="true" tabindex="-1"></a>    <span class="op">});</span></span>
-<span id="cb21-425"><a href="#cb21-425" aria-hidden="true" tabindex="-1"></a><span class="op">});</span></span>
-<span id="cb21-426"><a href="#cb21-426" aria-hidden="true" tabindex="-1"></a>```</span>
-<span id="cb21-427"><a href="#cb21-427" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-428"><a href="#cb21-428" aria-hidden="true" tabindex="-1"></a>For local development<span class="op">,</span> both often run on <span class="fu">localhost</span> <span class="op">(</span>different ports<span class="op">),</span> which typically works without extra configuration<span class="op">.</span></span>
-<span id="cb21-429"><a href="#cb21-429" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-430"><a href="#cb21-430" aria-hidden="true" tabindex="-1"></a>## Building Your Mental Model</span>
-<span id="cb21-431"><a href="#cb21-431" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-432"><a href="#cb21-432" aria-hidden="true" tabindex="-1"></a>### Traditional vs Headless Architecture</span>
-<span id="cb21-433"><a href="#cb21-433" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-434"><a href="#cb21-434" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Traditional WordPress<span class="op">:**</span></span>
-<span id="cb21-435"><a href="#cb21-435" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-436"><a href="#cb21-436" aria-hidden="true" tabindex="-1"></a>```text</span>
-<span id="cb21-437"><a href="#cb21-437" aria-hidden="true" tabindex="-1"></a>┌────────────────────────────────────────┐</span>
-<span id="cb21-438"><a href="#cb21-438" aria-hidden="true" tabindex="-1"></a>│             WordPress                   │</span>
-<span id="cb21-439"><a href="#cb21-439" aria-hidden="true" tabindex="-1"></a>│  ┌─────────────┐  ┌─────────────────┐  │</span>
-<span id="cb21-440"><a href="#cb21-440" aria-hidden="true" tabindex="-1"></a>│  │   Content   │──│     Theme       │  │</span>
-<span id="cb21-441"><a href="#cb21-441" aria-hidden="true" tabindex="-1"></a>│  │  Database   │  │  <span class="op">(</span>Presentation<span class="op">)</span> │  │</span>
-<span id="cb21-442"><a href="#cb21-442" aria-hidden="true" tabindex="-1"></a>│  └─────────────┘  └─────────────────┘  │</span>
-<span id="cb21-443"><a href="#cb21-443" aria-hidden="true" tabindex="-1"></a>└───────────────────────────┬────────────┘</span>
-<span id="cb21-444"><a href="#cb21-444" aria-hidden="true" tabindex="-1"></a>                            │ <span class="bu">HTML</span></span>
-<span id="cb21-445"><a href="#cb21-445" aria-hidden="true" tabindex="-1"></a>                            ▼</span>
-<span id="cb21-446"><a href="#cb21-446" aria-hidden="true" tabindex="-1"></a>                        Browser</span>
-<span id="cb21-447"><a href="#cb21-447" aria-hidden="true" tabindex="-1"></a>```</span>
-<span id="cb21-448"><a href="#cb21-448" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-449"><a href="#cb21-449" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Headless WordPress<span class="op">:**</span></span>
-<span id="cb21-450"><a href="#cb21-450" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-451"><a href="#cb21-451" aria-hidden="true" tabindex="-1"></a>```text</span>
-<span id="cb21-452"><a href="#cb21-452" aria-hidden="true" tabindex="-1"></a>┌──────────────────┐        ┌─────────────────┐</span>
-<span id="cb21-453"><a href="#cb21-453" aria-hidden="true" tabindex="-1"></a>│    WordPress     │        │    Frontend     │</span>
-<span id="cb21-454"><a href="#cb21-454" aria-hidden="true" tabindex="-1"></a>│  ┌────────────┐  │  API   │  <span class="op">(</span>React<span class="op">,</span> etc<span class="op">.)</span>  │</span>
-<span id="cb21-455"><a href="#cb21-455" aria-hidden="true" tabindex="-1"></a>│  │  Content   │  │◄──────►│                 │</span>
-<span id="cb21-456"><a href="#cb21-456" aria-hidden="true" tabindex="-1"></a>│  │  Database  │  │  JSON  │                 │</span>
-<span id="cb21-457"><a href="#cb21-457" aria-hidden="true" tabindex="-1"></a>│  └────────────┘  │        └────────┬────────┘</span>
-<span id="cb21-458"><a href="#cb21-458" aria-hidden="true" tabindex="-1"></a>└──────────────────┘                 │ <span class="bu">HTML</span></span>
-<span id="cb21-459"><a href="#cb21-459" aria-hidden="true" tabindex="-1"></a>                                     ▼</span>
-<span id="cb21-460"><a href="#cb21-460" aria-hidden="true" tabindex="-1"></a>                                 Browser</span>
-<span id="cb21-461"><a href="#cb21-461" aria-hidden="true" tabindex="-1"></a>```</span>
-<span id="cb21-462"><a href="#cb21-462" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-463"><a href="#cb21-463" aria-hidden="true" tabindex="-1"></a>In headless<span class="op">,</span> WordPress<span class="er">'</span>s theming layer isn<span class="er">'</span>t used<span class="op">.</span> <span class="fu">It</span><span class="er">'</span>s purely a content repository<span class="op">.</span></span>
-<span id="cb21-464"><a href="#cb21-464" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-465"><a href="#cb21-465" aria-hidden="true" tabindex="-1"></a>### When Headless Makes Sense</span>
-<span id="cb21-466"><a href="#cb21-466" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-467"><a href="#cb21-467" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Scenario <span class="op">|</span> Why Headless<span class="op">?</span> <span class="op">|</span></span>
-<span id="cb21-468"><a href="#cb21-468" aria-hidden="true" tabindex="-1"></a><span class="op">|----------|---------------|</span></span>
-<span id="cb21-469"><a href="#cb21-469" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Multi<span class="op">-</span>channel delivery <span class="op">|</span> Same content to web<span class="op">,</span> iOS app<span class="op">,</span> Android app<span class="op">,</span> smart displays <span class="op">|</span></span>
-<span id="cb21-470"><a href="#cb21-470" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Maximum performance <span class="op">|</span> Static site generation<span class="op">,</span> edge caching <span class="op">|</span></span>
-<span id="cb21-471"><a href="#cb21-471" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Complex frontend needs <span class="op">|</span> Single<span class="op">-</span>page applications<span class="op">,</span> heavy JavaScript interactivity <span class="op">|</span></span>
-<span id="cb21-472"><a href="#cb21-472" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Developer preferences <span class="op">|</span> Modern frontend frameworks<span class="op">,</span> component architecture <span class="op">|</span></span>
-<span id="cb21-473"><a href="#cb21-473" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Integration requirements <span class="op">|</span> Content feeds into existing applications <span class="op">|</span></span>
-<span id="cb21-474"><a href="#cb21-474" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-475"><a href="#cb21-475" aria-hidden="true" tabindex="-1"></a>### When Traditional Makes Sense</span>
-<span id="cb21-476"><a href="#cb21-476" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-477"><a href="#cb21-477" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Scenario <span class="op">|</span> Why Traditional<span class="op">?</span> <span class="op">|</span></span>
-<span id="cb21-478"><a href="#cb21-478" aria-hidden="true" tabindex="-1"></a><span class="op">|----------|------------------|</span></span>
-<span id="cb21-479"><a href="#cb21-479" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Content editors need preview <span class="op">|</span> See exactly what<span class="er">'</span>s published <span class="op">|</span></span>
-<span id="cb21-480"><a href="#cb21-480" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Simple sites <span class="op">|</span> Blog<span class="op">,</span> brochure site<span class="op">,</span> small business <span class="op">|</span></span>
-<span id="cb21-481"><a href="#cb21-481" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Limited technical resources <span class="op">|</span> No frontend developers available <span class="op">|</span></span>
-<span id="cb21-482"><a href="#cb21-482" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Plugin<span class="op">-</span>dependent features <span class="op">|</span> Many plugins expect traditional setup <span class="op">|</span></span>
-<span id="cb21-483"><a href="#cb21-483" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Budget constraints <span class="op">|</span> Two systems cost more to maintain <span class="op">|</span></span>
-<span id="cb21-484"><a href="#cb21-484" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-485"><a href="#cb21-485" aria-hidden="true" tabindex="-1"></a>### The Complexity Cost</span>
-<span id="cb21-486"><a href="#cb21-486" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-487"><a href="#cb21-487" aria-hidden="true" tabindex="-1"></a>Headless adds complexity<span class="op">:</span></span>
-<span id="cb21-488"><a href="#cb21-488" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-489"><a href="#cb21-489" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Two codebases instead of one</span>
-<span id="cb21-490"><a href="#cb21-490" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Two deployments to manage</span>
-<span id="cb21-491"><a href="#cb21-491" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Content preview is harder</span>
-<span id="cb21-492"><a href="#cb21-492" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Some WordPress plugins don<span class="er">'</span>t work</span>
-<span id="cb21-493"><a href="#cb21-493" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> More technical expertise required</span>
-<span id="cb21-494"><a href="#cb21-494" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-495"><a href="#cb21-495" aria-hidden="true" tabindex="-1"></a>This complexity has costs<span class="op">.</span> <span class="fu">Headless</span> is a tool<span class="op">,</span> use it when benefits outweigh costs<span class="op">.</span></span>
-<span id="cb21-496"><a href="#cb21-496" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-497"><a href="#cb21-497" aria-hidden="true" tabindex="-1"></a>## Business Applications</span>
-<span id="cb21-498"><a href="#cb21-498" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-499"><a href="#cb21-499" aria-hidden="true" tabindex="-1"></a>### Multi<span class="op">-</span><span class="bu">Channel</span> Content</span>
-<span id="cb21-500"><a href="#cb21-500" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-501"><a href="#cb21-501" aria-hidden="true" tabindex="-1"></a>Organisations increasingly need content everywhere<span class="op">:</span></span>
-<span id="cb21-502"><a href="#cb21-502" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-503"><a href="#cb21-503" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Corporate website</span>
-<span id="cb21-504"><a href="#cb21-504" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Mobile applications</span>
-<span id="cb21-505"><a href="#cb21-505" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Internal dashboards</span>
-<span id="cb21-506"><a href="#cb21-506" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Digital signage</span>
-<span id="cb21-507"><a href="#cb21-507" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Partner integrations</span>
-<span id="cb21-508"><a href="#cb21-508" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-509"><a href="#cb21-509" aria-hidden="true" tabindex="-1"></a>With headless<span class="op">,</span> content is created once and consumed everywhere<span class="op">.</span> <span class="fu">WordPress</span> becomes the <span class="st">"single source of truth."</span></span>
-<span id="cb21-510"><a href="#cb21-510" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-511"><a href="#cb21-511" aria-hidden="true" tabindex="-1"></a>### Performance and SEO</span>
-<span id="cb21-512"><a href="#cb21-512" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-513"><a href="#cb21-513" aria-hidden="true" tabindex="-1"></a>Headless frontends can be<span class="op">:</span></span>
-<span id="cb21-514"><a href="#cb21-514" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-515"><a href="#cb21-515" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Statically <span class="fu">generated</span> <span class="op">(</span>fastest possible<span class="op">)</span></span>
-<span id="cb21-516"><a href="#cb21-516" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Cached at the <span class="fu">edge</span> <span class="op">(</span>CDN<span class="op">)</span></span>
-<span id="cb21-517"><a href="#cb21-517" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Optimised specifically <span class="cf">for</span> performance</span>
-<span id="cb21-518"><a href="#cb21-518" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-519"><a href="#cb21-519" aria-hidden="true" tabindex="-1"></a>This matters <span class="cf">for</span> SEO and user experience<span class="op">.</span> <span class="fu">Google</span> measures page speed<span class="op">.</span></span>
-<span id="cb21-520"><a href="#cb21-520" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-521"><a href="#cb21-521" aria-hidden="true" tabindex="-1"></a>### <span class="bu">Security</span> Benefits</span>
-<span id="cb21-522"><a href="#cb21-522" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-523"><a href="#cb21-523" aria-hidden="true" tabindex="-1"></a>In headless architecture<span class="op">:</span></span>
-<span id="cb21-524"><a href="#cb21-524" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-525"><a href="#cb21-525" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> WordPress can be hidden from the <span class="kw">public</span> <span class="op">(</span><span class="kw">private</span> network<span class="op">)</span></span>
-<span id="cb21-526"><a href="#cb21-526" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Attack surface is reduced</span>
-<span id="cb21-527"><a href="#cb21-527" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Frontend has no direct database access</span>
-<span id="cb21-528"><a href="#cb21-528" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Compromising the frontend doesn<span class="er">'</span>t compromise content</span>
-<span id="cb21-529"><a href="#cb21-529" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-530"><a href="#cb21-530" aria-hidden="true" tabindex="-1"></a>For high<span class="op">-</span>security needs<span class="op">,</span> <span class="kw">this</span> separation is valuable<span class="op">.</span></span>
-<span id="cb21-531"><a href="#cb21-531" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-532"><a href="#cb21-532" aria-hidden="true" tabindex="-1"></a>### Developer Experience</span>
-<span id="cb21-533"><a href="#cb21-533" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-534"><a href="#cb21-534" aria-hidden="true" tabindex="-1"></a>Modern frontend developers often prefer<span class="op">:</span></span>
-<span id="cb21-535"><a href="#cb21-535" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-536"><a href="#cb21-536" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> React<span class="op">,</span> Vue<span class="op">,</span> or similar frameworks</span>
-<span id="cb21-537"><a href="#cb21-537" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="bu">Component</span><span class="op">-</span>based architecture</span>
-<span id="cb21-538"><a href="#cb21-538" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> TypeScript</span>
-<span id="cb21-539"><a href="#cb21-539" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Modern build tools</span>
-<span id="cb21-540"><a href="#cb21-540" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-541"><a href="#cb21-541" aria-hidden="true" tabindex="-1"></a>Headless lets them use their preferred tools <span class="cf">while</span> leveraging WordPress<span class="er">'</span>s content management<span class="op">.</span></span>
-<span id="cb21-542"><a href="#cb21-542" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-543"><a href="#cb21-543" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span> <span class="op">{.</span><span class="fu">callout</span><span class="op">-</span>note<span class="op">}</span></span>
-<span id="cb21-544"><a href="#cb21-544" aria-hidden="true" tabindex="-1"></a>## Skills You Are Building</span>
-<span id="cb21-545"><a href="#cb21-545" aria-hidden="true" tabindex="-1"></a>This develops <span class="op">**</span>making and defending technology choices<span class="op">**</span> and <span class="op">**</span>assessing emerging technologies<span class="op">**.</span> <span class="fu">Headless</span> architecture is a significant trend in web development<span class="op">.</span> <span class="fu">Understanding</span> when it applies<span class="op">,</span> and when it doesn<span class="er">'</span>t<span class="op">,</span> demonstrates professional judgment<span class="op">.</span></span>
-<span id="cb21-546"><a href="#cb21-546" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span></span>
-<span id="cb21-547"><a href="#cb21-547" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-548"><a href="#cb21-548" aria-hidden="true" tabindex="-1"></a>## Practice Exercises</span>
-<span id="cb21-549"><a href="#cb21-549" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-550"><a href="#cb21-550" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span> <span class="op">{.</span><span class="fu">callout</span><span class="op">-</span>note<span class="op">}</span></span>
-<span id="cb21-551"><a href="#cb21-551" aria-hidden="true" tabindex="-1"></a>## Exercise Levels</span>
-<span id="cb21-552"><a href="#cb21-552" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">1</span><span class="op">**:</span> Direct application</span>
-<span id="cb21-553"><a href="#cb21-553" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">2</span><span class="op">**:</span> Minor modifications</span>
-<span id="cb21-554"><a href="#cb21-554" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">3</span><span class="op">**:</span> Combining concepts</span>
-<span id="cb21-555"><a href="#cb21-555" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">4</span><span class="op">**:</span> Problem<span class="op">-</span>solving</span>
-<span id="cb21-556"><a href="#cb21-556" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">5</span><span class="op">**:</span> Open<span class="op">-</span>ended design</span>
-<span id="cb21-557"><a href="#cb21-557" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span></span>
-<span id="cb21-558"><a href="#cb21-558" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-559"><a href="#cb21-559" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">8.1</span><span class="op">:</span> Explore the <span class="fu">API</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">1</span><span class="op">)</span></span>
-<span id="cb21-560"><a href="#cb21-560" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-561"><a href="#cb21-561" aria-hidden="true" tabindex="-1"></a>Using your local WordPress site<span class="op">:</span></span>
-<span id="cb21-562"><a href="#cb21-562" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-563"><a href="#cb21-563" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Open a browser and visit `<span class="op">/</span>wp<span class="op">-</span>json<span class="op">/</span>wp<span class="op">/</span>v2<span class="op">/</span>posts`</span>
-<span id="cb21-564"><a href="#cb21-564" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Explore the JSON structure<span class="op">,</span> identify title<span class="op">,</span> content<span class="op">,</span> date<span class="op">,</span> and other fields</span>
-<span id="cb21-565"><a href="#cb21-565" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> Try different endpoints<span class="op">:</span> `<span class="op">/</span>pages`<span class="op">,</span> `<span class="op">/</span>categories`<span class="op">,</span> `<span class="op">/</span>media`</span>
-<span id="cb21-566"><a href="#cb21-566" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> Add `<span class="op">?</span>_embed` and observe how the response changes</span>
-<span id="cb21-567"><a href="#cb21-567" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-568"><a href="#cb21-568" aria-hidden="true" tabindex="-1"></a><span class="bu">Document</span> your findings with screenshots<span class="op">.</span></span>
-<span id="cb21-569"><a href="#cb21-569" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-570"><a href="#cb21-570" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">8.2</span><span class="op">:</span> Build a Post <span class="bu">List</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">2</span><span class="op">)</span></span>
-<span id="cb21-571"><a href="#cb21-571" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-572"><a href="#cb21-572" aria-hidden="true" tabindex="-1"></a>Create an <span class="bu">HTML</span> page that<span class="op">:</span></span>
-<span id="cb21-573"><a href="#cb21-573" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-574"><a href="#cb21-574" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Fetches the <span class="dv">3</span> most recent posts from your WordPress site</span>
-<span id="cb21-575"><a href="#cb21-575" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Displays title<span class="op">,</span> date<span class="op">,</span> and excerpt <span class="cf">for</span> each</span>
-<span id="cb21-576"><a href="#cb21-576" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> Handles loading and error states</span>
-<span id="cb21-577"><a href="#cb21-577" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> Styles the output with basic <span class="bu">CSS</span></span>
-<span id="cb21-578"><a href="#cb21-578" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-579"><a href="#cb21-579" aria-hidden="true" tabindex="-1"></a>Test it in your browser<span class="op">.</span></span>
-<span id="cb21-580"><a href="#cb21-580" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-581"><a href="#cb21-581" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">8.3</span><span class="op">:</span> <span class="bu">Filter</span> and <span class="fu">Search</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">3</span><span class="op">)</span></span>
-<span id="cb21-582"><a href="#cb21-582" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-583"><a href="#cb21-583" aria-hidden="true" tabindex="-1"></a>Extend your post list to include<span class="op">:</span></span>
-<span id="cb21-584"><a href="#cb21-584" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-585"><a href="#cb21-585" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> A search input that filters posts by search term</span>
-<span id="cb21-586"><a href="#cb21-586" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> A category dropdown that filters by category</span>
-<span id="cb21-587"><a href="#cb21-587" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> <span class="fu">Pagination</span> <span class="op">(</span>Next<span class="op">/</span>Previous buttons<span class="op">)</span></span>
-<span id="cb21-588"><a href="#cb21-588" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-589"><a href="#cb21-589" aria-hidden="true" tabindex="-1"></a>This combines API parameters with JavaScript event handling<span class="op">.</span></span>
-<span id="cb21-590"><a href="#cb21-590" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-591"><a href="#cb21-591" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">8.4</span><span class="op">:</span> Architecture <span class="fu">Recommendation</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">4</span><span class="op">)</span></span>
-<span id="cb21-592"><a href="#cb21-592" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-593"><a href="#cb21-593" aria-hidden="true" tabindex="-1"></a>A regional newspaper wants to modernise their digital presence<span class="op">.</span> <span class="fu">They</span> have<span class="op">:</span></span>
-<span id="cb21-594"><a href="#cb21-594" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-595"><a href="#cb21-595" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> A <span class="dv">15</span><span class="op">-</span>year<span class="op">-</span>old WordPress site with <span class="dv">10</span><span class="op">,</span><span class="bn">000</span><span class="op">+</span> articles</span>
-<span id="cb21-596"><a href="#cb21-596" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> A mobile app in development</span>
-<span id="cb21-597"><a href="#cb21-597" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Plans <span class="cf">for</span> a digital subscriber paywall</span>
-<span id="cb21-598"><a href="#cb21-598" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> A team of journalists comfortable with WordPress</span>
-<span id="cb21-599"><a href="#cb21-599" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> One full<span class="op">-</span>stack developer</span>
-<span id="cb21-600"><a href="#cb21-600" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-601"><a href="#cb21-601" aria-hidden="true" tabindex="-1"></a>Write a <span class="dv">400</span><span class="op">-</span>word recommendation addressing<span class="op">:</span></span>
-<span id="cb21-602"><a href="#cb21-602" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-603"><a href="#cb21-603" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Should they go headless<span class="op">,</span> traditional<span class="op">,</span> or hybrid<span class="op">?</span></span>
-<span id="cb21-604"><a href="#cb21-604" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> What are the risks of each approach<span class="op">?</span></span>
-<span id="cb21-605"><a href="#cb21-605" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> What would you implement first<span class="op">?</span></span>
-<span id="cb21-606"><a href="#cb21-606" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> How would you handle the transition<span class="op">?</span></span>
-<span id="cb21-607"><a href="#cb21-607" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-608"><a href="#cb21-608" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">8.5</span><span class="op">:</span> Architecture <span class="fu">Design</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">5</span><span class="op">)</span></span>
-<span id="cb21-609"><a href="#cb21-609" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-610"><a href="#cb21-610" aria-hidden="true" tabindex="-1"></a>Design a headless architecture <span class="cf">for</span> a restaurant group with<span class="op">:</span></span>
-<span id="cb21-611"><a href="#cb21-611" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-612"><a href="#cb21-612" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="dv">5</span> restaurant <span class="fu">locations</span> <span class="op">(</span>different brands<span class="op">)</span></span>
-<span id="cb21-613"><a href="#cb21-613" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Shared menu items across some locations</span>
-<span id="cb21-614"><a href="#cb21-614" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="bu">Location</span><span class="op">-</span>specific events and specials</span>
-<span id="cb21-615"><a href="#cb21-615" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> A central marketing team</span>
-<span id="cb21-616"><a href="#cb21-616" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Mobile app plans <span class="cf">for</span> ordering</span>
-<span id="cb21-617"><a href="#cb21-617" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-618"><a href="#cb21-618" aria-hidden="true" tabindex="-1"></a>Create a diagram showing<span class="op">:</span></span>
-<span id="cb21-619"><a href="#cb21-619" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-620"><a href="#cb21-620" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> What WordPress manages</span>
-<span id="cb21-621"><a href="#cb21-621" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> What the API provides</span>
-<span id="cb21-622"><a href="#cb21-622" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> What the <span class="fu">frontend</span><span class="op">(</span>s<span class="op">)</span> display</span>
-<span id="cb21-623"><a href="#cb21-623" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> How content flows from creation to display</span>
-<span id="cb21-624"><a href="#cb21-624" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-625"><a href="#cb21-625" aria-hidden="true" tabindex="-1"></a>Write a <span class="dv">500</span><span class="op">-</span>word explanation of your design decisions<span class="op">.</span></span>
-<span id="cb21-626"><a href="#cb21-626" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-627"><a href="#cb21-627" aria-hidden="true" tabindex="-1"></a>## Chapter Summary</span>
-<span id="cb21-628"><a href="#cb21-628" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-629"><a href="#cb21-629" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Headless architecture separates content management from presentation</span>
-<span id="cb21-630"><a href="#cb21-630" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> The WordPress REST API exposes content as JSON data</span>
-<span id="cb21-631"><a href="#cb21-631" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Frontends fetch and display content independently</span>
-<span id="cb21-632"><a href="#cb21-632" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> `_embed` includes related data like images and authors</span>
-<span id="cb21-633"><a href="#cb21-633" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Headless adds complexity but enables multi<span class="op">-</span>channel delivery and modern frontends</span>
-<span id="cb21-634"><a href="#cb21-634" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Architecture choice depends on requirements<span class="op">,</span> resources<span class="op">,</span> and trade<span class="op">-</span>offs</span>
-<span id="cb21-635"><a href="#cb21-635" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-636"><a href="#cb21-636" aria-hidden="true" tabindex="-1"></a>## Reflection</span>
-<span id="cb21-637"><a href="#cb21-637" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-638"><a href="#cb21-638" aria-hidden="true" tabindex="-1"></a>Before moving to the Business Website Project<span class="op">,</span> ensure you can<span class="op">:</span></span>
-<span id="cb21-639"><a href="#cb21-639" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-640"><a href="#cb21-640" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Explain headless architecture without jargon</span>
-<span id="cb21-641"><a href="#cb21-641" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Fetch WordPress content using the REST API</span>
-<span id="cb21-642"><a href="#cb21-642" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Use API parameters to filter and paginate results</span>
-<span id="cb21-643"><a href="#cb21-643" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Access embedded data like featured images</span>
-<span id="cb21-644"><a href="#cb21-644" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Articulate when headless makes sense and when it doesn<span class="er">'</span>t</span>
-<span id="cb21-645"><a href="#cb21-645" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Describe the trade<span class="op">-</span>offs of headless vs<span class="op">.</span> <span class="fu">traditional</span> WordPress</span>
-<span id="cb21-646"><a href="#cb21-646" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-647"><a href="#cb21-647" aria-hidden="true" tabindex="-1"></a>## Your Learning Journal</span>
-<span id="cb21-648"><a href="#cb21-648" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-649"><a href="#cb21-649" aria-hidden="true" tabindex="-1"></a>Record your responses to these prompts<span class="op">:</span></span>
-<span id="cb21-650"><a href="#cb21-650" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-651"><a href="#cb21-651" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> <span class="op">**</span>Architecture Thinking<span class="op">**:</span> When you visit websites<span class="op">,</span> can you guess which might be using headless architecture<span class="op">?</span> What clues suggest headless vs<span class="op">.</span> <span class="fu">traditional</span><span class="op">?</span></span>
-<span id="cb21-652"><a href="#cb21-652" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-653"><a href="#cb21-653" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> <span class="op">**</span>API Exploration<span class="op">**:</span> What surprised you about the WordPress REST API<span class="op">?</span> What data was available that you didn<span class="er">'</span>t expect<span class="op">?</span></span>
-<span id="cb21-654"><a href="#cb21-654" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-655"><a href="#cb21-655" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> <span class="op">**</span>AI Conversation Reflection<span class="op">**:</span> What question about headless architecture did your AI partner help clarify<span class="op">?</span></span>
-<span id="cb21-656"><a href="#cb21-656" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-657"><a href="#cb21-657" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> <span class="op">**</span>Trade<span class="op">-</span>off Assessment<span class="op">**:</span> Think of a website you might build<span class="op">.</span> <span class="fu">Would</span> headless be appropriate<span class="op">?</span> Why or why not<span class="op">?</span></span>
-<span id="cb21-658"><a href="#cb21-658" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-659"><a href="#cb21-659" aria-hidden="true" tabindex="-1"></a>## Next Steps</span>
-<span id="cb21-660"><a href="#cb21-660" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-661"><a href="#cb21-661" aria-hidden="true" tabindex="-1"></a>You<span class="er">'</span>ve completed Part II<span class="op">:</span> Content Management <span class="cf">for</span> Business<span class="op">.</span> <span class="fu">You</span> understand<span class="op">:</span></span>
-<span id="cb21-662"><a href="#cb21-662" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-663"><a href="#cb21-663" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Why CMS matters and when to use one</span>
-<span id="cb21-664"><a href="#cb21-664" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> WordPress as a platform with an ecosystem</span>
-<span id="cb21-665"><a href="#cb21-665" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> How to extend WordPress professionally</span>
-<span id="cb21-666"><a href="#cb21-666" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Headless architecture and the REST API</span>
-<span id="cb21-667"><a href="#cb21-667" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-668"><a href="#cb21-668" aria-hidden="true" tabindex="-1"></a>In <span class="at">@sec</span><span class="op">-</span>project<span class="op">-</span>business<span class="op">-</span>site<span class="op">,</span> you<span class="er">'</span>ll build a complete WordPress business site<span class="op">,</span> applying everything from <span class="kw">this</span> part<span class="op">.</span> <span class="fu">This</span> project demonstrates your ability to make and implement technology decisions <span class="cf">for</span> real business needs<span class="op">.</span></span>
-<span id="cb21-669"><a href="#cb21-669" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-670"><a href="#cb21-670" aria-hidden="true" tabindex="-1"></a><span class="fu">Then</span><span class="op">,</span> in Part III<span class="op">,</span> we<span class="er">'</span>ll build on the API knowledge from <span class="kw">this</span> chapter to create React frontends<span class="op">,</span> bringing modern frontend development into your skillset<span class="op">.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb21-296"><a href="#cb21-296" aria-hidden="true" tabindex="-1"></a>                <span class="dt">const</span> API <span class="op">=</span> <span class="er">'</span>http<span class="op">:</span><span class="co">//your-site.local';</span></span>
+<span id="cb21-297"><a href="#cb21-297" aria-hidden="true" tabindex="-1"></a>                <span class="dt">const</span> response <span class="op">=</span> await <span class="fu">fetch</span><span class="op">(</span></span>
+<span id="cb21-298"><a href="#cb21-298" aria-hidden="true" tabindex="-1"></a>                    `$<span class="op">{</span>API<span class="op">}/</span>wp<span class="op">-</span>json<span class="op">/</span>wp<span class="op">/</span>v2<span class="op">/</span>posts<span class="op">?</span>_embed<span class="op">&amp;</span>per_page<span class="op">=</span><span class="dv">5</span>`</span>
+<span id="cb21-299"><a href="#cb21-299" aria-hidden="true" tabindex="-1"></a>                <span class="op">);</span></span>
+<span id="cb21-300"><a href="#cb21-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-301"><a href="#cb21-301" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> <span class="op">(!</span>response<span class="op">.</span><span class="fu">ok</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb21-302"><a href="#cb21-302" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span><span class="op">(</span>`HTTP error<span class="op">:</span> $<span class="op">{</span>response<span class="op">.</span><span class="fu">status</span><span class="op">}</span>`<span class="op">);</span></span>
+<span id="cb21-303"><a href="#cb21-303" aria-hidden="true" tabindex="-1"></a>                <span class="op">}</span></span>
+<span id="cb21-304"><a href="#cb21-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-305"><a href="#cb21-305" aria-hidden="true" tabindex="-1"></a>                <span class="dt">const</span> posts <span class="op">=</span> await response<span class="op">.</span><span class="fu">json</span><span class="op">();</span></span>
+<span id="cb21-306"><a href="#cb21-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-307"><a href="#cb21-307" aria-hidden="true" tabindex="-1"></a>                <span class="co">// Clear loading message</span></span>
+<span id="cb21-308"><a href="#cb21-308" aria-hidden="true" tabindex="-1"></a>                container<span class="op">.</span><span class="fu">innerHTML</span> <span class="op">=</span> <span class="er">''</span><span class="op">;</span></span>
+<span id="cb21-309"><a href="#cb21-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-310"><a href="#cb21-310" aria-hidden="true" tabindex="-1"></a>                <span class="co">// Render each post</span></span>
+<span id="cb21-311"><a href="#cb21-311" aria-hidden="true" tabindex="-1"></a>                posts<span class="op">.</span><span class="fu">forEach</span><span class="op">(</span>post <span class="op">=&gt;</span> <span class="op">{</span></span>
+<span id="cb21-312"><a href="#cb21-312" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">const</span> card <span class="op">=</span> document<span class="op">.</span><span class="fu">createElement</span><span class="op">(</span><span class="er">'</span>article<span class="er">'</span><span class="op">);</span></span>
+<span id="cb21-313"><a href="#cb21-313" aria-hidden="true" tabindex="-1"></a>                    card<span class="op">.</span><span class="fu">classList</span><span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="er">'</span>post<span class="op">-</span>card<span class="er">'</span><span class="op">);</span></span>
+<span id="cb21-314"><a href="#cb21-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-315"><a href="#cb21-315" aria-hidden="true" tabindex="-1"></a>                    <span class="co">// Get featured image if available</span></span>
+<span id="cb21-316"><a href="#cb21-316" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">const</span> featuredImage <span class="op">=</span> post<span class="op">.</span><span class="fu">_embedded</span><span class="op">?.[</span><span class="er">'</span>wp<span class="op">:</span>featuredmedia<span class="er">'</span><span class="op">]?.[</span><span class="dv">0</span><span class="op">];</span></span>
+<span id="cb21-317"><a href="#cb21-317" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">const</span> imageHtml <span class="op">=</span> featuredImage</span>
+<span id="cb21-318"><a href="#cb21-318" aria-hidden="true" tabindex="-1"></a>                        <span class="op">?</span> `<span class="op">&lt;</span>img src<span class="op">=</span><span class="st">"${featuredImage.source_url}"</span> alt<span class="op">=</span><span class="st">"${featuredImage.alt_text || ''}"</span> style<span class="op">=</span><span class="st">"max-width: 100%;"</span><span class="op">&gt;</span>`</span>
+<span id="cb21-319"><a href="#cb21-319" aria-hidden="true" tabindex="-1"></a>                        <span class="op">:</span> <span class="er">''</span><span class="op">;</span></span>
+<span id="cb21-320"><a href="#cb21-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-321"><a href="#cb21-321" aria-hidden="true" tabindex="-1"></a>                    card<span class="op">.</span><span class="fu">innerHTML</span> <span class="op">=</span> `</span>
+<span id="cb21-322"><a href="#cb21-322" aria-hidden="true" tabindex="-1"></a>                        $<span class="op">{</span>imageHtml<span class="op">}</span></span>
+<span id="cb21-323"><a href="#cb21-323" aria-hidden="true" tabindex="-1"></a>                        <span class="op">&lt;</span>h2<span class="op">&gt;</span>$<span class="op">{</span>post<span class="op">.</span><span class="fu">title</span><span class="op">.</span><span class="fu">rendered</span><span class="op">}&lt;/</span>h2<span class="op">&gt;</span></span>
+<span id="cb21-324"><a href="#cb21-324" aria-hidden="true" tabindex="-1"></a>                        <span class="op">&lt;</span>div<span class="op">&gt;</span>$<span class="op">{</span>post<span class="op">.</span><span class="fu">excerpt</span><span class="op">.</span><span class="fu">rendered</span><span class="op">}&lt;/</span>div<span class="op">&gt;</span></span>
+<span id="cb21-325"><a href="#cb21-325" aria-hidden="true" tabindex="-1"></a>                        <span class="op">&lt;</span>a href<span class="op">=</span><span class="st">"#"</span><span class="op">&gt;</span>Read more<span class="op">&lt;/</span>a<span class="op">&gt;</span></span>
+<span id="cb21-326"><a href="#cb21-326" aria-hidden="true" tabindex="-1"></a>                    `<span class="op">;</span></span>
+<span id="cb21-327"><a href="#cb21-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-328"><a href="#cb21-328" aria-hidden="true" tabindex="-1"></a>                    container<span class="op">.</span><span class="fu">appendChild</span><span class="op">(</span>card<span class="op">);</span></span>
+<span id="cb21-329"><a href="#cb21-329" aria-hidden="true" tabindex="-1"></a>                <span class="op">});</span></span>
+<span id="cb21-330"><a href="#cb21-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-331"><a href="#cb21-331" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span> <span class="cf">catch</span> <span class="op">(</span>error<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb21-332"><a href="#cb21-332" aria-hidden="true" tabindex="-1"></a>                container<span class="op">.</span><span class="fu">innerHTML</span> <span class="op">=</span> `</span>
+<span id="cb21-333"><a href="#cb21-333" aria-hidden="true" tabindex="-1"></a>                    <span class="op">&lt;</span>p <span class="kw">class</span><span class="op">=</span><span class="st">"error"</span><span class="op">&gt;</span>Failed to load posts<span class="op">:</span> $<span class="op">{</span>error<span class="op">.</span><span class="fu">message</span><span class="op">}&lt;/</span>p<span class="op">&gt;</span></span>
+<span id="cb21-334"><a href="#cb21-334" aria-hidden="true" tabindex="-1"></a>                `<span class="op">;</span></span>
+<span id="cb21-335"><a href="#cb21-335" aria-hidden="true" tabindex="-1"></a>                console<span class="op">.</span><span class="fu">error</span><span class="op">(</span><span class="er">'</span>Error loading posts<span class="op">:</span><span class="er">'</span><span class="op">,</span> error<span class="op">);</span></span>
+<span id="cb21-336"><a href="#cb21-336" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb21-337"><a href="#cb21-337" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb21-338"><a href="#cb21-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-339"><a href="#cb21-339" aria-hidden="true" tabindex="-1"></a>        <span class="fu">loadPosts</span><span class="op">();</span></span>
+<span id="cb21-340"><a href="#cb21-340" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;/</span>script<span class="op">&gt;</span></span>
+<span id="cb21-341"><a href="#cb21-341" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>body<span class="op">&gt;</span></span>
+<span id="cb21-342"><a href="#cb21-342" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>html<span class="op">&gt;</span></span>
+<span id="cb21-343"><a href="#cb21-343" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb21-344"><a href="#cb21-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-345"><a href="#cb21-345" aria-hidden="true" tabindex="-1"></a>Save <span class="kw">this</span> as an <span class="bu">HTML</span> file and open it in a browser<span class="op">.</span> <span class="fu">It</span> fetches posts from your local WordPress site and displays them<span class="op">,</span> completely independently of WordPress themes<span class="op">.</span></span>
+<span id="cb21-346"><a href="#cb21-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-347"><a href="#cb21-347" aria-hidden="true" tabindex="-1"></a>```text</span>
+<span id="cb21-348"><a href="#cb21-348" aria-hidden="true" tabindex="-1"></a>Ask your AI<span class="op">:</span></span>
+<span id="cb21-349"><a href="#cb21-349" aria-hidden="true" tabindex="-1"></a>Walk me through <span class="kw">this</span> code<span class="op">.</span> <span class="fu">What</span> happens at each step<span class="op">?</span> How would I</span>
+<span id="cb21-350"><a href="#cb21-350" aria-hidden="true" tabindex="-1"></a>modify it to also show the post date and author name<span class="op">?</span></span>
+<span id="cb21-351"><a href="#cb21-351" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb21-352"><a href="#cb21-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-353"><a href="#cb21-353" aria-hidden="true" tabindex="-1"></a>### Fetching a Single Post</span>
+<span id="cb21-354"><a href="#cb21-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-355"><a href="#cb21-355" aria-hidden="true" tabindex="-1"></a>To get a specific post by ID or slug<span class="op">:</span></span>
+<span id="cb21-356"><a href="#cb21-356" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-357"><a href="#cb21-357" aria-hidden="true" tabindex="-1"></a>```javascript</span>
+<span id="cb21-358"><a href="#cb21-358" aria-hidden="true" tabindex="-1"></a><span class="co">// By ID</span></span>
+<span id="cb21-359"><a href="#cb21-359" aria-hidden="true" tabindex="-1"></a><span class="fu">fetch</span><span class="op">(</span><span class="er">'</span><span class="op">/</span>wp<span class="op">-</span>json<span class="op">/</span>wp<span class="op">/</span>v2<span class="op">/</span>posts<span class="op">/</span><span class="dv">42</span><span class="er">'</span><span class="op">)</span></span>
+<span id="cb21-360"><a href="#cb21-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-361"><a href="#cb21-361" aria-hidden="true" tabindex="-1"></a><span class="co">// By slug</span></span>
+<span id="cb21-362"><a href="#cb21-362" aria-hidden="true" tabindex="-1"></a><span class="fu">fetch</span><span class="op">(</span><span class="er">'</span><span class="op">/</span>wp<span class="op">-</span>json<span class="op">/</span>wp<span class="op">/</span>v2<span class="op">/</span>posts<span class="op">?</span>slug<span class="op">=</span>welcome<span class="op">-</span>to<span class="op">-</span>our<span class="op">-</span>blog<span class="er">'</span><span class="op">)</span></span>
+<span id="cb21-363"><a href="#cb21-363" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb21-364"><a href="#cb21-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-365"><a href="#cb21-365" aria-hidden="true" tabindex="-1"></a>### Custom Post <span class="bu">Types</span></span>
+<span id="cb21-366"><a href="#cb21-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-367"><a href="#cb21-367" aria-hidden="true" tabindex="-1"></a>If WordPress has custom post <span class="fu">types</span> <span class="op">(</span>like <span class="st">"products"</span> or <span class="st">"events"</span><span class="op">),</span> they may need to be exposed via the API<span class="op">.</span> <span class="fu">In</span> a plugin or theme<span class="op">:</span></span>
+<span id="cb21-368"><a href="#cb21-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-369"><a href="#cb21-369" aria-hidden="true" tabindex="-1"></a>```php</span>
+<span id="cb21-370"><a href="#cb21-370" aria-hidden="true" tabindex="-1"></a><span class="co">// Register custom post type with REST API support</span></span>
+<span id="cb21-371"><a href="#cb21-371" aria-hidden="true" tabindex="-1"></a><span class="fu">register_post_type</span><span class="op">(</span><span class="er">'</span>product<span class="er">'</span><span class="op">,</span> <span class="fu">array</span><span class="op">(</span></span>
+<span id="cb21-372"><a href="#cb21-372" aria-hidden="true" tabindex="-1"></a>    <span class="er">'</span>public<span class="er">'</span> <span class="op">=&gt;</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb21-373"><a href="#cb21-373" aria-hidden="true" tabindex="-1"></a>    <span class="er">'</span>show_in_rest<span class="er">'</span> <span class="op">=&gt;</span> <span class="kw">true</span><span class="op">,</span>  <span class="co">// This exposes it to the API</span></span>
+<span id="cb21-374"><a href="#cb21-374" aria-hidden="true" tabindex="-1"></a>    <span class="er">'</span>rest_base<span class="er">'</span> <span class="op">=&gt;</span> <span class="er">'</span>products<span class="er">'</span><span class="op">,</span> <span class="co">// Endpoint: /wp-json/wp/v2/products</span></span>
+<span id="cb21-375"><a href="#cb21-375" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ... other arguments</span></span>
+<span id="cb21-376"><a href="#cb21-376" aria-hidden="true" tabindex="-1"></a><span class="op">));</span></span>
+<span id="cb21-377"><a href="#cb21-377" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb21-378"><a href="#cb21-378" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-379"><a href="#cb21-379" aria-hidden="true" tabindex="-1"></a>Once exposed<span class="op">,</span> fetch them like any other content<span class="op">:</span></span>
+<span id="cb21-380"><a href="#cb21-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-381"><a href="#cb21-381" aria-hidden="true" tabindex="-1"></a>```javascript</span>
+<span id="cb21-382"><a href="#cb21-382" aria-hidden="true" tabindex="-1"></a><span class="fu">fetch</span><span class="op">(</span><span class="er">'</span><span class="op">/</span>wp<span class="op">-</span>json<span class="op">/</span>wp<span class="op">/</span>v2<span class="op">/</span>products<span class="op">?</span>_embed<span class="er">'</span><span class="op">)</span></span>
+<span id="cb21-383"><a href="#cb21-383" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb21-384"><a href="#cb21-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-385"><a href="#cb21-385" aria-hidden="true" tabindex="-1"></a>### Authentication <span class="cf">for</span> Protected Content</span>
+<span id="cb21-386"><a href="#cb21-386" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-387"><a href="#cb21-387" aria-hidden="true" tabindex="-1"></a>Public content is accessible without authentication<span class="op">.</span> <span class="fu">For</span> <span class="kw">protected</span> content or write operations<span class="op">,</span> you need authentication<span class="op">.</span></span>
+<span id="cb21-388"><a href="#cb21-388" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-389"><a href="#cb21-389" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Application Passwords<span class="op">**</span> <span class="op">(</span>WordPress <span class="fl">5.6</span><span class="op">+):</span></span>
+<span id="cb21-390"><a href="#cb21-390" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-391"><a href="#cb21-391" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> In WordPress<span class="op">:</span> Users → Your Profile → Application Passwords</span>
+<span id="cb21-392"><a href="#cb21-392" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Generate a password <span class="cf">for</span> your application</span>
+<span id="cb21-393"><a href="#cb21-393" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> Use Basic Authentication in requests<span class="op">:</span></span>
+<span id="cb21-394"><a href="#cb21-394" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-395"><a href="#cb21-395" aria-hidden="true" tabindex="-1"></a>```javascript</span>
+<span id="cb21-396"><a href="#cb21-396" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> credentials <span class="op">=</span> <span class="fu">btoa</span><span class="op">(</span><span class="er">'</span>username<span class="op">:</span>application<span class="op">-</span>password<span class="er">'</span><span class="op">);</span></span>
+<span id="cb21-397"><a href="#cb21-397" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-398"><a href="#cb21-398" aria-hidden="true" tabindex="-1"></a><span class="fu">fetch</span><span class="op">(</span><span class="er">'</span><span class="op">/</span>wp<span class="op">-</span>json<span class="op">/</span>wp<span class="op">/</span>v2<span class="op">/</span>posts<span class="er">'</span><span class="op">,</span> <span class="op">{</span></span>
+<span id="cb21-399"><a href="#cb21-399" aria-hidden="true" tabindex="-1"></a>    headers<span class="op">:</span> <span class="op">{</span></span>
+<span id="cb21-400"><a href="#cb21-400" aria-hidden="true" tabindex="-1"></a>        <span class="er">'</span>Authorization<span class="er">'</span><span class="op">:</span> `Basic $<span class="op">{</span>credentials<span class="op">}</span>`</span>
+<span id="cb21-401"><a href="#cb21-401" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb21-402"><a href="#cb21-402" aria-hidden="true" tabindex="-1"></a><span class="op">});</span></span>
+<span id="cb21-403"><a href="#cb21-403" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb21-404"><a href="#cb21-404" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-405"><a href="#cb21-405" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span> <span class="op">{.</span><span class="fu">callout</span><span class="op">-</span>warning<span class="op">}</span></span>
+<span id="cb21-406"><a href="#cb21-406" aria-hidden="true" tabindex="-1"></a>## <span class="bu">Security</span> Note</span>
+<span id="cb21-407"><a href="#cb21-407" aria-hidden="true" tabindex="-1"></a>Never expose application passwords in frontend JavaScript<span class="op">,</span> they<span class="er">'</span>d be visible to anyone<span class="op">.</span> <span class="fu">Authentication</span> is typically handled by a backend server that proxies requests to WordPress<span class="op">.</span></span>
+<span id="cb21-408"><a href="#cb21-408" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span></span>
+<span id="cb21-409"><a href="#cb21-409" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-410"><a href="#cb21-410" aria-hidden="true" tabindex="-1"></a>### CORS Considerations</span>
+<span id="cb21-411"><a href="#cb21-411" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-412"><a href="#cb21-412" aria-hidden="true" tabindex="-1"></a>If your frontend and WordPress are on different domains<span class="op">,</span> you<span class="er">'</span>ll encounter CORS<span class="op">.</span> <span class="fu">WordPress</span> needs to allow requests from your frontend<span class="er">'</span>s origin<span class="op">.</span></span>
+<span id="cb21-413"><a href="#cb21-413" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-414"><a href="#cb21-414" aria-hidden="true" tabindex="-1"></a><span class="fu">A</span> plugin or functions<span class="op">.</span><span class="fu">php</span> snippet can enable CORS<span class="op">:</span></span>
+<span id="cb21-415"><a href="#cb21-415" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-416"><a href="#cb21-416" aria-hidden="true" tabindex="-1"></a>```php</span>
+<span id="cb21-417"><a href="#cb21-417" aria-hidden="true" tabindex="-1"></a><span class="co">// Allow CORS from specific origin</span></span>
+<span id="cb21-418"><a href="#cb21-418" aria-hidden="true" tabindex="-1"></a><span class="fu">add_action</span><span class="op">(</span><span class="er">'</span>rest_api_init<span class="er">'</span><span class="op">,</span> <span class="fu">function</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb21-419"><a href="#cb21-419" aria-hidden="true" tabindex="-1"></a>    <span class="fu">remove_filter</span><span class="op">(</span><span class="er">'</span>rest_pre_serve_request<span class="er">'</span><span class="op">,</span> <span class="er">'</span>rest_send_cors_headers<span class="er">'</span><span class="op">);</span></span>
+<span id="cb21-420"><a href="#cb21-420" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_filter</span><span class="op">(</span><span class="er">'</span>rest_pre_serve_request<span class="er">'</span><span class="op">,</span> <span class="fu">function</span><span class="op">(</span>$value<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb21-421"><a href="#cb21-421" aria-hidden="true" tabindex="-1"></a>        <span class="fu">header</span><span class="op">(</span><span class="er">'</span>Access<span class="op">-</span><span class="bu">Control</span><span class="op">-</span>Allow<span class="op">-</span>Origin<span class="op">:</span> https<span class="op">:</span><span class="co">//your-frontend-domain.com');</span></span>
+<span id="cb21-422"><a href="#cb21-422" aria-hidden="true" tabindex="-1"></a>        <span class="fu">header</span><span class="op">(</span><span class="er">'</span>Access<span class="op">-</span><span class="bu">Control</span><span class="op">-</span>Allow<span class="op">-</span>Methods<span class="op">:</span> GET<span class="op">,</span> POST<span class="op">,</span> OPTIONS<span class="er">'</span><span class="op">);</span></span>
+<span id="cb21-423"><a href="#cb21-423" aria-hidden="true" tabindex="-1"></a>        <span class="fu">header</span><span class="op">(</span><span class="er">'</span>Access<span class="op">-</span><span class="bu">Control</span><span class="op">-</span>Allow<span class="op">-</span>Credentials<span class="op">:</span> true<span class="er">'</span><span class="op">);</span></span>
+<span id="cb21-424"><a href="#cb21-424" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> $value<span class="op">;</span></span>
+<span id="cb21-425"><a href="#cb21-425" aria-hidden="true" tabindex="-1"></a>    <span class="op">});</span></span>
+<span id="cb21-426"><a href="#cb21-426" aria-hidden="true" tabindex="-1"></a><span class="op">});</span></span>
+<span id="cb21-427"><a href="#cb21-427" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb21-428"><a href="#cb21-428" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-429"><a href="#cb21-429" aria-hidden="true" tabindex="-1"></a>For local development<span class="op">,</span> both often run on <span class="fu">localhost</span> <span class="op">(</span>different ports<span class="op">),</span> which typically works without extra configuration<span class="op">.</span></span>
+<span id="cb21-430"><a href="#cb21-430" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-431"><a href="#cb21-431" aria-hidden="true" tabindex="-1"></a>## Building Your Mental Model</span>
+<span id="cb21-432"><a href="#cb21-432" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-433"><a href="#cb21-433" aria-hidden="true" tabindex="-1"></a>### Traditional vs Headless Architecture</span>
+<span id="cb21-434"><a href="#cb21-434" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-435"><a href="#cb21-435" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Traditional WordPress<span class="op">:**</span></span>
+<span id="cb21-436"><a href="#cb21-436" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-437"><a href="#cb21-437" aria-hidden="true" tabindex="-1"></a>```text</span>
+<span id="cb21-438"><a href="#cb21-438" aria-hidden="true" tabindex="-1"></a>┌────────────────────────────────────────┐</span>
+<span id="cb21-439"><a href="#cb21-439" aria-hidden="true" tabindex="-1"></a>│             WordPress                   │</span>
+<span id="cb21-440"><a href="#cb21-440" aria-hidden="true" tabindex="-1"></a>│  ┌─────────────┐  ┌─────────────────┐  │</span>
+<span id="cb21-441"><a href="#cb21-441" aria-hidden="true" tabindex="-1"></a>│  │   Content   │──│     Theme       │  │</span>
+<span id="cb21-442"><a href="#cb21-442" aria-hidden="true" tabindex="-1"></a>│  │  Database   │  │  <span class="op">(</span>Presentation<span class="op">)</span> │  │</span>
+<span id="cb21-443"><a href="#cb21-443" aria-hidden="true" tabindex="-1"></a>│  └─────────────┘  └─────────────────┘  │</span>
+<span id="cb21-444"><a href="#cb21-444" aria-hidden="true" tabindex="-1"></a>└───────────────────────────┬────────────┘</span>
+<span id="cb21-445"><a href="#cb21-445" aria-hidden="true" tabindex="-1"></a>                            │ <span class="bu">HTML</span></span>
+<span id="cb21-446"><a href="#cb21-446" aria-hidden="true" tabindex="-1"></a>                            ▼</span>
+<span id="cb21-447"><a href="#cb21-447" aria-hidden="true" tabindex="-1"></a>                        Browser</span>
+<span id="cb21-448"><a href="#cb21-448" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb21-449"><a href="#cb21-449" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-450"><a href="#cb21-450" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Headless WordPress<span class="op">:**</span></span>
+<span id="cb21-451"><a href="#cb21-451" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-452"><a href="#cb21-452" aria-hidden="true" tabindex="-1"></a>```text</span>
+<span id="cb21-453"><a href="#cb21-453" aria-hidden="true" tabindex="-1"></a>┌──────────────────┐        ┌─────────────────┐</span>
+<span id="cb21-454"><a href="#cb21-454" aria-hidden="true" tabindex="-1"></a>│    WordPress     │        │    Frontend     │</span>
+<span id="cb21-455"><a href="#cb21-455" aria-hidden="true" tabindex="-1"></a>│  ┌────────────┐  │  API   │  <span class="op">(</span>React<span class="op">,</span> etc<span class="op">.)</span>  │</span>
+<span id="cb21-456"><a href="#cb21-456" aria-hidden="true" tabindex="-1"></a>│  │  Content   │  │◄──────►│                 │</span>
+<span id="cb21-457"><a href="#cb21-457" aria-hidden="true" tabindex="-1"></a>│  │  Database  │  │  JSON  │                 │</span>
+<span id="cb21-458"><a href="#cb21-458" aria-hidden="true" tabindex="-1"></a>│  └────────────┘  │        └────────┬────────┘</span>
+<span id="cb21-459"><a href="#cb21-459" aria-hidden="true" tabindex="-1"></a>└──────────────────┘                 │ <span class="bu">HTML</span></span>
+<span id="cb21-460"><a href="#cb21-460" aria-hidden="true" tabindex="-1"></a>                                     ▼</span>
+<span id="cb21-461"><a href="#cb21-461" aria-hidden="true" tabindex="-1"></a>                                 Browser</span>
+<span id="cb21-462"><a href="#cb21-462" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb21-463"><a href="#cb21-463" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-464"><a href="#cb21-464" aria-hidden="true" tabindex="-1"></a>In headless<span class="op">,</span> WordPress<span class="er">'</span>s theming layer isn<span class="er">'</span>t used<span class="op">.</span> <span class="fu">It</span><span class="er">'</span>s purely a content repository<span class="op">.</span></span>
+<span id="cb21-465"><a href="#cb21-465" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-466"><a href="#cb21-466" aria-hidden="true" tabindex="-1"></a>### When Headless Makes Sense</span>
+<span id="cb21-467"><a href="#cb21-467" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-468"><a href="#cb21-468" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Scenario <span class="op">|</span> Why Headless<span class="op">?</span> <span class="op">|</span></span>
+<span id="cb21-469"><a href="#cb21-469" aria-hidden="true" tabindex="-1"></a><span class="op">|----------|---------------|</span></span>
+<span id="cb21-470"><a href="#cb21-470" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Multi<span class="op">-</span>channel delivery <span class="op">|</span> Same content to web<span class="op">,</span> iOS app<span class="op">,</span> Android app<span class="op">,</span> smart displays <span class="op">|</span></span>
+<span id="cb21-471"><a href="#cb21-471" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Maximum performance <span class="op">|</span> Static site generation<span class="op">,</span> edge caching <span class="op">|</span></span>
+<span id="cb21-472"><a href="#cb21-472" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Complex frontend needs <span class="op">|</span> Single<span class="op">-</span>page applications<span class="op">,</span> heavy JavaScript interactivity <span class="op">|</span></span>
+<span id="cb21-473"><a href="#cb21-473" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Developer preferences <span class="op">|</span> Modern frontend frameworks<span class="op">,</span> component architecture <span class="op">|</span></span>
+<span id="cb21-474"><a href="#cb21-474" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Integration requirements <span class="op">|</span> Content feeds into existing applications <span class="op">|</span></span>
+<span id="cb21-475"><a href="#cb21-475" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-476"><a href="#cb21-476" aria-hidden="true" tabindex="-1"></a>### When Traditional Makes Sense</span>
+<span id="cb21-477"><a href="#cb21-477" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-478"><a href="#cb21-478" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Scenario <span class="op">|</span> Why Traditional<span class="op">?</span> <span class="op">|</span></span>
+<span id="cb21-479"><a href="#cb21-479" aria-hidden="true" tabindex="-1"></a><span class="op">|----------|------------------|</span></span>
+<span id="cb21-480"><a href="#cb21-480" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Content editors need preview <span class="op">|</span> See exactly what<span class="er">'</span>s published <span class="op">|</span></span>
+<span id="cb21-481"><a href="#cb21-481" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Simple sites <span class="op">|</span> Blog<span class="op">,</span> brochure site<span class="op">,</span> small business <span class="op">|</span></span>
+<span id="cb21-482"><a href="#cb21-482" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Limited technical resources <span class="op">|</span> No frontend developers available <span class="op">|</span></span>
+<span id="cb21-483"><a href="#cb21-483" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Plugin<span class="op">-</span>dependent features <span class="op">|</span> Many plugins expect traditional setup <span class="op">|</span></span>
+<span id="cb21-484"><a href="#cb21-484" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Budget constraints <span class="op">|</span> Two systems cost more to maintain <span class="op">|</span></span>
+<span id="cb21-485"><a href="#cb21-485" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-486"><a href="#cb21-486" aria-hidden="true" tabindex="-1"></a>### The Complexity Cost</span>
+<span id="cb21-487"><a href="#cb21-487" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-488"><a href="#cb21-488" aria-hidden="true" tabindex="-1"></a>Headless adds complexity<span class="op">:</span></span>
+<span id="cb21-489"><a href="#cb21-489" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-490"><a href="#cb21-490" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Two codebases instead of one</span>
+<span id="cb21-491"><a href="#cb21-491" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Two deployments to manage</span>
+<span id="cb21-492"><a href="#cb21-492" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Content preview is harder</span>
+<span id="cb21-493"><a href="#cb21-493" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Some WordPress plugins don<span class="er">'</span>t work</span>
+<span id="cb21-494"><a href="#cb21-494" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> More technical expertise required</span>
+<span id="cb21-495"><a href="#cb21-495" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-496"><a href="#cb21-496" aria-hidden="true" tabindex="-1"></a>This complexity has costs<span class="op">.</span> <span class="fu">Headless</span> is a tool<span class="op">,</span> use it when benefits outweigh costs<span class="op">.</span></span>
+<span id="cb21-497"><a href="#cb21-497" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-498"><a href="#cb21-498" aria-hidden="true" tabindex="-1"></a>## Business Applications</span>
+<span id="cb21-499"><a href="#cb21-499" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-500"><a href="#cb21-500" aria-hidden="true" tabindex="-1"></a>### Multi<span class="op">-</span><span class="bu">Channel</span> Content</span>
+<span id="cb21-501"><a href="#cb21-501" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-502"><a href="#cb21-502" aria-hidden="true" tabindex="-1"></a>Organisations increasingly need content everywhere<span class="op">:</span></span>
+<span id="cb21-503"><a href="#cb21-503" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-504"><a href="#cb21-504" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Corporate website</span>
+<span id="cb21-505"><a href="#cb21-505" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Mobile applications</span>
+<span id="cb21-506"><a href="#cb21-506" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Internal dashboards</span>
+<span id="cb21-507"><a href="#cb21-507" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Digital signage</span>
+<span id="cb21-508"><a href="#cb21-508" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Partner integrations</span>
+<span id="cb21-509"><a href="#cb21-509" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-510"><a href="#cb21-510" aria-hidden="true" tabindex="-1"></a>With headless<span class="op">,</span> content is created once and consumed everywhere<span class="op">.</span> <span class="fu">WordPress</span> becomes the <span class="st">"single source of truth."</span></span>
+<span id="cb21-511"><a href="#cb21-511" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-512"><a href="#cb21-512" aria-hidden="true" tabindex="-1"></a>### Performance and SEO</span>
+<span id="cb21-513"><a href="#cb21-513" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-514"><a href="#cb21-514" aria-hidden="true" tabindex="-1"></a>Headless frontends can be<span class="op">:</span></span>
+<span id="cb21-515"><a href="#cb21-515" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-516"><a href="#cb21-516" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Statically <span class="fu">generated</span> <span class="op">(</span>fastest possible<span class="op">)</span></span>
+<span id="cb21-517"><a href="#cb21-517" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Cached at the <span class="fu">edge</span> <span class="op">(</span>CDN<span class="op">)</span></span>
+<span id="cb21-518"><a href="#cb21-518" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Optimised specifically <span class="cf">for</span> performance</span>
+<span id="cb21-519"><a href="#cb21-519" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-520"><a href="#cb21-520" aria-hidden="true" tabindex="-1"></a>This matters <span class="cf">for</span> SEO and user experience<span class="op">.</span> <span class="fu">Google</span> measures page speed<span class="op">.</span></span>
+<span id="cb21-521"><a href="#cb21-521" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-522"><a href="#cb21-522" aria-hidden="true" tabindex="-1"></a>### <span class="bu">Security</span> Benefits</span>
+<span id="cb21-523"><a href="#cb21-523" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-524"><a href="#cb21-524" aria-hidden="true" tabindex="-1"></a>In headless architecture<span class="op">:</span></span>
+<span id="cb21-525"><a href="#cb21-525" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-526"><a href="#cb21-526" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> WordPress can be hidden from the <span class="kw">public</span> <span class="op">(</span><span class="kw">private</span> network<span class="op">)</span></span>
+<span id="cb21-527"><a href="#cb21-527" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Attack surface is reduced</span>
+<span id="cb21-528"><a href="#cb21-528" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Frontend has no direct database access</span>
+<span id="cb21-529"><a href="#cb21-529" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Compromising the frontend doesn<span class="er">'</span>t compromise content</span>
+<span id="cb21-530"><a href="#cb21-530" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-531"><a href="#cb21-531" aria-hidden="true" tabindex="-1"></a>For high<span class="op">-</span>security needs<span class="op">,</span> <span class="kw">this</span> separation is valuable<span class="op">.</span></span>
+<span id="cb21-532"><a href="#cb21-532" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-533"><a href="#cb21-533" aria-hidden="true" tabindex="-1"></a>### Developer Experience</span>
+<span id="cb21-534"><a href="#cb21-534" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-535"><a href="#cb21-535" aria-hidden="true" tabindex="-1"></a>Modern frontend developers often prefer<span class="op">:</span></span>
+<span id="cb21-536"><a href="#cb21-536" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-537"><a href="#cb21-537" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> React<span class="op">,</span> Vue<span class="op">,</span> or similar frameworks</span>
+<span id="cb21-538"><a href="#cb21-538" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="bu">Component</span><span class="op">-</span>based architecture</span>
+<span id="cb21-539"><a href="#cb21-539" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> TypeScript</span>
+<span id="cb21-540"><a href="#cb21-540" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Modern build tools</span>
+<span id="cb21-541"><a href="#cb21-541" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-542"><a href="#cb21-542" aria-hidden="true" tabindex="-1"></a>Headless lets them use their preferred tools <span class="cf">while</span> leveraging WordPress<span class="er">'</span>s content management<span class="op">.</span></span>
+<span id="cb21-543"><a href="#cb21-543" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-544"><a href="#cb21-544" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span> <span class="op">{.</span><span class="fu">callout</span><span class="op">-</span>note<span class="op">}</span></span>
+<span id="cb21-545"><a href="#cb21-545" aria-hidden="true" tabindex="-1"></a>## Skills You Are Building</span>
+<span id="cb21-546"><a href="#cb21-546" aria-hidden="true" tabindex="-1"></a>This develops <span class="op">**</span>making and defending technology choices<span class="op">**</span> and <span class="op">**</span>assessing emerging technologies<span class="op">**.</span> <span class="fu">Headless</span> architecture is a significant trend in web development<span class="op">.</span> <span class="fu">Understanding</span> when it applies<span class="op">,</span> and when it doesn<span class="er">'</span>t<span class="op">,</span> demonstrates professional judgment<span class="op">.</span></span>
+<span id="cb21-547"><a href="#cb21-547" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span></span>
+<span id="cb21-548"><a href="#cb21-548" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-549"><a href="#cb21-549" aria-hidden="true" tabindex="-1"></a>## Practice Exercises</span>
+<span id="cb21-550"><a href="#cb21-550" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-551"><a href="#cb21-551" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span> <span class="op">{.</span><span class="fu">callout</span><span class="op">-</span>note<span class="op">}</span></span>
+<span id="cb21-552"><a href="#cb21-552" aria-hidden="true" tabindex="-1"></a>## Exercise Levels</span>
+<span id="cb21-553"><a href="#cb21-553" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">1</span><span class="op">**:</span> Direct application</span>
+<span id="cb21-554"><a href="#cb21-554" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">2</span><span class="op">**:</span> Minor modifications</span>
+<span id="cb21-555"><a href="#cb21-555" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">3</span><span class="op">**:</span> Combining concepts</span>
+<span id="cb21-556"><a href="#cb21-556" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">4</span><span class="op">**:</span> Problem<span class="op">-</span>solving</span>
+<span id="cb21-557"><a href="#cb21-557" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">5</span><span class="op">**:</span> Open<span class="op">-</span>ended design</span>
+<span id="cb21-558"><a href="#cb21-558" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span></span>
+<span id="cb21-559"><a href="#cb21-559" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-560"><a href="#cb21-560" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">8.1</span><span class="op">:</span> Explore the <span class="fu">API</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">1</span><span class="op">)</span></span>
+<span id="cb21-561"><a href="#cb21-561" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-562"><a href="#cb21-562" aria-hidden="true" tabindex="-1"></a>Using your local WordPress site<span class="op">:</span></span>
+<span id="cb21-563"><a href="#cb21-563" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-564"><a href="#cb21-564" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Open a browser and visit `<span class="op">/</span>wp<span class="op">-</span>json<span class="op">/</span>wp<span class="op">/</span>v2<span class="op">/</span>posts`</span>
+<span id="cb21-565"><a href="#cb21-565" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Explore the JSON structure<span class="op">,</span> identify title<span class="op">,</span> content<span class="op">,</span> date<span class="op">,</span> and other fields</span>
+<span id="cb21-566"><a href="#cb21-566" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> Try different endpoints<span class="op">:</span> `<span class="op">/</span>pages`<span class="op">,</span> `<span class="op">/</span>categories`<span class="op">,</span> `<span class="op">/</span>media`</span>
+<span id="cb21-567"><a href="#cb21-567" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> Add `<span class="op">?</span>_embed` and observe how the response changes</span>
+<span id="cb21-568"><a href="#cb21-568" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-569"><a href="#cb21-569" aria-hidden="true" tabindex="-1"></a><span class="bu">Document</span> your findings with screenshots<span class="op">.</span></span>
+<span id="cb21-570"><a href="#cb21-570" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-571"><a href="#cb21-571" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">8.2</span><span class="op">:</span> Build a Post <span class="bu">List</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">2</span><span class="op">)</span></span>
+<span id="cb21-572"><a href="#cb21-572" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-573"><a href="#cb21-573" aria-hidden="true" tabindex="-1"></a>Create an <span class="bu">HTML</span> page that<span class="op">:</span></span>
+<span id="cb21-574"><a href="#cb21-574" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-575"><a href="#cb21-575" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Fetches the <span class="dv">3</span> most recent posts from your WordPress site</span>
+<span id="cb21-576"><a href="#cb21-576" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Displays title<span class="op">,</span> date<span class="op">,</span> and excerpt <span class="cf">for</span> each</span>
+<span id="cb21-577"><a href="#cb21-577" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> Handles loading and error states</span>
+<span id="cb21-578"><a href="#cb21-578" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> Styles the output with basic <span class="bu">CSS</span></span>
+<span id="cb21-579"><a href="#cb21-579" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-580"><a href="#cb21-580" aria-hidden="true" tabindex="-1"></a>Test it in your browser<span class="op">.</span></span>
+<span id="cb21-581"><a href="#cb21-581" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-582"><a href="#cb21-582" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">8.3</span><span class="op">:</span> <span class="bu">Filter</span> and <span class="fu">Search</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">3</span><span class="op">)</span></span>
+<span id="cb21-583"><a href="#cb21-583" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-584"><a href="#cb21-584" aria-hidden="true" tabindex="-1"></a>Extend your post list to include<span class="op">:</span></span>
+<span id="cb21-585"><a href="#cb21-585" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-586"><a href="#cb21-586" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> A search input that filters posts by search term</span>
+<span id="cb21-587"><a href="#cb21-587" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> A category dropdown that filters by category</span>
+<span id="cb21-588"><a href="#cb21-588" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> <span class="fu">Pagination</span> <span class="op">(</span>Next<span class="op">/</span>Previous buttons<span class="op">)</span></span>
+<span id="cb21-589"><a href="#cb21-589" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-590"><a href="#cb21-590" aria-hidden="true" tabindex="-1"></a>This combines API parameters with JavaScript event handling<span class="op">.</span></span>
+<span id="cb21-591"><a href="#cb21-591" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-592"><a href="#cb21-592" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">8.4</span><span class="op">:</span> Architecture <span class="fu">Recommendation</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">4</span><span class="op">)</span></span>
+<span id="cb21-593"><a href="#cb21-593" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-594"><a href="#cb21-594" aria-hidden="true" tabindex="-1"></a>A regional newspaper wants to modernise their digital presence<span class="op">.</span> <span class="fu">They</span> have<span class="op">:</span></span>
+<span id="cb21-595"><a href="#cb21-595" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-596"><a href="#cb21-596" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> A <span class="dv">15</span><span class="op">-</span>year<span class="op">-</span>old WordPress site with <span class="dv">10</span><span class="op">,</span><span class="bn">000</span><span class="op">+</span> articles</span>
+<span id="cb21-597"><a href="#cb21-597" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> A mobile app in development</span>
+<span id="cb21-598"><a href="#cb21-598" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Plans <span class="cf">for</span> a digital subscriber paywall</span>
+<span id="cb21-599"><a href="#cb21-599" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> A team of journalists comfortable with WordPress</span>
+<span id="cb21-600"><a href="#cb21-600" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> One full<span class="op">-</span>stack developer</span>
+<span id="cb21-601"><a href="#cb21-601" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-602"><a href="#cb21-602" aria-hidden="true" tabindex="-1"></a>Write a <span class="dv">400</span><span class="op">-</span>word recommendation addressing<span class="op">:</span></span>
+<span id="cb21-603"><a href="#cb21-603" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-604"><a href="#cb21-604" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Should they go headless<span class="op">,</span> traditional<span class="op">,</span> or hybrid<span class="op">?</span></span>
+<span id="cb21-605"><a href="#cb21-605" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> What are the risks of each approach<span class="op">?</span></span>
+<span id="cb21-606"><a href="#cb21-606" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> What would you implement first<span class="op">?</span></span>
+<span id="cb21-607"><a href="#cb21-607" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> How would you handle the transition<span class="op">?</span></span>
+<span id="cb21-608"><a href="#cb21-608" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-609"><a href="#cb21-609" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">8.5</span><span class="op">:</span> Architecture <span class="fu">Design</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">5</span><span class="op">)</span></span>
+<span id="cb21-610"><a href="#cb21-610" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-611"><a href="#cb21-611" aria-hidden="true" tabindex="-1"></a>Design a headless architecture <span class="cf">for</span> a restaurant group with<span class="op">:</span></span>
+<span id="cb21-612"><a href="#cb21-612" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-613"><a href="#cb21-613" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="dv">5</span> restaurant <span class="fu">locations</span> <span class="op">(</span>different brands<span class="op">)</span></span>
+<span id="cb21-614"><a href="#cb21-614" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Shared menu items across some locations</span>
+<span id="cb21-615"><a href="#cb21-615" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="bu">Location</span><span class="op">-</span>specific events and specials</span>
+<span id="cb21-616"><a href="#cb21-616" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> A central marketing team</span>
+<span id="cb21-617"><a href="#cb21-617" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Mobile app plans <span class="cf">for</span> ordering</span>
+<span id="cb21-618"><a href="#cb21-618" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-619"><a href="#cb21-619" aria-hidden="true" tabindex="-1"></a>Create a diagram showing<span class="op">:</span></span>
+<span id="cb21-620"><a href="#cb21-620" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-621"><a href="#cb21-621" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> What WordPress manages</span>
+<span id="cb21-622"><a href="#cb21-622" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> What the API provides</span>
+<span id="cb21-623"><a href="#cb21-623" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> What the <span class="fu">frontend</span><span class="op">(</span>s<span class="op">)</span> display</span>
+<span id="cb21-624"><a href="#cb21-624" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> How content flows from creation to display</span>
+<span id="cb21-625"><a href="#cb21-625" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-626"><a href="#cb21-626" aria-hidden="true" tabindex="-1"></a>Write a <span class="dv">500</span><span class="op">-</span>word explanation of your design decisions<span class="op">.</span></span>
+<span id="cb21-627"><a href="#cb21-627" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-628"><a href="#cb21-628" aria-hidden="true" tabindex="-1"></a>## Chapter Summary</span>
+<span id="cb21-629"><a href="#cb21-629" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-630"><a href="#cb21-630" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Headless architecture separates content management from presentation</span>
+<span id="cb21-631"><a href="#cb21-631" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> The WordPress REST API exposes content as JSON data</span>
+<span id="cb21-632"><a href="#cb21-632" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Frontends fetch and display content independently</span>
+<span id="cb21-633"><a href="#cb21-633" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> `_embed` includes related data like images and authors</span>
+<span id="cb21-634"><a href="#cb21-634" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Headless adds complexity but enables multi<span class="op">-</span>channel delivery and modern frontends</span>
+<span id="cb21-635"><a href="#cb21-635" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Architecture choice depends on requirements<span class="op">,</span> resources<span class="op">,</span> and trade<span class="op">-</span>offs</span>
+<span id="cb21-636"><a href="#cb21-636" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-637"><a href="#cb21-637" aria-hidden="true" tabindex="-1"></a>## Reflection</span>
+<span id="cb21-638"><a href="#cb21-638" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-639"><a href="#cb21-639" aria-hidden="true" tabindex="-1"></a>Before moving to the Business Website Project<span class="op">,</span> ensure you can<span class="op">:</span></span>
+<span id="cb21-640"><a href="#cb21-640" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-641"><a href="#cb21-641" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Explain headless architecture without jargon</span>
+<span id="cb21-642"><a href="#cb21-642" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Fetch WordPress content using the REST API</span>
+<span id="cb21-643"><a href="#cb21-643" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Use API parameters to filter and paginate results</span>
+<span id="cb21-644"><a href="#cb21-644" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Access embedded data like featured images</span>
+<span id="cb21-645"><a href="#cb21-645" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Articulate when headless makes sense and when it doesn<span class="er">'</span>t</span>
+<span id="cb21-646"><a href="#cb21-646" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Describe the trade<span class="op">-</span>offs of headless vs<span class="op">.</span> <span class="fu">traditional</span> WordPress</span>
+<span id="cb21-647"><a href="#cb21-647" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-648"><a href="#cb21-648" aria-hidden="true" tabindex="-1"></a>## Your Learning Journal</span>
+<span id="cb21-649"><a href="#cb21-649" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-650"><a href="#cb21-650" aria-hidden="true" tabindex="-1"></a>Record your responses to these prompts<span class="op">:</span></span>
+<span id="cb21-651"><a href="#cb21-651" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-652"><a href="#cb21-652" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> <span class="op">**</span>Architecture Thinking<span class="op">**:</span> When you visit websites<span class="op">,</span> can you guess which might be using headless architecture<span class="op">?</span> What clues suggest headless vs<span class="op">.</span> <span class="fu">traditional</span><span class="op">?</span></span>
+<span id="cb21-653"><a href="#cb21-653" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-654"><a href="#cb21-654" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> <span class="op">**</span>API Exploration<span class="op">**:</span> What surprised you about the WordPress REST API<span class="op">?</span> What data was available that you didn<span class="er">'</span>t expect<span class="op">?</span></span>
+<span id="cb21-655"><a href="#cb21-655" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-656"><a href="#cb21-656" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> <span class="op">**</span>AI Conversation Reflection<span class="op">**:</span> What question about headless architecture did your AI partner help clarify<span class="op">?</span></span>
+<span id="cb21-657"><a href="#cb21-657" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-658"><a href="#cb21-658" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> <span class="op">**</span>Trade<span class="op">-</span>off Assessment<span class="op">**:</span> Think of a website you might build<span class="op">.</span> <span class="fu">Would</span> headless be appropriate<span class="op">?</span> Why or why not<span class="op">?</span></span>
+<span id="cb21-659"><a href="#cb21-659" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-660"><a href="#cb21-660" aria-hidden="true" tabindex="-1"></a>## Next Steps</span>
+<span id="cb21-661"><a href="#cb21-661" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-662"><a href="#cb21-662" aria-hidden="true" tabindex="-1"></a>You<span class="er">'</span>ve completed Part II<span class="op">:</span> Content Management <span class="cf">for</span> Business<span class="op">.</span> <span class="fu">You</span> understand<span class="op">:</span></span>
+<span id="cb21-663"><a href="#cb21-663" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-664"><a href="#cb21-664" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Why CMS matters and when to use one</span>
+<span id="cb21-665"><a href="#cb21-665" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> WordPress as a platform with an ecosystem</span>
+<span id="cb21-666"><a href="#cb21-666" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> How to extend WordPress professionally</span>
+<span id="cb21-667"><a href="#cb21-667" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Headless architecture and the REST API</span>
+<span id="cb21-668"><a href="#cb21-668" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-669"><a href="#cb21-669" aria-hidden="true" tabindex="-1"></a>In <span class="at">@sec</span><span class="op">-</span>project<span class="op">-</span>business<span class="op">-</span>site<span class="op">,</span> you<span class="er">'</span>ll build a complete WordPress business site<span class="op">,</span> applying everything from <span class="kw">this</span> part<span class="op">.</span> <span class="fu">This</span> project demonstrates your ability to make and implement technology decisions <span class="cf">for</span> real business needs<span class="op">.</span></span>
+<span id="cb21-670"><a href="#cb21-670" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-671"><a href="#cb21-671" aria-hidden="true" tabindex="-1"></a><span class="fu">Then</span><span class="op">,</span> in Part III<span class="op">,</span> we<span class="er">'</span>ll build on the API knowledge from <span class="kw">this</span> chapter to create React frontends<span class="op">,</span> bringing modern frontend development into your skillset<span class="op">.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
