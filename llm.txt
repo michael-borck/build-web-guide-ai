@@ -48,7 +48,7 @@ The book progresses from foundations to full applications:
 
 Part 0 introduces your AI development partnership, how to work with AI effectively from day one.
 
-Part 1 covers web fundamentals: HTML structure, CSS presentation, JavaScript behaviour. You understand the building blocks before assembling them.
+Part 1 covers web fundamentals using vanilla HTML, CSS, and JavaScript. No frameworks, no build tools. This is deliberate. Every framework, React included, ultimately produces HTML, CSS, and JavaScript that a browser renders. Understanding these fundamentals means you can debug anything built on top of them. It also teaches you to control AI. If you delegate a web project to AI without constraints, it will probably choose React, set up a build system, and produce something that works but that you cannot modify or explain. Part 1 gives you practice guiding AI within constraints, building the habit of directing rather than delegating.
 
 Part 2 moves to platforms: WordPress for rapid development, content management, and extending with plugins and themes.
 
@@ -1890,6 +1890,8 @@ SOURCE: projects/project-portfolio.qmd
 ============================================================
 
 # Project: Portfolio Website 
+
+The online edition at books.borck.education includes links to example implementations, starter code, and companion repositories for each project.
 
 ## Project Overview
 
@@ -3955,6 +3957,8 @@ SOURCE: projects/project-business-site.qmd
 
 # Project: Business Website with WordPress 
 
+The online edition at books.borck.education includes links to example implementations, WordPress backups, and companion resources for each project.
+
 ## Project Overview
 
 Part II taught you to think about content management strategically: when to use a CMS, how to evaluate platforms and plugins, and how WordPress architecture works. Now you'll apply that knowledge to build a complete business website.
@@ -5245,6 +5249,8 @@ SOURCE: projects/project-react-integration.qmd
 ============================================================
 
 # Project: React Integration 
+
+The online edition at books.borck.education includes links to example implementations, starter code, and companion resources for each project.
 
 ## Project Overview
 
