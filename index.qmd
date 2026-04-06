@@ -12,10 +12,10 @@ The book covers the full spectrum of web decisions: hand-coded HTML/CSS/JavaScri
 
 ## Who This Book Is For
 
-- Students in business technology or web development courses
-- Career changers entering tech from business backgrounds
 - Professionals who need to understand web development for their roles
-- Anyone who wants to build web solutions with AI assistance
+- Career changers entering tech from business backgrounds
+- Anyone who wants to build web solutions with AI as a partner
+- People who need to evaluate web technologies, not just use them
 
 No prior programming experience required. We start from scratch.
 
