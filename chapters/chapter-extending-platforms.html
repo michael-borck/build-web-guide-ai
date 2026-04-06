@@ -332,7 +332,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/reading-list.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Weekly Reading List</span></a>
+ <span class="menu-text">Recommended Resources</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -606,7 +606,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="the-concept-first" class="level2" data-number="9.1">
 <h2 data-number="9.1" class="anchored" data-anchor-id="the-concept-first"><span class="header-section-number">9.1</span> The Concept First</h2>
-<p>In <a href="chapter-wordpress-platform.html" class="quarto-xref"><span>Chapter 8</span></a>, you learned that WordPress’s value lies in its ecosystem. Now we’ll learn to extend WordPress professionally—using plugins wisely, customising safely, and making business decisions about when to build versus when to buy.</p>
+<p>In <a href="chapter-wordpress-platform.html" class="quarto-xref"><span>Chapter 8</span></a>, you learned that WordPress’s value lies in its ecosystem. Now we’ll learn to extend WordPress professionally, using plugins wisely, customising safely, and making business decisions about when to build versus when to buy.</p>
 <p>Here’s the tension: plugins make WordPress powerful, but plugins also create risk. Every plugin you add:</p>
 <ul>
 <li>Depends on someone else maintaining it</li>
@@ -614,7 +614,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Might introduce security vulnerabilities</li>
 <li>Adds complexity to troubleshoot</li>
 </ul>
-<p>Professional WordPress development isn’t about installing the most plugins—it’s about installing the <em>right</em> plugins and knowing when custom development makes more sense.</p>
+<p>Professional WordPress development isn’t about installing the most plugins, it’s about installing the <em>right</em> plugins and knowing when custom development makes more sense.</p>
 </section>
 <section id="understanding-through-build-vs-buy" class="level2" data-number="9.2">
 <h2 data-number="9.2" class="anchored" data-anchor-id="understanding-through-build-vs-buy"><span class="header-section-number">9.2</span> Understanding Through Build vs Buy</h2>
@@ -696,7 +696,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="exploration-1-plugin-evaluation-framework" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-1-plugin-evaluation-framework">Exploration 1: Plugin Evaluation Framework</h3>
 <p>When multiple plugins solve the same problem, how do you choose?</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 I need a contact form plugin for a WordPress business site. Create
 a framework for evaluating options. What criteria matter, and how
 would I compare Contact Form 7, WPForms, and Gravity Forms?</code></pre>
@@ -710,14 +710,14 @@ would I compare Contact Form 7, WPForms, and Gravity Forms?</code></pre>
 <li>Update frequency and developer reputation</li>
 <li>Integration with other tools</li>
 </ul>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 What questions should I ask the client before recommending a contact
 form plugin? What requirements might change my recommendation?</code></pre>
 </section>
 <section id="exploration-2-build-vs-buy-decision" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-2-build-vs-buy-decision">Exploration 2: Build vs Buy Decision</h3>
 <p>Let’s work through a realistic scenario:</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 A client runs a yoga studio and needs an online booking system.
 Students should book classes, see instructor schedules, and manage
 their memberships. Walk me through the decision process: should we
@@ -731,14 +731,14 @@ like Mindbody, or build custom? What factors matter most?</code></pre>
 <li>Budget reality (short-term vs.&nbsp;long-term costs)</li>
 <li>Client technical capacity (who maintains this?)</li>
 </ul>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 What if the client says "I want exactly what my competitor has but
 for half the price"? How do I manage expectations?</code></pre>
 </section>
 <section id="exploration-3-technical-debt" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-3-technical-debt">Exploration 3: Technical Debt</h3>
 <p>Plugins have hidden costs:</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 What is "plugin bloat" in WordPress? How do too many plugins create
 technical debt? Give me a concrete example of how this affects a
 real site.</code></pre>
@@ -750,14 +750,14 @@ real site.</code></pre>
 <li>Security vulnerabilities compound</li>
 <li>Nobody understands all the pieces</li>
 </ul>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 If I inherited a WordPress site with 47 plugins, how would I audit
 which ones are actually needed? What's a safe process?</code></pre>
 </section>
 <section id="exploration-4-ai-assisted-wordpress-development" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-4-ai-assisted-wordpress-development">Exploration 4: AI-Assisted WordPress Development</h3>
 <p>AI is particularly effective at writing WordPress PHP code:</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 I want to add a feature to my WordPress site that displays "This
 post was updated X days ago" at the top of posts that have been
 modified in the last 30 days. Walk me through how to implement
@@ -770,7 +770,7 @@ each part of the code.</code></pre>
 <li>How filters modify content in WordPress</li>
 <li>Testing approach for custom PHP</li>
 </ul>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 Now I want to make this a simple plugin instead of putting it in
 functions.php. What changes are needed? What are the advantages
 of a plugin over functions.php for this feature?</code></pre>
@@ -797,10 +797,10 @@ of a plugin over functions.php for this feature?</code></pre>
 </ol>
 <p><strong>Managing plugins:</strong></p>
 <ul>
-<li>Deactivate plugins you’re not using (don’t just leave them inactive—delete them)</li>
+<li>Deactivate plugins you’re not using (don’t just leave them inactive, delete them)</li>
 <li>Update plugins regularly (but test first on staging)</li>
 <li>Document why each plugin is installed</li>
-<li>Review plugins quarterly—needs change</li>
+<li>Review plugins quarterly, needs change</li>
 </ul>
 </section>
 <section id="essential-plugin-categories" class="level3">
@@ -809,12 +809,12 @@ of a plugin over functions.php for this feature?</code></pre>
 <p><strong>Security:</strong></p>
 <ul>
 <li>Wordfence or Sucuri: Firewall, malware scanning, login protection</li>
-<li>Essential—WordPress is a common target</li>
+<li>Essential. WordPress is a common target</li>
 </ul>
 <p><strong>Backup:</strong></p>
 <ul>
 <li>UpdraftPlus: Scheduled backups to cloud storage</li>
-<li>Non-negotiable—databases get corrupted, hosts fail</li>
+<li>Non-negotiable, databases get corrupted, hosts fail</li>
 </ul>
 <p><strong>Performance:</strong></p>
 <ul>
@@ -832,7 +832,7 @@ of a plugin over functions.php for this feature?</code></pre>
 <li>WPForms, Gravity Forms, or Contact Form 7</li>
 <li>Nearly every site needs contact forms</li>
 </ul>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 For a small business WordPress site, what's the minimum set of
 plugins I should consider essential? What does each one protect
 against or enable?</code></pre>
@@ -924,7 +924,7 @@ against or enable?</code></pre>
 <li>Activate the child theme in Appearance → Themes</li>
 </ol>
 <p>Now any CSS you add to the child’s <code>style.css</code> applies on top of the parent, and any template files you create in the child override the parent’s versions.</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 I want to change the footer on my WordPress site to include
 additional business information. Walk me through doing this
 properly with a child theme, so my changes survive theme updates.</code></pre>
@@ -960,7 +960,7 @@ properly with a child theme, so my changes survive theme updates.</code></pre>
 </section>
 <section id="php-fundamentals-for-wordpress" class="level3">
 <h3 class="anchored" data-anchor-id="php-fundamentals-for-wordpress">PHP Fundamentals for WordPress</h3>
-<p>WordPress is built on PHP. While you can accomplish a lot without writing PHP, understanding the basics opens up powerful customisation options—and AI is excellent at helping you write WordPress PHP code.</p>
+<p>WordPress is built on PHP. While you can accomplish a lot without writing PHP, understanding the basics opens up powerful customisation options, and AI is excellent at helping you write WordPress PHP code.</p>
 <p><strong>PHP basics:</strong></p>
 <p>PHP code runs on the server and generates HTML sent to the browser. PHP files mix HTML and PHP:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode php code-with-copy"><code class="sourceCode php"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;?php</span></span>
@@ -1105,7 +1105,7 @@ properly with a child theme, so my changes survive theme updates.</code></pre>
 <span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">$title</span> <span class="op">.</span> <span class="st">' | My Business'</span><span class="ot">;</span></span>
 <span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>add_filter(<span class="st">'the_title'</span><span class="ot">,</span> <span class="st">'custom_title'</span>)<span class="ot">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 I want to add a "Last updated" date below each blog post title on
 my WordPress site. Walk me through how to do this with a filter in
 my child theme's functions.php.</code></pre>
@@ -1114,7 +1114,7 @@ my child theme's functions.php.</code></pre>
 <h3 class="anchored" data-anchor-id="building-a-simple-plugin-with-ai">Building a Simple Plugin with AI</h3>
 <p>AI excels at writing WordPress plugins. Here’s how to approach it:</p>
 <p><strong>Example: A plugin to display business hours</strong></p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 I need a WordPress plugin that:
 1. Adds a settings page where I can enter business hours for each day
 2. Provides a shortcode [business_hours] to display the hours
@@ -1237,7 +1237,7 @@ Create this plugin with clear comments explaining each part.</code></pre>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>When asking AI to write WordPress plugins: 1. Be specific about functionality 2. Request comments explaining the code 3. Test thoroughly on a staging site 4. Review the code—understand what it does before installing 5. Ask AI to explain any parts you don’t understand</p>
+<p>When asking AI to write WordPress plugins: 1. Be specific about functionality 2. Request comments explaining the code 3. Test thoroughly on a staging site 4. Review the code, understand what it does before installing 5. Ask AI to explain any parts you don’t understand</p>
 </div>
 </div>
 </section>
@@ -1324,7 +1324,7 @@ Create this plugin with clear comments explaining each part.</code></pre>
 <span id="cb23-41"><a href="#cb23-41" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-42"><a href="#cb23-42" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="ot">?</span>php get_sidebar()<span class="ot">;</span> <span class="kw">?&gt;</span></span>
 <span id="cb23-43"><a href="#cb23-43" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;?php</span> get_footer()<span class="ot">;</span> <span class="kw">?&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 I want to modify the archive page template in my child theme to
 display posts in a grid layout instead of a list. Show me how
 to create a custom archive.php that uses CSS Grid and displays
@@ -1353,7 +1353,7 @@ featured images with post titles.</code></pre>
 <h2 data-number="9.5" class="anchored" data-anchor-id="building-your-mental-model"><span class="header-section-number">9.5</span> Building Your Mental Model</h2>
 <section id="the-extension-pyramid" class="level3">
 <h3 class="anchored" data-anchor-id="the-extension-pyramid">The Extension Pyramid</h3>
-<pre><code>                   ┌───────────────┐
+<pre class="text"><code>                   ┌───────────────┐
                    │ Custom Code   │  (Last resort)
                    ├───────────────┤
                 │  │ Child Themes   │  (Theme customisation)
@@ -1369,7 +1369,7 @@ featured images with post titles.</code></pre>
 <section id="the-dependency-chain" class="level3">
 <h3 class="anchored" data-anchor-id="the-dependency-chain">The Dependency Chain</h3>
 <p>Every plugin creates a dependency:</p>
-<pre><code>Your Site
+<pre class="text"><code>Your Site
   └── Depends on Plugin A
         └── Depends on Plugin A's Developer
               └── Depends on Developer's continued interest
@@ -1379,7 +1379,7 @@ featured images with post titles.</code></pre>
 <section id="the-true-cost-formula" class="level3">
 <h3 class="anchored" data-anchor-id="the-true-cost-formula">The True Cost Formula</h3>
 <p>When evaluating options:</p>
-<pre><code>True Cost = Upfront Cost + (Yearly Maintenance × Years) + Risk Cost
+<pre class="text"><code>True Cost = Upfront Cost + (Yearly Maintenance × Years) + Risk Cost
 
 Plugin:
 - Upfront: $0-300 (purchase/license)
@@ -1432,11 +1432,11 @@ Custom:
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>ULO Connection
+<span class="screen-reader-only">Note</span>Skills You Are Building
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This develops <strong>ULO 4</strong> (making and defending technology choices) and <strong>ULO 1</strong> (evaluating effective solutions). Professional plugin decisions require balancing features, costs, risks, and long-term maintenance—exactly the judgment businesses need from technology advisors.</p>
+<p>This develops <strong>making and defending technology choices</strong> and <strong>evaluating and improving solutions</strong>. Professional plugin decisions require balancing features, costs, risks, and long-term maintenance, exactly the judgment businesses need from technology advisors.</p>
 </div>
 </div>
 </section>
@@ -1579,7 +1579,7 @@ Custom:
 <li>Every extension decision weighs build vs.&nbsp;buy trade-offs</li>
 <li>Plugin evaluation requires systematic criteria, not just feature lists</li>
 <li>Child themes allow safe customisation that survives updates</li>
-<li>PHP is WordPress’s foundation—understanding basics enables deeper customisation</li>
+<li>PHP is WordPress’s foundation, understanding basics enables deeper customisation</li>
 <li>The Loop and hooks (actions/filters) are core WordPress patterns</li>
 <li>AI excels at writing WordPress plugins and theme customisations</li>
 <li>Technical debt from plugins accumulates silently</li>
@@ -1614,7 +1614,7 @@ Custom:
 <section id="next-steps" class="level2" data-number="9.11">
 <h2 data-number="9.11" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">9.11</span> Next Steps</h2>
 <p>You now know how to extend WordPress wisely with plugins and child themes. But there’s another approach entirely: using WordPress as a content backend while building the frontend with modern tools.</p>
-<p>In <a href="chapter-headless-architecture.html" class="quarto-xref"><span>Chapter 10</span></a>, we’ll explore headless WordPress—using the WordPress REST API to power a React frontend. This bridges your CMS knowledge with the modern frontend skills from Part III and represents how many larger organisations use WordPress today.</p>
+<p>In <a href="chapter-headless-architecture.html" class="quarto-xref"><span>Chapter 10</span></a>, we’ll explore headless WordPress, using the WordPress REST API to power a React frontend. This bridges your CMS knowledge with the modern frontend skills from Part III and represents how many larger organisations use WordPress today.</p>
 
 
 <!-- -->
@@ -2104,7 +2104,7 @@ Custom:
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Concept First</span></span>
 <span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>In @sec-wordpress-platform, you learned that WordPress's value lies in its ecosystem. Now we'll learn to extend WordPress professionally—using plugins wisely, customising safely, and making business decisions about when to build versus when to buy.</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>In @sec-wordpress-platform, you learned that WordPress's value lies in its ecosystem. Now we'll learn to extend WordPress professionally, using plugins wisely, customising safely, and making business decisions about when to build versus when to buy.</span>
 <span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>Here's the tension: plugins make WordPress powerful, but plugins also create risk. Every plugin you add:</span>
 <span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a></span>
@@ -2113,7 +2113,7 @@ Custom:
 <span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Might introduce security vulnerabilities</span>
 <span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Adds complexity to troubleshoot</span>
 <span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a>Professional WordPress development isn't about installing the most plugins—it's about installing the *right* plugins and knowing when custom development makes more sense.</span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a>Professional WordPress development isn't about installing the most plugins, it's about installing the *right* plugins and knowing when custom development makes more sense.</span>
 <span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## Understanding Through Build vs Buy</span></span>
 <span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a></span>
@@ -2159,7 +2159,7 @@ Custom:
 <span id="cb28-57"><a href="#cb28-57" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-58"><a href="#cb28-58" aria-hidden="true" tabindex="-1"></a>When multiple plugins solve the same problem, how do you choose?</span>
 <span id="cb28-59"><a href="#cb28-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-60"><a href="#cb28-60" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-60"><a href="#cb28-60" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb28-61"><a href="#cb28-61" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb28-62"><a href="#cb28-62" aria-hidden="true" tabindex="-1"></a><span class="in">I need a contact form plugin for a WordPress business site. Create</span></span>
 <span id="cb28-63"><a href="#cb28-63" aria-hidden="true" tabindex="-1"></a><span class="in">a framework for evaluating options. What criteria matter, and how</span></span>
@@ -2176,7 +2176,7 @@ Custom:
 <span id="cb28-74"><a href="#cb28-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Update frequency and developer reputation</span>
 <span id="cb28-75"><a href="#cb28-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Integration with other tools</span>
 <span id="cb28-76"><a href="#cb28-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-77"><a href="#cb28-77" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-77"><a href="#cb28-77" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb28-78"><a href="#cb28-78" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb28-79"><a href="#cb28-79" aria-hidden="true" tabindex="-1"></a><span class="in">What questions should I ask the client before recommending a contact</span></span>
 <span id="cb28-80"><a href="#cb28-80" aria-hidden="true" tabindex="-1"></a><span class="in">form plugin? What requirements might change my recommendation?</span></span>
@@ -2186,7 +2186,7 @@ Custom:
 <span id="cb28-84"><a href="#cb28-84" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-85"><a href="#cb28-85" aria-hidden="true" tabindex="-1"></a>Let's work through a realistic scenario:</span>
 <span id="cb28-86"><a href="#cb28-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-87"><a href="#cb28-87" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-87"><a href="#cb28-87" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb28-88"><a href="#cb28-88" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb28-89"><a href="#cb28-89" aria-hidden="true" tabindex="-1"></a><span class="in">A client runs a yoga studio and needs an online booking system.</span></span>
 <span id="cb28-90"><a href="#cb28-90" aria-hidden="true" tabindex="-1"></a><span class="in">Students should book classes, see instructor schedules, and manage</span></span>
@@ -2203,7 +2203,7 @@ Custom:
 <span id="cb28-101"><a href="#cb28-101" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Budget reality (short-term vs. long-term costs)</span>
 <span id="cb28-102"><a href="#cb28-102" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Client technical capacity (who maintains this?)</span>
 <span id="cb28-103"><a href="#cb28-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-104"><a href="#cb28-104" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-104"><a href="#cb28-104" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb28-105"><a href="#cb28-105" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb28-106"><a href="#cb28-106" aria-hidden="true" tabindex="-1"></a><span class="in">What if the client says "I want exactly what my competitor has but</span></span>
 <span id="cb28-107"><a href="#cb28-107" aria-hidden="true" tabindex="-1"></a><span class="in">for half the price"? How do I manage expectations?</span></span>
@@ -2213,7 +2213,7 @@ Custom:
 <span id="cb28-111"><a href="#cb28-111" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-112"><a href="#cb28-112" aria-hidden="true" tabindex="-1"></a>Plugins have hidden costs:</span>
 <span id="cb28-113"><a href="#cb28-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-114"><a href="#cb28-114" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-114"><a href="#cb28-114" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb28-115"><a href="#cb28-115" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb28-116"><a href="#cb28-116" aria-hidden="true" tabindex="-1"></a><span class="in">What is "plugin bloat" in WordPress? How do too many plugins create</span></span>
 <span id="cb28-117"><a href="#cb28-117" aria-hidden="true" tabindex="-1"></a><span class="in">technical debt? Give me a concrete example of how this affects a</span></span>
@@ -2228,7 +2228,7 @@ Custom:
 <span id="cb28-126"><a href="#cb28-126" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Security vulnerabilities compound</span>
 <span id="cb28-127"><a href="#cb28-127" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Nobody understands all the pieces</span>
 <span id="cb28-128"><a href="#cb28-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-129"><a href="#cb28-129" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-129"><a href="#cb28-129" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb28-130"><a href="#cb28-130" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb28-131"><a href="#cb28-131" aria-hidden="true" tabindex="-1"></a><span class="in">If I inherited a WordPress site with 47 plugins, how would I audit</span></span>
 <span id="cb28-132"><a href="#cb28-132" aria-hidden="true" tabindex="-1"></a><span class="in">which ones are actually needed? What's a safe process?</span></span>
@@ -2238,7 +2238,7 @@ Custom:
 <span id="cb28-136"><a href="#cb28-136" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-137"><a href="#cb28-137" aria-hidden="true" tabindex="-1"></a>AI is particularly effective at writing WordPress PHP code:</span>
 <span id="cb28-138"><a href="#cb28-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-139"><a href="#cb28-139" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-139"><a href="#cb28-139" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb28-140"><a href="#cb28-140" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb28-141"><a href="#cb28-141" aria-hidden="true" tabindex="-1"></a><span class="in">I want to add a feature to my WordPress site that displays "This</span></span>
 <span id="cb28-142"><a href="#cb28-142" aria-hidden="true" tabindex="-1"></a><span class="in">post was updated X days ago" at the top of posts that have been</span></span>
@@ -2254,7 +2254,7 @@ Custom:
 <span id="cb28-152"><a href="#cb28-152" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>How filters modify content in WordPress</span>
 <span id="cb28-153"><a href="#cb28-153" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Testing approach for custom PHP</span>
 <span id="cb28-154"><a href="#cb28-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-155"><a href="#cb28-155" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-155"><a href="#cb28-155" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb28-156"><a href="#cb28-156" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb28-157"><a href="#cb28-157" aria-hidden="true" tabindex="-1"></a><span class="in">Now I want to make this a simple plugin instead of putting it in</span></span>
 <span id="cb28-158"><a href="#cb28-158" aria-hidden="true" tabindex="-1"></a><span class="in">functions.php. What changes are needed? What are the advantages</span></span>
@@ -2283,10 +2283,10 @@ Custom:
 <span id="cb28-181"><a href="#cb28-181" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-182"><a href="#cb28-182" aria-hidden="true" tabindex="-1"></a>**Managing plugins:**</span>
 <span id="cb28-183"><a href="#cb28-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-184"><a href="#cb28-184" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Deactivate plugins you're not using (don't just leave them inactive—delete them)</span>
+<span id="cb28-184"><a href="#cb28-184" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Deactivate plugins you're not using (don't just leave them inactive, delete them)</span>
 <span id="cb28-185"><a href="#cb28-185" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Update plugins regularly (but test first on staging)</span>
 <span id="cb28-186"><a href="#cb28-186" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Document why each plugin is installed</span>
-<span id="cb28-187"><a href="#cb28-187" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Review plugins quarterly—needs change</span>
+<span id="cb28-187"><a href="#cb28-187" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Review plugins quarterly, needs change</span>
 <span id="cb28-188"><a href="#cb28-188" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-189"><a href="#cb28-189" aria-hidden="true" tabindex="-1"></a><span class="fu">### Essential Plugin Categories</span></span>
 <span id="cb28-190"><a href="#cb28-190" aria-hidden="true" tabindex="-1"></a></span>
@@ -2295,12 +2295,12 @@ Custom:
 <span id="cb28-193"><a href="#cb28-193" aria-hidden="true" tabindex="-1"></a>**Security:**</span>
 <span id="cb28-194"><a href="#cb28-194" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-195"><a href="#cb28-195" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Wordfence or Sucuri: Firewall, malware scanning, login protection</span>
-<span id="cb28-196"><a href="#cb28-196" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Essential—WordPress is a common target</span>
+<span id="cb28-196"><a href="#cb28-196" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Essential. WordPress is a common target</span>
 <span id="cb28-197"><a href="#cb28-197" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-198"><a href="#cb28-198" aria-hidden="true" tabindex="-1"></a>**Backup:**</span>
 <span id="cb28-199"><a href="#cb28-199" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-200"><a href="#cb28-200" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>UpdraftPlus: Scheduled backups to cloud storage</span>
-<span id="cb28-201"><a href="#cb28-201" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Non-negotiable—databases get corrupted, hosts fail</span>
+<span id="cb28-201"><a href="#cb28-201" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Non-negotiable, databases get corrupted, hosts fail</span>
 <span id="cb28-202"><a href="#cb28-202" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-203"><a href="#cb28-203" aria-hidden="true" tabindex="-1"></a>**Performance:**</span>
 <span id="cb28-204"><a href="#cb28-204" aria-hidden="true" tabindex="-1"></a></span>
@@ -2318,7 +2318,7 @@ Custom:
 <span id="cb28-216"><a href="#cb28-216" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>WPForms, Gravity Forms, or Contact Form 7</span>
 <span id="cb28-217"><a href="#cb28-217" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Nearly every site needs contact forms</span>
 <span id="cb28-218"><a href="#cb28-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-219"><a href="#cb28-219" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-219"><a href="#cb28-219" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb28-220"><a href="#cb28-220" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb28-221"><a href="#cb28-221" aria-hidden="true" tabindex="-1"></a><span class="in">For a small business WordPress site, what's the minimum set of</span></span>
 <span id="cb28-222"><a href="#cb28-222" aria-hidden="true" tabindex="-1"></a><span class="in">plugins I should consider essential? What does each one protect</span></span>
@@ -2417,7 +2417,7 @@ Custom:
 <span id="cb28-315"><a href="#cb28-315" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-316"><a href="#cb28-316" aria-hidden="true" tabindex="-1"></a>Now any CSS you add to the child's <span class="in">`style.css`</span> applies on top of the parent, and any template files you create in the child override the parent's versions.</span>
 <span id="cb28-317"><a href="#cb28-317" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-318"><a href="#cb28-318" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-318"><a href="#cb28-318" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb28-319"><a href="#cb28-319" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb28-320"><a href="#cb28-320" aria-hidden="true" tabindex="-1"></a><span class="in">I want to change the footer on my WordPress site to include</span></span>
 <span id="cb28-321"><a href="#cb28-321" aria-hidden="true" tabindex="-1"></a><span class="in">additional business information. Walk me through doing this</span></span>
@@ -2450,7 +2450,7 @@ Custom:
 <span id="cb28-348"><a href="#cb28-348" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-349"><a href="#cb28-349" aria-hidden="true" tabindex="-1"></a><span class="st">### PHP Fundamentals for WordPress</span></span>
 <span id="cb28-350"><a href="#cb28-350" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-351"><a href="#cb28-351" aria-hidden="true" tabindex="-1"></a><span class="st">WordPress is built on PHP. While you can accomplish a lot without writing PHP, understanding the basics opens up powerful customisation options—and AI is excellent at helping you write WordPress PHP code.</span></span>
+<span id="cb28-351"><a href="#cb28-351" aria-hidden="true" tabindex="-1"></a><span class="st">WordPress is built on PHP. While you can accomplish a lot without writing PHP, understanding the basics opens up powerful customisation options, and AI is excellent at helping you write WordPress PHP code.</span></span>
 <span id="cb28-352"><a href="#cb28-352" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-353"><a href="#cb28-353" aria-hidden="true" tabindex="-1"></a><span class="st">**PHP basics:**</span></span>
 <span id="cb28-354"><a href="#cb28-354" aria-hidden="true" tabindex="-1"></a></span>
@@ -2620,7 +2620,7 @@ Custom:
 <span id="cb28-518"><a href="#cb28-518" aria-hidden="true" tabindex="-1"></a>add_filter(<span class="st">'the_title'</span><span class="ot">,</span> <span class="st">'custom_title'</span>)<span class="ot">;</span></span>
 <span id="cb28-519"><a href="#cb28-519" aria-hidden="true" tabindex="-1"></a><span class="st">```</span></span>
 <span id="cb28-520"><a href="#cb28-520" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-521"><a href="#cb28-521" aria-hidden="true" tabindex="-1"></a><span class="st">```</span></span>
+<span id="cb28-521"><a href="#cb28-521" aria-hidden="true" tabindex="-1"></a><span class="st">```</span>text</span>
 <span id="cb28-522"><a href="#cb28-522" aria-hidden="true" tabindex="-1"></a>Ask your <span class="cn">AI</span><span class="ot">:</span></span>
 <span id="cb28-523"><a href="#cb28-523" aria-hidden="true" tabindex="-1"></a><span class="cn">I</span> want to add a <span class="st">"Last updated"</span> <span class="fu">date</span> below <span class="er">each</span> blog post title on</span>
 <span id="cb28-524"><a href="#cb28-524" aria-hidden="true" tabindex="-1"></a>my WordPress site<span class="op">.</span> Walk me through how to <span class="cf">do</span> this with a filter in</span>
@@ -2633,7 +2633,7 @@ Custom:
 <span id="cb28-531"><a href="#cb28-531" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-532"><a href="#cb28-532" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Example<span class="ot">:</span> <span class="cn">A</span> plugin to display business hours<span class="op">**</span></span>
 <span id="cb28-533"><a href="#cb28-533" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-534"><a href="#cb28-534" aria-hidden="true" tabindex="-1"></a><span class="st">```</span></span>
+<span id="cb28-534"><a href="#cb28-534" aria-hidden="true" tabindex="-1"></a><span class="st">```text</span></span>
 <span id="cb28-535"><a href="#cb28-535" aria-hidden="true" tabindex="-1"></a><span class="st">Ask your AI:</span></span>
 <span id="cb28-536"><a href="#cb28-536" aria-hidden="true" tabindex="-1"></a><span class="st">I need a WordPress plugin that:</span></span>
 <span id="cb28-537"><a href="#cb28-537" aria-hidden="true" tabindex="-1"></a><span class="st">1. Adds a settings page where I can enter business hours for each day</span></span>
@@ -2759,7 +2759,7 @@ Custom:
 <span id="cb28-657"><a href="#cb28-657" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Be specific about functionality</span>
 <span id="cb28-658"><a href="#cb28-658" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Request comments explaining the code</span>
 <span id="cb28-659"><a href="#cb28-659" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> Test thoroughly on a staging site</span>
-<span id="cb28-660"><a href="#cb28-660" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> Review the code—understand what it does before installing</span>
+<span id="cb28-660"><a href="#cb28-660" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> Review the code<span class="ot">,</span> understand what it does before installing</span>
 <span id="cb28-661"><a href="#cb28-661" aria-hidden="true" tabindex="-1"></a><span class="fl">5.</span> Ask <span class="cn">AI</span> to explain any parts you don<span class="st">'t understand</span></span>
 <span id="cb28-662"><a href="#cb28-662" aria-hidden="true" tabindex="-1"></a><span class="st">:::</span></span>
 <span id="cb28-663"><a href="#cb28-663" aria-hidden="true" tabindex="-1"></a></span>
@@ -2828,7 +2828,7 @@ Custom:
 <span id="cb28-726"><a href="#cb28-726" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;?php get_footer(); ?&gt;</span></span>
 <span id="cb28-727"><a href="#cb28-727" aria-hidden="true" tabindex="-1"></a><span class="st">```</span></span>
 <span id="cb28-728"><a href="#cb28-728" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-729"><a href="#cb28-729" aria-hidden="true" tabindex="-1"></a><span class="st">```</span></span>
+<span id="cb28-729"><a href="#cb28-729" aria-hidden="true" tabindex="-1"></a><span class="st">```text</span></span>
 <span id="cb28-730"><a href="#cb28-730" aria-hidden="true" tabindex="-1"></a><span class="st">Ask your AI:</span></span>
 <span id="cb28-731"><a href="#cb28-731" aria-hidden="true" tabindex="-1"></a><span class="st">I want to modify the archive page template in my child theme to</span></span>
 <span id="cb28-732"><a href="#cb28-732" aria-hidden="true" tabindex="-1"></a><span class="st">display posts in a grid layout instead of a list. Show me how</span></span>
@@ -2858,7 +2858,7 @@ Custom:
 <span id="cb28-756"><a href="#cb28-756" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-757"><a href="#cb28-757" aria-hidden="true" tabindex="-1"></a><span class="st">### The Extension Pyramid</span></span>
 <span id="cb28-758"><a href="#cb28-758" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-759"><a href="#cb28-759" aria-hidden="true" tabindex="-1"></a><span class="st">```</span></span>
+<span id="cb28-759"><a href="#cb28-759" aria-hidden="true" tabindex="-1"></a><span class="st">```text</span></span>
 <span id="cb28-760"><a href="#cb28-760" aria-hidden="true" tabindex="-1"></a><span class="st">                   ┌───────────────┐</span></span>
 <span id="cb28-761"><a href="#cb28-761" aria-hidden="true" tabindex="-1"></a><span class="st">                   │ Custom Code   │  (Last resort)</span></span>
 <span id="cb28-762"><a href="#cb28-762" aria-hidden="true" tabindex="-1"></a><span class="st">                   ├───────────────┤</span></span>
@@ -2878,7 +2878,7 @@ Custom:
 <span id="cb28-776"><a href="#cb28-776" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-777"><a href="#cb28-777" aria-hidden="true" tabindex="-1"></a>Every plugin creates a dependency<span class="ot">:</span></span>
 <span id="cb28-778"><a href="#cb28-778" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-779"><a href="#cb28-779" aria-hidden="true" tabindex="-1"></a><span class="st">```</span></span>
+<span id="cb28-779"><a href="#cb28-779" aria-hidden="true" tabindex="-1"></a><span class="st">```text</span></span>
 <span id="cb28-780"><a href="#cb28-780" aria-hidden="true" tabindex="-1"></a><span class="st">Your Site</span></span>
 <span id="cb28-781"><a href="#cb28-781" aria-hidden="true" tabindex="-1"></a><span class="st">  └── Depends on Plugin A</span></span>
 <span id="cb28-782"><a href="#cb28-782" aria-hidden="true" tabindex="-1"></a><span class="st">        └── Depends on Plugin A's Developer</span></span>
@@ -2892,7 +2892,7 @@ Custom:
 <span id="cb28-790"><a href="#cb28-790" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-791"><a href="#cb28-791" aria-hidden="true" tabindex="-1"></a>When evaluating options<span class="ot">:</span></span>
 <span id="cb28-792"><a href="#cb28-792" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-793"><a href="#cb28-793" aria-hidden="true" tabindex="-1"></a><span class="st">```</span></span>
+<span id="cb28-793"><a href="#cb28-793" aria-hidden="true" tabindex="-1"></a><span class="st">```text</span></span>
 <span id="cb28-794"><a href="#cb28-794" aria-hidden="true" tabindex="-1"></a><span class="st">True Cost = Upfront Cost + (Yearly Maintenance × Years) + Risk Cost</span></span>
 <span id="cb28-795"><a href="#cb28-795" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-796"><a href="#cb28-796" aria-hidden="true" tabindex="-1"></a><span class="st">Plugin:</span></span>
@@ -2946,8 +2946,8 @@ Custom:
 <span id="cb28-844"><a href="#cb28-844" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Document which plugins are installed <span class="op">and</span> why</span>
 <span id="cb28-845"><a href="#cb28-845" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-846"><a href="#cb28-846" aria-hidden="true" tabindex="-1"></a>::<span class="ot">:</span> {<span class="op">.</span>callout<span class="op">-</span>note}</span>
-<span id="cb28-847"><a href="#cb28-847" aria-hidden="true" tabindex="-1"></a><span class="co">## ULO Connection</span></span>
-<span id="cb28-848"><a href="#cb28-848" aria-hidden="true" tabindex="-1"></a>This develops <span class="op">**</span><span class="cn">ULO</span> <span class="dv">4</span><span class="op">**</span> (making <span class="op">and</span> defending technology choices) <span class="op">and</span> <span class="op">**</span><span class="cn">ULO</span> <span class="dv">1</span><span class="op">**</span> (evaluating effective solutions)<span class="op">.</span> Professional plugin decisions <span class="kw">require</span> balancing features<span class="ot">,</span> costs<span class="ot">,</span> risks<span class="ot">,</span> <span class="op">and</span> long<span class="op">-</span>term maintenance—exactly the judgment businesses need from technology advisors<span class="op">.</span></span>
+<span id="cb28-847"><a href="#cb28-847" aria-hidden="true" tabindex="-1"></a><span class="co">## Skills You Are Building</span></span>
+<span id="cb28-848"><a href="#cb28-848" aria-hidden="true" tabindex="-1"></a>This develops <span class="op">**</span>making <span class="op">and</span> defending technology choices<span class="op">**</span> <span class="op">and</span> <span class="op">**</span>evaluating <span class="op">and</span> improving solutions<span class="op">**.</span> Professional plugin decisions <span class="kw">require</span> balancing features<span class="ot">,</span> costs<span class="ot">,</span> risks<span class="ot">,</span> <span class="op">and</span> long<span class="op">-</span>term maintenance<span class="ot">,</span> exactly the judgment businesses need from technology advisors<span class="op">.</span></span>
 <span id="cb28-849"><a href="#cb28-849" aria-hidden="true" tabindex="-1"></a>::<span class="ot">:</span></span>
 <span id="cb28-850"><a href="#cb28-850" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-851"><a href="#cb28-851" aria-hidden="true" tabindex="-1"></a><span class="co">## Practice Exercises</span></span>
@@ -3071,7 +3071,7 @@ Custom:
 <span id="cb28-969"><a href="#cb28-969" aria-hidden="true" tabindex="-1"></a><span class="st">- Every extension decision weighs build vs. buy trade-offs</span></span>
 <span id="cb28-970"><a href="#cb28-970" aria-hidden="true" tabindex="-1"></a><span class="st">- Plugin evaluation requires systematic criteria, not just feature lists</span></span>
 <span id="cb28-971"><a href="#cb28-971" aria-hidden="true" tabindex="-1"></a><span class="st">- Child themes allow safe customisation that survives updates</span></span>
-<span id="cb28-972"><a href="#cb28-972" aria-hidden="true" tabindex="-1"></a><span class="st">- PHP is WordPress'</span>s foundation—understanding basics enables deeper customisation</span>
+<span id="cb28-972"><a href="#cb28-972" aria-hidden="true" tabindex="-1"></a><span class="st">- PHP is WordPress'</span>s foundation<span class="ot">,</span> understanding basics enables deeper customisation</span>
 <span id="cb28-973"><a href="#cb28-973" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> The Loop <span class="op">and</span> hooks (actions<span class="op">/</span>filters) are core WordPress patterns</span>
 <span id="cb28-974"><a href="#cb28-974" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="cn">AI</span> excels at writing WordPress plugins <span class="op">and</span> theme customisations</span>
 <span id="cb28-975"><a href="#cb28-975" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Technical debt from plugins accumulates silently</span>
@@ -3107,7 +3107,7 @@ Custom:
 <span id="cb28-1005"><a href="#cb28-1005" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-1006"><a href="#cb28-1006" aria-hidden="true" tabindex="-1"></a><span class="st">You now know how to extend WordPress wisely with plugins and child themes. But there'</span>s another approach entirely<span class="ot">:</span> using WordPress <span class="kw">as</span> a content backend <span class="cf">while</span> building the frontend with modern tools<span class="op">.</span></span>
 <span id="cb28-1007"><a href="#cb28-1007" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-1008"><a href="#cb28-1008" aria-hidden="true" tabindex="-1"></a>In <span class="pp">@</span>sec<span class="op">-</span>headless<span class="op">-</span>architecture<span class="ot">,</span> we<span class="st">'ll explore headless WordPress—using the WordPress REST API to power a React frontend. This bridges your CMS knowledge with the modern frontend skills from Part III and represents how many larger organisations use WordPress today.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb28-1008"><a href="#cb28-1008" aria-hidden="true" tabindex="-1"></a>In <span class="pp">@</span>sec<span class="op">-</span>headless<span class="op">-</span>architecture<span class="ot">,</span> we<span class="st">'ll explore headless WordPress, using the WordPress REST API to power a React frontend. This bridges your CMS knowledge with the modern frontend skills from Part III and represents how many larger organisations use WordPress today.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

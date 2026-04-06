@@ -332,7 +332,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/reading-list.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Weekly Reading List</span></a>
+ <span class="menu-text">Recommended Resources</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -611,7 +611,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Renders its own output</li>
 <li>Can be reused anywhere</li>
 </ul>
-<p>This isn’t just a technical convenience—it’s a fundamentally different way of building interfaces. Once you think in components, you’ll see every UI as a composition of reusable pieces.</p>
+<p>This isn’t just a technical convenience, it’s a fundamentally different way of building interfaces. Once you think in components, you’ll see every UI as a composition of reusable pieces.</p>
 </section>
 <section id="understanding-through-lego" class="level2" data-number="12.2">
 <h2 data-number="12.2" class="anchored" data-anchor-id="understanding-through-lego"><span class="header-section-number">12.2</span> Understanding Through LEGO</h2>
@@ -631,7 +631,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>You can update one component without touching others</li>
 <li>Your code shows composition: components containing components</li>
 </ul>
-<p>A webpage isn’t a monolithic HTML document—it’s a tree of components, each responsible for its own piece of the interface.</p>
+<p>A webpage isn’t a monolithic HTML document, it’s a tree of components, each responsible for its own piece of the interface.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -651,13 +651,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="exploration-1-ui-decomposition" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-1-ui-decomposition">Exploration 1: UI Decomposition</h3>
 <p>Let’s practice component thinking before writing code:</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 Look at a typical e-commerce product listing page (grid of products,
 filters on the side, pagination at bottom). How would you break this
 into React components? Draw a diagram showing which components
 contain which other components.</code></pre>
 <p>Your diagram might look like:</p>
-<pre><code>ProductPage
+<pre class="text"><code>ProductPage
 ├── FilterSidebar
 │   ├── CategoryFilter
 │   ├── PriceFilter
@@ -669,14 +669,14 @@ contain which other components.</code></pre>
 │       ├── ProductPrice
 │       └── AddToCartButton
 └── Pagination</code></pre>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 For each component you identified, what data would it need? Where
 would that data come from?</code></pre>
 </section>
 <section id="exploration-2-state-vs-props" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-2-state-vs-props">Exploration 2: State vs Props</h3>
 <p>React has two ways data lives in components: <strong>state</strong> (data the component owns and can change) and <strong>props</strong> (data passed from a parent).</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 Explain the difference between state and props in React using a
 family analogy. Props are like what? State is like what? How do
 they interact?</code></pre>
@@ -685,15 +685,15 @@ they interact?</code></pre>
 <li><strong>Props</strong> are like instructions parents give to children: “Here’s your allowance amount, here’s your bedtime.” The child receives them but doesn’t change them.</li>
 <li><strong>State</strong> is like the child’s own possessions: “I have $5 saved, I’m currently awake.” The child controls these and they can change.</li>
 </ul>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 For a shopping cart component, what would be props and what would
 be state? Walk me through why each belongs in its category.</code></pre>
 </section>
 <section id="exploration-3-data-flow" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-3-data-flow">Exploration 3: Data Flow</h3>
 <p>Data in React flows one direction: parent to child (downward).</p>
-<pre><code>Ask your AI:
-React data flows "one way"—from parent to child components. Why is
+<pre class="text"><code>Ask your AI:
+React data flows "one way", from parent to child components. Why is
 this design choice valuable? What problems does it prevent compared
 to data flowing any direction?</code></pre>
 <p>One-way data flow means:</p>
@@ -703,7 +703,7 @@ to data flowing any direction?</code></pre>
 <li>Components are predictable</li>
 <li>Changes don’t cause cascading side effects</li>
 </ul>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 If data flows only downward, how does a child component communicate
 back to a parent? Give me a simple example.</code></pre>
 </section>
@@ -735,7 +735,7 @@ back to a parent? Give me a simple example.</code></pre>
 </section>
 <section id="jsx-html-in-javascript" class="level3">
 <h3 class="anchored" data-anchor-id="jsx-html-in-javascript">JSX: HTML in JavaScript</h3>
-<p>React uses JSX—a syntax that lets you write HTML-like code in JavaScript:</p>
+<p>React uses JSX, a syntax that lets you write HTML-like code in JavaScript:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode jsx code-with-copy"><code class="sourceCode javascriptreact"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">Welcome</span>() {</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;div&gt;</span></span>
@@ -805,7 +805,7 @@ back to a parent? Give me a simple example.</code></pre>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;/div&gt;</span></span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    )<span class="op">;</span></span>
 <span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Three product cards appear—but they’re all identical. To make them different, we need props.</p>
+<p>Three product cards appear, but they’re all identical. To make them different, we need props.</p>
 </section>
 <section id="props-configuring-components" class="level3">
 <h3 class="anchored" data-anchor-id="props-configuring-components">Props: Configuring Components</h3>
@@ -830,7 +830,7 @@ back to a parent? Give me a simple example.</code></pre>
 <span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;/div&gt;</span></span>
 <span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>    )<span class="op">;</span></span>
 <span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Now each card displays different data. The component is <strong>reusable</strong>—same structure, different content.</p>
+<p>Now each card displays different data. The component is <strong>reusable</strong>, same structure, different content.</p>
 <p>Props can be any JavaScript value:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode jsx code-with-copy"><code class="sourceCode javascriptreact"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;ProductCard</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="ot">title</span><span class="op">=</span><span class="st">"Coffee Mug"</span></span>
@@ -862,8 +862,8 @@ back to a parent? Give me a simple example.</code></pre>
 <li>The current value (<code>count</code>)</li>
 <li>A function to update it (<code>setCount</code>)</li>
 </ol>
-<p>When you call <code>setCount</code>, React re-renders the component with the new value. You don’t manually update the DOM—React handles it.</p>
-<pre><code>Ask your AI:
+<p>When you call <code>setCount</code>, React re-renders the component with the new value. You don’t manually update the DOM. React handles it.</p>
+<pre class="text"><code>Ask your AI:
 Walk me through what happens when I click the button in this Counter
 component. What does React do behind the scenes?</code></pre>
 </section>
@@ -1006,7 +1006,7 @@ component. What does React do behind the scenes?</code></pre>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>WordPress returns HTML in <code>rendered</code> fields. React requires <code>dangerouslySetInnerHTML</code> to insert raw HTML. Only use this with trusted content (like your own WordPress site)—never with user input.</p>
+<p>WordPress returns HTML in <code>rendered</code> fields. React requires <code>dangerouslySetInnerHTML</code> to insert raw HTML. Only use this with trusted content (like your own WordPress site), never with user input.</p>
 </div>
 </div>
 </section>
@@ -1052,7 +1052,7 @@ component. What does React do behind the scenes?</code></pre>
 <section id="the-component-tree" class="level3">
 <h3 class="anchored" data-anchor-id="the-component-tree">The Component Tree</h3>
 <p>Your application forms a tree of components:</p>
-<pre><code>App
+<pre class="text"><code>App
 ├── Header
 │   ├── Logo
 │   └── Navigation
@@ -1062,21 +1062,21 @@ component. What does React do behind the scenes?</code></pre>
 │   └── PostList
 │       └── PostCard (×n)
 └── Footer</code></pre>
-<p>Data flows down this tree. State lives in the component that “owns” it—often a parent that passes it to children.</p>
+<p>Data flows down this tree. State lives in the component that “owns” it, often a parent that passes it to children.</p>
 </section>
 <section id="when-state-should-lift-up" class="level3">
 <h3 class="anchored" data-anchor-id="when-state-should-lift-up">When State Should “Lift Up”</h3>
 <p>If two sibling components need the same data, the state should live in their common parent:</p>
-<pre><code>Before (broken):                After (working):
+<pre class="text"><code>Before (broken):                After (working):
 ProductFilter (has state)       ProductPage (has state)
 ProductList (needs state)       ├── ProductFilter (receives props)
 (How does List get Filter's     └── ProductList (receives props)
  state? They're siblings!)</code></pre>
-<p>This is called “lifting state up”—moving state to the lowest common ancestor.</p>
+<p>This is called “lifting state up”, moving state to the lowest common ancestor.</p>
 </section>
 <section id="the-rendering-cycle" class="level3">
 <h3 class="anchored" data-anchor-id="the-rendering-cycle">The Rendering Cycle</h3>
-<pre><code>State Changes
+<pre class="text"><code>State Changes
      ↓
 React Re-renders Component
      ↓
@@ -1096,11 +1096,11 @@ Only Changed Parts Update in DOM</code></pre>
 </section>
 <section id="maintainability" class="level3">
 <h3 class="anchored" data-anchor-id="maintainability">Maintainability</h3>
-<p>When a feature needs updating, you know exactly which component to modify. Components are isolated—changes don’t ripple unexpectedly.</p>
+<p>When a feature needs updating, you know exactly which component to modify. Components are isolated, changes don’t ripple unexpectedly.</p>
 </section>
 <section id="team-collaboration" class="level3">
 <h3 class="anchored" data-anchor-id="team-collaboration">Team Collaboration</h3>
-<p>Different developers can work on different components simultaneously. The interface (props) defines how components connect—teams don’t need to understand each other’s implementation details.</p>
+<p>Different developers can work on different components simultaneously. The interface (props) defines how components connect, teams don’t need to understand each other’s implementation details.</p>
 </section>
 <section id="testing" class="level3">
 <h3 class="anchored" data-anchor-id="testing">Testing</h3>
@@ -1115,11 +1115,11 @@ Only Changed Parts Update in DOM</code></pre>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>ULO Connection
+<span class="screen-reader-only">Note</span>Skills You Are Building
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This develops <strong>ULO 1</strong> (effective web applications) and <strong>ULO 4</strong> (technology selection). React’s component model is influential across the industry—understanding it prepares you for Vue, Angular, and other frameworks that share similar concepts.</p>
+<p>This develops <strong>evaluating and improving solutions</strong> and <strong>making and defending technology choices</strong>. React’s component model is influential across the industry, understanding it prepares you for Vue, Angular, and other frameworks that share similar concepts.</p>
 </div>
 </div>
 </section>
@@ -1235,7 +1235,7 @@ Only Changed Parts Update in DOM</code></pre>
 <section id="next-steps" class="level2" data-number="12.11">
 <h2 data-number="12.11" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">12.11</span> Next Steps</h2>
 <p>You can now build component-based interfaces and fetch data from APIs. But styling components from scratch takes time.</p>
-<p>In <a href="chapter-rapid-development.html" class="quarto-xref"><span>Chapter 13</span></a>, we’ll explore CSS frameworks—Bootstrap and Tailwind—that provide pre-built styles and utilities. Combined with React, these tools enable rapid professional development without designing every button and layout from scratch.</p>
+<p>In <a href="chapter-rapid-development.html" class="quarto-xref"><span>Chapter 13</span></a>, we’ll explore CSS frameworks. Bootstrap and Tailwind, that provide pre-built styles and utilities. Combined with React, these tools enable rapid professional development without designing every button and layout from scratch.</p>
 
 
 <!-- -->
@@ -1738,7 +1738,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Renders its own output</span>
 <span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Can be reused anywhere</span>
 <span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a>This isn't just a technical convenience—it's a fundamentally different way of building interfaces. Once you think in components, you'll see every UI as a composition of reusable pieces.</span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a>This isn't just a technical convenience, it's a fundamentally different way of building interfaces. Once you think in components, you'll see every UI as a composition of reusable pieces.</span>
 <span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a><span class="fu">## Understanding Through LEGO</span></span>
 <span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a></span>
@@ -1758,7 +1758,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-35"><a href="#cb26-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You can update one component without touching others</span>
 <span id="cb26-36"><a href="#cb26-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Your code shows composition: components containing components</span>
 <span id="cb26-37"><a href="#cb26-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-38"><a href="#cb26-38" aria-hidden="true" tabindex="-1"></a>A webpage isn't a monolithic HTML document—it's a tree of components, each responsible for its own piece of the interface.</span>
+<span id="cb26-38"><a href="#cb26-38" aria-hidden="true" tabindex="-1"></a>A webpage isn't a monolithic HTML document, it's a tree of components, each responsible for its own piece of the interface.</span>
 <span id="cb26-39"><a href="#cb26-39" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-40"><a href="#cb26-40" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
 <span id="cb26-41"><a href="#cb26-41" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Decomposition Instinct</span></span>
@@ -1771,7 +1771,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-48"><a href="#cb26-48" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-49"><a href="#cb26-49" aria-hidden="true" tabindex="-1"></a>Let's practice component thinking before writing code:</span>
 <span id="cb26-50"><a href="#cb26-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-51"><a href="#cb26-51" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb26-51"><a href="#cb26-51" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb26-52"><a href="#cb26-52" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb26-53"><a href="#cb26-53" aria-hidden="true" tabindex="-1"></a><span class="in">Look at a typical e-commerce product listing page (grid of products,</span></span>
 <span id="cb26-54"><a href="#cb26-54" aria-hidden="true" tabindex="-1"></a><span class="in">filters on the side, pagination at bottom). How would you break this</span></span>
@@ -1781,7 +1781,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-58"><a href="#cb26-58" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-59"><a href="#cb26-59" aria-hidden="true" tabindex="-1"></a>Your diagram might look like:</span>
 <span id="cb26-60"><a href="#cb26-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-61"><a href="#cb26-61" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb26-61"><a href="#cb26-61" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb26-62"><a href="#cb26-62" aria-hidden="true" tabindex="-1"></a><span class="in">ProductPage</span></span>
 <span id="cb26-63"><a href="#cb26-63" aria-hidden="true" tabindex="-1"></a><span class="in">├── FilterSidebar</span></span>
 <span id="cb26-64"><a href="#cb26-64" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── CategoryFilter</span></span>
@@ -1796,7 +1796,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-73"><a href="#cb26-73" aria-hidden="true" tabindex="-1"></a><span class="in">└── Pagination</span></span>
 <span id="cb26-74"><a href="#cb26-74" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb26-75"><a href="#cb26-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-76"><a href="#cb26-76" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb26-76"><a href="#cb26-76" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb26-77"><a href="#cb26-77" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb26-78"><a href="#cb26-78" aria-hidden="true" tabindex="-1"></a><span class="in">For each component you identified, what data would it need? Where</span></span>
 <span id="cb26-79"><a href="#cb26-79" aria-hidden="true" tabindex="-1"></a><span class="in">would that data come from?</span></span>
@@ -1806,7 +1806,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-83"><a href="#cb26-83" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-84"><a href="#cb26-84" aria-hidden="true" tabindex="-1"></a>React has two ways data lives in components: **state** (data the component owns and can change) and **props** (data passed from a parent).</span>
 <span id="cb26-85"><a href="#cb26-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-86"><a href="#cb26-86" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb26-86"><a href="#cb26-86" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb26-87"><a href="#cb26-87" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb26-88"><a href="#cb26-88" aria-hidden="true" tabindex="-1"></a><span class="in">Explain the difference between state and props in React using a</span></span>
 <span id="cb26-89"><a href="#cb26-89" aria-hidden="true" tabindex="-1"></a><span class="in">family analogy. Props are like what? State is like what? How do</span></span>
@@ -1818,7 +1818,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-95"><a href="#cb26-95" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Props** are like instructions parents give to children: "Here's your allowance amount, here's your bedtime." The child receives them but doesn't change them.</span>
 <span id="cb26-96"><a href="#cb26-96" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**State** is like the child's own possessions: "I have $5 saved, I'm currently awake." The child controls these and they can change.</span>
 <span id="cb26-97"><a href="#cb26-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-98"><a href="#cb26-98" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb26-98"><a href="#cb26-98" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb26-99"><a href="#cb26-99" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb26-100"><a href="#cb26-100" aria-hidden="true" tabindex="-1"></a><span class="in">For a shopping cart component, what would be props and what would</span></span>
 <span id="cb26-101"><a href="#cb26-101" aria-hidden="true" tabindex="-1"></a><span class="in">be state? Walk me through why each belongs in its category.</span></span>
@@ -1828,9 +1828,9 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-105"><a href="#cb26-105" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-106"><a href="#cb26-106" aria-hidden="true" tabindex="-1"></a>Data in React flows one direction: parent to child (downward).</span>
 <span id="cb26-107"><a href="#cb26-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-108"><a href="#cb26-108" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb26-108"><a href="#cb26-108" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb26-109"><a href="#cb26-109" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
-<span id="cb26-110"><a href="#cb26-110" aria-hidden="true" tabindex="-1"></a><span class="in">React data flows "one way"—from parent to child components. Why is</span></span>
+<span id="cb26-110"><a href="#cb26-110" aria-hidden="true" tabindex="-1"></a><span class="in">React data flows "one way", from parent to child components. Why is</span></span>
 <span id="cb26-111"><a href="#cb26-111" aria-hidden="true" tabindex="-1"></a><span class="in">this design choice valuable? What problems does it prevent compared</span></span>
 <span id="cb26-112"><a href="#cb26-112" aria-hidden="true" tabindex="-1"></a><span class="in">to data flowing any direction?</span></span>
 <span id="cb26-113"><a href="#cb26-113" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
@@ -1842,7 +1842,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-119"><a href="#cb26-119" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Components are predictable</span>
 <span id="cb26-120"><a href="#cb26-120" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Changes don't cause cascading side effects</span>
 <span id="cb26-121"><a href="#cb26-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-122"><a href="#cb26-122" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb26-122"><a href="#cb26-122" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb26-123"><a href="#cb26-123" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb26-124"><a href="#cb26-124" aria-hidden="true" tabindex="-1"></a><span class="in">If data flows only downward, how does a child component communicate</span></span>
 <span id="cb26-125"><a href="#cb26-125" aria-hidden="true" tabindex="-1"></a><span class="in">back to a parent? Give me a simple example.</span></span>
@@ -1872,7 +1872,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-149"><a href="#cb26-149" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-150"><a href="#cb26-150" aria-hidden="true" tabindex="-1"></a><span class="fu">### JSX: HTML in JavaScript</span></span>
 <span id="cb26-151"><a href="#cb26-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-152"><a href="#cb26-152" aria-hidden="true" tabindex="-1"></a>React uses JSX—a syntax that lets you write HTML-like code in JavaScript:</span>
+<span id="cb26-152"><a href="#cb26-152" aria-hidden="true" tabindex="-1"></a>React uses JSX, a syntax that lets you write HTML-like code in JavaScript:</span>
 <span id="cb26-153"><a href="#cb26-153" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-154"><a href="#cb26-154" aria-hidden="true" tabindex="-1"></a><span class="in">```jsx</span></span>
 <span id="cb26-155"><a href="#cb26-155" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">Welcome</span>() {</span>
@@ -1940,7 +1940,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-217"><a href="#cb26-217" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb26-218"><a href="#cb26-218" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb26-219"><a href="#cb26-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-220"><a href="#cb26-220" aria-hidden="true" tabindex="-1"></a>Three product cards appear—but they're all identical. To make them different, we need props.</span>
+<span id="cb26-220"><a href="#cb26-220" aria-hidden="true" tabindex="-1"></a>Three product cards appear, but they're all identical. To make them different, we need props.</span>
 <span id="cb26-221"><a href="#cb26-221" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-222"><a href="#cb26-222" aria-hidden="true" tabindex="-1"></a><span class="fu">### Props: Configuring Components</span></span>
 <span id="cb26-223"><a href="#cb26-223" aria-hidden="true" tabindex="-1"></a></span>
@@ -1969,7 +1969,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-246"><a href="#cb26-246" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb26-247"><a href="#cb26-247" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb26-248"><a href="#cb26-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-249"><a href="#cb26-249" aria-hidden="true" tabindex="-1"></a>Now each card displays different data. The component is **reusable**—same structure, different content.</span>
+<span id="cb26-249"><a href="#cb26-249" aria-hidden="true" tabindex="-1"></a>Now each card displays different data. The component is **reusable**, same structure, different content.</span>
 <span id="cb26-250"><a href="#cb26-250" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-251"><a href="#cb26-251" aria-hidden="true" tabindex="-1"></a>Props can be any JavaScript value:</span>
 <span id="cb26-252"><a href="#cb26-252" aria-hidden="true" tabindex="-1"></a></span>
@@ -2009,9 +2009,9 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-286"><a href="#cb26-286" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>The current value (<span class="in">`count`</span>)</span>
 <span id="cb26-287"><a href="#cb26-287" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>A function to update it (<span class="in">`setCount`</span>)</span>
 <span id="cb26-288"><a href="#cb26-288" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-289"><a href="#cb26-289" aria-hidden="true" tabindex="-1"></a>When you call <span class="in">`setCount`</span>, React re-renders the component with the new value. You don't manually update the DOM—React handles it.</span>
+<span id="cb26-289"><a href="#cb26-289" aria-hidden="true" tabindex="-1"></a>When you call <span class="in">`setCount`</span>, React re-renders the component with the new value. You don't manually update the DOM. React handles it.</span>
 <span id="cb26-290"><a href="#cb26-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-291"><a href="#cb26-291" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb26-291"><a href="#cb26-291" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb26-292"><a href="#cb26-292" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb26-293"><a href="#cb26-293" aria-hidden="true" tabindex="-1"></a><span class="in">Walk me through what happens when I click the button in this Counter</span></span>
 <span id="cb26-294"><a href="#cb26-294" aria-hidden="true" tabindex="-1"></a><span class="in">component. What does React do behind the scenes?</span></span>
@@ -2166,7 +2166,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-443"><a href="#cb26-443" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-444"><a href="#cb26-444" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
 <span id="cb26-445"><a href="#cb26-445" aria-hidden="true" tabindex="-1"></a><span class="fu">## dangerouslySetInnerHTML</span></span>
-<span id="cb26-446"><a href="#cb26-446" aria-hidden="true" tabindex="-1"></a>WordPress returns HTML in <span class="in">`rendered`</span> fields. React requires <span class="in">`dangerouslySetInnerHTML`</span> to insert raw HTML. Only use this with trusted content (like your own WordPress site)—never with user input.</span>
+<span id="cb26-446"><a href="#cb26-446" aria-hidden="true" tabindex="-1"></a>WordPress returns HTML in <span class="in">`rendered`</span> fields. React requires <span class="in">`dangerouslySetInnerHTML`</span> to insert raw HTML. Only use this with trusted content (like your own WordPress site), never with user input.</span>
 <span id="cb26-447"><a href="#cb26-447" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb26-448"><a href="#cb26-448" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-449"><a href="#cb26-449" aria-hidden="true" tabindex="-1"></a><span class="fu">### Component Composition</span></span>
@@ -2215,7 +2215,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-492"><a href="#cb26-492" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-493"><a href="#cb26-493" aria-hidden="true" tabindex="-1"></a>Your application forms a tree of components:</span>
 <span id="cb26-494"><a href="#cb26-494" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-495"><a href="#cb26-495" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb26-495"><a href="#cb26-495" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb26-496"><a href="#cb26-496" aria-hidden="true" tabindex="-1"></a><span class="in">App</span></span>
 <span id="cb26-497"><a href="#cb26-497" aria-hidden="true" tabindex="-1"></a><span class="in">├── Header</span></span>
 <span id="cb26-498"><a href="#cb26-498" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── Logo</span></span>
@@ -2228,13 +2228,13 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-505"><a href="#cb26-505" aria-hidden="true" tabindex="-1"></a><span class="in">└── Footer</span></span>
 <span id="cb26-506"><a href="#cb26-506" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb26-507"><a href="#cb26-507" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-508"><a href="#cb26-508" aria-hidden="true" tabindex="-1"></a>Data flows down this tree. State lives in the component that "owns" it—often a parent that passes it to children.</span>
+<span id="cb26-508"><a href="#cb26-508" aria-hidden="true" tabindex="-1"></a>Data flows down this tree. State lives in the component that "owns" it, often a parent that passes it to children.</span>
 <span id="cb26-509"><a href="#cb26-509" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-510"><a href="#cb26-510" aria-hidden="true" tabindex="-1"></a><span class="fu">### When State Should "Lift Up"</span></span>
 <span id="cb26-511"><a href="#cb26-511" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-512"><a href="#cb26-512" aria-hidden="true" tabindex="-1"></a>If two sibling components need the same data, the state should live in their common parent:</span>
 <span id="cb26-513"><a href="#cb26-513" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-514"><a href="#cb26-514" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb26-514"><a href="#cb26-514" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb26-515"><a href="#cb26-515" aria-hidden="true" tabindex="-1"></a><span class="in">Before (broken):                After (working):</span></span>
 <span id="cb26-516"><a href="#cb26-516" aria-hidden="true" tabindex="-1"></a><span class="in">ProductFilter (has state)       ProductPage (has state)</span></span>
 <span id="cb26-517"><a href="#cb26-517" aria-hidden="true" tabindex="-1"></a><span class="in">ProductList (needs state)       ├── ProductFilter (receives props)</span></span>
@@ -2242,11 +2242,11 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-519"><a href="#cb26-519" aria-hidden="true" tabindex="-1"></a><span class="in"> state? They're siblings!)</span></span>
 <span id="cb26-520"><a href="#cb26-520" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb26-521"><a href="#cb26-521" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-522"><a href="#cb26-522" aria-hidden="true" tabindex="-1"></a>This is called "lifting state up"—moving state to the lowest common ancestor.</span>
+<span id="cb26-522"><a href="#cb26-522" aria-hidden="true" tabindex="-1"></a>This is called "lifting state up", moving state to the lowest common ancestor.</span>
 <span id="cb26-523"><a href="#cb26-523" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-524"><a href="#cb26-524" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Rendering Cycle</span></span>
 <span id="cb26-525"><a href="#cb26-525" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-526"><a href="#cb26-526" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb26-526"><a href="#cb26-526" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb26-527"><a href="#cb26-527" aria-hidden="true" tabindex="-1"></a><span class="in">State Changes</span></span>
 <span id="cb26-528"><a href="#cb26-528" aria-hidden="true" tabindex="-1"></a><span class="in">     ↓</span></span>
 <span id="cb26-529"><a href="#cb26-529" aria-hidden="true" tabindex="-1"></a><span class="in">React Re-renders Component</span></span>
@@ -2268,11 +2268,11 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-545"><a href="#cb26-545" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-546"><a href="#cb26-546" aria-hidden="true" tabindex="-1"></a><span class="fu">### Maintainability</span></span>
 <span id="cb26-547"><a href="#cb26-547" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-548"><a href="#cb26-548" aria-hidden="true" tabindex="-1"></a>When a feature needs updating, you know exactly which component to modify. Components are isolated—changes don't ripple unexpectedly.</span>
+<span id="cb26-548"><a href="#cb26-548" aria-hidden="true" tabindex="-1"></a>When a feature needs updating, you know exactly which component to modify. Components are isolated, changes don't ripple unexpectedly.</span>
 <span id="cb26-549"><a href="#cb26-549" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-550"><a href="#cb26-550" aria-hidden="true" tabindex="-1"></a><span class="fu">### Team Collaboration</span></span>
 <span id="cb26-551"><a href="#cb26-551" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-552"><a href="#cb26-552" aria-hidden="true" tabindex="-1"></a>Different developers can work on different components simultaneously. The interface (props) defines how components connect—teams don't need to understand each other's implementation details.</span>
+<span id="cb26-552"><a href="#cb26-552" aria-hidden="true" tabindex="-1"></a>Different developers can work on different components simultaneously. The interface (props) defines how components connect, teams don't need to understand each other's implementation details.</span>
 <span id="cb26-553"><a href="#cb26-553" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-554"><a href="#cb26-554" aria-hidden="true" tabindex="-1"></a><span class="fu">### Testing</span></span>
 <span id="cb26-555"><a href="#cb26-555" aria-hidden="true" tabindex="-1"></a></span>
@@ -2283,8 +2283,8 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-560"><a href="#cb26-560" aria-hidden="true" tabindex="-1"></a>React components naturally form design systems. Your <span class="in">`Button`</span>, <span class="in">`Card`</span>, <span class="in">`Input`</span>, and <span class="in">`Modal`</span> components become a library that enforces consistency across the application.</span>
 <span id="cb26-561"><a href="#cb26-561" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-562"><a href="#cb26-562" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb26-563"><a href="#cb26-563" aria-hidden="true" tabindex="-1"></a><span class="fu">## ULO Connection</span></span>
-<span id="cb26-564"><a href="#cb26-564" aria-hidden="true" tabindex="-1"></a>This develops **ULO 1** (effective web applications) and **ULO 4** (technology selection). React's component model is influential across the industry—understanding it prepares you for Vue, Angular, and other frameworks that share similar concepts.</span>
+<span id="cb26-563"><a href="#cb26-563" aria-hidden="true" tabindex="-1"></a><span class="fu">## Skills You Are Building</span></span>
+<span id="cb26-564"><a href="#cb26-564" aria-hidden="true" tabindex="-1"></a>This develops **evaluating and improving solutions** and **making and defending technology choices**. React's component model is influential across the industry, understanding it prepares you for Vue, Angular, and other frameworks that share similar concepts.</span>
 <span id="cb26-565"><a href="#cb26-565" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb26-566"><a href="#cb26-566" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-567"><a href="#cb26-567" aria-hidden="true" tabindex="-1"></a><span class="fu">## Practice Exercises</span></span>
@@ -2383,7 +2383,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-660"><a href="#cb26-660" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-661"><a href="#cb26-661" aria-hidden="true" tabindex="-1"></a>You can now build component-based interfaces and fetch data from APIs. But styling components from scratch takes time.</span>
 <span id="cb26-662"><a href="#cb26-662" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-663"><a href="#cb26-663" aria-hidden="true" tabindex="-1"></a>In @sec-rapid-development, we'll explore CSS frameworks—Bootstrap and Tailwind—that provide pre-built styles and utilities. Combined with React, these tools enable rapid professional development without designing every button and layout from scratch.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb26-663"><a href="#cb26-663" aria-hidden="true" tabindex="-1"></a>In @sec-rapid-development, we'll explore CSS frameworks. Bootstrap and Tailwind, that provide pre-built styles and utilities. Combined with React, these tools enable rapid professional development without designing every button and layout from scratch.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

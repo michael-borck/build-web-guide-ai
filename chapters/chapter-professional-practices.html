@@ -332,7 +332,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/reading-list.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Weekly Reading List</span></a>
+ <span class="menu-text">Recommended Resources</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -599,13 +599,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="the-concept-first" class="level2" data-number="14.1">
 <h2 data-number="14.1" class="anchored" data-anchor-id="the-concept-first"><span class="header-section-number">14.1</span> The Concept First</h2>
-<p>In <a href="chapter-rapid-development.html" class="quarto-xref"><span>Chapter 13</span></a>, you learned to build interfaces quickly with CSS frameworks. But professional development isn’t just about building features—it’s about building <strong>sustainable, reliable, collaborative systems</strong>.</p>
+<p>In <a href="chapter-rapid-development.html" class="quarto-xref"><span>Chapter 13</span></a>, you learned to build interfaces quickly with CSS frameworks. But professional development isn’t just about building features, it’s about building <strong>sustainable, reliable, collaborative systems</strong>.</p>
 <p>Consider the difference:</p>
 <ul>
 <li><strong>Hobbyist</strong>: Gets the feature working, moves on</li>
 <li><strong>Professional</strong>: Gets the feature working, ensures it stays working, makes it easy for others to understand and modify</li>
 </ul>
-<p>Professional practices aren’t bureaucracy—they’re <strong>risk management</strong>. Every project eventually faces:</p>
+<p>Professional practices aren’t bureaucracy, they’re <strong>risk management</strong>. Every project eventually faces:</p>
 <ul>
 <li>“It was working yesterday. What changed?”</li>
 <li>“I can’t remember why I wrote this code.”</li>
@@ -637,7 +637,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In six months, you won’t remember why you made certain decisions. Professional practices create a trail for “future you” to follow. That’s not extra work—it’s insurance.</p>
+<p>In six months, you won’t remember why you made certain decisions. Professional practices create a trail for “future you” to follow. That’s not extra work, it’s insurance.</p>
 </div>
 </div>
 </section>
@@ -645,7 +645,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="14.3" class="anchored" data-anchor-id="discovering-professional-practices-with-your-ai-partner"><span class="header-section-number">14.3</span> Discovering Professional Practices with Your AI Partner</h2>
 <section id="exploration-1-why-version-control-matters" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-1-why-version-control-matters">Exploration 1: Why Version Control Matters</h3>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 Imagine a team of four developers working on the same website without
 version control. What problems would they face? How would they handle
 conflicts when two people change the same file?</code></pre>
@@ -657,14 +657,14 @@ conflicts when two people change the same file?</code></pre>
 <li>Fear of making changes</li>
 <li>No history of what changed or why</li>
 </ul>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 Now explain how Git solves each of these problems. What mental model
 should I have for how Git works?</code></pre>
 </section>
 <section id="exploration-2-the-testing-mindset" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-2-the-testing-mindset">Exploration 2: The Testing Mindset</h3>
-<p>Testing isn’t about distrust—it’s about <strong>confidence</strong>.</p>
-<pre><code>Ask your AI:
+<p>Testing isn’t about distrust, it’s about <strong>confidence</strong>.</p>
+<pre class="text"><code>Ask your AI:
 A developer says "I tested it manually, it works." Why isn't that
 enough for professional work? What's the difference between manual
 testing and automated tests?</code></pre>
@@ -676,7 +676,7 @@ testing and automated tests?</code></pre>
 <li>Tests document expected behaviour</li>
 <li>Regression testing catches “breaking old stuff while adding new”</li>
 </ul>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 For a simple e-commerce site, what would be the most valuable things
 to test automatically? Where would you start?</code></pre>
 </section>
@@ -688,7 +688,7 @@ to test automatically? Where would you start?</code></pre>
 <li>Teammates</li>
 <li>Future maintainers</li>
 </ul>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 What makes code "readable"? Show me an example of unreadable code and
 the same functionality written readably. What changed?</code></pre>
 <p>This reveals:</p>
@@ -699,13 +699,13 @@ the same functionality written readably. What changed?</code></pre>
 <li>Consistent formatting</li>
 <li>Small, focused functions</li>
 </ul>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 When should I write comments, and when does the code speak for itself?
 Give me guidelines for useful commenting.</code></pre>
 </section>
 <section id="exploration-4-documentation-purpose" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-4-documentation-purpose">Exploration 4: Documentation Purpose</h3>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 What's the difference between code comments, README files, and
 technical documentation? When do I need each, and what goes in each?</code></pre>
 <p>Different documentation serves different audiences:</p>
@@ -722,7 +722,7 @@ technical documentation? When do I need each, and what goes in each?</code></pre
 <section id="git-version-control-fundamentals" class="level3">
 <h3 class="anchored" data-anchor-id="git-version-control-fundamentals">Git: Version Control Fundamentals</h3>
 <p>Git tracks changes to files over time. The mental model:</p>
-<pre><code>Working Directory → Staging Area → Repository
+<pre class="text"><code>Working Directory → Staging Area → Repository
     (your files)     (ready to commit)  (permanent history)</code></pre>
 <p><strong>Initial setup:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Configure your identity (once per machine)</span></span>
@@ -804,7 +804,7 @@ technical documentation? When do I need each, and what goes in each?</code></pre
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge the feature branch</span></span>
 <span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge feature/user-profiles</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 What's the difference between merging and rebasing in Git? When would
 I use each? I want to understand the trade-offs.</code></pre>
 <p><strong>Working with GitHub:</strong></p>
@@ -889,7 +889,7 @@ I use each? I want to understand the trade-offs.</code></pre>
 <span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>        <span class="fu">expect</span>(<span class="bu">screen</span><span class="op">.</span><span class="fu">getByText</span>(<span class="st">'Count: 1'</span>))<span class="op">.</span><span class="fu">toBeInTheDocument</span>()<span class="op">;</span></span>
 <span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
 <span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 I've heard of unit tests, integration tests, and end-to-end tests.
 What's the difference? As a beginner, where should I focus my
 testing efforts for maximum value?</code></pre>
@@ -945,7 +945,7 @@ testing efforts for maximum value?</code></pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-D</span> eslint</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> eslint <span class="at">--init</span></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> eslint src/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>These tools enforce consistency automatically—no arguments about tabs vs spaces.</p>
+<p>These tools enforce consistency automatically, no arguments about tabs vs spaces.</p>
 </section>
 <section id="documentation-essentials" class="level3">
 <h3 class="anchored" data-anchor-id="documentation-essentials">Documentation Essentials</h3>
@@ -982,7 +982,7 @@ testing efforts for maximum value?</code></pre>
 <section id="license" class="level2" data-number="14.7">
 <h2 data-number="14.7" class="anchored" data-anchor-id="license"><span class="header-section-number">14.7</span> License</h2>
 <p>MIT License</p>
-<pre><code>
+<pre class="text"><code>
 **Code documentation (JSDoc):**
 
 ```javascript
@@ -1003,7 +1003,7 @@ function calculateTotal(subtotal, taxRate) {
 <h2 data-number="14.8" class="anchored" data-anchor-id="building-your-mental-model"><span class="header-section-number">14.8</span> Building Your Mental Model</h2>
 <section id="the-professional-practice-pyramid" class="level3">
 <h3 class="anchored" data-anchor-id="the-professional-practice-pyramid">The Professional Practice Pyramid</h3>
-<pre><code>                   ┌──────────────────┐
+<pre class="text"><code>                   ┌──────────────────┐
                    │  Code Review     │  (Team quality)
                    ├──────────────────┤
                  │ │  Documentation   │  (Knowledge sharing)
@@ -1018,7 +1018,7 @@ function calculateTotal(subtotal, taxRate) {
 </section>
 <section id="the-cost-of-skipping-practices" class="level3">
 <h3 class="anchored" data-anchor-id="the-cost-of-skipping-practices">The Cost of Skipping Practices</h3>
-<pre><code>                    │
+<pre class="text"><code>                    │
     Time spent      │         ████ Technical Debt
     debugging /     │      ████████
     fixing          │   ████████████████
@@ -1089,7 +1089,7 @@ function calculateTotal(subtotal, taxRate) {
 <h2 data-number="14.9" class="anchored" data-anchor-id="business-applications"><span class="header-section-number">14.9</span> Business Applications</h2>
 <section id="risk-reduction" class="level3">
 <h3 class="anchored" data-anchor-id="risk-reduction">Risk Reduction</h3>
-<p>Version control isn’t just convenience—it’s business continuity:</p>
+<p>Version control isn’t just convenience, it’s business continuity:</p>
 <ul>
 <li>Roll back problematic deployments</li>
 <li>Trace when bugs were introduced</li>
@@ -1135,11 +1135,11 @@ function calculateTotal(subtotal, taxRate) {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>ULO Connection
+<span class="screen-reader-only">Note</span>Skills You Are Building
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This develops <strong>ULO 2</strong> (professional project management) and <strong>ULO 1</strong> (iteratively improving solutions). Professional practices aren’t separate from development—they’re how professionals develop. These skills are expected in any development role.</p>
+<p>This develops <strong>professional communication and project management</strong> and <strong>evaluating and improving solutions</strong>. Professional practices aren’t separate from development, they’re how professionals develop. These skills are expected in any development role.</p>
 </div>
 </div>
 </section>
@@ -1775,14 +1775,14 @@ function calculateTotal(subtotal, taxRate) {
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Concept First</span></span>
 <span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>In @sec-rapid-development, you learned to build interfaces quickly with CSS frameworks. But professional development isn't just about building features—it's about building **sustainable, reliable, collaborative systems**.</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>In @sec-rapid-development, you learned to build interfaces quickly with CSS frameworks. But professional development isn't just about building features, it's about building **sustainable, reliable, collaborative systems**.</span>
 <span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>Consider the difference:</span>
 <span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Hobbyist**: Gets the feature working, moves on</span>
 <span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Professional**: Gets the feature working, ensures it stays working, makes it easy for others to understand and modify</span>
 <span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>Professional practices aren't bureaucracy—they're **risk management**. Every project eventually faces:</span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>Professional practices aren't bureaucracy, they're **risk management**. Every project eventually faces:</span>
 <span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"It was working yesterday. What changed?"</span>
 <span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"I can't remember why I wrote this code."</span>
@@ -1810,14 +1810,14 @@ function calculateTotal(subtotal, taxRate) {
 <span id="cb31-37"><a href="#cb31-37" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-38"><a href="#cb31-38" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
 <span id="cb31-39"><a href="#cb31-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## Professional Practice Serves Future You</span></span>
-<span id="cb31-40"><a href="#cb31-40" aria-hidden="true" tabindex="-1"></a>In six months, you won't remember why you made certain decisions. Professional practices create a trail for "future you" to follow. That's not extra work—it's insurance.</span>
+<span id="cb31-40"><a href="#cb31-40" aria-hidden="true" tabindex="-1"></a>In six months, you won't remember why you made certain decisions. Professional practices create a trail for "future you" to follow. That's not extra work, it's insurance.</span>
 <span id="cb31-41"><a href="#cb31-41" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb31-42"><a href="#cb31-42" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-43"><a href="#cb31-43" aria-hidden="true" tabindex="-1"></a><span class="fu">## Discovering Professional Practices with Your AI Partner</span></span>
 <span id="cb31-44"><a href="#cb31-44" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-45"><a href="#cb31-45" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exploration 1: Why Version Control Matters</span></span>
 <span id="cb31-46"><a href="#cb31-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-47"><a href="#cb31-47" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-47"><a href="#cb31-47" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb31-48"><a href="#cb31-48" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb31-49"><a href="#cb31-49" aria-hidden="true" tabindex="-1"></a><span class="in">Imagine a team of four developers working on the same website without</span></span>
 <span id="cb31-50"><a href="#cb31-50" aria-hidden="true" tabindex="-1"></a><span class="in">version control. What problems would they face? How would they handle</span></span>
@@ -1832,7 +1832,7 @@ function calculateTotal(subtotal, taxRate) {
 <span id="cb31-59"><a href="#cb31-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Fear of making changes</span>
 <span id="cb31-60"><a href="#cb31-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>No history of what changed or why</span>
 <span id="cb31-61"><a href="#cb31-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-62"><a href="#cb31-62" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-62"><a href="#cb31-62" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb31-63"><a href="#cb31-63" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb31-64"><a href="#cb31-64" aria-hidden="true" tabindex="-1"></a><span class="in">Now explain how Git solves each of these problems. What mental model</span></span>
 <span id="cb31-65"><a href="#cb31-65" aria-hidden="true" tabindex="-1"></a><span class="in">should I have for how Git works?</span></span>
@@ -1840,9 +1840,9 @@ function calculateTotal(subtotal, taxRate) {
 <span id="cb31-67"><a href="#cb31-67" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-68"><a href="#cb31-68" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exploration 2: The Testing Mindset</span></span>
 <span id="cb31-69"><a href="#cb31-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-70"><a href="#cb31-70" aria-hidden="true" tabindex="-1"></a>Testing isn't about distrust—it's about **confidence**.</span>
+<span id="cb31-70"><a href="#cb31-70" aria-hidden="true" tabindex="-1"></a>Testing isn't about distrust, it's about **confidence**.</span>
 <span id="cb31-71"><a href="#cb31-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-72"><a href="#cb31-72" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-72"><a href="#cb31-72" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb31-73"><a href="#cb31-73" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb31-74"><a href="#cb31-74" aria-hidden="true" tabindex="-1"></a><span class="in">A developer says "I tested it manually, it works." Why isn't that</span></span>
 <span id="cb31-75"><a href="#cb31-75" aria-hidden="true" tabindex="-1"></a><span class="in">enough for professional work? What's the difference between manual</span></span>
@@ -1857,7 +1857,7 @@ function calculateTotal(subtotal, taxRate) {
 <span id="cb31-84"><a href="#cb31-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Tests document expected behaviour</span>
 <span id="cb31-85"><a href="#cb31-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Regression testing catches "breaking old stuff while adding new"</span>
 <span id="cb31-86"><a href="#cb31-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-87"><a href="#cb31-87" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-87"><a href="#cb31-87" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb31-88"><a href="#cb31-88" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb31-89"><a href="#cb31-89" aria-hidden="true" tabindex="-1"></a><span class="in">For a simple e-commerce site, what would be the most valuable things</span></span>
 <span id="cb31-90"><a href="#cb31-90" aria-hidden="true" tabindex="-1"></a><span class="in">to test automatically? Where would you start?</span></span>
@@ -1871,7 +1871,7 @@ function calculateTotal(subtotal, taxRate) {
 <span id="cb31-98"><a href="#cb31-98" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Teammates</span>
 <span id="cb31-99"><a href="#cb31-99" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Future maintainers</span>
 <span id="cb31-100"><a href="#cb31-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-101"><a href="#cb31-101" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-101"><a href="#cb31-101" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb31-102"><a href="#cb31-102" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb31-103"><a href="#cb31-103" aria-hidden="true" tabindex="-1"></a><span class="in">What makes code "readable"? Show me an example of unreadable code and</span></span>
 <span id="cb31-104"><a href="#cb31-104" aria-hidden="true" tabindex="-1"></a><span class="in">the same functionality written readably. What changed?</span></span>
@@ -1885,7 +1885,7 @@ function calculateTotal(subtotal, taxRate) {
 <span id="cb31-112"><a href="#cb31-112" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Consistent formatting</span>
 <span id="cb31-113"><a href="#cb31-113" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Small, focused functions</span>
 <span id="cb31-114"><a href="#cb31-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-115"><a href="#cb31-115" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-115"><a href="#cb31-115" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb31-116"><a href="#cb31-116" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb31-117"><a href="#cb31-117" aria-hidden="true" tabindex="-1"></a><span class="in">When should I write comments, and when does the code speak for itself?</span></span>
 <span id="cb31-118"><a href="#cb31-118" aria-hidden="true" tabindex="-1"></a><span class="in">Give me guidelines for useful commenting.</span></span>
@@ -1893,7 +1893,7 @@ function calculateTotal(subtotal, taxRate) {
 <span id="cb31-120"><a href="#cb31-120" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-121"><a href="#cb31-121" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exploration 4: Documentation Purpose</span></span>
 <span id="cb31-122"><a href="#cb31-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-123"><a href="#cb31-123" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-123"><a href="#cb31-123" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb31-124"><a href="#cb31-124" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb31-125"><a href="#cb31-125" aria-hidden="true" tabindex="-1"></a><span class="in">What's the difference between code comments, README files, and</span></span>
 <span id="cb31-126"><a href="#cb31-126" aria-hidden="true" tabindex="-1"></a><span class="in">technical documentation? When do I need each, and what goes in each?</span></span>
@@ -1912,7 +1912,7 @@ function calculateTotal(subtotal, taxRate) {
 <span id="cb31-139"><a href="#cb31-139" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-140"><a href="#cb31-140" aria-hidden="true" tabindex="-1"></a>Git tracks changes to files over time. The mental model:</span>
 <span id="cb31-141"><a href="#cb31-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-142"><a href="#cb31-142" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-142"><a href="#cb31-142" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb31-143"><a href="#cb31-143" aria-hidden="true" tabindex="-1"></a><span class="in">Working Directory → Staging Area → Repository</span></span>
 <span id="cb31-144"><a href="#cb31-144" aria-hidden="true" tabindex="-1"></a><span class="in">    (your files)     (ready to commit)  (permanent history)</span></span>
 <span id="cb31-145"><a href="#cb31-145" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
@@ -1987,7 +1987,7 @@ function calculateTotal(subtotal, taxRate) {
 <span id="cb31-214"><a href="#cb31-214" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge feature/user-profiles</span>
 <span id="cb31-215"><a href="#cb31-215" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb31-216"><a href="#cb31-216" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-217"><a href="#cb31-217" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-217"><a href="#cb31-217" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb31-218"><a href="#cb31-218" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb31-219"><a href="#cb31-219" aria-hidden="true" tabindex="-1"></a><span class="in">What's the difference between merging and rebasing in Git? When would</span></span>
 <span id="cb31-220"><a href="#cb31-220" aria-hidden="true" tabindex="-1"></a><span class="in">I use each? I want to understand the trade-offs.</span></span>
@@ -2099,7 +2099,7 @@ function calculateTotal(subtotal, taxRate) {
 <span id="cb31-326"><a href="#cb31-326" aria-hidden="true" tabindex="-1"></a><span class="op">});</span></span>
 <span id="cb31-327"><a href="#cb31-327" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb31-328"><a href="#cb31-328" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-329"><a href="#cb31-329" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-329"><a href="#cb31-329" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb31-330"><a href="#cb31-330" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb31-331"><a href="#cb31-331" aria-hidden="true" tabindex="-1"></a><span class="in">I've heard of unit tests, integration tests, and end-to-end tests.</span></span>
 <span id="cb31-332"><a href="#cb31-332" aria-hidden="true" tabindex="-1"></a><span class="in">What's the difference? As a beginner, where should I focus my</span></span>
@@ -2178,7 +2178,7 @@ function calculateTotal(subtotal, taxRate) {
 <span id="cb31-405"><a href="#cb31-405" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> eslint src/</span>
 <span id="cb31-406"><a href="#cb31-406" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb31-407"><a href="#cb31-407" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-408"><a href="#cb31-408" aria-hidden="true" tabindex="-1"></a>These tools enforce consistency automatically—no arguments about tabs vs spaces.</span>
+<span id="cb31-408"><a href="#cb31-408" aria-hidden="true" tabindex="-1"></a>These tools enforce consistency automatically, no arguments about tabs vs spaces.</span>
 <span id="cb31-409"><a href="#cb31-409" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-410"><a href="#cb31-410" aria-hidden="true" tabindex="-1"></a><span class="fu">### Documentation Essentials</span></span>
 <span id="cb31-411"><a href="#cb31-411" aria-hidden="true" tabindex="-1"></a></span>
@@ -2219,30 +2219,30 @@ function calculateTotal(subtotal, taxRate) {
 <span id="cb31-446"><a href="#cb31-446" aria-hidden="true" tabindex="-1"></a><span class="fu">## License</span></span>
 <span id="cb31-447"><a href="#cb31-447" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-448"><a href="#cb31-448" aria-hidden="true" tabindex="-1"></a>MIT License</span>
-<span id="cb31-449"><a href="#cb31-449" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-449"><a href="#cb31-449" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb31-450"><a href="#cb31-450" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-451"><a href="#cb31-451" aria-hidden="true" tabindex="-1"></a>**Code documentation (JSDoc):**</span>
+<span id="cb31-451"><a href="#cb31-451" aria-hidden="true" tabindex="-1"></a><span class="in">**Code documentation (JSDoc):**</span></span>
 <span id="cb31-452"><a href="#cb31-452" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-453"><a href="#cb31-453" aria-hidden="true" tabindex="-1"></a><span class="in">```javascript</span></span>
-<span id="cb31-454"><a href="#cb31-454" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
-<span id="cb31-455"><a href="#cb31-455" aria-hidden="true" tabindex="-1"></a> <span class="co">*</span> Calculates the total price including tax<span class="co">.</span></span>
-<span id="cb31-456"><a href="#cb31-456" aria-hidden="true" tabindex="-1"></a> <span class="co">*</span></span>
-<span id="cb31-457"><a href="#cb31-457" aria-hidden="true" tabindex="-1"></a> <span class="co">*</span> <span class="an">@param</span><span class="co"> </span><span class="an">{number}</span><span class="co"> </span>subtotal <span class="co">-</span> The pre<span class="co">-</span>tax total</span>
-<span id="cb31-458"><a href="#cb31-458" aria-hidden="true" tabindex="-1"></a> <span class="co">*</span> <span class="an">@param</span><span class="co"> </span><span class="an">{number}</span><span class="co"> </span>taxRate <span class="co">-</span> Tax rate as decimal <span class="co">(</span>e<span class="co">.</span>g<span class="co">.,</span> <span class="co">0.1</span> for <span class="co">10%)</span></span>
-<span id="cb31-459"><a href="#cb31-459" aria-hidden="true" tabindex="-1"></a> <span class="co">*</span> <span class="co">@</span>returns <span class="co">{</span>number<span class="co">}</span> The total including tax</span>
-<span id="cb31-460"><a href="#cb31-460" aria-hidden="true" tabindex="-1"></a> <span class="co">*</span> <span class="co">@</span>example</span>
-<span id="cb31-461"><a href="#cb31-461" aria-hidden="true" tabindex="-1"></a> <span class="co">*</span> calculateTotal<span class="co">(100,</span> <span class="co">0.1)</span> <span class="co">//</span> Returns <span class="co">110</span></span>
-<span id="cb31-462"><a href="#cb31-462" aria-hidden="true" tabindex="-1"></a> <span class="co">*/</span></span>
-<span id="cb31-463"><a href="#cb31-463" aria-hidden="true" tabindex="-1"></a>function <span class="fu">calculateTotal</span><span class="op">(</span>subtotal<span class="op">,</span> taxRate<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb31-464"><a href="#cb31-464" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> subtotal <span class="op">*</span> <span class="op">(</span><span class="dv">1</span> <span class="op">+</span> taxRate<span class="op">);</span></span>
-<span id="cb31-465"><a href="#cb31-465" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb31-454"><a href="#cb31-454" aria-hidden="true" tabindex="-1"></a><span class="in">/**</span></span>
+<span id="cb31-455"><a href="#cb31-455" aria-hidden="true" tabindex="-1"></a><span class="in"> * Calculates the total price including tax.</span></span>
+<span id="cb31-456"><a href="#cb31-456" aria-hidden="true" tabindex="-1"></a><span class="in"> *</span></span>
+<span id="cb31-457"><a href="#cb31-457" aria-hidden="true" tabindex="-1"></a><span class="in"> * @param {number} subtotal - The pre-tax total</span></span>
+<span id="cb31-458"><a href="#cb31-458" aria-hidden="true" tabindex="-1"></a><span class="in"> * @param {number} taxRate - Tax rate as decimal (e.g., 0.1 for 10%)</span></span>
+<span id="cb31-459"><a href="#cb31-459" aria-hidden="true" tabindex="-1"></a><span class="in"> * @returns {number} The total including tax</span></span>
+<span id="cb31-460"><a href="#cb31-460" aria-hidden="true" tabindex="-1"></a><span class="in"> * @example</span></span>
+<span id="cb31-461"><a href="#cb31-461" aria-hidden="true" tabindex="-1"></a><span class="in"> * calculateTotal(100, 0.1) // Returns 110</span></span>
+<span id="cb31-462"><a href="#cb31-462" aria-hidden="true" tabindex="-1"></a><span class="in"> */</span></span>
+<span id="cb31-463"><a href="#cb31-463" aria-hidden="true" tabindex="-1"></a><span class="in">function calculateTotal(subtotal, taxRate) {</span></span>
+<span id="cb31-464"><a href="#cb31-464" aria-hidden="true" tabindex="-1"></a><span class="in">    return subtotal * (1 + taxRate);</span></span>
+<span id="cb31-465"><a href="#cb31-465" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
 <span id="cb31-466"><a href="#cb31-466" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb31-467"><a href="#cb31-467" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-468"><a href="#cb31-468" aria-hidden="true" tabindex="-1"></a><span class="fu">## Building Your Mental Model</span></span>
 <span id="cb31-469"><a href="#cb31-469" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-470"><a href="#cb31-470" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Professional Practice Pyramid</span></span>
 <span id="cb31-471"><a href="#cb31-471" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-472"><a href="#cb31-472" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-472"><a href="#cb31-472" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb31-473"><a href="#cb31-473" aria-hidden="true" tabindex="-1"></a><span class="in">                   ┌──────────────────┐</span></span>
 <span id="cb31-474"><a href="#cb31-474" aria-hidden="true" tabindex="-1"></a><span class="in">                   │  Code Review     │  (Team quality)</span></span>
 <span id="cb31-475"><a href="#cb31-475" aria-hidden="true" tabindex="-1"></a><span class="in">                   ├──────────────────┤</span></span>
@@ -2260,7 +2260,7 @@ function calculateTotal(subtotal, taxRate) {
 <span id="cb31-487"><a href="#cb31-487" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-488"><a href="#cb31-488" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Cost of Skipping Practices</span></span>
 <span id="cb31-489"><a href="#cb31-489" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-490"><a href="#cb31-490" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-490"><a href="#cb31-490" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb31-491"><a href="#cb31-491" aria-hidden="true" tabindex="-1"></a><span class="in">                    │</span></span>
 <span id="cb31-492"><a href="#cb31-492" aria-hidden="true" tabindex="-1"></a><span class="in">    Time spent      │         ████ Technical Debt</span></span>
 <span id="cb31-493"><a href="#cb31-493" aria-hidden="true" tabindex="-1"></a><span class="in">    debugging /     │      ████████</span></span>
@@ -2299,7 +2299,7 @@ function calculateTotal(subtotal, taxRate) {
 <span id="cb31-526"><a href="#cb31-526" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-527"><a href="#cb31-527" aria-hidden="true" tabindex="-1"></a><span class="fu">### Risk Reduction</span></span>
 <span id="cb31-528"><a href="#cb31-528" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-529"><a href="#cb31-529" aria-hidden="true" tabindex="-1"></a>Version control isn't just convenience—it's business continuity:</span>
+<span id="cb31-529"><a href="#cb31-529" aria-hidden="true" tabindex="-1"></a>Version control isn't just convenience, it's business continuity:</span>
 <span id="cb31-530"><a href="#cb31-530" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-531"><a href="#cb31-531" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Roll back problematic deployments</span>
 <span id="cb31-532"><a href="#cb31-532" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Trace when bugs were introduced</span>
@@ -2341,8 +2341,8 @@ function calculateTotal(subtotal, taxRate) {
 <span id="cb31-568"><a href="#cb31-568" aria-hidden="true" tabindex="-1"></a>Professional practices from the start prevent painful migrations later.</span>
 <span id="cb31-569"><a href="#cb31-569" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-570"><a href="#cb31-570" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb31-571"><a href="#cb31-571" aria-hidden="true" tabindex="-1"></a><span class="fu">## ULO Connection</span></span>
-<span id="cb31-572"><a href="#cb31-572" aria-hidden="true" tabindex="-1"></a>This develops **ULO 2** (professional project management) and **ULO 1** (iteratively improving solutions). Professional practices aren't separate from development—they're how professionals develop. These skills are expected in any development role.</span>
+<span id="cb31-571"><a href="#cb31-571" aria-hidden="true" tabindex="-1"></a><span class="fu">## Skills You Are Building</span></span>
+<span id="cb31-572"><a href="#cb31-572" aria-hidden="true" tabindex="-1"></a>This develops **professional communication and project management** and **evaluating and improving solutions**. Professional practices aren't separate from development, they're how professionals develop. These skills are expected in any development role.</span>
 <span id="cb31-573"><a href="#cb31-573" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb31-574"><a href="#cb31-574" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-575"><a href="#cb31-575" aria-hidden="true" tabindex="-1"></a><span class="fu">## Practice Exercises</span></span>

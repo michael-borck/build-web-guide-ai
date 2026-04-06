@@ -332,7 +332,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/reading-list.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Weekly Reading List</span></a>
+ <span class="menu-text">Recommended Resources</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -594,13 +594,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="the-concept-first" class="level2" data-number="13.1">
 <h2 data-number="13.1" class="anchored" data-anchor-id="the-concept-first"><span class="header-section-number">13.1</span> The Concept First</h2>
-<p>In <a href="chapter-presentation.html" class="quarto-xref"><span>Chapter 3</span></a>, you learned CSS from scratch—selectors, box model, flexbox, media queries. That foundation matters. But building every project from zero is slow, and consistency across large applications is hard.</p>
+<p>In <a href="chapter-presentation.html" class="quarto-xref"><span>Chapter 3</span></a>, you learned CSS from scratch, selectors, box model, flexbox, media queries. That foundation matters. But building every project from zero is slow, and consistency across large applications is hard.</p>
 <p><strong>CSS frameworks</strong> solve this by providing pre-built styles, components, and design decisions. Instead of designing every button, input, and card yourself, you adopt tested patterns that work together.</p>
-<p>This isn’t laziness—it’s <strong>leverage</strong>. Professional developers use frameworks to move faster while maintaining quality. The skill is knowing when to use them, which to choose, and how to customise them for specific needs.</p>
+<p>This isn’t laziness, it’s <strong>leverage</strong>. Professional developers use frameworks to move faster while maintaining quality. The skill is knowing when to use them, which to choose, and how to customise them for specific needs.</p>
 </section>
 <section id="understanding-through-design-systems" class="level2" data-number="13.2">
 <h2 data-number="13.2" class="anchored" data-anchor-id="understanding-through-design-systems"><span class="header-section-number">13.2</span> Understanding Through Design Systems</h2>
-<p>Large organisations don’t let every designer create their own button styles. They create <strong>design systems</strong>—documented collections of components, colours, typography, and patterns that ensure consistency.</p>
+<p>Large organisations don’t let every designer create their own button styles. They create <strong>design systems</strong>, documented collections of components, colours, typography, and patterns that ensure consistency.</p>
 <p>Google has Material Design. Apple has Human Interface Guidelines. Salesforce has Lightning Design System. These define how interfaces should look and behave across products.</p>
 <p>CSS frameworks are design systems you can adopt immediately:</p>
 <ul>
@@ -628,7 +628,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="exploration-1-framework-philosophies" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-1-framework-philosophies">Exploration 1: Framework Philosophies</h3>
 <p>Bootstrap and Tailwind represent fundamentally different approaches:</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 Compare the philosophies behind Bootstrap and Tailwind CSS. Bootstrap
 gives you pre-built components. Tailwind gives you utility classes.
 When would you choose each approach? What are the trade-offs?</code></pre>
@@ -647,27 +647,27 @@ When would you choose each approach? What are the trade-offs?</code></pre>
 <li>Maximum flexibility</li>
 <li>Requires more design decisions</li>
 </ul>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 I'm building a dashboard for a startup with tight deadlines. Which
 framework would you recommend and why?</code></pre>
 </section>
 <section id="exploration-2-constraints-as-features" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-2-constraints-as-features">Exploration 2: Constraints as Features</h3>
 <p>How do limitations help?</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 How do constraints help creativity? Apply this concept to CSS
 frameworks. Why might having fewer choices actually improve outcomes?</code></pre>
 <p>Constraints reduce decision fatigue. When a framework says “primary buttons are this colour, secondary buttons are that colour,” you’re not spending mental energy on decisions that don’t differentiate your product.</p>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 When do framework constraints become limiting? At what point should
 a project move away from a framework?</code></pre>
 </section>
 <section id="exploration-3-the-generic-problem" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-3-the-generic-problem">Exploration 3: The “Generic” Problem</h3>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 A client says their Bootstrap site "looks like every other Bootstrap
 site." How would you respond? What can be done?</code></pre>
-<p>This reveals that frameworks are starting points, not endpoints. Customisation—colours, typography, spacing—transforms a generic framework site into something unique.</p>
+<p>This reveals that frameworks are starting points, not endpoints. Customisation, colours, typography, spacing, transforms a generic framework site into something unique.</p>
 </section>
 </section>
 <section id="from-concept-to-code" class="level2" data-number="13.4">
@@ -716,7 +716,7 @@ site." How would you respond? What can be done?</code></pre>
 <p><strong>Responsive utilities:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"d-none d-md-block"</span><span class="dt">&gt;</span>Hidden on mobile, visible on medium+<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"d-block d-md-none"</span><span class="dt">&gt;</span>Visible on mobile, hidden on medium+<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 I want a navigation bar that collapses into a hamburger menu on
 mobile. Show me how to build this with Bootstrap.</code></pre>
 </section>
@@ -825,7 +825,7 @@ mobile. Show me how to build this with Bootstrap.</code></pre>
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"flex-1"</span><span class="dt">&gt;</span>Column 3<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
 <span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Tailwind’s breakpoint prefixes: <code>sm:</code>, <code>md:</code>, <code>lg:</code>, <code>xl:</code>, <code>2xl:</code>.</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 Build me a responsive navigation bar with Tailwind that has a logo
 on the left and links on the right, and stacks vertically on mobile.</code></pre>
 </section>
@@ -926,7 +926,7 @@ on the left and links on the right, and stacks vertically on mobile.</code></pre
 <h2 data-number="13.5" class="anchored" data-anchor-id="building-your-mental-model"><span class="header-section-number">13.5</span> Building Your Mental Model</h2>
 <section id="the-abstraction-spectrum" class="level3">
 <h3 class="anchored" data-anchor-id="the-abstraction-spectrum">The Abstraction Spectrum</h3>
-<pre><code>More Abstraction                            Less Abstraction
+<pre class="text"><code>More Abstraction                            Less Abstraction
 (faster, less control)                      (slower, more control)
 ────────────────────────────────────────────────────────────────
 Component Libraries  →  Bootstrap  →  Tailwind  →  Custom CSS
@@ -986,7 +986,7 @@ Component Libraries  →  Bootstrap  →  Tailwind  →  Custom CSS
 <li><strong>Use <span class="citation" data-cites="apply">(<a href="../references.html#ref-apply" role="doc-biblioref"><strong>apply?</strong></a>)</span> in CSS</strong> (creates reusable classes)</li>
 <li><strong>Accept the trade-off</strong> (markup complexity vs CSS complexity)</li>
 </ol>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 When does Tailwind's utility approach become unmanageable? How do
 teams keep Tailwind codebases maintainable on large projects?</code></pre>
 </section>
@@ -1034,11 +1034,11 @@ teams keep Tailwind codebases maintainable on large projects?</code></pre>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>ULO Connection
+<span class="screen-reader-only">Note</span>Skills You Are Building
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This develops <strong>ULO 4</strong> (selecting and integrating technologies) and <strong>ULO 1</strong> (effective web applications). Framework selection is a business decision—speed vs.&nbsp;customisation, team skills, project timeline. Professional judgment means choosing appropriately, not defaulting to what you know.</p>
+<p>This develops <strong>making and defending technology choices</strong> and <strong>evaluating and improving solutions</strong>. Framework selection is a business decision, speed vs.&nbsp;customisation, team skills, project timeline. Professional judgment means choosing appropriately, not defaulting to what you know.</p>
 </div>
 </div>
 </section>
@@ -1073,7 +1073,7 @@ teams keep Tailwind codebases maintainable on large projects?</code></pre>
 <li>A three-column grid of cards</li>
 <li>A footer with centred text</li>
 </ol>
-<p>Use only Bootstrap classes—no custom CSS.</p>
+<p>Use only Bootstrap classes, no custom CSS.</p>
 </section>
 <section id="exercise-10.2-tailwind-basics-level-2" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-10.2-tailwind-basics-level-2">Exercise 10.2: Tailwind Basics (Level 2)</h3>
@@ -1162,7 +1162,7 @@ teams keep Tailwind codebases maintainable on large projects?</code></pre>
 </section>
 <section id="next-steps" class="level2" data-number="13.11">
 <h2 data-number="13.11" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">13.11</span> Next Steps</h2>
-<p>You now have tools for rapid, consistent UI development. But professional work requires more than just building features—it requires practices that ensure quality, collaboration, and maintainability.</p>
+<p>You now have tools for rapid, consistent UI development. But professional work requires more than just building features, it requires practices that ensure quality, collaboration, and maintainability.</p>
 <p>In <a href="chapter-professional-practices.html" class="quarto-xref"><span>Chapter 14</span></a>, we’ll cover version control with Git, testing basics, and code quality practices. These professional practices separate hobby projects from production-ready work and are expected in any development role.</p>
 
 
@@ -1653,15 +1653,15 @@ teams keep Tailwind codebases maintainable on large projects?</code></pre>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Concept First</span></span>
 <span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>In @sec-presentation, you learned CSS from scratch—selectors, box model, flexbox, media queries. That foundation matters. But building every project from zero is slow, and consistency across large applications is hard.</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>In @sec-presentation, you learned CSS from scratch, selectors, box model, flexbox, media queries. That foundation matters. But building every project from zero is slow, and consistency across large applications is hard.</span>
 <span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>**CSS frameworks** solve this by providing pre-built styles, components, and design decisions. Instead of designing every button, input, and card yourself, you adopt tested patterns that work together.</span>
 <span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>This isn't laziness—it's **leverage**. Professional developers use frameworks to move faster while maintaining quality. The skill is knowing when to use them, which to choose, and how to customise them for specific needs.</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>This isn't laziness, it's **leverage**. Professional developers use frameworks to move faster while maintaining quality. The skill is knowing when to use them, which to choose, and how to customise them for specific needs.</span>
 <span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Understanding Through Design Systems</span></span>
 <span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>Large organisations don't let every designer create their own button styles. They create **design systems**—documented collections of components, colours, typography, and patterns that ensure consistency.</span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>Large organisations don't let every designer create their own button styles. They create **design systems**, documented collections of components, colours, typography, and patterns that ensure consistency.</span>
 <span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>Google has Material Design. Apple has Human Interface Guidelines. Salesforce has Lightning Design System. These define how interfaces should look and behave across products.</span>
 <span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a></span>
@@ -1684,7 +1684,7 @@ teams keep Tailwind codebases maintainable on large projects?</code></pre>
 <span id="cb31-33"><a href="#cb31-33" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-34"><a href="#cb31-34" aria-hidden="true" tabindex="-1"></a>Bootstrap and Tailwind represent fundamentally different approaches:</span>
 <span id="cb31-35"><a href="#cb31-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-36"><a href="#cb31-36" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-36"><a href="#cb31-36" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb31-37"><a href="#cb31-37" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb31-38"><a href="#cb31-38" aria-hidden="true" tabindex="-1"></a><span class="in">Compare the philosophies behind Bootstrap and Tailwind CSS. Bootstrap</span></span>
 <span id="cb31-39"><a href="#cb31-39" aria-hidden="true" tabindex="-1"></a><span class="in">gives you pre-built components. Tailwind gives you utility classes.</span></span>
@@ -1707,7 +1707,7 @@ teams keep Tailwind codebases maintainable on large projects?</code></pre>
 <span id="cb31-56"><a href="#cb31-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Maximum flexibility</span>
 <span id="cb31-57"><a href="#cb31-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Requires more design decisions</span>
 <span id="cb31-58"><a href="#cb31-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-59"><a href="#cb31-59" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-59"><a href="#cb31-59" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb31-60"><a href="#cb31-60" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb31-61"><a href="#cb31-61" aria-hidden="true" tabindex="-1"></a><span class="in">I'm building a dashboard for a startup with tight deadlines. Which</span></span>
 <span id="cb31-62"><a href="#cb31-62" aria-hidden="true" tabindex="-1"></a><span class="in">framework would you recommend and why?</span></span>
@@ -1717,7 +1717,7 @@ teams keep Tailwind codebases maintainable on large projects?</code></pre>
 <span id="cb31-66"><a href="#cb31-66" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-67"><a href="#cb31-67" aria-hidden="true" tabindex="-1"></a>How do limitations help?</span>
 <span id="cb31-68"><a href="#cb31-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-69"><a href="#cb31-69" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-69"><a href="#cb31-69" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb31-70"><a href="#cb31-70" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb31-71"><a href="#cb31-71" aria-hidden="true" tabindex="-1"></a><span class="in">How do constraints help creativity? Apply this concept to CSS</span></span>
 <span id="cb31-72"><a href="#cb31-72" aria-hidden="true" tabindex="-1"></a><span class="in">frameworks. Why might having fewer choices actually improve outcomes?</span></span>
@@ -1725,7 +1725,7 @@ teams keep Tailwind codebases maintainable on large projects?</code></pre>
 <span id="cb31-74"><a href="#cb31-74" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-75"><a href="#cb31-75" aria-hidden="true" tabindex="-1"></a>Constraints reduce decision fatigue. When a framework says "primary buttons are this colour, secondary buttons are that colour," you're not spending mental energy on decisions that don't differentiate your product.</span>
 <span id="cb31-76"><a href="#cb31-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-77"><a href="#cb31-77" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-77"><a href="#cb31-77" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb31-78"><a href="#cb31-78" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb31-79"><a href="#cb31-79" aria-hidden="true" tabindex="-1"></a><span class="in">When do framework constraints become limiting? At what point should</span></span>
 <span id="cb31-80"><a href="#cb31-80" aria-hidden="true" tabindex="-1"></a><span class="in">a project move away from a framework?</span></span>
@@ -1733,13 +1733,13 @@ teams keep Tailwind codebases maintainable on large projects?</code></pre>
 <span id="cb31-82"><a href="#cb31-82" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-83"><a href="#cb31-83" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exploration 3: The "Generic" Problem</span></span>
 <span id="cb31-84"><a href="#cb31-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-85"><a href="#cb31-85" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-85"><a href="#cb31-85" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb31-86"><a href="#cb31-86" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb31-87"><a href="#cb31-87" aria-hidden="true" tabindex="-1"></a><span class="in">A client says their Bootstrap site "looks like every other Bootstrap</span></span>
 <span id="cb31-88"><a href="#cb31-88" aria-hidden="true" tabindex="-1"></a><span class="in">site." How would you respond? What can be done?</span></span>
 <span id="cb31-89"><a href="#cb31-89" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb31-90"><a href="#cb31-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-91"><a href="#cb31-91" aria-hidden="true" tabindex="-1"></a>This reveals that frameworks are starting points, not endpoints. Customisation—colours, typography, spacing—transforms a generic framework site into something unique.</span>
+<span id="cb31-91"><a href="#cb31-91" aria-hidden="true" tabindex="-1"></a>This reveals that frameworks are starting points, not endpoints. Customisation, colours, typography, spacing, transforms a generic framework site into something unique.</span>
 <span id="cb31-92"><a href="#cb31-92" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-93"><a href="#cb31-93" aria-hidden="true" tabindex="-1"></a><span class="fu">## From Concept to Code</span></span>
 <span id="cb31-94"><a href="#cb31-94" aria-hidden="true" tabindex="-1"></a></span>
@@ -1810,7 +1810,7 @@ teams keep Tailwind codebases maintainable on large projects?</code></pre>
 <span id="cb31-159"><a href="#cb31-159" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>div class<span class="op">=</span><span class="st">"d-block d-md-none"</span><span class="op">&gt;</span>Visible on mobile<span class="op">,</span> hidden on medium<span class="op">+&lt;/</span>div<span class="op">&gt;</span></span>
 <span id="cb31-160"><a href="#cb31-160" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb31-161"><a href="#cb31-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-162"><a href="#cb31-162" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-162"><a href="#cb31-162" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb31-163"><a href="#cb31-163" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb31-164"><a href="#cb31-164" aria-hidden="true" tabindex="-1"></a><span class="in">I want a navigation bar that collapses into a hamburger menu on</span></span>
 <span id="cb31-165"><a href="#cb31-165" aria-hidden="true" tabindex="-1"></a><span class="in">mobile. Show me how to build this with Bootstrap.</span></span>
@@ -1911,7 +1911,7 @@ teams keep Tailwind codebases maintainable on large projects?</code></pre>
 <span id="cb31-260"><a href="#cb31-260" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-261"><a href="#cb31-261" aria-hidden="true" tabindex="-1"></a>Tailwind's breakpoint prefixes: <span class="in">`sm:`</span>, <span class="in">`md:`</span>, <span class="in">`lg:`</span>, <span class="in">`xl:`</span>, <span class="in">`2xl:`</span>.</span>
 <span id="cb31-262"><a href="#cb31-262" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-263"><a href="#cb31-263" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-263"><a href="#cb31-263" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb31-264"><a href="#cb31-264" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb31-265"><a href="#cb31-265" aria-hidden="true" tabindex="-1"></a><span class="in">Build me a responsive navigation bar with Tailwind that has a logo</span></span>
 <span id="cb31-266"><a href="#cb31-266" aria-hidden="true" tabindex="-1"></a><span class="in">on the left and links on the right, and stacks vertically on mobile.</span></span>
@@ -2051,7 +2051,7 @@ teams keep Tailwind codebases maintainable on large projects?</code></pre>
 <span id="cb31-400"><a href="#cb31-400" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-401"><a href="#cb31-401" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Abstraction Spectrum</span></span>
 <span id="cb31-402"><a href="#cb31-402" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-403"><a href="#cb31-403" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-403"><a href="#cb31-403" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb31-404"><a href="#cb31-404" aria-hidden="true" tabindex="-1"></a><span class="in">More Abstraction                            Less Abstraction</span></span>
 <span id="cb31-405"><a href="#cb31-405" aria-hidden="true" tabindex="-1"></a><span class="in">(faster, less control)                      (slower, more control)</span></span>
 <span id="cb31-406"><a href="#cb31-406" aria-hidden="true" tabindex="-1"></a><span class="in">────────────────────────────────────────────────────────────────</span></span>
@@ -2089,7 +2089,7 @@ teams keep Tailwind codebases maintainable on large projects?</code></pre>
 <span id="cb31-438"><a href="#cb31-438" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Use @apply in CSS** (creates reusable classes)</span>
 <span id="cb31-439"><a href="#cb31-439" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Accept the trade-off** (markup complexity vs CSS complexity)</span>
 <span id="cb31-440"><a href="#cb31-440" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-441"><a href="#cb31-441" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-441"><a href="#cb31-441" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb31-442"><a href="#cb31-442" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb31-443"><a href="#cb31-443" aria-hidden="true" tabindex="-1"></a><span class="in">When does Tailwind's utility approach become unmanageable? How do</span></span>
 <span id="cb31-444"><a href="#cb31-444" aria-hidden="true" tabindex="-1"></a><span class="in">teams keep Tailwind codebases maintainable on large projects?</span></span>
@@ -2133,8 +2133,8 @@ teams keep Tailwind codebases maintainable on large projects?</code></pre>
 <span id="cb31-482"><a href="#cb31-482" aria-hidden="true" tabindex="-1"></a>Modern frameworks are mobile-responsive out of the box. Bootstrap's grid and Tailwind's responsive prefixes handle responsive design that would take significant custom CSS.</span>
 <span id="cb31-483"><a href="#cb31-483" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-484"><a href="#cb31-484" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb31-485"><a href="#cb31-485" aria-hidden="true" tabindex="-1"></a><span class="fu">## ULO Connection</span></span>
-<span id="cb31-486"><a href="#cb31-486" aria-hidden="true" tabindex="-1"></a>This develops **ULO 4** (selecting and integrating technologies) and **ULO 1** (effective web applications). Framework selection is a business decision—speed vs. customisation, team skills, project timeline. Professional judgment means choosing appropriately, not defaulting to what you know.</span>
+<span id="cb31-485"><a href="#cb31-485" aria-hidden="true" tabindex="-1"></a><span class="fu">## Skills You Are Building</span></span>
+<span id="cb31-486"><a href="#cb31-486" aria-hidden="true" tabindex="-1"></a>This develops **making and defending technology choices** and **evaluating and improving solutions**. Framework selection is a business decision, speed vs. customisation, team skills, project timeline. Professional judgment means choosing appropriately, not defaulting to what you know.</span>
 <span id="cb31-487"><a href="#cb31-487" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb31-488"><a href="#cb31-488" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-489"><a href="#cb31-489" aria-hidden="true" tabindex="-1"></a><span class="fu">## Practice Exercises</span></span>
@@ -2157,7 +2157,7 @@ teams keep Tailwind codebases maintainable on large projects?</code></pre>
 <span id="cb31-506"><a href="#cb31-506" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>A three-column grid of cards</span>
 <span id="cb31-507"><a href="#cb31-507" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>A footer with centred text</span>
 <span id="cb31-508"><a href="#cb31-508" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-509"><a href="#cb31-509" aria-hidden="true" tabindex="-1"></a>Use only Bootstrap classes—no custom CSS.</span>
+<span id="cb31-509"><a href="#cb31-509" aria-hidden="true" tabindex="-1"></a>Use only Bootstrap classes, no custom CSS.</span>
 <span id="cb31-510"><a href="#cb31-510" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-511"><a href="#cb31-511" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 10.2: Tailwind Basics (Level 2)</span></span>
 <span id="cb31-512"><a href="#cb31-512" aria-hidden="true" tabindex="-1"></a></span>
@@ -2242,7 +2242,7 @@ teams keep Tailwind codebases maintainable on large projects?</code></pre>
 <span id="cb31-591"><a href="#cb31-591" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-592"><a href="#cb31-592" aria-hidden="true" tabindex="-1"></a><span class="fu">## Next Steps</span></span>
 <span id="cb31-593"><a href="#cb31-593" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-594"><a href="#cb31-594" aria-hidden="true" tabindex="-1"></a>You now have tools for rapid, consistent UI development. But professional work requires more than just building features—it requires practices that ensure quality, collaboration, and maintainability.</span>
+<span id="cb31-594"><a href="#cb31-594" aria-hidden="true" tabindex="-1"></a>You now have tools for rapid, consistent UI development. But professional work requires more than just building features, it requires practices that ensure quality, collaboration, and maintainability.</span>
 <span id="cb31-595"><a href="#cb31-595" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-596"><a href="#cb31-596" aria-hidden="true" tabindex="-1"></a>In @sec-professional-practices, we'll cover version control with Git, testing basics, and code quality practices. These professional practices separate hobby projects from production-ready work and are expected in any development role.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>

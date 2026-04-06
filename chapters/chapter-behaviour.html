@@ -332,7 +332,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/reading-list.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Weekly Reading List</span></a>
+ <span class="menu-text">Recommended Resources</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -599,9 +599,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="the-concept-first" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="the-concept-first"><span class="header-section-number">4.1</span> The Concept First</h2>
-<p>HTML provides structure. CSS provides presentation. JavaScript provides <strong>behaviour</strong>—the ability to respond to user actions, update content dynamically, and create interactive experiences.</p>
+<p>HTML provides structure. CSS provides presentation. JavaScript provides <strong>behaviour</strong>, the ability to respond to user actions, update content dynamically, and create interactive experiences.</p>
 <p>Consider a contact form. HTML creates the fields and the submit button. CSS makes it look professional. But what happens when someone clicks “Submit”? What validates their input? What shows them a success message? That’s JavaScript.</p>
-<p>JavaScript transforms static documents into dynamic applications. It’s what makes modern web experiences feel responsive and alive—dropdown menus that expand, forms that validate as you type, content that loads without page refreshes.</p>
+<p>JavaScript transforms static documents into dynamic applications. It’s what makes modern web experiences feel responsive and alive, dropdown menus that expand, forms that validate as you type, content that loads without page refreshes.</p>
 <p>But here’s an important perspective: <strong>JavaScript should enhance, not replace, structure and presentation</strong>. A well-built page works without JavaScript. JavaScript makes it work <em>better</em>.</p>
 </section>
 <section id="understanding-through-conversation" class="level2" data-number="4.2">
@@ -634,25 +634,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="exploration-1-event-driven-thinking" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-1-event-driven-thinking">Exploration 1: Event-Driven Thinking</h3>
 <p>The event-driven model is fundamental to understanding JavaScript. Let’s explore it through analogy:</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 Explain event-driven programming using a restaurant service analogy.
 The waiter doesn't constantly ask "Are you ready to order?" every
-second—how does the restaurant model work instead?</code></pre>
+second, how does the restaurant model work instead?</code></pre>
 <p>This should reveal the pattern: staff don’t constantly poll customers. Instead, customers signal (raise a hand, make eye contact) and staff respond. Events trigger responses.</p>
 <p>Follow up:</p>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 What "events" happen on a typical webpage? List as many as you can
-think of—things users do that a page might respond to.</code></pre>
+think of, things users do that a page might respond to.</code></pre>
 </section>
 <section id="exploration-2-the-dom" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-2-the-dom">Exploration 2: The DOM</h3>
 <p>JavaScript interacts with pages through something called the DOM (Document Object Model). But what is it?</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 What is the DOM? Explain it as if describing how a librarian has a
 catalogue system that represents all the books on the shelves. The
-books are the actual HTML—what's the catalogue?</code></pre>
+books are the actual HTML, what's the catalogue?</code></pre>
 <p>The DOM is JavaScript’s representation of your HTML structure. When you change the DOM, the page updates visually. It’s the bridge between your code and what users see.</p>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 If I want to change the text inside a paragraph using JavaScript,
 am I changing the HTML file? Or something else? Walk me through
 what actually happens.</code></pre>
@@ -660,12 +660,12 @@ what actually happens.</code></pre>
 <section id="exploration-3-progressive-enhancement" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-3-progressive-enhancement">Exploration 3: Progressive Enhancement</h3>
 <p>Here’s a philosophy that separates professional developers from amateurs:</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 Why should websites work without JavaScript? Explain the business
 case, not just the technical reasons. Consider: who can't use
 JavaScript and why?</code></pre>
 <p>This conversation should reveal important realities: some users disable JavaScript for security, some have slow connections where it fails to load, some use assistive technologies that struggle with JS-heavy sites, and some corporate firewalls block scripts. Building core functionality in HTML and CSS, then <em>enhancing</em> with JavaScript, serves more customers.</p>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 Give me an example of a feature built with progressive enhancement
 versus one that fails without JavaScript. What's the difference
 in user experience?</code></pre>
@@ -694,7 +694,7 @@ in user experience?</code></pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Modern variable declarations</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> userName <span class="op">=</span> <span class="st">'Alex'</span><span class="op">;</span>        <span class="co">// Can be reassigned</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> maxItems <span class="op">=</span> <span class="dv">10</span><span class="op">;</span>          <span class="co">// Cannot be reassigned</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Use <code>const</code> by default—it prevents accidental changes. Use <code>let</code> only when you need to reassign the value.</p>
+<p>Use <code>const</code> by default, it prevents accidental changes. Use <code>let</code> only when you need to reassign the value.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> greeting <span class="op">=</span> <span class="st">'Welcome'</span><span class="op">;</span>    <span class="co">// Use const for values that won't change</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> itemCount <span class="op">=</span> <span class="dv">0</span><span class="op">;</span>             <span class="co">// Use let when you'll update the value</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>itemCount <span class="op">=</span> itemCount <span class="op">+</span> <span class="dv">1</span><span class="op">;</span>     <span class="co">// This works</span></span>
@@ -736,7 +736,7 @@ in user experience?</code></pre>
 <span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>    <span class="dt">price</span><span class="op">:</span> <span class="fl">4.50</span><span class="op">,</span></span>
 <span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    <span class="dt">available</span><span class="op">:</span> <span class="kw">true</span></span>
 <span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 When would I use an array versus an object? Give me three real
 examples of data that fits each structure.</code></pre>
 </section>
@@ -772,7 +772,7 @@ examples of data that fits each structure.</code></pre>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co">// Find multiple elements</span></span>
 <span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> allCards <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelectorAll</span>(<span class="st">'.card'</span>)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>querySelector</code> uses CSS selector syntax—the same patterns you learned in Chapter 2. This consistency makes finding elements intuitive.</p>
+<p><code>querySelector</code> uses CSS selector syntax, the same patterns you learned in Chapter 2. This consistency makes finding elements intuitive.</p>
 </section>
 <section id="changing-elements" class="level3">
 <h3 class="anchored" data-anchor-id="changing-elements">Changing Elements</h3>
@@ -809,7 +809,7 @@ examples of data that fits each structure.</code></pre>
 </section>
 <section id="events-responding-to-users" class="level3">
 <h3 class="anchored" data-anchor-id="events-responding-to-users">Events: Responding to Users</h3>
-<p>Events are things that happen—clicks, key presses, form submissions, page loads. Event listeners wait for specific events and run code when they occur:</p>
+<p>Events are things that happen, clicks, key presses, form submissions, page loads. Event listeners wait for specific events and run code when they occur:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> button <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'#submit-button'</span>)<span class="op">;</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>button<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'click'</span><span class="op">,</span> <span class="kw">function</span>() {</span>
@@ -854,7 +854,7 @@ examples of data that fits each structure.</code></pre>
 </section>
 <section id="a-complete-example-toggle-menu" class="level3">
 <h3 class="anchored" data-anchor-id="a-complete-example-toggle-menu">A Complete Example: Toggle Menu</h3>
-<p>Let’s combine these concepts into a practical feature—a mobile navigation toggle:</p>
+<p>Let’s combine these concepts into a practical feature, a mobile navigation toggle:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> id</span><span class="op">=</span><span class="st">"menu-toggle"</span><span class="dt">&gt;</span>Menu<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">nav</span><span class="ot"> id</span><span class="op">=</span><span class="st">"main-nav"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"hidden"</span><span class="dt">&gt;</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"/"</span><span class="dt">&gt;</span>Home<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
@@ -874,7 +874,7 @@ examples of data that fits each structure.</code></pre>
 </section>
 <section id="form-validation-example" class="level3">
 <h3 class="anchored" data-anchor-id="form-validation-example">Form Validation Example</h3>
-<p>Here’s a practical business example—validating an email field:</p>
+<p>Here’s a practical business example, validating an email field:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span><span class="ot"> id</span><span class="op">=</span><span class="st">"contact-form"</span><span class="dt">&gt;</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">label</span><span class="ot"> for</span><span class="op">=</span><span class="st">"email"</span><span class="dt">&gt;</span>Email:<span class="dt">&lt;/</span><span class="kw">label</span><span class="dt">&gt;</span></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> type</span><span class="op">=</span><span class="st">"email"</span><span class="ot"> id</span><span class="op">=</span><span class="st">"email"</span><span class="ot"> name</span><span class="op">=</span><span class="st">"email"</span><span class="ot"> required</span><span class="dt">&gt;</span></span>
@@ -903,8 +903,8 @@ examples of data that fits each structure.</code></pre>
 <span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>        errorSpan<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">'Please enter a valid email address'</span><span class="op">;</span></span>
 <span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>This validates as the user types and again on submission. Note: HTML5 provides <code>type="email"</code> validation too—JavaScript enhances the feedback, not replaces the baseline.</p>
-<pre><code>Ask your AI:
+<p>This validates as the user types and again on submission. Note: HTML5 provides <code>type="email"</code> validation too. JavaScript enhances the feedback, not replaces the baseline.</p>
+<pre class="text"><code>Ask your AI:
 Walk me through this form validation code line by line. What does
 event.preventDefault() do and why is it important here?</code></pre>
 </section>
@@ -920,8 +920,8 @@ event.preventDefault() do and why is it important here?</code></pre>
 <li>When an event occurs, runs the handler</li>
 <li>Returns to waiting</li>
 </ol>
-<p>This is why you register event listeners—you’re telling JavaScript “when this happens, run this code.” The rest of the time, JavaScript is idle, waiting.</p>
-<pre><code>Ask your AI:
+<p>This is why you register event listeners, you’re telling JavaScript “when this happens, run this code.” The rest of the time, JavaScript is idle, waiting.</p>
+<pre class="text"><code>Ask your AI:
 Explain the JavaScript event loop using an office receptionist
 analogy. The receptionist handles visitors (events) but also has
 other tasks. How do they prioritise?</code></pre>
@@ -929,7 +929,7 @@ other tasks. How do they prioritise?</code></pre>
 <section id="the-three-layers" class="level3">
 <h3 class="anchored" data-anchor-id="the-three-layers">The Three Layers</h3>
 <p>Reinforce this mental model from earlier chapters:</p>
-<pre><code>┌─────────────────────────────────────┐
+<pre class="text"><code>┌─────────────────────────────────────┐
 │  JavaScript (Behaviour)              │  What responds
 ├─────────────────────────────────────┤
 │  CSS (Presentation)                  │  What it looks like
@@ -945,7 +945,7 @@ other tasks. How do they prioritise?</code></pre>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(<span class="st">'Something went wrong!'</span>)<span class="op">;</span>       <span class="co">// Print errors</span></span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">table</span>(arrayOfObjects)<span class="op">;</span>                <span class="co">// Print tables</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Open DevTools (F12 or right-click → Inspect → Console) to see these messages. When something doesn’t work, add <code>console.log()</code> statements to trace what’s happening.</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 What are common JavaScript debugging techniques? How do I figure out
 why my code isn't working?</code></pre>
 </section>
@@ -986,11 +986,11 @@ why my code isn't working?</code></pre>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>ULO Connection
+<span class="screen-reader-only">Note</span>Skills You Are Building
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This develops <strong>ULO 1</strong> (effective web applications) and <strong>ULO 3</strong> (translating stakeholder needs). Interactive features must serve user needs—JavaScript for its own sake creates complexity without value. The ability to identify when interactivity helps versus hinders is professional judgment.</p>
+<p>This develops <strong>evaluating and improving solutions</strong> and <strong>translating stakeholder needs into technical requirements</strong>. Interactive features must serve user needs. JavaScript for its own sake creates complexity without value. The ability to identify when interactivity helps versus hinders is professional judgment.</p>
 </div>
 </div>
 </section>
@@ -1024,7 +1024,7 @@ why my code isn't working?</code></pre>
 <li>Type <code>document.querySelector('h1')</code> to find the main heading</li>
 <li>Type <code>document.querySelector('h1').textContent = 'I changed this!'</code></li>
 </ol>
-<p>What happened? Refresh the page—is your change permanent? Why or why not?</p>
+<p>What happened? Refresh the page, is your change permanent? Why or why not?</p>
 </section>
 <section id="exercise-3.2-button-interaction-level-2" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-3.2-button-interaction-level-2">Exercise 3.2: Button Interaction (Level 2)</h3>
@@ -1066,13 +1066,13 @@ why my code isn't working?</code></pre>
 <li>Describe what JavaScript would do for each interaction</li>
 <li>Consider: what should work without JavaScript?</li>
 </ol>
-<p>Don’t write the full code—design the approach. Document your thinking, then discuss your design with your AI partner. What did they suggest differently?</p>
+<p>Don’t write the full code, design the approach. Document your thinking, then discuss your design with your AI partner. What did they suggest differently?</p>
 </section>
 </section>
 <section id="chapter-summary" class="level2" data-number="4.8">
 <h2 data-number="4.8" class="anchored" data-anchor-id="chapter-summary"><span class="header-section-number">4.8</span> Chapter Summary</h2>
 <ul>
-<li>JavaScript adds behaviour—the ability to respond to user actions</li>
+<li>JavaScript adds behaviour, the ability to respond to user actions</li>
 <li>Event-driven programming means listening for events and responding</li>
 <li>The DOM is JavaScript’s interface to the page structure</li>
 <li>Progressive enhancement builds on working HTML/CSS, not replacing it</li>
@@ -1105,8 +1105,8 @@ why my code isn't working?</code></pre>
 </section>
 <section id="next-steps" class="level2" data-number="4.11">
 <h2 data-number="4.11" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">4.11</span> Next Steps</h2>
-<p>You can now build pages that respond to users. But modern web applications do more—they connect to services, fetch data, and send information to servers.</p>
-<p>In <a href="chapter-connection.html" class="quarto-xref"><span>Chapter 5</span></a>, we’ll explore APIs—how your JavaScript can request data from external services and submit data to be processed. This transforms your pages from standalone documents into connected applications that interact with the wider web.</p>
+<p>You can now build pages that respond to users. But modern web applications do more, they connect to services, fetch data, and send information to servers.</p>
+<p>In <a href="chapter-connection.html" class="quarto-xref"><span>Chapter 5</span></a>, we’ll explore APIs, how your JavaScript can request data from external services and submit data to be processed. This transforms your pages from standalone documents into connected applications that interact with the wider web.</p>
 <p>The JavaScript fundamentals you’ve learned become the foundation for asynchronous programming and data-driven interfaces.</p>
 
 
@@ -1597,11 +1597,11 @@ why my code isn't working?</code></pre>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Concept First</span></span>
 <span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>HTML provides structure. CSS provides presentation. JavaScript provides **behaviour**—the ability to respond to user actions, update content dynamically, and create interactive experiences.</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>HTML provides structure. CSS provides presentation. JavaScript provides **behaviour**, the ability to respond to user actions, update content dynamically, and create interactive experiences.</span>
 <span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>Consider a contact form. HTML creates the fields and the submit button. CSS makes it look professional. But what happens when someone clicks "Submit"? What validates their input? What shows them a success message? That's JavaScript.</span>
 <span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>JavaScript transforms static documents into dynamic applications. It's what makes modern web experiences feel responsive and alive—dropdown menus that expand, forms that validate as you type, content that loads without page refreshes.</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>JavaScript transforms static documents into dynamic applications. It's what makes modern web experiences feel responsive and alive, dropdown menus that expand, forms that validate as you type, content that loads without page refreshes.</span>
 <span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>But here's an important perspective: **JavaScript should enhance, not replace, structure and presentation**. A well-built page works without JavaScript. JavaScript makes it work *better*.</span>
 <span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a></span>
@@ -1629,37 +1629,37 @@ why my code isn't working?</code></pre>
 <span id="cb28-34"><a href="#cb28-34" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-35"><a href="#cb28-35" aria-hidden="true" tabindex="-1"></a>The event-driven model is fundamental to understanding JavaScript. Let's explore it through analogy:</span>
 <span id="cb28-36"><a href="#cb28-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-37"><a href="#cb28-37" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-37"><a href="#cb28-37" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb28-38"><a href="#cb28-38" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb28-39"><a href="#cb28-39" aria-hidden="true" tabindex="-1"></a><span class="in">Explain event-driven programming using a restaurant service analogy.</span></span>
 <span id="cb28-40"><a href="#cb28-40" aria-hidden="true" tabindex="-1"></a><span class="in">The waiter doesn't constantly ask "Are you ready to order?" every</span></span>
-<span id="cb28-41"><a href="#cb28-41" aria-hidden="true" tabindex="-1"></a><span class="in">second—how does the restaurant model work instead?</span></span>
+<span id="cb28-41"><a href="#cb28-41" aria-hidden="true" tabindex="-1"></a><span class="in">second, how does the restaurant model work instead?</span></span>
 <span id="cb28-42"><a href="#cb28-42" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb28-43"><a href="#cb28-43" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-44"><a href="#cb28-44" aria-hidden="true" tabindex="-1"></a>This should reveal the pattern: staff don't constantly poll customers. Instead, customers signal (raise a hand, make eye contact) and staff respond. Events trigger responses.</span>
 <span id="cb28-45"><a href="#cb28-45" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-46"><a href="#cb28-46" aria-hidden="true" tabindex="-1"></a>Follow up:</span>
 <span id="cb28-47"><a href="#cb28-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-48"><a href="#cb28-48" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-48"><a href="#cb28-48" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb28-49"><a href="#cb28-49" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb28-50"><a href="#cb28-50" aria-hidden="true" tabindex="-1"></a><span class="in">What "events" happen on a typical webpage? List as many as you can</span></span>
-<span id="cb28-51"><a href="#cb28-51" aria-hidden="true" tabindex="-1"></a><span class="in">think of—things users do that a page might respond to.</span></span>
+<span id="cb28-51"><a href="#cb28-51" aria-hidden="true" tabindex="-1"></a><span class="in">think of, things users do that a page might respond to.</span></span>
 <span id="cb28-52"><a href="#cb28-52" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb28-53"><a href="#cb28-53" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-54"><a href="#cb28-54" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exploration 2: The DOM</span></span>
 <span id="cb28-55"><a href="#cb28-55" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-56"><a href="#cb28-56" aria-hidden="true" tabindex="-1"></a>JavaScript interacts with pages through something called the DOM (Document Object Model). But what is it?</span>
 <span id="cb28-57"><a href="#cb28-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-58"><a href="#cb28-58" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-58"><a href="#cb28-58" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb28-59"><a href="#cb28-59" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb28-60"><a href="#cb28-60" aria-hidden="true" tabindex="-1"></a><span class="in">What is the DOM? Explain it as if describing how a librarian has a</span></span>
 <span id="cb28-61"><a href="#cb28-61" aria-hidden="true" tabindex="-1"></a><span class="in">catalogue system that represents all the books on the shelves. The</span></span>
-<span id="cb28-62"><a href="#cb28-62" aria-hidden="true" tabindex="-1"></a><span class="in">books are the actual HTML—what's the catalogue?</span></span>
+<span id="cb28-62"><a href="#cb28-62" aria-hidden="true" tabindex="-1"></a><span class="in">books are the actual HTML, what's the catalogue?</span></span>
 <span id="cb28-63"><a href="#cb28-63" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb28-64"><a href="#cb28-64" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-65"><a href="#cb28-65" aria-hidden="true" tabindex="-1"></a>The DOM is JavaScript's representation of your HTML structure. When you change the DOM, the page updates visually. It's the bridge between your code and what users see.</span>
 <span id="cb28-66"><a href="#cb28-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-67"><a href="#cb28-67" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-67"><a href="#cb28-67" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb28-68"><a href="#cb28-68" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb28-69"><a href="#cb28-69" aria-hidden="true" tabindex="-1"></a><span class="in">If I want to change the text inside a paragraph using JavaScript,</span></span>
 <span id="cb28-70"><a href="#cb28-70" aria-hidden="true" tabindex="-1"></a><span class="in">am I changing the HTML file? Or something else? Walk me through</span></span>
@@ -1670,7 +1670,7 @@ why my code isn't working?</code></pre>
 <span id="cb28-75"><a href="#cb28-75" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-76"><a href="#cb28-76" aria-hidden="true" tabindex="-1"></a>Here's a philosophy that separates professional developers from amateurs:</span>
 <span id="cb28-77"><a href="#cb28-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-78"><a href="#cb28-78" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-78"><a href="#cb28-78" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb28-79"><a href="#cb28-79" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb28-80"><a href="#cb28-80" aria-hidden="true" tabindex="-1"></a><span class="in">Why should websites work without JavaScript? Explain the business</span></span>
 <span id="cb28-81"><a href="#cb28-81" aria-hidden="true" tabindex="-1"></a><span class="in">case, not just the technical reasons. Consider: who can't use</span></span>
@@ -1679,7 +1679,7 @@ why my code isn't working?</code></pre>
 <span id="cb28-84"><a href="#cb28-84" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-85"><a href="#cb28-85" aria-hidden="true" tabindex="-1"></a>This conversation should reveal important realities: some users disable JavaScript for security, some have slow connections where it fails to load, some use assistive technologies that struggle with JS-heavy sites, and some corporate firewalls block scripts. Building core functionality in HTML and CSS, then *enhancing* with JavaScript, serves more customers.</span>
 <span id="cb28-86"><a href="#cb28-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-87"><a href="#cb28-87" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-87"><a href="#cb28-87" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb28-88"><a href="#cb28-88" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb28-89"><a href="#cb28-89" aria-hidden="true" tabindex="-1"></a><span class="in">Give me an example of a feature built with progressive enhancement</span></span>
 <span id="cb28-90"><a href="#cb28-90" aria-hidden="true" tabindex="-1"></a><span class="in">versus one that fails without JavaScript. What's the difference</span></span>
@@ -1721,7 +1721,7 @@ why my code isn't working?</code></pre>
 <span id="cb28-126"><a href="#cb28-126" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> maxItems <span class="op">=</span> <span class="dv">10</span><span class="op">;</span>          <span class="co">// Cannot be reassigned</span></span>
 <span id="cb28-127"><a href="#cb28-127" aria-hidden="true" tabindex="-1"></a>```</span>
 <span id="cb28-128"><a href="#cb28-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-129"><a href="#cb28-129" aria-hidden="true" tabindex="-1"></a>Use `const` by default—it prevents accidental changes<span class="op">.</span> <span class="fu">Use</span> `let` only when you need to reassign the value<span class="op">.</span></span>
+<span id="cb28-129"><a href="#cb28-129" aria-hidden="true" tabindex="-1"></a>Use `const` by <span class="kw">default</span><span class="op">,</span> it prevents accidental changes<span class="op">.</span> <span class="fu">Use</span> `let` only when you need to reassign the value<span class="op">.</span></span>
 <span id="cb28-130"><a href="#cb28-130" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-131"><a href="#cb28-131" aria-hidden="true" tabindex="-1"></a>```javascript</span>
 <span id="cb28-132"><a href="#cb28-132" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> greeting <span class="op">=</span> <span class="er">'</span>Welcome<span class="er">'</span><span class="op">;</span>    <span class="co">// Use const for values that won't change</span></span>
@@ -1762,7 +1762,7 @@ why my code isn't working?</code></pre>
 <span id="cb28-167"><a href="#cb28-167" aria-hidden="true" tabindex="-1"></a><span class="op">};</span></span>
 <span id="cb28-168"><a href="#cb28-168" aria-hidden="true" tabindex="-1"></a>```</span>
 <span id="cb28-169"><a href="#cb28-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-170"><a href="#cb28-170" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb28-170"><a href="#cb28-170" aria-hidden="true" tabindex="-1"></a>```text</span>
 <span id="cb28-171"><a href="#cb28-171" aria-hidden="true" tabindex="-1"></a>Ask your AI<span class="op">:</span></span>
 <span id="cb28-172"><a href="#cb28-172" aria-hidden="true" tabindex="-1"></a>When would I use an array versus an object<span class="op">?</span> Give me three real</span>
 <span id="cb28-173"><a href="#cb28-173" aria-hidden="true" tabindex="-1"></a>examples of data that fits each structure<span class="op">.</span></span>
@@ -1812,7 +1812,7 @@ why my code isn't working?</code></pre>
 <span id="cb28-217"><a href="#cb28-217" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> allCards <span class="op">=</span> document<span class="op">.</span><span class="fu">querySelectorAll</span><span class="op">(</span><span class="er">'</span><span class="op">.</span><span class="fu">card</span><span class="er">'</span><span class="op">);</span></span>
 <span id="cb28-218"><a href="#cb28-218" aria-hidden="true" tabindex="-1"></a>```</span>
 <span id="cb28-219"><a href="#cb28-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-220"><a href="#cb28-220" aria-hidden="true" tabindex="-1"></a>`querySelector` uses <span class="bu">CSS</span> selector syntax—the same patterns you learned in Chapter <span class="fl">2.</span> This consistency makes finding elements intuitive<span class="op">.</span></span>
+<span id="cb28-220"><a href="#cb28-220" aria-hidden="true" tabindex="-1"></a>`querySelector` uses <span class="bu">CSS</span> selector syntax<span class="op">,</span> the same patterns you learned in Chapter <span class="fl">2.</span> This consistency makes finding elements intuitive<span class="op">.</span></span>
 <span id="cb28-221"><a href="#cb28-221" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-222"><a href="#cb28-222" aria-hidden="true" tabindex="-1"></a>### Changing <span class="bu">Elements</span></span>
 <span id="cb28-223"><a href="#cb28-223" aria-hidden="true" tabindex="-1"></a></span>
@@ -1844,7 +1844,7 @@ why my code isn't working?</code></pre>
 <span id="cb28-249"><a href="#cb28-249" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-250"><a href="#cb28-250" aria-hidden="true" tabindex="-1"></a>### Events<span class="op">:</span> Responding to Users</span>
 <span id="cb28-251"><a href="#cb28-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-252"><a href="#cb28-252" aria-hidden="true" tabindex="-1"></a>Events are things that happen—clicks<span class="op">,</span> key presses<span class="op">,</span> form submissions<span class="op">,</span> page loads<span class="op">.</span> <span class="fu">Event</span> listeners wait <span class="cf">for</span> specific events and run code when they occur<span class="op">:</span></span>
+<span id="cb28-252"><a href="#cb28-252" aria-hidden="true" tabindex="-1"></a>Events are things that happen<span class="op">,</span> clicks<span class="op">,</span> key presses<span class="op">,</span> form submissions<span class="op">,</span> page loads<span class="op">.</span> <span class="fu">Event</span> listeners wait <span class="cf">for</span> specific events and run code when they occur<span class="op">:</span></span>
 <span id="cb28-253"><a href="#cb28-253" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-254"><a href="#cb28-254" aria-hidden="true" tabindex="-1"></a>```javascript</span>
 <span id="cb28-255"><a href="#cb28-255" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> button <span class="op">=</span> document<span class="op">.</span><span class="fu">querySelector</span><span class="op">(</span><span class="er">'</span>#submit<span class="op">-</span>button<span class="er">'</span><span class="op">);</span></span>
@@ -1869,7 +1869,7 @@ why my code isn't working?</code></pre>
 <span id="cb28-274"><a href="#cb28-274" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-275"><a href="#cb28-275" aria-hidden="true" tabindex="-1"></a>### A Complete Example<span class="op">:</span> Toggle <span class="bu">Menu</span></span>
 <span id="cb28-276"><a href="#cb28-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-277"><a href="#cb28-277" aria-hidden="true" tabindex="-1"></a>Let<span class="er">'</span>s combine these concepts into a practical feature—a mobile navigation toggle<span class="op">:</span></span>
+<span id="cb28-277"><a href="#cb28-277" aria-hidden="true" tabindex="-1"></a>Let<span class="er">'</span>s combine these concepts into a practical feature<span class="op">,</span> a mobile navigation toggle<span class="op">:</span></span>
 <span id="cb28-278"><a href="#cb28-278" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-279"><a href="#cb28-279" aria-hidden="true" tabindex="-1"></a>```html</span>
 <span id="cb28-280"><a href="#cb28-280" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>button id<span class="op">=</span><span class="st">"menu-toggle"</span><span class="op">&gt;</span><span class="bu">Menu</span><span class="op">&lt;/</span>button<span class="op">&gt;</span></span>
@@ -1899,7 +1899,7 @@ why my code isn't working?</code></pre>
 <span id="cb28-304"><a href="#cb28-304" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-305"><a href="#cb28-305" aria-hidden="true" tabindex="-1"></a>### Form Validation Example</span>
 <span id="cb28-306"><a href="#cb28-306" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-307"><a href="#cb28-307" aria-hidden="true" tabindex="-1"></a>Here<span class="er">'</span>s a practical business example—validating an email field<span class="op">:</span></span>
+<span id="cb28-307"><a href="#cb28-307" aria-hidden="true" tabindex="-1"></a>Here<span class="er">'</span>s a practical business example<span class="op">,</span> validating an email field<span class="op">:</span></span>
 <span id="cb28-308"><a href="#cb28-308" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-309"><a href="#cb28-309" aria-hidden="true" tabindex="-1"></a>```html</span>
 <span id="cb28-310"><a href="#cb28-310" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>form id<span class="op">=</span><span class="st">"contact-form"</span><span class="op">&gt;</span></span>
@@ -1935,9 +1935,9 @@ why my code isn't working?</code></pre>
 <span id="cb28-340"><a href="#cb28-340" aria-hidden="true" tabindex="-1"></a><span class="op">});</span></span>
 <span id="cb28-341"><a href="#cb28-341" aria-hidden="true" tabindex="-1"></a>```</span>
 <span id="cb28-342"><a href="#cb28-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-343"><a href="#cb28-343" aria-hidden="true" tabindex="-1"></a>This validates as the user types and again on submission<span class="op">.</span> <span class="fu">Note</span><span class="op">:</span> HTML5 provides `type<span class="op">=</span><span class="st">"email"</span>` validation too—JavaScript enhances the feedback<span class="op">,</span> not replaces the baseline<span class="op">.</span></span>
+<span id="cb28-343"><a href="#cb28-343" aria-hidden="true" tabindex="-1"></a>This validates as the user types and again on submission<span class="op">.</span> <span class="fu">Note</span><span class="op">:</span> HTML5 provides `type<span class="op">=</span><span class="st">"email"</span>` validation too<span class="op">.</span> <span class="fu">JavaScript</span> enhances the feedback<span class="op">,</span> not replaces the baseline<span class="op">.</span></span>
 <span id="cb28-344"><a href="#cb28-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-345"><a href="#cb28-345" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb28-345"><a href="#cb28-345" aria-hidden="true" tabindex="-1"></a>```text</span>
 <span id="cb28-346"><a href="#cb28-346" aria-hidden="true" tabindex="-1"></a>Ask your AI<span class="op">:</span></span>
 <span id="cb28-347"><a href="#cb28-347" aria-hidden="true" tabindex="-1"></a>Walk me through <span class="kw">this</span> form validation code line by line<span class="op">.</span> <span class="fu">What</span> does</span>
 <span id="cb28-348"><a href="#cb28-348" aria-hidden="true" tabindex="-1"></a>event<span class="op">.</span><span class="fu">preventDefault</span><span class="op">()</span> <span class="cf">do</span> and why is it important here<span class="op">?</span></span>
@@ -1954,9 +1954,9 @@ why my code isn't working?</code></pre>
 <span id="cb28-359"><a href="#cb28-359" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> When an event occurs<span class="op">,</span> runs the handler</span>
 <span id="cb28-360"><a href="#cb28-360" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> Returns to waiting</span>
 <span id="cb28-361"><a href="#cb28-361" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-362"><a href="#cb28-362" aria-hidden="true" tabindex="-1"></a>This is why you register event listeners—you<span class="er">'</span>re telling JavaScript <span class="st">"when this happens, run this code."</span> The rest of the time<span class="op">,</span> JavaScript is idle<span class="op">,</span> waiting<span class="op">.</span></span>
+<span id="cb28-362"><a href="#cb28-362" aria-hidden="true" tabindex="-1"></a>This is why you register event listeners<span class="op">,</span> you<span class="er">'</span>re telling JavaScript <span class="st">"when this happens, run this code."</span> The rest of the time<span class="op">,</span> JavaScript is idle<span class="op">,</span> waiting<span class="op">.</span></span>
 <span id="cb28-363"><a href="#cb28-363" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-364"><a href="#cb28-364" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb28-364"><a href="#cb28-364" aria-hidden="true" tabindex="-1"></a>```text</span>
 <span id="cb28-365"><a href="#cb28-365" aria-hidden="true" tabindex="-1"></a>Ask your AI<span class="op">:</span></span>
 <span id="cb28-366"><a href="#cb28-366" aria-hidden="true" tabindex="-1"></a>Explain the JavaScript event loop using an office receptionist</span>
 <span id="cb28-367"><a href="#cb28-367" aria-hidden="true" tabindex="-1"></a>analogy<span class="op">.</span> <span class="fu">The</span> receptionist handles <span class="fu">visitors</span> <span class="op">(</span>events<span class="op">)</span> but also has</span>
@@ -1967,7 +1967,7 @@ why my code isn't working?</code></pre>
 <span id="cb28-372"><a href="#cb28-372" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-373"><a href="#cb28-373" aria-hidden="true" tabindex="-1"></a>Reinforce <span class="kw">this</span> mental model from earlier chapters<span class="op">:</span></span>
 <span id="cb28-374"><a href="#cb28-374" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-375"><a href="#cb28-375" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb28-375"><a href="#cb28-375" aria-hidden="true" tabindex="-1"></a>```text</span>
 <span id="cb28-376"><a href="#cb28-376" aria-hidden="true" tabindex="-1"></a>┌─────────────────────────────────────┐</span>
 <span id="cb28-377"><a href="#cb28-377" aria-hidden="true" tabindex="-1"></a>│  <span class="fu">JavaScript</span> <span class="op">(</span>Behaviour<span class="op">)</span>              │  What responds</span>
 <span id="cb28-378"><a href="#cb28-378" aria-hidden="true" tabindex="-1"></a>├─────────────────────────────────────┤</span>
@@ -1991,7 +1991,7 @@ why my code isn't working?</code></pre>
 <span id="cb28-396"><a href="#cb28-396" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-397"><a href="#cb28-397" aria-hidden="true" tabindex="-1"></a>Open <span class="fu">DevTools</span> <span class="op">(</span>F12 or right<span class="op">-</span>click → Inspect → <span class="bu">Console</span><span class="op">)</span> to see these messages<span class="op">.</span> <span class="fu">When</span> something doesn<span class="er">'</span>t work<span class="op">,</span> add `console<span class="op">.</span><span class="fu">log</span><span class="op">()</span>` statements to trace what<span class="er">'</span>s happening<span class="op">.</span></span>
 <span id="cb28-398"><a href="#cb28-398" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-399"><a href="#cb28-399" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb28-399"><a href="#cb28-399" aria-hidden="true" tabindex="-1"></a>```text</span>
 <span id="cb28-400"><a href="#cb28-400" aria-hidden="true" tabindex="-1"></a>Ask your AI<span class="op">:</span></span>
 <span id="cb28-401"><a href="#cb28-401" aria-hidden="true" tabindex="-1"></a>What are common JavaScript debugging techniques<span class="op">?</span> How <span class="cf">do</span> I figure out</span>
 <span id="cb28-402"><a href="#cb28-402" aria-hidden="true" tabindex="-1"></a>why my code isn<span class="er">'</span>t working<span class="op">?</span></span>
@@ -2021,8 +2021,8 @@ why my code isn't working?</code></pre>
 <span id="cb28-426"><a href="#cb28-426" aria-hidden="true" tabindex="-1"></a>JavaScript can track how users interact with your site<span class="op">:</span> what they click<span class="op">,</span> how far they scroll<span class="op">,</span> where they spend time<span class="op">.</span> <span class="fu">This</span> data informs business decisions<span class="op">.</span> <span class="op">(</span>Always be transparent about tracking and respect privacy<span class="op">.)</span></span>
 <span id="cb28-427"><a href="#cb28-427" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-428"><a href="#cb28-428" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span> <span class="op">{.</span><span class="fu">callout</span><span class="op">-</span>note<span class="op">}</span></span>
-<span id="cb28-429"><a href="#cb28-429" aria-hidden="true" tabindex="-1"></a>## ULO <span class="bu">Connection</span></span>
-<span id="cb28-430"><a href="#cb28-430" aria-hidden="true" tabindex="-1"></a>This develops <span class="op">**</span>ULO <span class="dv">1</span><span class="op">**</span> <span class="op">(</span>effective web applications<span class="op">)</span> and <span class="op">**</span>ULO <span class="dv">3</span><span class="op">**</span> <span class="op">(</span>translating stakeholder needs<span class="op">).</span> <span class="fu">Interactive</span> features must serve user needs—JavaScript <span class="cf">for</span> its own sake creates complexity without value<span class="op">.</span> <span class="fu">The</span> ability to identify when interactivity helps versus hinders is professional judgment<span class="op">.</span></span>
+<span id="cb28-429"><a href="#cb28-429" aria-hidden="true" tabindex="-1"></a>## Skills You Are Building</span>
+<span id="cb28-430"><a href="#cb28-430" aria-hidden="true" tabindex="-1"></a>This develops <span class="op">**</span>evaluating and improving solutions<span class="op">**</span> and <span class="op">**</span>translating stakeholder needs into technical requirements<span class="op">**.</span> <span class="fu">Interactive</span> features must serve user needs<span class="op">.</span> <span class="fu">JavaScript</span> <span class="cf">for</span> its own sake creates complexity without value<span class="op">.</span> <span class="fu">The</span> ability to identify when interactivity helps versus hinders is professional judgment<span class="op">.</span></span>
 <span id="cb28-431"><a href="#cb28-431" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span></span>
 <span id="cb28-432"><a href="#cb28-432" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-433"><a href="#cb28-433" aria-hidden="true" tabindex="-1"></a>## Practice Exercises</span>
@@ -2044,7 +2044,7 @@ why my code isn't working?</code></pre>
 <span id="cb28-449"><a href="#cb28-449" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> <span class="bu">Type</span> `document<span class="op">.</span><span class="fu">querySelector</span><span class="op">(</span><span class="er">'</span>h1<span class="er">'</span><span class="op">)</span>` to find the main heading</span>
 <span id="cb28-450"><a href="#cb28-450" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> <span class="bu">Type</span> `document<span class="op">.</span><span class="fu">querySelector</span><span class="op">(</span><span class="er">'</span>h1<span class="er">'</span><span class="op">).</span><span class="fu">textContent</span> <span class="op">=</span> <span class="er">'</span>I changed <span class="kw">this</span><span class="op">!</span><span class="er">'</span>`</span>
 <span id="cb28-451"><a href="#cb28-451" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-452"><a href="#cb28-452" aria-hidden="true" tabindex="-1"></a>What happened<span class="op">?</span> Refresh the page—is your change permanent<span class="op">?</span> Why or why not<span class="op">?</span></span>
+<span id="cb28-452"><a href="#cb28-452" aria-hidden="true" tabindex="-1"></a>What happened<span class="op">?</span> Refresh the page<span class="op">,</span> is your change permanent<span class="op">?</span> Why or why not<span class="op">?</span></span>
 <span id="cb28-453"><a href="#cb28-453" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-454"><a href="#cb28-454" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">3.2</span><span class="op">:</span> <span class="bu">Button</span> <span class="fu">Interaction</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">2</span><span class="op">)</span></span>
 <span id="cb28-455"><a href="#cb28-455" aria-hidden="true" tabindex="-1"></a></span>
@@ -2086,11 +2086,11 @@ why my code isn't working?</code></pre>
 <span id="cb28-491"><a href="#cb28-491" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> Describe what JavaScript would <span class="cf">do</span> <span class="cf">for</span> each interaction</span>
 <span id="cb28-492"><a href="#cb28-492" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> Consider<span class="op">:</span> what should work without JavaScript<span class="op">?</span></span>
 <span id="cb28-493"><a href="#cb28-493" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-494"><a href="#cb28-494" aria-hidden="true" tabindex="-1"></a>Don<span class="er">'</span>t write the full code—design the approach<span class="op">.</span> <span class="fu">Document</span> your thinking<span class="op">,</span> then discuss your design with your AI partner<span class="op">.</span> <span class="fu">What</span> did they suggest differently<span class="op">?</span></span>
+<span id="cb28-494"><a href="#cb28-494" aria-hidden="true" tabindex="-1"></a>Don<span class="er">'</span>t write the full code<span class="op">,</span> design the approach<span class="op">.</span> <span class="fu">Document</span> your thinking<span class="op">,</span> then discuss your design with your AI partner<span class="op">.</span> <span class="fu">What</span> did they suggest differently<span class="op">?</span></span>
 <span id="cb28-495"><a href="#cb28-495" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-496"><a href="#cb28-496" aria-hidden="true" tabindex="-1"></a>## Chapter Summary</span>
 <span id="cb28-497"><a href="#cb28-497" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-498"><a href="#cb28-498" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> JavaScript adds behaviour—the ability to respond to user actions</span>
+<span id="cb28-498"><a href="#cb28-498" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> JavaScript adds behaviour<span class="op">,</span> the ability to respond to user actions</span>
 <span id="cb28-499"><a href="#cb28-499" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="bu">Event</span><span class="op">-</span>driven programming means listening <span class="cf">for</span> events and responding</span>
 <span id="cb28-500"><a href="#cb28-500" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> The DOM is JavaScript<span class="er">'</span>s <span class="kw">interface</span> to the page structure</span>
 <span id="cb28-501"><a href="#cb28-501" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Progressive enhancement builds on working <span class="bu">HTML</span><span class="op">/</span><span class="bu">CSS</span><span class="op">,</span> not replacing it</span>
@@ -2123,9 +2123,9 @@ why my code isn't working?</code></pre>
 <span id="cb28-528"><a href="#cb28-528" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-529"><a href="#cb28-529" aria-hidden="true" tabindex="-1"></a>## Next Steps</span>
 <span id="cb28-530"><a href="#cb28-530" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-531"><a href="#cb28-531" aria-hidden="true" tabindex="-1"></a>You can now build pages that respond to users<span class="op">.</span> <span class="fu">But</span> modern web applications <span class="cf">do</span> more—they connect to services<span class="op">,</span> fetch data<span class="op">,</span> and send information to servers<span class="op">.</span></span>
+<span id="cb28-531"><a href="#cb28-531" aria-hidden="true" tabindex="-1"></a>You can now build pages that respond to users<span class="op">.</span> <span class="fu">But</span> modern web applications <span class="cf">do</span> more<span class="op">,</span> they connect to services<span class="op">,</span> fetch data<span class="op">,</span> and send information to servers<span class="op">.</span></span>
 <span id="cb28-532"><a href="#cb28-532" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-533"><a href="#cb28-533" aria-hidden="true" tabindex="-1"></a><span class="fu">In</span> <span class="at">@sec</span><span class="op">-</span>connection<span class="op">,</span> we<span class="er">'</span>ll explore APIs—how your JavaScript can request data from external services and submit data to be processed<span class="op">.</span> <span class="fu">This</span> transforms your pages from standalone documents into connected applications that interact with the wider web<span class="op">.</span></span>
+<span id="cb28-533"><a href="#cb28-533" aria-hidden="true" tabindex="-1"></a><span class="fu">In</span> <span class="at">@sec</span><span class="op">-</span>connection<span class="op">,</span> we<span class="er">'</span>ll explore APIs<span class="op">,</span> how your JavaScript can request data from external services and submit data to be processed<span class="op">.</span> <span class="fu">This</span> transforms your pages from standalone documents into connected applications that interact with the wider web<span class="op">.</span></span>
 <span id="cb28-534"><a href="#cb28-534" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-535"><a href="#cb28-535" aria-hidden="true" tabindex="-1"></a><span class="fu">The</span> JavaScript fundamentals you<span class="er">'</span>ve learned become the foundation <span class="cf">for</span> asynchronous programming and data<span class="op">-</span>driven interfaces<span class="op">.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>

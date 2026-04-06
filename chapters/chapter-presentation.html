@@ -332,7 +332,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/reading-list.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Weekly Reading List</span></a>
+ <span class="menu-text">Recommended Resources</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -597,16 +597,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="the-concept-first" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="the-concept-first"><span class="header-section-number">3.1</span> The Concept First</h2>
-<p>In <a href="chapter-structure.html" class="quarto-xref"><span>Chapter 2</span></a>, you learned to describe what content <em>is</em>. Now we’ll control how content <em>looks</em>—but this isn’t decoration. It’s <strong>visual communication</strong>.</p>
+<p>In <a href="chapter-structure.html" class="quarto-xref"><span>Chapter 2</span></a>, you learned to describe what content <em>is</em>. Now we’ll control how content <em>looks</em>, but this isn’t decoration. It’s <strong>visual communication</strong>.</p>
 <p>CSS (Cascading Style Sheets) determines colours, fonts, spacing, and layout. But these choices aren’t arbitrary. Every visual decision communicates something: professionalism, playfulness, urgency, calm. A hospital website and a children’s toy store might have identical HTML structure, but their CSS tells completely different stories.</p>
-<p>Here’s the key insight: <strong>structure and presentation are deliberately separate</strong>. Your HTML says “this is a heading”—it doesn’t say “this should be blue and 24 pixels tall.” CSS handles appearance. This separation means you can completely redesign a website without touching its content, or update content without breaking the design.</p>
+<p>Here’s the key insight: <strong>structure and presentation are deliberately separate</strong>. Your HTML says “this is a heading”, it doesn’t say “this should be blue and 24 pixels tall.” CSS handles appearance. This separation means you can completely redesign a website without touching its content, or update content without breaking the design.</p>
 </section>
 <section id="understanding-through-design" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="understanding-through-design"><span class="header-section-number">3.2</span> Understanding Through Design</h2>
 <p>Think of two cafés with identical menus. Same coffee, same pastries, same prices.</p>
 <p><strong>Café A</strong>: Exposed brick, warm lighting, comfortable armchairs, handwritten chalkboard menu, soft jazz playing.</p>
 <p><strong>Café B</strong>: White walls, fluorescent lights, plastic chairs, printed menu in a laminated folder, no music.</p>
-<p>The <em>content</em> is identical—but would you feel the same about visiting each one? The atmosphere shapes your entire perception of the business. One feels welcoming and worth paying premium prices; the other feels like a waiting room.</p>
+<p>The <em>content</em> is identical, but would you feel the same about visiting each one? The atmosphere shapes your entire perception of the business. One feels welcoming and worth paying premium prices; the other feels like a waiting room.</p>
 <p>CSS is your website’s atmosphere. The content (HTML) might be excellent, but if the presentation feels amateur, untrustworthy, or confusing, users leave.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -626,37 +626,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="3.3" class="anchored" data-anchor-id="discovering-presentation-with-your-ai-partner"><span class="header-section-number">3.3</span> Discovering Presentation with Your AI Partner</h2>
 <section id="exploration-1-why-separate-structure-and-style" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-1-why-separate-structure-and-style">Exploration 1: Why Separate Structure and Style?</h3>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 Why do we keep HTML (structure) and CSS (presentation) in separate
-languages? Explain using a newspaper analogy—the same news stories
+languages? Explain using a newspaper analogy, the same news stories
 might appear in a broadsheet and a tabloid.</code></pre>
 <p>This conversation should reveal the power of separation: one set of content, many possible presentations. News services send identical stories to papers worldwide, but each paper styles them differently. Similarly, your HTML content can have different CSS applied for screen, print, mobile, or accessibility needs.</p>
 <p>Follow up:</p>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 What problems would occur if we put styling directly into HTML?
 What if every heading had to specify its own colour and size?</code></pre>
 </section>
 <section id="exploration-2-mobile-first-as-business-strategy" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-2-mobile-first-as-business-strategy">Exploration 2: Mobile-First as Business Strategy</h3>
-<p>More than half of web traffic comes from mobile devices. But mobile-first isn’t just about phones—it’s a design philosophy.</p>
-<pre><code>Ask your AI:
+<p>More than half of web traffic comes from mobile devices. But mobile-first isn’t just about phones, it’s a design philosophy.</p>
+<pre class="text"><code>Ask your AI:
 Explain mobile-first design as a business strategy, not just a
 technical approach. Why would designing for mobile first lead to
 better experiences for everyone?</code></pre>
 <p>Your AI should explain how mobile constraints force clarity: limited space means prioritising what matters, slow connections mean optimising performance, touch targets mean accessible interfaces. Designing for these constraints first creates better experiences everywhere.</p>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 What happens when companies design for desktop first and then try
 to "make it work" on mobile?</code></pre>
 </section>
 <section id="exploration-3-visual-hierarchy" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-3-visual-hierarchy">Exploration 3: Visual Hierarchy</h3>
-<p>Every page has multiple elements competing for attention. Visual hierarchy tells users what to look at first, second, third—guiding them through your content intentionally.</p>
-<pre><code>Ask your AI:
-How do designers create visual hierarchy—the sense that some
+<p>Every page has multiple elements competing for attention. Visual hierarchy tells users what to look at first, second, third, guiding them through your content intentionally.</p>
+<pre class="text"><code>Ask your AI:
+How do designers create visual hierarchy, the sense that some
 elements are more important than others? What tools do they use
 besides just making things bigger?</code></pre>
 <p>This should reveal tools beyond size: colour contrast, whitespace, position, typography weight. A small red button can dominate over a large grey headline because colour attracts attention.</p>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 Show me a simple example of the same three elements (heading,
 paragraph, button) arranged with different visual hierarchies
 for different purposes.</code></pre>
@@ -691,10 +691,10 @@ for different purposes.</code></pre>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>        h1 { <span class="kw">color</span><span class="ch">:</span> <span class="cn">navy</span><span class="op">;</span> }</span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">style</span><span class="dt">&gt;</span></span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Inline styles</strong> (on individual elements—generally avoid):</p>
+<p><strong>Inline styles</strong> (on individual elements, generally avoid):</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h1</span><span class="ot"> style</span><span class="op">=</span><span class="st">"color: navy;"</span><span class="dt">&gt;</span>Welcome<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>External stylesheets keep presentation separate from structure. One CSS file can style an entire website, and changes propagate everywhere instantly.</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 What are the advantages and disadvantages of each method of adding
 CSS? When might you use each one?</code></pre>
 </section>
@@ -720,12 +720,12 @@ CSS? When might you use each one?</code></pre>
 <span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>article p {</span>
 <span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">margin-bottom</span><span class="ch">:</span> <span class="dv">1</span><span class="dt">em</span><span class="op">;</span></span>
 <span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Classes (<code>.classname</code>) are your workhorses—reusable styles you can apply to any element. IDs (<code>#idname</code>) should be unique per page and are less commonly used in modern CSS.</p>
+<p>Classes (<code>.classname</code>) are your workhorses, reusable styles you can apply to any element. IDs (<code>#idname</code>) should be unique per page and are less commonly used in modern CSS.</p>
 </section>
 <section id="the-box-model" class="level3">
 <h3 class="anchored" data-anchor-id="the-box-model">The Box Model</h3>
 <p>Every HTML element generates a rectangular box. Understanding this box model is essential for layout:</p>
-<pre><code>┌─────────────────────────────────────┐
+<pre class="text"><code>┌─────────────────────────────────────┐
 │             margin                   │
 │   ┌─────────────────────────────┐   │
 │   │         border               │   │
@@ -765,14 +765,14 @@ CSS? When might you use each one?</code></pre>
 <p>This makes layout calculations much more intuitive.</p>
 </div>
 </div>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 Explain the difference between padding and margin using a picture
-frame analogy. The picture is the content—what are the padding,
+frame analogy. The picture is the content, what are the padding,
 border, and margin?</code></pre>
 </section>
 <section id="layout-with-flexbox" class="level3">
 <h3 class="anchored" data-anchor-id="layout-with-flexbox">Layout with Flexbox</h3>
-<p>Flexbox is the modern way to arrange elements. It makes previously difficult tasks—like centring or equal-height columns—simple.</p>
+<p>Flexbox is the modern way to arrange elements. It makes previously difficult tasks, like centring or equal-height columns, simple.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.container</span> {</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">display</span><span class="ch">:</span> <span class="dv">flex</span><span class="op">;</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -806,7 +806,7 @@ border, and margin?</code></pre>
 <span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="fu">.card</span> {</span>
 <span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">flex</span><span class="ch">:</span> <span class="dv">1</span> <span class="dv">1</span> <span class="dv">300</span><span class="dt">px</span><span class="op">;</span>  <span class="co">/* Grow, shrink, minimum 300px */</span></span>
 <span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 Show me how to create a simple navigation bar with a logo on the
 left and three links on the right using flexbox. Explain each
 property you use.</code></pre>
@@ -852,7 +852,7 @@ property you use.</code></pre>
 <span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a>        <span class="kw">flex</span><span class="ch">:</span> <span class="dv">1</span> <span class="dv">1</span> <span class="dv">30</span><span class="dt">%</span><span class="op">;</span></span>
 <span id="cb25-23"><a href="#cb25-23" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb25-24"><a href="#cb25-24" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 Walk me through how a three-column desktop layout should adapt as
 the screen gets smaller. What should happen at each breakpoint
 and why?</code></pre>
@@ -899,7 +899,7 @@ and why?</code></pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>p { <span class="kw">color</span><span class="ch">:</span> <span class="cn">black</span><span class="op">;</span> }           <span class="co">/* Specificity: 0,0,1 */</span></span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.highlight</span> { <span class="kw">color</span><span class="ch">:</span> <span class="cn">yellow</span><span class="op">;</span> } <span class="co">/* Specificity: 0,1,0 - wins */</span></span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#special</span> { <span class="kw">color</span><span class="ch">:</span> <span class="cn">red</span><span class="op">;</span> }      <span class="co">/* Specificity: 1,0,0 - wins over class */</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 Why is understanding specificity important? What problems occur
 when developers don't understand how the cascade works?</code></pre>
 </section>
@@ -918,7 +918,7 @@ when developers don't understand how the cascade works?</code></pre>
 <li><strong>Style layer</strong> (CSS): How it looks</li>
 <li><strong>Behaviour layer</strong> (JavaScript, Chapter 3): How it responds</li>
 </ol>
-<p>CSS only controls layer 2. It can’t create content or make things interactive—it controls visual presentation of whatever HTML provides.</p>
+<p>CSS only controls layer 2. It can’t create content or make things interactive, it controls visual presentation of whatever HTML provides.</p>
 </section>
 </section>
 <section id="business-applications" class="level2" data-number="3.6">
@@ -941,14 +941,14 @@ when developers don't understand how the cascade works?</code></pre>
 </section>
 <section id="user-experience-and-trust" class="level3">
 <h3 class="anchored" data-anchor-id="user-experience-and-trust">User Experience and Trust</h3>
-<p>Studies consistently show that users judge website credibility in milliseconds, based primarily on visual design. Professional presentation builds trust; amateur presentation creates suspicion—regardless of how good the actual content is.</p>
-<pre><code>Ask your AI:
+<p>Studies consistently show that users judge website credibility in milliseconds, based primarily on visual design. Professional presentation builds trust; amateur presentation creates suspicion, regardless of how good the actual content is.</p>
+<pre class="text"><code>Ask your AI:
 What visual characteristics make a website feel "trustworthy" versus
 "suspicious"? Think about spacing, typography, colour, and layout.</code></pre>
 </section>
 <section id="mobile-reach" class="level3">
 <h3 class="anchored" data-anchor-id="mobile-reach">Mobile Reach</h3>
-<p>If your site doesn’t work on mobile, you’re excluding over half your potential audience. Responsive design isn’t a feature—it’s a baseline requirement for any business website.</p>
+<p>If your site doesn’t work on mobile, you’re excluding over half your potential audience. Responsive design isn’t a feature, it’s a baseline requirement for any business website.</p>
 </section>
 <section id="conversion-and-visual-hierarchy" class="level3">
 <h3 class="anchored" data-anchor-id="conversion-and-visual-hierarchy">Conversion and Visual Hierarchy</h3>
@@ -959,11 +959,11 @@ What visual characteristics make a website feel "trustworthy" versus
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>ULO Connection
+<span class="screen-reader-only">Note</span>Skills You Are Building
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This develops <strong>ULO 1</strong> (effective web applications) and <strong>ULO 4</strong> (technology selection). CSS choices affect user experience, brand perception, and business outcomes. The ability to evaluate and implement appropriate visual design is essential professional skill.</p>
+<p>This develops <strong>evaluating and improving solutions</strong> and <strong>making and defending technology choices</strong>. CSS choices affect user experience, brand perception, and business outcomes. The ability to evaluate and implement appropriate visual design is essential professional skill.</p>
 </div>
 </div>
 </section>
@@ -1009,7 +1009,7 @@ What visual characteristics make a website feel "trustworthy" versus
 <li>Adds appropriate padding to sections</li>
 <li>Creates visual distinction between the main content and footer</li>
 </ol>
-<p>Focus on readability and visual hierarchy—not decoration.</p>
+<p>Focus on readability and visual hierarchy, not decoration.</p>
 </section>
 <section id="exercise-2.3-responsive-layout-level-3" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-2.3-responsive-layout-level-3">Exercise 2.3: Responsive Layout (Level 3)</h3>
@@ -1077,8 +1077,8 @@ What visual characteristics make a website feel "trustworthy" versus
 </section>
 <section id="next-steps" class="level2" data-number="3.11">
 <h2 data-number="3.11" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">3.11</span> Next Steps</h2>
-<p>You now control both structure (HTML) and presentation (CSS). But websites today aren’t just documents to read—they’re applications to interact with.</p>
-<p>In <a href="chapter-behaviour.html" class="quarto-xref"><span>Chapter 4</span></a>, we’ll add JavaScript—the third pillar of web development. JavaScript lets pages respond to user actions: clicks, scrolls, form submissions. It transforms static documents into dynamic experiences.</p>
+<p>You now control both structure (HTML) and presentation (CSS). But websites today aren’t just documents to read, they’re applications to interact with.</p>
+<p>In <a href="chapter-behaviour.html" class="quarto-xref"><span>Chapter 4</span></a>, we’ll add JavaScript, the third pillar of web development. JavaScript lets pages respond to user actions: clicks, scrolls, form submissions. It transforms static documents into dynamic experiences.</p>
 <p>The HTML structure and CSS styling you’ve learned become the canvas that JavaScript brings to life.</p>
 
 
@@ -1569,11 +1569,11 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Concept First</span></span>
 <span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>In @sec-structure, you learned to describe what content *is*. Now we'll control how content *looks*—but this isn't decoration. It's **visual communication**.</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>In @sec-structure, you learned to describe what content *is*. Now we'll control how content *looks*, but this isn't decoration. It's **visual communication**.</span>
 <span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>CSS (Cascading Style Sheets) determines colours, fonts, spacing, and layout. But these choices aren't arbitrary. Every visual decision communicates something: professionalism, playfulness, urgency, calm. A hospital website and a children's toy store might have identical HTML structure, but their CSS tells completely different stories.</span>
 <span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>Here's the key insight: **structure and presentation are deliberately separate**. Your HTML says "this is a heading"—it doesn't say "this should be blue and 24 pixels tall." CSS handles appearance. This separation means you can completely redesign a website without touching its content, or update content without breaking the design.</span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>Here's the key insight: **structure and presentation are deliberately separate**. Your HTML says "this is a heading", it doesn't say "this should be blue and 24 pixels tall." CSS handles appearance. This separation means you can completely redesign a website without touching its content, or update content without breaking the design.</span>
 <span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Understanding Through Design</span></span>
 <span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a></span>
@@ -1583,7 +1583,7 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a>**Café B**: White walls, fluorescent lights, plastic chairs, printed menu in a laminated folder, no music.</span>
 <span id="cb33-18"><a href="#cb33-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-19"><a href="#cb33-19" aria-hidden="true" tabindex="-1"></a>The *content* is identical—but would you feel the same about visiting each one? The atmosphere shapes your entire perception of the business. One feels welcoming and worth paying premium prices; the other feels like a waiting room.</span>
+<span id="cb33-19"><a href="#cb33-19" aria-hidden="true" tabindex="-1"></a>The *content* is identical, but would you feel the same about visiting each one? The atmosphere shapes your entire perception of the business. One feels welcoming and worth paying premium prices; the other feels like a waiting room.</span>
 <span id="cb33-20"><a href="#cb33-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-21"><a href="#cb33-21" aria-hidden="true" tabindex="-1"></a>CSS is your website's atmosphere. The content (HTML) might be excellent, but if the presentation feels amateur, untrustworthy, or confusing, users leave.</span>
 <span id="cb33-22"><a href="#cb33-22" aria-hidden="true" tabindex="-1"></a></span>
@@ -1596,10 +1596,10 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-29"><a href="#cb33-29" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-30"><a href="#cb33-30" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exploration 1: Why Separate Structure and Style?</span></span>
 <span id="cb33-31"><a href="#cb33-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-32"><a href="#cb33-32" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb33-32"><a href="#cb33-32" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb33-33"><a href="#cb33-33" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb33-34"><a href="#cb33-34" aria-hidden="true" tabindex="-1"></a><span class="in">Why do we keep HTML (structure) and CSS (presentation) in separate</span></span>
-<span id="cb33-35"><a href="#cb33-35" aria-hidden="true" tabindex="-1"></a><span class="in">languages? Explain using a newspaper analogy—the same news stories</span></span>
+<span id="cb33-35"><a href="#cb33-35" aria-hidden="true" tabindex="-1"></a><span class="in">languages? Explain using a newspaper analogy, the same news stories</span></span>
 <span id="cb33-36"><a href="#cb33-36" aria-hidden="true" tabindex="-1"></a><span class="in">might appear in a broadsheet and a tabloid.</span></span>
 <span id="cb33-37"><a href="#cb33-37" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb33-38"><a href="#cb33-38" aria-hidden="true" tabindex="-1"></a></span>
@@ -1607,7 +1607,7 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-40"><a href="#cb33-40" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-41"><a href="#cb33-41" aria-hidden="true" tabindex="-1"></a>Follow up:</span>
 <span id="cb33-42"><a href="#cb33-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-43"><a href="#cb33-43" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb33-43"><a href="#cb33-43" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb33-44"><a href="#cb33-44" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb33-45"><a href="#cb33-45" aria-hidden="true" tabindex="-1"></a><span class="in">What problems would occur if we put styling directly into HTML?</span></span>
 <span id="cb33-46"><a href="#cb33-46" aria-hidden="true" tabindex="-1"></a><span class="in">What if every heading had to specify its own colour and size?</span></span>
@@ -1615,9 +1615,9 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-48"><a href="#cb33-48" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-49"><a href="#cb33-49" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exploration 2: Mobile-First as Business Strategy</span></span>
 <span id="cb33-50"><a href="#cb33-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-51"><a href="#cb33-51" aria-hidden="true" tabindex="-1"></a>More than half of web traffic comes from mobile devices. But mobile-first isn't just about phones—it's a design philosophy.</span>
+<span id="cb33-51"><a href="#cb33-51" aria-hidden="true" tabindex="-1"></a>More than half of web traffic comes from mobile devices. But mobile-first isn't just about phones, it's a design philosophy.</span>
 <span id="cb33-52"><a href="#cb33-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-53"><a href="#cb33-53" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb33-53"><a href="#cb33-53" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb33-54"><a href="#cb33-54" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb33-55"><a href="#cb33-55" aria-hidden="true" tabindex="-1"></a><span class="in">Explain mobile-first design as a business strategy, not just a</span></span>
 <span id="cb33-56"><a href="#cb33-56" aria-hidden="true" tabindex="-1"></a><span class="in">technical approach. Why would designing for mobile first lead to</span></span>
@@ -1626,7 +1626,7 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-59"><a href="#cb33-59" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-60"><a href="#cb33-60" aria-hidden="true" tabindex="-1"></a>Your AI should explain how mobile constraints force clarity: limited space means prioritising what matters, slow connections mean optimising performance, touch targets mean accessible interfaces. Designing for these constraints first creates better experiences everywhere.</span>
 <span id="cb33-61"><a href="#cb33-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-62"><a href="#cb33-62" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb33-62"><a href="#cb33-62" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb33-63"><a href="#cb33-63" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb33-64"><a href="#cb33-64" aria-hidden="true" tabindex="-1"></a><span class="in">What happens when companies design for desktop first and then try</span></span>
 <span id="cb33-65"><a href="#cb33-65" aria-hidden="true" tabindex="-1"></a><span class="in">to "make it work" on mobile?</span></span>
@@ -1634,18 +1634,18 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-67"><a href="#cb33-67" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-68"><a href="#cb33-68" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exploration 3: Visual Hierarchy</span></span>
 <span id="cb33-69"><a href="#cb33-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-70"><a href="#cb33-70" aria-hidden="true" tabindex="-1"></a>Every page has multiple elements competing for attention. Visual hierarchy tells users what to look at first, second, third—guiding them through your content intentionally.</span>
+<span id="cb33-70"><a href="#cb33-70" aria-hidden="true" tabindex="-1"></a>Every page has multiple elements competing for attention. Visual hierarchy tells users what to look at first, second, third, guiding them through your content intentionally.</span>
 <span id="cb33-71"><a href="#cb33-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-72"><a href="#cb33-72" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb33-72"><a href="#cb33-72" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb33-73"><a href="#cb33-73" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
-<span id="cb33-74"><a href="#cb33-74" aria-hidden="true" tabindex="-1"></a><span class="in">How do designers create visual hierarchy—the sense that some</span></span>
+<span id="cb33-74"><a href="#cb33-74" aria-hidden="true" tabindex="-1"></a><span class="in">How do designers create visual hierarchy, the sense that some</span></span>
 <span id="cb33-75"><a href="#cb33-75" aria-hidden="true" tabindex="-1"></a><span class="in">elements are more important than others? What tools do they use</span></span>
 <span id="cb33-76"><a href="#cb33-76" aria-hidden="true" tabindex="-1"></a><span class="in">besides just making things bigger?</span></span>
 <span id="cb33-77"><a href="#cb33-77" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb33-78"><a href="#cb33-78" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-79"><a href="#cb33-79" aria-hidden="true" tabindex="-1"></a>This should reveal tools beyond size: colour contrast, whitespace, position, typography weight. A small red button can dominate over a large grey headline because colour attracts attention.</span>
 <span id="cb33-80"><a href="#cb33-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-81"><a href="#cb33-81" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb33-81"><a href="#cb33-81" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb33-82"><a href="#cb33-82" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb33-83"><a href="#cb33-83" aria-hidden="true" tabindex="-1"></a><span class="in">Show me a simple example of the same three elements (heading,</span></span>
 <span id="cb33-84"><a href="#cb33-84" aria-hidden="true" tabindex="-1"></a><span class="in">paragraph, button) arranged with different visual hierarchies</span></span>
@@ -1697,14 +1697,14 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-130"><a href="#cb33-130" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>head<span class="op">&gt;</span></span>
 <span id="cb33-131"><a href="#cb33-131" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb33-132"><a href="#cb33-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-133"><a href="#cb33-133" aria-hidden="true" tabindex="-1"></a>**Inline styles** (on individual elements—generally avoid):</span>
+<span id="cb33-133"><a href="#cb33-133" aria-hidden="true" tabindex="-1"></a>**Inline styles** (on individual elements, generally avoid):</span>
 <span id="cb33-134"><a href="#cb33-134" aria-hidden="true" tabindex="-1"></a><span class="in">```html</span></span>
 <span id="cb33-135"><a href="#cb33-135" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>h1 style<span class="op">=</span><span class="st">"color: navy;"</span><span class="op">&gt;</span>Welcome<span class="op">&lt;/</span>h1<span class="op">&gt;</span></span>
 <span id="cb33-136"><a href="#cb33-136" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb33-137"><a href="#cb33-137" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-138"><a href="#cb33-138" aria-hidden="true" tabindex="-1"></a>External stylesheets keep presentation separate from structure. One CSS file can style an entire website, and changes propagate everywhere instantly.</span>
 <span id="cb33-139"><a href="#cb33-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-140"><a href="#cb33-140" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb33-140"><a href="#cb33-140" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb33-141"><a href="#cb33-141" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb33-142"><a href="#cb33-142" aria-hidden="true" tabindex="-1"></a><span class="in">What are the advantages and disadvantages of each method of adding</span></span>
 <span id="cb33-143"><a href="#cb33-143" aria-hidden="true" tabindex="-1"></a><span class="in">CSS? When might you use each one?</span></span>
@@ -1736,13 +1736,13 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-169"><a href="#cb33-169" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb33-170"><a href="#cb33-170" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb33-171"><a href="#cb33-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-172"><a href="#cb33-172" aria-hidden="true" tabindex="-1"></a>Classes (<span class="in">`.classname`</span>) are your workhorses—reusable styles you can apply to any element. IDs (<span class="in">`#idname`</span>) should be unique per page and are less commonly used in modern CSS.</span>
+<span id="cb33-172"><a href="#cb33-172" aria-hidden="true" tabindex="-1"></a>Classes (<span class="in">`.classname`</span>) are your workhorses, reusable styles you can apply to any element. IDs (<span class="in">`#idname`</span>) should be unique per page and are less commonly used in modern CSS.</span>
 <span id="cb33-173"><a href="#cb33-173" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-174"><a href="#cb33-174" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Box Model</span></span>
 <span id="cb33-175"><a href="#cb33-175" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-176"><a href="#cb33-176" aria-hidden="true" tabindex="-1"></a>Every HTML element generates a rectangular box. Understanding this box model is essential for layout:</span>
 <span id="cb33-177"><a href="#cb33-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-178"><a href="#cb33-178" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb33-178"><a href="#cb33-178" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb33-179"><a href="#cb33-179" aria-hidden="true" tabindex="-1"></a><span class="in">┌─────────────────────────────────────┐</span></span>
 <span id="cb33-180"><a href="#cb33-180" aria-hidden="true" tabindex="-1"></a><span class="in">│             margin                   │</span></span>
 <span id="cb33-181"><a href="#cb33-181" aria-hidden="true" tabindex="-1"></a><span class="in">│   ┌─────────────────────────────┐   │</span></span>
@@ -1783,16 +1783,16 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-216"><a href="#cb33-216" aria-hidden="true" tabindex="-1"></a>This makes layout calculations much more intuitive.</span>
 <span id="cb33-217"><a href="#cb33-217" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb33-218"><a href="#cb33-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-219"><a href="#cb33-219" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb33-219"><a href="#cb33-219" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb33-220"><a href="#cb33-220" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb33-221"><a href="#cb33-221" aria-hidden="true" tabindex="-1"></a><span class="in">Explain the difference between padding and margin using a picture</span></span>
-<span id="cb33-222"><a href="#cb33-222" aria-hidden="true" tabindex="-1"></a><span class="in">frame analogy. The picture is the content—what are the padding,</span></span>
+<span id="cb33-222"><a href="#cb33-222" aria-hidden="true" tabindex="-1"></a><span class="in">frame analogy. The picture is the content, what are the padding,</span></span>
 <span id="cb33-223"><a href="#cb33-223" aria-hidden="true" tabindex="-1"></a><span class="in">border, and margin?</span></span>
 <span id="cb33-224"><a href="#cb33-224" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb33-225"><a href="#cb33-225" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-226"><a href="#cb33-226" aria-hidden="true" tabindex="-1"></a><span class="fu">### Layout with Flexbox</span></span>
 <span id="cb33-227"><a href="#cb33-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-228"><a href="#cb33-228" aria-hidden="true" tabindex="-1"></a>Flexbox is the modern way to arrange elements. It makes previously difficult tasks—like centring or equal-height columns—simple.</span>
+<span id="cb33-228"><a href="#cb33-228" aria-hidden="true" tabindex="-1"></a>Flexbox is the modern way to arrange elements. It makes previously difficult tasks, like centring or equal-height columns, simple.</span>
 <span id="cb33-229"><a href="#cb33-229" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-230"><a href="#cb33-230" aria-hidden="true" tabindex="-1"></a><span class="in">```css</span></span>
 <span id="cb33-231"><a href="#cb33-231" aria-hidden="true" tabindex="-1"></a><span class="op">.</span><span class="fu">container</span> <span class="op">{</span></span>
@@ -1844,7 +1844,7 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-277"><a href="#cb33-277" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb33-278"><a href="#cb33-278" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb33-279"><a href="#cb33-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-280"><a href="#cb33-280" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb33-280"><a href="#cb33-280" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb33-281"><a href="#cb33-281" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb33-282"><a href="#cb33-282" aria-hidden="true" tabindex="-1"></a><span class="in">Show me how to create a simple navigation bar with a logo on the</span></span>
 <span id="cb33-283"><a href="#cb33-283" aria-hidden="true" tabindex="-1"></a><span class="in">left and three links on the right using flexbox. Explain each</span></span>
@@ -1900,7 +1900,7 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-333"><a href="#cb33-333" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb33-334"><a href="#cb33-334" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb33-335"><a href="#cb33-335" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-336"><a href="#cb33-336" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb33-336"><a href="#cb33-336" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb33-337"><a href="#cb33-337" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb33-338"><a href="#cb33-338" aria-hidden="true" tabindex="-1"></a><span class="in">Walk me through how a three-column desktop layout should adapt as</span></span>
 <span id="cb33-339"><a href="#cb33-339" aria-hidden="true" tabindex="-1"></a><span class="in">the screen gets smaller. What should happen at each breakpoint</span></span>
@@ -1958,7 +1958,7 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-391"><a href="#cb33-391" aria-hidden="true" tabindex="-1"></a>#special <span class="op">{</span> color<span class="op">:</span> red<span class="op">;</span> <span class="op">}</span>      <span class="co">/* Specificity: 1,0,0 - wins over class */</span></span>
 <span id="cb33-392"><a href="#cb33-392" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb33-393"><a href="#cb33-393" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-394"><a href="#cb33-394" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb33-394"><a href="#cb33-394" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb33-395"><a href="#cb33-395" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb33-396"><a href="#cb33-396" aria-hidden="true" tabindex="-1"></a><span class="in">Why is understanding specificity important? What problems occur</span></span>
 <span id="cb33-397"><a href="#cb33-397" aria-hidden="true" tabindex="-1"></a><span class="in">when developers don't understand how the cascade works?</span></span>
@@ -1988,7 +1988,7 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-421"><a href="#cb33-421" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Style layer** (CSS): How it looks</span>
 <span id="cb33-422"><a href="#cb33-422" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Behaviour layer** (JavaScript, Chapter 3): How it responds</span>
 <span id="cb33-423"><a href="#cb33-423" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-424"><a href="#cb33-424" aria-hidden="true" tabindex="-1"></a>CSS only controls layer 2. It can't create content or make things interactive—it controls visual presentation of whatever HTML provides.</span>
+<span id="cb33-424"><a href="#cb33-424" aria-hidden="true" tabindex="-1"></a>CSS only controls layer 2. It can't create content or make things interactive, it controls visual presentation of whatever HTML provides.</span>
 <span id="cb33-425"><a href="#cb33-425" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-426"><a href="#cb33-426" aria-hidden="true" tabindex="-1"></a><span class="fu">## Business Applications</span></span>
 <span id="cb33-427"><a href="#cb33-427" aria-hidden="true" tabindex="-1"></a></span>
@@ -2014,9 +2014,9 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-447"><a href="#cb33-447" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-448"><a href="#cb33-448" aria-hidden="true" tabindex="-1"></a><span class="fu">### User Experience and Trust</span></span>
 <span id="cb33-449"><a href="#cb33-449" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-450"><a href="#cb33-450" aria-hidden="true" tabindex="-1"></a>Studies consistently show that users judge website credibility in milliseconds, based primarily on visual design. Professional presentation builds trust; amateur presentation creates suspicion—regardless of how good the actual content is.</span>
+<span id="cb33-450"><a href="#cb33-450" aria-hidden="true" tabindex="-1"></a>Studies consistently show that users judge website credibility in milliseconds, based primarily on visual design. Professional presentation builds trust; amateur presentation creates suspicion, regardless of how good the actual content is.</span>
 <span id="cb33-451"><a href="#cb33-451" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-452"><a href="#cb33-452" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb33-452"><a href="#cb33-452" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb33-453"><a href="#cb33-453" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb33-454"><a href="#cb33-454" aria-hidden="true" tabindex="-1"></a><span class="in">What visual characteristics make a website feel "trustworthy" versus</span></span>
 <span id="cb33-455"><a href="#cb33-455" aria-hidden="true" tabindex="-1"></a><span class="in">"suspicious"? Think about spacing, typography, colour, and layout.</span></span>
@@ -2024,15 +2024,15 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-457"><a href="#cb33-457" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-458"><a href="#cb33-458" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mobile Reach</span></span>
 <span id="cb33-459"><a href="#cb33-459" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-460"><a href="#cb33-460" aria-hidden="true" tabindex="-1"></a>If your site doesn't work on mobile, you're excluding over half your potential audience. Responsive design isn't a feature—it's a baseline requirement for any business website.</span>
+<span id="cb33-460"><a href="#cb33-460" aria-hidden="true" tabindex="-1"></a>If your site doesn't work on mobile, you're excluding over half your potential audience. Responsive design isn't a feature, it's a baseline requirement for any business website.</span>
 <span id="cb33-461"><a href="#cb33-461" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-462"><a href="#cb33-462" aria-hidden="true" tabindex="-1"></a><span class="fu">### Conversion and Visual Hierarchy</span></span>
 <span id="cb33-463"><a href="#cb33-463" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-464"><a href="#cb33-464" aria-hidden="true" tabindex="-1"></a>Where users look determines what they do. Visual hierarchy guides attention to calls-to-action, important information, and conversion points. Poor hierarchy means users miss what matters.</span>
 <span id="cb33-465"><a href="#cb33-465" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-466"><a href="#cb33-466" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb33-467"><a href="#cb33-467" aria-hidden="true" tabindex="-1"></a><span class="fu">## ULO Connection</span></span>
-<span id="cb33-468"><a href="#cb33-468" aria-hidden="true" tabindex="-1"></a>This develops **ULO 1** (effective web applications) and **ULO 4** (technology selection). CSS choices affect user experience, brand perception, and business outcomes. The ability to evaluate and implement appropriate visual design is essential professional skill.</span>
+<span id="cb33-467"><a href="#cb33-467" aria-hidden="true" tabindex="-1"></a><span class="fu">## Skills You Are Building</span></span>
+<span id="cb33-468"><a href="#cb33-468" aria-hidden="true" tabindex="-1"></a>This develops **evaluating and improving solutions** and **making and defending technology choices**. CSS choices affect user experience, brand perception, and business outcomes. The ability to evaluate and implement appropriate visual design is essential professional skill.</span>
 <span id="cb33-469"><a href="#cb33-469" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb33-470"><a href="#cb33-470" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-471"><a href="#cb33-471" aria-hidden="true" tabindex="-1"></a><span class="fu">## Practice Exercises</span></span>
@@ -2066,7 +2066,7 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-499"><a href="#cb33-499" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Adds appropriate padding to sections</span>
 <span id="cb33-500"><a href="#cb33-500" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Creates visual distinction between the main content and footer</span>
 <span id="cb33-501"><a href="#cb33-501" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-502"><a href="#cb33-502" aria-hidden="true" tabindex="-1"></a>Focus on readability and visual hierarchy—not decoration.</span>
+<span id="cb33-502"><a href="#cb33-502" aria-hidden="true" tabindex="-1"></a>Focus on readability and visual hierarchy, not decoration.</span>
 <span id="cb33-503"><a href="#cb33-503" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-504"><a href="#cb33-504" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 2.3: Responsive Layout (Level 3)</span></span>
 <span id="cb33-505"><a href="#cb33-505" aria-hidden="true" tabindex="-1"></a></span>
@@ -2140,9 +2140,9 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-573"><a href="#cb33-573" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-574"><a href="#cb33-574" aria-hidden="true" tabindex="-1"></a><span class="fu">## Next Steps</span></span>
 <span id="cb33-575"><a href="#cb33-575" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-576"><a href="#cb33-576" aria-hidden="true" tabindex="-1"></a>You now control both structure (HTML) and presentation (CSS). But websites today aren't just documents to read—they're applications to interact with.</span>
+<span id="cb33-576"><a href="#cb33-576" aria-hidden="true" tabindex="-1"></a>You now control both structure (HTML) and presentation (CSS). But websites today aren't just documents to read, they're applications to interact with.</span>
 <span id="cb33-577"><a href="#cb33-577" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-578"><a href="#cb33-578" aria-hidden="true" tabindex="-1"></a>In @sec-behaviour, we'll add JavaScript—the third pillar of web development. JavaScript lets pages respond to user actions: clicks, scrolls, form submissions. It transforms static documents into dynamic experiences.</span>
+<span id="cb33-578"><a href="#cb33-578" aria-hidden="true" tabindex="-1"></a>In @sec-behaviour, we'll add JavaScript, the third pillar of web development. JavaScript lets pages respond to user actions: clicks, scrolls, form submissions. It transforms static documents into dynamic experiences.</span>
 <span id="cb33-579"><a href="#cb33-579" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-580"><a href="#cb33-580" aria-hidden="true" tabindex="-1"></a>The HTML structure and CSS styling you've learned become the canvas that JavaScript brings to life.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>

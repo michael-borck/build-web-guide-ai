@@ -332,7 +332,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/reading-list.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Weekly Reading List</span></a>
+ <span class="menu-text">Recommended Resources</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -592,7 +592,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="project-overview" class="level2" data-number="15.1">
 <h2 data-number="15.1" class="anchored" data-anchor-id="project-overview"><span class="header-section-number">15.1</span> Project Overview</h2>
 <p>Part III taught you component thinking, CSS frameworks, and professional practices. Now you’ll bring it together: build a React frontend that consumes content from WordPress via the REST API, demonstrating headless architecture in action.</p>
-<p>This project bridges backend content management with modern frontend development. You’ll make architectural decisions, implement a complete application, and document your approach—skills that directly translate to professional frontend development roles.</p>
+<p>This project bridges backend content management with modern frontend development. You’ll make architectural decisions, implement a complete application, and document your approach, skills that directly translate to professional frontend development roles.</p>
 </section>
 <section id="learning-outcomes-addressed" class="level2" data-number="15.2">
 <h2 data-number="15.2" class="anchored" data-anchor-id="learning-outcomes-addressed"><span class="header-section-number">15.2</span> Learning Outcomes Addressed</h2>
@@ -605,7 +605,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="technical-context" class="level2" data-number="15.3">
 <h2 data-number="15.3" class="anchored" data-anchor-id="technical-context"><span class="header-section-number">15.3</span> Technical Context</h2>
 <p>In <a href="../chapters/chapter-headless-architecture.html" class="quarto-xref"><span>Chapter 10</span></a>, you learned that headless WordPress separates content management (WordPress) from content presentation (your frontend). This project implements that architecture:</p>
-<pre><code>┌────────────────┐     REST API     ┌────────────────┐
+<pre class="text"><code>┌────────────────┐     REST API     ┌────────────────┐
 │   WordPress    │ ───────────────► │   React App    │
 │   (Backend)    │    JSON Data     │   (Frontend)   │
 │                │                  │                │
@@ -613,7 +613,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 │ - Media        │                  │ - Styling      │
 │ - Users        │                  │ - Routing      │
 └────────────────┘                  └────────────────┘</code></pre>
-<p>Your React application will fetch and display content that’s managed in WordPress—the same content model used by major publishers, e-commerce sites, and enterprise applications.</p>
+<p>Your React application will fetch and display content that’s managed in WordPress, the same content model used by major publishers, e-commerce sites, and enterprise applications.</p>
 </section>
 <section id="project-scenarios" class="level2" data-number="15.4">
 <h2 data-number="15.4" class="anchored" data-anchor-id="project-scenarios"><span class="header-section-number">15.4</span> Project Scenarios</h2>
@@ -674,7 +674,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Technology Choices</strong>: Which CSS framework? Why?</li>
 </ol>
 <p><strong>Component Tree Example:</strong></p>
-<pre><code>App
+<pre class="text"><code>App
 ├── Header
 │   ├── Logo
 │   └── Navigation
@@ -783,15 +783,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="effective-ai-partnership" class="level3">
 <h3 class="anchored" data-anchor-id="effective-ai-partnership">Effective AI Partnership</h3>
 <p>Use AI as a thinking partner, not a code generator:</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 I'm fetching WordPress posts but the featured images aren't showing.
 Here's my code... Help me understand what's happening. What am I
 missing about how WordPress returns image data?</code></pre>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 I have a PostList component and a PostDetail component. When the user
 clicks a post, I need to show the detail. What are my options for
 handling this navigation? Walk me through the trade-offs.</code></pre>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 My component is getting complex with loading, error, and data states.
 Is there a pattern for handling this more cleanly? Show me options
 and explain when each makes sense.</code></pre>
@@ -834,7 +834,7 @@ and explain when each makes sense.</code></pre>
 <li>Concepts you learned through AI conversation</li>
 <li>Documentation created with AI assistance</li>
 </ul>
-<p>This isn’t about restricting AI use—it’s about demonstrating that you <strong>understood</strong> what you built.</p>
+<p>This isn’t about restricting AI use, it’s about demonstrating that you <strong>understood</strong> what you built.</p>
 </section>
 </section>
 <section id="evaluation-criteria" class="level2" data-number="15.7">
@@ -1112,15 +1112,15 @@ and explain when each makes sense.</code></pre>
 <section id="getting-started" class="level2" data-number="15.9">
 <h2 data-number="15.9" class="anchored" data-anchor-id="getting-started"><span class="header-section-number">15.9</span> Getting Started</h2>
 <p>Begin with these conversations:</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 I'm building a React app that fetches WordPress posts. What's the
 basic structure I should start with? Walk me through the component
 hierarchy and data flow.</code></pre>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 In a React app, I need to show a list of posts and then show details
 when one is clicked. What are my options for handling this without
 React Router? Explain the useState approach.</code></pre>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 My WordPress site is at [URL]. What does the REST API endpoint for
 posts look like? How do I get featured images included?</code></pre>
 </section>
@@ -1149,7 +1149,7 @@ posts look like? How do I get featured images included?</code></pre>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">// Access featured image URL</span></span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> imageUrl <span class="op">=</span> post<span class="op">.</span><span class="at">_embedded</span><span class="op">?.</span>[<span class="st">'wp:featuredmedia'</span>]<span class="op">?.</span>[<span class="dv">0</span>]<span class="op">?.</span><span class="at">source_url</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Project structure suggestion:</strong></p>
-<pre><code>src/
+<pre class="text"><code>src/
 ├── components/
 │   ├── Header.jsx
 │   ├── PostCard.jsx
@@ -1179,7 +1179,7 @@ posts look like? How do I get featured images included?</code></pre>
 <li><strong>User experience</strong>: Loading states, error handling, responsive design</li>
 <li><strong>Professional practices</strong>: Version control, documentation, code quality</li>
 </ol>
-<p>Headless architecture is increasingly common in enterprise development. Understanding how to build frontends that consume APIs—whether WordPress, a custom backend, or third-party services—is valuable regardless of your eventual specialisation.</p>
+<p>Headless architecture is increasingly common in enterprise development. Understanding how to build frontends that consume APIs, whether WordPress, a custom backend, or third-party services, is valuable regardless of your eventual specialisation.</p>
 </section>
 <section id="after-submission" class="level2" data-number="15.13">
 <h2 data-number="15.13" class="anchored" data-anchor-id="after-submission"><span class="header-section-number">15.13</span> After Submission</h2>
@@ -1689,7 +1689,7 @@ posts look like? How do I get featured images included?</code></pre>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>Part III taught you component thinking, CSS frameworks, and professional practices. Now you'll bring it together: build a React frontend that consumes content from WordPress via the REST API, demonstrating headless architecture in action.</span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>This project bridges backend content management with modern frontend development. You'll make architectural decisions, implement a complete application, and document your approach—skills that directly translate to professional frontend development roles.</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>This project bridges backend content management with modern frontend development. You'll make architectural decisions, implement a complete application, and document your approach, skills that directly translate to professional frontend development roles.</span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning Outcomes Addressed</span></span>
 <span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
@@ -1701,7 +1701,7 @@ posts look like? How do I get featured images included?</code></pre>
 <span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>In @sec-headless-architecture, you learned that headless WordPress separates content management (WordPress) from content presentation (your frontend). This project implements that architecture:</span>
 <span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="in">┌────────────────┐     REST API     ┌────────────────┐</span></span>
 <span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="in">│   WordPress    │ ───────────────► │   React App    │</span></span>
 <span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="in">│   (Backend)    │    JSON Data     │   (Frontend)   │</span></span>
@@ -1712,7 +1712,7 @@ posts look like? How do I get featured images included?</code></pre>
 <span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a><span class="in">└────────────────┘                  └────────────────┘</span></span>
 <span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>Your React application will fetch and display content that's managed in WordPress—the same content model used by major publishers, e-commerce sites, and enterprise applications.</span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>Your React application will fetch and display content that's managed in WordPress, the same content model used by major publishers, e-commerce sites, and enterprise applications.</span>
 <span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a><span class="fu">## Project Scenarios</span></span>
 <span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a></span>
@@ -1771,7 +1771,7 @@ posts look like? How do I get featured images included?</code></pre>
 <span id="cb12-86"><a href="#cb12-86" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-87"><a href="#cb12-87" aria-hidden="true" tabindex="-1"></a>**Component Tree Example:**</span>
 <span id="cb12-88"><a href="#cb12-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-89"><a href="#cb12-89" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-89"><a href="#cb12-89" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb12-90"><a href="#cb12-90" aria-hidden="true" tabindex="-1"></a><span class="in">App</span></span>
 <span id="cb12-91"><a href="#cb12-91" aria-hidden="true" tabindex="-1"></a><span class="in">├── Header</span></span>
 <span id="cb12-92"><a href="#cb12-92" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── Logo</span></span>
@@ -1886,21 +1886,21 @@ posts look like? How do I get featured images included?</code></pre>
 <span id="cb12-201"><a href="#cb12-201" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-202"><a href="#cb12-202" aria-hidden="true" tabindex="-1"></a>Use AI as a thinking partner, not a code generator:</span>
 <span id="cb12-203"><a href="#cb12-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-204"><a href="#cb12-204" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-204"><a href="#cb12-204" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb12-205"><a href="#cb12-205" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb12-206"><a href="#cb12-206" aria-hidden="true" tabindex="-1"></a><span class="in">I'm fetching WordPress posts but the featured images aren't showing.</span></span>
 <span id="cb12-207"><a href="#cb12-207" aria-hidden="true" tabindex="-1"></a><span class="in">Here's my code... Help me understand what's happening. What am I</span></span>
 <span id="cb12-208"><a href="#cb12-208" aria-hidden="true" tabindex="-1"></a><span class="in">missing about how WordPress returns image data?</span></span>
 <span id="cb12-209"><a href="#cb12-209" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb12-210"><a href="#cb12-210" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-211"><a href="#cb12-211" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-211"><a href="#cb12-211" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb12-212"><a href="#cb12-212" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb12-213"><a href="#cb12-213" aria-hidden="true" tabindex="-1"></a><span class="in">I have a PostList component and a PostDetail component. When the user</span></span>
 <span id="cb12-214"><a href="#cb12-214" aria-hidden="true" tabindex="-1"></a><span class="in">clicks a post, I need to show the detail. What are my options for</span></span>
 <span id="cb12-215"><a href="#cb12-215" aria-hidden="true" tabindex="-1"></a><span class="in">handling this navigation? Walk me through the trade-offs.</span></span>
 <span id="cb12-216"><a href="#cb12-216" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb12-217"><a href="#cb12-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-218"><a href="#cb12-218" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-218"><a href="#cb12-218" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb12-219"><a href="#cb12-219" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb12-220"><a href="#cb12-220" aria-hidden="true" tabindex="-1"></a><span class="in">My component is getting complex with loading, error, and data states.</span></span>
 <span id="cb12-221"><a href="#cb12-221" aria-hidden="true" tabindex="-1"></a><span class="in">Is there a pattern for handling this more cleanly? Show me options</span></span>
@@ -1931,7 +1931,7 @@ posts look like? How do I get featured images included?</code></pre>
 <span id="cb12-246"><a href="#cb12-246" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Concepts you learned through AI conversation</span>
 <span id="cb12-247"><a href="#cb12-247" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Documentation created with AI assistance</span>
 <span id="cb12-248"><a href="#cb12-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-249"><a href="#cb12-249" aria-hidden="true" tabindex="-1"></a>This isn't about restricting AI use—it's about demonstrating that you **understood** what you built.</span>
+<span id="cb12-249"><a href="#cb12-249" aria-hidden="true" tabindex="-1"></a>This isn't about restricting AI use, it's about demonstrating that you **understood** what you built.</span>
 <span id="cb12-250"><a href="#cb12-250" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-251"><a href="#cb12-251" aria-hidden="true" tabindex="-1"></a><span class="fu">## Evaluation Criteria</span></span>
 <span id="cb12-252"><a href="#cb12-252" aria-hidden="true" tabindex="-1"></a></span>
@@ -2009,21 +2009,21 @@ posts look like? How do I get featured images included?</code></pre>
 <span id="cb12-324"><a href="#cb12-324" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-325"><a href="#cb12-325" aria-hidden="true" tabindex="-1"></a>Begin with these conversations:</span>
 <span id="cb12-326"><a href="#cb12-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-327"><a href="#cb12-327" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-327"><a href="#cb12-327" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb12-328"><a href="#cb12-328" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb12-329"><a href="#cb12-329" aria-hidden="true" tabindex="-1"></a><span class="in">I'm building a React app that fetches WordPress posts. What's the</span></span>
 <span id="cb12-330"><a href="#cb12-330" aria-hidden="true" tabindex="-1"></a><span class="in">basic structure I should start with? Walk me through the component</span></span>
 <span id="cb12-331"><a href="#cb12-331" aria-hidden="true" tabindex="-1"></a><span class="in">hierarchy and data flow.</span></span>
 <span id="cb12-332"><a href="#cb12-332" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb12-333"><a href="#cb12-333" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-334"><a href="#cb12-334" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-334"><a href="#cb12-334" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb12-335"><a href="#cb12-335" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb12-336"><a href="#cb12-336" aria-hidden="true" tabindex="-1"></a><span class="in">In a React app, I need to show a list of posts and then show details</span></span>
 <span id="cb12-337"><a href="#cb12-337" aria-hidden="true" tabindex="-1"></a><span class="in">when one is clicked. What are my options for handling this without</span></span>
 <span id="cb12-338"><a href="#cb12-338" aria-hidden="true" tabindex="-1"></a><span class="in">React Router? Explain the useState approach.</span></span>
 <span id="cb12-339"><a href="#cb12-339" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb12-340"><a href="#cb12-340" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-341"><a href="#cb12-341" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-341"><a href="#cb12-341" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb12-342"><a href="#cb12-342" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb12-343"><a href="#cb12-343" aria-hidden="true" tabindex="-1"></a><span class="in">My WordPress site is at [URL]. What does the REST API endpoint for</span></span>
 <span id="cb12-344"><a href="#cb12-344" aria-hidden="true" tabindex="-1"></a><span class="in">posts look like? How do I get featured images included?</span></span>
@@ -2057,7 +2057,7 @@ posts look like? How do I get featured images included?</code></pre>
 <span id="cb12-372"><a href="#cb12-372" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-373"><a href="#cb12-373" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Project structure suggestion<span class="op">:**</span></span>
 <span id="cb12-374"><a href="#cb12-374" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-375"><a href="#cb12-375" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb12-375"><a href="#cb12-375" aria-hidden="true" tabindex="-1"></a>```text</span>
 <span id="cb12-376"><a href="#cb12-376" aria-hidden="true" tabindex="-1"></a>src<span class="op">/</span></span>
 <span id="cb12-377"><a href="#cb12-377" aria-hidden="true" tabindex="-1"></a>├── components<span class="op">/</span></span>
 <span id="cb12-378"><a href="#cb12-378" aria-hidden="true" tabindex="-1"></a>│   ├── Header<span class="op">.</span><span class="fu">jsx</span></span>
@@ -2093,7 +2093,7 @@ posts look like? How do I get featured images included?</code></pre>
 <span id="cb12-408"><a href="#cb12-408" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> <span class="op">**</span>User experience<span class="op">**:</span> Loading states<span class="op">,</span> error handling<span class="op">,</span> responsive design</span>
 <span id="cb12-409"><a href="#cb12-409" aria-hidden="true" tabindex="-1"></a><span class="fl">5.</span> <span class="op">**</span>Professional practices<span class="op">**:</span> Version control<span class="op">,</span> documentation<span class="op">,</span> code quality</span>
 <span id="cb12-410"><a href="#cb12-410" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-411"><a href="#cb12-411" aria-hidden="true" tabindex="-1"></a>Headless architecture is increasingly common in enterprise development<span class="op">.</span> <span class="fu">Understanding</span> how to build frontends that consume APIs—whether WordPress<span class="op">,</span> a custom backend<span class="op">,</span> or third<span class="op">-</span>party services—is valuable regardless of your eventual specialisation<span class="op">.</span></span>
+<span id="cb12-411"><a href="#cb12-411" aria-hidden="true" tabindex="-1"></a>Headless architecture is increasingly common in enterprise development<span class="op">.</span> <span class="fu">Understanding</span> how to build frontends that consume APIs<span class="op">,</span> whether WordPress<span class="op">,</span> a custom backend<span class="op">,</span> or third<span class="op">-</span>party services<span class="op">,</span> is valuable regardless of your eventual specialisation<span class="op">.</span></span>
 <span id="cb12-412"><a href="#cb12-412" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-413"><a href="#cb12-413" aria-hidden="true" tabindex="-1"></a>## After Submission</span>
 <span id="cb12-414"><a href="#cb12-414" aria-hidden="true" tabindex="-1"></a></span>

@@ -13,9 +13,9 @@ SOURCE: index.qmd
 
 Most web development books teach you technologies. This one teaches you to think like a professional developer who happens to use specific technologies.
 
-That distinction matters because AI can write HTML, CSS, and JavaScript faster than you ever will. If your only skill is writing markup and code, you are competing with something that does not sleep. But if you can translate a business need into a technical requirement, evaluate whether a WordPress site or a React app is the right call, and explain your reasoning to a non-technical stakeholder — you have the skills that actually matter.
+That distinction matters because AI can write HTML, CSS, and JavaScript faster than you ever will. If your only skill is writing markup and code, you are competing with something that does not sleep. But if you can translate a business need into a technical requirement, evaluate whether a WordPress site or a React app is the right call, and explain your reasoning to a non-technical stakeholder. You have the skills that actually matter.
 
-This book grew out of teaching business web and mobile technologies to students who were not computer science majors. They needed to build real things for real purposes, and they needed to understand enough about the technology to make professional decisions — not just follow tutorials. The exercises, case studies, and projects in these pages were tested in classrooms before they were written up.
+This book grew out of teaching business web and mobile technologies to students who were not computer science majors. They needed to build real things for real purposes, and they needed to understand enough about the technology to make professional decisions, not just follow tutorials. The exercises, case studies, and projects in these pages were tested in classrooms before they were written up.
 
 ## Who This Book Is For
 
@@ -30,7 +30,7 @@ No prior programming experience required. We start from scratch.
 
 This is not a computer science textbook. It does not cover algorithms, data structures, or computational theory. It teaches you to build things for the web, with enough understanding to make good decisions about how.
 
-It is not a framework-of-the-month guide. You will learn HTML, CSS, JavaScript, WordPress, and React — technologies chosen because they cover the spectrum from simple to complex and will remain relevant regardless of what is trending next year.
+It is not a framework-of-the-month guide. You will learn HTML, CSS, JavaScript, WordPress, and React, technologies chosen because they cover the spectrum from simple to complex and will remain relevant regardless of what is trending next year.
 
 It is not a book that treats AI as a novelty. AI is your development partner throughout. The book teaches you to architect solutions that AI helps you build, evaluate AI output with professional judgement, and communicate requirements clearly enough for AI to be useful.
 
@@ -44,7 +44,7 @@ You do not need to be "technical" to build for the web. That word gets used as a
 
 The book progresses from foundations to full applications:
 
-Part 0 introduces your AI development partnership — how to work with AI effectively from day one.
+Part 0 introduces your AI development partnership, how to work with AI effectively from day one.
 
 Part 1 covers web fundamentals: HTML structure, CSS presentation, JavaScript behaviour. You understand the building blocks before assembling them.
 
@@ -56,9 +56,34 @@ Part 4 ties it all together: professional practices, emerging technologies, and 
 
 Each chapter follows a consistent pattern: concept first, AI exploration, hands-on practice, business connection, reflection.
 
-## The Companion Books
+## Conventions Used in This Book
 
-The methodology in this book draws on Conversation, Not Delegation: How to Think With AI, Not Just Use It, which covers the full framework for working with AI across any discipline. If you are also interested in Python development, the Python learning path (Think Python, Direct AI → Code Python, Consult AI → Ship Python, Orchestrate AI) applies the same methodology to programming.
+Code examples appear with syntax highlighting:
+
+AI prompts and non-code examples appear as plain text blocks:
+
+Throughout the chapters you will find:
+
+- AI Explorations: guided prompts for learning concepts through AI conversation
+- Callout boxes: tips, notes, and warnings highlighted for reference
+- Practice Exercises: levelled from direct application (Level 1) to open-ended design (Level 5)
+- Learning Journal: reflection prompts at the end of each chapter
+
+## The Series
+
+This book is part of a series designed to help you master modern software development in the AI era.
+
+Conversation, Not Delegation. The general methodology for working with AI across any discipline.
+
+Converse Python, Partner AI: intentional prompting methodology applied to software development.
+
+Think Python, Direct AI: computational thinking for absolute beginners.
+
+Code Python, Consult AI: focused Python fundamentals with AI integration.
+
+Ship Python, Orchestrate AI: professional Python development practices and tooling.
+
+Build Web, Guide AI (this book), web development with AI as your development partner.
 
 All titles are available at books.borck.education.
 
@@ -129,35 +154,18 @@ michael@borck.me
 SOURCE: chapters/reading-list.qmd
 ============================================================
 
-# Weekly Reading List 
+# Recommended Resources 
 
-This reading list accompanies the 12-week course structure, combining chapters from this book, methodology from Intentional Prompting, and curated external resources.
-
-## How to Use This List
-
-Each week includes:
-
-- Book Chapter: Primary reading from this book
-- Methodology: Relevant chapter from Intentional Prompting
-- Essential Reading: Must-read external resources
-- Deeper Dive: Optional additional resources for those wanting more
+This reading list accompanies the book, combining curated external resources organised by topic. Use it alongside the chapters for different perspectives and official documentation.
 
 ## Reading Strategy
 Read the book chapter first to understand concepts, then explore external resources for different perspectives and official documentation.
 
 ---
 
-## Week 1: Foundations & AI Partnership
+## Getting Started with the Web
 
-### Focus
-Setting up your development environment and establishing your AI partnership approach.
-
-### Book Chapters
-- Chapter 0: Understanding Your AI Web Development Partner
-
-### Intentional Prompting
-- Chapter 1: Introduction
-- Chapter 3: Intentional Prompting Principles
+### Companion Chapter
 
 ### Essential Reading
 
@@ -173,17 +181,9 @@ Setting up your development environment and establishing your AI partnership app
 
 ---
 
-## Week 2: HTML Structure
+## HTML Structure
 
-### Focus
-Semantic HTML and document structure as information architecture.
-
-### Book Chapters
-- Chapter 1: Structure: HTML as Information Architecture
-
-### Intentional Prompting
-- Chapter 4: The Six-Step Methodology (overview)
-- Chapter 5: Restate and Identify
+### Companion Chapter
 
 ### Essential Reading
 
@@ -200,17 +200,9 @@ Semantic HTML and document structure as information architecture.
 
 ---
 
-## Week 3: CSS Presentation
+## CSS Presentation
 
-### Focus
-Visual design, responsive layouts, and mobile-first development.
-
-### Book Chapters
-- Chapter 2: Presentation: CSS as Visual Communication
-
-### Intentional Prompting
-- Chapter 6: Work by Hand
-- Chapter 7: Pseudocode
+### Companion Chapter
 
 ### Essential Reading
 
@@ -229,17 +221,9 @@ Visual design, responsive layouts, and mobile-first development.
 
 ---
 
-## Week 4: JavaScript Behaviour
+## JavaScript Behaviour
 
-### Focus
-Adding interactivity, DOM manipulation, and event handling.
-
-### Book Chapters
-- Chapter 3: Behaviour: JavaScript as User Interaction
-
-### Intentional Prompting
-- Chapter 8: Convert to Code
-- Chapter 11: Debugging with AI
+### Companion Chapter
 
 ### Essential Reading
 
@@ -257,17 +241,9 @@ Adding interactivity, DOM manipulation, and event handling.
 
 ---
 
-## Week 5: APIs & Data
+## APIs and Data
 
-### Focus
-Connecting to external services, fetching data, and working with JSON.
-
-### Book Chapters
-- Chapter 4: Connection: APIs as Business Integration
-
-### Intentional Prompting
-- Chapter 9: Test with Data
-- Chapter 10: Intentional Prompting Patterns
+### Companion Chapter
 
 ### Essential Reading
 
@@ -285,17 +261,9 @@ Connecting to external services, fetching data, and working with JSON.
 
 ---
 
-## Week 6: Portfolio Project & Accessibility
+## Accessibility
 
-### Focus
-Completing Assessment 1, accessibility fundamentals, and project review.
-
-### Book Chapters
-- Project: Portfolio Website
-- Review Chapters 1-4
-
-### Intentional Prompting
-- Chapter 12: Refactoring Strategies
+### Companion Chapter
 
 ### Essential Reading
 
@@ -312,17 +280,10 @@ Completing Assessment 1, accessibility fundamentals, and project review.
 
 ---
 
-## Week 7: Content Management Systems
+## Content Management Systems
 
-### Focus
-Understanding CMS value proposition and WordPress as a platform.
-
-### Book Chapters
-- Chapter 5: Why CMS? The Business Value of Managed Content
-- Chapter 6: WordPress as Platform
-
-### Intentional Prompting
-- Chapter 13: Case Studies (approach to complex projects)
+### Companion Chapters
+ and 
 
 ### Essential Reading
 
@@ -339,16 +300,9 @@ Understanding CMS value proposition and WordPress as a platform.
 
 ---
 
-## Week 8: Extending WordPress
+## Extending WordPress
 
-### Focus
-Plugins, themes, and customisation strategies.
-
-### Book Chapters
-- Chapter 7: Extending Platforms
-
-### Intentional Prompting
-- Chapter 14: Scaling Complexity
+### Companion Chapter
 
 ### Essential Reading
 
@@ -365,37 +319,9 @@ Plugins, themes, and customisation strategies.
 
 ---
 
-## Week 9: Tuition-Free Week
+## Headless Architecture and REST APIs
 
-### Focus
-Self-directed learning and project catch-up.
-
-### Suggested Activities
-- Review previous chapters
-- Complete any outstanding exercises
-- Explore Intentional Prompting deeper
-- Experiment with WordPress customisation
-
-### Optional Reading
-
-| Resource | Topic | Link |
-|----------|-------|------|
-| Smashing Magazine | WordPress Articles | Smashing: WordPress |
-| CSS Tricks | Various | CSS Tricks |
-| Dev.to | Web Development | Dev.to |
-
----
-
-## Week 10: WordPress REST API
-
-### Focus
-Headless architecture and API-first thinking.
-
-### Book Chapters
-- Chapter 8: Headless Architecture
-
-### Intentional Prompting
-- Review Chapter 8-9: Convert to Code, Test with Data
+### Companion Chapter
 
 ### Essential Reading
 
@@ -411,16 +337,9 @@ Headless architecture and API-first thinking.
 
 ---
 
-## Week 11: React Integration
+## React
 
-### Focus
-Component-based thinking and connecting React to WordPress.
-
-### Book Chapters
-- Chapter 9: Component Thinking: React
-
-### Intentional Prompting
-- Chapter 12: Refactoring Strategies (component extraction)
+### Companion Chapter
 
 ### Essential Reading
 
@@ -437,17 +356,10 @@ Component-based thinking and connecting React to WordPress.
 
 ---
 
-## Week 12: Frameworks & Professional Practice
+## Frameworks and Professional Practice
 
-### Focus
-CSS frameworks, code quality, and professional development practices.
-
-### Book Chapters
-- Chapter 10: Rapid Development: CSS Frameworks
-- Chapter 11: Professional Practices
-
-### Intentional Prompting
-- Chapter 15: Teaching and Learning (reflection)
+### Companion Chapters
+ and 
 
 ### Essential Reading
 
@@ -464,19 +376,10 @@ CSS frameworks, code quality, and professional development practices.
 
 ---
 
-## Week 13: Future & Career
+## Emerging Technologies and Career
 
-### Focus
-Emerging technologies, portfolio building, and career positioning.
-
-### Book Chapters
-- Chapter 12: Evaluating Emerging Technologies
-- Chapter 13: Your Development Career
-- Chapter 14: The AI-Era Developer
-- Project: React Integration (final submission)
-
-### Intentional Prompting
-- Chapter 16: Future Directions
+### Companion Chapters
+, , and 
 
 ### Essential Reading
 
@@ -546,11 +449,11 @@ SOURCE: acknowledgments.qmd
 
 # Acknowledgments 
 
-This book grew out of teaching business web and mobile technologies to students who were not computer science majors but needed to build real things for real purposes. The exercises, case studies, and projects in these pages were tested in classrooms, and the students who worked through them shaped every chapter. Their questions — especially the ones that started with "but why would I..." — kept the book focused on what actually matters in a business context.
+This book grew out of teaching business web and mobile technologies to students who were not computer science majors but needed to build real things for real purposes. The exercises, case studies, and projects in these pages were tested in classrooms, and the students who worked through them shaped every chapter. Their questions, especially the ones that started with "but why would I...", kept the book focused on what actually matters in a business context.
 
 Colleagues in business and information systems provided the cross-disciplinary perspective that kept the technical content grounded in professional reality. The book is better for every conversation about what employers actually need graduates to know.
 
-The web development community's commitment to open documentation — MDN Web Docs, the WordPress documentation, the React documentation — makes resources like this possible. The open source community behind Quarto, GitHub, and GitHub Pages made it possible to write, build, and publish across multiple formats without a traditional publisher.
+The web development community's commitment to open documentation. MDN Web Docs, the WordPress documentation, the React documentation, makes resources like this possible. The open source community behind Quarto, GitHub, and GitHub Pages made it possible to write, build, and publish across multiple formats without a traditional publisher.
 
 AI tools were used throughout the writing process. Claude (Anthropic) served as a conversation partner for drafting, iterating, and refining. The process was the same one the book teaches: guide the AI, evaluate its output, and maintain professional judgement throughout. Every chapter reflects the author's decisions. The AI made the work faster. It did not make the decisions.
 
@@ -778,11 +681,11 @@ SOURCE: chapters/chapter-structure.qmd
 
 Before we write any HTML, let's understand what we're really doing: organising information so both humans and machines can understand it.
 
-Every document you've ever read has structure. A book has chapters, sections, and paragraphs. A business report has headings, bullet points, and tables. A restaurant menu has categories, items, and descriptions. This structure isn't decoration—it's how we communicate meaning.
+Every document you've ever read has structure. A book has chapters, sections, and paragraphs. A business report has headings, bullet points, and tables. A restaurant menu has categories, items, and descriptions. This structure isn't decoration, it's how we communicate meaning.
 
-HTML (HyperText Markup Language) is simply the language we use to describe document structure for the web. When you write HTML, you're not designing how something looks—you're declaring what something is.
+HTML (HyperText Markup Language) is simply the language we use to describe document structure for the web. When you write HTML, you're not designing how something looks, you're declaring what something is.
 
-This distinction matters enormously. A heading isn't big, bold text. A heading is a heading—a structural element that indicates hierarchy and importance. How it appears is a separate concern entirely.
+This distinction matters enormously. A heading isn't big, bold text. A heading is a heading, a structural element that indicates hierarchy and importance. How it appears is a separate concern entirely.
 
 ## Understanding Through Architecture
 
@@ -802,7 +705,7 @@ Now think about a web page:
 - Links connect pages and resources
 - Web standards ensure accessibility across devices
 
-The parallel is precise. An architect doesn't just make a building that stands—they create spaces that people can navigate, understand, and use. A web developer doesn't just make a page that displays—they create documents that humans can read and machines can process.
+The parallel is precise. An architect doesn't just make a building that stands, they create spaces that people can navigate, understand, and use. A web developer doesn't just make a page that displays, they create documents that humans can read and machines can process.
 
 ## The Architecture Mindset
 When you look at any web page, train yourself to see structure first, appearance second. Ask: "What are the meaningful sections here? How is the content organised? What is each element's purpose?"
@@ -815,7 +718,7 @@ Let's use AI to explore these concepts before we see any code. Remember from Cha
 
 Before we think about HTML at all, let's think about documents:
 
-Notice what your AI identifies: categories of food, individual items, descriptions, prices, perhaps special callouts for dietary information. This is structure—pure information architecture that exists independent of how it's presented.
+Notice what your AI identifies: categories of food, individual items, descriptions, prices, perhaps special callouts for dietary information. This is structure, pure information architecture that exists independent of how it's presented.
 
 Now follow up:
 
@@ -835,7 +738,7 @@ Now let's see actual HTML, but the simplest possible version:
 
 Your AI should give you something like:
 
-Don't just accept this—have a conversation about it:
+Don't just accept this, have a conversation about it:
 
 These conversations build understanding that copying code never provides.
 
@@ -847,13 +750,13 @@ Let's build your HTML understanding progressively, starting from the absolute ba
 
 Every HTML page starts with a declaration and a container:
 
-The `` tells browsers "this is a modern HTML document." The `` element is the root container for everything else. The `lang` attribute declares the language—essential for screen readers and translation tools.
+The `` tells browsers "this is a modern HTML document." The `` element is the root container for everything else. The `lang` attribute declares the language, essential for screen readers and translation tools.
 
 ### The Two Main Sections
 
 Inside the HTML container, every page has exactly two sections:
 
-The `` contains metadata—information about the page that doesn't appear on screen. The `` contains the actual content visitors see and interact with.
+The `` contains metadata, information about the page that doesn't appear on screen. The `` contains the actual content visitors see and interact with.
 
 Think of it like a business letter: the `` is the envelope with addresses and stamps, while the `` is the letter inside.
 
@@ -863,12 +766,12 @@ Now let's add meaningful content. HTML provides elements that describe what cont
 
 Notice what we've communicated:
 
-- `` — the introductory content for the page
-- `` — the primary content (there should only be one)
-- `` — distinct, thematically grouped content
-- `` — closing information
-- ``, `` — heading hierarchy (h1 is most important)
-- `` — paragraphs of text
+- ``. The introductory content for the page
+- ``. The primary content (there should only be one)
+- ``, distinct, thematically grouped content
+- ``, closing information
+- ``, ``, heading hierarchy (h1 is most important)
+- ``, paragraphs of text
 
 A screen reader can now navigate this page by headings. Search engines understand what's primary content versus footer material. Future developers can immediately grasp the page structure.
 
@@ -887,11 +790,11 @@ Here are the structural elements you'll use most often:
 | `` | Closing content | Copyright, contact links |
 
 ## Common Mistake
-Don't choose elements based on how they look by default. Choose them based on what the content is. A `` isn't "a box"—it's a thematic grouping of content. Appearance is CSS's job (Chapter 2).
+Don't choose elements based on how they look by default. Choose them based on what the content is. A `` isn't "a box", it's a thematic grouping of content. Appearance is CSS's job (Chapter 2).
 
 ### Headings Create Hierarchy
 
-Headings aren't just "big text"—they create a document outline:
+Headings aren't just "big text", they create a document outline:
 
 This hierarchy should make sense as an outline. Don't skip levels (no jumping from h2 to h4) and don't use headings just to make text bigger.
 
@@ -924,9 +827,9 @@ Search engines read your HTML structure to understand your content. A well-struc
 
 ### Accessibility
 
-Screen readers—software used by visually impaired people—navigate by structure. Users can jump between headings, skip to main content, or list all navigation links. Without semantic HTML, this navigation is impossible.
+Screen readers, software used by visually impaired people, navigate by structure. Users can jump between headings, skip to main content, or list all navigation links. Without semantic HTML, this navigation is impossible.
 
-This isn't just ethical—it's often legal. Many jurisdictions require accessible websites for businesses, government, and education.
+This isn't just ethical, it's often legal. Many jurisdictions require accessible websites for businesses, government, and education.
 
 ### Maintainability
 
@@ -934,10 +837,10 @@ Well-structured HTML is easier to update. When sections are clearly marked, find
 
 ### Professional Credibility
 
-When potential employers or clients view your page source, structure tells them about your professionalism. Clean, semantic HTML signals someone who understands web fundamentals—not just someone who copied code until something worked.
+When potential employers or clients view your page source, structure tells them about your professionalism. Clean, semantic HTML signals someone who understands web fundamentals, not just someone who copied code until something worked.
 
-## ULO Connection
-This develops ULO 1 (design and evaluate effective web applications) and ULO 2 (professional skills). Structure isn't visible to casual viewers, but it's visible to search engines, screen readers, developers, and anyone who inspects your code.
+## Skills You Are Building
+This develops evaluating and improving solutions and professional communication and project management. Structure isn't visible to casual viewers, but it's visible to search engines, screen readers, developers, and anyone who inspects your code.
 
 ## Practice Exercises
 
@@ -968,7 +871,7 @@ Without writing any HTML, create a structural outline for a personal portfolio p
 - What information belongs in the footer?
 - What's the heading hierarchy?
 
-Then, with your AI partner, translate your outline into semantic HTML. Compare your outline with the final code—did the structure remain clear?
+Then, with your AI partner, translate your outline into semantic HTML. Compare your outline with the final code, did the structure remain clear?
 
 ### Exercise 1.3: Fix the Structure (Level 3)
 
@@ -985,7 +888,7 @@ A local bakery asks you to create their website. They mention:
 - They want to show their story and values
 - They need contact information and a map
 
-Create a structural plan that addresses their requirements. Which semantic elements would you use for each requirement? Justify your choices in business terms—why does proper structure benefit this bakery?
+Create a structural plan that addresses their requirements. Which semantic elements would you use for each requirement? Justify your choices in business terms, why does proper structure benefit this bakery?
 
 ### Exercise 1.5: Semantic Debate (Level 5)
 
@@ -993,14 +896,14 @@ Should a "team members" section on an About page use `` for each person, or ``, 
 
 Research the HTML specification's definitions for both elements. Have a conversation with your AI partner exploring arguments for each choice. Write a short recommendation (200-300 words) defending your position with evidence from web standards.
 
-This exercise has no single correct answer—it develops your ability to make and defend technical decisions (ULO 4).
+This exercise has no single correct answer, it develops your ability to make and defend technical decisions (making and defending technology choices).
 
 ## Chapter Summary
 
 - HTML describes document structure, not appearance
 - Semantic elements convey meaning to humans and machines
 - Every page has `` (metadata) and `` (content)
-- Headings create hierarchy—don't skip levels or use them for styling
+- Headings create hierarchy, don't skip levels or use them for styling
 - Structure benefits SEO, accessibility, maintainability, and professionalism
 - The structure you create is as important as the content you write
 
@@ -1030,9 +933,9 @@ Record your responses to these prompts:
 
 ## Next Steps
 
-You now understand how to describe what content is. But a page with only HTML looks plain—black text on white background, default fonts, minimal layout.
+You now understand how to describe what content is. But a page with only HTML looks plain, black text on white background, default fonts, minimal layout.
 
-In , we'll explore CSS—how to control the visual presentation of our structured content. Structure and presentation are deliberately separate in web development, and understanding why is key to professional practice.
+In , we'll explore CSS, how to control the visual presentation of our structured content. Structure and presentation are deliberately separate in web development, and understanding why is key to professional practice.
 
 The structure you've learned to create becomes the foundation that CSS styles. Good structure makes styling straightforward; poor structure makes it a struggle.
 
@@ -1044,11 +947,11 @@ SOURCE: chapters/chapter-presentation.qmd
 
 ## The Concept First
 
-In , you learned to describe what content is. Now we'll control how content looks—but this isn't decoration. It's visual communication.
+In , you learned to describe what content is. Now we'll control how content looks, but this isn't decoration. It's visual communication.
 
 CSS (Cascading Style Sheets) determines colours, fonts, spacing, and layout. But these choices aren't arbitrary. Every visual decision communicates something: professionalism, playfulness, urgency, calm. A hospital website and a children's toy store might have identical HTML structure, but their CSS tells completely different stories.
 
-Here's the key insight: structure and presentation are deliberately separate. Your HTML says "this is a heading"—it doesn't say "this should be blue and 24 pixels tall." CSS handles appearance. This separation means you can completely redesign a website without touching its content, or update content without breaking the design.
+Here's the key insight: structure and presentation are deliberately separate. Your HTML says "this is a heading", it doesn't say "this should be blue and 24 pixels tall." CSS handles appearance. This separation means you can completely redesign a website without touching its content, or update content without breaking the design.
 
 ## Understanding Through Design
 
@@ -1058,7 +961,7 @@ Café A: Exposed brick, warm lighting, comfortable armchairs, handwritten chalkb
 
 Café B: White walls, fluorescent lights, plastic chairs, printed menu in a laminated folder, no music.
 
-The content is identical—but would you feel the same about visiting each one? The atmosphere shapes your entire perception of the business. One feels welcoming and worth paying premium prices; the other feels like a waiting room.
+The content is identical, but would you feel the same about visiting each one? The atmosphere shapes your entire perception of the business. One feels welcoming and worth paying premium prices; the other feels like a waiting room.
 
 CSS is your website's atmosphere. The content (HTML) might be excellent, but if the presentation feels amateur, untrustworthy, or confusing, users leave.
 
@@ -1075,13 +978,13 @@ Follow up:
 
 ### Exploration 2: Mobile-First as Business Strategy
 
-More than half of web traffic comes from mobile devices. But mobile-first isn't just about phones—it's a design philosophy.
+More than half of web traffic comes from mobile devices. But mobile-first isn't just about phones, it's a design philosophy.
 
 Your AI should explain how mobile constraints force clarity: limited space means prioritising what matters, slow connections mean optimising performance, touch targets mean accessible interfaces. Designing for these constraints first creates better experiences everywhere.
 
 ### Exploration 3: Visual Hierarchy
 
-Every page has multiple elements competing for attention. Visual hierarchy tells users what to look at first, second, third—guiding them through your content intentionally.
+Every page has multiple elements competing for attention. Visual hierarchy tells users what to look at first, second, third, guiding them through your content intentionally.
 
 This should reveal tools beyond size: colour contrast, whitespace, position, typography weight. A small red button can dominate over a large grey headline because colour attracts attention.
 
@@ -1105,7 +1008,7 @@ External stylesheet (recommended for most work):
 
 Internal stylesheet (in the HTML file):
 
-Inline styles (on individual elements—generally avoid):
+Inline styles (on individual elements, generally avoid):
 
 External stylesheets keep presentation separate from structure. One CSS file can style an entire website, and changes propagate everywhere instantly.
 
@@ -1113,7 +1016,7 @@ External stylesheets keep presentation separate from structure. One CSS file can
 
 Selectors target elements in different ways:
 
-Classes (`.classname`) are your workhorses—reusable styles you can apply to any element. IDs (`#idname`) should be unique per page and are less commonly used in modern CSS.
+Classes (`.classname`) are your workhorses, reusable styles you can apply to any element. IDs (`#idname`) should be unique per page and are less commonly used in modern CSS.
 
 ### The Box Model
 
@@ -1131,7 +1034,7 @@ This makes layout calculations much more intuitive.
 
 ### Layout with Flexbox
 
-Flexbox is the modern way to arrange elements. It makes previously difficult tasks—like centring or equal-height columns—simple.
+Flexbox is the modern way to arrange elements. It makes previously difficult tasks, like centring or equal-height columns, simple.
 
 This single line transforms the container. Its children become "flex items" that can be arranged in powerful ways:
 
@@ -1189,7 +1092,7 @@ When you look at a webpage, think in layers:
 2. Style layer (CSS): How it looks
 3. Behaviour layer (JavaScript, Chapter 3): How it responds
 
-CSS only controls layer 2. It can't create content or make things interactive—it controls visual presentation of whatever HTML provides.
+CSS only controls layer 2. It can't create content or make things interactive, it controls visual presentation of whatever HTML provides.
 
 ## Business Applications
 
@@ -1201,18 +1104,18 @@ Change the variable once, and every element using it updates instantly. This is 
 
 ### User Experience and Trust
 
-Studies consistently show that users judge website credibility in milliseconds, based primarily on visual design. Professional presentation builds trust; amateur presentation creates suspicion—regardless of how good the actual content is.
+Studies consistently show that users judge website credibility in milliseconds, based primarily on visual design. Professional presentation builds trust; amateur presentation creates suspicion, regardless of how good the actual content is.
 
 ### Mobile Reach
 
-If your site doesn't work on mobile, you're excluding over half your potential audience. Responsive design isn't a feature—it's a baseline requirement for any business website.
+If your site doesn't work on mobile, you're excluding over half your potential audience. Responsive design isn't a feature, it's a baseline requirement for any business website.
 
 ### Conversion and Visual Hierarchy
 
 Where users look determines what they do. Visual hierarchy guides attention to calls-to-action, important information, and conversion points. Poor hierarchy means users miss what matters.
 
-## ULO Connection
-This develops ULO 1 (effective web applications) and ULO 4 (technology selection). CSS choices affect user experience, brand perception, and business outcomes. The ability to evaluate and implement appropriate visual design is essential professional skill.
+## Skills You Are Building
+This develops evaluating and improving solutions and making and defending technology choices. CSS choices affect user experience, brand perception, and business outcomes. The ability to evaluate and implement appropriate visual design is essential professional skill.
 
 ## Practice Exercises
 
@@ -1243,7 +1146,7 @@ Take the semantic HTML page from Chapter 1's exercises. Create an external style
 3. Adds appropriate padding to sections
 4. Creates visual distinction between the main content and footer
 
-Focus on readability and visual hierarchy—not decoration.
+Focus on readability and visual hierarchy, not decoration.
 
 ### Exercise 2.3: Responsive Layout (Level 3)
 
@@ -1317,9 +1220,9 @@ Record your responses to these prompts:
 
 ## Next Steps
 
-You now control both structure (HTML) and presentation (CSS). But websites today aren't just documents to read—they're applications to interact with.
+You now control both structure (HTML) and presentation (CSS). But websites today aren't just documents to read, they're applications to interact with.
 
-In , we'll add JavaScript—the third pillar of web development. JavaScript lets pages respond to user actions: clicks, scrolls, form submissions. It transforms static documents into dynamic experiences.
+In , we'll add JavaScript, the third pillar of web development. JavaScript lets pages respond to user actions: clicks, scrolls, form submissions. It transforms static documents into dynamic experiences.
 
 The HTML structure and CSS styling you've learned become the canvas that JavaScript brings to life.
 
@@ -1331,11 +1234,11 @@ SOURCE: chapters/chapter-behaviour.qmd
 
 ## The Concept First
 
-HTML provides structure. CSS provides presentation. JavaScript provides behaviour—the ability to respond to user actions, update content dynamically, and create interactive experiences.
+HTML provides structure. CSS provides presentation. JavaScript provides behaviour, the ability to respond to user actions, update content dynamically, and create interactive experiences.
 
 Consider a contact form. HTML creates the fields and the submit button. CSS makes it look professional. But what happens when someone clicks "Submit"? What validates their input? What shows them a success message? That's JavaScript.
 
-JavaScript transforms static documents into dynamic applications. It's what makes modern web experiences feel responsive and alive—dropdown menus that expand, forms that validate as you type, content that loads without page refreshes.
+JavaScript transforms static documents into dynamic applications. It's what makes modern web experiences feel responsive and alive, dropdown menus that expand, forms that validate as you type, content that loads without page refreshes.
 
 But here's an important perspective: JavaScript should enhance, not replace, structure and presentation. A well-built page works without JavaScript. JavaScript makes it work better.
 
@@ -1395,7 +1298,7 @@ Place `` tags at the end of `` so HTML loads first. This ensures elements exist 
 
 Variables hold data that can change:
 
-Use `const` by default—it prevents accidental changes. Use `let` only when you need to reassign the value.
+Use `const` by default, it prevents accidental changes. Use `let` only when you need to reassign the value.
 
 ## Avoid `var`
 You'll see `var` in older code and some AI-generated examples. It has confusing scoping rules. Modern JavaScript uses `let` and `const` exclusively. If your AI suggests `var`, ask it to use `let` or `const` instead.
@@ -1418,7 +1321,7 @@ Both syntaxes work. Arrow functions are common in modern code, especially for sh
 
 To interact with page elements, first you must find them:
 
-`querySelector` uses CSS selector syntax—the same patterns you learned in Chapter 2. This consistency makes finding elements intuitive.
+`querySelector` uses CSS selector syntax, the same patterns you learned in Chapter 2. This consistency makes finding elements intuitive.
 
 ### Changing Elements
 
@@ -1429,7 +1332,7 @@ Instead of setting `element.style.color = 'red'`, add a class that has those sty
 
 ### Events: Responding to Users
 
-Events are things that happen—clicks, key presses, form submissions, page loads. Event listeners wait for specific events and run code when they occur:
+Events are things that happen, clicks, key presses, form submissions, page loads. Event listeners wait for specific events and run code when they occur:
 
 The pattern is: `element.addEventListener(eventType, handlerFunction)`
 
@@ -1446,15 +1349,15 @@ Common events:
 
 ### A Complete Example: Toggle Menu
 
-Let's combine these concepts into a practical feature—a mobile navigation toggle:
+Let's combine these concepts into a practical feature, a mobile navigation toggle:
 
 This is progressive enhancement: the HTML structure exists, the CSS hides the menu by default on mobile, and JavaScript adds the toggle behaviour. If JavaScript fails, you could add `class="hidden"` via CSS media queries so the menu shows on larger screens regardless.
 
 ### Form Validation Example
 
-Here's a practical business example—validating an email field:
+Here's a practical business example, validating an email field:
 
-This validates as the user types and again on submission. Note: HTML5 provides `type="email"` validation too—JavaScript enhances the feedback, not replaces the baseline.
+This validates as the user types and again on submission. Note: HTML5 provides `type="email"` validation too. JavaScript enhances the feedback, not replaces the baseline.
 
 ## Building Your Mental Model
 
@@ -1467,7 +1370,7 @@ JavaScript doesn't run all at once. It:
 3. When an event occurs, runs the handler
 4. Returns to waiting
 
-This is why you register event listeners—you're telling JavaScript "when this happens, run this code." The rest of the time, JavaScript is idle, waiting.
+This is why you register event listeners, you're telling JavaScript "when this happens, run this code." The rest of the time, JavaScript is idle, waiting.
 
 ### The Three Layers
 
@@ -1502,8 +1405,8 @@ Loading content without page refreshes (covered more in Chapter 4) makes applica
 
 JavaScript can track how users interact with your site: what they click, how far they scroll, where they spend time. This data informs business decisions. (Always be transparent about tracking and respect privacy.)
 
-## ULO Connection
-This develops ULO 1 (effective web applications) and ULO 3 (translating stakeholder needs). Interactive features must serve user needs—JavaScript for its own sake creates complexity without value. The ability to identify when interactivity helps versus hinders is professional judgment.
+## Skills You Are Building
+This develops evaluating and improving solutions and translating stakeholder needs into technical requirements. Interactive features must serve user needs. JavaScript for its own sake creates complexity without value. The ability to identify when interactivity helps versus hinders is professional judgment.
 
 ## Practice Exercises
 
@@ -1522,7 +1425,7 @@ Open any webpage and open the browser console (F12 → Console). Try these:
 2. Type `document.querySelector('h1')` to find the main heading
 3. Type `document.querySelector('h1').textContent = 'I changed this!'`
 
-What happened? Refresh the page—is your change permanent? Why or why not?
+What happened? Refresh the page, is your change permanent? Why or why not?
 
 ### Exercise 3.2: Button Interaction (Level 2)
 
@@ -1564,11 +1467,11 @@ A local bookshop wants their website to have an interactive "Book Finder" featur
 3. Describe what JavaScript would do for each interaction
 4. Consider: what should work without JavaScript?
 
-Don't write the full code—design the approach. Document your thinking, then discuss your design with your AI partner. What did they suggest differently?
+Don't write the full code, design the approach. Document your thinking, then discuss your design with your AI partner. What did they suggest differently?
 
 ## Chapter Summary
 
-- JavaScript adds behaviour—the ability to respond to user actions
+- JavaScript adds behaviour, the ability to respond to user actions
 - Event-driven programming means listening for events and responding
 - The DOM is JavaScript's interface to the page structure
 - Progressive enhancement builds on working HTML/CSS, not replacing it
@@ -1601,9 +1504,9 @@ Record your responses to these prompts:
 
 ## Next Steps
 
-You can now build pages that respond to users. But modern web applications do more—they connect to services, fetch data, and send information to servers.
+You can now build pages that respond to users. But modern web applications do more, they connect to services, fetch data, and send information to servers.
 
-In , we'll explore APIs—how your JavaScript can request data from external services and submit data to be processed. This transforms your pages from standalone documents into connected applications that interact with the wider web.
+In , we'll explore APIs, how your JavaScript can request data from external services and submit data to be processed. This transforms your pages from standalone documents into connected applications that interact with the wider web.
 
 The JavaScript fundamentals you've learned become the foundation for asynchronous programming and data-driven interfaces.
 
@@ -1615,11 +1518,11 @@ SOURCE: chapters/chapter-connection.qmd
 
 ## The Concept First
 
-So far, everything you've built lives in isolation. Your HTML, CSS, and JavaScript create an experience, but that experience is self-contained—it doesn't connect to anything beyond itself.
+So far, everything you've built lives in isolation. Your HTML, CSS, and JavaScript create an experience, but that experience is self-contained, it doesn't connect to anything beyond itself.
 
 Real business applications are different. They display live weather data. They process payments. They show inventory levels. They sync with customer databases. They pull content from external services. How?
 
-APIs—Application Programming Interfaces.
+APIs. Application Programming Interfaces.
 
 An API is a defined way for two systems to communicate. When your JavaScript asks a weather service "What's the temperature in Perth?", it's using an API. When a customer's payment details go to Stripe for processing, that's an API. When your portfolio site pulls your latest GitHub projects, that's an API.
 
@@ -1637,7 +1540,7 @@ Think of an API as a contract between two parties. Like any good contract, it sp
 Imagine a restaurant:
 
 - The menu lists what you can order (available endpoints)
-- You place an order in a specific way—verbally to a waiter, on a printed slip (request format)
+- You place an order in a specific way, verbally to a waiter, on a printed slip (request format)
 - The kitchen prepares your food and the waiter delivers it (response)
 - If something's unavailable, they tell you (error response)
 
@@ -1664,7 +1567,7 @@ JSON (JavaScript Object Notation) is readable by humans and easily parsed by mac
 
 Network requests fail. Servers go down. Data doesn't match expectations. Professional applications handle these gracefully.
 
-Understanding failure modes is essential. Your code must handle them or your users will see cryptic errors—or worse, a completely broken page.
+Understanding failure modes is essential. Your code must handle them or your users will see cryptic errors, or worse, a completely broken page.
 
 ## From Concept to Code
 
@@ -1678,7 +1581,7 @@ This fetches data from a URL, converts the response to JSON, and logs it. But wh
 
 ### Understanding Asynchronous Code
 
-API requests take time. The server might be across the world. Your code can't just wait—it would freeze the entire page.
+API requests take time. The server might be across the world. Your code can't just wait, it would freeze the entire page.
 
 JavaScript handles this with asynchronous code. Instead of stopping and waiting, it says "start this request, and when it's done, run this code."
 
@@ -1779,7 +1682,7 @@ A `fetch()` that reaches the server won't throw an error even if the server retu
 
 Users should never see a blank screen while waiting:
 
-The `finally` block runs regardless of success or failure—perfect for cleanup like hiding loading spinners.
+The `finally` block runs regardless of success or failure, perfect for cleanup like hiding loading spinners.
 
 ### HTTP Methods: Beyond GET
 
@@ -1821,7 +1724,7 @@ Every API interaction follows this pattern:
 3. Server processes and responds
 4. Your JavaScript handles the response
 
-Everything that can go wrong—network issues, server errors, malformed data—happens in this cycle.
+Everything that can go wrong, network issues, server errors, malformed data, happens in this cycle.
 
 ### Synchronous vs Asynchronous
 
@@ -1835,7 +1738,7 @@ Understanding this flow helps debug issues: Is the problem in fetching? Parsing?
 
 ### Real-Time Data
 
-Stock prices, sports scores, weather—APIs provide live data that keeps users engaged and informed. Without APIs, you'd need to manually update your site constantly.
+Stock prices, sports scores, weather. APIs provide live data that keeps users engaged and informed. Without APIs, you'd need to manually update your site constantly.
 
 ### Payment Processing
 
@@ -1843,7 +1746,7 @@ No one stores credit cards themselves (the liability is enormous). Payment APIs 
 
 ### Third-Party Services
 
-Maps (Google Maps, Mapbox), analytics (Google Analytics), authentication (Auth0), email (SendGrid)—APIs let you leverage sophisticated services without building them yourself.
+Maps (Google Maps, Mapbox), analytics (Google Analytics), authentication (Auth0), email (SendGrid). APIs let you leverage sophisticated services without building them yourself.
 
 ### Scalability and Architecture
 
@@ -1859,8 +1762,8 @@ Connect your website to:
 
 APIs are how modern businesses connect their systems.
 
-## ULO Connection
-This develops ULO 4 (select and integrate technologies) and ULO 1 (design effective applications). API integration is fundamental to modern web development. Understanding how to evaluate, implement, and handle errors in API connections is essential professional knowledge.
+## Skills You Are Building
+This develops making and defending technology choices and evaluating and improving solutions. API integration is fundamental to modern web development. Understanding how to evaluate, implement, and handle errors in API connections is essential professional knowledge.
 
 ## Practice Exercises
 
@@ -1925,7 +1828,7 @@ Research and propose:
 4. How often should data refresh?
 5. What happens if the API is unavailable?
 
-Write a 400-word proposal. Discuss your approach with your AI partner—what did you miss?
+Write a 400-word proposal. Discuss your approach with your AI partner, what did you miss?
 
 ## Chapter Summary
 
@@ -1933,7 +1836,7 @@ Write a 400-word proposal. Discuss your approach with your AI partner—what did
 - `fetch()` with `async`/`await` makes readable asynchronous code
 - JSON is the standard data format for web APIs
 - Always handle loading states and errors
-- Check `response.ok`—fetch doesn't throw on HTTP errors
+- Check `response.ok`, fetch doesn't throw on HTTP errors
 - CORS protects users but can block legitimate requests
 - APIs connect your site to the broader ecosystem of services
 
@@ -1970,7 +1873,7 @@ You've now completed Part I: Web Foundations. You understand:
 - Behaviour (JavaScript): How content responds
 - Connection (APIs): How content integrates with external services
 
-In , you'll combine these skills to build a complete portfolio website—your first substantial web project. This portfolio will demonstrate your capabilities to future employers or clients.
+In , you'll combine these skills to build a complete portfolio website, your first substantial web project. This portfolio will demonstrate your capabilities to future employers or clients.
 
 Then, in Part II, we shift focus from building pages to managing content at scale with content management systems.
 
@@ -1982,7 +1885,7 @@ SOURCE: projects/project-portfolio.qmd
 
 ## Project Overview
 
-Your first substantial project brings together everything from Part I: Structure (HTML), Presentation (CSS), Behaviour (JavaScript), and Connection (APIs). You'll build a personal portfolio website—a professional asset that demonstrates your capabilities to future employers or clients.
+Your first substantial project brings together everything from Part I: Structure (HTML), Presentation (CSS), Behaviour (JavaScript), and Connection (APIs). You'll build a personal portfolio website, a professional asset that demonstrates your capabilities to future employers or clients.
 
 This isn't just an academic exercise. A well-crafted portfolio is one of the most valuable tools for launching a career in web development or digital business.
 
@@ -2037,7 +1940,7 @@ Choose one or more:
 - JSON data file: If external APIs are problematic, create your own JSON file of project data and fetch it
 - Other: Any public API that adds genuine value (not just demonstrating you can fetch data)
 
-The integration should be meaningful—it should serve a purpose for someone viewing your portfolio, not just prove you can make an API call.
+The integration should be meaningful, it should serve a purpose for someone viewing your portfolio, not just prove you can make an API call.
 
 ## Project Approach
 
@@ -2045,7 +1948,7 @@ The integration should be meaningful—it should serve a purpose for someone vie
 
 1. Define your audience: Who will view this portfolio? What do they need?
 2. Content inventory: List all the content you'll need (text, images, project descriptions)
-3. Structure outline: Sketch your page structure—what sections, what hierarchy?
+3. Structure outline: Sketch your page structure, what sections, what hierarchy?
 4. Visual direction: What atmosphere suits your professional identity?
 
 ### Phase 2: HTML Structure
@@ -2057,7 +1960,7 @@ Build your complete HTML structure before styling:
 3. Test that the content makes sense without any CSS
 4. Ensure heading hierarchy is logical (h1 → h2 → h3, no skipping)
 
-This phase should produce an "ugly but functional" page—all content present, properly structured, but unstyled.
+This phase should produce an "ugly but functional" page, all content present, properly structured, but unstyled.
 
 ### Phase 3: CSS Styling
 
@@ -2123,7 +2026,7 @@ Keep an AI collaboration log documenting:
 3. AI errors or limitations: What did AI get wrong? How did you know?
 4. Learning moments: What did the collaboration teach you?
 
-This log demonstrates critical thinking—that you're directing the AI, not just copying its output.
+This log demonstrates critical thinking, that you're directing the AI, not just copying its output.
 
 ### Example Log Entry
 
@@ -2245,7 +2148,7 @@ SOURCE: chapters/chapter-why-cms.qmd
 
 ## The Concept First
 
-In Part I, you built websites by writing code. Every heading, every paragraph, every image—you placed them precisely where they belonged. You had complete control.
+In Part I, you built websites by writing code. Every heading, every paragraph, every image, you placed them precisely where they belonged. You had complete control.
 
 But here's the business reality: most websites need regular content updates, and most content updates shouldn't require a developer.
 
@@ -2258,7 +2161,7 @@ Consider a small business website. The owner wants to:
 
 If every change requires editing HTML files and redeploying, that business has a problem. They either pay a developer for simple updates or let their site become stale.
 
-A Content Management System (CMS) solves this by separating content from code. The developer builds the structure and design once. Then, the business owner—without touching code—can create, edit, and publish content through a friendly interface.
+A Content Management System (CMS) solves this by separating content from code. The developer builds the structure and design once. Then, the business owner, without touching code, can create, edit, and publish content through a friendly interface.
 
 This isn't a technical convenience. It's a business architecture decision that affects costs, maintenance, and who controls what.
 
@@ -2332,7 +2235,7 @@ Without a CMS:
 
 With a CMS:
 
-The CMS combines content from a database with design templates to generate the HTML that browsers display. Change the content in the database, and the generated HTML changes—without touching any code.
+The CMS combines content from a database with design templates to generate the HTML that browsers display. Change the content in the database, and the generated HTML changes, without touching any code.
 
 ### CMS Types
 
@@ -2362,7 +2265,7 @@ Website Builders (All-in-one)
 
 ### WordPress: The Dominant CMS
 
-WordPress powers over 40% of all websites. That's not a typo—nearly half of the web runs on this one platform.
+WordPress powers over 40% of all websites. That's not a typo, nearly half of the web runs on this one platform.
 
 Why? Because it hits a sweet spot:
 
@@ -2372,7 +2275,7 @@ Why? Because it hits a sweet spot:
 - Accessible: Non-developers can manage content
 - Extensible: Developers can customise deeply
 
-We'll spend Chapters 6-8 learning WordPress properly—not just how to use it, but how to evaluate it professionally and extend it when needed.
+We'll spend Chapters 6-8 learning WordPress properly, not just how to use it, but how to evaluate it professionally and extend it when needed.
 
 ### The CMS Decision Framework
 
@@ -2391,7 +2294,7 @@ When evaluating whether a project needs a CMS:
 
 ### Content as Structured Data
 
-In a CMS, content isn't just text—it's structured data with defined fields:
+In a CMS, content isn't just text, it's structured data with defined fields:
 
 This structure enables:
 
@@ -2423,7 +2326,7 @@ These roles prevent accidents ("The intern deleted the homepage") and enable wor
 
 ### Client Handoff
 
-The true measure of a successful website project isn't launch day—it's whether the client can maintain it independently. A CMS-based site can be handed off with training:
+The true measure of a successful website project isn't launch day, it's whether the client can maintain it independently. A CMS-based site can be handed off with training:
 
 "Here's how you add a new blog post. Here's how you update your hours. Here's how you add a team member."
 
@@ -2465,8 +2368,8 @@ Need to add 50 new product pages? With a CMS:
 
 Without a CMS: a developer writes and deploys 50 pages of HTML.
 
-## ULO Connection
-This develops ULO 3 (translating stakeholder needs into technical requirements) and ULO 4 (selecting appropriate technologies). Recommending a CMS isn't a technical decision—it's understanding who needs to do what and choosing architecture accordingly.
+## Skills You Are Building
+This develops translating stakeholder needs into technical requirements and making and defending technology choices. Recommending a CMS isn't a technical decision, it's understanding who needs to do what and choosing architecture accordingly.
 
 ## Practice Exercises
 
@@ -2540,7 +2443,7 @@ For each:
 2. Argue the case against using a CMS
 3. Make and defend your recommendation
 
-This exercise has no single correct answer—develop your ability to weigh trade-offs and justify decisions (ULO 4).
+This exercise has no single correct answer, develop your ability to weigh trade-offs and justify decisions (making and defending technology choices).
 
 ## Chapter Summary
 
@@ -2576,9 +2479,9 @@ Record your responses to these prompts:
 
 ## Next Steps
 
-You now understand why CMS matters and when to use one. In , we'll dive deep into WordPress—not as a blogging tool, but as a professional platform.
+You now understand why CMS matters and when to use one. In , we'll dive deep into WordPress, not as a blogging tool, but as a professional platform.
 
-We'll set up a local development environment, understand WordPress's architecture, and learn to evaluate it critically. This isn't about clicking through menus—it's about understanding a platform that powers nearly half the web and knowing when it's the right (or wrong) choice for a project.
+We'll set up a local development environment, understand WordPress's architecture, and learn to evaluate it critically. This isn't about clicking through menus, it's about understanding a platform that powers nearly half the web and knowing when it's the right (or wrong) choice for a project.
 
 ============================================================
 SOURCE: chapters/chapter-wordpress-platform.qmd
@@ -2588,16 +2491,16 @@ SOURCE: chapters/chapter-wordpress-platform.qmd
 
 ## The Concept First
 
-WordPress powers over 40% of the web. That's an extraordinary number—nearly half of all websites run on a single platform. Understanding why reveals something important about how technology decisions are made in business.
+WordPress powers over 40% of the web. That's an extraordinary number, nearly half of all websites run on a single platform. Understanding why reveals something important about how technology decisions are made in business.
 
-WordPress isn't just "blogging software." It's a platform—a foundation that others build upon. The distinction matters:
+WordPress isn't just "blogging software." It's a platform, a foundation that others build upon. The distinction matters:
 
 - Software does specific things. You use it as-is.
 - A platform provides a foundation. An ecosystem builds on top of it.
 
-Your smartphone is a platform. The core provides basics (calls, settings), but the app ecosystem makes it powerful. You don't judge your phone by its built-in apps alone—you judge it by what you can do with the apps others have built.
+Your smartphone is a platform. The core provides basics (calls, settings), but the app ecosystem makes it powerful. You don't judge your phone by its built-in apps alone, you judge it by what you can do with the apps others have built.
 
-WordPress works the same way. The core handles content management. Themes control appearance. Plugins add functionality. The ecosystem—over 60,000 plugins, thousands of themes—is what makes WordPress suitable for almost any website.
+WordPress works the same way. The core handles content management. Themes control appearance. Plugins add functionality. The ecosystem, over 60,000 plugins, thousands of themes, is what makes WordPress suitable for almost any website.
 
 Learning WordPress means learning to evaluate and assemble these pieces professionally.
 
@@ -2614,7 +2517,7 @@ Option B gets you open faster, with tested components, and lets you focus on wha
 WordPress provides the kitchen equipment. Themes provide the interior design. Plugins provide specialised tools (reservation systems, online ordering). You focus on your content and business logic.
 
 ## The Platform Evaluation Question
-When evaluating any platform, ask: "How active is the ecosystem?" A platform with a dying ecosystem becomes a liability. WordPress's ecosystem is massive and active—a significant factor in its dominance.
+When evaluating any platform, ask: "How active is the ecosystem?" A platform with a dying ecosystem becomes a liability. WordPress's ecosystem is massive and active, a significant factor in its dominance.
 
 ## Discovering WordPress with Your AI Partner
 
@@ -2683,14 +2586,14 @@ LocalWP (formerly Local by Flywheel) is the simplest way to run WordPress locall
 
 That's it. You now have a WordPress site running on your computer.
 
-LocalWP handles the complexity—PHP, MySQL, web server—behind a simple interface.
+LocalWP handles the complexity. PHP, MySQL, web server, behind a simple interface.
 
 ## Alternatives
 Other local development options include XAMPP, MAMP, and Docker-based setups. LocalWP is recommended for beginners because it's WordPress-specific and handles configuration automatically.
 
 ### The WordPress Admin Interface
 
-Click "WP Admin" in LocalWP to access your site's dashboard. This is the content management interface—where non-developers spend their time.
+Click "WP Admin" in LocalWP to access your site's dashboard. This is the content management interface, where non-developers spend their time.
 
 Dashboard Areas:
 
@@ -2706,7 +2609,7 @@ Dashboard Areas:
 | Users | Account management |
 | Settings | Site configuration |
 
-Spend time exploring each area. Understanding the admin interface is essential—this is what you'll train clients to use.
+Spend time exploring each area. Understanding the admin interface is essential, this is what you'll train clients to use.
 
 ### Posts vs Pages
 
@@ -2726,7 +2629,7 @@ Pages are:
 - Not categorised
 - Good for: About, Contact, Services, static content
 
-The distinction isn't technical capability—it's organisational. Posts answer "What's new?" Pages answer "What do we do?"
+The distinction isn't technical capability, it's organisational. Posts answer "What's new?" Pages answer "What do we do?"
 
 ### Understanding Themes
 
@@ -2736,7 +2639,7 @@ A WordPress theme controls:
 - Template structure (what appears where)
 - Available features (some themes add functionality)
 
-The theme doesn't contain your content—it presents your content. Change themes, and content remains while appearance transforms.
+The theme doesn't contain your content, it presents your content. Change themes, and content remains while appearance transforms.
 
 Exploring Themes:
 
@@ -2775,7 +2678,7 @@ Most modern themes include a Customiser (Appearance → Customise) for no-code a
 - Homepage settings
 - Menus
 
-The Customiser shows live previews—experiment freely before publishing changes.
+The Customiser shows live previews, experiment freely before publishing changes.
 
 Menus:
 
@@ -2808,7 +2711,7 @@ Reading:
 Permalinks:
 
 - URL structure: Choose "Post name" for clean URLs (`/about/` instead of `/?p=123`)
-- Change this early—changing later breaks existing links
+- Change this early, changing later breaks existing links
 
 Discussion:
 
@@ -2839,7 +2742,7 @@ WordPress allows code to "hook" into specific points in the execution flow. Whil
 - WordPress calls these functions when reaching those points
 - Multiple plugins can hook into the same point
 
-This architecture is why WordPress is extensible without modification—a key platform characteristic.
+This architecture is why WordPress is extensible without modification, a key platform characteristic.
 
 ## Business Applications
 
@@ -2872,7 +2775,7 @@ The plugin ecosystem means you rarely need custom development:
 - Backup: UpdraftPlus, VaultPress
 - Caching: WP Super Cache, W3 Total Cache
 
-Often, the professional skill is knowing which plugins to combine—not building from scratch.
+Often, the professional skill is knowing which plugins to combine, not building from scratch.
 
 ### When WordPress Isn't Right
 
@@ -2883,8 +2786,8 @@ Professional judgment includes knowing when not to use WordPress:
 - Very simple one-page sites (better: static HTML or website builders)
 - Maximum performance requirements (better: headless architecture)
 
-## ULO Connection
-This develops ULO 4 (making and defending technology choices) and ULO 5 (evaluating technologies). Choosing WordPress requires evaluating its ecosystem, understanding its architecture, and articulating why it's appropriate (or not) for specific situations.
+## Skills You Are Building
+This develops making and defending technology choices and assessing emerging technologies. Choosing WordPress requires evaluating its ecosystem, understanding its architecture, and articulating why it's appropriate (or not) for specific situations.
 
 ## Practice Exercises
 
@@ -2956,16 +2859,16 @@ Research both platforms and write a balanced comparison (500 words) addressing:
 5. Long-term maintenance considerations
 6. Your recommendation with justification
 
-This exercise develops technology evaluation skills (ULO 5).
+This exercise develops technology evaluation skills (assessing emerging technologies).
 
 ## Chapter Summary
 
-- WordPress is a platform, not just software—its ecosystem is its value
+- WordPress is a platform, not just software, its ecosystem is its value
 - Professional evaluation of themes and plugins is an essential skill
 - Local development with LocalWP provides a safe environment to learn
 - Understanding WordPress architecture (core, themes, plugins, database) aids troubleshooting
 - The template hierarchy determines which template displays content
-- WordPress isn't always the right choice—professional judgment matters
+- WordPress isn't always the right choice, professional judgment matters
 
 ## Reflection
 
@@ -2993,7 +2896,7 @@ Record your responses to these prompts:
 
 ## Next Steps
 
-You now understand WordPress as a platform and can set up and configure a basic site. In , we'll explore how to extend WordPress with plugins—both using existing plugins professionally and understanding how they work.
+You now understand WordPress as a platform and can set up and configure a basic site. In , we'll explore how to extend WordPress with plugins, both using existing plugins professionally and understanding how they work.
 
 This knowledge is essential for customising WordPress to meet specific business requirements without starting from scratch.
 
@@ -3005,7 +2908,7 @@ SOURCE: chapters/chapter-extending-platforms.qmd
 
 ## The Concept First
 
-In , you learned that WordPress's value lies in its ecosystem. Now we'll learn to extend WordPress professionally—using plugins wisely, customising safely, and making business decisions about when to build versus when to buy.
+In , you learned that WordPress's value lies in its ecosystem. Now we'll learn to extend WordPress professionally, using plugins wisely, customising safely, and making business decisions about when to build versus when to buy.
 
 Here's the tension: plugins make WordPress powerful, but plugins also create risk. Every plugin you add:
 
@@ -3014,7 +2917,7 @@ Here's the tension: plugins make WordPress powerful, but plugins also create ris
 - Might introduce security vulnerabilities
 - Adds complexity to troubleshoot
 
-Professional WordPress development isn't about installing the most plugins—it's about installing the right plugins and knowing when custom development makes more sense.
+Professional WordPress development isn't about installing the most plugins, it's about installing the right plugins and knowing when custom development makes more sense.
 
 ## Understanding Through Build vs Buy
 
@@ -3125,10 +3028,10 @@ Installing premium plugins:
 
 Managing plugins:
 
-- Deactivate plugins you're not using (don't just leave them inactive—delete them)
+- Deactivate plugins you're not using (don't just leave them inactive, delete them)
 - Update plugins regularly (but test first on staging)
 - Document why each plugin is installed
-- Review plugins quarterly—needs change
+- Review plugins quarterly, needs change
 
 ### Essential Plugin Categories
 
@@ -3137,12 +3040,12 @@ Most business WordPress sites need plugins in these categories:
 Security:
 
 - Wordfence or Sucuri: Firewall, malware scanning, login protection
-- Essential—WordPress is a common target
+- Essential. WordPress is a common target
 
 Backup:
 
 - UpdraftPlus: Scheduled backups to cloud storage
-- Non-negotiable—databases get corrupted, hosts fail
+- Non-negotiable, databases get corrupted, hosts fail
 
 Performance:
 
@@ -3241,7 +3144,7 @@ Syntax errors in functions.php can break your entire site. Test on staging, and 
 
 ### PHP Fundamentals for WordPress
 
-WordPress is built on PHP. While you can accomplish a lot without writing PHP, understanding the basics opens up powerful customisation options—and AI is excellent at helping you write WordPress PHP code.
+WordPress is built on PHP. While you can accomplish a lot without writing PHP, understanding the basics opens up powerful customisation options, and AI is excellent at helping you write WordPress PHP code.
 
 PHP basics:
 
@@ -3288,7 +3191,7 @@ When asking AI to write WordPress plugins:
 1. Be specific about functionality
 2. Request comments explaining the code
 3. Test thoroughly on a staging site
-4. Review the code—understand what it does before installing
+4. Review the code, understand what it does before installing
 5. Ask AI to explain any parts you don't understand
 
 ### Customising Theme Templates
@@ -3383,8 +3286,8 @@ Plugins are the most common WordPress security vulnerability. Your role:
 - Have a response plan if something is compromised
 - Document which plugins are installed and why
 
-## ULO Connection
-This develops ULO 4 (making and defending technology choices) and ULO 1 (evaluating effective solutions). Professional plugin decisions require balancing features, costs, risks, and long-term maintenance—exactly the judgment businesses need from technology advisors.
+## Skills You Are Building
+This develops making and defending technology choices and evaluating and improving solutions. Professional plugin decisions require balancing features, costs, risks, and long-term maintenance, exactly the judgment businesses need from technology advisors.
 
 ## Practice Exercises
 
@@ -3505,7 +3408,7 @@ This exercise develops professional consulting skills.
 - Every extension decision weighs build vs. buy trade-offs
 - Plugin evaluation requires systematic criteria, not just feature lists
 - Child themes allow safe customisation that survives updates
-- PHP is WordPress's foundation—understanding basics enables deeper customisation
+- PHP is WordPress's foundation, understanding basics enables deeper customisation
 - The Loop and hooks (actions/filters) are core WordPress patterns
 - AI excels at writing WordPress plugins and theme customisations
 - Technical debt from plugins accumulates silently
@@ -3541,7 +3444,7 @@ Record your responses to these prompts:
 
 You now know how to extend WordPress wisely with plugins and child themes. But there's another approach entirely: using WordPress as a content backend while building the frontend with modern tools.
 
-In , we'll explore headless WordPress—using the WordPress REST API to power a React frontend. This bridges your CMS knowledge with the modern frontend skills from Part III and represents how many larger organisations use WordPress today.
+In , we'll explore headless WordPress, using the WordPress REST API to power a React frontend. This bridges your CMS knowledge with the modern frontend skills from Part III and represents how many larger organisations use WordPress today.
 
 ============================================================
 SOURCE: chapters/chapter-headless-architecture.qmd
@@ -3553,7 +3456,7 @@ SOURCE: chapters/chapter-headless-architecture.qmd
 
 In previous chapters, WordPress handled everything: it stored content, managed users, and generated the HTML visitors see. The content management and the website delivery were one unified system.
 
-Headless architecture separates these concerns. WordPress becomes a content backend—storing and managing content—while a separate frontend application handles presentation. They communicate through APIs.
+Headless architecture separates these concerns. WordPress becomes a content backend, storing and managing content, while a separate frontend application handles presentation. They communicate through APIs.
 
 Why would you do this? Because sometimes you want:
 
@@ -3583,10 +3486,10 @@ Central kitchen + multiple outlets (headless):
 - Each outlet can have different ambiance (different frontends)
 - Kitchen changes don't require redesigning dining rooms
 
-The central kitchen can supply a fine dining restaurant, a casual café, and a food truck—each with completely different presentations of the same underlying food.
+The central kitchen can supply a fine dining restaurant, a casual café, and a food truck, each with completely different presentations of the same underlying food.
 
 ## Headless = API-First
-"Headless" means the CMS has no "head"—no built-in frontend. It's all backend. Content exits only through APIs, and something else (the "head") must display it.
+"Headless" means the CMS has no "head", no built-in frontend. It's all backend. Content exits only through APIs, and something else (the "head") must display it.
 
 ## Discovering Headless with Your AI Partner
 
@@ -3770,6 +3673,7 @@ Let's build a simple frontend that displays WordPress posts:
         loadPosts();
     
 
+text
 Ask your AI:
 Walk me through this code. What happens at each step? How would I
 modify it to also show the post date and author name?
@@ -3808,7 +3712,7 @@ add_action('rest_api_init', function() {
         return $value;
     });
 });
-
+text
 ┌────────────────────────────────────────┐
 │             WordPress                   │
 │  ┌─────────────┐  ┌─────────────────┐  │
@@ -3819,7 +3723,7 @@ add_action('rest_api_init', function() {
                             │ HTML
                             ▼
                         Browser
-
+text
 ┌──────────────────┐        ┌─────────────────┐
 │    WordPress     │        │    Frontend     │
 │  ┌────────────┐  │  API   │  (React, etc.)  │
@@ -3863,7 +3767,7 @@ Headless adds complexity:
 - Some WordPress plugins don't work
 - More technical expertise required
 
-This complexity has costs. Headless is a tool—use it when benefits outweigh costs.
+This complexity has costs. Headless is a tool, use it when benefits outweigh costs.
 
 ## Business Applications
 
@@ -3887,7 +3791,7 @@ Headless frontends can be:
 - Cached at the edge (CDN)
 - Optimised specifically for performance
 
-This matters for SEO and user experience—Google measures page speed.
+This matters for SEO and user experience. Google measures page speed.
 
 ### Security Benefits
 
@@ -3911,8 +3815,8 @@ Modern frontend developers often prefer:
 
 Headless lets them use their preferred tools while leveraging WordPress's content management.
 
-## ULO Connection
-This develops ULO 4 (selecting appropriate technologies) and ULO 5 (evaluating emerging approaches). Headless architecture is a significant trend in web development. Understanding when it applies—and when it doesn't—demonstrates professional judgment.
+## Skills You Are Building
+This develops making and defending technology choices and assessing emerging technologies. Headless architecture is a significant trend in web development. Understanding when it applies, and when it doesn't, demonstrates professional judgment.
 
 ## Practice Exercises
 
@@ -3928,7 +3832,7 @@ This develops ULO 4 (selecting appropriate technologies) and ULO 5 (evaluating e
 Using your local WordPress site:
 
 1. Open a browser and visit `/wp-json/wp/v2/posts`
-2. Explore the JSON structure—identify title, content, date, and other fields
+2. Explore the JSON structure, identify title, content, date, and other fields
 3. Try different endpoints: `/pages`, `/categories`, `/media`
 4. Add `?_embed` and observe how the response changes
 
@@ -4034,7 +3938,7 @@ You've completed Part II: Content Management for Business. You understand:
 
 In , you'll build a complete WordPress business site, applying everything from this part. This project demonstrates your ability to make and implement technology decisions for real business needs.
 
-Then, in Part III, we'll build on the API knowledge from this chapter to create React frontends—bringing modern frontend development into your skillset.
+Then, in Part III, we'll build on the API knowledge from this chapter to create React frontends, bringing modern frontend development into your skillset.
 
 ============================================================
 SOURCE: projects/project-business-site.qmd
@@ -4325,7 +4229,7 @@ Begin with these conversations with your AI partner:
 3. Using placeholder content: "Lorem ipsum" signals incomplete work
 4. Ignoring mobile: Always test responsive behaviour
 5. No documentation: A site without documentation isn't ready for handover
-6. Copying AI output blindly: AI helps you understand—you make the decisions
+6. Copying AI output blindly: AI helps you understand, you make the decisions
 7. Forgetting security: Security and backup plugins are non-negotiable
 
 ## Professional Context
@@ -4348,7 +4252,7 @@ Your WordPress project demonstrates:
 - Practical WordPress implementation
 - Professional documentation
 
-Consider these as portfolio pieces—they show employers you can think beyond just code.
+Consider these as portfolio pieces, they show employers you can think beyond just code.
 
 ============================================================
 SOURCE: chapters/chapter-component-thinking.qmd
@@ -4371,7 +4275,7 @@ Components are self-contained pieces of UI. Each component:
 - Renders its own output
 - Can be reused anywhere
 
-This isn't just a technical convenience—it's a fundamentally different way of building interfaces. Once you think in components, you'll see every UI as a composition of reusable pieces.
+This isn't just a technical convenience, it's a fundamentally different way of building interfaces. Once you think in components, you'll see every UI as a composition of reusable pieces.
 
 ## Understanding Through LEGO
 
@@ -4391,7 +4295,7 @@ React components work identically:
 - You can update one component without touching others
 - Your code shows composition: components containing components
 
-A webpage isn't a monolithic HTML document—it's a tree of components, each responsible for its own piece of the interface.
+A webpage isn't a monolithic HTML document, it's a tree of components, each responsible for its own piece of the interface.
 
 ## The Decomposition Instinct
 When you see any interface, practice breaking it into components. A navigation bar? That's a `Nav` component containing `NavLink` components. A product card? That's a `ProductCard` containing `Image`, `Title`, `Price`, and `Button` components. This instinct transfers to any component framework.
@@ -4439,7 +4343,7 @@ You need Node.js installed. Download from nodejs.org if you haven't already.
 
 ### JSX: HTML in JavaScript
 
-React uses JSX—a syntax that lets you write HTML-like code in JavaScript:
+React uses JSX, a syntax that lets you write HTML-like code in JavaScript:
 
 This looks like HTML but it's actually JavaScript. JSX gets transformed into function calls that create elements.
 
@@ -4460,13 +4364,13 @@ Components are functions that return JSX:
 
 Use components like HTML elements:
 
-Three product cards appear—but they're all identical. To make them different, we need props.
+Three product cards appear, but they're all identical. To make them different, we need props.
 
 ### Props: Configuring Components
 
 Props pass data from parent to child:
 
-Now each card displays different data. The component is reusable—same structure, different content.
+Now each card displays different data. The component is reusable, same structure, different content.
 
 Props can be any JavaScript value:
 
@@ -4479,7 +4383,7 @@ Props come from outside; state lives inside the component and can change.
 1. The current value (`count`)
 2. A function to update it (`setCount`)
 
-When you call `setCount`, React re-renders the component with the new value. You don't manually update the DOM—React handles it.
+When you call `setCount`, React re-renders the component with the new value. You don't manually update the DOM. React handles it.
 
 ### More State Examples
 
@@ -4508,7 +4412,7 @@ The `useEffect` hook:
 Remember the WordPress REST API from ? Let's fetch WordPress posts:
 
 ## dangerouslySetInnerHTML
-WordPress returns HTML in `rendered` fields. React requires `dangerouslySetInnerHTML` to insert raw HTML. Only use this with trusted content (like your own WordPress site)—never with user input.
+WordPress returns HTML in `rendered` fields. React requires `dangerouslySetInnerHTML` to insert raw HTML. Only use this with trusted content (like your own WordPress site), never with user input.
 
 ### Component Composition
 
@@ -4522,13 +4426,13 @@ Each component is small, focused, and understandable. The composition creates th
 
 Your application forms a tree of components:
 
-Data flows down this tree. State lives in the component that "owns" it—often a parent that passes it to children.
+Data flows down this tree. State lives in the component that "owns" it, often a parent that passes it to children.
 
 ### When State Should "Lift Up"
 
 If two sibling components need the same data, the state should live in their common parent:
 
-This is called "lifting state up"—moving state to the lowest common ancestor.
+This is called "lifting state up", moving state to the lowest common ancestor.
 
 ### The Rendering Cycle
 
@@ -4542,11 +4446,11 @@ Build a `Button` component once with variants (primary, secondary, danger). Use 
 
 ### Maintainability
 
-When a feature needs updating, you know exactly which component to modify. Components are isolated—changes don't ripple unexpectedly.
+When a feature needs updating, you know exactly which component to modify. Components are isolated, changes don't ripple unexpectedly.
 
 ### Team Collaboration
 
-Different developers can work on different components simultaneously. The interface (props) defines how components connect—teams don't need to understand each other's implementation details.
+Different developers can work on different components simultaneously. The interface (props) defines how components connect, teams don't need to understand each other's implementation details.
 
 ### Testing
 
@@ -4556,8 +4460,8 @@ Components can be tested in isolation. Does `ProductCard` render correctly with 
 
 React components naturally form design systems. Your `Button`, `Card`, `Input`, and `Modal` components become a library that enforces consistency across the application.
 
-## ULO Connection
-This develops ULO 1 (effective web applications) and ULO 4 (technology selection). React's component model is influential across the industry—understanding it prepares you for Vue, Angular, and other frameworks that share similar concepts.
+## Skills You Are Building
+This develops evaluating and improving solutions and making and defending technology choices. React's component model is influential across the industry, understanding it prepares you for Vue, Angular, and other frameworks that share similar concepts.
 
 ## Practice Exercises
 
@@ -4653,7 +4557,7 @@ Record your responses to these prompts:
 
 You can now build component-based interfaces and fetch data from APIs. But styling components from scratch takes time.
 
-In , we'll explore CSS frameworks—Bootstrap and Tailwind—that provide pre-built styles and utilities. Combined with React, these tools enable rapid professional development without designing every button and layout from scratch.
+In , we'll explore CSS frameworks. Bootstrap and Tailwind, that provide pre-built styles and utilities. Combined with React, these tools enable rapid professional development without designing every button and layout from scratch.
 
 ============================================================
 SOURCE: chapters/chapter-rapid-development.qmd
@@ -4663,15 +4567,15 @@ SOURCE: chapters/chapter-rapid-development.qmd
 
 ## The Concept First
 
-In , you learned CSS from scratch—selectors, box model, flexbox, media queries. That foundation matters. But building every project from zero is slow, and consistency across large applications is hard.
+In , you learned CSS from scratch, selectors, box model, flexbox, media queries. That foundation matters. But building every project from zero is slow, and consistency across large applications is hard.
 
 CSS frameworks solve this by providing pre-built styles, components, and design decisions. Instead of designing every button, input, and card yourself, you adopt tested patterns that work together.
 
-This isn't laziness—it's leverage. Professional developers use frameworks to move faster while maintaining quality. The skill is knowing when to use them, which to choose, and how to customise them for specific needs.
+This isn't laziness, it's leverage. Professional developers use frameworks to move faster while maintaining quality. The skill is knowing when to use them, which to choose, and how to customise them for specific needs.
 
 ## Understanding Through Design Systems
 
-Large organisations don't let every designer create their own button styles. They create design systems—documented collections of components, colours, typography, and patterns that ensure consistency.
+Large organisations don't let every designer create their own button styles. They create design systems, documented collections of components, colours, typography, and patterns that ensure consistency.
 
 Google has Material Design. Apple has Human Interface Guidelines. Salesforce has Lightning Design System. These define how interfaces should look and behave across products.
 
@@ -4716,7 +4620,7 @@ Constraints reduce decision fatigue. When a framework says "primary buttons are 
 
 ### Exploration 3: The "Generic" Problem
 
-This reveals that frameworks are starting points, not endpoints. Customisation—colours, typography, spacing—transforms a generic framework site into something unique.
+This reveals that frameworks are starting points, not endpoints. Customisation, colours, typography, spacing, transforms a generic framework site into something unique.
 
 ## From Concept to Code
 
@@ -4857,8 +4761,8 @@ New team members can contribute faster when using standard frameworks:
 
 Modern frameworks are mobile-responsive out of the box. Bootstrap's grid and Tailwind's responsive prefixes handle responsive design that would take significant custom CSS.
 
-## ULO Connection
-This develops ULO 4 (selecting and integrating technologies) and ULO 1 (effective web applications). Framework selection is a business decision—speed vs. customisation, team skills, project timeline. Professional judgment means choosing appropriately, not defaulting to what you know.
+## Skills You Are Building
+This develops making and defending technology choices and evaluating and improving solutions. Framework selection is a business decision, speed vs. customisation, team skills, project timeline. Professional judgment means choosing appropriately, not defaulting to what you know.
 
 ## Practice Exercises
 
@@ -4878,7 +4782,7 @@ Create an HTML page using Bootstrap that includes:
 3. A three-column grid of cards
 4. A footer with centred text
 
-Use only Bootstrap classes—no custom CSS.
+Use only Bootstrap classes, no custom CSS.
 
 ### Exercise 10.2: Tailwind Basics (Level 2)
 
@@ -4963,7 +4867,7 @@ Record your responses to these prompts:
 
 ## Next Steps
 
-You now have tools for rapid, consistent UI development. But professional work requires more than just building features—it requires practices that ensure quality, collaboration, and maintainability.
+You now have tools for rapid, consistent UI development. But professional work requires more than just building features, it requires practices that ensure quality, collaboration, and maintainability.
 
 In , we'll cover version control with Git, testing basics, and code quality practices. These professional practices separate hobby projects from production-ready work and are expected in any development role.
 
@@ -4975,14 +4879,14 @@ SOURCE: chapters/chapter-professional-practices.qmd
 
 ## The Concept First
 
-In , you learned to build interfaces quickly with CSS frameworks. But professional development isn't just about building features—it's about building sustainable, reliable, collaborative systems.
+In , you learned to build interfaces quickly with CSS frameworks. But professional development isn't just about building features, it's about building sustainable, reliable, collaborative systems.
 
 Consider the difference:
 
 - Hobbyist: Gets the feature working, moves on
 - Professional: Gets the feature working, ensures it stays working, makes it easy for others to understand and modify
 
-Professional practices aren't bureaucracy—they're risk management. Every project eventually faces:
+Professional practices aren't bureaucracy, they're risk management. Every project eventually faces:
 
 - "It was working yesterday. What changed?"
 - "I can't remember why I wrote this code."
@@ -5009,7 +4913,7 @@ Both produce functional furniture. But the second can:
 Software development is the same. Version control is measuring twice. Testing is quality checks before delivery. Documentation is the labelled workshop.
 
 ## Professional Practice Serves Future You
-In six months, you won't remember why you made certain decisions. Professional practices create a trail for "future you" to follow. That's not extra work—it's insurance.
+In six months, you won't remember why you made certain decisions. Professional practices create a trail for "future you" to follow. That's not extra work, it's insurance.
 
 ## Discovering Professional Practices with Your AI Partner
 
@@ -5025,7 +4929,7 @@ This should reveal:
 
 ### Exploration 2: The Testing Mindset
 
-Testing isn't about distrust—it's about confidence.
+Testing isn't about distrust, it's about confidence.
 
 Key insights:
 
@@ -5122,7 +5026,7 @@ Use a formatter like Prettier:
 
 Use a linter like ESLint:
 
-These tools enforce consistency automatically—no arguments about tabs vs spaces.
+These tools enforce consistency automatically, no arguments about tabs vs spaces.
 
 ### Documentation Essentials
 
@@ -5132,6 +5036,7 @@ bash
 npm install
 bash
 npm run dev
+text
 
 Code documentation (JSDoc):
 
@@ -5161,7 +5066,7 @@ Even solo projects benefit from version control and testing. The "team" includes
 
 ### Risk Reduction
 
-Version control isn't just convenience—it's business continuity:
+Version control isn't just convenience, it's business continuity:
 
 - Roll back problematic deployments
 - Trace when bugs were introduced
@@ -5202,8 +5107,8 @@ Code lives longer than developers expect:
 
 Professional practices from the start prevent painful migrations later.
 
-## ULO Connection
-This develops ULO 2 (professional project management) and ULO 1 (iteratively improving solutions). Professional practices aren't separate from development—they're how professionals develop. These skills are expected in any development role.
+## Skills You Are Building
+This develops professional communication and project management and evaluating and improving solutions. Professional practices aren't separate from development, they're how professionals develop. These skills are expected in any development role.
 
 ## Practice Exercises
 
@@ -5336,7 +5241,7 @@ SOURCE: projects/project-react-integration.qmd
 
 Part III taught you component thinking, CSS frameworks, and professional practices. Now you'll bring it together: build a React frontend that consumes content from WordPress via the REST API, demonstrating headless architecture in action.
 
-This project bridges backend content management with modern frontend development. You'll make architectural decisions, implement a complete application, and document your approach—skills that directly translate to professional frontend development roles.
+This project bridges backend content management with modern frontend development. You'll make architectural decisions, implement a complete application, and document your approach, skills that directly translate to professional frontend development roles.
 
 ## Learning Outcomes Addressed
 
@@ -5348,7 +5253,7 @@ This project bridges backend content management with modern frontend development
 
 In , you learned that headless WordPress separates content management (WordPress) from content presentation (your frontend). This project implements that architecture:
 
-Your React application will fetch and display content that's managed in WordPress—the same content model used by major publishers, e-commerce sites, and enterprise applications.
+Your React application will fetch and display content that's managed in WordPress, the same content model used by major publishers, e-commerce sites, and enterprise applications.
 
 ## Project Scenarios
 
@@ -5532,7 +5437,7 @@ Be clear about AI involvement:
 - Concepts you learned through AI conversation
 - Documentation created with AI assistance
 
-This isn't about restricting AI use—it's about demonstrating that you understood what you built.
+This isn't about restricting AI use, it's about demonstrating that you understood what you built.
 
 ## Evaluation Criteria
 
@@ -5639,7 +5544,7 @@ This project demonstrates skills employers look for:
 4. User experience: Loading states, error handling, responsive design
 5. Professional practices: Version control, documentation, code quality
 
-Headless architecture is increasingly common in enterprise development. Understanding how to build frontends that consume APIs—whether WordPress, a custom backend, or third-party services—is valuable regardless of your eventual specialisation.
+Headless architecture is increasingly common in enterprise development. Understanding how to build frontends that consume APIs, whether WordPress, a custom backend, or third-party services, is valuable regardless of your eventual specialisation.
 
 ## After Submission
 
@@ -5671,7 +5576,7 @@ In , you learned practices that make developers effective. But the technology la
 
 This creates a challenge: how do you evaluate new technologies without getting swept up in hype?
 
-The answer isn't to know every new tool—that's impossible. The answer is developing a systematic evaluation framework that works for any technology. This meta-skill outlasts any specific tool.
+The answer isn't to know every new tool, that's impossible. The answer is developing a systematic evaluation framework that works for any technology. This meta-skill outlasts any specific tool.
 
 Consider the difference:
 
@@ -5921,7 +5826,7 @@ Clients often ask about new technologies. Professional response:
 
 Poor: "Yes, blockchain is great, we should use it."
 
-Better: "Let me understand your problem first. Blockchain solves specific problems—immutable record-keeping, decentralised consensus. Do you have those problems? If not, simpler solutions exist."
+Better: "Let me understand your problem first. Blockchain solves specific problems, immutable record-keeping, decentralised consensus. Do you have those problems? If not, simpler solutions exist."
 
 ### Career Development
 
@@ -5932,8 +5837,8 @@ Evaluation skills help you:
 - Build expertise: Go deep on well-chosen technologies
 - Stay relevant: Recognise genuine shifts versus fads
 
-## ULO Connection
-This develops ULO 5 (assessing emerging technologies through systematic evaluation). The ability to evaluate technologies objectively—separate from hype and personal preference—is essential for advising businesses on technology decisions.
+## Skills You Are Building
+This develops assessing emerging technologies. The ability to evaluate technologies objectively, separate from hype and personal preference, is essential for advising businesses on technology decisions.
 
 ## Practice Exercises
 
@@ -6032,7 +5937,7 @@ Record your responses to these prompts:
 
 You now have tools to evaluate any technology that emerges. But technology skills alone don't build a career.
 
-In , we'll focus on your professional development—building a portfolio, positioning yourself in the market, networking effectively, and planning continuous growth. Technical skill opens doors; professional skill keeps them open.
+In , we'll focus on your professional development, building a portfolio, positioning yourself in the market, networking effectively, and planning continuous growth. Technical skill opens doors; professional skill keeps them open.
 
 ============================================================
 SOURCE: chapters/chapter-development-career.qmd
@@ -6042,7 +5947,7 @@ SOURCE: chapters/chapter-development-career.qmd
 
 ## The Concept First
 
-In , you learned to evaluate technologies systematically. But technical skills alone don't build careers—they create potential. Converting that potential into opportunities requires a different skill set: professional development.
+In , you learned to evaluate technologies systematically. But technical skills alone don't build careers, they create potential. Converting that potential into opportunities requires a different skill set: professional development.
 
 Consider two developers with identical technical abilities:
 
@@ -6072,7 +5977,7 @@ Reputation Capital: How you're perceived
 - Contributions others can see
 - Your professional presence
 
-Most developers focus only on technical capital. But technical capital without social and reputation capital means opportunities don't find you—you have to chase every one.
+Most developers focus only on technical capital. But technical capital without social and reputation capital means opportunities don't find you, you have to chase every one.
 
 ## The Visibility Principle
 Skills that people can see are worth more than skills they can't. A public project demonstrates capability in ways a resume cannot. Documentation you've written, code you've shared, and problems you've solved publicly all create evidence of competence.
@@ -6099,7 +6004,7 @@ Variety that tells a story:
 
 You can't be excellent at everything. Positioning means being known for something specific.
 
-Positioning isn't limiting—it's focusing:
+Positioning isn't limiting, it's focusing:
 
 - Generalist trap: "I do everything" means "Hire me for anything" which often means "Hire someone else who specialises"
 - Specialist value: "I build accessible React applications" is memorable and referable
@@ -6163,7 +6068,7 @@ Key Features:
 - Filter and search functionality
 
 Challenges Overcome: WordPress featured images required the
-`_embed` parameter—debugging this taught me to read API documentation
+`_embed` parameter, debugging this taught me to read API documentation
 more carefully and test endpoints directly.
 
 What I Learned: Headless architecture separates concerns
@@ -6192,12 +6097,12 @@ I build web applications with a focus on [your positioning].
 - Portfolio: [link]
 - LinkedIn: [link]
 - Email: [email]
-
+text
 Ask your AI:
 I want to write a blog post about something I learned while building
 my React project. Help me brainstorm topics that would be useful to
 other beginners and demonstrate my understanding.
-
+text
                     Opportunities
                          ▲
                          │
@@ -6218,12 +6123,12 @@ other beginners and demonstrate my understanding.
          └───────────────┴───────────────┘
                          │
                     Your Effort
-
+text
 Build Skills → Create Projects → Share Work → Build Relationships
      ▲                                                │
      │                                                │
      └───────── Get Opportunities ◄───────────────────┘
-
+text
                     Specialist
                         │
             ┌───────────┼───────────┐
@@ -6244,7 +6149,7 @@ Different positions have different advantages:
 
 - Specialist: Higher rates, clearer referrals, deeper expertise
 - Generalist: More flexibility, broader opportunities, varied work
-- Neither is better—choose based on your preferences and market
+- Neither is better, choose based on your preferences and market
 
 ## Business Applications
 
@@ -6280,8 +6185,8 @@ Think beyond the first job:
 
 Each stage requires different strategies. Early career is about learning and visibility. Later career is about leverage and impact.
 
-## ULO Connection
-This develops ULO 2 (professional communication and project management). Career development isn't separate from technical work—it's how you translate technical capability into professional opportunity. These skills matter regardless of which technologies you ultimately work with.
+## Skills You Are Building
+This develops professional communication and project management. Career development isn't separate from technical work, it's how you translate technical capability into professional opportunity. These skills matter regardless of which technologies you ultimately work with.
 
 ## Practice Exercises
 
@@ -6296,9 +6201,9 @@ This develops ULO 2 (professional communication and project management). Career 
 
 Evaluate your current portfolio presence:
 
-1. Google your name—what comes up?
-2. Review your GitHub profile—what does it communicate?
-3. Check your LinkedIn—is it complete and current?
+1. Google your name, what comes up?
+2. Review your GitHub profile, what does it communicate?
+3. Check your LinkedIn, is it complete and current?
 4. List three things you could improve immediately
 
 ### Exercise 13.2: Project Case Study (Level 2)
@@ -6318,7 +6223,7 @@ Develop your professional positioning:
 2. Identify which combinations are distinctive
 3. Research job postings that match your skills
 4. Write a positioning statement (one sentence that describes what you do)
-5. Get feedback—is it clear? Memorable? Accurate?
+5. Get feedback, is it clear? Memorable? Accurate?
 
 ### Exercise 13.4: Content Creation (Level 4)
 
@@ -6346,7 +6251,7 @@ Develop a 12-month career strategy:
 - Positioning helps you be memorable and referable
 - Relationships develop through contribution, not just networking
 - Continuous learning requires intentional practice, not just consumption
-- Career development is a long game—invest consistently
+- Career development is a long game, invest consistently
 
 ## Reflection
 
@@ -6387,7 +6292,7 @@ SOURCE: chapters/chapter-ai-era-developer.qmd
 
 Throughout this book, you've learned web development with AI as your partner. You've used AI to explore concepts, debug problems, generate code, and build understanding. Now, as we conclude, let's step back and ask: What does it mean to be a developer in an era where AI can write code?
 
-This isn't a question about job security—though that concern is understandable. It's a deeper question about value, identity, and skill.
+This isn't a question about job security, though that concern is understandable. It's a deeper question about value, identity, and skill.
 
 Consider what you've actually done in this course:
 
@@ -6507,7 +6412,7 @@ Complex systems are built incrementally. AI helps with each step, not magic solu
 
 Pattern 4: Context-Rich Requests
 
-```
+```text
 Poor: "Make the button look better"
 
 Better: "This button is the primary call-to-action for signup. It's
@@ -6515,7 +6420,7 @@ in a hero section with a dark background image. Currently it's styled
 with Tailwind as `bg-blue-500 text-white px-4 py-2`. The button feels
 too small and doesn't stand out enough. Suggest improvements that
 maintain accessibility."
-
+text
 Full Manual                                      Full Automation
     │                                                  │
     ├────────┬────────┬────────┬────────┬────────────┤
@@ -6528,7 +6433,7 @@ Full Manual                                      Full Automation
          Current AI
          assistance
          (effective)
-
+text
 Traditional Developer         AI-Era Developer
 ─────────────────────        ─────────────────────
 Writing code                 Directing code creation
@@ -6550,7 +6455,7 @@ Skills that CHANGE form:
 • Coding → directing + reviewing
 • Research → prompting + verifying
 • Debugging → explaining + guiding
-
+text
 Level 1: User
 - AI does tasks for you
 - You accept outputs uncritically
@@ -6578,7 +6483,7 @@ Progress through these levels by maintaining your independent capability while l
 
 ### Productivity and Quality
 
-AI-assisted development can improve both speed and quality—if used well:
+AI-assisted development can improve both speed and quality, if used well:
 
 - Speed: Faster prototyping, less boilerplate
 - Quality: More time for design and review
@@ -6613,8 +6518,8 @@ In an AI-augmented field:
 - Build domain expertise: AI is generic; domain knowledge is specific
 - Demonstrate responsibility: Show you can be trusted with AI tools
 
-## ULO Connection
-This develops all five ULOs—particularly ULO 1 (evaluating and improving solutions) and ULO 5 (assessing emerging technologies). Working effectively with AI is now a core professional skill, requiring the judgment, communication, and evaluation abilities developed throughout this course.
+## Skills You Are Building
+This develops all the core professional skills, particularly evaluating and improving solutions and assessing emerging technologies. Working effectively with AI is now a core professional skill, requiring the judgment, communication, and evaluation abilities developed throughout this book.
 
 ## Practice Exercises
 
@@ -6627,7 +6532,7 @@ This develops all five ULOs—particularly ULO 1 (evaluating and improving solut
 
 ### Exercise 14.1: AI Interaction Analysis (Level 1)
 
-Review your AI conversations from throughout this course:
+Review your AI conversations from throughout this book:
 
 1. Find three conversations where AI was most helpful
 2. Find one conversation where AI led you astray
@@ -6732,9 +6637,9 @@ You now have:
 - Professional practices for quality work
 - Career frameworks for ongoing growth
 
-More importantly, you have the ability to learn. Technologies will change. Frameworks will evolve. AI capabilities will expand. But your foundation—understanding how to think about problems, evaluate solutions, communicate with stakeholders, and collaborate with tools—remains valuable.
+More importantly, you have the ability to learn. Technologies will change. Frameworks will evolve. AI capabilities will expand. But your foundation, understanding how to think about problems, evaluate solutions, communicate with stakeholders, and collaborate with tools, remains valuable.
 
-The developers who thrive in the AI era won't be those who resist AI or those who depend on AI. They'll be those who partner with AI thoughtfully—maintaining their own judgment, understanding, and skills while leveraging AI to amplify their capability.
+The developers who thrive in the AI era won't be those who resist AI or those who depend on AI. They'll be those who partner with AI thoughtfully, maintaining their own judgment, understanding, and skills while leveraging AI to amplify their capability.
 
 You've built that foundation here.
 

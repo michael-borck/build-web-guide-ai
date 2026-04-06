@@ -332,7 +332,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/reading-list.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Weekly Reading List</span></a>
+ <span class="menu-text">Recommended Resources</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -600,9 +600,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="the-concept-first" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="the-concept-first"><span class="header-section-number">5.1</span> The Concept First</h2>
-<p>So far, everything you’ve built lives in isolation. Your HTML, CSS, and JavaScript create an experience, but that experience is self-contained—it doesn’t connect to anything beyond itself.</p>
+<p>So far, everything you’ve built lives in isolation. Your HTML, CSS, and JavaScript create an experience, but that experience is self-contained, it doesn’t connect to anything beyond itself.</p>
 <p>Real business applications are different. They display live weather data. They process payments. They show inventory levels. They sync with customer databases. They pull content from external services. How?</p>
-<p><strong>APIs</strong>—Application Programming Interfaces.</p>
+<p><strong>APIs</strong>. Application Programming Interfaces.</p>
 <p>An API is a defined way for two systems to communicate. When your JavaScript asks a weather service “What’s the temperature in Perth?”, it’s using an API. When a customer’s payment details go to Stripe for processing, that’s an API. When your portfolio site pulls your latest GitHub projects, that’s an API.</p>
 <p>APIs transform your website from a standalone document into a connected application that interacts with the wider world.</p>
 </section>
@@ -618,7 +618,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Imagine a restaurant:</p>
 <ul>
 <li>The <strong>menu</strong> lists what you can order (available endpoints)</li>
-<li>You place an order <strong>in a specific way</strong>—verbally to a waiter, on a printed slip (request format)</li>
+<li>You place an order <strong>in a specific way</strong>, verbally to a waiter, on a printed slip (request format)</li>
 <li>The kitchen prepares your food and the waiter delivers it (response)</li>
 <li>If something’s unavailable, they tell you (error response)</li>
 </ul>
@@ -642,23 +642,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="exploration-1-how-apis-work" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-1-how-apis-work">Exploration 1: How APIs Work</h3>
 <p>Let’s build understanding before we see code:</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 Explain REST APIs using a library system analogy. The library has
 books (resources). How would a REST API let someone check what
 books exist, borrow a book, return a book, and add new books?</code></pre>
 <p>This should reveal the core pattern: APIs expose <em>resources</em> (data) and let you perform <em>operations</em> on them. The operations typically map to HTTP methods: GET (read), POST (create), PUT/PATCH (update), DELETE (remove).</p>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 What's the difference between GET and POST requests? Why would you
 use one versus the other?</code></pre>
 </section>
 <section id="exploration-2-data-formats" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-2-data-formats">Exploration 2: Data Formats</h3>
 <p>APIs need a common language for data. That language is usually JSON.</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 Why is JSON the standard format for web API data? What problem does
 it solve, and what did people use before JSON?</code></pre>
 <p>JSON (JavaScript Object Notation) is readable by humans and easily parsed by machines. It’s become the universal format for web data exchange.</p>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 Show me what a JSON response might look like for a product catalogue
 with three items. Each item has a name, price, description, and
 whether it's in stock.</code></pre>
@@ -666,12 +666,12 @@ whether it's in stock.</code></pre>
 <section id="exploration-3-what-can-go-wrong" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-3-what-can-go-wrong">Exploration 3: What Can Go Wrong?</h3>
 <p>Network requests fail. Servers go down. Data doesn’t match expectations. Professional applications handle these gracefully.</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 What can go wrong when calling an API? List the different types of
 failures and explain what each HTTP status code range (2xx, 4xx, 5xx)
 means.</code></pre>
-<p>Understanding failure modes is essential. Your code must handle them or your users will see cryptic errors—or worse, a completely broken page.</p>
-<pre><code>Continue the conversation:
+<p>Understanding failure modes is essential. Your code must handle them or your users will see cryptic errors, or worse, a completely broken page.</p>
+<pre class="text"><code>Continue the conversation:
 How should a professional application respond to each type of failure?
 What should the user see?</code></pre>
 </section>
@@ -691,7 +691,7 @@ What should the user see?</code></pre>
 </section>
 <section id="understanding-asynchronous-code" class="level3">
 <h3 class="anchored" data-anchor-id="understanding-asynchronous-code">Understanding Asynchronous Code</h3>
-<p>API requests take time. The server might be across the world. Your code can’t just wait—it would freeze the entire page.</p>
+<p>API requests take time. The server might be across the world. Your code can’t just wait, it would freeze the entire page.</p>
 <p>JavaScript handles this with <strong>asynchronous</strong> code. Instead of stopping and waiting, it says “start this request, and when it’s done, run this code.”</p>
 <p>The <code>.then()</code> pattern is called a Promise. But modern JavaScript has a cleaner syntax: <code>async</code>/<code>await</code>.</p>
 </section>
@@ -750,7 +750,7 @@ What should the user see?</code></pre>
 <li>Create DOM elements for each item</li>
 <li>Handle errors with <code>try</code>/<code>catch</code></li>
 </ol>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 Walk me through this code step by step. What does forEach do?
 What does createElement do? What happens if the fetch fails?</code></pre>
 </section>
@@ -850,7 +850,7 @@ What does createElement do? What happens if the fetch fails?</code></pre>
 <span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>        loadingMessage<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">add</span>(<span class="st">'hidden'</span>)<span class="op">;</span></span>
 <span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The <code>finally</code> block runs regardless of success or failure—perfect for cleanup like hiding loading spinners.</p>
+<p>The <code>finally</code> block runs regardless of success or failure, perfect for cleanup like hiding loading spinners.</p>
 </section>
 <section id="http-methods-beyond-get" class="level3">
 <h3 class="anchored" data-anchor-id="http-methods-beyond-get">HTTP Methods: Beyond GET</h3>
@@ -922,7 +922,7 @@ What does createElement do? What happens if the fetch fails?</code></pre>
 <p>Access to fetch at ‘https://other-site.com/api’ has been blocked by CORS policy</p>
 </blockquote>
 <p><strong>CORS</strong> (Cross-Origin Resource Sharing) is a security feature. By default, JavaScript can only fetch from the same domain the page is on. To fetch from a different domain, that domain must explicitly allow it.</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 Explain CORS in simple terms. Why does it exist? What's it protecting
 against?</code></pre>
 <p>As a frontend developer, you can’t fix CORS on a third-party server. Your options:</p>
@@ -951,7 +951,7 @@ against?</code></pre>
 <section id="request-response-cycle" class="level3">
 <h3 class="anchored" data-anchor-id="request-response-cycle">Request-Response Cycle</h3>
 <p>Every API interaction follows this pattern:</p>
-<pre><code>┌──────────────┐     Request      ┌──────────────┐
+<pre class="text"><code>┌──────────────┐     Request      ┌──────────────┐
 │              │ ──────────────▶  │              │
 │   Browser    │                  │    Server    │
 │  (Your JS)   │ ◀──────────────  │    (API)     │
@@ -963,11 +963,11 @@ against?</code></pre>
 <li>Server processes and responds</li>
 <li>Your JavaScript handles the response</li>
 </ol>
-<p>Everything that can go wrong—network issues, server errors, malformed data—happens in this cycle.</p>
+<p>Everything that can go wrong, network issues, server errors, malformed data, happens in this cycle.</p>
 </section>
 <section id="synchronous-vs-asynchronous" class="level3">
 <h3 class="anchored" data-anchor-id="synchronous-vs-asynchronous">Synchronous vs Asynchronous</h3>
-<pre><code>Synchronous (blocking):
+<pre class="text"><code>Synchronous (blocking):
 Step 1 → Wait → Step 2 → Wait → Step 3
 
 Asynchronous (non-blocking):
@@ -978,7 +978,7 @@ Step 1 → Start Step 2 (don't wait) → Step 3
 </section>
 <section id="the-data-flow" class="level3">
 <h3 class="anchored" data-anchor-id="the-data-flow">The Data Flow</h3>
-<pre><code>API Response (JSON string)
+<pre class="text"><code>API Response (JSON string)
         ↓
    response.json() (parse)
         ↓
@@ -996,7 +996,7 @@ JavaScript Objects/Arrays
 <h2 data-number="5.6" class="anchored" data-anchor-id="business-applications"><span class="header-section-number">5.6</span> Business Applications</h2>
 <section id="real-time-data" class="level3">
 <h3 class="anchored" data-anchor-id="real-time-data">Real-Time Data</h3>
-<p>Stock prices, sports scores, weather—APIs provide live data that keeps users engaged and informed. Without APIs, you’d need to manually update your site constantly.</p>
+<p>Stock prices, sports scores, weather. APIs provide live data that keeps users engaged and informed. Without APIs, you’d need to manually update your site constantly.</p>
 </section>
 <section id="payment-processing" class="level3">
 <h3 class="anchored" data-anchor-id="payment-processing">Payment Processing</h3>
@@ -1004,7 +1004,7 @@ JavaScript Objects/Arrays
 </section>
 <section id="third-party-services" class="level3">
 <h3 class="anchored" data-anchor-id="third-party-services">Third-Party Services</h3>
-<p>Maps (Google Maps, Mapbox), analytics (Google Analytics), authentication (Auth0), email (SendGrid)—APIs let you leverage sophisticated services without building them yourself.</p>
+<p>Maps (Google Maps, Mapbox), analytics (Google Analytics), authentication (Auth0), email (SendGrid). APIs let you leverage sophisticated services without building them yourself.</p>
 </section>
 <section id="scalability-and-architecture" class="level3">
 <h3 class="anchored" data-anchor-id="scalability-and-architecture">Scalability and Architecture</h3>
@@ -1020,11 +1020,11 @@ JavaScript Objects/Arrays
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>ULO Connection
+<span class="screen-reader-only">Note</span>Skills You Are Building
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This develops <strong>ULO 4</strong> (select and integrate technologies) and <strong>ULO 1</strong> (design effective applications). API integration is fundamental to modern web development. Understanding how to evaluate, implement, and handle errors in API connections is essential professional knowledge.</p>
+<p>This develops <strong>making and defending technology choices</strong> and <strong>evaluating and improving solutions</strong>. API integration is fundamental to modern web development. Understanding how to evaluate, implement, and handle errors in API connections is essential professional knowledge.</p>
 </div>
 </div>
 </section>
@@ -1103,7 +1103,7 @@ JavaScript Objects/Arrays
 <li>How often should data refresh?</li>
 <li>What happens if the API is unavailable?</li>
 </ol>
-<p>Write a 400-word proposal. Discuss your approach with your AI partner—what did you miss?</p>
+<p>Write a 400-word proposal. Discuss your approach with your AI partner, what did you miss?</p>
 </section>
 </section>
 <section id="chapter-summary" class="level2" data-number="5.8">
@@ -1113,7 +1113,7 @@ JavaScript Objects/Arrays
 <li><code>fetch()</code> with <code>async</code>/<code>await</code> makes readable asynchronous code</li>
 <li>JSON is the standard data format for web APIs</li>
 <li>Always handle loading states and errors</li>
-<li>Check <code>response.ok</code>—fetch doesn’t throw on HTTP errors</li>
+<li>Check <code>response.ok</code>, fetch doesn’t throw on HTTP errors</li>
 <li>CORS protects users but can block legitimate requests</li>
 <li>APIs connect your site to the broader ecosystem of services</li>
 </ul>
@@ -1150,7 +1150,7 @@ JavaScript Objects/Arrays
 <li><strong>Behaviour</strong> (JavaScript): How content responds</li>
 <li><strong>Connection</strong> (APIs): How content integrates with external services</li>
 </ul>
-<p>In <a href="../projects/project-portfolio.html" class="quarto-xref"><span>Chapter 6</span></a>, you’ll combine these skills to build a complete portfolio website—your first substantial web project. This portfolio will demonstrate your capabilities to future employers or clients.</p>
+<p>In <a href="../projects/project-portfolio.html" class="quarto-xref"><span>Chapter 6</span></a>, you’ll combine these skills to build a complete portfolio website, your first substantial web project. This portfolio will demonstrate your capabilities to future employers or clients.</p>
 <p>Then, in Part II, we shift focus from building pages to managing content at scale with content management systems.</p>
 
 
@@ -1641,11 +1641,11 @@ JavaScript Objects/Arrays
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Concept First</span></span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>So far, everything you've built lives in isolation. Your HTML, CSS, and JavaScript create an experience, but that experience is self-contained—it doesn't connect to anything beyond itself.</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>So far, everything you've built lives in isolation. Your HTML, CSS, and JavaScript create an experience, but that experience is self-contained, it doesn't connect to anything beyond itself.</span>
 <span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>Real business applications are different. They display live weather data. They process payments. They show inventory levels. They sync with customer databases. They pull content from external services. How?</span>
 <span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>**APIs**—Application Programming Interfaces.</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>**APIs**. Application Programming Interfaces.</span>
 <span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>An API is a defined way for two systems to communicate. When your JavaScript asks a weather service "What's the temperature in Perth?", it's using an API. When a customer's payment details go to Stripe for processing, that's an API. When your portfolio site pulls your latest GitHub projects, that's an API.</span>
 <span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a></span>
@@ -1663,7 +1663,7 @@ JavaScript Objects/Arrays
 <span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a>Imagine a restaurant:</span>
 <span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The **menu** lists what you can order (available endpoints)</span>
-<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You place an order **in a specific way**—verbally to a waiter, on a printed slip (request format)</span>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You place an order **in a specific way**, verbally to a waiter, on a printed slip (request format)</span>
 <span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The kitchen prepares your food and the waiter delivers it (response)</span>
 <span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If something's unavailable, they tell you (error response)</span>
 <span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a></span>
@@ -1680,7 +1680,7 @@ JavaScript Objects/Arrays
 <span id="cb22-41"><a href="#cb22-41" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-42"><a href="#cb22-42" aria-hidden="true" tabindex="-1"></a>Let's build understanding before we see code:</span>
 <span id="cb22-43"><a href="#cb22-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-44"><a href="#cb22-44" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-44"><a href="#cb22-44" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb22-45"><a href="#cb22-45" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb22-46"><a href="#cb22-46" aria-hidden="true" tabindex="-1"></a><span class="in">Explain REST APIs using a library system analogy. The library has</span></span>
 <span id="cb22-47"><a href="#cb22-47" aria-hidden="true" tabindex="-1"></a><span class="in">books (resources). How would a REST API let someone check what</span></span>
@@ -1689,7 +1689,7 @@ JavaScript Objects/Arrays
 <span id="cb22-50"><a href="#cb22-50" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-51"><a href="#cb22-51" aria-hidden="true" tabindex="-1"></a>This should reveal the core pattern: APIs expose *resources* (data) and let you perform *operations* on them. The operations typically map to HTTP methods: GET (read), POST (create), PUT/PATCH (update), DELETE (remove).</span>
 <span id="cb22-52"><a href="#cb22-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-53"><a href="#cb22-53" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-53"><a href="#cb22-53" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb22-54"><a href="#cb22-54" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb22-55"><a href="#cb22-55" aria-hidden="true" tabindex="-1"></a><span class="in">What's the difference between GET and POST requests? Why would you</span></span>
 <span id="cb22-56"><a href="#cb22-56" aria-hidden="true" tabindex="-1"></a><span class="in">use one versus the other?</span></span>
@@ -1699,7 +1699,7 @@ JavaScript Objects/Arrays
 <span id="cb22-60"><a href="#cb22-60" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-61"><a href="#cb22-61" aria-hidden="true" tabindex="-1"></a>APIs need a common language for data. That language is usually JSON.</span>
 <span id="cb22-62"><a href="#cb22-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-63"><a href="#cb22-63" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-63"><a href="#cb22-63" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb22-64"><a href="#cb22-64" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb22-65"><a href="#cb22-65" aria-hidden="true" tabindex="-1"></a><span class="in">Why is JSON the standard format for web API data? What problem does</span></span>
 <span id="cb22-66"><a href="#cb22-66" aria-hidden="true" tabindex="-1"></a><span class="in">it solve, and what did people use before JSON?</span></span>
@@ -1707,7 +1707,7 @@ JavaScript Objects/Arrays
 <span id="cb22-68"><a href="#cb22-68" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-69"><a href="#cb22-69" aria-hidden="true" tabindex="-1"></a>JSON (JavaScript Object Notation) is readable by humans and easily parsed by machines. It's become the universal format for web data exchange.</span>
 <span id="cb22-70"><a href="#cb22-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-71"><a href="#cb22-71" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-71"><a href="#cb22-71" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb22-72"><a href="#cb22-72" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb22-73"><a href="#cb22-73" aria-hidden="true" tabindex="-1"></a><span class="in">Show me what a JSON response might look like for a product catalogue</span></span>
 <span id="cb22-74"><a href="#cb22-74" aria-hidden="true" tabindex="-1"></a><span class="in">with three items. Each item has a name, price, description, and</span></span>
@@ -1718,16 +1718,16 @@ JavaScript Objects/Arrays
 <span id="cb22-79"><a href="#cb22-79" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-80"><a href="#cb22-80" aria-hidden="true" tabindex="-1"></a>Network requests fail. Servers go down. Data doesn't match expectations. Professional applications handle these gracefully.</span>
 <span id="cb22-81"><a href="#cb22-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-82"><a href="#cb22-82" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-82"><a href="#cb22-82" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb22-83"><a href="#cb22-83" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb22-84"><a href="#cb22-84" aria-hidden="true" tabindex="-1"></a><span class="in">What can go wrong when calling an API? List the different types of</span></span>
 <span id="cb22-85"><a href="#cb22-85" aria-hidden="true" tabindex="-1"></a><span class="in">failures and explain what each HTTP status code range (2xx, 4xx, 5xx)</span></span>
 <span id="cb22-86"><a href="#cb22-86" aria-hidden="true" tabindex="-1"></a><span class="in">means.</span></span>
 <span id="cb22-87"><a href="#cb22-87" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-88"><a href="#cb22-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-89"><a href="#cb22-89" aria-hidden="true" tabindex="-1"></a>Understanding failure modes is essential. Your code must handle them or your users will see cryptic errors—or worse, a completely broken page.</span>
+<span id="cb22-89"><a href="#cb22-89" aria-hidden="true" tabindex="-1"></a>Understanding failure modes is essential. Your code must handle them or your users will see cryptic errors, or worse, a completely broken page.</span>
 <span id="cb22-90"><a href="#cb22-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-91"><a href="#cb22-91" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-91"><a href="#cb22-91" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb22-92"><a href="#cb22-92" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb22-93"><a href="#cb22-93" aria-hidden="true" tabindex="-1"></a><span class="in">How should a professional application respond to each type of failure?</span></span>
 <span id="cb22-94"><a href="#cb22-94" aria-hidden="true" tabindex="-1"></a><span class="in">What should the user see?</span></span>
@@ -1753,7 +1753,7 @@ JavaScript Objects/Arrays
 <span id="cb22-114"><a href="#cb22-114" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-115"><a href="#cb22-115" aria-hidden="true" tabindex="-1"></a>### Understanding Asynchronous Code</span>
 <span id="cb22-116"><a href="#cb22-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-117"><a href="#cb22-117" aria-hidden="true" tabindex="-1"></a>API requests take time<span class="op">.</span> <span class="fu">The</span> server might be across the world<span class="op">.</span> <span class="fu">Your</span> code can<span class="er">'</span>t just wait—it would freeze the entire page<span class="op">.</span></span>
+<span id="cb22-117"><a href="#cb22-117" aria-hidden="true" tabindex="-1"></a>API requests take time<span class="op">.</span> <span class="fu">The</span> server might be across the world<span class="op">.</span> <span class="fu">Your</span> code can<span class="er">'</span>t just wait<span class="op">,</span> it would freeze the entire page<span class="op">.</span></span>
 <span id="cb22-118"><a href="#cb22-118" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-119"><a href="#cb22-119" aria-hidden="true" tabindex="-1"></a><span class="fu">JavaScript</span> handles <span class="kw">this</span> with <span class="op">**</span>asynchronous<span class="op">**</span> code<span class="op">.</span> <span class="fu">Instead</span> of stopping and waiting<span class="op">,</span> it says <span class="st">"start this request, and when it's done, run this code."</span></span>
 <span id="cb22-120"><a href="#cb22-120" aria-hidden="true" tabindex="-1"></a></span>
@@ -1825,7 +1825,7 @@ JavaScript Objects/Arrays
 <span id="cb22-186"><a href="#cb22-186" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> Create DOM elements <span class="cf">for</span> each item</span>
 <span id="cb22-187"><a href="#cb22-187" aria-hidden="true" tabindex="-1"></a><span class="fl">5.</span> Handle errors with `try`<span class="op">/</span>`catch`</span>
 <span id="cb22-188"><a href="#cb22-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-189"><a href="#cb22-189" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb22-189"><a href="#cb22-189" aria-hidden="true" tabindex="-1"></a>```text</span>
 <span id="cb22-190"><a href="#cb22-190" aria-hidden="true" tabindex="-1"></a>Ask your AI<span class="op">:</span></span>
 <span id="cb22-191"><a href="#cb22-191" aria-hidden="true" tabindex="-1"></a>Walk me through <span class="kw">this</span> code step by step<span class="op">.</span> <span class="fu">What</span> does forEach <span class="cf">do</span><span class="op">?</span></span>
 <span id="cb22-192"><a href="#cb22-192" aria-hidden="true" tabindex="-1"></a>What does createElement <span class="cf">do</span><span class="op">?</span> What happens <span class="cf">if</span> the fetch fails<span class="op">?</span></span>
@@ -1937,7 +1937,7 @@ JavaScript Objects/Arrays
 <span id="cb22-298"><a href="#cb22-298" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb22-299"><a href="#cb22-299" aria-hidden="true" tabindex="-1"></a>```</span>
 <span id="cb22-300"><a href="#cb22-300" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-301"><a href="#cb22-301" aria-hidden="true" tabindex="-1"></a>The `finally` block runs regardless of success or failure—perfect <span class="cf">for</span> cleanup like hiding loading spinners<span class="op">.</span></span>
+<span id="cb22-301"><a href="#cb22-301" aria-hidden="true" tabindex="-1"></a>The `finally` block runs regardless of success or failure<span class="op">,</span> perfect <span class="cf">for</span> cleanup like hiding loading spinners<span class="op">.</span></span>
 <span id="cb22-302"><a href="#cb22-302" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-303"><a href="#cb22-303" aria-hidden="true" tabindex="-1"></a>### HTTP Methods<span class="op">:</span> Beyond GET</span>
 <span id="cb22-304"><a href="#cb22-304" aria-hidden="true" tabindex="-1"></a></span>
@@ -1985,7 +1985,7 @@ JavaScript Objects/Arrays
 <span id="cb22-346"><a href="#cb22-346" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-347"><a href="#cb22-347" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>CORS<span class="op">**</span> <span class="op">(</span>Cross<span class="op">-</span>Origin <span class="bu">Resource</span> Sharing<span class="op">)</span> is a security feature<span class="op">.</span> <span class="fu">By</span> <span class="kw">default</span><span class="op">,</span> JavaScript can only fetch from the same domain the page is on<span class="op">.</span> <span class="fu">To</span> fetch from a different domain<span class="op">,</span> that domain must explicitly allow it<span class="op">.</span></span>
 <span id="cb22-348"><a href="#cb22-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-349"><a href="#cb22-349" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb22-349"><a href="#cb22-349" aria-hidden="true" tabindex="-1"></a>```text</span>
 <span id="cb22-350"><a href="#cb22-350" aria-hidden="true" tabindex="-1"></a>Ask your AI<span class="op">:</span></span>
 <span id="cb22-351"><a href="#cb22-351" aria-hidden="true" tabindex="-1"></a>Explain CORS in simple terms<span class="op">.</span> <span class="fu">Why</span> does it exist<span class="op">?</span> What<span class="er">'</span>s it protecting</span>
 <span id="cb22-352"><a href="#cb22-352" aria-hidden="true" tabindex="-1"></a>against<span class="op">?</span></span>
@@ -2008,7 +2008,7 @@ JavaScript Objects/Arrays
 <span id="cb22-369"><a href="#cb22-369" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-370"><a href="#cb22-370" aria-hidden="true" tabindex="-1"></a>Every API interaction follows <span class="kw">this</span> pattern<span class="op">:</span></span>
 <span id="cb22-371"><a href="#cb22-371" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-372"><a href="#cb22-372" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb22-372"><a href="#cb22-372" aria-hidden="true" tabindex="-1"></a>```text</span>
 <span id="cb22-373"><a href="#cb22-373" aria-hidden="true" tabindex="-1"></a>┌──────────────┐     <span class="bu">Request</span>      ┌──────────────┐</span>
 <span id="cb22-374"><a href="#cb22-374" aria-hidden="true" tabindex="-1"></a>│              │ ──────────────▶  │              │</span>
 <span id="cb22-375"><a href="#cb22-375" aria-hidden="true" tabindex="-1"></a>│   Browser    │                  │    Server    │</span>
@@ -2022,11 +2022,11 @@ JavaScript Objects/Arrays
 <span id="cb22-383"><a href="#cb22-383" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> Server processes and responds</span>
 <span id="cb22-384"><a href="#cb22-384" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> Your JavaScript handles the response</span>
 <span id="cb22-385"><a href="#cb22-385" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-386"><a href="#cb22-386" aria-hidden="true" tabindex="-1"></a>Everything that can go wrong—network issues<span class="op">,</span> server errors<span class="op">,</span> malformed data—happens in <span class="kw">this</span> cycle<span class="op">.</span></span>
+<span id="cb22-386"><a href="#cb22-386" aria-hidden="true" tabindex="-1"></a>Everything that can go wrong<span class="op">,</span> network issues<span class="op">,</span> server errors<span class="op">,</span> malformed data<span class="op">,</span> happens in <span class="kw">this</span> cycle<span class="op">.</span></span>
 <span id="cb22-387"><a href="#cb22-387" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-388"><a href="#cb22-388" aria-hidden="true" tabindex="-1"></a>### Synchronous vs Asynchronous</span>
 <span id="cb22-389"><a href="#cb22-389" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-390"><a href="#cb22-390" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb22-390"><a href="#cb22-390" aria-hidden="true" tabindex="-1"></a>```text</span>
 <span id="cb22-391"><a href="#cb22-391" aria-hidden="true" tabindex="-1"></a><span class="fu">Synchronous</span> <span class="op">(</span>blocking<span class="op">):</span></span>
 <span id="cb22-392"><a href="#cb22-392" aria-hidden="true" tabindex="-1"></a>Step <span class="dv">1</span> → Wait → Step <span class="dv">2</span> → Wait → Step <span class="dv">3</span></span>
 <span id="cb22-393"><a href="#cb22-393" aria-hidden="true" tabindex="-1"></a></span>
@@ -2040,7 +2040,7 @@ JavaScript Objects/Arrays
 <span id="cb22-401"><a href="#cb22-401" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-402"><a href="#cb22-402" aria-hidden="true" tabindex="-1"></a>### The <span class="bu">Data</span> Flow</span>
 <span id="cb22-403"><a href="#cb22-403" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-404"><a href="#cb22-404" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb22-404"><a href="#cb22-404" aria-hidden="true" tabindex="-1"></a>```text</span>
 <span id="cb22-405"><a href="#cb22-405" aria-hidden="true" tabindex="-1"></a>API <span class="bu">Response</span> <span class="op">(</span>JSON string<span class="op">)</span></span>
 <span id="cb22-406"><a href="#cb22-406" aria-hidden="true" tabindex="-1"></a>        ↓</span>
 <span id="cb22-407"><a href="#cb22-407" aria-hidden="true" tabindex="-1"></a>   response<span class="op">.</span><span class="fu">json</span><span class="op">()</span> <span class="op">(</span>parse<span class="op">)</span></span>
@@ -2060,7 +2060,7 @@ JavaScript Objects/Arrays
 <span id="cb22-421"><a href="#cb22-421" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-422"><a href="#cb22-422" aria-hidden="true" tabindex="-1"></a>### Real<span class="op">-</span><span class="bu">Time</span> <span class="bu">Data</span></span>
 <span id="cb22-423"><a href="#cb22-423" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-424"><a href="#cb22-424" aria-hidden="true" tabindex="-1"></a>Stock prices<span class="op">,</span> sports scores<span class="op">,</span> weather—APIs provide live data that keeps users engaged and informed<span class="op">.</span> <span class="fu">Without</span> APIs<span class="op">,</span> you<span class="er">'</span>d need to manually update your site constantly<span class="op">.</span></span>
+<span id="cb22-424"><a href="#cb22-424" aria-hidden="true" tabindex="-1"></a>Stock prices<span class="op">,</span> sports scores<span class="op">,</span> weather<span class="op">.</span> <span class="fu">APIs</span> provide live data that keeps users engaged and informed<span class="op">.</span> <span class="fu">Without</span> APIs<span class="op">,</span> you<span class="er">'</span>d need to manually update your site constantly<span class="op">.</span></span>
 <span id="cb22-425"><a href="#cb22-425" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-426"><a href="#cb22-426" aria-hidden="true" tabindex="-1"></a>### Payment Processing</span>
 <span id="cb22-427"><a href="#cb22-427" aria-hidden="true" tabindex="-1"></a></span>
@@ -2068,7 +2068,7 @@ JavaScript Objects/Arrays
 <span id="cb22-429"><a href="#cb22-429" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-430"><a href="#cb22-430" aria-hidden="true" tabindex="-1"></a>### Third<span class="op">-</span>Party Services</span>
 <span id="cb22-431"><a href="#cb22-431" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-432"><a href="#cb22-432" aria-hidden="true" tabindex="-1"></a><span class="fu">Maps</span> <span class="op">(</span>Google Maps<span class="op">,</span> Mapbox<span class="op">),</span> <span class="fu">analytics</span> <span class="op">(</span>Google Analytics<span class="op">),</span> <span class="fu">authentication</span> <span class="op">(</span>Auth0<span class="op">),</span> <span class="fu">email</span> <span class="op">(</span>SendGrid<span class="op">)</span>—APIs let you leverage sophisticated services without building them yourself<span class="op">.</span></span>
+<span id="cb22-432"><a href="#cb22-432" aria-hidden="true" tabindex="-1"></a><span class="fu">Maps</span> <span class="op">(</span>Google Maps<span class="op">,</span> Mapbox<span class="op">),</span> <span class="fu">analytics</span> <span class="op">(</span>Google Analytics<span class="op">),</span> <span class="fu">authentication</span> <span class="op">(</span>Auth0<span class="op">),</span> <span class="fu">email</span> <span class="op">(</span>SendGrid<span class="op">).</span> <span class="fu">APIs</span> let you leverage sophisticated services without building them yourself<span class="op">.</span></span>
 <span id="cb22-433"><a href="#cb22-433" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-434"><a href="#cb22-434" aria-hidden="true" tabindex="-1"></a>### Scalability and Architecture</span>
 <span id="cb22-435"><a href="#cb22-435" aria-hidden="true" tabindex="-1"></a></span>
@@ -2085,8 +2085,8 @@ JavaScript Objects/Arrays
 <span id="cb22-446"><a href="#cb22-446" aria-hidden="true" tabindex="-1"></a>APIs are how modern businesses connect their systems<span class="op">.</span></span>
 <span id="cb22-447"><a href="#cb22-447" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-448"><a href="#cb22-448" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span> <span class="op">{.</span><span class="fu">callout</span><span class="op">-</span>note<span class="op">}</span></span>
-<span id="cb22-449"><a href="#cb22-449" aria-hidden="true" tabindex="-1"></a>## ULO <span class="bu">Connection</span></span>
-<span id="cb22-450"><a href="#cb22-450" aria-hidden="true" tabindex="-1"></a>This develops <span class="op">**</span>ULO <span class="dv">4</span><span class="op">**</span> <span class="op">(</span>select and integrate technologies<span class="op">)</span> and <span class="op">**</span>ULO <span class="dv">1</span><span class="op">**</span> <span class="op">(</span>design effective applications<span class="op">).</span> <span class="fu">API</span> integration is fundamental to modern web development<span class="op">.</span> <span class="fu">Understanding</span> how to evaluate<span class="op">,</span> implement<span class="op">,</span> and handle errors in API connections is essential professional knowledge<span class="op">.</span></span>
+<span id="cb22-449"><a href="#cb22-449" aria-hidden="true" tabindex="-1"></a>## Skills You Are Building</span>
+<span id="cb22-450"><a href="#cb22-450" aria-hidden="true" tabindex="-1"></a>This develops <span class="op">**</span>making and defending technology choices<span class="op">**</span> and <span class="op">**</span>evaluating and improving solutions<span class="op">**.</span> <span class="fu">API</span> integration is fundamental to modern web development<span class="op">.</span> <span class="fu">Understanding</span> how to evaluate<span class="op">,</span> implement<span class="op">,</span> and handle errors in API connections is essential professional knowledge<span class="op">.</span></span>
 <span id="cb22-451"><a href="#cb22-451" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span></span>
 <span id="cb22-452"><a href="#cb22-452" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-453"><a href="#cb22-453" aria-hidden="true" tabindex="-1"></a>## Practice Exercises</span>
@@ -2154,7 +2154,7 @@ JavaScript Objects/Arrays
 <span id="cb22-515"><a href="#cb22-515" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> How often should data refresh<span class="op">?</span></span>
 <span id="cb22-516"><a href="#cb22-516" aria-hidden="true" tabindex="-1"></a><span class="fl">5.</span> What happens <span class="cf">if</span> the API is unavailable<span class="op">?</span></span>
 <span id="cb22-517"><a href="#cb22-517" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-518"><a href="#cb22-518" aria-hidden="true" tabindex="-1"></a>Write a <span class="dv">400</span><span class="op">-</span>word proposal<span class="op">.</span> <span class="fu">Discuss</span> your approach with your AI partner—what did you miss<span class="op">?</span></span>
+<span id="cb22-518"><a href="#cb22-518" aria-hidden="true" tabindex="-1"></a>Write a <span class="dv">400</span><span class="op">-</span>word proposal<span class="op">.</span> <span class="fu">Discuss</span> your approach with your AI partner<span class="op">,</span> what did you miss<span class="op">?</span></span>
 <span id="cb22-519"><a href="#cb22-519" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-520"><a href="#cb22-520" aria-hidden="true" tabindex="-1"></a>## Chapter Summary</span>
 <span id="cb22-521"><a href="#cb22-521" aria-hidden="true" tabindex="-1"></a></span>
@@ -2162,7 +2162,7 @@ JavaScript Objects/Arrays
 <span id="cb22-523"><a href="#cb22-523" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> `<span class="fu">fetch</span><span class="op">()</span>` with `async`<span class="op">/</span>`await` makes readable asynchronous code</span>
 <span id="cb22-524"><a href="#cb22-524" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> JSON is the standard data format <span class="cf">for</span> web APIs</span>
 <span id="cb22-525"><a href="#cb22-525" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Always handle loading states and errors</span>
-<span id="cb22-526"><a href="#cb22-526" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Check `response<span class="op">.</span><span class="fu">ok</span>`—fetch doesn<span class="er">'</span>t <span class="cf">throw</span> on HTTP errors</span>
+<span id="cb22-526"><a href="#cb22-526" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Check `response<span class="op">.</span><span class="fu">ok</span>`<span class="op">,</span> fetch doesn<span class="er">'</span>t <span class="cf">throw</span> on HTTP errors</span>
 <span id="cb22-527"><a href="#cb22-527" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> CORS protects users but can block legitimate requests</span>
 <span id="cb22-528"><a href="#cb22-528" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> APIs connect your site to the broader ecosystem of services</span>
 <span id="cb22-529"><a href="#cb22-529" aria-hidden="true" tabindex="-1"></a></span>
@@ -2199,7 +2199,7 @@ JavaScript Objects/Arrays
 <span id="cb22-560"><a href="#cb22-560" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Behaviour<span class="op">**</span> <span class="op">(</span>JavaScript<span class="op">):</span> How content responds</span>
 <span id="cb22-561"><a href="#cb22-561" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Connection</span><span class="op">**</span> <span class="op">(</span>APIs<span class="op">):</span> How content integrates with external services</span>
 <span id="cb22-562"><a href="#cb22-562" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-563"><a href="#cb22-563" aria-hidden="true" tabindex="-1"></a>In <span class="at">@sec</span><span class="op">-</span>project<span class="op">-</span>portfolio<span class="op">,</span> you<span class="er">'</span>ll combine these skills to build a complete portfolio website—your first substantial web project<span class="op">.</span> <span class="fu">This</span> portfolio will demonstrate your capabilities to future employers or clients<span class="op">.</span></span>
+<span id="cb22-563"><a href="#cb22-563" aria-hidden="true" tabindex="-1"></a>In <span class="at">@sec</span><span class="op">-</span>project<span class="op">-</span>portfolio<span class="op">,</span> you<span class="er">'</span>ll combine these skills to build a complete portfolio website<span class="op">,</span> your first substantial web project<span class="op">.</span> <span class="fu">This</span> portfolio will demonstrate your capabilities to future employers or clients<span class="op">.</span></span>
 <span id="cb22-564"><a href="#cb22-564" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-565"><a href="#cb22-565" aria-hidden="true" tabindex="-1"></a><span class="fu">Then</span><span class="op">,</span> in Part II<span class="op">,</span> we shift focus from building pages to managing content at scale with content management systems<span class="op">.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>

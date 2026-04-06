@@ -332,7 +332,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/reading-list.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Weekly Reading List</span></a>
+ <span class="menu-text">Recommended Resources</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -596,9 +596,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="the-concept-first" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="the-concept-first"><span class="header-section-number">2.1</span> The Concept First</h2>
 <p>Before we write any HTML, let’s understand what we’re really doing: <strong>organising information so both humans and machines can understand it</strong>.</p>
-<p>Every document you’ve ever read has structure. A book has chapters, sections, and paragraphs. A business report has headings, bullet points, and tables. A restaurant menu has categories, items, and descriptions. This structure isn’t decoration—it’s how we communicate meaning.</p>
-<p>HTML (HyperText Markup Language) is simply the language we use to describe document structure for the web. When you write HTML, you’re not designing how something looks—you’re declaring what something <em>is</em>.</p>
-<p>This distinction matters enormously. A heading isn’t big, bold text. A heading <em>is</em> a heading—a structural element that indicates hierarchy and importance. How it appears is a separate concern entirely.</p>
+<p>Every document you’ve ever read has structure. A book has chapters, sections, and paragraphs. A business report has headings, bullet points, and tables. A restaurant menu has categories, items, and descriptions. This structure isn’t decoration, it’s how we communicate meaning.</p>
+<p>HTML (HyperText Markup Language) is simply the language we use to describe document structure for the web. When you write HTML, you’re not designing how something looks, you’re declaring what something <em>is</em>.</p>
+<p>This distinction matters enormously. A heading isn’t big, bold text. A heading <em>is</em> a heading, a structural element that indicates hierarchy and importance. How it appears is a separate concern entirely.</p>
 </section>
 <section id="understanding-through-architecture" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="understanding-through-architecture"><span class="header-section-number">2.2</span> Understanding Through Architecture</h2>
@@ -618,7 +618,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Links</strong> connect pages and resources</li>
 <li><strong>Web standards</strong> ensure accessibility across devices</li>
 </ul>
-<p>The parallel is precise. An architect doesn’t just make a building that stands—they create spaces that people can navigate, understand, and use. A web developer doesn’t just make a page that displays—they create documents that humans can read and machines can process.</p>
+<p>The parallel is precise. An architect doesn’t just make a building that stands, they create spaces that people can navigate, understand, and use. A web developer doesn’t just make a page that displays, they create documents that humans can read and machines can process.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -639,13 +639,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="exploration-1-document-anatomy" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-1-document-anatomy">Exploration 1: Document Anatomy</h3>
 <p>Before we think about HTML at all, let’s think about documents:</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 If I showed you a restaurant menu, what structural elements would you
-identify? Don't use any HTML terms yet—just describe the organisation
+identify? Don't use any HTML terms yet, just describe the organisation
 you see in plain English.</code></pre>
-<p>Notice what your AI identifies: categories of food, individual items, descriptions, prices, perhaps special callouts for dietary information. This is structure—pure information architecture that exists independent of how it’s presented.</p>
+<p>Notice what your AI identifies: categories of food, individual items, descriptions, prices, perhaps special callouts for dietary information. This is structure, pure information architecture that exists independent of how it’s presented.</p>
 <p>Now follow up:</p>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 How would those same structural elements appear in a company's
 "About Us" page?</code></pre>
 <p>The specific content differs, but structural patterns repeat. Headings introduce sections. Paragraphs contain flowing text. Lists group related items. This pattern recognition is the foundation of HTML thinking.</p>
@@ -653,20 +653,20 @@ How would those same structural elements appear in a company's
 <section id="exploration-2-semantic-meaning" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-2-semantic-meaning">Exploration 2: Semantic Meaning</h3>
 <p>The word “semantic” means “relating to meaning.” Semantic HTML uses elements that describe what content <em>is</em>, not how it should <em>look</em>.</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 Explain "semantic HTML" using a library catalogue analogy. Why would
 a librarian care whether a book is labelled as "fiction" versus just
 "on shelf 3"?</code></pre>
 <p>This conversation should reveal why meaningful labels matter. A library where books are only identified by shelf location would be nearly useless. Similarly, a web page where content is only identified by its visual appearance loses meaning for search engines, screen readers, and future maintainers.</p>
 <p>Follow up:</p>
-<pre><code>Continue the conversation:
-What problems occur when web pages use visual-only structure—like
+<pre class="text"><code>Continue the conversation:
+What problems occur when web pages use visual-only structure, like
 making text big and bold instead of marking it as a heading?</code></pre>
 </section>
 <section id="exploration-3-the-simplest-valid-page" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-3-the-simplest-valid-page">Exploration 3: The Simplest Valid Page</h3>
 <p>Now let’s see actual HTML, but the simplest possible version:</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 Show me the absolute simplest valid HTML page that contains just a
 heading and a paragraph. Explain what each line does as if I've never
 seen code before.</code></pre>
@@ -682,10 +682,10 @@ seen code before.</code></pre>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>This is a paragraph of text.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Don’t just accept this—have a conversation about it:</p>
-<pre><code>Continue the conversation:
+<p>Don’t just accept this, have a conversation about it:</p>
+<pre class="text"><code>Continue the conversation:
 Why is lang="en" important? Who or what uses that information?</code></pre>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 What happens if I leave out the DOCTYPE? Would the page still display?</code></pre>
 <p>These conversations build understanding that copying code never provides.</p>
 </section>
@@ -700,7 +700,7 @@ What happens if I leave out the DOCTYPE? Would the page still display?</code></p
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> lang</span><span class="op">=</span><span class="st">"en"</span><span class="dt">&gt;</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- Everything goes here --&gt;</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The <code>&lt;!DOCTYPE html&gt;</code> tells browsers “this is a modern HTML document.” The <code>&lt;html&gt;</code> element is the root container for everything else. The <code>lang</code> attribute declares the language—essential for screen readers and translation tools.</p>
+<p>The <code>&lt;!DOCTYPE html&gt;</code> tells browsers “this is a modern HTML document.” The <code>&lt;html&gt;</code> element is the root container for everything else. The <code>lang</code> attribute declares the language, essential for screen readers and translation tools.</p>
 </section>
 <section id="the-two-main-sections" class="level3">
 <h3 class="anchored" data-anchor-id="the-two-main-sections">The Two Main Sections</h3>
@@ -716,7 +716,7 @@ What happens if I leave out the DOCTYPE? Would the page still display?</code></p
 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">&lt;!-- Content: what people actually see --&gt;</span></span>
 <span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
 <span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The <code>&lt;head&gt;</code> contains metadata—information about the page that doesn’t appear on screen. The <code>&lt;body&gt;</code> contains the actual content visitors see and interact with.</p>
+<p>The <code>&lt;head&gt;</code> contains metadata, information about the page that doesn’t appear on screen. The <code>&lt;body&gt;</code> contains the actual content visitors see and interact with.</p>
 <p>Think of it like a business letter: the <code>&lt;head&gt;</code> is the envelope with addresses and stamps, while the <code>&lt;body&gt;</code> is the letter inside.</p>
 </section>
 <section id="semantic-content-elements" class="level3">
@@ -747,12 +747,12 @@ What happens if I leave out the DOCTYPE? Would the page still display?</code></p
 <span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Notice what we’ve communicated:</p>
 <ul>
-<li><code>&lt;header&gt;</code> — the introductory content for the page</li>
-<li><code>&lt;main&gt;</code> — the primary content (there should only be one)</li>
-<li><code>&lt;section&gt;</code> — distinct, thematically grouped content</li>
-<li><code>&lt;footer&gt;</code> — closing information</li>
-<li><code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code> — heading hierarchy (h1 is most important)</li>
-<li><code>&lt;p&gt;</code> — paragraphs of text</li>
+<li><code>&lt;header&gt;</code>. The introductory content for the page</li>
+<li><code>&lt;main&gt;</code>. The primary content (there should only be one)</li>
+<li><code>&lt;section&gt;</code>, distinct, thematically grouped content</li>
+<li><code>&lt;footer&gt;</code>, closing information</li>
+<li><code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, heading hierarchy (h1 is most important)</li>
+<li><code>&lt;p&gt;</code>, paragraphs of text</li>
 </ul>
 <p>A screen reader can now navigate this page by headings. Search engines understand what’s primary content versus footer material. Future developers can immediately grasp the page structure.</p>
 </section>
@@ -815,13 +815,13 @@ What happens if I leave out the DOCTYPE? Would the page still display?</code></p
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Don’t choose elements based on how they look by default. Choose them based on what the content <em>is</em>. A <code>&lt;section&gt;</code> isn’t “a box”—it’s a thematic grouping of content. Appearance is CSS’s job (Chapter 2).</p>
+<p>Don’t choose elements based on how they look by default. Choose them based on what the content <em>is</em>. A <code>&lt;section&gt;</code> isn’t “a box”, it’s a thematic grouping of content. Appearance is CSS’s job (Chapter 2).</p>
 </div>
 </div>
 </section>
 <section id="headings-create-hierarchy" class="level3">
 <h3 class="anchored" data-anchor-id="headings-create-hierarchy">Headings Create Hierarchy</h3>
-<p>Headings aren’t just “big text”—they create a document outline:</p>
+<p>Headings aren’t just “big text”, they create a document outline:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Sunrise Café<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span>           <span class="co">&lt;!-- Page title (one per page) --&gt;</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">h2</span><span class="dt">&gt;</span>Our Menu<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span>           <span class="co">&lt;!-- Major section --&gt;</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">h3</span><span class="dt">&gt;</span>Hot Drinks<span class="dt">&lt;/</span><span class="kw">h3</span><span class="dt">&gt;</span>     <span class="co">&lt;!-- Subsection --&gt;</span></span>
@@ -829,7 +829,7 @@ What happens if I leave out the DOCTYPE? Would the page still display?</code></p
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">h2</span><span class="dt">&gt;</span>Our Story<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span>          <span class="co">&lt;!-- Major section --&gt;</span></span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">h2</span><span class="dt">&gt;</span>Contact Us<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span>         <span class="co">&lt;!-- Major section --&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This hierarchy should make sense as an outline. Don’t skip levels (no jumping from h2 to h4) and don’t use headings just to make text bigger.</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 Show me a properly structured heading hierarchy for a small business
 website with pages for Home, Services, About, and Contact. Then show
 me a common mistake beginners make with headings.</code></pre>
@@ -840,7 +840,7 @@ me a common mistake beginners make with headings.</code></pre>
 <section id="the-tree-structure" class="level3">
 <h3 class="anchored" data-anchor-id="the-tree-structure">The Tree Structure</h3>
 <p>HTML forms a tree, like a family tree or organisation chart:</p>
-<pre><code>html
+<pre class="text"><code>html
 ├── head
 │   ├── meta
 │   └── title
@@ -858,7 +858,7 @@ me a common mistake beginners make with headings.</code></pre>
     └── footer
         └── p</code></pre>
 <p>Elements contain other elements. This nesting creates relationships: the <code>&lt;h2&gt;</code> belongs to its <code>&lt;section&gt;</code>, which belongs to <code>&lt;main&gt;</code>, which belongs to <code>&lt;body&gt;</code>.</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 Explain parent, child, and sibling relationships in HTML using a
 company organisational chart as an analogy.</code></pre>
 </section>
@@ -876,7 +876,7 @@ company organisational chart as an analogy.</code></pre>
 <section id="the-box-model-preview" class="level3">
 <h3 class="anchored" data-anchor-id="the-box-model-preview">The Box Model Preview</h3>
 <p>Every HTML element creates an invisible box on the page. These boxes stack and nest according to the document structure. In Chapter 2, we’ll learn to control these boxes with CSS. For now, understand that structure creates boxes, and boxes create layout.</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 If I put a section inside a main element, and two paragraphs inside
 that section, how many "boxes" have I created? Describe how they
 would stack.</code></pre>
@@ -887,15 +887,15 @@ would stack.</code></pre>
 <section id="search-engine-optimisation-seo" class="level3">
 <h3 class="anchored" data-anchor-id="search-engine-optimisation-seo">Search Engine Optimisation (SEO)</h3>
 <p>Search engines read your HTML structure to understand your content. A well-structured page with clear headings, semantic sections, and meaningful hierarchy ranks better than a soup of <code>&lt;div&gt;</code> elements.</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 How do search engines like Google use HTML structure to understand
 what a page is about? What happens when structure is missing or
 confusing?</code></pre>
 </section>
 <section id="accessibility" class="level3">
 <h3 class="anchored" data-anchor-id="accessibility">Accessibility</h3>
-<p>Screen readers—software used by visually impaired people—navigate by structure. Users can jump between headings, skip to main content, or list all navigation links. Without semantic HTML, this navigation is impossible.</p>
-<p>This isn’t just ethical—it’s often legal. Many jurisdictions require accessible websites for businesses, government, and education.</p>
+<p>Screen readers, software used by visually impaired people, navigate by structure. Users can jump between headings, skip to main content, or list all navigation links. Without semantic HTML, this navigation is impossible.</p>
+<p>This isn’t just ethical, it’s often legal. Many jurisdictions require accessible websites for businesses, government, and education.</p>
 </section>
 <section id="maintainability" class="level3">
 <h3 class="anchored" data-anchor-id="maintainability">Maintainability</h3>
@@ -903,18 +903,18 @@ confusing?</code></pre>
 </section>
 <section id="professional-credibility" class="level3">
 <h3 class="anchored" data-anchor-id="professional-credibility">Professional Credibility</h3>
-<p>When potential employers or clients view your page source, structure tells them about your professionalism. Clean, semantic HTML signals someone who understands web fundamentals—not just someone who copied code until something worked.</p>
+<p>When potential employers or clients view your page source, structure tells them about your professionalism. Clean, semantic HTML signals someone who understands web fundamentals, not just someone who copied code until something worked.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>ULO Connection
+<span class="screen-reader-only">Note</span>Skills You Are Building
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This develops <strong>ULO 1</strong> (design and evaluate effective web applications) and <strong>ULO 2</strong> (professional skills). Structure isn’t visible to casual viewers, but it’s visible to search engines, screen readers, developers, and anyone who inspects your code.</p>
+<p>This develops <strong>evaluating and improving solutions</strong> and <strong>professional communication and project management</strong>. Structure isn’t visible to casual viewers, but it’s visible to search engines, screen readers, developers, and anyone who inspects your code.</p>
 </div>
 </div>
 </section>
@@ -960,7 +960,7 @@ confusing?</code></pre>
 <li>What information belongs in the footer?</li>
 <li>What’s the heading hierarchy?</li>
 </ul>
-<p>Then, with your AI partner, translate your outline into semantic HTML. Compare your outline with the final code—did the structure remain clear?</p>
+<p>Then, with your AI partner, translate your outline into semantic HTML. Compare your outline with the final code, did the structure remain clear?</p>
 </section>
 <section id="exercise-1.3-fix-the-structure-level-3" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-1.3-fix-the-structure-level-3">Exercise 1.3: Fix the Structure (Level 3)</h3>
@@ -986,13 +986,13 @@ confusing?</code></pre>
 <li>They want to show their story and values</li>
 <li>They need contact information and a map</li>
 </ul>
-<p>Create a structural plan that addresses their requirements. Which semantic elements would you use for each requirement? Justify your choices in business terms—why does proper structure benefit this bakery?</p>
+<p>Create a structural plan that addresses their requirements. Which semantic elements would you use for each requirement? Justify your choices in business terms, why does proper structure benefit this bakery?</p>
 </section>
 <section id="exercise-1.5-semantic-debate-level-5" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-1.5-semantic-debate-level-5">Exercise 1.5: Semantic Debate (Level 5)</h3>
 <p>Should a “team members” section on an About page use <code>&lt;article&gt;</code> for each person, or <code>&lt;section&gt;</code>, or neither?</p>
 <p>Research the HTML specification’s definitions for both elements. Have a conversation with your AI partner exploring arguments for each choice. Write a short recommendation (200-300 words) defending your position with evidence from web standards.</p>
-<p>This exercise has no single correct answer—it develops your ability to make and defend technical decisions (ULO 4).</p>
+<p>This exercise has no single correct answer, it develops your ability to make and defend technical decisions (making and defending technology choices).</p>
 </section>
 </section>
 <section id="chapter-summary" class="level2" data-number="2.8">
@@ -1001,7 +1001,7 @@ confusing?</code></pre>
 <li>HTML describes document structure, not appearance</li>
 <li>Semantic elements convey meaning to humans and machines</li>
 <li>Every page has <code>&lt;head&gt;</code> (metadata) and <code>&lt;body&gt;</code> (content)</li>
-<li>Headings create hierarchy—don’t skip levels or use them for styling</li>
+<li>Headings create hierarchy, don’t skip levels or use them for styling</li>
 <li>Structure benefits SEO, accessibility, maintainability, and professionalism</li>
 <li>The structure you create is as important as the content you write</li>
 </ul>
@@ -1031,8 +1031,8 @@ confusing?</code></pre>
 </section>
 <section id="next-steps" class="level2" data-number="2.11">
 <h2 data-number="2.11" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">2.11</span> Next Steps</h2>
-<p>You now understand how to describe what content <em>is</em>. But a page with only HTML looks plain—black text on white background, default fonts, minimal layout.</p>
-<p>In <a href="chapter-presentation.html" class="quarto-xref"><span>Chapter 3</span></a>, we’ll explore CSS—how to control the visual presentation of our structured content. Structure and presentation are deliberately separate in web development, and understanding why is key to professional practice.</p>
+<p>You now understand how to describe what content <em>is</em>. But a page with only HTML looks plain, black text on white background, default fonts, minimal layout.</p>
+<p>In <a href="chapter-presentation.html" class="quarto-xref"><span>Chapter 3</span></a>, we’ll explore CSS, how to control the visual presentation of our structured content. Structure and presentation are deliberately separate in web development, and understanding why is key to professional practice.</p>
 <p>The structure you’ve learned to create becomes the foundation that CSS styles. Good structure makes styling straightforward; poor structure makes it a struggle.</p>
 
 
@@ -1525,11 +1525,11 @@ confusing?</code></pre>
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>Before we write any HTML, let's understand what we're really doing: **organising information so both humans and machines can understand it**.</span>
 <span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>Every document you've ever read has structure. A book has chapters, sections, and paragraphs. A business report has headings, bullet points, and tables. A restaurant menu has categories, items, and descriptions. This structure isn't decoration—it's how we communicate meaning.</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>Every document you've ever read has structure. A book has chapters, sections, and paragraphs. A business report has headings, bullet points, and tables. A restaurant menu has categories, items, and descriptions. This structure isn't decoration, it's how we communicate meaning.</span>
 <span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>HTML (HyperText Markup Language) is simply the language we use to describe document structure for the web. When you write HTML, you're not designing how something looks—you're declaring what something *is*.</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>HTML (HyperText Markup Language) is simply the language we use to describe document structure for the web. When you write HTML, you're not designing how something looks, you're declaring what something *is*.</span>
 <span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>This distinction matters enormously. A heading isn't big, bold text. A heading *is* a heading—a structural element that indicates hierarchy and importance. How it appears is a separate concern entirely.</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>This distinction matters enormously. A heading isn't big, bold text. A heading *is* a heading, a structural element that indicates hierarchy and importance. How it appears is a separate concern entirely.</span>
 <span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Understanding Through Architecture</span></span>
 <span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a></span>
@@ -1549,7 +1549,7 @@ confusing?</code></pre>
 <span id="cb20-28"><a href="#cb20-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Links** connect pages and resources</span>
 <span id="cb20-29"><a href="#cb20-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Web standards** ensure accessibility across devices</span>
 <span id="cb20-30"><a href="#cb20-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-31"><a href="#cb20-31" aria-hidden="true" tabindex="-1"></a>The parallel is precise. An architect doesn't just make a building that stands—they create spaces that people can navigate, understand, and use. A web developer doesn't just make a page that displays—they create documents that humans can read and machines can process.</span>
+<span id="cb20-31"><a href="#cb20-31" aria-hidden="true" tabindex="-1"></a>The parallel is precise. An architect doesn't just make a building that stands, they create spaces that people can navigate, understand, and use. A web developer doesn't just make a page that displays, they create documents that humans can read and machines can process.</span>
 <span id="cb20-32"><a href="#cb20-32" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-33"><a href="#cb20-33" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
 <span id="cb20-34"><a href="#cb20-34" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Architecture Mindset</span></span>
@@ -1564,18 +1564,18 @@ confusing?</code></pre>
 <span id="cb20-43"><a href="#cb20-43" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-44"><a href="#cb20-44" aria-hidden="true" tabindex="-1"></a>Before we think about HTML at all, let's think about documents:</span>
 <span id="cb20-45"><a href="#cb20-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-46"><a href="#cb20-46" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-46"><a href="#cb20-46" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb20-47"><a href="#cb20-47" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb20-48"><a href="#cb20-48" aria-hidden="true" tabindex="-1"></a><span class="in">If I showed you a restaurant menu, what structural elements would you</span></span>
-<span id="cb20-49"><a href="#cb20-49" aria-hidden="true" tabindex="-1"></a><span class="in">identify? Don't use any HTML terms yet—just describe the organisation</span></span>
+<span id="cb20-49"><a href="#cb20-49" aria-hidden="true" tabindex="-1"></a><span class="in">identify? Don't use any HTML terms yet, just describe the organisation</span></span>
 <span id="cb20-50"><a href="#cb20-50" aria-hidden="true" tabindex="-1"></a><span class="in">you see in plain English.</span></span>
 <span id="cb20-51"><a href="#cb20-51" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb20-52"><a href="#cb20-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-53"><a href="#cb20-53" aria-hidden="true" tabindex="-1"></a>Notice what your AI identifies: categories of food, individual items, descriptions, prices, perhaps special callouts for dietary information. This is structure—pure information architecture that exists independent of how it's presented.</span>
+<span id="cb20-53"><a href="#cb20-53" aria-hidden="true" tabindex="-1"></a>Notice what your AI identifies: categories of food, individual items, descriptions, prices, perhaps special callouts for dietary information. This is structure, pure information architecture that exists independent of how it's presented.</span>
 <span id="cb20-54"><a href="#cb20-54" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-55"><a href="#cb20-55" aria-hidden="true" tabindex="-1"></a>Now follow up:</span>
 <span id="cb20-56"><a href="#cb20-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-57"><a href="#cb20-57" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-57"><a href="#cb20-57" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb20-58"><a href="#cb20-58" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb20-59"><a href="#cb20-59" aria-hidden="true" tabindex="-1"></a><span class="in">How would those same structural elements appear in a company's</span></span>
 <span id="cb20-60"><a href="#cb20-60" aria-hidden="true" tabindex="-1"></a><span class="in">"About Us" page?</span></span>
@@ -1587,7 +1587,7 @@ confusing?</code></pre>
 <span id="cb20-66"><a href="#cb20-66" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-67"><a href="#cb20-67" aria-hidden="true" tabindex="-1"></a>The word "semantic" means "relating to meaning." Semantic HTML uses elements that describe what content *is*, not how it should *look*.</span>
 <span id="cb20-68"><a href="#cb20-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-69"><a href="#cb20-69" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-69"><a href="#cb20-69" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb20-70"><a href="#cb20-70" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb20-71"><a href="#cb20-71" aria-hidden="true" tabindex="-1"></a><span class="in">Explain "semantic HTML" using a library catalogue analogy. Why would</span></span>
 <span id="cb20-72"><a href="#cb20-72" aria-hidden="true" tabindex="-1"></a><span class="in">a librarian care whether a book is labelled as "fiction" versus just</span></span>
@@ -1598,9 +1598,9 @@ confusing?</code></pre>
 <span id="cb20-77"><a href="#cb20-77" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-78"><a href="#cb20-78" aria-hidden="true" tabindex="-1"></a>Follow up:</span>
 <span id="cb20-79"><a href="#cb20-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-80"><a href="#cb20-80" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-80"><a href="#cb20-80" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb20-81"><a href="#cb20-81" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
-<span id="cb20-82"><a href="#cb20-82" aria-hidden="true" tabindex="-1"></a><span class="in">What problems occur when web pages use visual-only structure—like</span></span>
+<span id="cb20-82"><a href="#cb20-82" aria-hidden="true" tabindex="-1"></a><span class="in">What problems occur when web pages use visual-only structure, like</span></span>
 <span id="cb20-83"><a href="#cb20-83" aria-hidden="true" tabindex="-1"></a><span class="in">making text big and bold instead of marking it as a heading?</span></span>
 <span id="cb20-84"><a href="#cb20-84" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb20-85"><a href="#cb20-85" aria-hidden="true" tabindex="-1"></a></span>
@@ -1608,7 +1608,7 @@ confusing?</code></pre>
 <span id="cb20-87"><a href="#cb20-87" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-88"><a href="#cb20-88" aria-hidden="true" tabindex="-1"></a>Now let's see actual HTML, but the simplest possible version:</span>
 <span id="cb20-89"><a href="#cb20-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-90"><a href="#cb20-90" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-90"><a href="#cb20-90" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb20-91"><a href="#cb20-91" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb20-92"><a href="#cb20-92" aria-hidden="true" tabindex="-1"></a><span class="in">Show me the absolute simplest valid HTML page that contains just a</span></span>
 <span id="cb20-93"><a href="#cb20-93" aria-hidden="true" tabindex="-1"></a><span class="in">heading and a paragraph. Explain what each line does as if I've never</span></span>
@@ -1631,14 +1631,14 @@ confusing?</code></pre>
 <span id="cb20-110"><a href="#cb20-110" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>html<span class="op">&gt;</span></span>
 <span id="cb20-111"><a href="#cb20-111" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb20-112"><a href="#cb20-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-113"><a href="#cb20-113" aria-hidden="true" tabindex="-1"></a>Don't just accept this—have a conversation about it:</span>
+<span id="cb20-113"><a href="#cb20-113" aria-hidden="true" tabindex="-1"></a>Don't just accept this, have a conversation about it:</span>
 <span id="cb20-114"><a href="#cb20-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-115"><a href="#cb20-115" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-115"><a href="#cb20-115" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb20-116"><a href="#cb20-116" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb20-117"><a href="#cb20-117" aria-hidden="true" tabindex="-1"></a><span class="in">Why is lang="en" important? Who or what uses that information?</span></span>
 <span id="cb20-118"><a href="#cb20-118" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb20-119"><a href="#cb20-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-120"><a href="#cb20-120" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-120"><a href="#cb20-120" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb20-121"><a href="#cb20-121" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb20-122"><a href="#cb20-122" aria-hidden="true" tabindex="-1"></a><span class="in">What happens if I leave out the DOCTYPE? Would the page still display?</span></span>
 <span id="cb20-123"><a href="#cb20-123" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
@@ -1660,7 +1660,7 @@ confusing?</code></pre>
 <span id="cb20-139"><a href="#cb20-139" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>html<span class="op">&gt;</span></span>
 <span id="cb20-140"><a href="#cb20-140" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb20-141"><a href="#cb20-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-142"><a href="#cb20-142" aria-hidden="true" tabindex="-1"></a>The <span class="in">`&lt;!DOCTYPE html&gt;`</span> tells browsers "this is a modern HTML document." The <span class="in">`&lt;html&gt;`</span> element is the root container for everything else. The <span class="in">`lang`</span> attribute declares the language—essential for screen readers and translation tools.</span>
+<span id="cb20-142"><a href="#cb20-142" aria-hidden="true" tabindex="-1"></a>The <span class="in">`&lt;!DOCTYPE html&gt;`</span> tells browsers "this is a modern HTML document." The <span class="in">`&lt;html&gt;`</span> element is the root container for everything else. The <span class="in">`lang`</span> attribute declares the language, essential for screen readers and translation tools.</span>
 <span id="cb20-143"><a href="#cb20-143" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-144"><a href="#cb20-144" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Two Main Sections</span></span>
 <span id="cb20-145"><a href="#cb20-145" aria-hidden="true" tabindex="-1"></a></span>
@@ -1680,7 +1680,7 @@ confusing?</code></pre>
 <span id="cb20-159"><a href="#cb20-159" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>html<span class="op">&gt;</span></span>
 <span id="cb20-160"><a href="#cb20-160" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb20-161"><a href="#cb20-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-162"><a href="#cb20-162" aria-hidden="true" tabindex="-1"></a>The <span class="in">`&lt;head&gt;`</span> contains metadata—information about the page that doesn't appear on screen. The <span class="in">`&lt;body&gt;`</span> contains the actual content visitors see and interact with.</span>
+<span id="cb20-162"><a href="#cb20-162" aria-hidden="true" tabindex="-1"></a>The <span class="in">`&lt;head&gt;`</span> contains metadata, information about the page that doesn't appear on screen. The <span class="in">`&lt;body&gt;`</span> contains the actual content visitors see and interact with.</span>
 <span id="cb20-163"><a href="#cb20-163" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-164"><a href="#cb20-164" aria-hidden="true" tabindex="-1"></a>Think of it like a business letter: the <span class="in">`&lt;head&gt;`</span> is the envelope with addresses and stamps, while the <span class="in">`&lt;body&gt;`</span> is the letter inside.</span>
 <span id="cb20-165"><a href="#cb20-165" aria-hidden="true" tabindex="-1"></a></span>
@@ -1716,12 +1716,12 @@ confusing?</code></pre>
 <span id="cb20-195"><a href="#cb20-195" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-196"><a href="#cb20-196" aria-hidden="true" tabindex="-1"></a>Notice what we've communicated:</span>
 <span id="cb20-197"><a href="#cb20-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-198"><a href="#cb20-198" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`&lt;header&gt;`</span> — the introductory content for the page</span>
-<span id="cb20-199"><a href="#cb20-199" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`&lt;main&gt;`</span> — the primary content (there should only be one)</span>
-<span id="cb20-200"><a href="#cb20-200" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`&lt;section&gt;`</span> — distinct, thematically grouped content</span>
-<span id="cb20-201"><a href="#cb20-201" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`&lt;footer&gt;`</span> — closing information</span>
-<span id="cb20-202"><a href="#cb20-202" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`&lt;h1&gt;`</span>, <span class="in">`&lt;h2&gt;`</span> — heading hierarchy (h1 is most important)</span>
-<span id="cb20-203"><a href="#cb20-203" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`&lt;p&gt;`</span> — paragraphs of text</span>
+<span id="cb20-198"><a href="#cb20-198" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`&lt;header&gt;`</span>. The introductory content for the page</span>
+<span id="cb20-199"><a href="#cb20-199" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`&lt;main&gt;`</span>. The primary content (there should only be one)</span>
+<span id="cb20-200"><a href="#cb20-200" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`&lt;section&gt;`</span>, distinct, thematically grouped content</span>
+<span id="cb20-201"><a href="#cb20-201" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`&lt;footer&gt;`</span>, closing information</span>
+<span id="cb20-202"><a href="#cb20-202" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`&lt;h1&gt;`</span>, <span class="in">`&lt;h2&gt;`</span>, heading hierarchy (h1 is most important)</span>
+<span id="cb20-203"><a href="#cb20-203" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`&lt;p&gt;`</span>, paragraphs of text</span>
 <span id="cb20-204"><a href="#cb20-204" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-205"><a href="#cb20-205" aria-hidden="true" tabindex="-1"></a>A screen reader can now navigate this page by headings. Search engines understand what's primary content versus footer material. Future developers can immediately grasp the page structure.</span>
 <span id="cb20-206"><a href="#cb20-206" aria-hidden="true" tabindex="-1"></a></span>
@@ -1741,12 +1741,12 @@ confusing?</code></pre>
 <span id="cb20-220"><a href="#cb20-220" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-221"><a href="#cb20-221" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
 <span id="cb20-222"><a href="#cb20-222" aria-hidden="true" tabindex="-1"></a><span class="fu">## Common Mistake</span></span>
-<span id="cb20-223"><a href="#cb20-223" aria-hidden="true" tabindex="-1"></a>Don't choose elements based on how they look by default. Choose them based on what the content *is*. A <span class="in">`&lt;section&gt;`</span> isn't "a box"—it's a thematic grouping of content. Appearance is CSS's job (Chapter 2).</span>
+<span id="cb20-223"><a href="#cb20-223" aria-hidden="true" tabindex="-1"></a>Don't choose elements based on how they look by default. Choose them based on what the content *is*. A <span class="in">`&lt;section&gt;`</span> isn't "a box", it's a thematic grouping of content. Appearance is CSS's job (Chapter 2).</span>
 <span id="cb20-224"><a href="#cb20-224" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb20-225"><a href="#cb20-225" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-226"><a href="#cb20-226" aria-hidden="true" tabindex="-1"></a><span class="fu">### Headings Create Hierarchy</span></span>
 <span id="cb20-227"><a href="#cb20-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-228"><a href="#cb20-228" aria-hidden="true" tabindex="-1"></a>Headings aren't just "big text"—they create a document outline:</span>
+<span id="cb20-228"><a href="#cb20-228" aria-hidden="true" tabindex="-1"></a>Headings aren't just "big text", they create a document outline:</span>
 <span id="cb20-229"><a href="#cb20-229" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-230"><a href="#cb20-230" aria-hidden="true" tabindex="-1"></a><span class="in">```html</span></span>
 <span id="cb20-231"><a href="#cb20-231" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>h1<span class="op">&gt;</span>Sunrise Café<span class="op">&lt;/</span>h1<span class="op">&gt;</span>           <span class="op">&lt;!--</span> Page title <span class="op">(</span>one per page<span class="op">)</span> <span class="op">--&gt;</span></span>
@@ -1759,7 +1759,7 @@ confusing?</code></pre>
 <span id="cb20-238"><a href="#cb20-238" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-239"><a href="#cb20-239" aria-hidden="true" tabindex="-1"></a>This hierarchy should make sense as an outline. Don't skip levels (no jumping from h2 to h4) and don't use headings just to make text bigger.</span>
 <span id="cb20-240"><a href="#cb20-240" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-241"><a href="#cb20-241" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-241"><a href="#cb20-241" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb20-242"><a href="#cb20-242" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb20-243"><a href="#cb20-243" aria-hidden="true" tabindex="-1"></a><span class="in">Show me a properly structured heading hierarchy for a small business</span></span>
 <span id="cb20-244"><a href="#cb20-244" aria-hidden="true" tabindex="-1"></a><span class="in">website with pages for Home, Services, About, and Contact. Then show</span></span>
@@ -1772,7 +1772,7 @@ confusing?</code></pre>
 <span id="cb20-251"><a href="#cb20-251" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-252"><a href="#cb20-252" aria-hidden="true" tabindex="-1"></a>HTML forms a tree, like a family tree or organisation chart:</span>
 <span id="cb20-253"><a href="#cb20-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-254"><a href="#cb20-254" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-254"><a href="#cb20-254" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb20-255"><a href="#cb20-255" aria-hidden="true" tabindex="-1"></a><span class="in">html</span></span>
 <span id="cb20-256"><a href="#cb20-256" aria-hidden="true" tabindex="-1"></a><span class="in">├── head</span></span>
 <span id="cb20-257"><a href="#cb20-257" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── meta</span></span>
@@ -1794,7 +1794,7 @@ confusing?</code></pre>
 <span id="cb20-273"><a href="#cb20-273" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-274"><a href="#cb20-274" aria-hidden="true" tabindex="-1"></a>Elements contain other elements. This nesting creates relationships: the <span class="in">`&lt;h2&gt;`</span> belongs to its <span class="in">`&lt;section&gt;`</span>, which belongs to <span class="in">`&lt;main&gt;`</span>, which belongs to <span class="in">`&lt;body&gt;`</span>.</span>
 <span id="cb20-275"><a href="#cb20-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-276"><a href="#cb20-276" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-276"><a href="#cb20-276" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb20-277"><a href="#cb20-277" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb20-278"><a href="#cb20-278" aria-hidden="true" tabindex="-1"></a><span class="in">Explain parent, child, and sibling relationships in HTML using a</span></span>
 <span id="cb20-279"><a href="#cb20-279" aria-hidden="true" tabindex="-1"></a><span class="in">company organisational chart as an analogy.</span></span>
@@ -1817,7 +1817,7 @@ confusing?</code></pre>
 <span id="cb20-296"><a href="#cb20-296" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-297"><a href="#cb20-297" aria-hidden="true" tabindex="-1"></a>Every HTML element creates an invisible box on the page. These boxes stack and nest according to the document structure. In Chapter 2, we'll learn to control these boxes with CSS. For now, understand that structure creates boxes, and boxes create layout.</span>
 <span id="cb20-298"><a href="#cb20-298" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-299"><a href="#cb20-299" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-299"><a href="#cb20-299" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb20-300"><a href="#cb20-300" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb20-301"><a href="#cb20-301" aria-hidden="true" tabindex="-1"></a><span class="in">If I put a section inside a main element, and two paragraphs inside</span></span>
 <span id="cb20-302"><a href="#cb20-302" aria-hidden="true" tabindex="-1"></a><span class="in">that section, how many "boxes" have I created? Describe how they</span></span>
@@ -1830,7 +1830,7 @@ confusing?</code></pre>
 <span id="cb20-309"><a href="#cb20-309" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-310"><a href="#cb20-310" aria-hidden="true" tabindex="-1"></a>Search engines read your HTML structure to understand your content. A well-structured page with clear headings, semantic sections, and meaningful hierarchy ranks better than a soup of <span class="in">`&lt;div&gt;`</span> elements.</span>
 <span id="cb20-311"><a href="#cb20-311" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-312"><a href="#cb20-312" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-312"><a href="#cb20-312" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb20-313"><a href="#cb20-313" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb20-314"><a href="#cb20-314" aria-hidden="true" tabindex="-1"></a><span class="in">How do search engines like Google use HTML structure to understand</span></span>
 <span id="cb20-315"><a href="#cb20-315" aria-hidden="true" tabindex="-1"></a><span class="in">what a page is about? What happens when structure is missing or</span></span>
@@ -1839,9 +1839,9 @@ confusing?</code></pre>
 <span id="cb20-318"><a href="#cb20-318" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-319"><a href="#cb20-319" aria-hidden="true" tabindex="-1"></a><span class="fu">### Accessibility</span></span>
 <span id="cb20-320"><a href="#cb20-320" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-321"><a href="#cb20-321" aria-hidden="true" tabindex="-1"></a>Screen readers—software used by visually impaired people—navigate by structure. Users can jump between headings, skip to main content, or list all navigation links. Without semantic HTML, this navigation is impossible.</span>
+<span id="cb20-321"><a href="#cb20-321" aria-hidden="true" tabindex="-1"></a>Screen readers, software used by visually impaired people, navigate by structure. Users can jump between headings, skip to main content, or list all navigation links. Without semantic HTML, this navigation is impossible.</span>
 <span id="cb20-322"><a href="#cb20-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-323"><a href="#cb20-323" aria-hidden="true" tabindex="-1"></a>This isn't just ethical—it's often legal. Many jurisdictions require accessible websites for businesses, government, and education.</span>
+<span id="cb20-323"><a href="#cb20-323" aria-hidden="true" tabindex="-1"></a>This isn't just ethical, it's often legal. Many jurisdictions require accessible websites for businesses, government, and education.</span>
 <span id="cb20-324"><a href="#cb20-324" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-325"><a href="#cb20-325" aria-hidden="true" tabindex="-1"></a><span class="fu">### Maintainability</span></span>
 <span id="cb20-326"><a href="#cb20-326" aria-hidden="true" tabindex="-1"></a></span>
@@ -1849,11 +1849,11 @@ confusing?</code></pre>
 <span id="cb20-328"><a href="#cb20-328" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-329"><a href="#cb20-329" aria-hidden="true" tabindex="-1"></a><span class="fu">### Professional Credibility</span></span>
 <span id="cb20-330"><a href="#cb20-330" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-331"><a href="#cb20-331" aria-hidden="true" tabindex="-1"></a>When potential employers or clients view your page source, structure tells them about your professionalism. Clean, semantic HTML signals someone who understands web fundamentals—not just someone who copied code until something worked.</span>
+<span id="cb20-331"><a href="#cb20-331" aria-hidden="true" tabindex="-1"></a>When potential employers or clients view your page source, structure tells them about your professionalism. Clean, semantic HTML signals someone who understands web fundamentals, not just someone who copied code until something worked.</span>
 <span id="cb20-332"><a href="#cb20-332" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-333"><a href="#cb20-333" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb20-334"><a href="#cb20-334" aria-hidden="true" tabindex="-1"></a><span class="fu">## ULO Connection</span></span>
-<span id="cb20-335"><a href="#cb20-335" aria-hidden="true" tabindex="-1"></a>This develops **ULO 1** (design and evaluate effective web applications) and **ULO 2** (professional skills). Structure isn't visible to casual viewers, but it's visible to search engines, screen readers, developers, and anyone who inspects your code.</span>
+<span id="cb20-334"><a href="#cb20-334" aria-hidden="true" tabindex="-1"></a><span class="fu">## Skills You Are Building</span></span>
+<span id="cb20-335"><a href="#cb20-335" aria-hidden="true" tabindex="-1"></a>This develops **evaluating and improving solutions** and **professional communication and project management**. Structure isn't visible to casual viewers, but it's visible to search engines, screen readers, developers, and anyone who inspects your code.</span>
 <span id="cb20-336"><a href="#cb20-336" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb20-337"><a href="#cb20-337" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-338"><a href="#cb20-338" aria-hidden="true" tabindex="-1"></a><span class="fu">## Practice Exercises</span></span>
@@ -1887,7 +1887,7 @@ confusing?</code></pre>
 <span id="cb20-366"><a href="#cb20-366" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What information belongs in the footer?</span>
 <span id="cb20-367"><a href="#cb20-367" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What's the heading hierarchy?</span>
 <span id="cb20-368"><a href="#cb20-368" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-369"><a href="#cb20-369" aria-hidden="true" tabindex="-1"></a>Then, with your AI partner, translate your outline into semantic HTML. Compare your outline with the final code—did the structure remain clear?</span>
+<span id="cb20-369"><a href="#cb20-369" aria-hidden="true" tabindex="-1"></a>Then, with your AI partner, translate your outline into semantic HTML. Compare your outline with the final code, did the structure remain clear?</span>
 <span id="cb20-370"><a href="#cb20-370" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-371"><a href="#cb20-371" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 1.3: Fix the Structure (Level 3)</span></span>
 <span id="cb20-372"><a href="#cb20-372" aria-hidden="true" tabindex="-1"></a></span>
@@ -1917,7 +1917,7 @@ confusing?</code></pre>
 <span id="cb20-396"><a href="#cb20-396" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>They want to show their story and values</span>
 <span id="cb20-397"><a href="#cb20-397" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>They need contact information and a map</span>
 <span id="cb20-398"><a href="#cb20-398" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-399"><a href="#cb20-399" aria-hidden="true" tabindex="-1"></a>Create a structural plan that addresses their requirements. Which semantic elements would you use for each requirement? Justify your choices in business terms—why does proper structure benefit this bakery?</span>
+<span id="cb20-399"><a href="#cb20-399" aria-hidden="true" tabindex="-1"></a>Create a structural plan that addresses their requirements. Which semantic elements would you use for each requirement? Justify your choices in business terms, why does proper structure benefit this bakery?</span>
 <span id="cb20-400"><a href="#cb20-400" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-401"><a href="#cb20-401" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 1.5: Semantic Debate (Level 5)</span></span>
 <span id="cb20-402"><a href="#cb20-402" aria-hidden="true" tabindex="-1"></a></span>
@@ -1925,14 +1925,14 @@ confusing?</code></pre>
 <span id="cb20-404"><a href="#cb20-404" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-405"><a href="#cb20-405" aria-hidden="true" tabindex="-1"></a>Research the HTML specification's definitions for both elements. Have a conversation with your AI partner exploring arguments for each choice. Write a short recommendation (200-300 words) defending your position with evidence from web standards.</span>
 <span id="cb20-406"><a href="#cb20-406" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-407"><a href="#cb20-407" aria-hidden="true" tabindex="-1"></a>This exercise has no single correct answer—it develops your ability to make and defend technical decisions (ULO 4).</span>
+<span id="cb20-407"><a href="#cb20-407" aria-hidden="true" tabindex="-1"></a>This exercise has no single correct answer, it develops your ability to make and defend technical decisions (making and defending technology choices).</span>
 <span id="cb20-408"><a href="#cb20-408" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-409"><a href="#cb20-409" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chapter Summary</span></span>
 <span id="cb20-410"><a href="#cb20-410" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-411"><a href="#cb20-411" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>HTML describes document structure, not appearance</span>
 <span id="cb20-412"><a href="#cb20-412" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Semantic elements convey meaning to humans and machines</span>
 <span id="cb20-413"><a href="#cb20-413" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Every page has <span class="in">`&lt;head&gt;`</span> (metadata) and <span class="in">`&lt;body&gt;`</span> (content)</span>
-<span id="cb20-414"><a href="#cb20-414" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Headings create hierarchy—don't skip levels or use them for styling</span>
+<span id="cb20-414"><a href="#cb20-414" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Headings create hierarchy, don't skip levels or use them for styling</span>
 <span id="cb20-415"><a href="#cb20-415" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Structure benefits SEO, accessibility, maintainability, and professionalism</span>
 <span id="cb20-416"><a href="#cb20-416" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The structure you create is as important as the content you write</span>
 <span id="cb20-417"><a href="#cb20-417" aria-hidden="true" tabindex="-1"></a></span>
@@ -1962,9 +1962,9 @@ confusing?</code></pre>
 <span id="cb20-441"><a href="#cb20-441" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-442"><a href="#cb20-442" aria-hidden="true" tabindex="-1"></a><span class="fu">## Next Steps</span></span>
 <span id="cb20-443"><a href="#cb20-443" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-444"><a href="#cb20-444" aria-hidden="true" tabindex="-1"></a>You now understand how to describe what content *is*. But a page with only HTML looks plain—black text on white background, default fonts, minimal layout.</span>
+<span id="cb20-444"><a href="#cb20-444" aria-hidden="true" tabindex="-1"></a>You now understand how to describe what content *is*. But a page with only HTML looks plain, black text on white background, default fonts, minimal layout.</span>
 <span id="cb20-445"><a href="#cb20-445" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-446"><a href="#cb20-446" aria-hidden="true" tabindex="-1"></a>In @sec-presentation, we'll explore CSS—how to control the visual presentation of our structured content. Structure and presentation are deliberately separate in web development, and understanding why is key to professional practice.</span>
+<span id="cb20-446"><a href="#cb20-446" aria-hidden="true" tabindex="-1"></a>In @sec-presentation, we'll explore CSS, how to control the visual presentation of our structured content. Structure and presentation are deliberately separate in web development, and understanding why is key to professional practice.</span>
 <span id="cb20-447"><a href="#cb20-447" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-448"><a href="#cb20-448" aria-hidden="true" tabindex="-1"></a>The structure you've learned to create becomes the foundation that CSS styles. Good structure makes styling straightforward; poor structure makes it a struggle.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>

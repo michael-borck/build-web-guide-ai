@@ -332,7 +332,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/reading-list.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Weekly Reading List</span></a>
+ <span class="menu-text">Recommended Resources</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -601,7 +601,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="the-concept-first" class="level2" data-number="10.1">
 <h2 data-number="10.1" class="anchored" data-anchor-id="the-concept-first"><span class="header-section-number">10.1</span> The Concept First</h2>
 <p>In previous chapters, WordPress handled everything: it stored content, managed users, and generated the HTML visitors see. The content management and the website delivery were one unified system.</p>
-<p><strong>Headless architecture</strong> separates these concerns. WordPress becomes a <em>content backend</em>—storing and managing content—while a separate <em>frontend</em> application handles presentation. They communicate through APIs.</p>
+<p><strong>Headless architecture</strong> separates these concerns. WordPress becomes a <em>content backend</em>, storing and managing content, while a separate <em>frontend</em> application handles presentation. They communicate through APIs.</p>
 <p>Why would you do this? Because sometimes you want:</p>
 <ul>
 <li>WordPress’s excellent content management</li>
@@ -629,7 +629,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Each outlet can have different ambiance (different frontends)</li>
 <li>Kitchen changes don’t require redesigning dining rooms</li>
 </ul>
-<p>The central kitchen can supply a fine dining restaurant, a casual café, and a food truck—each with completely different presentations of the same underlying food.</p>
+<p>The central kitchen can supply a fine dining restaurant, a casual café, and a food truck, each with completely different presentations of the same underlying food.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -640,7 +640,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>“Headless” means the CMS has no “head”—no built-in frontend. It’s all backend. Content exits only through APIs, and something else (the “head”) must display it.</p>
+<p>“Headless” means the CMS has no “head”, no built-in frontend. It’s all backend. Content exits only through APIs, and something else (the “head”) must display it.</p>
 </div>
 </div>
 </section>
@@ -649,7 +649,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="exploration-1-architecture-trade-offs" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-1-architecture-trade-offs">Exploration 1: Architecture Trade-offs</h3>
 <p>Every architecture has trade-offs. Let’s explore them:</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 Compare traditional WordPress versus headless WordPress architecture.
 What does each approach do well? What problems does each create?
 Create a decision matrix.</code></pre>
@@ -668,7 +668,7 @@ Create a decision matrix.</code></pre>
 <li>Multi-channel content delivery</li>
 <li>Modern developer experience</li>
 </ul>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 When would a small business with limited technical resources choose
 headless? When would a tech company with developers still choose
 traditional WordPress?</code></pre>
@@ -676,7 +676,7 @@ traditional WordPress?</code></pre>
 <section id="exploration-2-apis-as-contracts" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-2-apis-as-contracts">Exploration 2: APIs as Contracts</h3>
 <p>The API is the contract between backend and frontend:</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 Explain how the WordPress REST API works as a "contract" between the
 content backend and the frontend application. What does the frontend
 expect? What does WordPress promise to provide?</code></pre>
@@ -688,14 +688,14 @@ expect? What does WordPress promise to provide?</code></pre>
 <li>What errors might occur</li>
 </ul>
 <p>Frontend developers can build against this contract without needing to understand PHP or WordPress internals.</p>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 What happens if WordPress changes its API in an update? How do you
 manage API versioning and prevent breaking the frontend?</code></pre>
 </section>
 <section id="exploration-3-business-cases" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-3-business-cases">Exploration 3: Business Cases</h3>
 <p>Where does headless make practical sense?</p>
-<pre><code>Ask your AI:
+<pre class="text"><code>Ask your AI:
 Give me three real-world scenarios where headless WordPress would
 be the right architecture choice, and explain why traditional
 WordPress wouldn't work as well.</code></pre>
@@ -706,7 +706,7 @@ WordPress wouldn't work as well.</code></pre>
 <li>Organisations integrating content into existing applications</li>
 <li>Sites requiring the fastest possible load times (static generation)</li>
 </ul>
-<pre><code>Continue the conversation:
+<pre class="text"><code>Continue the conversation:
 What about a local bakery's website? Would headless make sense there?
 Why or why not?</code></pre>
 </section>
@@ -964,8 +964,8 @@ Why or why not?</code></pre>
 <span id="cb12-81"><a href="#cb12-81" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
 <span id="cb12-82"><a href="#cb12-82" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
 <span id="cb12-83"><a href="#cb12-83" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Save this as an HTML file and open it in a browser. It fetches posts from your local WordPress site and displays them—completely independently of WordPress themes.</p>
-<pre><code>Ask your AI:
+<p>Save this as an HTML file and open it in a browser. It fetches posts from your local WordPress site and displays them, completely independently of WordPress themes.</p>
+<pre class="text"><code>Ask your AI:
 Walk me through this code. What happens at each step? How would I
 modify it to also show the post date and author name?</code></pre>
 </section>
@@ -1017,7 +1017,7 @@ modify it to also show the post date and author name?</code></pre>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Never expose application passwords in frontend JavaScript—they’d be visible to anyone. Authentication is typically handled by a backend server that proxies requests to WordPress.</p>
+<p>Never expose application passwords in frontend JavaScript, they’d be visible to anyone. Authentication is typically handled by a backend server that proxies requests to WordPress.</p>
 </div>
 </div>
 </section>
@@ -1043,7 +1043,7 @@ modify it to also show the post date and author name?</code></pre>
 <section id="traditional-vs-headless-architecture" class="level3">
 <h3 class="anchored" data-anchor-id="traditional-vs-headless-architecture">Traditional vs Headless Architecture</h3>
 <p><strong>Traditional WordPress:</strong></p>
-<pre><code>┌────────────────────────────────────────┐
+<pre class="text"><code>┌────────────────────────────────────────┐
 │             WordPress                   │
 │  ┌─────────────┐  ┌─────────────────┐  │
 │  │   Content   │──│     Theme       │  │
@@ -1054,7 +1054,7 @@ modify it to also show the post date and author name?</code></pre>
                             ▼
                         Browser</code></pre>
 <p><strong>Headless WordPress:</strong></p>
-<pre><code>┌──────────────────┐        ┌─────────────────┐
+<pre class="text"><code>┌──────────────────┐        ┌─────────────────┐
 │    WordPress     │        │    Frontend     │
 │  ┌────────────┐  │  API   │  (React, etc.)  │
 │  │  Content   │  │◄──────►│                 │
@@ -1145,7 +1145,7 @@ modify it to also show the post date and author name?</code></pre>
 <li>Some WordPress plugins don’t work</li>
 <li>More technical expertise required</li>
 </ul>
-<p>This complexity has costs. Headless is a tool—use it when benefits outweigh costs.</p>
+<p>This complexity has costs. Headless is a tool, use it when benefits outweigh costs.</p>
 </section>
 </section>
 <section id="business-applications" class="level2" data-number="10.6">
@@ -1170,7 +1170,7 @@ modify it to also show the post date and author name?</code></pre>
 <li>Cached at the edge (CDN)</li>
 <li>Optimised specifically for performance</li>
 </ul>
-<p>This matters for SEO and user experience—Google measures page speed.</p>
+<p>This matters for SEO and user experience. Google measures page speed.</p>
 </section>
 <section id="security-benefits" class="level3">
 <h3 class="anchored" data-anchor-id="security-benefits">Security Benefits</h3>
@@ -1199,11 +1199,11 @@ modify it to also show the post date and author name?</code></pre>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>ULO Connection
+<span class="screen-reader-only">Note</span>Skills You Are Building
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This develops <strong>ULO 4</strong> (selecting appropriate technologies) and <strong>ULO 5</strong> (evaluating emerging approaches). Headless architecture is a significant trend in web development. Understanding when it applies—and when it doesn’t—demonstrates professional judgment.</p>
+<p>This develops <strong>making and defending technology choices</strong> and <strong>assessing emerging technologies</strong>. Headless architecture is a significant trend in web development. Understanding when it applies, and when it doesn’t, demonstrates professional judgment.</p>
 </div>
 </div>
 </section>
@@ -1234,7 +1234,7 @@ modify it to also show the post date and author name?</code></pre>
 <p>Using your local WordPress site:</p>
 <ol type="1">
 <li>Open a browser and visit <code>/wp-json/wp/v2/posts</code></li>
-<li>Explore the JSON structure—identify title, content, date, and other fields</li>
+<li>Explore the JSON structure, identify title, content, date, and other fields</li>
 <li>Try different endpoints: <code>/pages</code>, <code>/categories</code>, <code>/media</code></li>
 <li>Add <code>?_embed</code> and observe how the response changes</li>
 </ol>
@@ -1342,7 +1342,7 @@ modify it to also show the post date and author name?</code></pre>
 <li>Headless architecture and the REST API</li>
 </ul>
 <p>In <a href="../projects/project-business-site.html" class="quarto-xref"><span>Chapter 11</span></a>, you’ll build a complete WordPress business site, applying everything from this part. This project demonstrates your ability to make and implement technology decisions for real business needs.</p>
-<p>Then, in Part III, we’ll build on the API knowledge from this chapter to create React frontends—bringing modern frontend development into your skillset.</p>
+<p>Then, in Part III, we’ll build on the API knowledge from this chapter to create React frontends, bringing modern frontend development into your skillset.</p>
 
 
 <!-- -->
@@ -1834,7 +1834,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>In previous chapters, WordPress handled everything: it stored content, managed users, and generated the HTML visitors see. The content management and the website delivery were one unified system.</span>
 <span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>**Headless architecture** separates these concerns. WordPress becomes a *content backend*—storing and managing content—while a separate *frontend* application handles presentation. They communicate through APIs.</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>**Headless architecture** separates these concerns. WordPress becomes a *content backend*, storing and managing content, while a separate *frontend* application handles presentation. They communicate through APIs.</span>
 <span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>Why would you do this? Because sometimes you want:</span>
 <span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a></span>
@@ -1864,11 +1864,11 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-34"><a href="#cb21-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Each outlet can have different ambiance (different frontends)</span>
 <span id="cb21-35"><a href="#cb21-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Kitchen changes don't require redesigning dining rooms</span>
 <span id="cb21-36"><a href="#cb21-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-37"><a href="#cb21-37" aria-hidden="true" tabindex="-1"></a>The central kitchen can supply a fine dining restaurant, a casual café, and a food truck—each with completely different presentations of the same underlying food.</span>
+<span id="cb21-37"><a href="#cb21-37" aria-hidden="true" tabindex="-1"></a>The central kitchen can supply a fine dining restaurant, a casual café, and a food truck, each with completely different presentations of the same underlying food.</span>
 <span id="cb21-38"><a href="#cb21-38" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-39"><a href="#cb21-39" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
 <span id="cb21-40"><a href="#cb21-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## Headless = API-First</span></span>
-<span id="cb21-41"><a href="#cb21-41" aria-hidden="true" tabindex="-1"></a>"Headless" means the CMS has no "head"—no built-in frontend. It's all backend. Content exits only through APIs, and something else (the "head") must display it.</span>
+<span id="cb21-41"><a href="#cb21-41" aria-hidden="true" tabindex="-1"></a>"Headless" means the CMS has no "head", no built-in frontend. It's all backend. Content exits only through APIs, and something else (the "head") must display it.</span>
 <span id="cb21-42"><a href="#cb21-42" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb21-43"><a href="#cb21-43" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-44"><a href="#cb21-44" aria-hidden="true" tabindex="-1"></a><span class="fu">## Discovering Headless with Your AI Partner</span></span>
@@ -1877,7 +1877,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-47"><a href="#cb21-47" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-48"><a href="#cb21-48" aria-hidden="true" tabindex="-1"></a>Every architecture has trade-offs. Let's explore them:</span>
 <span id="cb21-49"><a href="#cb21-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-50"><a href="#cb21-50" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-50"><a href="#cb21-50" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb21-51"><a href="#cb21-51" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb21-52"><a href="#cb21-52" aria-hidden="true" tabindex="-1"></a><span class="in">Compare traditional WordPress versus headless WordPress architecture.</span></span>
 <span id="cb21-53"><a href="#cb21-53" aria-hidden="true" tabindex="-1"></a><span class="in">What does each approach do well? What problems does each create?</span></span>
@@ -1900,7 +1900,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-70"><a href="#cb21-70" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Multi-channel content delivery</span>
 <span id="cb21-71"><a href="#cb21-71" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Modern developer experience</span>
 <span id="cb21-72"><a href="#cb21-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-73"><a href="#cb21-73" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-73"><a href="#cb21-73" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb21-74"><a href="#cb21-74" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb21-75"><a href="#cb21-75" aria-hidden="true" tabindex="-1"></a><span class="in">When would a small business with limited technical resources choose</span></span>
 <span id="cb21-76"><a href="#cb21-76" aria-hidden="true" tabindex="-1"></a><span class="in">headless? When would a tech company with developers still choose</span></span>
@@ -1911,7 +1911,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-81"><a href="#cb21-81" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-82"><a href="#cb21-82" aria-hidden="true" tabindex="-1"></a>The API is the contract between backend and frontend:</span>
 <span id="cb21-83"><a href="#cb21-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-84"><a href="#cb21-84" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-84"><a href="#cb21-84" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb21-85"><a href="#cb21-85" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb21-86"><a href="#cb21-86" aria-hidden="true" tabindex="-1"></a><span class="in">Explain how the WordPress REST API works as a "contract" between the</span></span>
 <span id="cb21-87"><a href="#cb21-87" aria-hidden="true" tabindex="-1"></a><span class="in">content backend and the frontend application. What does the frontend</span></span>
@@ -1927,7 +1927,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-97"><a href="#cb21-97" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-98"><a href="#cb21-98" aria-hidden="true" tabindex="-1"></a>Frontend developers can build against this contract without needing to understand PHP or WordPress internals.</span>
 <span id="cb21-99"><a href="#cb21-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-100"><a href="#cb21-100" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-100"><a href="#cb21-100" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb21-101"><a href="#cb21-101" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb21-102"><a href="#cb21-102" aria-hidden="true" tabindex="-1"></a><span class="in">What happens if WordPress changes its API in an update? How do you</span></span>
 <span id="cb21-103"><a href="#cb21-103" aria-hidden="true" tabindex="-1"></a><span class="in">manage API versioning and prevent breaking the frontend?</span></span>
@@ -1937,7 +1937,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-107"><a href="#cb21-107" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-108"><a href="#cb21-108" aria-hidden="true" tabindex="-1"></a>Where does headless make practical sense?</span>
 <span id="cb21-109"><a href="#cb21-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-110"><a href="#cb21-110" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-110"><a href="#cb21-110" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb21-111"><a href="#cb21-111" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
 <span id="cb21-112"><a href="#cb21-112" aria-hidden="true" tabindex="-1"></a><span class="in">Give me three real-world scenarios where headless WordPress would</span></span>
 <span id="cb21-113"><a href="#cb21-113" aria-hidden="true" tabindex="-1"></a><span class="in">be the right architecture choice, and explain why traditional</span></span>
@@ -1951,7 +1951,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-121"><a href="#cb21-121" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Organisations integrating content into existing applications</span>
 <span id="cb21-122"><a href="#cb21-122" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sites requiring the fastest possible load times (static generation)</span>
 <span id="cb21-123"><a href="#cb21-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-124"><a href="#cb21-124" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-124"><a href="#cb21-124" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb21-125"><a href="#cb21-125" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
 <span id="cb21-126"><a href="#cb21-126" aria-hidden="true" tabindex="-1"></a><span class="in">What about a local bakery's website? Would headless make sense there?</span></span>
 <span id="cb21-127"><a href="#cb21-127" aria-hidden="true" tabindex="-1"></a><span class="in">Why or why not?</span></span>
@@ -2171,9 +2171,9 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-341"><a href="#cb21-341" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>html<span class="op">&gt;</span></span>
 <span id="cb21-342"><a href="#cb21-342" aria-hidden="true" tabindex="-1"></a>```</span>
 <span id="cb21-343"><a href="#cb21-343" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-344"><a href="#cb21-344" aria-hidden="true" tabindex="-1"></a>Save <span class="kw">this</span> as an <span class="bu">HTML</span> file and open it in a browser<span class="op">.</span> <span class="fu">It</span> fetches posts from your local WordPress site and displays them—completely independently of WordPress themes<span class="op">.</span></span>
+<span id="cb21-344"><a href="#cb21-344" aria-hidden="true" tabindex="-1"></a>Save <span class="kw">this</span> as an <span class="bu">HTML</span> file and open it in a browser<span class="op">.</span> <span class="fu">It</span> fetches posts from your local WordPress site and displays them<span class="op">,</span> completely independently of WordPress themes<span class="op">.</span></span>
 <span id="cb21-345"><a href="#cb21-345" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-346"><a href="#cb21-346" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb21-346"><a href="#cb21-346" aria-hidden="true" tabindex="-1"></a>```text</span>
 <span id="cb21-347"><a href="#cb21-347" aria-hidden="true" tabindex="-1"></a>Ask your AI<span class="op">:</span></span>
 <span id="cb21-348"><a href="#cb21-348" aria-hidden="true" tabindex="-1"></a>Walk me through <span class="kw">this</span> code<span class="op">.</span> <span class="fu">What</span> happens at each step<span class="op">?</span> How would I</span>
 <span id="cb21-349"><a href="#cb21-349" aria-hidden="true" tabindex="-1"></a>modify it to also show the post date and author name<span class="op">?</span></span>
@@ -2233,7 +2233,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-403"><a href="#cb21-403" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-404"><a href="#cb21-404" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span> <span class="op">{.</span><span class="fu">callout</span><span class="op">-</span>warning<span class="op">}</span></span>
 <span id="cb21-405"><a href="#cb21-405" aria-hidden="true" tabindex="-1"></a>## <span class="bu">Security</span> Note</span>
-<span id="cb21-406"><a href="#cb21-406" aria-hidden="true" tabindex="-1"></a>Never expose application passwords in frontend JavaScript—they<span class="er">'</span>d be visible to anyone<span class="op">.</span> <span class="fu">Authentication</span> is typically handled by a backend server that proxies requests to WordPress<span class="op">.</span></span>
+<span id="cb21-406"><a href="#cb21-406" aria-hidden="true" tabindex="-1"></a>Never expose application passwords in frontend JavaScript<span class="op">,</span> they<span class="er">'</span>d be visible to anyone<span class="op">.</span> <span class="fu">Authentication</span> is typically handled by a backend server that proxies requests to WordPress<span class="op">.</span></span>
 <span id="cb21-407"><a href="#cb21-407" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span></span>
 <span id="cb21-408"><a href="#cb21-408" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-409"><a href="#cb21-409" aria-hidden="true" tabindex="-1"></a>### CORS Considerations</span>
@@ -2263,7 +2263,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-433"><a href="#cb21-433" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-434"><a href="#cb21-434" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Traditional WordPress<span class="op">:**</span></span>
 <span id="cb21-435"><a href="#cb21-435" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-436"><a href="#cb21-436" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb21-436"><a href="#cb21-436" aria-hidden="true" tabindex="-1"></a>```text</span>
 <span id="cb21-437"><a href="#cb21-437" aria-hidden="true" tabindex="-1"></a>┌────────────────────────────────────────┐</span>
 <span id="cb21-438"><a href="#cb21-438" aria-hidden="true" tabindex="-1"></a>│             WordPress                   │</span>
 <span id="cb21-439"><a href="#cb21-439" aria-hidden="true" tabindex="-1"></a>│  ┌─────────────┐  ┌─────────────────┐  │</span>
@@ -2278,7 +2278,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-448"><a href="#cb21-448" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-449"><a href="#cb21-449" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Headless WordPress<span class="op">:**</span></span>
 <span id="cb21-450"><a href="#cb21-450" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-451"><a href="#cb21-451" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb21-451"><a href="#cb21-451" aria-hidden="true" tabindex="-1"></a>```text</span>
 <span id="cb21-452"><a href="#cb21-452" aria-hidden="true" tabindex="-1"></a>┌──────────────────┐        ┌─────────────────┐</span>
 <span id="cb21-453"><a href="#cb21-453" aria-hidden="true" tabindex="-1"></a>│    WordPress     │        │    Frontend     │</span>
 <span id="cb21-454"><a href="#cb21-454" aria-hidden="true" tabindex="-1"></a>│  ┌────────────┐  │  API   │  <span class="op">(</span>React<span class="op">,</span> etc<span class="op">.)</span>  │</span>
@@ -2322,7 +2322,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-492"><a href="#cb21-492" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Some WordPress plugins don<span class="er">'</span>t work</span>
 <span id="cb21-493"><a href="#cb21-493" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> More technical expertise required</span>
 <span id="cb21-494"><a href="#cb21-494" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-495"><a href="#cb21-495" aria-hidden="true" tabindex="-1"></a>This complexity has costs<span class="op">.</span> <span class="fu">Headless</span> is a tool—use it when benefits outweigh costs<span class="op">.</span></span>
+<span id="cb21-495"><a href="#cb21-495" aria-hidden="true" tabindex="-1"></a>This complexity has costs<span class="op">.</span> <span class="fu">Headless</span> is a tool<span class="op">,</span> use it when benefits outweigh costs<span class="op">.</span></span>
 <span id="cb21-496"><a href="#cb21-496" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-497"><a href="#cb21-497" aria-hidden="true" tabindex="-1"></a>## Business Applications</span>
 <span id="cb21-498"><a href="#cb21-498" aria-hidden="true" tabindex="-1"></a></span>
@@ -2346,7 +2346,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-516"><a href="#cb21-516" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Cached at the <span class="fu">edge</span> <span class="op">(</span>CDN<span class="op">)</span></span>
 <span id="cb21-517"><a href="#cb21-517" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Optimised specifically <span class="cf">for</span> performance</span>
 <span id="cb21-518"><a href="#cb21-518" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-519"><a href="#cb21-519" aria-hidden="true" tabindex="-1"></a>This matters <span class="cf">for</span> SEO and user experience—Google measures page speed<span class="op">.</span></span>
+<span id="cb21-519"><a href="#cb21-519" aria-hidden="true" tabindex="-1"></a>This matters <span class="cf">for</span> SEO and user experience<span class="op">.</span> <span class="fu">Google</span> measures page speed<span class="op">.</span></span>
 <span id="cb21-520"><a href="#cb21-520" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-521"><a href="#cb21-521" aria-hidden="true" tabindex="-1"></a>### <span class="bu">Security</span> Benefits</span>
 <span id="cb21-522"><a href="#cb21-522" aria-hidden="true" tabindex="-1"></a></span>
@@ -2371,8 +2371,8 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-541"><a href="#cb21-541" aria-hidden="true" tabindex="-1"></a>Headless lets them use their preferred tools <span class="cf">while</span> leveraging WordPress<span class="er">'</span>s content management<span class="op">.</span></span>
 <span id="cb21-542"><a href="#cb21-542" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-543"><a href="#cb21-543" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span> <span class="op">{.</span><span class="fu">callout</span><span class="op">-</span>note<span class="op">}</span></span>
-<span id="cb21-544"><a href="#cb21-544" aria-hidden="true" tabindex="-1"></a>## ULO <span class="bu">Connection</span></span>
-<span id="cb21-545"><a href="#cb21-545" aria-hidden="true" tabindex="-1"></a>This develops <span class="op">**</span>ULO <span class="dv">4</span><span class="op">**</span> <span class="op">(</span>selecting appropriate technologies<span class="op">)</span> and <span class="op">**</span>ULO <span class="dv">5</span><span class="op">**</span> <span class="op">(</span>evaluating emerging approaches<span class="op">).</span> <span class="fu">Headless</span> architecture is a significant trend in web development<span class="op">.</span> <span class="fu">Understanding</span> when it applies—and when it doesn<span class="er">'</span>t—demonstrates professional judgment<span class="op">.</span></span>
+<span id="cb21-544"><a href="#cb21-544" aria-hidden="true" tabindex="-1"></a>## Skills You Are Building</span>
+<span id="cb21-545"><a href="#cb21-545" aria-hidden="true" tabindex="-1"></a>This develops <span class="op">**</span>making and defending technology choices<span class="op">**</span> and <span class="op">**</span>assessing emerging technologies<span class="op">**.</span> <span class="fu">Headless</span> architecture is a significant trend in web development<span class="op">.</span> <span class="fu">Understanding</span> when it applies<span class="op">,</span> and when it doesn<span class="er">'</span>t<span class="op">,</span> demonstrates professional judgment<span class="op">.</span></span>
 <span id="cb21-546"><a href="#cb21-546" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span></span>
 <span id="cb21-547"><a href="#cb21-547" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-548"><a href="#cb21-548" aria-hidden="true" tabindex="-1"></a>## Practice Exercises</span>
@@ -2391,7 +2391,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-561"><a href="#cb21-561" aria-hidden="true" tabindex="-1"></a>Using your local WordPress site<span class="op">:</span></span>
 <span id="cb21-562"><a href="#cb21-562" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-563"><a href="#cb21-563" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Open a browser and visit `<span class="op">/</span>wp<span class="op">-</span>json<span class="op">/</span>wp<span class="op">/</span>v2<span class="op">/</span>posts`</span>
-<span id="cb21-564"><a href="#cb21-564" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Explore the JSON structure—identify title<span class="op">,</span> content<span class="op">,</span> date<span class="op">,</span> and other fields</span>
+<span id="cb21-564"><a href="#cb21-564" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Explore the JSON structure<span class="op">,</span> identify title<span class="op">,</span> content<span class="op">,</span> date<span class="op">,</span> and other fields</span>
 <span id="cb21-565"><a href="#cb21-565" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> Try different endpoints<span class="op">:</span> `<span class="op">/</span>pages`<span class="op">,</span> `<span class="op">/</span>categories`<span class="op">,</span> `<span class="op">/</span>media`</span>
 <span id="cb21-566"><a href="#cb21-566" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> Add `<span class="op">?</span>_embed` and observe how the response changes</span>
 <span id="cb21-567"><a href="#cb21-567" aria-hidden="true" tabindex="-1"></a></span>
@@ -2497,7 +2497,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-667"><a href="#cb21-667" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-668"><a href="#cb21-668" aria-hidden="true" tabindex="-1"></a>In <span class="at">@sec</span><span class="op">-</span>project<span class="op">-</span>business<span class="op">-</span>site<span class="op">,</span> you<span class="er">'</span>ll build a complete WordPress business site<span class="op">,</span> applying everything from <span class="kw">this</span> part<span class="op">.</span> <span class="fu">This</span> project demonstrates your ability to make and implement technology decisions <span class="cf">for</span> real business needs<span class="op">.</span></span>
 <span id="cb21-669"><a href="#cb21-669" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-670"><a href="#cb21-670" aria-hidden="true" tabindex="-1"></a><span class="fu">Then</span><span class="op">,</span> in Part III<span class="op">,</span> we<span class="er">'</span>ll build on the API knowledge from <span class="kw">this</span> chapter to create React frontends—bringing modern frontend development into your skillset<span class="op">.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb21-670"><a href="#cb21-670" aria-hidden="true" tabindex="-1"></a><span class="fu">Then</span><span class="op">,</span> in Part III<span class="op">,</span> we<span class="er">'</span>ll build on the API knowledge from <span class="kw">this</span> chapter to create React frontends<span class="op">,</span> bringing modern frontend development into your skillset<span class="op">.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
