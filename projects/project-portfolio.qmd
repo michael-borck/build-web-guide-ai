@@ -1,5 +1,9 @@
 # Project: Portfolio Website {#sec-project-portfolio}
 
+::: {.callout-tip title="Example implementations available online"}
+The online edition at [books.borck.education](https://books.borck.education) includes links to example implementations, starter code, and companion repositories for each project.
+:::
+
 ## Project Overview
 
 Your first substantial project brings together everything from Part I: Structure (HTML), Presentation (CSS), Behaviour (JavaScript), and Connection (APIs). You'll build a personal portfolio website, a professional asset that demonstrates your capabilities to future employers or clients.

@@ -1,5 +1,9 @@
 # Project: Business Website with WordPress {#sec-project-business-site}
 
+::: {.callout-tip title="Example implementations available online"}
+The online edition at [books.borck.education](https://books.borck.education) includes links to example implementations, WordPress backups, and companion resources for each project.
+:::
+
 ## Project Overview
 
 Part II taught you to think about content management strategically: when to use a CMS, how to evaluate platforms and plugins, and how WordPress architecture works. Now you'll apply that knowledge to build a complete business website.

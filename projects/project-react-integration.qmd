@@ -1,5 +1,9 @@
 # Project: React Integration {#sec-project-react-integration}
 
+::: {.callout-tip title="Example implementations available online"}
+The online edition at [books.borck.education](https://books.borck.education) includes links to example implementations, starter code, and companion resources for each project.
+:::
+
 ## Project Overview
 
 Part III taught you component thinking, CSS frameworks, and professional practices. Now you'll bring it together: build a React frontend that consumes content from WordPress via the REST API, demonstrating headless architecture in action.
