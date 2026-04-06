@@ -21,30 +21,30 @@ book:
     - copyright.qmd
     - chapters/reading-list.qmd
     - acknowledgments.qmd
-    - part: "Part 0: Your AI Development Partnership"
+    - part: "Your AI Development Partnership"
       chapters:
         - chapters/chapter-ai-web-partner.qmd
-    - part: "Part I: Web Foundations"
+    - part: "Web Foundations"
       chapters:
         - chapters/chapter-structure.qmd
         - chapters/chapter-presentation.qmd
         - chapters/chapter-behaviour.qmd
         - chapters/chapter-connection.qmd
         - projects/project-portfolio.qmd
-    - part: "Part II: Content Management for Business"
+    - part: "Content Management for Business"
       chapters:
         - chapters/chapter-why-cms.qmd
         - chapters/chapter-wordpress-platform.qmd
         - chapters/chapter-extending-platforms.qmd
         - chapters/chapter-headless-architecture.qmd
         - projects/project-business-site.qmd
-    - part: "Part III: Modern Frontend Development"
+    - part: "Modern Frontend Development"
       chapters:
         - chapters/chapter-component-thinking.qmd
         - chapters/chapter-rapid-development.qmd
         - chapters/chapter-professional-practices.qmd
         - projects/project-react-integration.qmd
-    - part: "Part IV: The Professional Developer"
+    - part: "The Professional Developer"
       chapters:
         - chapters/chapter-emerging-technologies.qmd
         - chapters/chapter-development-career.qmd
