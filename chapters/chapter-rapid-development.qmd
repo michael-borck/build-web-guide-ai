@@ -442,7 +442,7 @@ Tailwind markup can look verbose:
 Solutions:
 
 1. **Extract components** (in React, this is natural)
-2. **Use @apply in CSS** (creates reusable classes)
+2. **Use `@apply` in CSS** (creates reusable classes)
 3. **Accept the trade-off** (markup complexity vs CSS complexity)
 
 ```text
