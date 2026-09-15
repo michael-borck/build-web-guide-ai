@@ -64,9 +64,15 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) (to be created).
 
 This book was created through human-AI collaboration. See [CLAUDE.md](CLAUDE.md) for AI collaboration guidelines.
 
-## License
+## Licence
 
-[To be determined]
+Book content is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0 International)](https://creativecommons.org/licenses/by/4.0/). Original code examples and accompanying software are licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+These grants cover material the author has authority to license. Separately credited third-party material retains its stated terms. Give appropriate credit, link the content licence and indicate changes; retain the MIT notice when reusing code.
+
+See [LICENSE](LICENSE), [LICENSE-CONTENT.md](LICENSE-CONTENT.md) and [LICENSE-CODE.md](LICENSE-CODE.md) for scope and full terms.
+
+
 
 ## Author
 
