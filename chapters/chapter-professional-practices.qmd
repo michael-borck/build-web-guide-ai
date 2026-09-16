@@ -583,7 +583,7 @@ This develops **professional communication and project management** and **evalua
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 11.1: Git Fundamentals (Level 1)
+### Exercise 14.1: Git Fundamentals (Level 1)
 
 Create a new project with Git:
 
@@ -596,9 +596,9 @@ Create a new project with Git:
 
 Document the commands you used and what each did.
 
-### Exercise 11.2: Branching Workflow (Level 2)
+### Exercise 14.2: Branching Workflow (Level 2)
 
-Extend Exercise 11.1:
+Extend Exercise 14.1:
 
 1. Create a branch called `feature/styling`
 2. Add a `styles.css` file and link it in HTML
@@ -610,7 +610,7 @@ Extend Exercise 11.1:
 
 Document when you'd use this workflow in a real project.
 
-### Exercise 11.3: First Tests (Level 3)
+### Exercise 14.3: First Tests (Level 3)
 
 Create a JavaScript module with tests:
 
@@ -625,7 +625,7 @@ Create a JavaScript module with tests:
    - Error cases (invalid input)
 4. Run tests and ensure they pass
 
-### Exercise 11.4: Testing a Component (Level 4)
+### Exercise 14.4: Testing a Component (Level 4)
 
 Create a React component with tests:
 
@@ -641,7 +641,7 @@ Create a React component with tests:
 
 Focus on testing behaviour from the user's perspective.
 
-### Exercise 11.5: Professional Project Setup (Level 5)
+### Exercise 14.5: Professional Project Setup (Level 5)
 
 Set up a complete project with professional practices:
 

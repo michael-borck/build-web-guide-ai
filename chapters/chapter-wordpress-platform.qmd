@@ -414,7 +414,7 @@ This develops **making and defending technology choices** and **assessing emergi
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 6.1: Local Setup (Level 1)
+### Exercise 8.1: Local Setup (Level 1)
 
 Install LocalWP and create a WordPress site called "Practice Site":
 
@@ -426,7 +426,7 @@ Install LocalWP and create a WordPress site called "Practice Site":
 
 Verify everything works by viewing the site in your browser.
 
-### Exercise 6.2: Theme Exploration (Level 2)
+### Exercise 8.2: Theme Exploration (Level 2)
 
 Using your Practice Site:
 
@@ -438,7 +438,7 @@ Using your Practice Site:
 3. Choose one and activate it
 4. Use the Customiser to adjust site identity and colours
 
-### Exercise 6.3: Content Structure (Level 3)
+### Exercise 8.3: Content Structure (Level 3)
 
 Create content for a fictional coffee shop on your Practice Site:
 
@@ -450,7 +450,7 @@ Create content for a fictional coffee shop on your Practice Site:
 
 Evaluate: Is the content discoverable? Can a visitor navigate easily?
 
-### Exercise 6.4: Theme Evaluation Report (Level 4)
+### Exercise 8.4: Theme Evaluation Report (Level 4)
 
 Research three WordPress themes suitable for a professional services business (lawyer, accountant, consultant). For each:
 
@@ -462,7 +462,7 @@ Research three WordPress themes suitable for a professional services business (l
 
 Write a 400-word recommendation explaining which theme you'd choose and why. Discuss trade-offs.
 
-### Exercise 6.5: Platform Comparison (Level 5)
+### Exercise 8.5: Platform Comparison (Level 5)
 
 A client asks: "Should I use WordPress or Squarespace for my boutique hotel website?"
 
@@ -488,7 +488,7 @@ This exercise develops technology evaluation skills (assessing emerging technolo
 
 ## Reflection
 
-Before moving to Chapter 7, ensure you can:
+Before moving on, ensure you can:
 
 - [ ] Explain the difference between a platform and software
 - [ ] Set up WordPress locally using LocalWP

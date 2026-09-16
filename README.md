@@ -17,7 +17,7 @@ This book teaches web development differently:
 
 ## Structure
 
-- **Part 0**: Your AI Development Partnership
+- **Part I**: Your AI Development Partnership
 - **Part I**: Web Foundations (HTML, CSS, JavaScript, APIs)
 - **Part II**: Content Management for Business (WordPress)
 - **Part III**: Modern Frontend Development (React, CSS Frameworks)
@@ -33,7 +33,7 @@ This book is part of a comprehensive series for mastering modern software develo
 ### Python Track
 - **[Think Python, Direct AI](https://michael-borck.github.io/think-python-direct-ai)**: Computational Thinking for Beginners
 - **[Code Python, Consult AI](https://michael-borck.github.io/code-python-consult-ai)**: Python Fundamentals for the AI Era
-- **[Ship Python, Orchestrate AI](https://michael-borck.github.io/ship-it-python-in-production)**: Professional Python in the AI Era
+- **[Ship Python, Orchestrate AI](https://michael-borck.github.io/ship-python-orchestrate-ai)**: Professional Python in the AI Era
 
 ### Web Track
 - **[Build Web, Guide AI](https://michael-borck.github.io/build-web-guide-ai)** (this book): Business Web Development with AI

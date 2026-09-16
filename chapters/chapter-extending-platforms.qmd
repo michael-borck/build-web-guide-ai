@@ -859,7 +859,7 @@ This develops **making and defending technology choices** and **evaluating and i
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 7.1: Plugin Research (Level 1)
+### Exercise 9.1: Plugin Research (Level 1)
 
 On your local WordPress site:
 
@@ -868,7 +868,7 @@ On your local WordPress site:
 3. Install one and explore its settings
 4. Write a brief summary of which you'd recommend and why
 
-### Exercise 7.2: Create a Child Theme (Level 2)
+### Exercise 9.2: Create a Child Theme (Level 2)
 
 Create a child theme for your local site:
 
@@ -879,7 +879,7 @@ Create a child theme for your local site:
 
 Document the process with screenshots.
 
-### Exercise 7.3: PHP Customisation with AI (Level 3)
+### Exercise 9.3: PHP Customisation with AI (Level 3)
 
 Use AI to add a custom feature to your WordPress site:
 
@@ -899,7 +899,7 @@ Use AI to add a custom feature to your WordPress site:
 
 4. Write 200 words explaining: What did the code do? What PHP concepts were used? What would you modify?
 
-### Exercise 7.4: Build a Plugin with AI (Level 4)
+### Exercise 9.4: Build a Plugin with AI (Level 4)
 
 Create a simple WordPress plugin using AI assistance:
 
@@ -919,7 +919,7 @@ Create a simple WordPress plugin using AI assistance:
    - Any modifications you made
    - What you learned about WordPress plugin structure
 
-### Exercise 7.5: Plugin Audit (Level 3)
+### Exercise 9.5: Plugin Audit (Level 3)
 
 Your local site probably has several plugins now. Conduct an audit:
 
@@ -929,7 +929,7 @@ Your local site probably has several plugins now. Conduct an audit:
 4. Identify any that should be replaced with better alternatives
 5. Create a recommendation document
 
-### Exercise 7.6: Build vs Buy Analysis (Level 4)
+### Exercise 9.6: Build vs Buy Analysis (Level 4)
 
 A client needs an event calendar for their community centre. Events have dates, times, locations, descriptions, and categories. Visitors should be able to filter by category and view a monthly calendar.
 
@@ -941,7 +941,7 @@ Research options and write a 400-word recommendation:
 4. Make a recommendation with justification
 5. Address risks and mitigation
 
-### Exercise 7.7: Extension Strategy (Level 5)
+### Exercise 9.7: Extension Strategy (Level 5)
 
 You're taking over a WordPress site for a small marketing agency. They need:
 
@@ -977,7 +977,7 @@ This exercise develops professional consulting skills.
 
 ## Reflection
 
-Before moving to Chapter 8, ensure you can:
+Before moving on, ensure you can:
 
 - [ ] Evaluate plugins using systematic criteria
 - [ ] Articulate build vs. buy trade-offs to a non-technical client

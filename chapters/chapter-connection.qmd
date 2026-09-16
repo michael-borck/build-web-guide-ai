@@ -461,7 +461,7 @@ This develops **making and defending technology choices** and **evaluating and i
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 4.1: Your First API Call (Level 1)
+### Exercise 5.1: Your First API Call (Level 1)
 
 Use the JSONPlaceholder API (`https://jsonplaceholder.typicode.com/posts/1`) to:
 
@@ -471,7 +471,7 @@ Use the JSONPlaceholder API (`https://jsonplaceholder.typicode.com/posts/1`) to:
 
 Open DevTools Network tab to see the request and response.
 
-### Exercise 4.2: Displaying a List (Level 2)
+### Exercise 5.2: Displaying a List (Level 2)
 
 Fetch multiple posts from `https://jsonplaceholder.typicode.com/posts?_limit=5` and:
 
@@ -481,7 +481,7 @@ Fetch multiple posts from `https://jsonplaceholder.typicode.com/posts?_limit=5` 
 
 Handle what happens if the fetch fails.
 
-### Exercise 4.3: Dynamic Filtering (Level 3)
+### Exercise 5.3: Dynamic Filtering (Level 3)
 
 Using the JSONPlaceholder posts API:
 
@@ -492,7 +492,7 @@ Using the JSONPlaceholder posts API:
 
 This combines API fetching with JavaScript event handling and DOM manipulation.
 
-### Exercise 4.4: Error Handling Scenarios (Level 4)
+### Exercise 5.4: Error Handling Scenarios (Level 4)
 
 Create a page that fetches from an API and handles all these scenarios gracefully:
 
@@ -503,7 +503,7 @@ Create a page that fetches from an API and handles all these scenarios gracefull
 
 Test each scenario and document how you handled them. Take screenshots showing each state.
 
-### Exercise 4.5: API Integration Proposal (Level 5)
+### Exercise 5.5: API Integration Proposal (Level 5)
 
 A local gym wants to display class schedules from their booking system on their website. The booking system has an API.
 

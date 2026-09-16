@@ -181,11 +181,11 @@ This is not a consolation prize. This is the actual job of a modern web develope
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 0.1: Prompt Evolution (Level 1)
+### Exercise 1.1: Prompt Evolution (Level 1)
 
 Start with "website" and evolve your prompt through 4 iterations to get the simplest possible "About Us" page. Document each iteration and what changed.
 
-### Exercise 0.2: Concept Extraction (Level 2)
+### Exercise 1.2: Concept Extraction (Level 2)
 
 Ask AI to explain "responsive design" three different ways:
 1. Using a technical explanation
@@ -194,11 +194,11 @@ Ask AI to explain "responsive design" three different ways:
 
 Which helped you understand best? Why?
 
-### Exercise 0.3: AI Comparison (Level 3)
+### Exercise 1.3: AI Comparison (Level 3)
 
 Ask the same question to two different AI tools (or the same tool twice). Compare the responses. What's consistent? What differs? What does this tell you about using AI?
 
-### Exercise 0.4: Business Translation (Level 4)
+### Exercise 1.4: Business Translation (Level 4)
 
 A client says: "I want a website that looks professional and works on phones."
 
@@ -207,7 +207,7 @@ Write three different AI prompts that would help you:
 2. Understand their mobile requirements
 3. Explore technology options
 
-### Exercise 0.5: AI Learning Plan (Level 5)
+### Exercise 1.5: AI Learning Plan (Level 5)
 
 Design your personal AI learning strategy for this book:
 1. What kinds of prompts will you start with?
@@ -227,7 +227,7 @@ Create a "My AI Partnership Plan" document.
 
 ## Reflection
 
-Before moving to Chapter 1, ensure you:
+Before moving on, ensure you:
 
 - [ ] Completed the Partnership Experiment
 - [ ] Understand why AI overcomplicates by default
@@ -256,7 +256,7 @@ This book is part of a comprehensive series for mastering modern software develo
 
 - [Think Python, Direct AI: Computational Thinking for Beginners](https://michael-borck.github.io/think-python-direct-ai) - Perfect for absolute beginners
 - [Code Python, Consult AI: Python Fundamentals for the AI Era](https://michael-borck.github.io/code-python-consult-ai) - Core Python knowledge
-- [Ship Python, Orchestrate AI](https://michael-borck.github.io/ship-it-python-in-production) - Professional Python in the AI Era
+- [Ship Python, Orchestrate AI](https://michael-borck.github.io/ship-python-orchestrate-ai) - Professional Python in the AI Era
 
 **Web Track**
 
@@ -264,6 +264,6 @@ This book is part of a comprehensive series for mastering modern software develo
 
 ## Next Steps
 
-In Chapter 1, we'll explore how web pages are structured using HTML. You'll use your new prompt skills to discover semantic markup – the foundation of everything we build. We'll start with the concept of "documents as structured information" before writing a single line of code.
+In the next chapter, we will explore how web pages are structured using HTML. You'll use your new prompt skills to discover semantic markup – the foundation of everything we build. We'll start with the concept of "documents as structured information" before writing a single line of code.
 
 Remember: You're not learning to code. You're learning to think like a web professional who directs AI to help build solutions. Let's begin!

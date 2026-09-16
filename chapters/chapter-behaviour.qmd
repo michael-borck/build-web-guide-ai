@@ -217,7 +217,7 @@ const firstCard = document.querySelector('.card');
 const allCards = document.querySelectorAll('.card');
 ```
 
-`querySelector` uses CSS selector syntax, the same patterns you learned in Chapter 2. This consistency makes finding elements intuitive.
+`querySelector` uses CSS selector syntax, the same patterns you learned in Chapter 3. This consistency makes finding elements intuitive.
 
 ### Changing Elements
 
@@ -427,7 +427,7 @@ Client-side validation improves user experience, but *never* trust it for securi
 
 ### Dynamic Content
 
-Loading content without page refreshes (covered more in Chapter 4) makes applications feel faster. Users don't wait for full page reloads when they just need one small update.
+Loading content without page refreshes (covered more in Chapter 5) makes applications feel faster. Users don't wait for full page reloads when they just need one small update.
 
 ### Analytics and User Behaviour
 
@@ -449,7 +449,7 @@ This develops **evaluating and improving solutions** and **translating stakehold
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 3.1: Console Exploration (Level 1)
+### Exercise 4.1: Console Exploration (Level 1)
 
 Open any webpage and open the browser console (F12 → Console). Try these:
 
@@ -459,7 +459,7 @@ Open any webpage and open the browser console (F12 → Console). Try these:
 
 What happened? Refresh the page, is your change permanent? Why or why not?
 
-### Exercise 3.2: Button Interaction (Level 2)
+### Exercise 4.2: Button Interaction (Level 2)
 
 Create an HTML page with a button and a paragraph. Write JavaScript that:
 
@@ -469,7 +469,7 @@ Create an HTML page with a button and a paragraph. Write JavaScript that:
 
 Test it in your browser. Use `console.log()` to confirm your click handler runs.
 
-### Exercise 3.3: Character Counter (Level 3)
+### Exercise 4.3: Character Counter (Level 3)
 
 Create a textarea with a character limit display, like social media post composers:
 
@@ -480,7 +480,7 @@ Create a textarea with a character limit display, like social media post compose
 
 This combines DOM queries, event listeners, conditionals, and class manipulation.
 
-### Exercise 3.4: Progressive Enhancement Audit (Level 4)
+### Exercise 4.4: Progressive Enhancement Audit (Level 4)
 
 Find a website that heavily uses JavaScript (a web application). Disable JavaScript in your browser (Settings → Privacy → JavaScript) and try to use the site.
 
@@ -490,7 +490,7 @@ Find a website that heavily uses JavaScript (a web application). Disable JavaScr
 
 Write a 300-word assessment of this site's JavaScript dependency and its business implications.
 
-### Exercise 3.5: Interactive Feature Design (Level 5)
+### Exercise 4.5: Interactive Feature Design (Level 5)
 
 A local bookshop wants their website to have an interactive "Book Finder" feature. Users should be able to filter books by genre, search by title, and sort by price or rating.
 
@@ -512,7 +512,7 @@ Don't write the full code, design the approach. Document your thinking, then dis
 
 ## Reflection
 
-Before moving to Chapter 4, ensure you can:
+Before moving on, ensure you can:
 
 - [ ] Explain event-driven programming in plain language
 - [ ] Write basic JavaScript: variables, functions, conditionals

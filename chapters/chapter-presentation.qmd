@@ -419,7 +419,7 @@ When you look at a webpage, think in layers:
 
 1. **Content layer** (HTML): What exists
 2. **Style layer** (CSS): How it looks
-3. **Behaviour layer** (JavaScript, Chapter 3): How it responds
+3. **Behaviour layer** (JavaScript, Chapter 4): How it responds
 
 CSS only controls layer 2. It can't create content or make things interactive, it controls visual presentation of whatever HTML provides.
 
@@ -479,7 +479,7 @@ This develops **evaluating and improving solutions** and **making and defending 
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 2.1: Style Inspection (Level 1)
+### Exercise 3.1: Style Inspection (Level 1)
 
 Using browser DevTools (right-click → Inspect), examine a website you use regularly:
 
@@ -490,9 +490,9 @@ Using browser DevTools (right-click → Inspect), examine a website you use regu
 
 Document your findings with screenshots.
 
-### Exercise 2.2: Basic Styling (Level 2)
+### Exercise 3.2: Basic Styling (Level 2)
 
-Take the semantic HTML page from Chapter 1's exercises. Create an external stylesheet that:
+Take the semantic HTML page from Chapter 2's exercises. Create an external stylesheet that:
 
 1. Sets a readable base font and line height
 2. Styles the header with a background colour
@@ -501,7 +501,7 @@ Take the semantic HTML page from Chapter 1's exercises. Create an external style
 
 Focus on readability and visual hierarchy, not decoration.
 
-### Exercise 2.3: Responsive Layout (Level 3)
+### Exercise 3.3: Responsive Layout (Level 3)
 
 Create a "features" section with three items. Each item has:
 - An icon or emoji placeholder
@@ -514,7 +514,7 @@ Using flexbox, make this:
 
 Write the CSS mobile-first, adding complexity with media queries.
 
-### Exercise 2.4: Design Analysis (Level 4)
+### Exercise 3.4: Design Analysis (Level 4)
 
 Find two competing businesses in the same industry (e.g., two accounting firms, two coffee shops). Analyse their websites:
 
@@ -525,7 +525,7 @@ Find two competing businesses in the same industry (e.g., two accounting firms, 
 
 Write a 300-word comparison explaining how CSS choices reflect (or undermine) each brand's positioning.
 
-### Exercise 2.5: Design System (Level 5)
+### Exercise 3.5: Design System (Level 5)
 
 Create a mini design system for a hypothetical business. Define:
 
@@ -549,7 +549,7 @@ Apply your system to style a simple page, then have your AI partner critique it.
 
 ## Reflection
 
-Before moving to Chapter 3, ensure you can:
+Before moving on, ensure you can:
 
 - [ ] Explain why structure and presentation are separate
 - [ ] Write CSS selectors to target specific elements

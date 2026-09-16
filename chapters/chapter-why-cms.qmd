@@ -317,7 +317,7 @@ This develops **translating stakeholder needs into technical requirements** and 
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 5.1: CMS Identification (Level 1)
+### Exercise 7.1: CMS Identification (Level 1)
 
 Visit five local business websites. For each:
 
@@ -327,7 +327,7 @@ Visit five local business websites. For each:
 
 Document your findings. What patterns do you notice about businesses that use CMS versus those that don't?
 
-### Exercise 5.2: Stakeholder Analysis (Level 2)
+### Exercise 7.2: Stakeholder Analysis (Level 2)
 
 For a hypothetical dental practice website, identify:
 
@@ -338,7 +338,7 @@ For a hypothetical dental practice website, identify:
 
 Create a stakeholder matrix mapping needs to CMS requirements.
 
-### Exercise 5.3: Content Audit (Level 3)
+### Exercise 7.3: Content Audit (Level 3)
 
 Choose a small business website (could be a local business or a fictional scenario). Conduct a content audit:
 
@@ -349,7 +349,7 @@ Choose a small business website (could be a local business or a fictional scenar
 
 Based on your audit, would you recommend a CMS? Why or why not?
 
-### Exercise 5.4: CMS Recommendation (Level 4)
+### Exercise 7.4: CMS Recommendation (Level 4)
 
 A boutique fitness studio approaches you. They want a website with:
 
@@ -368,7 +368,7 @@ Write a 300-word recommendation addressing:
 - What content types you'd create
 - What the client could manage versus what needs developer involvement
 
-### Exercise 5.5: Build vs Buy Analysis (Level 5)
+### Exercise 7.5: Build vs Buy Analysis (Level 5)
 
 A tech startup wants a unique, highly interactive product landing page with animated demonstrations, custom calculators, and unusual layouts. They update content quarterly and have developers on staff.
 
@@ -393,7 +393,7 @@ This exercise has no single correct answer, develop your ability to weigh trade-
 
 ## Reflection
 
-Before moving to Chapter 6, ensure you can:
+Before moving on, ensure you can:
 
 - [ ] Explain what a CMS does without using technical jargon
 - [ ] Identify when a project would benefit from a CMS versus custom development

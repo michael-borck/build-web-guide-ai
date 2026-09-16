@@ -457,7 +457,7 @@ This develops **assessing emerging technologies**. The ability to evaluate techn
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 12.1: Framework Application (Level 1)
+### Exercise 16.1: Framework Application (Level 1)
 
 Apply the evaluation framework to a technology of your choice:
 
@@ -466,7 +466,7 @@ Apply the evaluation framework to a technology of your choice:
 3. Document your findings for each category
 4. Write a one-paragraph recommendation
 
-### Exercise 12.2: Historical Analysis (Level 2)
+### Exercise 16.2: Historical Analysis (Level 2)
 
 Research a technology that was popular 5 years ago but is less used now:
 
@@ -477,7 +477,7 @@ Research a technology that was popular 5 years ago but is less used now:
 
 Write 300 words on lessons learned.
 
-### Exercise 12.3: Comparative Evaluation (Level 3)
+### Exercise 16.3: Comparative Evaluation (Level 3)
 
 You need to choose between two competing technologies (e.g., two CSS frameworks, two state management libraries, two build tools):
 
@@ -487,7 +487,7 @@ You need to choose between two competing technologies (e.g., two CSS frameworks,
 4. Make a recommendation with clear reasoning
 5. Note what would change your recommendation
 
-### Exercise 12.4: Context-Dependent Recommendation (Level 4)
+### Exercise 16.4: Context-Dependent Recommendation (Level 4)
 
 A client asks whether they should adopt a specific new technology. Create three different recommendations based on three different client contexts:
 
@@ -497,7 +497,7 @@ A client asks whether they should adopt a specific new technology. Create three 
 
 For each, explain how context changes the recommendation.
 
-### Exercise 12.5: Technology Radar (Level 5)
+### Exercise 16.5: Technology Radar (Level 5)
 
 Create your own "Technology Radar" for web development:
 
@@ -520,7 +520,7 @@ This mirrors how technology advisory firms like ThoughtWorks communicate recomme
 
 ## Reflection
 
-Before moving to Chapter 13, ensure you can:
+Before moving on, ensure you can:
 
 - [ ] Apply a systematic evaluation framework to any technology
 - [ ] Identify signs of hype versus genuine value

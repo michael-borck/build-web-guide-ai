@@ -183,7 +183,6 @@ Read the book chapter first to understand concepts, then explore external resour
 |----------|-------|------|
 | WordPress.org | REST API Handbook | [REST API Handbook](https://developer.wordpress.org/rest-api/) |
 | WordPress.org | REST API Reference | [REST API Reference](https://developer.wordpress.org/rest-api/reference/) |
-| CSS Tricks | WP REST API | [CSS Tricks: WP REST](https://developer.css-tricks.com/wp-rest-api/) |
 
 ### Deeper Dive
 - [Postman](https://www.postman.com/) - API testing tool

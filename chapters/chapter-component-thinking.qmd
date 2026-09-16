@@ -575,7 +575,7 @@ This develops **evaluating and improving solutions** and **making and defending 
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 9.1: First Component (Level 1)
+### Exercise 12.1: First Component (Level 1)
 
 Create a React project with Vite and build a `Greeting` component that:
 
@@ -583,7 +583,7 @@ Create a React project with Vite and build a `Greeting` component that:
 2. Displays "Hello, {name}!"
 3. Is used three times in `App` with different names
 
-### Exercise 9.2: Stateful Component (Level 2)
+### Exercise 12.2: Stateful Component (Level 2)
 
 Build a `LikeButton` component that:
 
@@ -592,7 +592,7 @@ Build a `LikeButton` component that:
 3. Increments the count when clicked
 4. Changes colour when count > 0
 
-### Exercise 9.3: List Rendering (Level 3)
+### Exercise 12.3: List Rendering (Level 3)
 
 Build a `TaskList` component that:
 
@@ -601,7 +601,7 @@ Build a `TaskList` component that:
 3. Each `TaskItem` shows the task text and a "Complete" button
 4. Clicking "Complete" removes the task (hint: lift state up)
 
-### Exercise 9.4: Data Fetching (Level 4)
+### Exercise 12.4: Data Fetching (Level 4)
 
 Build a `UserList` component that:
 
@@ -611,7 +611,7 @@ Build a `UserList` component that:
 4. Renders each user as a `UserCard` with name and email
 5. Allows clicking a user to show more details
 
-### Exercise 9.5: WordPress Integration (Level 5)
+### Exercise 12.5: WordPress Integration (Level 5)
 
 Build a mini blog frontend that:
 
@@ -634,7 +634,7 @@ Document your component structure and explain your state management decisions.
 
 ## Reflection
 
-Before moving to Chapter 10, ensure you can:
+Before moving on, ensure you can:
 
 - [ ] Break down a UI into a component hierarchy
 - [ ] Create functional components with JSX

@@ -23,19 +23,19 @@ That's the core insight: AI amplifies human capability. It doesn't replace human
 
 Think about how your relationship with AI has evolved through this book.
 
-**Early in your journey** (chapters 1-4):
+**Early in your journey** (Part II: Web Foundations):
 - AI explained concepts
 - You asked "how does this work?"
 - AI provided examples
 - You learned fundamentals
 
-**As you grew** (chapters 5-11):
+**As you grew** (Parts III–IV: platforms and components):
 - You asked "which approach is better?"
 - AI provided options with trade-offs
 - You made decisions based on context
 - AI helped implement your decisions
 
-**Now** (chapters 12-14):
+**Now** (Part V: The Professional Developer):
 - You ask "is this appropriate for this situation?"
 - AI provides analysis
 - You evaluate and judge
@@ -421,7 +421,7 @@ This develops all the core professional skills, particularly **evaluating and im
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 14.1: AI Interaction Analysis (Level 1)
+### Exercise 18.1: AI Interaction Analysis (Level 1)
 
 Review your AI conversations from throughout this book:
 
@@ -430,7 +430,7 @@ Review your AI conversations from throughout this book:
 3. For each, identify what made the interaction effective or ineffective
 4. Write patterns you'll use going forward
 
-### Exercise 14.2: Manual Implementation (Level 2)
+### Exercise 18.2: Manual Implementation (Level 2)
 
 Build a small component **without** AI assistance:
 
@@ -439,7 +439,7 @@ Build a small component **without** AI assistance:
 3. Compare: What was harder? What did you understand better?
 4. Reflect on the value of both approaches
 
-### Exercise 14.3: AI Code Review (Level 3)
+### Exercise 18.3: AI Code Review (Level 3)
 
 Practice reviewing AI-generated code:
 
@@ -449,7 +449,7 @@ Practice reviewing AI-generated code:
 4. Discuss the improvements with AI
 5. Implement the final version
 
-### Exercise 14.4: Partnership Optimisation (Level 4)
+### Exercise 18.4: Partnership Optimisation (Level 4)
 
 Develop your personal AI collaboration framework:
 
@@ -458,7 +458,7 @@ Develop your personal AI collaboration framework:
 3. Define boundaries (when you will/won't use AI)
 4. Write guidelines for a team member new to AI tools
 
-### Exercise 14.5: Future Preparation (Level 5)
+### Exercise 18.5: Future Preparation (Level 5)
 
 Create a 12-month professional development plan that accounts for AI:
 

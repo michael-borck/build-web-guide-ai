@@ -37,7 +37,7 @@ When you look at any web page, train yourself to see structure first, appearance
 
 ## Discovering Structure with Your AI Partner
 
-Let's use AI to explore these concepts before we see any code. Remember from Chapter 0: we're using AI to build understanding, not to avoid learning.
+Let's use AI to explore these concepts before we see any code. Remember from Chapter 1: we're using AI to build understanding, not to avoid learning.
 
 ### Exploration 1: Document Anatomy
 
@@ -220,7 +220,7 @@ Here are the structural elements you'll use most often:
 
 ::: {.callout-warning}
 ## Common Mistake
-Don't choose elements based on how they look by default. Choose them based on what the content *is*. A `<section>` isn't "a box", it's a thematic grouping of content. Appearance is CSS's job (Chapter 2).
+Don't choose elements based on how they look by default. Choose them based on what the content *is*. A `<section>` isn't "a box", it's a thematic grouping of content. Appearance is CSS's job (Chapter 3).
 :::
 
 ### Headings Create Hierarchy
@@ -294,7 +294,7 @@ Let's clarify terminology:
 
 ### The Box Model Preview
 
-Every HTML element creates an invisible box on the page. These boxes stack and nest according to the document structure. In Chapter 2, we'll learn to control these boxes with CSS. For now, understand that structure creates boxes, and boxes create layout.
+Every HTML element creates an invisible box on the page. These boxes stack and nest according to the document structure. In Chapter 3, we will learn to control these boxes with CSS. For now, understand that structure creates boxes, and boxes create layout.
 
 ```text
 Ask your AI:
@@ -346,7 +346,7 @@ This develops **evaluating and improving solutions** and **professional communic
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 1.1: Document Analysis (Level 1)
+### Exercise 2.1: Document Analysis (Level 1)
 
 Find a simple webpage (a local business, a restaurant, a small company). View its source (right-click → View Page Source). Identify:
 
@@ -357,7 +357,7 @@ Find a simple webpage (a local business, a restaurant, a small company). View it
 
 Document your findings. Is this page well-structured or poorly structured? Why?
 
-### Exercise 1.2: Structure First (Level 2)
+### Exercise 2.2: Structure First (Level 2)
 
 Without writing any HTML, create a structural outline for a personal portfolio page. List:
 
@@ -368,7 +368,7 @@ Without writing any HTML, create a structural outline for a personal portfolio p
 
 Then, with your AI partner, translate your outline into semantic HTML. Compare your outline with the final code, did the structure remain clear?
 
-### Exercise 1.3: Fix the Structure (Level 3)
+### Exercise 2.3: Fix the Structure (Level 3)
 
 Here's a poorly structured page. Identify the problems and rewrite it with proper semantic HTML:
 
@@ -387,7 +387,7 @@ Here's a poorly structured page. Identify the problems and rewrite it with prope
 
 List each problem you find and explain why it matters.
 
-### Exercise 1.4: Business Requirements (Level 4)
+### Exercise 2.4: Business Requirements (Level 4)
 
 A local bakery asks you to create their website. They mention:
 
@@ -398,7 +398,7 @@ A local bakery asks you to create their website. They mention:
 
 Create a structural plan that addresses their requirements. Which semantic elements would you use for each requirement? Justify your choices in business terms, why does proper structure benefit this bakery?
 
-### Exercise 1.5: Semantic Debate (Level 5)
+### Exercise 2.5: Semantic Debate (Level 5)
 
 Should a "team members" section on an About page use `<article>` for each person, or `<section>`, or neither?
 
@@ -417,7 +417,7 @@ This exercise has no single correct answer, it develops your ability to make and
 
 ## Reflection
 
-Before moving to Chapter 2, ensure you can:
+Before moving on, ensure you can:
 
 - [ ] Explain HTML's purpose without using technical jargon
 - [ ] Identify at least six semantic HTML elements and their purposes

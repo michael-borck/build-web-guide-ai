@@ -468,7 +468,7 @@ This develops **professional communication and project management**. Career deve
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 13.1: Portfolio Audit (Level 1)
+### Exercise 17.1: Portfolio Audit (Level 1)
 
 Evaluate your current portfolio presence:
 
@@ -477,7 +477,7 @@ Evaluate your current portfolio presence:
 3. Check your LinkedIn, is it complete and current?
 4. List three things you could improve immediately
 
-### Exercise 13.2: Project Case Study (Level 2)
+### Exercise 17.2: Project Case Study (Level 2)
 
 Write a case study for one of your projects using the template provided:
 
@@ -486,7 +486,7 @@ Write a case study for one of your projects using the template provided:
 3. Get feedback from a peer
 4. Revise based on feedback
 
-### Exercise 13.3: Professional Positioning (Level 3)
+### Exercise 17.3: Professional Positioning (Level 3)
 
 Develop your professional positioning:
 
@@ -496,7 +496,7 @@ Develop your professional positioning:
 4. Write a positioning statement (one sentence that describes what you do)
 5. Get feedback, is it clear? Memorable? Accurate?
 
-### Exercise 13.4: Content Creation (Level 4)
+### Exercise 17.4: Content Creation (Level 4)
 
 Create professional content:
 
@@ -505,7 +505,7 @@ Create professional content:
 3. Share it on one social platform
 4. Reflect: What was harder than expected? What did you learn from writing?
 
-### Exercise 13.5: Career Strategy (Level 5)
+### Exercise 17.5: Career Strategy (Level 5)
 
 Develop a 12-month career strategy:
 
@@ -526,7 +526,7 @@ Develop a 12-month career strategy:
 
 ## Reflection
 
-Before moving to Chapter 14, ensure you can:
+Before moving on, ensure you can:
 
 - [ ] Explain what makes a strong portfolio project
 - [ ] Write a compelling project case study

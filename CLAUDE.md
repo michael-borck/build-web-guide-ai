@@ -1,4 +1,4 @@
-# Claude Code Instructions for Web Dev Step by Step
+# Claude Code Instructions for Build Web, Guide AI
 
 ## Project Overview
 

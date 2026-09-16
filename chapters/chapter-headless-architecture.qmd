@@ -557,7 +557,7 @@ This develops **making and defending technology choices** and **assessing emergi
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 8.1: Explore the API (Level 1)
+### Exercise 10.1: Explore the API (Level 1)
 
 Using your local WordPress site:
 
@@ -568,7 +568,7 @@ Using your local WordPress site:
 
 Document your findings with screenshots.
 
-### Exercise 8.2: Build a Post List (Level 2)
+### Exercise 10.2: Build a Post List (Level 2)
 
 Create an HTML page that:
 
@@ -579,7 +579,7 @@ Create an HTML page that:
 
 Test it in your browser.
 
-### Exercise 8.3: Filter and Search (Level 3)
+### Exercise 10.3: Filter and Search (Level 3)
 
 Extend your post list to include:
 
@@ -589,7 +589,7 @@ Extend your post list to include:
 
 This combines API parameters with JavaScript event handling.
 
-### Exercise 8.4: Architecture Recommendation (Level 4)
+### Exercise 10.4: Architecture Recommendation (Level 4)
 
 A regional newspaper wants to modernise their digital presence. They have:
 
@@ -606,7 +606,7 @@ Write a 400-word recommendation addressing:
 - What would you implement first?
 - How would you handle the transition?
 
-### Exercise 8.5: Architecture Design (Level 5)
+### Exercise 10.5: Architecture Design (Level 5)
 
 Design a headless architecture for a restaurant group with:
 

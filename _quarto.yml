@@ -67,10 +67,10 @@ book:
   other-links:
     - text: Download PDF
       icon: file-pdf
-      href: build-web-guide-ai.pdf
+      href: /build-web-guide-ai.pdf
     - text: Download EPUB
       icon: book
-      href: build-web-guide-ai.epub
+      href: /build-web-guide-ai.epub
     - text: Download llm.txt
       icon: robot
       href: llm.txt
