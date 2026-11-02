@@ -2,21 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="A practical approach to web development that embraces AI as your development partner while building real business solutions with HTML, CSS, JavaScript, WordPress, and React.">
+<meta name="description" content="A practical approach to web development that teaches you to specify, direct, check and hand over AI-built business websites with HTML, CSS, JavaScript, WordPress and React.">
 
-<title>5&nbsp; Connection: APIs as Business Integration – Build Web, Guide AI</title>
+<title>8&nbsp; Connection: APIs as Business Integration – Build Web, Guide AI</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -78,14 +81,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-6453f418aeef366c23116eb9cb0b6816.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-36d1909bcb541879de504f1ebcc96011.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-9950bca906ef9bb3ea288c0af376aad5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-36d1909bcb541879de504f1ebcc96011.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-b146b0f11fcb9d7b327ea38bc2e11b34.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-8bc080b4f13ff5280c11423cbe489c26.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-b146b0f11fcb9d7b327ea38bc2e11b34.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -116,6 +119,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../assets/custom.css">
+<link rel="stylesheet" href="../book-design.css">
 </head>
 
 <body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -289,7 +293,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-structure.html">Web Foundations</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-connection.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Connection: APIs as Business Integration</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-structure.html">Web Foundations</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-connection.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Connection: APIs as Business Integration</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -363,7 +367,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Web Foundations</span></a>
+ <span class="menu-text">The Practice Spine</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -371,32 +375,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-structure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></span></a>
+  <a href="../chapters/chapter-specify-before-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Specify Before You Build</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-presentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></span></a>
+  <a href="../chapters/chapter-checks-that-run.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Checks That Run</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-behaviour.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Behaviour: JavaScript as User Interaction</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-connection.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Connection: APIs as Business Integration</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../projects/project-portfolio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Project: Portfolio Website</span></span></a>
+  <a href="../chapters/chapter-agent-ready-repo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The Agent-Ready Repo and Handover</span></span></a>
   </div>
 </li>
       </ul>
@@ -404,7 +396,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Content Management for Business</span></a>
+ <span class="menu-text">Web Foundations</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -412,32 +404,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-why-cms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Why CMS? The Business Value of Managed Content</span></span></a>
+  <a href="../chapters/chapter-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-wordpress-platform.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">WordPress as Platform</span></span></a>
+  <a href="../chapters/chapter-presentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-extending-platforms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Extending Platforms</span></span></a>
+  <a href="../chapters/chapter-behaviour.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Behaviour: JavaScript as User Interaction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-headless-architecture.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Headless Architecture</span></span></a>
+  <a href="../chapters/chapter-connection.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Connection: APIs as Business Integration</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../projects/project-business-site.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Project: Business Website with WordPress</span></span></a>
+  <a href="../projects/project-portfolio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Project: Portfolio Website</span></span></a>
   </div>
 </li>
       </ul>
@@ -445,7 +437,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Modern Frontend Development</span></a>
+ <span class="menu-text">Content Management for Business</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -453,26 +445,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-component-thinking.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Component Thinking: React</span></span></a>
+  <a href="../chapters/chapter-why-cms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Why CMS? The Business Value of Managed Content</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-rapid-development.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Rapid Development: CSS Frameworks</span></span></a>
+  <a href="../chapters/chapter-wordpress-platform.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">WordPress as Platform</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-professional-practices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Professional Practices</span></span></a>
+  <a href="../chapters/chapter-extending-platforms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Extending Platforms</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../projects/project-react-integration.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Project: React Integration</span></span></a>
+  <a href="../chapters/chapter-headless-architecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Headless Architecture</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/project-business-site.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Project: Business Website with WordPress</span></span></a>
   </div>
 </li>
       </ul>
@@ -480,7 +478,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">The Professional Developer</span></a>
+ <span class="menu-text">Modern Frontend Development</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -488,20 +486,78 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-component-thinking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Component Thinking: React</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-rapid-development.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Rapid Development: CSS Frameworks</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-professional-practices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Professional Practices</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/project-react-integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Project: React Integration</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">The Professional Developer</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/chapter-emerging-technologies.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Evaluating Emerging Technologies</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Evaluating Emerging Technologies</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter-development-career.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Your Development Career</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Your Development Career</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter-ai-era-developer.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">The AI-Era Developer</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">The AI-Era Developer</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/how-to-use-this-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to Use This Book</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/2027-course-map.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2027 Course Map</span></a>
   </div>
 </li>
       </ul>
@@ -520,7 +576,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
     </ul>
     </div>
-</nav>
+<div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
+<p>Paperback ISBN 979-8-255-17415-7</p>
+</div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -528,15 +586,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-concept-first" id="toc-the-concept-first" class="nav-link active" data-scroll-target="#the-concept-first"><span class="header-section-number">5.1</span> The Concept First</a></li>
-  <li><a href="#understanding-through-contracts" id="toc-understanding-through-contracts" class="nav-link" data-scroll-target="#understanding-through-contracts"><span class="header-section-number">5.2</span> Understanding Through Contracts</a></li>
-  <li><a href="#discovering-connection-with-your-ai-partner" id="toc-discovering-connection-with-your-ai-partner" class="nav-link" data-scroll-target="#discovering-connection-with-your-ai-partner"><span class="header-section-number">5.3</span> Discovering Connection with Your AI Partner</a>
+  <li><a href="#the-concept-first" id="toc-the-concept-first" class="nav-link active" data-scroll-target="#the-concept-first"><span class="header-section-number">8.1</span> The Concept First</a></li>
+  <li><a href="#understanding-through-contracts" id="toc-understanding-through-contracts" class="nav-link" data-scroll-target="#understanding-through-contracts"><span class="header-section-number">8.2</span> Understanding Through Contracts</a></li>
+  <li><a href="#discovering-connection-with-your-ai-partner" id="toc-discovering-connection-with-your-ai-partner" class="nav-link" data-scroll-target="#discovering-connection-with-your-ai-partner"><span class="header-section-number">8.3</span> Discovering Connection with Your AI Partner</a>
   <ul class="collapse">
   <li><a href="#exploration-1-how-apis-work" id="toc-exploration-1-how-apis-work" class="nav-link" data-scroll-target="#exploration-1-how-apis-work">Exploration 1: How APIs Work</a></li>
   <li><a href="#exploration-2-data-formats" id="toc-exploration-2-data-formats" class="nav-link" data-scroll-target="#exploration-2-data-formats">Exploration 2: Data Formats</a></li>
   <li><a href="#exploration-3-what-can-go-wrong" id="toc-exploration-3-what-can-go-wrong" class="nav-link" data-scroll-target="#exploration-3-what-can-go-wrong">Exploration 3: What Can Go Wrong?</a></li>
   </ul></li>
-  <li><a href="#from-concept-to-code" id="toc-from-concept-to-code" class="nav-link" data-scroll-target="#from-concept-to-code"><span class="header-section-number">5.4</span> From Concept to Code</a>
+  <li><a href="#from-concept-to-code" id="toc-from-concept-to-code" class="nav-link" data-scroll-target="#from-concept-to-code"><span class="header-section-number">8.4</span> From Concept to Code</a>
   <ul class="collapse">
   <li><a href="#the-fetch-api" id="toc-the-fetch-api" class="nav-link" data-scroll-target="#the-fetch-api">The Fetch API</a></li>
   <li><a href="#understanding-asynchronous-code" id="toc-understanding-asynchronous-code" class="nav-link" data-scroll-target="#understanding-asynchronous-code">Understanding Asynchronous Code</a></li>
@@ -548,13 +606,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#http-methods-beyond-get" id="toc-http-methods-beyond-get" class="nav-link" data-scroll-target="#http-methods-beyond-get">HTTP Methods: Beyond GET</a></li>
   <li><a href="#cors-why-some-requests-fail" id="toc-cors-why-some-requests-fail" class="nav-link" data-scroll-target="#cors-why-some-requests-fail">CORS: Why Some Requests Fail</a></li>
   </ul></li>
-  <li><a href="#building-your-mental-model" id="toc-building-your-mental-model" class="nav-link" data-scroll-target="#building-your-mental-model"><span class="header-section-number">5.5</span> Building Your Mental Model</a>
+  <li><a href="#building-your-mental-model" id="toc-building-your-mental-model" class="nav-link" data-scroll-target="#building-your-mental-model"><span class="header-section-number">8.5</span> Building Your Mental Model</a>
   <ul class="collapse">
   <li><a href="#request-response-cycle" id="toc-request-response-cycle" class="nav-link" data-scroll-target="#request-response-cycle">Request-Response Cycle</a></li>
   <li><a href="#synchronous-vs-asynchronous" id="toc-synchronous-vs-asynchronous" class="nav-link" data-scroll-target="#synchronous-vs-asynchronous">Synchronous vs Asynchronous</a></li>
   <li><a href="#the-data-flow" id="toc-the-data-flow" class="nav-link" data-scroll-target="#the-data-flow">The Data Flow</a></li>
   </ul></li>
-  <li><a href="#business-applications" id="toc-business-applications" class="nav-link" data-scroll-target="#business-applications"><span class="header-section-number">5.6</span> Business Applications</a>
+  <li><a href="#business-applications" id="toc-business-applications" class="nav-link" data-scroll-target="#business-applications"><span class="header-section-number">8.6</span> Business Applications</a>
   <ul class="collapse">
   <li><a href="#real-time-data" id="toc-real-time-data" class="nav-link" data-scroll-target="#real-time-data">Real-Time Data</a></li>
   <li><a href="#payment-processing" id="toc-payment-processing" class="nav-link" data-scroll-target="#payment-processing">Payment Processing</a></li>
@@ -562,28 +620,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#scalability-and-architecture" id="toc-scalability-and-architecture" class="nav-link" data-scroll-target="#scalability-and-architecture">Scalability and Architecture</a></li>
   <li><a href="#business-integration" id="toc-business-integration" class="nav-link" data-scroll-target="#business-integration">Business Integration</a></li>
   </ul></li>
-  <li><a href="#practice-exercises" id="toc-practice-exercises" class="nav-link" data-scroll-target="#practice-exercises"><span class="header-section-number">5.7</span> Practice Exercises</a>
+  <li><a href="#practice-exercises" id="toc-practice-exercises" class="nav-link" data-scroll-target="#practice-exercises"><span class="header-section-number">8.7</span> Practice Exercises</a>
   <ul class="collapse">
-  <li><a href="#exercise-4.1-your-first-api-call-level-1" id="toc-exercise-4.1-your-first-api-call-level-1" class="nav-link" data-scroll-target="#exercise-4.1-your-first-api-call-level-1">Exercise 4.1: Your First API Call (Level 1)</a></li>
-  <li><a href="#exercise-4.2-displaying-a-list-level-2" id="toc-exercise-4.2-displaying-a-list-level-2" class="nav-link" data-scroll-target="#exercise-4.2-displaying-a-list-level-2">Exercise 4.2: Displaying a List (Level 2)</a></li>
-  <li><a href="#exercise-4.3-dynamic-filtering-level-3" id="toc-exercise-4.3-dynamic-filtering-level-3" class="nav-link" data-scroll-target="#exercise-4.3-dynamic-filtering-level-3">Exercise 4.3: Dynamic Filtering (Level 3)</a></li>
-  <li><a href="#exercise-4.4-error-handling-scenarios-level-4" id="toc-exercise-4.4-error-handling-scenarios-level-4" class="nav-link" data-scroll-target="#exercise-4.4-error-handling-scenarios-level-4">Exercise 4.4: Error Handling Scenarios (Level 4)</a></li>
-  <li><a href="#exercise-4.5-api-integration-proposal-level-5" id="toc-exercise-4.5-api-integration-proposal-level-5" class="nav-link" data-scroll-target="#exercise-4.5-api-integration-proposal-level-5">Exercise 4.5: API Integration Proposal (Level 5)</a></li>
+  <li><a href="#exercise-8.1-your-first-api-call-level-1" id="toc-exercise-8.1-your-first-api-call-level-1" class="nav-link" data-scroll-target="#exercise-8.1-your-first-api-call-level-1">Exercise 8.1: Your First API Call (Level 1)</a></li>
+  <li><a href="#exercise-8.2-displaying-a-list-level-2" id="toc-exercise-8.2-displaying-a-list-level-2" class="nav-link" data-scroll-target="#exercise-8.2-displaying-a-list-level-2">Exercise 8.2: Displaying a List (Level 2)</a></li>
+  <li><a href="#exercise-8.3-dynamic-filtering-level-3" id="toc-exercise-8.3-dynamic-filtering-level-3" class="nav-link" data-scroll-target="#exercise-8.3-dynamic-filtering-level-3">Exercise 8.3: Dynamic Filtering (Level 3)</a></li>
+  <li><a href="#exercise-8.4-error-handling-scenarios-level-4" id="toc-exercise-8.4-error-handling-scenarios-level-4" class="nav-link" data-scroll-target="#exercise-8.4-error-handling-scenarios-level-4">Exercise 8.4: Error Handling Scenarios (Level 4)</a></li>
+  <li><a href="#exercise-8.5-api-integration-proposal-level-5" id="toc-exercise-8.5-api-integration-proposal-level-5" class="nav-link" data-scroll-target="#exercise-8.5-api-integration-proposal-level-5">Exercise 8.5: API Integration Proposal (Level 5)</a></li>
   </ul></li>
-  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary"><span class="header-section-number">5.8</span> Chapter Summary</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">5.9</span> Reflection</a></li>
-  <li><a href="#your-learning-journal" id="toc-your-learning-journal" class="nav-link" data-scroll-target="#your-learning-journal"><span class="header-section-number">5.10</span> Your Learning Journal</a></li>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">5.11</span> Next Steps</a></li>
+  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary"><span class="header-section-number">8.8</span> Chapter Summary</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">8.9</span> Reflection</a></li>
+  <li><a href="#your-learning-journal" id="toc-your-learning-journal" class="nav-link" data-scroll-target="#your-learning-journal"><span class="header-section-number">8.10</span> Your Learning Journal</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">8.11</span> Next Steps</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/build-web-guide-ai/edit/main/chapters/chapter-connection.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="build-web-guide-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="build-web-guide-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/build-web-guide-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/build-web-guide-ai/edit/main/chapters/chapter-connection.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/build-web-guide-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/build-web-guide-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/build-web-guide-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-structure.html">Web Foundations</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-connection.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Connection: APIs as Business Integration</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-structure.html">Web Foundations</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-connection.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Connection: APIs as Business Integration</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span id="sec-connection" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Connection: APIs as Business Integration</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span id="sec-connection" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Connection: APIs as Business Integration</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -600,16 +658,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="the-concept-first" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="the-concept-first"><span class="header-section-number">5.1</span> The Concept First</h2>
+<section id="the-concept-first" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="the-concept-first"><span class="header-section-number">8.1</span> The Concept First</h2>
 <p>So far, everything you’ve built lives in isolation. Your HTML, CSS, and JavaScript create an experience, but that experience is self-contained, it doesn’t connect to anything beyond itself.</p>
-<p>Real business applications are different. They display live weather data. They process payments. They show inventory levels. They sync with customer databases. They pull content from external services. How?</p>
-<p><strong>APIs</strong>. Application Programming Interfaces.</p>
+<p>Real business applications are different. They display live weather data. They process payments. They show inventory levels. They sync with customer databases. They pull content from external services.</p>
+<p>They do it through <strong>APIs</strong> (Application Programming Interfaces).</p>
 <p>An API is a defined way for two systems to communicate. When your JavaScript asks a weather service “What’s the temperature in Perth?”, it’s using an API. When a customer’s payment details go to Stripe for processing, that’s an API. When your portfolio site pulls your latest GitHub projects, that’s an API.</p>
-<p>APIs transform your website from a standalone document into a connected application that interacts with the wider world.</p>
+<p>APIs connect your website to those services instead of leaving it standalone.</p>
 </section>
-<section id="understanding-through-contracts" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="understanding-through-contracts"><span class="header-section-number">5.2</span> Understanding Through Contracts</h2>
+<section id="understanding-through-contracts" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="understanding-through-contracts"><span class="header-section-number">8.2</span> Understanding Through Contracts</h2>
 <p>Think of an API as a contract between two parties. Like any good contract, it specifies:</p>
 <ul>
 <li><strong>What you can ask for</strong> (the endpoints)</li>
@@ -624,7 +682,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>The kitchen prepares your food and the waiter delivers it (response)</li>
 <li>If something’s unavailable, they tell you (error response)</li>
 </ul>
-<p>You don’t need to know how the kitchen works. You just need to know how to order and what to expect. That’s the power of a well-defined interface.</p>
+<p>You don’t need to know how the kitchen works. You just need to know how to order and what to expect.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -639,8 +697,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="discovering-connection-with-your-ai-partner" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="discovering-connection-with-your-ai-partner"><span class="header-section-number">5.3</span> Discovering Connection with Your AI Partner</h2>
+<section id="discovering-connection-with-your-ai-partner" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="discovering-connection-with-your-ai-partner"><span class="header-section-number">8.3</span> Discovering Connection with Your AI Partner</h2>
 <section id="exploration-1-how-apis-work" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-1-how-apis-work">Exploration 1: How APIs Work</h3>
 <p>Let’s build understanding before we see code:</p>
@@ -659,7 +717,7 @@ use one versus the other?</code></pre>
 <pre class="text"><code>Ask your AI:
 Why is JSON the standard format for web API data? What problem does
 it solve, and what did people use before JSON?</code></pre>
-<p>JSON (JavaScript Object Notation) is readable by humans and easily parsed by machines. It’s become the universal format for web data exchange.</p>
+<p>JSON (JavaScript Object Notation) is readable by humans and easily parsed by machines. It’s become the standard format for web data exchange.</p>
 <pre class="text"><code>Continue the conversation:
 Show me what a JSON response might look like for a product catalogue
 with three items. Each item has a name, price, description, and
@@ -678,8 +736,8 @@ How should a professional application respond to each type of failure?
 What should the user see?</code></pre>
 </section>
 </section>
-<section id="from-concept-to-code" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="from-concept-to-code"><span class="header-section-number">5.4</span> From Concept to Code</h2>
+<section id="from-concept-to-code" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="from-concept-to-code"><span class="header-section-number">8.4</span> From Concept to Code</h2>
 <p>Let’s build your API understanding progressively, from fetching data to handling complex scenarios.</p>
 <section id="the-fetch-api" class="level3">
 <h3 class="anchored" data-anchor-id="the-fetch-api">The Fetch API</h3>
@@ -787,7 +845,7 @@ What does createElement do? What happens if the fetch fails?</code></pre>
 </section>
 <section id="error-handling-in-depth" class="level3">
 <h3 class="anchored" data-anchor-id="error-handling-in-depth">Error Handling in Depth</h3>
-<p>Robust applications handle multiple failure scenarios:</p>
+<p>Applications need to handle several failure scenarios:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">async</span> <span class="kw">function</span> <span class="fu">loadData</span>() {</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span> {</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> response <span class="op">=</span> <span class="cf">await</span> <span class="fu">fetch</span>(<span class="st">'https://api.example.com/data'</span>)<span class="op">;</span></span>
@@ -948,8 +1006,8 @@ against?</code></pre>
 </div>
 </section>
 </section>
-<section id="building-your-mental-model" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="building-your-mental-model"><span class="header-section-number">5.5</span> Building Your Mental Model</h2>
+<section id="building-your-mental-model" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="building-your-mental-model"><span class="header-section-number">8.5</span> Building Your Mental Model</h2>
 <section id="request-response-cycle" class="level3">
 <h3 class="anchored" data-anchor-id="request-response-cycle">Request-Response Cycle</h3>
 <p>Every API interaction follows this pattern:</p>
@@ -994,8 +1052,8 @@ JavaScript Objects/Arrays
 <p>Understanding this flow helps debug issues: Is the problem in fetching? Parsing? Processing? Rendering?</p>
 </section>
 </section>
-<section id="business-applications" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="business-applications"><span class="header-section-number">5.6</span> Business Applications</h2>
+<section id="business-applications" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="business-applications"><span class="header-section-number">8.6</span> Business Applications</h2>
 <section id="real-time-data" class="level3">
 <h3 class="anchored" data-anchor-id="real-time-data">Real-Time Data</h3>
 <p>Stock prices, sports scores, weather. APIs provide live data that keeps users engaged and informed. Without APIs, you’d need to manually update your site constantly.</p>
@@ -1006,7 +1064,7 @@ JavaScript Objects/Arrays
 </section>
 <section id="third-party-services" class="level3">
 <h3 class="anchored" data-anchor-id="third-party-services">Third-Party Services</h3>
-<p>Maps (Google Maps, Mapbox), analytics (Google Analytics), authentication (Auth0), email (SendGrid). APIs let you leverage sophisticated services without building them yourself.</p>
+<p>Maps (Google Maps, Mapbox), analytics (Google Analytics), authentication (Auth0), email (SendGrid). APIs let you use sophisticated services without building them yourself.</p>
 </section>
 <section id="scalability-and-architecture" class="level3">
 <h3 class="anchored" data-anchor-id="scalability-and-architecture">Scalability and Architecture</h3>
@@ -1015,7 +1073,6 @@ JavaScript Objects/Arrays
 <section id="business-integration" class="level3">
 <h3 class="anchored" data-anchor-id="business-integration">Business Integration</h3>
 <p>Connect your website to: - Inventory management systems - Customer relationship management (CRM) - Email marketing platforms - Accounting software</p>
-<p>APIs are how modern businesses connect their systems.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1031,8 +1088,8 @@ JavaScript Objects/Arrays
 </div>
 </section>
 </section>
-<section id="practice-exercises" class="level2" data-number="5.7">
-<h2 data-number="5.7" class="anchored" data-anchor-id="practice-exercises"><span class="header-section-number">5.7</span> Practice Exercises</h2>
+<section id="practice-exercises" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="practice-exercises"><span class="header-section-number">8.7</span> Practice Exercises</h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1052,8 +1109,8 @@ JavaScript Objects/Arrays
 </ul>
 </div>
 </div>
-<section id="exercise-4.1-your-first-api-call-level-1" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-4.1-your-first-api-call-level-1">Exercise 4.1: Your First API Call (Level 1)</h3>
+<section id="exercise-8.1-your-first-api-call-level-1" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-8.1-your-first-api-call-level-1">Exercise 8.1: Your First API Call (Level 1)</h3>
 <p>Use the JSONPlaceholder API (<code>https://jsonplaceholder.typicode.com/posts/1</code>) to:</p>
 <ol type="1">
 <li>Fetch a single post using <code>fetch()</code> and <code>async</code>/<code>await</code></li>
@@ -1062,8 +1119,8 @@ JavaScript Objects/Arrays
 </ol>
 <p>Open DevTools Network tab to see the request and response.</p>
 </section>
-<section id="exercise-4.2-displaying-a-list-level-2" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-4.2-displaying-a-list-level-2">Exercise 4.2: Displaying a List (Level 2)</h3>
+<section id="exercise-8.2-displaying-a-list-level-2" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-8.2-displaying-a-list-level-2">Exercise 8.2: Displaying a List (Level 2)</h3>
 <p>Fetch multiple posts from <code>https://jsonplaceholder.typicode.com/posts?_limit=5</code> and:</p>
 <ol type="1">
 <li>Create an HTML card for each post showing title and body</li>
@@ -1072,8 +1129,8 @@ JavaScript Objects/Arrays
 </ol>
 <p>Handle what happens if the fetch fails.</p>
 </section>
-<section id="exercise-4.3-dynamic-filtering-level-3" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-4.3-dynamic-filtering-level-3">Exercise 4.3: Dynamic Filtering (Level 3)</h3>
+<section id="exercise-8.3-dynamic-filtering-level-3" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-8.3-dynamic-filtering-level-3">Exercise 8.3: Dynamic Filtering (Level 3)</h3>
 <p>Using the JSONPlaceholder posts API:</p>
 <ol type="1">
 <li>Fetch all posts (or limit to 20)</li>
@@ -1083,8 +1140,8 @@ JavaScript Objects/Arrays
 </ol>
 <p>This combines API fetching with JavaScript event handling and DOM manipulation.</p>
 </section>
-<section id="exercise-4.4-error-handling-scenarios-level-4" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-4.4-error-handling-scenarios-level-4">Exercise 4.4: Error Handling Scenarios (Level 4)</h3>
+<section id="exercise-8.4-error-handling-scenarios-level-4" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-8.4-error-handling-scenarios-level-4">Exercise 8.4: Error Handling Scenarios (Level 4)</h3>
 <p>Create a page that fetches from an API and handles all these scenarios gracefully:</p>
 <ol type="1">
 <li>Successful fetch → Display data</li>
@@ -1094,8 +1151,8 @@ JavaScript Objects/Arrays
 </ol>
 <p>Test each scenario and document how you handled them. Take screenshots showing each state.</p>
 </section>
-<section id="exercise-4.5-api-integration-proposal-level-5" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-4.5-api-integration-proposal-level-5">Exercise 4.5: API Integration Proposal (Level 5)</h3>
+<section id="exercise-8.5-api-integration-proposal-level-5" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-8.5-api-integration-proposal-level-5">Exercise 8.5: API Integration Proposal (Level 5)</h3>
 <p>A local gym wants to display class schedules from their booking system on their website. The booking system has an API.</p>
 <p>Research and propose:</p>
 <ol type="1">
@@ -1108,8 +1165,8 @@ JavaScript Objects/Arrays
 <p>Write a 400-word proposal. Discuss your approach with your AI partner, what did you miss?</p>
 </section>
 </section>
-<section id="chapter-summary" class="level2" data-number="5.8">
-<h2 data-number="5.8" class="anchored" data-anchor-id="chapter-summary"><span class="header-section-number">5.8</span> Chapter Summary</h2>
+<section id="chapter-summary" class="level2" data-number="8.8">
+<h2 data-number="8.8" class="anchored" data-anchor-id="chapter-summary"><span class="header-section-number">8.8</span> Chapter Summary</h2>
 <ul>
 <li>APIs enable systems to communicate through defined contracts</li>
 <li><code>fetch()</code> with <code>async</code>/<code>await</code> makes readable asynchronous code</li>
@@ -1120,8 +1177,8 @@ JavaScript Objects/Arrays
 <li>APIs connect your site to the broader ecosystem of services</li>
 </ul>
 </section>
-<section id="reflection" class="level2" data-number="5.9">
-<h2 data-number="5.9" class="anchored" data-anchor-id="reflection"><span class="header-section-number">5.9</span> Reflection</h2>
+<section id="reflection" class="level2" data-number="8.9">
+<h2 data-number="8.9" class="anchored" data-anchor-id="reflection"><span class="header-section-number">8.9</span> Reflection</h2>
 <p>Before moving to the Portfolio Project, ensure you can:</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Explain what an API is without technical jargon</label></li>
@@ -1133,8 +1190,8 @@ JavaScript Objects/Arrays
 <li><label><input type="checkbox">Articulate why APIs matter for business applications</label></li>
 </ul>
 </section>
-<section id="your-learning-journal" class="level2" data-number="5.10">
-<h2 data-number="5.10" class="anchored" data-anchor-id="your-learning-journal"><span class="header-section-number">5.10</span> Your Learning Journal</h2>
+<section id="your-learning-journal" class="level2" data-number="8.10">
+<h2 data-number="8.10" class="anchored" data-anchor-id="your-learning-journal"><span class="header-section-number">8.10</span> Your Learning Journal</h2>
 <p>Record your responses to these prompts:</p>
 <ol type="1">
 <li><p><strong>API Discovery</strong>: Find three public APIs that could be useful for business websites. What data do they provide? What would you build with them?</p></li>
@@ -1143,17 +1200,17 @@ JavaScript Objects/Arrays
 <li><p><strong>Business Integration</strong>: Think of a local business. What data might they want to display from external sources? What APIs might provide it?</p></li>
 </ol>
 </section>
-<section id="next-steps" class="level2" data-number="5.11">
-<h2 data-number="5.11" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">5.11</span> Next Steps</h2>
-<p>You’ve now completed Part I: Web Foundations. You understand:</p>
+<section id="next-steps" class="level2" data-number="8.11">
+<h2 data-number="8.11" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">8.11</span> Next Steps</h2>
+<p>You’ve now completed the Web Foundations chapters. You understand:</p>
 <ul>
 <li><strong>Structure</strong> (HTML): What content exists</li>
 <li><strong>Presentation</strong> (CSS): How content looks</li>
 <li><strong>Behaviour</strong> (JavaScript): How content responds</li>
 <li><strong>Connection</strong> (APIs): How content integrates with external services</li>
 </ul>
-<p>In <a href="../projects/project-portfolio.html" class="quarto-xref"><span>Chapter 6</span></a>, you’ll combine these skills to build a complete portfolio website, your first substantial web project. This portfolio will demonstrate your capabilities to future employers or clients.</p>
-<p>Then, in Part II, we shift focus from building pages to managing content at scale with content management systems.</p>
+<p>In <a href="../projects/project-portfolio.html" class="quarto-xref"><span>Chapter 9</span></a>, you’ll combine these skills to build a complete portfolio website, your first substantial web project. This portfolio will demonstrate your capabilities to future employers or clients.</p>
+<p>Then, in the content management chapters, we shift focus from building pages to managing content at scale with content management systems.</p>
 
 
 <!-- -->
@@ -1268,16 +1325,16 @@ JavaScript Objects/Arrays
     }
     function toggleCodeHandler(show) {
       return function(e) {
-        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-        for (let i=0; i<detailsSrc.length; i++) {
-          const details = detailsSrc[i].parentElement;
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
           if (show) {
             details.open = true;
           } else {
             details.removeAttribute("open");
           }
         }
-        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
         const fromCls = show ? "hidden" : "unhidden";
         const toCls = show ? "unhidden" : "hidden";
         for (let i=0; i<cellCodeDivs.length; i++) {
@@ -1630,12 +1687,12 @@ JavaScript Objects/Arrays
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../chapters/chapter-behaviour.html" class="pagination-link" aria-label="Behaviour: JavaScript as User Interaction">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Behaviour: JavaScript as User Interaction</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Behaviour: JavaScript as User Interaction</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../projects/project-portfolio.html" class="pagination-link" aria-label="Project: Portfolio Website">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Project: Portfolio Website</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Project: Portfolio Website</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
@@ -1645,13 +1702,13 @@ JavaScript Objects/Arrays
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>So far, everything you've built lives in isolation. Your HTML, CSS, and JavaScript create an experience, but that experience is self-contained, it doesn't connect to anything beyond itself.</span>
 <span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>Real business applications are different. They display live weather data. They process payments. They show inventory levels. They sync with customer databases. They pull content from external services. How?</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>Real business applications are different. They display live weather data. They process payments. They show inventory levels. They sync with customer databases. They pull content from external services.</span>
 <span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>**APIs**. Application Programming Interfaces.</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>They do it through **APIs** (Application Programming Interfaces).</span>
 <span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>An API is a defined way for two systems to communicate. When your JavaScript asks a weather service "What's the temperature in Perth?", it's using an API. When a customer's payment details go to Stripe for processing, that's an API. When your portfolio site pulls your latest GitHub projects, that's an API.</span>
 <span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>APIs transform your website from a standalone document into a connected application that interacts with the wider world.</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>APIs connect your website to those services instead of leaving it standalone.</span>
 <span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Understanding Through Contracts</span></span>
 <span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a></span>
@@ -1669,7 +1726,7 @@ JavaScript Objects/Arrays
 <span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The kitchen prepares your food and the waiter delivers it (response)</span>
 <span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If something's unavailable, they tell you (error response)</span>
 <span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-31"><a href="#cb22-31" aria-hidden="true" tabindex="-1"></a>You don't need to know how the kitchen works. You just need to know how to order and what to expect. That's the power of a well-defined interface.</span>
+<span id="cb22-31"><a href="#cb22-31" aria-hidden="true" tabindex="-1"></a>You don't need to know how the kitchen works. You just need to know how to order and what to expect.</span>
 <span id="cb22-32"><a href="#cb22-32" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-33"><a href="#cb22-33" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
 <span id="cb22-34"><a href="#cb22-34" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Contract Mindset</span></span>
@@ -1707,7 +1764,7 @@ JavaScript Objects/Arrays
 <span id="cb22-66"><a href="#cb22-66" aria-hidden="true" tabindex="-1"></a><span class="in">it solve, and what did people use before JSON?</span></span>
 <span id="cb22-67"><a href="#cb22-67" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-68"><a href="#cb22-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-69"><a href="#cb22-69" aria-hidden="true" tabindex="-1"></a>JSON (JavaScript Object Notation) is readable by humans and easily parsed by machines. It's become the universal format for web data exchange.</span>
+<span id="cb22-69"><a href="#cb22-69" aria-hidden="true" tabindex="-1"></a>JSON (JavaScript Object Notation) is readable by humans and easily parsed by machines. It's become the standard format for web data exchange.</span>
 <span id="cb22-70"><a href="#cb22-70" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-71"><a href="#cb22-71" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb22-72"><a href="#cb22-72" aria-hidden="true" tabindex="-1"></a><span class="in">Continue the conversation:</span></span>
@@ -1875,7 +1932,7 @@ JavaScript Objects/Arrays
 <span id="cb22-234"><a href="#cb22-234" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-235"><a href="#cb22-235" aria-hidden="true" tabindex="-1"></a>### <span class="bu">Error</span> Handling in Depth</span>
 <span id="cb22-236"><a href="#cb22-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-237"><a href="#cb22-237" aria-hidden="true" tabindex="-1"></a>Robust applications handle multiple failure scenarios<span class="op">:</span></span>
+<span id="cb22-237"><a href="#cb22-237" aria-hidden="true" tabindex="-1"></a>Applications need to handle several failure scenarios<span class="op">:</span></span>
 <span id="cb22-238"><a href="#cb22-238" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-239"><a href="#cb22-239" aria-hidden="true" tabindex="-1"></a>```javascript</span>
 <span id="cb22-240"><a href="#cb22-240" aria-hidden="true" tabindex="-1"></a>async function <span class="fu">loadData</span><span class="op">()</span> <span class="op">{</span></span>
@@ -2070,7 +2127,7 @@ JavaScript Objects/Arrays
 <span id="cb22-429"><a href="#cb22-429" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-430"><a href="#cb22-430" aria-hidden="true" tabindex="-1"></a>### Third<span class="op">-</span>Party Services</span>
 <span id="cb22-431"><a href="#cb22-431" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-432"><a href="#cb22-432" aria-hidden="true" tabindex="-1"></a><span class="fu">Maps</span> <span class="op">(</span>Google Maps<span class="op">,</span> Mapbox<span class="op">),</span> <span class="fu">analytics</span> <span class="op">(</span>Google Analytics<span class="op">),</span> <span class="fu">authentication</span> <span class="op">(</span>Auth0<span class="op">),</span> <span class="fu">email</span> <span class="op">(</span>SendGrid<span class="op">).</span> <span class="fu">APIs</span> let you leverage sophisticated services without building them yourself<span class="op">.</span></span>
+<span id="cb22-432"><a href="#cb22-432" aria-hidden="true" tabindex="-1"></a><span class="fu">Maps</span> <span class="op">(</span>Google Maps<span class="op">,</span> Mapbox<span class="op">),</span> <span class="fu">analytics</span> <span class="op">(</span>Google Analytics<span class="op">),</span> <span class="fu">authentication</span> <span class="op">(</span>Auth0<span class="op">),</span> <span class="fu">email</span> <span class="op">(</span>SendGrid<span class="op">).</span> <span class="fu">APIs</span> let you use sophisticated services without building them yourself<span class="op">.</span></span>
 <span id="cb22-433"><a href="#cb22-433" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-434"><a href="#cb22-434" aria-hidden="true" tabindex="-1"></a>### Scalability and Architecture</span>
 <span id="cb22-435"><a href="#cb22-435" aria-hidden="true" tabindex="-1"></a></span>
@@ -2084,126 +2141,124 @@ JavaScript Objects/Arrays
 <span id="cb22-443"><a href="#cb22-443" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Email marketing platforms</span>
 <span id="cb22-444"><a href="#cb22-444" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Accounting software</span>
 <span id="cb22-445"><a href="#cb22-445" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-446"><a href="#cb22-446" aria-hidden="true" tabindex="-1"></a>APIs are how modern businesses connect their systems<span class="op">.</span></span>
-<span id="cb22-447"><a href="#cb22-447" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-448"><a href="#cb22-448" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span> <span class="op">{.</span><span class="fu">callout</span><span class="op">-</span>note<span class="op">}</span></span>
-<span id="cb22-449"><a href="#cb22-449" aria-hidden="true" tabindex="-1"></a>## Skills You Are Building</span>
-<span id="cb22-450"><a href="#cb22-450" aria-hidden="true" tabindex="-1"></a>This develops <span class="op">**</span>making and defending technology choices<span class="op">**</span> and <span class="op">**</span>evaluating and improving solutions<span class="op">**.</span> <span class="fu">API</span> integration is fundamental to modern web development<span class="op">.</span> <span class="fu">Understanding</span> how to evaluate<span class="op">,</span> implement<span class="op">,</span> and handle errors in API connections is essential professional knowledge<span class="op">.</span></span>
-<span id="cb22-451"><a href="#cb22-451" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span></span>
+<span id="cb22-446"><a href="#cb22-446" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span> <span class="op">{.</span><span class="fu">callout</span><span class="op">-</span>note<span class="op">}</span></span>
+<span id="cb22-447"><a href="#cb22-447" aria-hidden="true" tabindex="-1"></a>## Skills You Are Building</span>
+<span id="cb22-448"><a href="#cb22-448" aria-hidden="true" tabindex="-1"></a>This develops <span class="op">**</span>making and defending technology choices<span class="op">**</span> and <span class="op">**</span>evaluating and improving solutions<span class="op">**.</span> <span class="fu">API</span> integration is fundamental to modern web development<span class="op">.</span> <span class="fu">Understanding</span> how to evaluate<span class="op">,</span> implement<span class="op">,</span> and handle errors in API connections is essential professional knowledge<span class="op">.</span></span>
+<span id="cb22-449"><a href="#cb22-449" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span></span>
+<span id="cb22-450"><a href="#cb22-450" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-451"><a href="#cb22-451" aria-hidden="true" tabindex="-1"></a>## Practice Exercises</span>
 <span id="cb22-452"><a href="#cb22-452" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-453"><a href="#cb22-453" aria-hidden="true" tabindex="-1"></a>## Practice Exercises</span>
-<span id="cb22-454"><a href="#cb22-454" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-455"><a href="#cb22-455" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span> <span class="op">{.</span><span class="fu">callout</span><span class="op">-</span>note<span class="op">}</span></span>
-<span id="cb22-456"><a href="#cb22-456" aria-hidden="true" tabindex="-1"></a>## Exercise Levels</span>
-<span id="cb22-457"><a href="#cb22-457" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">1</span><span class="op">**:</span> Direct application</span>
-<span id="cb22-458"><a href="#cb22-458" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">2</span><span class="op">**:</span> Minor modifications</span>
-<span id="cb22-459"><a href="#cb22-459" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">3</span><span class="op">**:</span> Combining concepts</span>
-<span id="cb22-460"><a href="#cb22-460" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">4</span><span class="op">**:</span> Problem<span class="op">-</span>solving</span>
-<span id="cb22-461"><a href="#cb22-461" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">5</span><span class="op">**:</span> Open<span class="op">-</span>ended design</span>
-<span id="cb22-462"><a href="#cb22-462" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span></span>
+<span id="cb22-453"><a href="#cb22-453" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span> <span class="op">{.</span><span class="fu">callout</span><span class="op">-</span>note<span class="op">}</span></span>
+<span id="cb22-454"><a href="#cb22-454" aria-hidden="true" tabindex="-1"></a>## Exercise Levels</span>
+<span id="cb22-455"><a href="#cb22-455" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">1</span><span class="op">**:</span> Direct application</span>
+<span id="cb22-456"><a href="#cb22-456" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">2</span><span class="op">**:</span> Minor modifications</span>
+<span id="cb22-457"><a href="#cb22-457" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">3</span><span class="op">**:</span> Combining concepts</span>
+<span id="cb22-458"><a href="#cb22-458" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">4</span><span class="op">**:</span> Problem<span class="op">-</span>solving</span>
+<span id="cb22-459"><a href="#cb22-459" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">5</span><span class="op">**:</span> Open<span class="op">-</span>ended design</span>
+<span id="cb22-460"><a href="#cb22-460" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span></span>
+<span id="cb22-461"><a href="#cb22-461" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-462"><a href="#cb22-462" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">8.1</span><span class="op">:</span> Your First API <span class="fu">Call</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">1</span><span class="op">)</span></span>
 <span id="cb22-463"><a href="#cb22-463" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-464"><a href="#cb22-464" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">4.1</span><span class="op">:</span> Your First API <span class="fu">Call</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">1</span><span class="op">)</span></span>
+<span id="cb22-464"><a href="#cb22-464" aria-hidden="true" tabindex="-1"></a>Use the JSONPlaceholder <span class="fu">API</span> <span class="op">(</span>`https<span class="op">:</span><span class="co">//jsonplaceholder.typicode.com/posts/1`) to:</span></span>
 <span id="cb22-465"><a href="#cb22-465" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-466"><a href="#cb22-466" aria-hidden="true" tabindex="-1"></a>Use the JSONPlaceholder <span class="fu">API</span> <span class="op">(</span>`https<span class="op">:</span><span class="co">//jsonplaceholder.typicode.com/posts/1`) to:</span></span>
-<span id="cb22-467"><a href="#cb22-467" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-468"><a href="#cb22-468" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Fetch a single post using `<span class="fu">fetch</span><span class="op">()</span>` and `async`<span class="op">/</span>`await`</span>
-<span id="cb22-469"><a href="#cb22-469" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Log the response to the console</span>
-<span id="cb22-470"><a href="#cb22-470" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> Display the post<span class="er">'</span>s title and body in <span class="bu">HTML</span> elements</span>
+<span id="cb22-466"><a href="#cb22-466" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Fetch a single post using `<span class="fu">fetch</span><span class="op">()</span>` and `async`<span class="op">/</span>`await`</span>
+<span id="cb22-467"><a href="#cb22-467" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Log the response to the console</span>
+<span id="cb22-468"><a href="#cb22-468" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> Display the post<span class="er">'</span>s title and body in <span class="bu">HTML</span> elements</span>
+<span id="cb22-469"><a href="#cb22-469" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-470"><a href="#cb22-470" aria-hidden="true" tabindex="-1"></a>Open DevTools Network tab to see the request and response<span class="op">.</span></span>
 <span id="cb22-471"><a href="#cb22-471" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-472"><a href="#cb22-472" aria-hidden="true" tabindex="-1"></a>Open DevTools Network tab to see the request and response<span class="op">.</span></span>
+<span id="cb22-472"><a href="#cb22-472" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">8.2</span><span class="op">:</span> Displaying a <span class="bu">List</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">2</span><span class="op">)</span></span>
 <span id="cb22-473"><a href="#cb22-473" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-474"><a href="#cb22-474" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">4.2</span><span class="op">:</span> Displaying a <span class="bu">List</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">2</span><span class="op">)</span></span>
+<span id="cb22-474"><a href="#cb22-474" aria-hidden="true" tabindex="-1"></a>Fetch multiple posts from `https<span class="op">:</span><span class="co">//jsonplaceholder.typicode.com/posts?_limit=5` and:</span></span>
 <span id="cb22-475"><a href="#cb22-475" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-476"><a href="#cb22-476" aria-hidden="true" tabindex="-1"></a>Fetch multiple posts from `https<span class="op">:</span><span class="co">//jsonplaceholder.typicode.com/posts?_limit=5` and:</span></span>
-<span id="cb22-477"><a href="#cb22-477" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-478"><a href="#cb22-478" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Create an <span class="bu">HTML</span> card <span class="cf">for</span> each post showing title and body</span>
-<span id="cb22-479"><a href="#cb22-479" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Add proper loading and error states</span>
-<span id="cb22-480"><a href="#cb22-480" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> <span class="bu">Style</span> the cards with <span class="bu">CSS</span></span>
+<span id="cb22-476"><a href="#cb22-476" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Create an <span class="bu">HTML</span> card <span class="cf">for</span> each post showing title and body</span>
+<span id="cb22-477"><a href="#cb22-477" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Add proper loading and error states</span>
+<span id="cb22-478"><a href="#cb22-478" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> <span class="bu">Style</span> the cards with <span class="bu">CSS</span></span>
+<span id="cb22-479"><a href="#cb22-479" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-480"><a href="#cb22-480" aria-hidden="true" tabindex="-1"></a>Handle what happens <span class="cf">if</span> the fetch fails<span class="op">.</span></span>
 <span id="cb22-481"><a href="#cb22-481" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-482"><a href="#cb22-482" aria-hidden="true" tabindex="-1"></a>Handle what happens <span class="cf">if</span> the fetch fails<span class="op">.</span></span>
+<span id="cb22-482"><a href="#cb22-482" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">8.3</span><span class="op">:</span> Dynamic <span class="fu">Filtering</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">3</span><span class="op">)</span></span>
 <span id="cb22-483"><a href="#cb22-483" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-484"><a href="#cb22-484" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">4.3</span><span class="op">:</span> Dynamic <span class="fu">Filtering</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">3</span><span class="op">)</span></span>
+<span id="cb22-484"><a href="#cb22-484" aria-hidden="true" tabindex="-1"></a>Using the JSONPlaceholder posts API<span class="op">:</span></span>
 <span id="cb22-485"><a href="#cb22-485" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-486"><a href="#cb22-486" aria-hidden="true" tabindex="-1"></a>Using the JSONPlaceholder posts API<span class="op">:</span></span>
-<span id="cb22-487"><a href="#cb22-487" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-488"><a href="#cb22-488" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Fetch all <span class="fu">posts</span> <span class="op">(</span>or limit to <span class="dv">20</span><span class="op">)</span></span>
-<span id="cb22-489"><a href="#cb22-489" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Create a search input field</span>
-<span id="cb22-490"><a href="#cb22-490" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> As the user types<span class="op">,</span> filter the displayed posts to those whose title contains the search term</span>
-<span id="cb22-491"><a href="#cb22-491" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> Update the display without re<span class="op">-</span>fetching</span>
+<span id="cb22-486"><a href="#cb22-486" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Fetch all <span class="fu">posts</span> <span class="op">(</span>or limit to <span class="dv">20</span><span class="op">)</span></span>
+<span id="cb22-487"><a href="#cb22-487" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Create a search input field</span>
+<span id="cb22-488"><a href="#cb22-488" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> As the user types<span class="op">,</span> filter the displayed posts to those whose title contains the search term</span>
+<span id="cb22-489"><a href="#cb22-489" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> Update the display without re<span class="op">-</span>fetching</span>
+<span id="cb22-490"><a href="#cb22-490" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-491"><a href="#cb22-491" aria-hidden="true" tabindex="-1"></a>This combines API fetching with JavaScript event handling and DOM manipulation<span class="op">.</span></span>
 <span id="cb22-492"><a href="#cb22-492" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-493"><a href="#cb22-493" aria-hidden="true" tabindex="-1"></a>This combines API fetching with JavaScript event handling and DOM manipulation<span class="op">.</span></span>
+<span id="cb22-493"><a href="#cb22-493" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">8.4</span><span class="op">:</span> <span class="bu">Error</span> Handling <span class="fu">Scenarios</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">4</span><span class="op">)</span></span>
 <span id="cb22-494"><a href="#cb22-494" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-495"><a href="#cb22-495" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">4.4</span><span class="op">:</span> <span class="bu">Error</span> Handling <span class="fu">Scenarios</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">4</span><span class="op">)</span></span>
+<span id="cb22-495"><a href="#cb22-495" aria-hidden="true" tabindex="-1"></a>Create a page that fetches from an API and handles all these scenarios gracefully<span class="op">:</span></span>
 <span id="cb22-496"><a href="#cb22-496" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-497"><a href="#cb22-497" aria-hidden="true" tabindex="-1"></a>Create a page that fetches from an API and handles all these scenarios gracefully<span class="op">:</span></span>
-<span id="cb22-498"><a href="#cb22-498" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-499"><a href="#cb22-499" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Successful fetch → Display data</span>
-<span id="cb22-500"><a href="#cb22-500" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Network <span class="fu">error</span> <span class="op">(</span><span class="cf">try</span> an invalid <span class="bu">URL</span><span class="op">)</span> → Show connection error message</span>
-<span id="cb22-501"><a href="#cb22-501" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> <span class="dv">404</span> <span class="fu">error</span> <span class="op">(</span>fetch a non<span class="op">-</span>existent resource<span class="op">)</span> → Show <span class="st">"not found"</span> message</span>
-<span id="cb22-502"><a href="#cb22-502" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> Loading state → Show spinner <span class="cf">while</span> waiting</span>
+<span id="cb22-497"><a href="#cb22-497" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Successful fetch → Display data</span>
+<span id="cb22-498"><a href="#cb22-498" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Network <span class="fu">error</span> <span class="op">(</span><span class="cf">try</span> an invalid <span class="bu">URL</span><span class="op">)</span> → Show connection error message</span>
+<span id="cb22-499"><a href="#cb22-499" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> <span class="dv">404</span> <span class="fu">error</span> <span class="op">(</span>fetch a non<span class="op">-</span>existent resource<span class="op">)</span> → Show <span class="st">"not found"</span> message</span>
+<span id="cb22-500"><a href="#cb22-500" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> Loading state → Show spinner <span class="cf">while</span> waiting</span>
+<span id="cb22-501"><a href="#cb22-501" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-502"><a href="#cb22-502" aria-hidden="true" tabindex="-1"></a>Test each scenario and document how you handled them<span class="op">.</span> <span class="fu">Take</span> screenshots showing each state<span class="op">.</span></span>
 <span id="cb22-503"><a href="#cb22-503" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-504"><a href="#cb22-504" aria-hidden="true" tabindex="-1"></a>Test each scenario and document how you handled them<span class="op">.</span> <span class="fu">Take</span> screenshots showing each state<span class="op">.</span></span>
+<span id="cb22-504"><a href="#cb22-504" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">8.5</span><span class="op">:</span> API Integration <span class="fu">Proposal</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">5</span><span class="op">)</span></span>
 <span id="cb22-505"><a href="#cb22-505" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-506"><a href="#cb22-506" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">4.5</span><span class="op">:</span> API Integration <span class="fu">Proposal</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">5</span><span class="op">)</span></span>
+<span id="cb22-506"><a href="#cb22-506" aria-hidden="true" tabindex="-1"></a>A local gym wants to display <span class="kw">class</span> schedules from their booking system on their website<span class="op">.</span> <span class="fu">The</span> booking system has an API<span class="op">.</span></span>
 <span id="cb22-507"><a href="#cb22-507" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-508"><a href="#cb22-508" aria-hidden="true" tabindex="-1"></a>A local gym wants to display <span class="kw">class</span> schedules from their booking system on their website<span class="op">.</span> <span class="fu">The</span> booking system has an API<span class="op">.</span></span>
+<span id="cb22-508"><a href="#cb22-508" aria-hidden="true" tabindex="-1"></a><span class="fu">Research</span> and propose<span class="op">:</span></span>
 <span id="cb22-509"><a href="#cb22-509" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-510"><a href="#cb22-510" aria-hidden="true" tabindex="-1"></a><span class="fu">Research</span> and propose<span class="op">:</span></span>
-<span id="cb22-511"><a href="#cb22-511" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-512"><a href="#cb22-512" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> What data would you need from the API<span class="op">?</span></span>
-<span id="cb22-513"><a href="#cb22-513" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> How would you display it<span class="op">?</span> <span class="op">(</span>Sketch the UI<span class="op">)</span></span>
-<span id="cb22-514"><a href="#cb22-514" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> What loading states and error handling are needed<span class="op">?</span></span>
-<span id="cb22-515"><a href="#cb22-515" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> How often should data refresh<span class="op">?</span></span>
-<span id="cb22-516"><a href="#cb22-516" aria-hidden="true" tabindex="-1"></a><span class="fl">5.</span> What happens <span class="cf">if</span> the API is unavailable<span class="op">?</span></span>
+<span id="cb22-510"><a href="#cb22-510" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> What data would you need from the API<span class="op">?</span></span>
+<span id="cb22-511"><a href="#cb22-511" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> How would you display it<span class="op">?</span> <span class="op">(</span>Sketch the UI<span class="op">)</span></span>
+<span id="cb22-512"><a href="#cb22-512" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> What loading states and error handling are needed<span class="op">?</span></span>
+<span id="cb22-513"><a href="#cb22-513" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> How often should data refresh<span class="op">?</span></span>
+<span id="cb22-514"><a href="#cb22-514" aria-hidden="true" tabindex="-1"></a><span class="fl">5.</span> What happens <span class="cf">if</span> the API is unavailable<span class="op">?</span></span>
+<span id="cb22-515"><a href="#cb22-515" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-516"><a href="#cb22-516" aria-hidden="true" tabindex="-1"></a>Write a <span class="dv">400</span><span class="op">-</span>word proposal<span class="op">.</span> <span class="fu">Discuss</span> your approach with your AI partner<span class="op">,</span> what did you miss<span class="op">?</span></span>
 <span id="cb22-517"><a href="#cb22-517" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-518"><a href="#cb22-518" aria-hidden="true" tabindex="-1"></a>Write a <span class="dv">400</span><span class="op">-</span>word proposal<span class="op">.</span> <span class="fu">Discuss</span> your approach with your AI partner<span class="op">,</span> what did you miss<span class="op">?</span></span>
+<span id="cb22-518"><a href="#cb22-518" aria-hidden="true" tabindex="-1"></a>## Chapter Summary</span>
 <span id="cb22-519"><a href="#cb22-519" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-520"><a href="#cb22-520" aria-hidden="true" tabindex="-1"></a>## Chapter Summary</span>
-<span id="cb22-521"><a href="#cb22-521" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-522"><a href="#cb22-522" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> APIs enable systems to communicate through defined contracts</span>
-<span id="cb22-523"><a href="#cb22-523" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> `<span class="fu">fetch</span><span class="op">()</span>` with `async`<span class="op">/</span>`await` makes readable asynchronous code</span>
-<span id="cb22-524"><a href="#cb22-524" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> JSON is the standard data format <span class="cf">for</span> web APIs</span>
-<span id="cb22-525"><a href="#cb22-525" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Always handle loading states and errors</span>
-<span id="cb22-526"><a href="#cb22-526" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Check `response<span class="op">.</span><span class="fu">ok</span>`<span class="op">,</span> fetch doesn<span class="er">'</span>t <span class="cf">throw</span> on HTTP errors</span>
-<span id="cb22-527"><a href="#cb22-527" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> CORS protects users but can block legitimate requests</span>
-<span id="cb22-528"><a href="#cb22-528" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> APIs connect your site to the broader ecosystem of services</span>
+<span id="cb22-520"><a href="#cb22-520" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> APIs enable systems to communicate through defined contracts</span>
+<span id="cb22-521"><a href="#cb22-521" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> `<span class="fu">fetch</span><span class="op">()</span>` with `async`<span class="op">/</span>`await` makes readable asynchronous code</span>
+<span id="cb22-522"><a href="#cb22-522" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> JSON is the standard data format <span class="cf">for</span> web APIs</span>
+<span id="cb22-523"><a href="#cb22-523" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Always handle loading states and errors</span>
+<span id="cb22-524"><a href="#cb22-524" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Check `response<span class="op">.</span><span class="fu">ok</span>`<span class="op">,</span> fetch doesn<span class="er">'</span>t <span class="cf">throw</span> on HTTP errors</span>
+<span id="cb22-525"><a href="#cb22-525" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> CORS protects users but can block legitimate requests</span>
+<span id="cb22-526"><a href="#cb22-526" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> APIs connect your site to the broader ecosystem of services</span>
+<span id="cb22-527"><a href="#cb22-527" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-528"><a href="#cb22-528" aria-hidden="true" tabindex="-1"></a>## Reflection</span>
 <span id="cb22-529"><a href="#cb22-529" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-530"><a href="#cb22-530" aria-hidden="true" tabindex="-1"></a>## Reflection</span>
+<span id="cb22-530"><a href="#cb22-530" aria-hidden="true" tabindex="-1"></a>Before moving to the Portfolio Project<span class="op">,</span> ensure you can<span class="op">:</span></span>
 <span id="cb22-531"><a href="#cb22-531" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-532"><a href="#cb22-532" aria-hidden="true" tabindex="-1"></a>Before moving to the Portfolio Project<span class="op">,</span> ensure you can<span class="op">:</span></span>
-<span id="cb22-533"><a href="#cb22-533" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-534"><a href="#cb22-534" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Explain what an API is without technical jargon</span>
-<span id="cb22-535"><a href="#cb22-535" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Write a `<span class="fu">fetch</span><span class="op">()</span>` request using `async`<span class="op">/</span>`await`</span>
-<span id="cb22-536"><a href="#cb22-536" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Parse JSON responses and access nested data</span>
-<span id="cb22-537"><a href="#cb22-537" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Handle loading states appropriately</span>
-<span id="cb22-538"><a href="#cb22-538" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Implement error handling with `try`<span class="op">/</span>`catch`</span>
-<span id="cb22-539"><a href="#cb22-539" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Explain the difference between GET and POST</span>
-<span id="cb22-540"><a href="#cb22-540" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Articulate why APIs matter <span class="cf">for</span> business applications</span>
+<span id="cb22-532"><a href="#cb22-532" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Explain what an API is without technical jargon</span>
+<span id="cb22-533"><a href="#cb22-533" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Write a `<span class="fu">fetch</span><span class="op">()</span>` request using `async`<span class="op">/</span>`await`</span>
+<span id="cb22-534"><a href="#cb22-534" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Parse JSON responses and access nested data</span>
+<span id="cb22-535"><a href="#cb22-535" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Handle loading states appropriately</span>
+<span id="cb22-536"><a href="#cb22-536" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Implement error handling with `try`<span class="op">/</span>`catch`</span>
+<span id="cb22-537"><a href="#cb22-537" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Explain the difference between GET and POST</span>
+<span id="cb22-538"><a href="#cb22-538" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">[</span> <span class="op">]</span> Articulate why APIs matter <span class="cf">for</span> business applications</span>
+<span id="cb22-539"><a href="#cb22-539" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-540"><a href="#cb22-540" aria-hidden="true" tabindex="-1"></a>## Your Learning Journal</span>
 <span id="cb22-541"><a href="#cb22-541" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-542"><a href="#cb22-542" aria-hidden="true" tabindex="-1"></a>## Your Learning Journal</span>
+<span id="cb22-542"><a href="#cb22-542" aria-hidden="true" tabindex="-1"></a>Record your responses to these prompts<span class="op">:</span></span>
 <span id="cb22-543"><a href="#cb22-543" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-544"><a href="#cb22-544" aria-hidden="true" tabindex="-1"></a>Record your responses to these prompts<span class="op">:</span></span>
+<span id="cb22-544"><a href="#cb22-544" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> <span class="op">**</span>API Discovery<span class="op">**:</span> Find three <span class="kw">public</span> APIs that could be useful <span class="cf">for</span> business websites<span class="op">.</span> <span class="fu">What</span> data <span class="cf">do</span> they provide<span class="op">?</span> What would you build with them<span class="op">?</span></span>
 <span id="cb22-545"><a href="#cb22-545" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-546"><a href="#cb22-546" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> <span class="op">**</span>API Discovery<span class="op">**:</span> Find three <span class="kw">public</span> APIs that could be useful <span class="cf">for</span> business websites<span class="op">.</span> <span class="fu">What</span> data <span class="cf">do</span> they provide<span class="op">?</span> What would you build with them<span class="op">?</span></span>
+<span id="cb22-546"><a href="#cb22-546" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> <span class="op">**</span><span class="bu">Error</span> Empathy<span class="op">**:</span> Think about times you<span class="er">'</span>ve seen error messages on websites<span class="op">.</span> <span class="fu">Which</span> were helpful<span class="op">?</span> Which were frustrating<span class="op">?</span> How would you <span class="cf">do</span> better<span class="op">?</span></span>
 <span id="cb22-547"><a href="#cb22-547" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-548"><a href="#cb22-548" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> <span class="op">**</span><span class="bu">Error</span> Empathy<span class="op">**:</span> Think about times you<span class="er">'</span>ve seen error messages on websites<span class="op">.</span> <span class="fu">Which</span> were helpful<span class="op">?</span> Which were frustrating<span class="op">?</span> How would you <span class="cf">do</span> better<span class="op">?</span></span>
+<span id="cb22-548"><a href="#cb22-548" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> <span class="op">**</span>AI Conversation Reflection<span class="op">**:</span> What API concept was most confusing<span class="op">?</span> What question to your AI partner helped clarify it<span class="op">?</span></span>
 <span id="cb22-549"><a href="#cb22-549" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-550"><a href="#cb22-550" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> <span class="op">**</span>AI Conversation Reflection<span class="op">**:</span> What API concept was most confusing<span class="op">?</span> What question to your AI partner helped clarify it<span class="op">?</span></span>
+<span id="cb22-550"><a href="#cb22-550" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> <span class="op">**</span>Business Integration<span class="op">**:</span> Think of a local business<span class="op">.</span> <span class="fu">What</span> data might they want to display from external sources<span class="op">?</span> What APIs might provide it<span class="op">?</span></span>
 <span id="cb22-551"><a href="#cb22-551" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-552"><a href="#cb22-552" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> <span class="op">**</span>Business Integration<span class="op">**:</span> Think of a local business<span class="op">.</span> <span class="fu">What</span> data might they want to display from external sources<span class="op">?</span> What APIs might provide it<span class="op">?</span></span>
+<span id="cb22-552"><a href="#cb22-552" aria-hidden="true" tabindex="-1"></a>## Next Steps</span>
 <span id="cb22-553"><a href="#cb22-553" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-554"><a href="#cb22-554" aria-hidden="true" tabindex="-1"></a>## Next Steps</span>
+<span id="cb22-554"><a href="#cb22-554" aria-hidden="true" tabindex="-1"></a>You<span class="er">'</span>ve now completed the Web Foundations chapters<span class="op">.</span> <span class="fu">You</span> understand<span class="op">:</span></span>
 <span id="cb22-555"><a href="#cb22-555" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-556"><a href="#cb22-556" aria-hidden="true" tabindex="-1"></a>You<span class="er">'</span>ve now completed Part I<span class="op">:</span> Web Foundations<span class="op">.</span> <span class="fu">You</span> understand<span class="op">:</span></span>
-<span id="cb22-557"><a href="#cb22-557" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-558"><a href="#cb22-558" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Structure<span class="op">**</span> <span class="op">(</span><span class="bu">HTML</span><span class="op">):</span> What content exists</span>
-<span id="cb22-559"><a href="#cb22-559" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Presentation<span class="op">**</span> <span class="op">(</span><span class="bu">CSS</span><span class="op">):</span> How content looks</span>
-<span id="cb22-560"><a href="#cb22-560" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Behaviour<span class="op">**</span> <span class="op">(</span>JavaScript<span class="op">):</span> How content responds</span>
-<span id="cb22-561"><a href="#cb22-561" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Connection</span><span class="op">**</span> <span class="op">(</span>APIs<span class="op">):</span> How content integrates with external services</span>
+<span id="cb22-556"><a href="#cb22-556" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Structure<span class="op">**</span> <span class="op">(</span><span class="bu">HTML</span><span class="op">):</span> What content exists</span>
+<span id="cb22-557"><a href="#cb22-557" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Presentation<span class="op">**</span> <span class="op">(</span><span class="bu">CSS</span><span class="op">):</span> How content looks</span>
+<span id="cb22-558"><a href="#cb22-558" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Behaviour<span class="op">**</span> <span class="op">(</span>JavaScript<span class="op">):</span> How content responds</span>
+<span id="cb22-559"><a href="#cb22-559" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Connection</span><span class="op">**</span> <span class="op">(</span>APIs<span class="op">):</span> How content integrates with external services</span>
+<span id="cb22-560"><a href="#cb22-560" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-561"><a href="#cb22-561" aria-hidden="true" tabindex="-1"></a>In <span class="at">@sec</span><span class="op">-</span>project<span class="op">-</span>portfolio<span class="op">,</span> you<span class="er">'</span>ll combine these skills to build a complete portfolio website<span class="op">,</span> your first substantial web project<span class="op">.</span> <span class="fu">This</span> portfolio will demonstrate your capabilities to future employers or clients<span class="op">.</span></span>
 <span id="cb22-562"><a href="#cb22-562" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-563"><a href="#cb22-563" aria-hidden="true" tabindex="-1"></a>In <span class="at">@sec</span><span class="op">-</span>project<span class="op">-</span>portfolio<span class="op">,</span> you<span class="er">'</span>ll combine these skills to build a complete portfolio website<span class="op">,</span> your first substantial web project<span class="op">.</span> <span class="fu">This</span> portfolio will demonstrate your capabilities to future employers or clients<span class="op">.</span></span>
-<span id="cb22-564"><a href="#cb22-564" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-565"><a href="#cb22-565" aria-hidden="true" tabindex="-1"></a><span class="fu">Then</span><span class="op">,</span> in Part II<span class="op">,</span> we shift focus from building pages to managing content at scale with content management systems<span class="op">.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb22-563"><a href="#cb22-563" aria-hidden="true" tabindex="-1"></a><span class="fu">Then</span><span class="op">,</span> in the content management chapters<span class="op">,</span> we shift focus from building pages to managing content at scale with content management systems<span class="op">.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

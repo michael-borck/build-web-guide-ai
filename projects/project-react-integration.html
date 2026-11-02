@@ -2,21 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="A practical approach to web development that embraces AI as your development partner while building real business solutions with HTML, CSS, JavaScript, WordPress, and React.">
+<meta name="description" content="A practical approach to web development that teaches you to specify, direct, check and hand over AI-built business websites with HTML, CSS, JavaScript, WordPress and React.">
 
-<title>15&nbsp; Project: React Integration – Build Web, Guide AI</title>
+<title>18&nbsp; Project: React Integration – Build Web, Guide AI</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -78,14 +81,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-6453f418aeef366c23116eb9cb0b6816.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-36d1909bcb541879de504f1ebcc96011.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-9950bca906ef9bb3ea288c0af376aad5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-36d1909bcb541879de504f1ebcc96011.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-b146b0f11fcb9d7b327ea38bc2e11b34.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-8bc080b4f13ff5280c11423cbe489c26.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-b146b0f11fcb9d7b327ea38bc2e11b34.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -116,6 +119,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../assets/custom.css">
+<link rel="stylesheet" href="../book-design.css">
 </head>
 
 <body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -289,7 +293,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-component-thinking.html">Modern Frontend Development</a></li><li class="breadcrumb-item"><a href="../projects/project-react-integration.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Project: React Integration</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-component-thinking.html">Modern Frontend Development</a></li><li class="breadcrumb-item"><a href="../projects/project-react-integration.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Project: React Integration</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -363,7 +367,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Web Foundations</span></a>
+ <span class="menu-text">The Practice Spine</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -371,32 +375,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-structure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></span></a>
+  <a href="../chapters/chapter-specify-before-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Specify Before You Build</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-presentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></span></a>
+  <a href="../chapters/chapter-checks-that-run.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Checks That Run</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-behaviour.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Behaviour: JavaScript as User Interaction</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-connection.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Connection: APIs as Business Integration</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../projects/project-portfolio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Project: Portfolio Website</span></span></a>
+  <a href="../chapters/chapter-agent-ready-repo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The Agent-Ready Repo and Handover</span></span></a>
   </div>
 </li>
       </ul>
@@ -404,7 +396,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Content Management for Business</span></a>
+ <span class="menu-text">Web Foundations</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -412,32 +404,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-why-cms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Why CMS? The Business Value of Managed Content</span></span></a>
+  <a href="../chapters/chapter-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-wordpress-platform.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">WordPress as Platform</span></span></a>
+  <a href="../chapters/chapter-presentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-extending-platforms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Extending Platforms</span></span></a>
+  <a href="../chapters/chapter-behaviour.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Behaviour: JavaScript as User Interaction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-headless-architecture.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Headless Architecture</span></span></a>
+  <a href="../chapters/chapter-connection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Connection: APIs as Business Integration</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../projects/project-business-site.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Project: Business Website with WordPress</span></span></a>
+  <a href="../projects/project-portfolio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Project: Portfolio Website</span></span></a>
   </div>
 </li>
       </ul>
@@ -445,7 +437,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Modern Frontend Development</span></a>
+ <span class="menu-text">Content Management for Business</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -453,26 +445,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-component-thinking.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Component Thinking: React</span></span></a>
+  <a href="../chapters/chapter-why-cms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Why CMS? The Business Value of Managed Content</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-rapid-development.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Rapid Development: CSS Frameworks</span></span></a>
+  <a href="../chapters/chapter-wordpress-platform.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">WordPress as Platform</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-professional-practices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Professional Practices</span></span></a>
+  <a href="../chapters/chapter-extending-platforms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Extending Platforms</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../projects/project-react-integration.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Project: React Integration</span></span></a>
+  <a href="../chapters/chapter-headless-architecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Headless Architecture</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/project-business-site.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Project: Business Website with WordPress</span></span></a>
   </div>
 </li>
       </ul>
@@ -480,7 +478,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">The Professional Developer</span></a>
+ <span class="menu-text">Modern Frontend Development</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -488,20 +486,78 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-component-thinking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Component Thinking: React</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-rapid-development.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Rapid Development: CSS Frameworks</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-professional-practices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Professional Practices</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/project-react-integration.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Project: React Integration</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">The Professional Developer</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/chapter-emerging-technologies.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Evaluating Emerging Technologies</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Evaluating Emerging Technologies</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter-development-career.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Your Development Career</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Your Development Career</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter-ai-era-developer.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">The AI-Era Developer</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">The AI-Era Developer</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/how-to-use-this-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to Use This Book</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/2027-course-map.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2027 Course Map</span></a>
   </div>
 </li>
       </ul>
@@ -520,7 +576,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
     </ul>
     </div>
-</nav>
+<div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
+<p>Paperback ISBN 979-8-255-17415-7</p>
+</div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -528,30 +586,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#project-overview" id="toc-project-overview" class="nav-link active" data-scroll-target="#project-overview"><span class="header-section-number">15.1</span> Project Overview</a></li>
-  <li><a href="#learning-outcomes-addressed" id="toc-learning-outcomes-addressed" class="nav-link" data-scroll-target="#learning-outcomes-addressed"><span class="header-section-number">15.2</span> Learning Outcomes Addressed</a></li>
-  <li><a href="#technical-context" id="toc-technical-context" class="nav-link" data-scroll-target="#technical-context"><span class="header-section-number">15.3</span> Technical Context</a></li>
-  <li><a href="#project-scenarios" id="toc-project-scenarios" class="nav-link" data-scroll-target="#project-scenarios"><span class="header-section-number">15.4</span> Project Scenarios</a>
+  <li><a href="#project-overview" id="toc-project-overview" class="nav-link active" data-scroll-target="#project-overview"><span class="header-section-number">18.1</span> Project Overview</a></li>
+  <li><a href="#learning-outcomes-addressed" id="toc-learning-outcomes-addressed" class="nav-link" data-scroll-target="#learning-outcomes-addressed"><span class="header-section-number">18.2</span> Learning Outcomes Addressed</a></li>
+  <li><a href="#technical-context" id="toc-technical-context" class="nav-link" data-scroll-target="#technical-context"><span class="header-section-number">18.3</span> Technical Context</a></li>
+  <li><a href="#project-scenarios" id="toc-project-scenarios" class="nav-link" data-scroll-target="#project-scenarios"><span class="header-section-number">18.4</span> Project Scenarios</a>
   <ul class="collapse">
   <li><a href="#option-a-blog-frontend" id="toc-option-a-blog-frontend" class="nav-link" data-scroll-target="#option-a-blog-frontend">Option A: Blog Frontend</a></li>
   <li><a href="#option-b-portfolio-showcase" id="toc-option-b-portfolio-showcase" class="nav-link" data-scroll-target="#option-b-portfolio-showcase">Option B: Portfolio Showcase</a></li>
   <li><a href="#option-c-business-directory" id="toc-option-c-business-directory" class="nav-link" data-scroll-target="#option-c-business-directory">Option C: Business Directory</a></li>
   <li><a href="#option-d-custom-application" id="toc-option-d-custom-application" class="nav-link" data-scroll-target="#option-d-custom-application">Option D: Custom Application</a></li>
   </ul></li>
-  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements"><span class="header-section-number">15.5</span> Requirements</a>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements"><span class="header-section-number">18.5</span> Requirements</a>
   <ul class="collapse">
   <li><a href="#phase-1-planning-and-setup" id="toc-phase-1-planning-and-setup" class="nav-link" data-scroll-target="#phase-1-planning-and-setup">Phase 1: Planning and Setup</a></li>
   <li><a href="#phase-2-react-implementation" id="toc-phase-2-react-implementation" class="nav-link" data-scroll-target="#phase-2-react-implementation">Phase 2: React Implementation</a></li>
   <li><a href="#phase-3-enhanced-features" id="toc-phase-3-enhanced-features" class="nav-link" data-scroll-target="#phase-3-enhanced-features">Phase 3: Enhanced Features</a></li>
   <li><a href="#phase-4-documentation-and-reflection" id="toc-phase-4-documentation-and-reflection" class="nav-link" data-scroll-target="#phase-4-documentation-and-reflection">Phase 4: Documentation and Reflection</a></li>
   </ul></li>
-  <li><a href="#ai-collaboration-guidelines" id="toc-ai-collaboration-guidelines" class="nav-link" data-scroll-target="#ai-collaboration-guidelines"><span class="header-section-number">15.6</span> AI Collaboration Guidelines</a>
+  <li><a href="#ai-collaboration-guidelines" id="toc-ai-collaboration-guidelines" class="nav-link" data-scroll-target="#ai-collaboration-guidelines"><span class="header-section-number">18.6</span> AI Collaboration Guidelines</a>
   <ul class="collapse">
   <li><a href="#effective-ai-partnership" id="toc-effective-ai-partnership" class="nav-link" data-scroll-target="#effective-ai-partnership">Effective AI Partnership</a></li>
   <li><a href="#ai-collaboration-log" id="toc-ai-collaboration-log" class="nav-link" data-scroll-target="#ai-collaboration-log">AI Collaboration Log</a></li>
   <li><a href="#attribution-requirements" id="toc-attribution-requirements" class="nav-link" data-scroll-target="#attribution-requirements">Attribution Requirements</a></li>
   </ul></li>
-  <li><a href="#evaluation-criteria" id="toc-evaluation-criteria" class="nav-link" data-scroll-target="#evaluation-criteria"><span class="header-section-number">15.7</span> Evaluation Criteria</a>
+  <li><a href="#evaluation-criteria" id="toc-evaluation-criteria" class="nav-link" data-scroll-target="#evaluation-criteria"><span class="header-section-number">18.7</span> Evaluation Criteria</a>
   <ul class="collapse">
   <li><a href="#planning-and-design-15" id="toc-planning-and-design-15" class="nav-link" data-scroll-target="#planning-and-design-15">Planning and Design (15%)</a></li>
   <li><a href="#react-implementation-35" id="toc-react-implementation-35" class="nav-link" data-scroll-target="#react-implementation-35">React Implementation (35%)</a></li>
@@ -559,22 +617,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#professional-practices-10" id="toc-professional-practices-10" class="nav-link" data-scroll-target="#professional-practices-10">Professional Practices (10%)</a></li>
   <li><a href="#reflection-and-ai-collaboration-15" id="toc-reflection-and-ai-collaboration-15" class="nav-link" data-scroll-target="#reflection-and-ai-collaboration-15">Reflection and AI Collaboration (15%)</a></li>
   </ul></li>
-  <li><a href="#submission-checklist" id="toc-submission-checklist" class="nav-link" data-scroll-target="#submission-checklist"><span class="header-section-number">15.8</span> Submission Checklist</a></li>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started"><span class="header-section-number">15.9</span> Getting Started</a></li>
-  <li><a href="#common-pitfalls-to-avoid" id="toc-common-pitfalls-to-avoid" class="nav-link" data-scroll-target="#common-pitfalls-to-avoid"><span class="header-section-number">15.10</span> Common Pitfalls to Avoid</a></li>
-  <li><a href="#technical-tips" id="toc-technical-tips" class="nav-link" data-scroll-target="#technical-tips"><span class="header-section-number">15.11</span> Technical Tips</a></li>
-  <li><a href="#professional-context" id="toc-professional-context" class="nav-link" data-scroll-target="#professional-context"><span class="header-section-number">15.12</span> Professional Context</a></li>
-  <li><a href="#after-submission" id="toc-after-submission" class="nav-link" data-scroll-target="#after-submission"><span class="header-section-number">15.13</span> After Submission</a></li>
+  <li><a href="#submission-checklist" id="toc-submission-checklist" class="nav-link" data-scroll-target="#submission-checklist"><span class="header-section-number">18.8</span> Submission Checklist</a></li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started"><span class="header-section-number">18.9</span> Getting Started</a></li>
+  <li><a href="#common-pitfalls-to-avoid" id="toc-common-pitfalls-to-avoid" class="nav-link" data-scroll-target="#common-pitfalls-to-avoid"><span class="header-section-number">18.10</span> Common Pitfalls to Avoid</a></li>
+  <li><a href="#technical-tips" id="toc-technical-tips" class="nav-link" data-scroll-target="#technical-tips"><span class="header-section-number">18.11</span> Technical Tips</a></li>
+  <li><a href="#professional-context" id="toc-professional-context" class="nav-link" data-scroll-target="#professional-context"><span class="header-section-number">18.12</span> Professional Context</a></li>
+  <li><a href="#after-submission" id="toc-after-submission" class="nav-link" data-scroll-target="#after-submission"><span class="header-section-number">18.13</span> After Submission</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/build-web-guide-ai/edit/main/projects/project-react-integration.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="build-web-guide-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="build-web-guide-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/build-web-guide-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/build-web-guide-ai/edit/main/projects/project-react-integration.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/build-web-guide-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/build-web-guide-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/build-web-guide-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-component-thinking.html">Modern Frontend Development</a></li><li class="breadcrumb-item"><a href="../projects/project-react-integration.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Project: React Integration</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-component-thinking.html">Modern Frontend Development</a></li><li class="breadcrumb-item"><a href="../projects/project-react-integration.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Project: React Integration</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span id="sec-project-react-integration" class="quarto-section-identifier"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Project: React Integration</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span id="sec-project-react-integration" class="quarto-section-identifier"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Project: React Integration</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -604,22 +662,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The online edition at <a href="https://books.borck.education">books.borck.education</a> includes links to example implementations, starter code, and companion resources for each project.</p>
 </div>
 </div>
-<section id="project-overview" class="level2" data-number="15.1">
-<h2 data-number="15.1" class="anchored" data-anchor-id="project-overview"><span class="header-section-number">15.1</span> Project Overview</h2>
-<p>Part III taught you component thinking, CSS frameworks, and professional practices. Now you’ll bring it together: build a React frontend that consumes content from WordPress via the REST API, demonstrating headless architecture in action.</p>
+<section id="project-overview" class="level2" data-number="18.1">
+<h2 data-number="18.1" class="anchored" data-anchor-id="project-overview"><span class="header-section-number">18.1</span> Project Overview</h2>
+<p>The modern frontend chapters taught you component thinking, CSS frameworks, and professional practices. Now you’ll bring it together: build a React frontend that consumes content from WordPress via the REST API, demonstrating headless architecture in action.</p>
 <p>This project bridges backend content management with modern frontend development. You’ll make architectural decisions, implement a complete application, and document your approach, skills that directly translate to professional frontend development roles.</p>
 </section>
-<section id="learning-outcomes-addressed" class="level2" data-number="15.2">
-<h2 data-number="15.2" class="anchored" data-anchor-id="learning-outcomes-addressed"><span class="header-section-number">15.2</span> Learning Outcomes Addressed</h2>
+<section id="learning-outcomes-addressed" class="level2" data-number="18.2">
+<h2 data-number="18.2" class="anchored" data-anchor-id="learning-outcomes-addressed"><span class="header-section-number">18.2</span> Learning Outcomes Addressed</h2>
 <ul>
 <li><strong>ULO 1</strong>: Design and implement effective web applications</li>
 <li><strong>ULO 4</strong>: Select and integrate appropriate technologies</li>
 <li><strong>ULO 5</strong>: Evaluate emerging technologies and approaches</li>
 </ul>
 </section>
-<section id="technical-context" class="level2" data-number="15.3">
-<h2 data-number="15.3" class="anchored" data-anchor-id="technical-context"><span class="header-section-number">15.3</span> Technical Context</h2>
-<p>In <a href="../chapters/chapter-headless-architecture.html" class="quarto-xref"><span>Chapter 10</span></a>, you learned that headless WordPress separates content management (WordPress) from content presentation (your frontend). This project implements that architecture:</p>
+<section id="technical-context" class="level2" data-number="18.3">
+<h2 data-number="18.3" class="anchored" data-anchor-id="technical-context"><span class="header-section-number">18.3</span> Technical Context</h2>
+<p>In <a href="../chapters/chapter-headless-architecture.html" class="quarto-xref"><span>Chapter 13</span></a>, you learned that headless WordPress separates content management (WordPress) from content presentation (your frontend). This project implements that architecture:</p>
 <pre class="text"><code>┌────────────────┐     REST API     ┌────────────────┐
 │   WordPress    │ ───────────────► │   React App    │
 │   (Backend)    │    JSON Data     │   (Frontend)   │
@@ -630,12 +688,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 └────────────────┘                  └────────────────┘</code></pre>
 <p>Your React application will fetch and display content that’s managed in WordPress, the same content model used by major publishers, e-commerce sites, and enterprise applications.</p>
 </section>
-<section id="project-scenarios" class="level2" data-number="15.4">
-<h2 data-number="15.4" class="anchored" data-anchor-id="project-scenarios"><span class="header-section-number">15.4</span> Project Scenarios</h2>
+<section id="project-scenarios" class="level2" data-number="18.4">
+<h2 data-number="18.4" class="anchored" data-anchor-id="project-scenarios"><span class="header-section-number">18.4</span> Project Scenarios</h2>
 <p>Choose one scenario that builds on your WordPress site from the Business Site Project, or create new content:</p>
 <section id="option-a-blog-frontend" class="level3">
 <h3 class="anchored" data-anchor-id="option-a-blog-frontend">Option A: Blog Frontend</h3>
-<p>Transform your WordPress blog into a modern React single-page application:</p>
+<p>Rebuild your WordPress blog as a modern React single-page application:</p>
 <ul>
 <li>Post listing with categories</li>
 <li>Individual post pages</li>
@@ -675,8 +733,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 </section>
-<section id="requirements" class="level2" data-number="15.5">
-<h2 data-number="15.5" class="anchored" data-anchor-id="requirements"><span class="header-section-number">15.5</span> Requirements</h2>
+<section id="requirements" class="level2" data-number="18.5">
+<h2 data-number="18.5" class="anchored" data-anchor-id="requirements"><span class="header-section-number">18.5</span> Requirements</h2>
 <section id="phase-1-planning-and-setup" class="level3">
 <h3 class="anchored" data-anchor-id="phase-1-planning-and-setup">Phase 1: Planning and Setup</h3>
 <p>Before writing code, document your approach:</p>
@@ -793,8 +851,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 </section>
 </section>
-<section id="ai-collaboration-guidelines" class="level2" data-number="15.6">
-<h2 data-number="15.6" class="anchored" data-anchor-id="ai-collaboration-guidelines"><span class="header-section-number">15.6</span> AI Collaboration Guidelines</h2>
+<section id="ai-collaboration-guidelines" class="level2" data-number="18.6">
+<h2 data-number="18.6" class="anchored" data-anchor-id="ai-collaboration-guidelines"><span class="header-section-number">18.6</span> AI Collaboration Guidelines</h2>
 <section id="effective-ai-partnership" class="level3">
 <h3 class="anchored" data-anchor-id="effective-ai-partnership">Effective AI Partnership</h3>
 <p>Use AI as a thinking partner, not a code generator:</p>
@@ -849,11 +907,11 @@ and explain when each makes sense.</code></pre>
 <li>Concepts you learned through AI conversation</li>
 <li>Documentation created with AI assistance</li>
 </ul>
-<p>This isn’t about restricting AI use, it’s about demonstrating that you <strong>understood</strong> what you built.</p>
+<p>The purpose is evidence that you <strong>understood</strong> what you built.</p>
 </section>
 </section>
-<section id="evaluation-criteria" class="level2" data-number="15.7">
-<h2 data-number="15.7" class="anchored" data-anchor-id="evaluation-criteria"><span class="header-section-number">15.7</span> Evaluation Criteria</h2>
+<section id="evaluation-criteria" class="level2" data-number="18.7">
+<h2 data-number="18.7" class="anchored" data-anchor-id="evaluation-criteria"><span class="header-section-number">18.7</span> Evaluation Criteria</h2>
 <section id="planning-and-design-15" class="level3">
 <h3 class="anchored" data-anchor-id="planning-and-design-15">Planning and Design (15%)</h3>
 <table class="caption-top table">
@@ -1096,8 +1154,8 @@ and explain when each makes sense.</code></pre>
 </table>
 </section>
 </section>
-<section id="submission-checklist" class="level2" data-number="15.8">
-<h2 data-number="15.8" class="anchored" data-anchor-id="submission-checklist"><span class="header-section-number">15.8</span> Submission Checklist</h2>
+<section id="submission-checklist" class="level2" data-number="18.8">
+<h2 data-number="18.8" class="anchored" data-anchor-id="submission-checklist"><span class="header-section-number">18.8</span> Submission Checklist</h2>
 <p><strong>Code:</strong></p>
 <ul class="task-list">
 <li><label><input type="checkbox">Complete React source code (exclude <code>node_modules</code>)</label></li>
@@ -1124,8 +1182,8 @@ and explain when each makes sense.</code></pre>
 <li><label><input type="checkbox">Or note that app uses public API/test data</label></li>
 </ul>
 </section>
-<section id="getting-started" class="level2" data-number="15.9">
-<h2 data-number="15.9" class="anchored" data-anchor-id="getting-started"><span class="header-section-number">15.9</span> Getting Started</h2>
+<section id="getting-started" class="level2" data-number="18.9">
+<h2 data-number="18.9" class="anchored" data-anchor-id="getting-started"><span class="header-section-number">18.9</span> Getting Started</h2>
 <p>Begin with these conversations:</p>
 <pre class="text"><code>Ask your AI:
 I'm building a React app that fetches WordPress posts. What's the
@@ -1139,8 +1197,8 @@ React Router? Explain the useState approach.</code></pre>
 My WordPress site is at [URL]. What does the REST API endpoint for
 posts look like? How do I get featured images included?</code></pre>
 </section>
-<section id="common-pitfalls-to-avoid" class="level2" data-number="15.10">
-<h2 data-number="15.10" class="anchored" data-anchor-id="common-pitfalls-to-avoid"><span class="header-section-number">15.10</span> Common Pitfalls to Avoid</h2>
+<section id="common-pitfalls-to-avoid" class="level2" data-number="18.10">
+<h2 data-number="18.10" class="anchored" data-anchor-id="common-pitfalls-to-avoid"><span class="header-section-number">18.10</span> Common Pitfalls to Avoid</h2>
 <ol type="1">
 <li><strong>Skipping the plan</strong>: Jumping into code without designing component architecture leads to refactoring</li>
 <li><strong>One giant component</strong>: Put everything in App.js instead of breaking into focused components</li>
@@ -1152,8 +1210,8 @@ posts look like? How do I get featured images included?</code></pre>
 <li><strong>Hardcoded URLs</strong>: API endpoints should be configurable or documented</li>
 </ol>
 </section>
-<section id="technical-tips" class="level2" data-number="15.11">
-<h2 data-number="15.11" class="anchored" data-anchor-id="technical-tips"><span class="header-section-number">15.11</span> Technical Tips</h2>
+<section id="technical-tips" class="level2" data-number="18.11">
+<h2 data-number="18.11" class="anchored" data-anchor-id="technical-tips"><span class="header-section-number">18.11</span> Technical Tips</h2>
 <p><strong>Fetching WordPress posts with featured images:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Include _embed to get featured media data</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> response <span class="op">=</span> <span class="cf">await</span> <span class="fu">fetch</span>(</span>
@@ -1184,8 +1242,8 @@ posts look like? How do I get featured images included?</code></pre>
 <span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>PostList posts<span class="op">=</span>{posts} onSelectPost<span class="op">=</span>{setSelectedPost} <span class="op">/&gt;</span></span>
 <span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>)}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="professional-context" class="level2" data-number="15.12">
-<h2 data-number="15.12" class="anchored" data-anchor-id="professional-context"><span class="header-section-number">15.12</span> Professional Context</h2>
+<section id="professional-context" class="level2" data-number="18.12">
+<h2 data-number="18.12" class="anchored" data-anchor-id="professional-context"><span class="header-section-number">18.12</span> Professional Context</h2>
 <p>This project demonstrates skills employers look for:</p>
 <ol type="1">
 <li><strong>Frontend architecture</strong>: Structuring React applications logically</li>
@@ -1196,8 +1254,8 @@ posts look like? How do I get featured images included?</code></pre>
 </ol>
 <p>Headless architecture is increasingly common in enterprise development. Understanding how to build frontends that consume APIs, whether WordPress, a custom backend, or third-party services, is valuable regardless of your eventual specialisation.</p>
 </section>
-<section id="after-submission" class="level2" data-number="15.13">
-<h2 data-number="15.13" class="anchored" data-anchor-id="after-submission"><span class="header-section-number">15.13</span> After Submission</h2>
+<section id="after-submission" class="level2" data-number="18.13">
+<h2 data-number="18.13" class="anchored" data-anchor-id="after-submission"><span class="header-section-number">18.13</span> After Submission</h2>
 <p>This project, combined with your WordPress Business Site, demonstrates full-stack thinking:</p>
 <ul>
 <li>Backend: WordPress content management</li>
@@ -1327,16 +1385,16 @@ posts look like? How do I get featured images included?</code></pre>
     }
     function toggleCodeHandler(show) {
       return function(e) {
-        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-        for (let i=0; i<detailsSrc.length; i++) {
-          const details = detailsSrc[i].parentElement;
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
           if (show) {
             details.open = true;
           } else {
             details.removeAttribute("open");
           }
         }
-        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
         const fromCls = show ? "hidden" : "unhidden";
         const toCls = show ? "unhidden" : "hidden";
         for (let i=0; i<cellCodeDivs.length; i++) {
@@ -1689,12 +1747,12 @@ posts look like? How do I get featured images included?</code></pre>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../chapters/chapter-professional-practices.html" class="pagination-link" aria-label="Professional Practices">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Professional Practices</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Professional Practices</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../chapters/chapter-emerging-technologies.html" class="pagination-link" aria-label="Evaluating Emerging Technologies">
-        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Evaluating Emerging Technologies</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Evaluating Emerging Technologies</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
@@ -1706,7 +1764,7 @@ posts look like? How do I get featured images included?</code></pre>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Project Overview</span></span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>Part III taught you component thinking, CSS frameworks, and professional practices. Now you'll bring it together: build a React frontend that consumes content from WordPress via the REST API, demonstrating headless architecture in action.</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>The modern frontend chapters taught you component thinking, CSS frameworks, and professional practices. Now you'll bring it together: build a React frontend that consumes content from WordPress via the REST API, demonstrating headless architecture in action.</span>
 <span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>This project bridges backend content management with modern frontend development. You'll make architectural decisions, implement a complete application, and document your approach, skills that directly translate to professional frontend development roles.</span>
 <span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a></span>
@@ -1739,7 +1797,7 @@ posts look like? How do I get featured images included?</code></pre>
 <span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a><span class="fu">### Option A: Blog Frontend</span></span>
 <span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a>Transform your WordPress blog into a modern React single-page application:</span>
+<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a>Rebuild your WordPress blog as a modern React single-page application:</span>
 <span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Post listing with categories</span>
 <span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Individual post pages</span>
@@ -1950,7 +2008,7 @@ posts look like? How do I get featured images included?</code></pre>
 <span id="cb12-250"><a href="#cb12-250" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Concepts you learned through AI conversation</span>
 <span id="cb12-251"><a href="#cb12-251" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Documentation created with AI assistance</span>
 <span id="cb12-252"><a href="#cb12-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-253"><a href="#cb12-253" aria-hidden="true" tabindex="-1"></a>This isn't about restricting AI use, it's about demonstrating that you **understood** what you built.</span>
+<span id="cb12-253"><a href="#cb12-253" aria-hidden="true" tabindex="-1"></a>The purpose is evidence that you **understood** what you built.</span>
 <span id="cb12-254"><a href="#cb12-254" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-255"><a href="#cb12-255" aria-hidden="true" tabindex="-1"></a><span class="fu">## Evaluation Criteria</span></span>
 <span id="cb12-256"><a href="#cb12-256" aria-hidden="true" tabindex="-1"></a></span>

@@ -2,21 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="A practical approach to web development that embraces AI as your development partner while building real business solutions with HTML, CSS, JavaScript, WordPress, and React.">
+<meta name="description" content="A practical approach to web development that teaches you to specify, direct, check and hand over AI-built business websites with HTML, CSS, JavaScript, WordPress and React.">
 
-<title>12&nbsp; Component Thinking: React – Build Web, Guide AI</title>
+<title>15&nbsp; Component Thinking: React – Build Web, Guide AI</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -78,14 +81,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-6453f418aeef366c23116eb9cb0b6816.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-36d1909bcb541879de504f1ebcc96011.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-9950bca906ef9bb3ea288c0af376aad5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-36d1909bcb541879de504f1ebcc96011.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-b146b0f11fcb9d7b327ea38bc2e11b34.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-8bc080b4f13ff5280c11423cbe489c26.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-b146b0f11fcb9d7b327ea38bc2e11b34.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -116,6 +119,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../assets/custom.css">
+<link rel="stylesheet" href="../book-design.css">
 </head>
 
 <body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -289,7 +293,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-component-thinking.html">Modern Frontend Development</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-component-thinking.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Component Thinking: React</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-component-thinking.html">Modern Frontend Development</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-component-thinking.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Component Thinking: React</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -363,7 +367,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Web Foundations</span></a>
+ <span class="menu-text">The Practice Spine</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -371,32 +375,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-structure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></span></a>
+  <a href="../chapters/chapter-specify-before-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Specify Before You Build</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-presentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></span></a>
+  <a href="../chapters/chapter-checks-that-run.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Checks That Run</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-behaviour.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Behaviour: JavaScript as User Interaction</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-connection.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Connection: APIs as Business Integration</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../projects/project-portfolio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Project: Portfolio Website</span></span></a>
+  <a href="../chapters/chapter-agent-ready-repo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The Agent-Ready Repo and Handover</span></span></a>
   </div>
 </li>
       </ul>
@@ -404,7 +396,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Content Management for Business</span></a>
+ <span class="menu-text">Web Foundations</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -412,32 +404,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-why-cms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Why CMS? The Business Value of Managed Content</span></span></a>
+  <a href="../chapters/chapter-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-wordpress-platform.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">WordPress as Platform</span></span></a>
+  <a href="../chapters/chapter-presentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-extending-platforms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Extending Platforms</span></span></a>
+  <a href="../chapters/chapter-behaviour.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Behaviour: JavaScript as User Interaction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-headless-architecture.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Headless Architecture</span></span></a>
+  <a href="../chapters/chapter-connection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Connection: APIs as Business Integration</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../projects/project-business-site.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Project: Business Website with WordPress</span></span></a>
+  <a href="../projects/project-portfolio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Project: Portfolio Website</span></span></a>
   </div>
 </li>
       </ul>
@@ -445,7 +437,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Modern Frontend Development</span></a>
+ <span class="menu-text">Content Management for Business</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -453,26 +445,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-component-thinking.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Component Thinking: React</span></span></a>
+  <a href="../chapters/chapter-why-cms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Why CMS? The Business Value of Managed Content</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-rapid-development.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Rapid Development: CSS Frameworks</span></span></a>
+  <a href="../chapters/chapter-wordpress-platform.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">WordPress as Platform</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-professional-practices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Professional Practices</span></span></a>
+  <a href="../chapters/chapter-extending-platforms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Extending Platforms</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../projects/project-react-integration.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Project: React Integration</span></span></a>
+  <a href="../chapters/chapter-headless-architecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Headless Architecture</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/project-business-site.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Project: Business Website with WordPress</span></span></a>
   </div>
 </li>
       </ul>
@@ -480,7 +478,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">The Professional Developer</span></a>
+ <span class="menu-text">Modern Frontend Development</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -488,20 +486,78 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-component-thinking.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Component Thinking: React</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-rapid-development.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Rapid Development: CSS Frameworks</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-professional-practices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Professional Practices</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/project-react-integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Project: React Integration</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">The Professional Developer</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/chapter-emerging-technologies.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Evaluating Emerging Technologies</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Evaluating Emerging Technologies</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter-development-career.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Your Development Career</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Your Development Career</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter-ai-era-developer.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">The AI-Era Developer</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">The AI-Era Developer</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/how-to-use-this-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to Use This Book</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/2027-course-map.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2027 Course Map</span></a>
   </div>
 </li>
       </ul>
@@ -520,7 +576,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
     </ul>
     </div>
-</nav>
+<div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
+<p>Paperback ISBN 979-8-255-17415-7</p>
+</div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -528,15 +586,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-concept-first" id="toc-the-concept-first" class="nav-link active" data-scroll-target="#the-concept-first"><span class="header-section-number">12.1</span> The Concept First</a></li>
-  <li><a href="#understanding-through-lego" id="toc-understanding-through-lego" class="nav-link" data-scroll-target="#understanding-through-lego"><span class="header-section-number">12.2</span> Understanding Through LEGO</a></li>
-  <li><a href="#discovering-components-with-your-ai-partner" id="toc-discovering-components-with-your-ai-partner" class="nav-link" data-scroll-target="#discovering-components-with-your-ai-partner"><span class="header-section-number">12.3</span> Discovering Components with Your AI Partner</a>
+  <li><a href="#the-concept-first" id="toc-the-concept-first" class="nav-link active" data-scroll-target="#the-concept-first"><span class="header-section-number">15.1</span> The Concept First</a></li>
+  <li><a href="#understanding-through-lego" id="toc-understanding-through-lego" class="nav-link" data-scroll-target="#understanding-through-lego"><span class="header-section-number">15.2</span> Understanding Through LEGO</a></li>
+  <li><a href="#discovering-components-with-your-ai-partner" id="toc-discovering-components-with-your-ai-partner" class="nav-link" data-scroll-target="#discovering-components-with-your-ai-partner"><span class="header-section-number">15.3</span> Discovering Components with Your AI Partner</a>
   <ul class="collapse">
   <li><a href="#exploration-1-ui-decomposition" id="toc-exploration-1-ui-decomposition" class="nav-link" data-scroll-target="#exploration-1-ui-decomposition">Exploration 1: UI Decomposition</a></li>
   <li><a href="#exploration-2-state-vs-props" id="toc-exploration-2-state-vs-props" class="nav-link" data-scroll-target="#exploration-2-state-vs-props">Exploration 2: State vs Props</a></li>
   <li><a href="#exploration-3-data-flow" id="toc-exploration-3-data-flow" class="nav-link" data-scroll-target="#exploration-3-data-flow">Exploration 3: Data Flow</a></li>
   </ul></li>
-  <li><a href="#from-concept-to-code" id="toc-from-concept-to-code" class="nav-link" data-scroll-target="#from-concept-to-code"><span class="header-section-number">12.4</span> From Concept to Code</a>
+  <li><a href="#from-concept-to-code" id="toc-from-concept-to-code" class="nav-link" data-scroll-target="#from-concept-to-code"><span class="header-section-number">15.4</span> From Concept to Code</a>
   <ul class="collapse">
   <li><a href="#setting-up-react" id="toc-setting-up-react" class="nav-link" data-scroll-target="#setting-up-react">Setting Up React</a></li>
   <li><a href="#jsx-html-in-javascript" id="toc-jsx-html-in-javascript" class="nav-link" data-scroll-target="#jsx-html-in-javascript">JSX: HTML in JavaScript</a></li>
@@ -549,13 +607,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#connecting-to-wordpress" id="toc-connecting-to-wordpress" class="nav-link" data-scroll-target="#connecting-to-wordpress">Connecting to WordPress</a></li>
   <li><a href="#component-composition" id="toc-component-composition" class="nav-link" data-scroll-target="#component-composition">Component Composition</a></li>
   </ul></li>
-  <li><a href="#building-your-mental-model" id="toc-building-your-mental-model" class="nav-link" data-scroll-target="#building-your-mental-model"><span class="header-section-number">12.5</span> Building Your Mental Model</a>
+  <li><a href="#building-your-mental-model" id="toc-building-your-mental-model" class="nav-link" data-scroll-target="#building-your-mental-model"><span class="header-section-number">15.5</span> Building Your Mental Model</a>
   <ul class="collapse">
   <li><a href="#the-component-tree" id="toc-the-component-tree" class="nav-link" data-scroll-target="#the-component-tree">The Component Tree</a></li>
   <li><a href="#when-state-should-lift-up" id="toc-when-state-should-lift-up" class="nav-link" data-scroll-target="#when-state-should-lift-up">When State Should “Lift Up”</a></li>
   <li><a href="#the-rendering-cycle" id="toc-the-rendering-cycle" class="nav-link" data-scroll-target="#the-rendering-cycle">The Rendering Cycle</a></li>
   </ul></li>
-  <li><a href="#business-applications" id="toc-business-applications" class="nav-link" data-scroll-target="#business-applications"><span class="header-section-number">12.6</span> Business Applications</a>
+  <li><a href="#business-applications" id="toc-business-applications" class="nav-link" data-scroll-target="#business-applications"><span class="header-section-number">15.6</span> Business Applications</a>
   <ul class="collapse">
   <li><a href="#reusability" id="toc-reusability" class="nav-link" data-scroll-target="#reusability">Reusability</a></li>
   <li><a href="#maintainability" id="toc-maintainability" class="nav-link" data-scroll-target="#maintainability">Maintainability</a></li>
@@ -563,28 +621,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#testing" id="toc-testing" class="nav-link" data-scroll-target="#testing">Testing</a></li>
   <li><a href="#design-systems" id="toc-design-systems" class="nav-link" data-scroll-target="#design-systems">Design Systems</a></li>
   </ul></li>
-  <li><a href="#practice-exercises" id="toc-practice-exercises" class="nav-link" data-scroll-target="#practice-exercises"><span class="header-section-number">12.7</span> Practice Exercises</a>
+  <li><a href="#practice-exercises" id="toc-practice-exercises" class="nav-link" data-scroll-target="#practice-exercises"><span class="header-section-number">15.7</span> Practice Exercises</a>
   <ul class="collapse">
-  <li><a href="#exercise-9.1-first-component-level-1" id="toc-exercise-9.1-first-component-level-1" class="nav-link" data-scroll-target="#exercise-9.1-first-component-level-1">Exercise 9.1: First Component (Level 1)</a></li>
-  <li><a href="#exercise-9.2-stateful-component-level-2" id="toc-exercise-9.2-stateful-component-level-2" class="nav-link" data-scroll-target="#exercise-9.2-stateful-component-level-2">Exercise 9.2: Stateful Component (Level 2)</a></li>
-  <li><a href="#exercise-9.3-list-rendering-level-3" id="toc-exercise-9.3-list-rendering-level-3" class="nav-link" data-scroll-target="#exercise-9.3-list-rendering-level-3">Exercise 9.3: List Rendering (Level 3)</a></li>
-  <li><a href="#exercise-9.4-data-fetching-level-4" id="toc-exercise-9.4-data-fetching-level-4" class="nav-link" data-scroll-target="#exercise-9.4-data-fetching-level-4">Exercise 9.4: Data Fetching (Level 4)</a></li>
-  <li><a href="#exercise-9.5-wordpress-integration-level-5" id="toc-exercise-9.5-wordpress-integration-level-5" class="nav-link" data-scroll-target="#exercise-9.5-wordpress-integration-level-5">Exercise 9.5: WordPress Integration (Level 5)</a></li>
+  <li><a href="#exercise-15.1-first-component-level-1" id="toc-exercise-15.1-first-component-level-1" class="nav-link" data-scroll-target="#exercise-15.1-first-component-level-1">Exercise 15.1: First Component (Level 1)</a></li>
+  <li><a href="#exercise-15.2-stateful-component-level-2" id="toc-exercise-15.2-stateful-component-level-2" class="nav-link" data-scroll-target="#exercise-15.2-stateful-component-level-2">Exercise 15.2: Stateful Component (Level 2)</a></li>
+  <li><a href="#exercise-15.3-list-rendering-level-3" id="toc-exercise-15.3-list-rendering-level-3" class="nav-link" data-scroll-target="#exercise-15.3-list-rendering-level-3">Exercise 15.3: List Rendering (Level 3)</a></li>
+  <li><a href="#exercise-15.4-data-fetching-level-4" id="toc-exercise-15.4-data-fetching-level-4" class="nav-link" data-scroll-target="#exercise-15.4-data-fetching-level-4">Exercise 15.4: Data Fetching (Level 4)</a></li>
+  <li><a href="#exercise-15.5-wordpress-integration-level-5" id="toc-exercise-15.5-wordpress-integration-level-5" class="nav-link" data-scroll-target="#exercise-15.5-wordpress-integration-level-5">Exercise 15.5: WordPress Integration (Level 5)</a></li>
   </ul></li>
-  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary"><span class="header-section-number">12.8</span> Chapter Summary</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">12.9</span> Reflection</a></li>
-  <li><a href="#your-learning-journal" id="toc-your-learning-journal" class="nav-link" data-scroll-target="#your-learning-journal"><span class="header-section-number">12.10</span> Your Learning Journal</a></li>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">12.11</span> Next Steps</a></li>
+  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary"><span class="header-section-number">15.8</span> Chapter Summary</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">15.9</span> Reflection</a></li>
+  <li><a href="#your-learning-journal" id="toc-your-learning-journal" class="nav-link" data-scroll-target="#your-learning-journal"><span class="header-section-number">15.10</span> Your Learning Journal</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">15.11</span> Next Steps</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/build-web-guide-ai/edit/main/chapters/chapter-component-thinking.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="build-web-guide-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="build-web-guide-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/build-web-guide-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/build-web-guide-ai/edit/main/chapters/chapter-component-thinking.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/build-web-guide-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/build-web-guide-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/build-web-guide-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-component-thinking.html">Modern Frontend Development</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-component-thinking.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Component Thinking: React</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-component-thinking.html">Modern Frontend Development</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-component-thinking.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Component Thinking: React</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span id="sec-component-thinking" class="quarto-section-identifier"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Component Thinking: React</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span id="sec-component-thinking" class="quarto-section-identifier"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Component Thinking: React</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -601,9 +659,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="the-concept-first" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="the-concept-first"><span class="header-section-number">12.1</span> The Concept First</h2>
-<p>In <a href="chapter-headless-architecture.html" class="quarto-xref"><span>Chapter 10</span></a>, you learned to fetch content from WordPress via API. But vanilla JavaScript DOM manipulation becomes unwieldy as applications grow. Every change requires finding elements, updating them, keeping track of what’s displayed.</p>
+<section id="the-concept-first" class="level2" data-number="15.1">
+<h2 data-number="15.1" class="anchored" data-anchor-id="the-concept-first"><span class="header-section-number">15.1</span> The Concept First</h2>
+<p>In <a href="chapter-headless-architecture.html" class="quarto-xref"><span>Chapter 13</span></a>, you learned to fetch content from WordPress via API. But vanilla JavaScript DOM manipulation becomes unwieldy as applications grow. Every change requires finding elements, updating them, keeping track of what’s displayed.</p>
 <p><strong>React</strong> solves this by introducing a different mental model: <strong>component thinking</strong>.</p>
 <p>Instead of thinking “I need to update this paragraph when data changes,” you think “This component displays data. When data changes, React handles the update.”</p>
 <p>Components are self-contained pieces of UI. Each component:</p>
@@ -613,10 +671,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Renders its own output</li>
 <li>Can be reused anywhere</li>
 </ul>
-<p>This isn’t just a technical convenience, it’s a fundamentally different way of building interfaces. Once you think in components, you’ll see every UI as a composition of reusable pieces.</p>
+<p>That changes how you build interfaces. Once you think in components, you’ll see every UI as a composition of reusable pieces.</p>
 </section>
-<section id="understanding-through-lego" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="understanding-through-lego"><span class="header-section-number">12.2</span> Understanding Through LEGO</h2>
+<section id="understanding-through-lego" class="level2" data-number="15.2">
+<h2 data-number="15.2" class="anchored" data-anchor-id="understanding-through-lego"><span class="header-section-number">15.2</span> Understanding Through LEGO</h2>
 <p>Consider how LEGO works:</p>
 <ul>
 <li>Each brick is <strong>self-contained</strong> with a consistent interface (the studs)</li>
@@ -625,7 +683,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>You can <strong>replace</strong> one brick without rebuilding everything</li>
 <li>Instructions show <strong>composition</strong>, not monolithic assembly</li>
 </ul>
-<p>React components work identically:</p>
+<p>React components work the same way:</p>
 <ul>
 <li>Each component is self-contained with consistent interfaces (props)</li>
 <li>Complex UIs emerge from combining simple components</li>
@@ -633,7 +691,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>You can update one component without touching others</li>
 <li>Your code shows composition: components containing components</li>
 </ul>
-<p>A webpage isn’t a monolithic HTML document, it’s a tree of components, each responsible for its own piece of the interface.</p>
+<p>Treat a webpage as a tree of components, each responsible for its own piece of the interface.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -648,8 +706,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="discovering-components-with-your-ai-partner" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="discovering-components-with-your-ai-partner"><span class="header-section-number">12.3</span> Discovering Components with Your AI Partner</h2>
+<section id="discovering-components-with-your-ai-partner" class="level2" data-number="15.3">
+<h2 data-number="15.3" class="anchored" data-anchor-id="discovering-components-with-your-ai-partner"><span class="header-section-number">15.3</span> Discovering Components with Your AI Partner</h2>
 <section id="exploration-1-ui-decomposition" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-1-ui-decomposition">Exploration 1: UI Decomposition</h3>
 <p>Let’s practice component thinking before writing code:</p>
@@ -710,8 +768,8 @@ If data flows only downward, how does a child component communicate
 back to a parent? Give me a simple example.</code></pre>
 </section>
 </section>
-<section id="from-concept-to-code" class="level2" data-number="12.4">
-<h2 data-number="12.4" class="anchored" data-anchor-id="from-concept-to-code"><span class="header-section-number">12.4</span> From Concept to Code</h2>
+<section id="from-concept-to-code" class="level2" data-number="15.4">
+<h2 data-number="15.4" class="anchored" data-anchor-id="from-concept-to-code"><span class="header-section-number">15.4</span> From Concept to Code</h2>
 <p>Let’s build your React understanding progressively.</p>
 <section id="setting-up-react" class="level3">
 <h3 class="anchored" data-anchor-id="setting-up-react">Setting Up React</h3>
@@ -965,7 +1023,7 @@ component. What does React do behind the scenes?</code></pre>
 </section>
 <section id="connecting-to-wordpress" class="level3">
 <h3 class="anchored" data-anchor-id="connecting-to-wordpress">Connecting to WordPress</h3>
-<p>Remember the WordPress REST API from <a href="chapter-headless-architecture.html" class="quarto-xref"><span>Chapter 10</span></a>? Let’s fetch WordPress posts:</p>
+<p>Remember the WordPress REST API from <a href="chapter-headless-architecture.html" class="quarto-xref"><span>Chapter 13</span></a>? Let’s fetch WordPress posts:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode jsx code-with-copy"><code class="sourceCode javascriptreact"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { useState<span class="op">,</span> useEffect } <span class="im">from</span> <span class="st">'react'</span><span class="op">;</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">WordPressPosts</span>() {</span>
@@ -1049,8 +1107,8 @@ component. What does React do behind the scenes?</code></pre>
 <p>Each component is small, focused, and understandable. The composition creates the full application.</p>
 </section>
 </section>
-<section id="building-your-mental-model" class="level2" data-number="12.5">
-<h2 data-number="12.5" class="anchored" data-anchor-id="building-your-mental-model"><span class="header-section-number">12.5</span> Building Your Mental Model</h2>
+<section id="building-your-mental-model" class="level2" data-number="15.5">
+<h2 data-number="15.5" class="anchored" data-anchor-id="building-your-mental-model"><span class="header-section-number">15.5</span> Building Your Mental Model</h2>
 <section id="the-component-tree" class="level3">
 <h3 class="anchored" data-anchor-id="the-component-tree">The Component Tree</h3>
 <p>Your application forms a tree of components:</p>
@@ -1090,15 +1148,15 @@ Only Changed Parts Update in DOM</code></pre>
 <p>You don’t touch the DOM. You declare what should appear based on state. React efficiently updates only what changed.</p>
 </section>
 </section>
-<section id="business-applications" class="level2" data-number="12.6">
-<h2 data-number="12.6" class="anchored" data-anchor-id="business-applications"><span class="header-section-number">12.6</span> Business Applications</h2>
+<section id="business-applications" class="level2" data-number="15.6">
+<h2 data-number="15.6" class="anchored" data-anchor-id="business-applications"><span class="header-section-number">15.6</span> Business Applications</h2>
 <section id="reusability" class="level3">
 <h3 class="anchored" data-anchor-id="reusability">Reusability</h3>
 <p>Build a <code>Button</code> component once with variants (primary, secondary, danger). Use it everywhere. Update the design in one place, and every button updates.</p>
 </section>
 <section id="maintainability" class="level3">
 <h3 class="anchored" data-anchor-id="maintainability">Maintainability</h3>
-<p>When a feature needs updating, you know exactly which component to modify. Components are isolated, changes don’t ripple unexpectedly.</p>
+<p>When a feature needs updating, you know which component to modify. Components are isolated, changes don’t ripple unexpectedly.</p>
 </section>
 <section id="team-collaboration" class="level3">
 <h3 class="anchored" data-anchor-id="team-collaboration">Team Collaboration</h3>
@@ -1126,8 +1184,8 @@ Only Changed Parts Update in DOM</code></pre>
 </div>
 </section>
 </section>
-<section id="practice-exercises" class="level2" data-number="12.7">
-<h2 data-number="12.7" class="anchored" data-anchor-id="practice-exercises"><span class="header-section-number">12.7</span> Practice Exercises</h2>
+<section id="practice-exercises" class="level2" data-number="15.7">
+<h2 data-number="15.7" class="anchored" data-anchor-id="practice-exercises"><span class="header-section-number">15.7</span> Practice Exercises</h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1147,8 +1205,8 @@ Only Changed Parts Update in DOM</code></pre>
 </ul>
 </div>
 </div>
-<section id="exercise-9.1-first-component-level-1" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-9.1-first-component-level-1">Exercise 9.1: First Component (Level 1)</h3>
+<section id="exercise-15.1-first-component-level-1" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-15.1-first-component-level-1">Exercise 15.1: First Component (Level 1)</h3>
 <p>Create a React project with Vite and build a <code>Greeting</code> component that:</p>
 <ol type="1">
 <li>Accepts a <code>name</code> prop</li>
@@ -1156,8 +1214,8 @@ Only Changed Parts Update in DOM</code></pre>
 <li>Is used three times in <code>App</code> with different names</li>
 </ol>
 </section>
-<section id="exercise-9.2-stateful-component-level-2" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-9.2-stateful-component-level-2">Exercise 9.2: Stateful Component (Level 2)</h3>
+<section id="exercise-15.2-stateful-component-level-2" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-15.2-stateful-component-level-2">Exercise 15.2: Stateful Component (Level 2)</h3>
 <p>Build a <code>LikeButton</code> component that:</p>
 <ol type="1">
 <li>Displays a heart icon (can be emoji ❤️)</li>
@@ -1166,8 +1224,8 @@ Only Changed Parts Update in DOM</code></pre>
 <li>Changes colour when count &gt; 0</li>
 </ol>
 </section>
-<section id="exercise-9.3-list-rendering-level-3" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-9.3-list-rendering-level-3">Exercise 9.3: List Rendering (Level 3)</h3>
+<section id="exercise-15.3-list-rendering-level-3" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-15.3-list-rendering-level-3">Exercise 15.3: List Rendering (Level 3)</h3>
 <p>Build a <code>TaskList</code> component that:</p>
 <ol type="1">
 <li>Accepts an array of tasks as props</li>
@@ -1176,8 +1234,8 @@ Only Changed Parts Update in DOM</code></pre>
 <li>Clicking “Complete” removes the task (hint: lift state up)</li>
 </ol>
 </section>
-<section id="exercise-9.4-data-fetching-level-4" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-9.4-data-fetching-level-4">Exercise 9.4: Data Fetching (Level 4)</h3>
+<section id="exercise-15.4-data-fetching-level-4" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-15.4-data-fetching-level-4">Exercise 15.4: Data Fetching (Level 4)</h3>
 <p>Build a <code>UserList</code> component that:</p>
 <ol type="1">
 <li>Fetches users from <code>https://jsonplaceholder.typicode.com/users</code></li>
@@ -1187,8 +1245,8 @@ Only Changed Parts Update in DOM</code></pre>
 <li>Allows clicking a user to show more details</li>
 </ol>
 </section>
-<section id="exercise-9.5-wordpress-integration-level-5" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-9.5-wordpress-integration-level-5">Exercise 9.5: WordPress Integration (Level 5)</h3>
+<section id="exercise-15.5-wordpress-integration-level-5" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-15.5-wordpress-integration-level-5">Exercise 15.5: WordPress Integration (Level 5)</h3>
 <p>Build a mini blog frontend that:</p>
 <ol type="1">
 <li>Fetches posts from your local WordPress site (or JSONPlaceholder)</li>
@@ -1200,8 +1258,8 @@ Only Changed Parts Update in DOM</code></pre>
 <p>Document your component structure and explain your state management decisions.</p>
 </section>
 </section>
-<section id="chapter-summary" class="level2" data-number="12.8">
-<h2 data-number="12.8" class="anchored" data-anchor-id="chapter-summary"><span class="header-section-number">12.8</span> Chapter Summary</h2>
+<section id="chapter-summary" class="level2" data-number="15.8">
+<h2 data-number="15.8" class="anchored" data-anchor-id="chapter-summary"><span class="header-section-number">15.8</span> Chapter Summary</h2>
 <ul>
 <li>Components are reusable, self-contained UI pieces</li>
 <li>Props pass data from parent to child (read-only)</li>
@@ -1211,9 +1269,9 @@ Only Changed Parts Update in DOM</code></pre>
 <li>Component thinking is transferable to other frameworks</li>
 </ul>
 </section>
-<section id="reflection" class="level2" data-number="12.9">
-<h2 data-number="12.9" class="anchored" data-anchor-id="reflection"><span class="header-section-number">12.9</span> Reflection</h2>
-<p>Before moving to Chapter 10, ensure you can:</p>
+<section id="reflection" class="level2" data-number="15.9">
+<h2 data-number="15.9" class="anchored" data-anchor-id="reflection"><span class="header-section-number">15.9</span> Reflection</h2>
+<p>Before moving on, ensure you can:</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Break down a UI into a component hierarchy</label></li>
 <li><label><input type="checkbox">Create functional components with JSX</label></li>
@@ -1224,8 +1282,8 @@ Only Changed Parts Update in DOM</code></pre>
 <li><label><input type="checkbox">Explain how React’s one-way data flow works</label></li>
 </ul>
 </section>
-<section id="your-learning-journal" class="level2" data-number="12.10">
-<h2 data-number="12.10" class="anchored" data-anchor-id="your-learning-journal"><span class="header-section-number">12.10</span> Your Learning Journal</h2>
+<section id="your-learning-journal" class="level2" data-number="15.10">
+<h2 data-number="15.10" class="anchored" data-anchor-id="your-learning-journal"><span class="header-section-number">15.10</span> Your Learning Journal</h2>
 <p>Record your responses to these prompts:</p>
 <ol type="1">
 <li><p><strong>Decomposition Practice</strong>: Pick any website you use. Sketch how you’d break it into React components. What would be reusable?</p></li>
@@ -1234,10 +1292,10 @@ Only Changed Parts Update in DOM</code></pre>
 <li><p><strong>Mental Model Shift</strong>: How is thinking in components different from the vanilla JavaScript approach in earlier chapters? What’s easier? What’s harder?</p></li>
 </ol>
 </section>
-<section id="next-steps" class="level2" data-number="12.11">
-<h2 data-number="12.11" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">12.11</span> Next Steps</h2>
+<section id="next-steps" class="level2" data-number="15.11">
+<h2 data-number="15.11" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">15.11</span> Next Steps</h2>
 <p>You can now build component-based interfaces and fetch data from APIs. But styling components from scratch takes time.</p>
-<p>In <a href="chapter-rapid-development.html" class="quarto-xref"><span>Chapter 13</span></a>, we’ll explore CSS frameworks. Bootstrap and Tailwind, that provide pre-built styles and utilities. Combined with React, these tools enable rapid professional development without designing every button and layout from scratch.</p>
+<p>In <a href="chapter-rapid-development.html" class="quarto-xref"><span>Chapter 16</span></a>, we’ll explore CSS frameworks such as Bootstrap and Tailwind, which provide pre-built styles and utilities. Combined with React, these tools enable rapid professional development without designing every button and layout from scratch.</p>
 
 
 <!-- -->
@@ -1352,16 +1410,16 @@ Only Changed Parts Update in DOM</code></pre>
     }
     function toggleCodeHandler(show) {
       return function(e) {
-        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-        for (let i=0; i<detailsSrc.length; i++) {
-          const details = detailsSrc[i].parentElement;
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
           if (show) {
             details.open = true;
           } else {
             details.removeAttribute("open");
           }
         }
-        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
         const fromCls = show ? "hidden" : "unhidden";
         const toCls = show ? "unhidden" : "hidden";
         for (let i=0; i<cellCodeDivs.length; i++) {
@@ -1714,12 +1772,12 @@ Only Changed Parts Update in DOM</code></pre>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../projects/project-business-site.html" class="pagination-link" aria-label="Project: Business Website with WordPress">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Project: Business Website with WordPress</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Project: Business Website with WordPress</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../chapters/chapter-rapid-development.html" class="pagination-link" aria-label="Rapid Development: CSS Frameworks">
-        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Rapid Development: CSS Frameworks</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Rapid Development: CSS Frameworks</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
@@ -1740,7 +1798,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Renders its own output</span>
 <span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Can be reused anywhere</span>
 <span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a>This isn't just a technical convenience, it's a fundamentally different way of building interfaces. Once you think in components, you'll see every UI as a composition of reusable pieces.</span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a>That changes how you build interfaces. Once you think in components, you'll see every UI as a composition of reusable pieces.</span>
 <span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a><span class="fu">## Understanding Through LEGO</span></span>
 <span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a></span>
@@ -1752,7 +1810,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-27"><a href="#cb26-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You can **replace** one brick without rebuilding everything</span>
 <span id="cb26-28"><a href="#cb26-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Instructions show **composition**, not monolithic assembly</span>
 <span id="cb26-29"><a href="#cb26-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-30"><a href="#cb26-30" aria-hidden="true" tabindex="-1"></a>React components work identically:</span>
+<span id="cb26-30"><a href="#cb26-30" aria-hidden="true" tabindex="-1"></a>React components work the same way:</span>
 <span id="cb26-31"><a href="#cb26-31" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-32"><a href="#cb26-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Each component is self-contained with consistent interfaces (props)</span>
 <span id="cb26-33"><a href="#cb26-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Complex UIs emerge from combining simple components</span>
@@ -1760,7 +1818,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-35"><a href="#cb26-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You can update one component without touching others</span>
 <span id="cb26-36"><a href="#cb26-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Your code shows composition: components containing components</span>
 <span id="cb26-37"><a href="#cb26-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-38"><a href="#cb26-38" aria-hidden="true" tabindex="-1"></a>A webpage isn't a monolithic HTML document, it's a tree of components, each responsible for its own piece of the interface.</span>
+<span id="cb26-38"><a href="#cb26-38" aria-hidden="true" tabindex="-1"></a>Treat a webpage as a tree of components, each responsible for its own piece of the interface.</span>
 <span id="cb26-39"><a href="#cb26-39" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-40"><a href="#cb26-40" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
 <span id="cb26-41"><a href="#cb26-41" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Decomposition Instinct</span></span>
@@ -2270,7 +2328,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-545"><a href="#cb26-545" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-546"><a href="#cb26-546" aria-hidden="true" tabindex="-1"></a><span class="fu">### Maintainability</span></span>
 <span id="cb26-547"><a href="#cb26-547" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-548"><a href="#cb26-548" aria-hidden="true" tabindex="-1"></a>When a feature needs updating, you know exactly which component to modify. Components are isolated, changes don't ripple unexpectedly.</span>
+<span id="cb26-548"><a href="#cb26-548" aria-hidden="true" tabindex="-1"></a>When a feature needs updating, you know which component to modify. Components are isolated, changes don't ripple unexpectedly.</span>
 <span id="cb26-549"><a href="#cb26-549" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-550"><a href="#cb26-550" aria-hidden="true" tabindex="-1"></a><span class="fu">### Team Collaboration</span></span>
 <span id="cb26-551"><a href="#cb26-551" aria-hidden="true" tabindex="-1"></a></span>
@@ -2300,7 +2358,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-575"><a href="#cb26-575" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 5**: Open-ended design</span>
 <span id="cb26-576"><a href="#cb26-576" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb26-577"><a href="#cb26-577" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-578"><a href="#cb26-578" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 9.1: First Component (Level 1)</span></span>
+<span id="cb26-578"><a href="#cb26-578" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 15.1: First Component (Level 1)</span></span>
 <span id="cb26-579"><a href="#cb26-579" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-580"><a href="#cb26-580" aria-hidden="true" tabindex="-1"></a>Create a React project with Vite and build a <span class="in">`Greeting`</span> component that:</span>
 <span id="cb26-581"><a href="#cb26-581" aria-hidden="true" tabindex="-1"></a></span>
@@ -2308,7 +2366,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-583"><a href="#cb26-583" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Displays "Hello, {name}!"</span>
 <span id="cb26-584"><a href="#cb26-584" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Is used three times in <span class="in">`App`</span> with different names</span>
 <span id="cb26-585"><a href="#cb26-585" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-586"><a href="#cb26-586" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 9.2: Stateful Component (Level 2)</span></span>
+<span id="cb26-586"><a href="#cb26-586" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 15.2: Stateful Component (Level 2)</span></span>
 <span id="cb26-587"><a href="#cb26-587" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-588"><a href="#cb26-588" aria-hidden="true" tabindex="-1"></a>Build a <span class="in">`LikeButton`</span> component that:</span>
 <span id="cb26-589"><a href="#cb26-589" aria-hidden="true" tabindex="-1"></a></span>
@@ -2317,7 +2375,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-592"><a href="#cb26-592" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Increments the count when clicked</span>
 <span id="cb26-593"><a href="#cb26-593" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Changes colour when count &gt; 0</span>
 <span id="cb26-594"><a href="#cb26-594" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-595"><a href="#cb26-595" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 9.3: List Rendering (Level 3)</span></span>
+<span id="cb26-595"><a href="#cb26-595" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 15.3: List Rendering (Level 3)</span></span>
 <span id="cb26-596"><a href="#cb26-596" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-597"><a href="#cb26-597" aria-hidden="true" tabindex="-1"></a>Build a <span class="in">`TaskList`</span> component that:</span>
 <span id="cb26-598"><a href="#cb26-598" aria-hidden="true" tabindex="-1"></a></span>
@@ -2326,7 +2384,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-601"><a href="#cb26-601" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Each <span class="in">`TaskItem`</span> shows the task text and a "Complete" button</span>
 <span id="cb26-602"><a href="#cb26-602" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Clicking "Complete" removes the task (hint: lift state up)</span>
 <span id="cb26-603"><a href="#cb26-603" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-604"><a href="#cb26-604" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 9.4: Data Fetching (Level 4)</span></span>
+<span id="cb26-604"><a href="#cb26-604" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 15.4: Data Fetching (Level 4)</span></span>
 <span id="cb26-605"><a href="#cb26-605" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-606"><a href="#cb26-606" aria-hidden="true" tabindex="-1"></a>Build a <span class="in">`UserList`</span> component that:</span>
 <span id="cb26-607"><a href="#cb26-607" aria-hidden="true" tabindex="-1"></a></span>
@@ -2336,7 +2394,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-611"><a href="#cb26-611" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Renders each user as a <span class="in">`UserCard`</span> with name and email</span>
 <span id="cb26-612"><a href="#cb26-612" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Allows clicking a user to show more details</span>
 <span id="cb26-613"><a href="#cb26-613" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-614"><a href="#cb26-614" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 9.5: WordPress Integration (Level 5)</span></span>
+<span id="cb26-614"><a href="#cb26-614" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 15.5: WordPress Integration (Level 5)</span></span>
 <span id="cb26-615"><a href="#cb26-615" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-616"><a href="#cb26-616" aria-hidden="true" tabindex="-1"></a>Build a mini blog frontend that:</span>
 <span id="cb26-617"><a href="#cb26-617" aria-hidden="true" tabindex="-1"></a></span>
@@ -2359,7 +2417,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-634"><a href="#cb26-634" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-635"><a href="#cb26-635" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reflection</span></span>
 <span id="cb26-636"><a href="#cb26-636" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-637"><a href="#cb26-637" aria-hidden="true" tabindex="-1"></a>Before moving to Chapter 10, ensure you can:</span>
+<span id="cb26-637"><a href="#cb26-637" aria-hidden="true" tabindex="-1"></a>Before moving on, ensure you can:</span>
 <span id="cb26-638"><a href="#cb26-638" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-639"><a href="#cb26-639" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Break down a UI into a component hierarchy</span>
 <span id="cb26-640"><a href="#cb26-640" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Create functional components with JSX</span>
@@ -2385,7 +2443,7 @@ Only Changed Parts Update in DOM</code></pre>
 <span id="cb26-660"><a href="#cb26-660" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-661"><a href="#cb26-661" aria-hidden="true" tabindex="-1"></a>You can now build component-based interfaces and fetch data from APIs. But styling components from scratch takes time.</span>
 <span id="cb26-662"><a href="#cb26-662" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-663"><a href="#cb26-663" aria-hidden="true" tabindex="-1"></a>In @sec-rapid-development, we'll explore CSS frameworks. Bootstrap and Tailwind, that provide pre-built styles and utilities. Combined with React, these tools enable rapid professional development without designing every button and layout from scratch.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb26-663"><a href="#cb26-663" aria-hidden="true" tabindex="-1"></a>In @sec-rapid-development, we'll explore CSS frameworks such as Bootstrap and Tailwind, which provide pre-built styles and utilities. Combined with React, these tools enable rapid professional development without designing every button and layout from scratch.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

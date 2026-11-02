@@ -2,21 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="A practical approach to web development that embraces AI as your development partner while building real business solutions with HTML, CSS, JavaScript, WordPress, and React.">
+<meta name="description" content="A practical approach to web development that teaches you to specify, direct, check and hand over AI-built business websites with HTML, CSS, JavaScript, WordPress and React.">
 
-<title>18&nbsp; The AI-Era Developer – Build Web, Guide AI</title>
+<title>21&nbsp; The AI-Era Developer – Build Web, Guide AI</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -69,7 +72,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../references.html" rel="next">
+<link href="../appendices/how-to-use-this-book.html" rel="next">
 <link href="../chapters/chapter-development-career.html" rel="prev">
 <link href="../favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -78,14 +81,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-6453f418aeef366c23116eb9cb0b6816.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-36d1909bcb541879de504f1ebcc96011.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-9950bca906ef9bb3ea288c0af376aad5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-36d1909bcb541879de504f1ebcc96011.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-b146b0f11fcb9d7b327ea38bc2e11b34.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-8bc080b4f13ff5280c11423cbe489c26.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-b146b0f11fcb9d7b327ea38bc2e11b34.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -116,6 +119,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../assets/custom.css">
+<link rel="stylesheet" href="../book-design.css">
 </head>
 
 <body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -289,7 +293,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-emerging-technologies.html">The Professional Developer</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-ai-era-developer.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">The AI-Era Developer</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-emerging-technologies.html">The Professional Developer</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-ai-era-developer.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">The AI-Era Developer</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -363,7 +367,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Web Foundations</span></a>
+ <span class="menu-text">The Practice Spine</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -371,32 +375,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-structure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></span></a>
+  <a href="../chapters/chapter-specify-before-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Specify Before You Build</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-presentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></span></a>
+  <a href="../chapters/chapter-checks-that-run.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Checks That Run</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-behaviour.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Behaviour: JavaScript as User Interaction</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-connection.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Connection: APIs as Business Integration</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../projects/project-portfolio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Project: Portfolio Website</span></span></a>
+  <a href="../chapters/chapter-agent-ready-repo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The Agent-Ready Repo and Handover</span></span></a>
   </div>
 </li>
       </ul>
@@ -404,7 +396,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Content Management for Business</span></a>
+ <span class="menu-text">Web Foundations</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -412,32 +404,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-why-cms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Why CMS? The Business Value of Managed Content</span></span></a>
+  <a href="../chapters/chapter-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-wordpress-platform.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">WordPress as Platform</span></span></a>
+  <a href="../chapters/chapter-presentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-extending-platforms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Extending Platforms</span></span></a>
+  <a href="../chapters/chapter-behaviour.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Behaviour: JavaScript as User Interaction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-headless-architecture.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Headless Architecture</span></span></a>
+  <a href="../chapters/chapter-connection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Connection: APIs as Business Integration</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../projects/project-business-site.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Project: Business Website with WordPress</span></span></a>
+  <a href="../projects/project-portfolio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Project: Portfolio Website</span></span></a>
   </div>
 </li>
       </ul>
@@ -445,7 +437,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Modern Frontend Development</span></a>
+ <span class="menu-text">Content Management for Business</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -453,26 +445,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-component-thinking.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Component Thinking: React</span></span></a>
+  <a href="../chapters/chapter-why-cms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Why CMS? The Business Value of Managed Content</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-rapid-development.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Rapid Development: CSS Frameworks</span></span></a>
+  <a href="../chapters/chapter-wordpress-platform.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">WordPress as Platform</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-professional-practices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Professional Practices</span></span></a>
+  <a href="../chapters/chapter-extending-platforms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Extending Platforms</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../projects/project-react-integration.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Project: React Integration</span></span></a>
+  <a href="../chapters/chapter-headless-architecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Headless Architecture</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/project-business-site.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Project: Business Website with WordPress</span></span></a>
   </div>
 </li>
       </ul>
@@ -480,7 +478,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">The Professional Developer</span></a>
+ <span class="menu-text">Modern Frontend Development</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -488,20 +486,78 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-component-thinking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Component Thinking: React</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-rapid-development.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Rapid Development: CSS Frameworks</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-professional-practices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Professional Practices</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/project-react-integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Project: React Integration</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">The Professional Developer</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/chapter-emerging-technologies.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Evaluating Emerging Technologies</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Evaluating Emerging Technologies</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter-development-career.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Your Development Career</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Your Development Career</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter-ai-era-developer.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">The AI-Era Developer</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">The AI-Era Developer</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/how-to-use-this-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to Use This Book</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/2027-course-map.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2027 Course Map</span></a>
   </div>
 </li>
       </ul>
@@ -520,7 +576,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
     </ul>
     </div>
-</nav>
+<div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
+<p>Paperback ISBN 979-8-255-17415-7</p>
+</div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -528,57 +586,57 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-concept-first" id="toc-the-concept-first" class="nav-link active" data-scroll-target="#the-concept-first"><span class="header-section-number">18.1</span> The Concept First</a></li>
-  <li><a href="#understanding-through-partnership-evolution" id="toc-understanding-through-partnership-evolution" class="nav-link" data-scroll-target="#understanding-through-partnership-evolution"><span class="header-section-number">18.2</span> Understanding Through Partnership Evolution</a></li>
-  <li><a href="#discovering-your-ai-era-role-with-your-ai-partner" id="toc-discovering-your-ai-era-role-with-your-ai-partner" class="nav-link" data-scroll-target="#discovering-your-ai-era-role-with-your-ai-partner"><span class="header-section-number">18.3</span> Discovering Your AI-Era Role with Your AI Partner</a>
+  <li><a href="#the-concept-first" id="toc-the-concept-first" class="nav-link active" data-scroll-target="#the-concept-first"><span class="header-section-number">21.1</span> The Concept First</a></li>
+  <li><a href="#understanding-through-partnership-evolution" id="toc-understanding-through-partnership-evolution" class="nav-link" data-scroll-target="#understanding-through-partnership-evolution"><span class="header-section-number">21.2</span> Understanding Through Partnership Evolution</a></li>
+  <li><a href="#discovering-your-ai-era-role-with-your-ai-partner" id="toc-discovering-your-ai-era-role-with-your-ai-partner" class="nav-link" data-scroll-target="#discovering-your-ai-era-role-with-your-ai-partner"><span class="header-section-number">21.3</span> Discovering Your AI-Era Role with Your AI Partner</a>
   <ul class="collapse">
   <li><a href="#exploration-1-what-wont-be-automated" id="toc-exploration-1-what-wont-be-automated" class="nav-link" data-scroll-target="#exploration-1-what-wont-be-automated">Exploration 1: What Won’t Be Automated</a></li>
   <li><a href="#exploration-2-your-unique-value" id="toc-exploration-2-your-unique-value" class="nav-link" data-scroll-target="#exploration-2-your-unique-value">Exploration 2: Your Unique Value</a></li>
   <li><a href="#exploration-3-effective-ai-partnership" id="toc-exploration-3-effective-ai-partnership" class="nav-link" data-scroll-target="#exploration-3-effective-ai-partnership">Exploration 3: Effective AI Partnership</a></li>
   <li><a href="#exploration-4-the-future-partnership" id="toc-exploration-4-the-future-partnership" class="nav-link" data-scroll-target="#exploration-4-the-future-partnership">Exploration 4: The Future Partnership</a></li>
   </ul></li>
-  <li><a href="#from-concept-to-practice" id="toc-from-concept-to-practice" class="nav-link" data-scroll-target="#from-concept-to-practice"><span class="header-section-number">18.4</span> From Concept to Practice</a>
+  <li><a href="#from-concept-to-practice" id="toc-from-concept-to-practice" class="nav-link" data-scroll-target="#from-concept-to-practice"><span class="header-section-number">21.4</span> From Concept to Practice</a>
   <ul class="collapse">
   <li><a href="#patterns-for-ai-collaboration" id="toc-patterns-for-ai-collaboration" class="nav-link" data-scroll-target="#patterns-for-ai-collaboration">Patterns for AI Collaboration</a></li>
   <li><a href="#maintaining-your-skills" id="toc-maintaining-your-skills" class="nav-link" data-scroll-target="#maintaining-your-skills">Maintaining Your Skills</a></li>
   <li><a href="#quality-control-for-ai-generated-code" id="toc-quality-control-for-ai-generated-code" class="nav-link" data-scroll-target="#quality-control-for-ai-generated-code">Quality Control for AI-Generated Code</a></li>
   <li><a href="#ethical-considerations" id="toc-ethical-considerations" class="nav-link" data-scroll-target="#ethical-considerations">Ethical Considerations</a></li>
   </ul></li>
-  <li><a href="#building-your-mental-model" id="toc-building-your-mental-model" class="nav-link" data-scroll-target="#building-your-mental-model"><span class="header-section-number">18.5</span> Building Your Mental Model</a>
+  <li><a href="#building-your-mental-model" id="toc-building-your-mental-model" class="nav-link" data-scroll-target="#building-your-mental-model"><span class="header-section-number">21.5</span> Building Your Mental Model</a>
   <ul class="collapse">
   <li><a href="#the-developer-ai-collaboration-spectrum" id="toc-the-developer-ai-collaboration-spectrum" class="nav-link" data-scroll-target="#the-developer-ai-collaboration-spectrum">The Developer-AI Collaboration Spectrum</a></li>
   <li><a href="#the-skill-evolution-model" id="toc-the-skill-evolution-model" class="nav-link" data-scroll-target="#the-skill-evolution-model">The Skill Evolution Model</a></li>
   <li><a href="#the-partnership-maturity-model" id="toc-the-partnership-maturity-model" class="nav-link" data-scroll-target="#the-partnership-maturity-model">The Partnership Maturity Model</a></li>
   </ul></li>
-  <li><a href="#business-applications" id="toc-business-applications" class="nav-link" data-scroll-target="#business-applications"><span class="header-section-number">18.6</span> Business Applications</a>
+  <li><a href="#business-applications" id="toc-business-applications" class="nav-link" data-scroll-target="#business-applications"><span class="header-section-number">21.6</span> Business Applications</a>
   <ul class="collapse">
   <li><a href="#productivity-and-quality" id="toc-productivity-and-quality" class="nav-link" data-scroll-target="#productivity-and-quality">Productivity and Quality</a></li>
   <li><a href="#team-dynamics" id="toc-team-dynamics" class="nav-link" data-scroll-target="#team-dynamics">Team Dynamics</a></li>
   <li><a href="#client-communication" id="toc-client-communication" class="nav-link" data-scroll-target="#client-communication">Client Communication</a></li>
   <li><a href="#career-positioning" id="toc-career-positioning" class="nav-link" data-scroll-target="#career-positioning">Career Positioning</a></li>
   </ul></li>
-  <li><a href="#practice-exercises" id="toc-practice-exercises" class="nav-link" data-scroll-target="#practice-exercises"><span class="header-section-number">18.7</span> Practice Exercises</a>
+  <li><a href="#practice-exercises" id="toc-practice-exercises" class="nav-link" data-scroll-target="#practice-exercises"><span class="header-section-number">21.7</span> Practice Exercises</a>
   <ul class="collapse">
-  <li><a href="#exercise-14.1-ai-interaction-analysis-level-1" id="toc-exercise-14.1-ai-interaction-analysis-level-1" class="nav-link" data-scroll-target="#exercise-14.1-ai-interaction-analysis-level-1">Exercise 14.1: AI Interaction Analysis (Level 1)</a></li>
-  <li><a href="#exercise-14.2-manual-implementation-level-2" id="toc-exercise-14.2-manual-implementation-level-2" class="nav-link" data-scroll-target="#exercise-14.2-manual-implementation-level-2">Exercise 14.2: Manual Implementation (Level 2)</a></li>
-  <li><a href="#exercise-14.3-ai-code-review-level-3" id="toc-exercise-14.3-ai-code-review-level-3" class="nav-link" data-scroll-target="#exercise-14.3-ai-code-review-level-3">Exercise 14.3: AI Code Review (Level 3)</a></li>
-  <li><a href="#exercise-14.4-partnership-optimisation-level-4" id="toc-exercise-14.4-partnership-optimisation-level-4" class="nav-link" data-scroll-target="#exercise-14.4-partnership-optimisation-level-4">Exercise 14.4: Partnership Optimisation (Level 4)</a></li>
-  <li><a href="#exercise-14.5-future-preparation-level-5" id="toc-exercise-14.5-future-preparation-level-5" class="nav-link" data-scroll-target="#exercise-14.5-future-preparation-level-5">Exercise 14.5: Future Preparation (Level 5)</a></li>
+  <li><a href="#exercise-21.1-ai-interaction-analysis-level-1" id="toc-exercise-21.1-ai-interaction-analysis-level-1" class="nav-link" data-scroll-target="#exercise-21.1-ai-interaction-analysis-level-1">Exercise 21.1: AI Interaction Analysis (Level 1)</a></li>
+  <li><a href="#exercise-21.2-manual-implementation-level-2" id="toc-exercise-21.2-manual-implementation-level-2" class="nav-link" data-scroll-target="#exercise-21.2-manual-implementation-level-2">Exercise 21.2: Manual Implementation (Level 2)</a></li>
+  <li><a href="#exercise-21.3-ai-code-review-level-3" id="toc-exercise-21.3-ai-code-review-level-3" class="nav-link" data-scroll-target="#exercise-21.3-ai-code-review-level-3">Exercise 21.3: AI Code Review (Level 3)</a></li>
+  <li><a href="#exercise-21.4-partnership-optimisation-level-4" id="toc-exercise-21.4-partnership-optimisation-level-4" class="nav-link" data-scroll-target="#exercise-21.4-partnership-optimisation-level-4">Exercise 21.4: Partnership Optimisation (Level 4)</a></li>
+  <li><a href="#exercise-21.5-future-preparation-level-5" id="toc-exercise-21.5-future-preparation-level-5" class="nav-link" data-scroll-target="#exercise-21.5-future-preparation-level-5">Exercise 21.5: Future Preparation (Level 5)</a></li>
   </ul></li>
-  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary"><span class="header-section-number">18.8</span> Chapter Summary</a></li>
-  <li><a href="#final-reflection" id="toc-final-reflection" class="nav-link" data-scroll-target="#final-reflection"><span class="header-section-number">18.9</span> Final Reflection</a></li>
-  <li><a href="#your-final-learning-journal-entry" id="toc-your-final-learning-journal-entry" class="nav-link" data-scroll-target="#your-final-learning-journal-entry"><span class="header-section-number">18.10</span> Your Final Learning Journal Entry</a></li>
-  <li><a href="#looking-forward" id="toc-looking-forward" class="nav-link" data-scroll-target="#looking-forward"><span class="header-section-number">18.11</span> Looking Forward</a></li>
+  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary"><span class="header-section-number">21.8</span> Chapter Summary</a></li>
+  <li><a href="#final-reflection" id="toc-final-reflection" class="nav-link" data-scroll-target="#final-reflection"><span class="header-section-number">21.9</span> Final Reflection</a></li>
+  <li><a href="#your-final-learning-journal-entry" id="toc-your-final-learning-journal-entry" class="nav-link" data-scroll-target="#your-final-learning-journal-entry"><span class="header-section-number">21.10</span> Your Final Learning Journal Entry</a></li>
+  <li><a href="#looking-forward" id="toc-looking-forward" class="nav-link" data-scroll-target="#looking-forward"><span class="header-section-number">21.11</span> Looking Forward</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/build-web-guide-ai/edit/main/chapters/chapter-ai-era-developer.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="build-web-guide-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="build-web-guide-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/build-web-guide-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/build-web-guide-ai/edit/main/chapters/chapter-ai-era-developer.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/build-web-guide-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/build-web-guide-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/build-web-guide-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-emerging-technologies.html">The Professional Developer</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-ai-era-developer.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">The AI-Era Developer</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-emerging-technologies.html">The Professional Developer</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-ai-era-developer.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">The AI-Era Developer</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span id="sec-ai-era-developer" class="quarto-section-identifier"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">The AI-Era Developer</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span id="sec-ai-era-developer" class="quarto-section-identifier"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">The AI-Era Developer</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -595,10 +653,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="the-concept-first" class="level2" data-number="18.1">
-<h2 data-number="18.1" class="anchored" data-anchor-id="the-concept-first"><span class="header-section-number">18.1</span> The Concept First</h2>
-<p>Throughout this book, you’ve learned web development with AI as your partner. You’ve used AI to explore concepts, debug problems, generate code, and build understanding. Now, as we conclude, let’s step back and ask: <strong>What does it mean to be a developer in an era where AI can write code?</strong></p>
-<p>This isn’t a question about job security, though that concern is understandable. It’s a deeper question about <strong>value, identity, and skill</strong>.</p>
+<section id="the-concept-first" class="level2" data-number="21.1">
+<h2 data-number="21.1" class="anchored" data-anchor-id="the-concept-first"><span class="header-section-number">21.1</span> The Concept First</h2>
+<p>Throughout this book, you’ve learned web development with AI as your partner. You’ve used AI to explore concepts, debug problems, generate code, and build understanding. Now ask: <strong>What does it mean to be a developer in an era where AI can write code?</strong></p>
+<p>Job security is part of that question, but the larger part is where your value lies and which skills matter.</p>
 <p>Consider what you’ve actually done in this course:</p>
 <ul>
 <li>You <strong>decided</strong> what to build</li>
@@ -609,14 +667,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>You <strong>adapted</strong> suggestions to your specific context</li>
 </ul>
 <p>AI assisted with all of this. But AI didn’t do any of this <strong>for</strong> you. The judgment, understanding, and decision-making were yours.</p>
-<p>That’s the core insight: AI amplifies human capability. It doesn’t replace human judgment.</p>
+<p>AI amplifies human capability rather than replacing human judgment.</p>
 </section>
-<section id="understanding-through-partnership-evolution" class="level2" data-number="18.2">
-<h2 data-number="18.2" class="anchored" data-anchor-id="understanding-through-partnership-evolution"><span class="header-section-number">18.2</span> Understanding Through Partnership Evolution</h2>
+<section id="understanding-through-partnership-evolution" class="level2" data-number="21.2">
+<h2 data-number="21.2" class="anchored" data-anchor-id="understanding-through-partnership-evolution"><span class="header-section-number">21.2</span> Understanding Through Partnership Evolution</h2>
 <p>Think about how your relationship with AI has evolved through this book.</p>
-<p><strong>Early in your journey</strong> (chapters 1-4): - AI explained concepts - You asked “how does this work?” - AI provided examples - You learned fundamentals</p>
-<p><strong>As you grew</strong> (chapters 5-11): - You asked “which approach is better?” - AI provided options with trade-offs - You made decisions based on context - AI helped implement your decisions</p>
-<p><strong>Now</strong> (chapters 12-14): - You ask “is this appropriate for this situation?” - AI provides analysis - You evaluate and judge - The partnership is truly collaborative</p>
+<p><strong>Early in your journey</strong> (the Web Foundations chapters): - AI explained concepts - You asked “how does this work?” - AI provided examples - You learned fundamentals</p>
+<p><strong>As you grew</strong> (the platform and component chapters): - You asked “which approach is better?” - AI provided options with trade-offs - You made decisions based on context - AI helped implement your decisions</p>
+<p><strong>Now</strong> (the professional developer chapters): - You ask “is this appropriate for this situation?” - AI provides analysis - You evaluate and judge - The partnership is collaborative</p>
 <p>This evolution reflects how professionals actually work with AI. Beginners need more guidance. Experts need thinking partners. The AI adapts to where you are.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -632,8 +690,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="discovering-your-ai-era-role-with-your-ai-partner" class="level2" data-number="18.3">
-<h2 data-number="18.3" class="anchored" data-anchor-id="discovering-your-ai-era-role-with-your-ai-partner"><span class="header-section-number">18.3</span> Discovering Your AI-Era Role with Your AI Partner</h2>
+<section id="discovering-your-ai-era-role-with-your-ai-partner" class="level2" data-number="21.3">
+<h2 data-number="21.3" class="anchored" data-anchor-id="discovering-your-ai-era-role-with-your-ai-partner"><span class="header-section-number">21.3</span> Discovering Your AI-Era Role with Your AI Partner</h2>
 <section id="exploration-1-what-wont-be-automated" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-1-what-wont-be-automated">Exploration 1: What Won’t Be Automated</h3>
 <p>Let’s think critically about AI’s limits:</p>
@@ -641,7 +699,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 What aspects of software development are unlikely to be fully
 automated by AI in the foreseeable future? Be specific about why
 each aspect resists automation.</code></pre>
-<p>Key areas that remain human:</p>
+<p>Areas that remain human:</p>
 <p><strong>Problem definition</strong>: AI can solve problems; it struggles to identify which problems matter. “We need better user engagement” is a human judgment. AI can’t determine what “better” means for your specific business.</p>
 <p><strong>Stakeholder communication</strong>: Clients often don’t know what they want. Extracting requirements through conversation, reading non-verbal cues, and building trust remain human skills.</p>
 <p><strong>Ethical judgment</strong>: “Can we build this?” differs from “Should we build this?” AI can identify potential issues but can’t make values-based decisions for you.</p>
@@ -706,11 +764,11 @@ over the next 5-10 years? What should I prepare for?</code></pre>
 </ul>
 </section>
 </section>
-<section id="from-concept-to-practice" class="level2" data-number="18.4">
-<h2 data-number="18.4" class="anchored" data-anchor-id="from-concept-to-practice"><span class="header-section-number">18.4</span> From Concept to Practice</h2>
+<section id="from-concept-to-practice" class="level2" data-number="21.4">
+<h2 data-number="21.4" class="anchored" data-anchor-id="from-concept-to-practice"><span class="header-section-number">21.4</span> From Concept to Practice</h2>
 <section id="patterns-for-ai-collaboration" class="level3">
 <h3 class="anchored" data-anchor-id="patterns-for-ai-collaboration">Patterns for AI Collaboration</h3>
-<p>Throughout this course, you’ve developed patterns for working with AI. Let’s make them explicit.</p>
+<p>Throughout this course, you’ve developed patterns for working with AI:</p>
 <p><strong>Pattern 1: Exploration Before Implementation</strong></p>
 <pre class="text"><code>Poor: "Write me a shopping cart component"
 
@@ -735,7 +793,7 @@ Better:
 2. "Now help me create a ProductCard component to display one product"
 3. "Add filtering by category to the product list"
 4. [Continue incrementally]</code></pre>
-<p>Complex systems are built incrementally. AI helps with each step, not magic solutions.</p>
+<p>Complex systems are built incrementally. AI helps with each step.</p>
 <p><strong>Pattern 4: Context-Rich Requests</strong></p>
 <pre class="text"><code>Poor: "Make the button look better"
 
@@ -744,15 +802,14 @@ in a hero section with a dark background image. Currently it's styled
 with Tailwind as `bg-blue-500 text-white px-4 py-2`. The button feels
 too small and doesn't stand out enough. Suggest improvements that
 maintain accessibility."</code></pre>
-<p>Context enables better AI assistance.</p>
 <p><strong>Pattern 5: Critical Review</strong></p>
 <p>When AI generates code:</p>
 <ol type="1">
-<li><strong>Read it</strong> – Don’t copy blindly</li>
-<li><strong>Understand it</strong> – Can you explain each line?</li>
-<li><strong>Test it</strong> – Does it actually work?</li>
-<li><strong>Evaluate it</strong> – Is this the right approach?</li>
-<li><strong>Adapt it</strong> – Modify for your specific needs</li>
+<li><strong>Read it:</strong> don’t copy blindly</li>
+<li><strong>Understand it:</strong> can you explain each line?</li>
+<li><strong>Test it:</strong> does it actually work?</li>
+<li><strong>Evaluate it:</strong> is this the right approach?</li>
+<li><strong>Adapt it:</strong> modify it for your specific needs</li>
 </ol>
 </section>
 <section id="maintaining-your-skills" class="level3">
@@ -828,8 +885,8 @@ maintain accessibility."</code></pre>
 </ul>
 </section>
 </section>
-<section id="building-your-mental-model" class="level2" data-number="18.5">
-<h2 data-number="18.5" class="anchored" data-anchor-id="building-your-mental-model"><span class="header-section-number">18.5</span> Building Your Mental Model</h2>
+<section id="building-your-mental-model" class="level2" data-number="21.5">
+<h2 data-number="21.5" class="anchored" data-anchor-id="building-your-mental-model"><span class="header-section-number">21.5</span> Building Your Mental Model</h2>
 <section id="the-developer-ai-collaboration-spectrum" class="level3">
 <h3 class="anchored" data-anchor-id="the-developer-ai-collaboration-spectrum">The Developer-AI Collaboration Spectrum</h3>
 <pre class="text"><code>Full Manual                                      Full Automation
@@ -891,11 +948,11 @@ Level 4: Director
 - AI amplifies your judgment
 - You orchestrate capabilities
 - AI is your tool, not your crutch</code></pre>
-<p>Progress through these levels by maintaining your independent capability while leveraging AI appropriately.</p>
+<p>Progress through these levels by maintaining your independent capability while using AI appropriately.</p>
 </section>
 </section>
-<section id="business-applications" class="level2" data-number="18.6">
-<h2 data-number="18.6" class="anchored" data-anchor-id="business-applications"><span class="header-section-number">18.6</span> Business Applications</h2>
+<section id="business-applications" class="level2" data-number="21.6">
+<h2 data-number="21.6" class="anchored" data-anchor-id="business-applications"><span class="header-section-number">21.6</span> Business Applications</h2>
 <section id="productivity-and-quality" class="level3">
 <h3 class="anchored" data-anchor-id="productivity-and-quality">Productivity and Quality</h3>
 <p>AI-assisted development can improve both speed and quality, if used well:</p>
@@ -905,7 +962,7 @@ Level 4: Director
 <li><strong>Learning</strong>: Faster skill acquisition</li>
 <li><strong>Exploration</strong>: Try more approaches</li>
 </ul>
-<p>The key: time saved on rote tasks should be invested in higher-value activities (design, testing, user research), not just producing more code faster.</p>
+<p>Time saved on rote tasks should be invested in higher-value activities (design, testing, user research), not just producing more code faster.</p>
 </section>
 <section id="team-dynamics" class="level3">
 <h3 class="anchored" data-anchor-id="team-dynamics">Team Dynamics</h3>
@@ -947,8 +1004,8 @@ Level 4: Director
 </div>
 </section>
 </section>
-<section id="practice-exercises" class="level2" data-number="18.7">
-<h2 data-number="18.7" class="anchored" data-anchor-id="practice-exercises"><span class="header-section-number">18.7</span> Practice Exercises</h2>
+<section id="practice-exercises" class="level2" data-number="21.7">
+<h2 data-number="21.7" class="anchored" data-anchor-id="practice-exercises"><span class="header-section-number">21.7</span> Practice Exercises</h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -968,8 +1025,8 @@ Level 4: Director
 </ul>
 </div>
 </div>
-<section id="exercise-14.1-ai-interaction-analysis-level-1" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-14.1-ai-interaction-analysis-level-1">Exercise 14.1: AI Interaction Analysis (Level 1)</h3>
+<section id="exercise-21.1-ai-interaction-analysis-level-1" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-21.1-ai-interaction-analysis-level-1">Exercise 21.1: AI Interaction Analysis (Level 1)</h3>
 <p>Review your AI conversations from throughout this book:</p>
 <ol type="1">
 <li>Find three conversations where AI was most helpful</li>
@@ -978,8 +1035,8 @@ Level 4: Director
 <li>Write patterns you’ll use going forward</li>
 </ol>
 </section>
-<section id="exercise-14.2-manual-implementation-level-2" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-14.2-manual-implementation-level-2">Exercise 14.2: Manual Implementation (Level 2)</h3>
+<section id="exercise-21.2-manual-implementation-level-2" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-21.2-manual-implementation-level-2">Exercise 21.2: Manual Implementation (Level 2)</h3>
 <p>Build a small component <strong>without</strong> AI assistance:</p>
 <ol type="1">
 <li>Choose something you previously built with AI help</li>
@@ -988,8 +1045,8 @@ Level 4: Director
 <li>Reflect on the value of both approaches</li>
 </ol>
 </section>
-<section id="exercise-14.3-ai-code-review-level-3" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-14.3-ai-code-review-level-3">Exercise 14.3: AI Code Review (Level 3)</h3>
+<section id="exercise-21.3-ai-code-review-level-3" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-21.3-ai-code-review-level-3">Exercise 21.3: AI Code Review (Level 3)</h3>
 <p>Practice reviewing AI-generated code:</p>
 <ol type="1">
 <li>Ask AI to generate a moderately complex component</li>
@@ -999,8 +1056,8 @@ Level 4: Director
 <li>Implement the final version</li>
 </ol>
 </section>
-<section id="exercise-14.4-partnership-optimisation-level-4" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-14.4-partnership-optimisation-level-4">Exercise 14.4: Partnership Optimisation (Level 4)</h3>
+<section id="exercise-21.4-partnership-optimisation-level-4" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-21.4-partnership-optimisation-level-4">Exercise 21.4: Partnership Optimisation (Level 4)</h3>
 <p>Develop your personal AI collaboration framework:</p>
 <ol type="1">
 <li>Document your most effective prompting patterns</li>
@@ -1009,8 +1066,8 @@ Level 4: Director
 <li>Write guidelines for a team member new to AI tools</li>
 </ol>
 </section>
-<section id="exercise-14.5-future-preparation-level-5" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-14.5-future-preparation-level-5">Exercise 14.5: Future Preparation (Level 5)</h3>
+<section id="exercise-21.5-future-preparation-level-5" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-21.5-future-preparation-level-5">Exercise 21.5: Future Preparation (Level 5)</h3>
 <p>Create a 12-month professional development plan that accounts for AI:</p>
 <ol type="1">
 <li>Identify skills that will gain value with AI assistance</li>
@@ -1021,8 +1078,8 @@ Level 4: Director
 </ol>
 </section>
 </section>
-<section id="chapter-summary" class="level2" data-number="18.8">
-<h2 data-number="18.8" class="anchored" data-anchor-id="chapter-summary"><span class="header-section-number">18.8</span> Chapter Summary</h2>
+<section id="chapter-summary" class="level2" data-number="21.8">
+<h2 data-number="21.8" class="anchored" data-anchor-id="chapter-summary"><span class="header-section-number">21.8</span> Chapter Summary</h2>
 <ul>
 <li>AI amplifies human capability; it doesn’t replace human judgment</li>
 <li>Effective AI partnership requires understanding, evaluation, and adaptation</li>
@@ -1032,8 +1089,8 @@ Level 4: Director
 <li>Career success depends on how well you collaborate with AI, not whether</li>
 </ul>
 </section>
-<section id="final-reflection" class="level2" data-number="18.9">
-<h2 data-number="18.9" class="anchored" data-anchor-id="final-reflection"><span class="header-section-number">18.9</span> Final Reflection</h2>
+<section id="final-reflection" class="level2" data-number="21.9">
+<h2 data-number="21.9" class="anchored" data-anchor-id="final-reflection"><span class="header-section-number">21.9</span> Final Reflection</h2>
 <p>As you complete this book, reflect on your journey:</p>
 <p><strong>Technical Growth</strong>:</p>
 <ul class="task-list">
@@ -1057,8 +1114,8 @@ Level 4: Director
 <li><label><input type="checkbox">Are you positioned to adapt as AI capabilities evolve?</label></li>
 </ul>
 </section>
-<section id="your-final-learning-journal-entry" class="level2" data-number="18.10">
-<h2 data-number="18.10" class="anchored" data-anchor-id="your-final-learning-journal-entry"><span class="header-section-number">18.10</span> Your Final Learning Journal Entry</h2>
+<section id="your-final-learning-journal-entry" class="level2" data-number="21.10">
+<h2 data-number="21.10" class="anchored" data-anchor-id="your-final-learning-journal-entry"><span class="header-section-number">21.10</span> Your Final Learning Journal Entry</h2>
 <p>Record your thoughts on completing this course:</p>
 <ol type="1">
 <li><p><strong>Your Journey</strong>: What surprised you most about learning web development? What was harder than expected? Easier?</p></li>
@@ -1068,8 +1125,8 @@ Level 4: Director
 <li><p><strong>Next Steps</strong>: What will you build next? What will you learn? How will you continue growing?</p></li>
 </ol>
 </section>
-<section id="looking-forward" class="level2" data-number="18.11">
-<h2 data-number="18.11" class="anchored" data-anchor-id="looking-forward"><span class="header-section-number">18.11</span> Looking Forward</h2>
+<section id="looking-forward" class="level2" data-number="21.11">
+<h2 data-number="21.11" class="anchored" data-anchor-id="looking-forward"><span class="header-section-number">21.11</span> Looking Forward</h2>
 <p>This book ends, but your development journey continues.</p>
 <p>You now have:</p>
 <ul>
@@ -1079,10 +1136,9 @@ Level 4: Director
 <li><strong>Professional practices</strong> for quality work</li>
 <li><strong>Career frameworks</strong> for ongoing growth</li>
 </ul>
-<p>More importantly, you have <strong>the ability to learn</strong>. Technologies will change. Frameworks will evolve. AI capabilities will expand. But your foundation, understanding how to think about problems, evaluate solutions, communicate with stakeholders, and collaborate with tools, remains valuable.</p>
-<p>The developers who thrive in the AI era won’t be those who resist AI or those who depend on AI. They’ll be those who partner with AI thoughtfully, maintaining their own judgment, understanding, and skills while leveraging AI to amplify their capability.</p>
-<p>You’ve built that foundation here.</p>
-<p>Now go build something. Make mistakes. Learn from them. Collaborate with AI. Create value for others. Contribute to the community. Keep growing.</p>
+<p>You also have <strong>the ability to learn</strong>. Technologies will change. Frameworks will evolve. AI capabilities will expand. But your foundation, understanding how to think about problems, evaluate solutions, communicate with stakeholders, and collaborate with tools, remains valuable.</p>
+<p>The developers who thrive in the AI era won’t be those who resist AI or those who depend on AI. They’ll be those who partner with AI thoughtfully, maintaining their own judgment, understanding, and skills while using AI to amplify their capability.</p>
+<p>Now build something, learn from your mistakes, collaborate with AI, and contribute to the community.</p>
 <p><strong>Welcome to your career as a web professional.</strong></p>
 
 
@@ -1198,16 +1254,16 @@ Level 4: Director
     }
     function toggleCodeHandler(show) {
       return function(e) {
-        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-        for (let i=0; i<detailsSrc.length; i++) {
-          const details = detailsSrc[i].parentElement;
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
           if (show) {
             details.open = true;
           } else {
             details.removeAttribute("open");
           }
         }
-        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
         const fromCls = show ? "hidden" : "unhidden";
         const toCls = show ? "unhidden" : "hidden";
         for (let i=0; i<cellCodeDivs.length; i++) {
@@ -1560,12 +1616,12 @@ Level 4: Director
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../chapters/chapter-development-career.html" class="pagination-link" aria-label="Your Development Career">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Your Development Career</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Your Development Career</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../appendices/how-to-use-this-book.html" class="pagination-link" aria-label="How to Use This Book">
+        <span class="nav-page-text">How to Use This Book</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
@@ -1573,9 +1629,9 @@ Level 4: Director
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Concept First</span></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>Throughout this book, you've learned web development with AI as your partner. You've used AI to explore concepts, debug problems, generate code, and build understanding. Now, as we conclude, let's step back and ask: **What does it mean to be a developer in an era where AI can write code?**</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>Throughout this book, you've learned web development with AI as your partner. You've used AI to explore concepts, debug problems, generate code, and build understanding. Now ask: **What does it mean to be a developer in an era where AI can write code?**</span>
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>This isn't a question about job security, though that concern is understandable. It's a deeper question about **value, identity, and skill**.</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>Job security is part of that question, but the larger part is where your value lies and which skills matter.</span>
 <span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>Consider what you've actually done in this course:</span>
 <span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
@@ -1588,29 +1644,29 @@ Level 4: Director
 <span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>AI assisted with all of this. But AI didn't do any of this **for** you. The judgment, understanding, and decision-making were yours.</span>
 <span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>That's the core insight: AI amplifies human capability. It doesn't replace human judgment.</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>AI amplifies human capability rather than replacing human judgment.</span>
 <span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="fu">## Understanding Through Partnership Evolution</span></span>
 <span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>Think about how your relationship with AI has evolved through this book.</span>
 <span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>**Early in your journey** (chapters 1-4):</span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>**Early in your journey** (the Web Foundations chapters):</span>
 <span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AI explained concepts</span>
 <span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You asked "how does this work?"</span>
 <span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AI provided examples</span>
 <span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You learned fundamentals</span>
 <span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>**As you grew** (chapters 5-11):</span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>**As you grew** (the platform and component chapters):</span>
 <span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You asked "which approach is better?"</span>
 <span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AI provided options with trade-offs</span>
 <span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You made decisions based on context</span>
 <span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AI helped implement your decisions</span>
 <span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>**Now** (chapters 12-14):</span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>**Now** (the professional developer chapters):</span>
 <span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You ask "is this appropriate for this situation?"</span>
 <span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AI provides analysis</span>
 <span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You evaluate and judge</span>
-<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The partnership is truly collaborative</span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The partnership is collaborative</span>
 <span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a>This evolution reflects how professionals actually work with AI. Beginners need more guidance. Experts need thinking partners. The AI adapts to where you are.</span>
 <span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a></span>
@@ -1632,7 +1688,7 @@ Level 4: Director
 <span id="cb15-61"><a href="#cb15-61" aria-hidden="true" tabindex="-1"></a><span class="in">each aspect resists automation.</span></span>
 <span id="cb15-62"><a href="#cb15-62" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb15-63"><a href="#cb15-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-64"><a href="#cb15-64" aria-hidden="true" tabindex="-1"></a>Key areas that remain human:</span>
+<span id="cb15-64"><a href="#cb15-64" aria-hidden="true" tabindex="-1"></a>Areas that remain human:</span>
 <span id="cb15-65"><a href="#cb15-65" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-66"><a href="#cb15-66" aria-hidden="true" tabindex="-1"></a>**Problem definition**: AI can solve problems; it struggles to identify which problems matter. "We need better user engagement" is a human judgment. AI can't determine what "better" means for your specific business.</span>
 <span id="cb15-67"><a href="#cb15-67" aria-hidden="true" tabindex="-1"></a></span>
@@ -1726,7 +1782,7 @@ Level 4: Director
 <span id="cb15-155"><a href="#cb15-155" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-156"><a href="#cb15-156" aria-hidden="true" tabindex="-1"></a><span class="fu">### Patterns for AI Collaboration</span></span>
 <span id="cb15-157"><a href="#cb15-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-158"><a href="#cb15-158" aria-hidden="true" tabindex="-1"></a>Throughout this course, you've developed patterns for working with AI. Let's make them explicit.</span>
+<span id="cb15-158"><a href="#cb15-158" aria-hidden="true" tabindex="-1"></a>Throughout this course, you've developed patterns for working with AI:</span>
 <span id="cb15-159"><a href="#cb15-159" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-160"><a href="#cb15-160" aria-hidden="true" tabindex="-1"></a>**Pattern 1: Exploration Before Implementation**</span>
 <span id="cb15-161"><a href="#cb15-161" aria-hidden="true" tabindex="-1"></a></span>
@@ -1766,7 +1822,7 @@ Level 4: Director
 <span id="cb15-195"><a href="#cb15-195" aria-hidden="true" tabindex="-1"></a><span class="in">4. [Continue incrementally]</span></span>
 <span id="cb15-196"><a href="#cb15-196" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb15-197"><a href="#cb15-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-198"><a href="#cb15-198" aria-hidden="true" tabindex="-1"></a>Complex systems are built incrementally. AI helps with each step, not magic solutions.</span>
+<span id="cb15-198"><a href="#cb15-198" aria-hidden="true" tabindex="-1"></a>Complex systems are built incrementally. AI helps with each step.</span>
 <span id="cb15-199"><a href="#cb15-199" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-200"><a href="#cb15-200" aria-hidden="true" tabindex="-1"></a>**Pattern 4: Context-Rich Requests**</span>
 <span id="cb15-201"><a href="#cb15-201" aria-hidden="true" tabindex="-1"></a></span>
@@ -1780,334 +1836,330 @@ Level 4: Director
 <span id="cb15-209"><a href="#cb15-209" aria-hidden="true" tabindex="-1"></a><span class="in">maintain accessibility."</span></span>
 <span id="cb15-210"><a href="#cb15-210" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb15-211"><a href="#cb15-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-212"><a href="#cb15-212" aria-hidden="true" tabindex="-1"></a>Context enables better AI assistance.</span>
+<span id="cb15-212"><a href="#cb15-212" aria-hidden="true" tabindex="-1"></a>**Pattern 5: Critical Review**</span>
 <span id="cb15-213"><a href="#cb15-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-214"><a href="#cb15-214" aria-hidden="true" tabindex="-1"></a>**Pattern 5: Critical Review**</span>
+<span id="cb15-214"><a href="#cb15-214" aria-hidden="true" tabindex="-1"></a>When AI generates code:</span>
 <span id="cb15-215"><a href="#cb15-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-216"><a href="#cb15-216" aria-hidden="true" tabindex="-1"></a>When AI generates code:</span>
-<span id="cb15-217"><a href="#cb15-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-218"><a href="#cb15-218" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Read it** – Don't copy blindly</span>
-<span id="cb15-219"><a href="#cb15-219" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Understand it** – Can you explain each line?</span>
-<span id="cb15-220"><a href="#cb15-220" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Test it** – Does it actually work?</span>
-<span id="cb15-221"><a href="#cb15-221" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Evaluate it** – Is this the right approach?</span>
-<span id="cb15-222"><a href="#cb15-222" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Adapt it** – Modify for your specific needs</span>
+<span id="cb15-216"><a href="#cb15-216" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Read it:** don't copy blindly</span>
+<span id="cb15-217"><a href="#cb15-217" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Understand it:** can you explain each line?</span>
+<span id="cb15-218"><a href="#cb15-218" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Test it:** does it actually work?</span>
+<span id="cb15-219"><a href="#cb15-219" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Evaluate it:** is this the right approach?</span>
+<span id="cb15-220"><a href="#cb15-220" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Adapt it:** modify it for your specific needs</span>
+<span id="cb15-221"><a href="#cb15-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-222"><a href="#cb15-222" aria-hidden="true" tabindex="-1"></a><span class="fu">### Maintaining Your Skills</span></span>
 <span id="cb15-223"><a href="#cb15-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-224"><a href="#cb15-224" aria-hidden="true" tabindex="-1"></a><span class="fu">### Maintaining Your Skills</span></span>
+<span id="cb15-224"><a href="#cb15-224" aria-hidden="true" tabindex="-1"></a>AI assistance can atrophy skills if you're not careful.</span>
 <span id="cb15-225"><a href="#cb15-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-226"><a href="#cb15-226" aria-hidden="true" tabindex="-1"></a>AI assistance can atrophy skills if you're not careful.</span>
+<span id="cb15-226"><a href="#cb15-226" aria-hidden="true" tabindex="-1"></a>**Practice without AI regularly**:</span>
 <span id="cb15-227"><a href="#cb15-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-228"><a href="#cb15-228" aria-hidden="true" tabindex="-1"></a>**Practice without AI regularly**:</span>
-<span id="cb15-229"><a href="#cb15-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-230"><a href="#cb15-230" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Solve small problems manually first</span>
-<span id="cb15-231"><a href="#cb15-231" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use AI to check your work, not do your work</span>
-<span id="cb15-232"><a href="#cb15-232" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Implement features without AI, then compare approaches</span>
+<span id="cb15-228"><a href="#cb15-228" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Solve small problems manually first</span>
+<span id="cb15-229"><a href="#cb15-229" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use AI to check your work, not do your work</span>
+<span id="cb15-230"><a href="#cb15-230" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Implement features without AI, then compare approaches</span>
+<span id="cb15-231"><a href="#cb15-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-232"><a href="#cb15-232" aria-hidden="true" tabindex="-1"></a>**Understand fundamentals deeply**:</span>
 <span id="cb15-233"><a href="#cb15-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-234"><a href="#cb15-234" aria-hidden="true" tabindex="-1"></a>**Understand fundamentals deeply**:</span>
-<span id="cb15-235"><a href="#cb15-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-236"><a href="#cb15-236" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Know why code works, not just that it works</span>
-<span id="cb15-237"><a href="#cb15-237" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Understand algorithms, not just implementations</span>
-<span id="cb15-238"><a href="#cb15-238" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Learn concepts that transfer across technologies</span>
+<span id="cb15-234"><a href="#cb15-234" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Know why code works, not just that it works</span>
+<span id="cb15-235"><a href="#cb15-235" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Understand algorithms, not just implementations</span>
+<span id="cb15-236"><a href="#cb15-236" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Learn concepts that transfer across technologies</span>
+<span id="cb15-237"><a href="#cb15-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-238"><a href="#cb15-238" aria-hidden="true" tabindex="-1"></a>**Keep learning independently**:</span>
 <span id="cb15-239"><a href="#cb15-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-240"><a href="#cb15-240" aria-hidden="true" tabindex="-1"></a>**Keep learning independently**:</span>
-<span id="cb15-241"><a href="#cb15-241" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-242"><a href="#cb15-242" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Read documentation, not just AI summaries</span>
-<span id="cb15-243"><a href="#cb15-243" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Work through problems yourself</span>
-<span id="cb15-244"><a href="#cb15-244" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Build mental models that outlast any tool</span>
+<span id="cb15-240"><a href="#cb15-240" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Read documentation, not just AI summaries</span>
+<span id="cb15-241"><a href="#cb15-241" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Work through problems yourself</span>
+<span id="cb15-242"><a href="#cb15-242" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Build mental models that outlast any tool</span>
+<span id="cb15-243"><a href="#cb15-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-244"><a href="#cb15-244" aria-hidden="true" tabindex="-1"></a><span class="fu">### Quality Control for AI-Generated Code</span></span>
 <span id="cb15-245"><a href="#cb15-245" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-246"><a href="#cb15-246" aria-hidden="true" tabindex="-1"></a><span class="fu">### Quality Control for AI-Generated Code</span></span>
+<span id="cb15-246"><a href="#cb15-246" aria-hidden="true" tabindex="-1"></a>AI code needs review. Develop a checklist:</span>
 <span id="cb15-247"><a href="#cb15-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-248"><a href="#cb15-248" aria-hidden="true" tabindex="-1"></a>AI code needs review. Develop a checklist:</span>
+<span id="cb15-248"><a href="#cb15-248" aria-hidden="true" tabindex="-1"></a>**Functionality**:</span>
 <span id="cb15-249"><a href="#cb15-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-250"><a href="#cb15-250" aria-hidden="true" tabindex="-1"></a>**Functionality**:</span>
-<span id="cb15-251"><a href="#cb15-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-252"><a href="#cb15-252" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Does it actually do what you asked?</span>
-<span id="cb15-253"><a href="#cb15-253" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Edge cases handled?</span>
-<span id="cb15-254"><a href="#cb15-254" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Error cases handled?</span>
+<span id="cb15-250"><a href="#cb15-250" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Does it actually do what you asked?</span>
+<span id="cb15-251"><a href="#cb15-251" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Edge cases handled?</span>
+<span id="cb15-252"><a href="#cb15-252" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Error cases handled?</span>
+<span id="cb15-253"><a href="#cb15-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-254"><a href="#cb15-254" aria-hidden="true" tabindex="-1"></a>**Code Quality**:</span>
 <span id="cb15-255"><a href="#cb15-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-256"><a href="#cb15-256" aria-hidden="true" tabindex="-1"></a>**Code Quality**:</span>
-<span id="cb15-257"><a href="#cb15-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-258"><a href="#cb15-258" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Readable and maintainable?</span>
-<span id="cb15-259"><a href="#cb15-259" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Consistent with project style?</span>
-<span id="cb15-260"><a href="#cb15-260" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Appropriate abstraction level?</span>
+<span id="cb15-256"><a href="#cb15-256" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Readable and maintainable?</span>
+<span id="cb15-257"><a href="#cb15-257" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Consistent with project style?</span>
+<span id="cb15-258"><a href="#cb15-258" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Appropriate abstraction level?</span>
+<span id="cb15-259"><a href="#cb15-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-260"><a href="#cb15-260" aria-hidden="true" tabindex="-1"></a>**Security**:</span>
 <span id="cb15-261"><a href="#cb15-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-262"><a href="#cb15-262" aria-hidden="true" tabindex="-1"></a>**Security**:</span>
-<span id="cb15-263"><a href="#cb15-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-264"><a href="#cb15-264" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Input validation present?</span>
-<span id="cb15-265"><a href="#cb15-265" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> No hardcoded secrets?</span>
-<span id="cb15-266"><a href="#cb15-266" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Appropriate error exposure?</span>
+<span id="cb15-262"><a href="#cb15-262" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Input validation present?</span>
+<span id="cb15-263"><a href="#cb15-263" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> No hardcoded secrets?</span>
+<span id="cb15-264"><a href="#cb15-264" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Appropriate error exposure?</span>
+<span id="cb15-265"><a href="#cb15-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-266"><a href="#cb15-266" aria-hidden="true" tabindex="-1"></a>**Performance**:</span>
 <span id="cb15-267"><a href="#cb15-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-268"><a href="#cb15-268" aria-hidden="true" tabindex="-1"></a>**Performance**:</span>
-<span id="cb15-269"><a href="#cb15-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-270"><a href="#cb15-270" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Obvious inefficiencies?</span>
-<span id="cb15-271"><a href="#cb15-271" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Unnecessary computations?</span>
-<span id="cb15-272"><a href="#cb15-272" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Appropriate data structures?</span>
+<span id="cb15-268"><a href="#cb15-268" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Obvious inefficiencies?</span>
+<span id="cb15-269"><a href="#cb15-269" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Unnecessary computations?</span>
+<span id="cb15-270"><a href="#cb15-270" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Appropriate data structures?</span>
+<span id="cb15-271"><a href="#cb15-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-272"><a href="#cb15-272" aria-hidden="true" tabindex="-1"></a><span class="fu">### Ethical Considerations</span></span>
 <span id="cb15-273"><a href="#cb15-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-274"><a href="#cb15-274" aria-hidden="true" tabindex="-1"></a><span class="fu">### Ethical Considerations</span></span>
+<span id="cb15-274"><a href="#cb15-274" aria-hidden="true" tabindex="-1"></a>Working with AI raises ethical questions:</span>
 <span id="cb15-275"><a href="#cb15-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-276"><a href="#cb15-276" aria-hidden="true" tabindex="-1"></a>Working with AI raises ethical questions:</span>
+<span id="cb15-276"><a href="#cb15-276" aria-hidden="true" tabindex="-1"></a>**Attribution and honesty**:</span>
 <span id="cb15-277"><a href="#cb15-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-278"><a href="#cb15-278" aria-hidden="true" tabindex="-1"></a>**Attribution and honesty**:</span>
-<span id="cb15-279"><a href="#cb15-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-280"><a href="#cb15-280" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Be clear about AI involvement in your work</span>
-<span id="cb15-281"><a href="#cb15-281" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Don't claim AI-generated work as purely your own</span>
-<span id="cb15-282"><a href="#cb15-282" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Understand your organisation's AI policies</span>
+<span id="cb15-278"><a href="#cb15-278" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Be clear about AI involvement in your work</span>
+<span id="cb15-279"><a href="#cb15-279" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Don't claim AI-generated work as purely your own</span>
+<span id="cb15-280"><a href="#cb15-280" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Understand your organisation's AI policies</span>
+<span id="cb15-281"><a href="#cb15-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-282"><a href="#cb15-282" aria-hidden="true" tabindex="-1"></a>**Quality responsibility**:</span>
 <span id="cb15-283"><a href="#cb15-283" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-284"><a href="#cb15-284" aria-hidden="true" tabindex="-1"></a>**Quality responsibility**:</span>
-<span id="cb15-285"><a href="#cb15-285" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-286"><a href="#cb15-286" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You're responsible for code you commit, regardless of source</span>
-<span id="cb15-287"><a href="#cb15-287" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"AI wrote it" isn't an excuse for bugs or security issues</span>
-<span id="cb15-288"><a href="#cb15-288" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Review AI code as carefully as you'd review any code</span>
+<span id="cb15-284"><a href="#cb15-284" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You're responsible for code you commit, regardless of source</span>
+<span id="cb15-285"><a href="#cb15-285" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"AI wrote it" isn't an excuse for bugs or security issues</span>
+<span id="cb15-286"><a href="#cb15-286" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Review AI code as carefully as you'd review any code</span>
+<span id="cb15-287"><a href="#cb15-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-288"><a href="#cb15-288" aria-hidden="true" tabindex="-1"></a>**Learning integrity**:</span>
 <span id="cb15-289"><a href="#cb15-289" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-290"><a href="#cb15-290" aria-hidden="true" tabindex="-1"></a>**Learning integrity**:</span>
-<span id="cb15-291"><a href="#cb15-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-292"><a href="#cb15-292" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Using AI to learn is good</span>
-<span id="cb15-293"><a href="#cb15-293" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Using AI to bypass learning undermines yourself</span>
-<span id="cb15-294"><a href="#cb15-294" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The goal is capability, not just completion</span>
+<span id="cb15-290"><a href="#cb15-290" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Using AI to learn is good</span>
+<span id="cb15-291"><a href="#cb15-291" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Using AI to bypass learning undermines yourself</span>
+<span id="cb15-292"><a href="#cb15-292" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The goal is capability, not just completion</span>
+<span id="cb15-293"><a href="#cb15-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-294"><a href="#cb15-294" aria-hidden="true" tabindex="-1"></a><span class="fu">## Building Your Mental Model</span></span>
 <span id="cb15-295"><a href="#cb15-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-296"><a href="#cb15-296" aria-hidden="true" tabindex="-1"></a><span class="fu">## Building Your Mental Model</span></span>
+<span id="cb15-296"><a href="#cb15-296" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Developer-AI Collaboration Spectrum</span></span>
 <span id="cb15-297"><a href="#cb15-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-298"><a href="#cb15-298" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Developer-AI Collaboration Spectrum</span></span>
-<span id="cb15-299"><a href="#cb15-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-300"><a href="#cb15-300" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
-<span id="cb15-301"><a href="#cb15-301" aria-hidden="true" tabindex="-1"></a><span class="in">Full Manual                                      Full Automation</span></span>
-<span id="cb15-302"><a href="#cb15-302" aria-hidden="true" tabindex="-1"></a><span class="in">    │                                                  │</span></span>
-<span id="cb15-303"><a href="#cb15-303" aria-hidden="true" tabindex="-1"></a><span class="in">    ├────────┬────────┬────────┬────────┬────────────┤</span></span>
-<span id="cb15-304"><a href="#cb15-304" aria-hidden="true" tabindex="-1"></a><span class="in">    │        │        │        │        │            │</span></span>
-<span id="cb15-305"><a href="#cb15-305" aria-hidden="true" tabindex="-1"></a><span class="in"> Writing  Research   Code    Code    Complete</span></span>
-<span id="cb15-306"><a href="#cb15-306" aria-hidden="true" tabindex="-1"></a><span class="in"> from    + ideation assist  review   generation</span></span>
-<span id="cb15-307"><a href="#cb15-307" aria-hidden="true" tabindex="-1"></a><span class="in"> scratch</span></span>
-<span id="cb15-308"><a href="#cb15-308" aria-hidden="true" tabindex="-1"></a><span class="in">              ▲</span></span>
-<span id="cb15-309"><a href="#cb15-309" aria-hidden="true" tabindex="-1"></a><span class="in">              │</span></span>
-<span id="cb15-310"><a href="#cb15-310" aria-hidden="true" tabindex="-1"></a><span class="in">         Current AI</span></span>
-<span id="cb15-311"><a href="#cb15-311" aria-hidden="true" tabindex="-1"></a><span class="in">         assistance</span></span>
-<span id="cb15-312"><a href="#cb15-312" aria-hidden="true" tabindex="-1"></a><span class="in">         (effective)</span></span>
-<span id="cb15-313"><a href="#cb15-313" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-298"><a href="#cb15-298" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
+<span id="cb15-299"><a href="#cb15-299" aria-hidden="true" tabindex="-1"></a><span class="in">Full Manual                                      Full Automation</span></span>
+<span id="cb15-300"><a href="#cb15-300" aria-hidden="true" tabindex="-1"></a><span class="in">    │                                                  │</span></span>
+<span id="cb15-301"><a href="#cb15-301" aria-hidden="true" tabindex="-1"></a><span class="in">    ├────────┬────────┬────────┬────────┬────────────┤</span></span>
+<span id="cb15-302"><a href="#cb15-302" aria-hidden="true" tabindex="-1"></a><span class="in">    │        │        │        │        │            │</span></span>
+<span id="cb15-303"><a href="#cb15-303" aria-hidden="true" tabindex="-1"></a><span class="in"> Writing  Research   Code    Code    Complete</span></span>
+<span id="cb15-304"><a href="#cb15-304" aria-hidden="true" tabindex="-1"></a><span class="in"> from    + ideation assist  review   generation</span></span>
+<span id="cb15-305"><a href="#cb15-305" aria-hidden="true" tabindex="-1"></a><span class="in"> scratch</span></span>
+<span id="cb15-306"><a href="#cb15-306" aria-hidden="true" tabindex="-1"></a><span class="in">              ▲</span></span>
+<span id="cb15-307"><a href="#cb15-307" aria-hidden="true" tabindex="-1"></a><span class="in">              │</span></span>
+<span id="cb15-308"><a href="#cb15-308" aria-hidden="true" tabindex="-1"></a><span class="in">         Current AI</span></span>
+<span id="cb15-309"><a href="#cb15-309" aria-hidden="true" tabindex="-1"></a><span class="in">         assistance</span></span>
+<span id="cb15-310"><a href="#cb15-310" aria-hidden="true" tabindex="-1"></a><span class="in">         (effective)</span></span>
+<span id="cb15-311"><a href="#cb15-311" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-312"><a href="#cb15-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-313"><a href="#cb15-313" aria-hidden="true" tabindex="-1"></a>Current AI is most valuable in the middle, enhancing your work, not replacing it. Full automation remains unreliable for complex, context-dependent work.</span>
 <span id="cb15-314"><a href="#cb15-314" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-315"><a href="#cb15-315" aria-hidden="true" tabindex="-1"></a>Current AI is most valuable in the middle, enhancing your work, not replacing it. Full automation remains unreliable for complex, context-dependent work.</span>
+<span id="cb15-315"><a href="#cb15-315" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Skill Evolution Model</span></span>
 <span id="cb15-316"><a href="#cb15-316" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-317"><a href="#cb15-317" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Skill Evolution Model</span></span>
-<span id="cb15-318"><a href="#cb15-318" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-319"><a href="#cb15-319" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
-<span id="cb15-320"><a href="#cb15-320" aria-hidden="true" tabindex="-1"></a><span class="in">Traditional Developer         AI-Era Developer</span></span>
-<span id="cb15-321"><a href="#cb15-321" aria-hidden="true" tabindex="-1"></a><span class="in">─────────────────────        ─────────────────────</span></span>
-<span id="cb15-322"><a href="#cb15-322" aria-hidden="true" tabindex="-1"></a><span class="in">Writing code                 Directing code creation</span></span>
-<span id="cb15-323"><a href="#cb15-323" aria-hidden="true" tabindex="-1"></a><span class="in">Memorising syntax            Understanding concepts</span></span>
-<span id="cb15-324"><a href="#cb15-324" aria-hidden="true" tabindex="-1"></a><span class="in">Solo problem-solving         Collaborative reasoning</span></span>
-<span id="cb15-325"><a href="#cb15-325" aria-hidden="true" tabindex="-1"></a><span class="in">Deep specialisation          Broad orchestration +</span></span>
-<span id="cb15-326"><a href="#cb15-326" aria-hidden="true" tabindex="-1"></a><span class="in">                             selective depth</span></span>
+<span id="cb15-317"><a href="#cb15-317" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
+<span id="cb15-318"><a href="#cb15-318" aria-hidden="true" tabindex="-1"></a><span class="in">Traditional Developer         AI-Era Developer</span></span>
+<span id="cb15-319"><a href="#cb15-319" aria-hidden="true" tabindex="-1"></a><span class="in">─────────────────────        ─────────────────────</span></span>
+<span id="cb15-320"><a href="#cb15-320" aria-hidden="true" tabindex="-1"></a><span class="in">Writing code                 Directing code creation</span></span>
+<span id="cb15-321"><a href="#cb15-321" aria-hidden="true" tabindex="-1"></a><span class="in">Memorising syntax            Understanding concepts</span></span>
+<span id="cb15-322"><a href="#cb15-322" aria-hidden="true" tabindex="-1"></a><span class="in">Solo problem-solving         Collaborative reasoning</span></span>
+<span id="cb15-323"><a href="#cb15-323" aria-hidden="true" tabindex="-1"></a><span class="in">Deep specialisation          Broad orchestration +</span></span>
+<span id="cb15-324"><a href="#cb15-324" aria-hidden="true" tabindex="-1"></a><span class="in">                             selective depth</span></span>
+<span id="cb15-325"><a href="#cb15-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-326"><a href="#cb15-326" aria-hidden="true" tabindex="-1"></a><span class="in">              ▼</span></span>
 <span id="cb15-327"><a href="#cb15-327" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-328"><a href="#cb15-328" aria-hidden="true" tabindex="-1"></a><span class="in">              ▼</span></span>
-<span id="cb15-329"><a href="#cb15-329" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-330"><a href="#cb15-330" aria-hidden="true" tabindex="-1"></a><span class="in">Skills that GAIN value:</span></span>
-<span id="cb15-331"><a href="#cb15-331" aria-hidden="true" tabindex="-1"></a><span class="in">• Problem definition</span></span>
-<span id="cb15-332"><a href="#cb15-332" aria-hidden="true" tabindex="-1"></a><span class="in">• Communication</span></span>
-<span id="cb15-333"><a href="#cb15-333" aria-hidden="true" tabindex="-1"></a><span class="in">• Judgment and evaluation</span></span>
-<span id="cb15-334"><a href="#cb15-334" aria-hidden="true" tabindex="-1"></a><span class="in">• Learning ability</span></span>
-<span id="cb15-335"><a href="#cb15-335" aria-hidden="true" tabindex="-1"></a><span class="in">• Ethical reasoning</span></span>
-<span id="cb15-336"><a href="#cb15-336" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-337"><a href="#cb15-337" aria-hidden="true" tabindex="-1"></a><span class="in">Skills that CHANGE form:</span></span>
-<span id="cb15-338"><a href="#cb15-338" aria-hidden="true" tabindex="-1"></a><span class="in">• Coding → directing + reviewing</span></span>
-<span id="cb15-339"><a href="#cb15-339" aria-hidden="true" tabindex="-1"></a><span class="in">• Research → prompting + verifying</span></span>
-<span id="cb15-340"><a href="#cb15-340" aria-hidden="true" tabindex="-1"></a><span class="in">• Debugging → explaining + guiding</span></span>
-<span id="cb15-341"><a href="#cb15-341" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-328"><a href="#cb15-328" aria-hidden="true" tabindex="-1"></a><span class="in">Skills that GAIN value:</span></span>
+<span id="cb15-329"><a href="#cb15-329" aria-hidden="true" tabindex="-1"></a><span class="in">• Problem definition</span></span>
+<span id="cb15-330"><a href="#cb15-330" aria-hidden="true" tabindex="-1"></a><span class="in">• Communication</span></span>
+<span id="cb15-331"><a href="#cb15-331" aria-hidden="true" tabindex="-1"></a><span class="in">• Judgment and evaluation</span></span>
+<span id="cb15-332"><a href="#cb15-332" aria-hidden="true" tabindex="-1"></a><span class="in">• Learning ability</span></span>
+<span id="cb15-333"><a href="#cb15-333" aria-hidden="true" tabindex="-1"></a><span class="in">• Ethical reasoning</span></span>
+<span id="cb15-334"><a href="#cb15-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-335"><a href="#cb15-335" aria-hidden="true" tabindex="-1"></a><span class="in">Skills that CHANGE form:</span></span>
+<span id="cb15-336"><a href="#cb15-336" aria-hidden="true" tabindex="-1"></a><span class="in">• Coding → directing + reviewing</span></span>
+<span id="cb15-337"><a href="#cb15-337" aria-hidden="true" tabindex="-1"></a><span class="in">• Research → prompting + verifying</span></span>
+<span id="cb15-338"><a href="#cb15-338" aria-hidden="true" tabindex="-1"></a><span class="in">• Debugging → explaining + guiding</span></span>
+<span id="cb15-339"><a href="#cb15-339" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-340"><a href="#cb15-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-341"><a href="#cb15-341" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Partnership Maturity Model</span></span>
 <span id="cb15-342"><a href="#cb15-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-343"><a href="#cb15-343" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Partnership Maturity Model</span></span>
-<span id="cb15-344"><a href="#cb15-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-345"><a href="#cb15-345" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
-<span id="cb15-346"><a href="#cb15-346" aria-hidden="true" tabindex="-1"></a><span class="in">Level 1: User</span></span>
-<span id="cb15-347"><a href="#cb15-347" aria-hidden="true" tabindex="-1"></a><span class="in">- AI does tasks for you</span></span>
-<span id="cb15-348"><a href="#cb15-348" aria-hidden="true" tabindex="-1"></a><span class="in">- You accept outputs uncritically</span></span>
-<span id="cb15-349"><a href="#cb15-349" aria-hidden="true" tabindex="-1"></a><span class="in">- Dependency without understanding</span></span>
-<span id="cb15-350"><a href="#cb15-350" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-351"><a href="#cb15-351" aria-hidden="true" tabindex="-1"></a><span class="in">Level 2: Consumer</span></span>
-<span id="cb15-352"><a href="#cb15-352" aria-hidden="true" tabindex="-1"></a><span class="in">- AI assists your work</span></span>
-<span id="cb15-353"><a href="#cb15-353" aria-hidden="true" tabindex="-1"></a><span class="in">- You evaluate outputs</span></span>
-<span id="cb15-354"><a href="#cb15-354" aria-hidden="true" tabindex="-1"></a><span class="in">- Selective use</span></span>
-<span id="cb15-355"><a href="#cb15-355" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-356"><a href="#cb15-356" aria-hidden="true" tabindex="-1"></a><span class="in">Level 3: Collaborator</span></span>
-<span id="cb15-357"><a href="#cb15-357" aria-hidden="true" tabindex="-1"></a><span class="in">- AI thinks with you</span></span>
-<span id="cb15-358"><a href="#cb15-358" aria-hidden="true" tabindex="-1"></a><span class="in">- You guide direction</span></span>
-<span id="cb15-359"><a href="#cb15-359" aria-hidden="true" tabindex="-1"></a><span class="in">- True partnership</span></span>
-<span id="cb15-360"><a href="#cb15-360" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-361"><a href="#cb15-361" aria-hidden="true" tabindex="-1"></a><span class="in">Level 4: Director</span></span>
-<span id="cb15-362"><a href="#cb15-362" aria-hidden="true" tabindex="-1"></a><span class="in">- AI amplifies your judgment</span></span>
-<span id="cb15-363"><a href="#cb15-363" aria-hidden="true" tabindex="-1"></a><span class="in">- You orchestrate capabilities</span></span>
-<span id="cb15-364"><a href="#cb15-364" aria-hidden="true" tabindex="-1"></a><span class="in">- AI is your tool, not your crutch</span></span>
-<span id="cb15-365"><a href="#cb15-365" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-343"><a href="#cb15-343" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
+<span id="cb15-344"><a href="#cb15-344" aria-hidden="true" tabindex="-1"></a><span class="in">Level 1: User</span></span>
+<span id="cb15-345"><a href="#cb15-345" aria-hidden="true" tabindex="-1"></a><span class="in">- AI does tasks for you</span></span>
+<span id="cb15-346"><a href="#cb15-346" aria-hidden="true" tabindex="-1"></a><span class="in">- You accept outputs uncritically</span></span>
+<span id="cb15-347"><a href="#cb15-347" aria-hidden="true" tabindex="-1"></a><span class="in">- Dependency without understanding</span></span>
+<span id="cb15-348"><a href="#cb15-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-349"><a href="#cb15-349" aria-hidden="true" tabindex="-1"></a><span class="in">Level 2: Consumer</span></span>
+<span id="cb15-350"><a href="#cb15-350" aria-hidden="true" tabindex="-1"></a><span class="in">- AI assists your work</span></span>
+<span id="cb15-351"><a href="#cb15-351" aria-hidden="true" tabindex="-1"></a><span class="in">- You evaluate outputs</span></span>
+<span id="cb15-352"><a href="#cb15-352" aria-hidden="true" tabindex="-1"></a><span class="in">- Selective use</span></span>
+<span id="cb15-353"><a href="#cb15-353" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-354"><a href="#cb15-354" aria-hidden="true" tabindex="-1"></a><span class="in">Level 3: Collaborator</span></span>
+<span id="cb15-355"><a href="#cb15-355" aria-hidden="true" tabindex="-1"></a><span class="in">- AI thinks with you</span></span>
+<span id="cb15-356"><a href="#cb15-356" aria-hidden="true" tabindex="-1"></a><span class="in">- You guide direction</span></span>
+<span id="cb15-357"><a href="#cb15-357" aria-hidden="true" tabindex="-1"></a><span class="in">- True partnership</span></span>
+<span id="cb15-358"><a href="#cb15-358" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-359"><a href="#cb15-359" aria-hidden="true" tabindex="-1"></a><span class="in">Level 4: Director</span></span>
+<span id="cb15-360"><a href="#cb15-360" aria-hidden="true" tabindex="-1"></a><span class="in">- AI amplifies your judgment</span></span>
+<span id="cb15-361"><a href="#cb15-361" aria-hidden="true" tabindex="-1"></a><span class="in">- You orchestrate capabilities</span></span>
+<span id="cb15-362"><a href="#cb15-362" aria-hidden="true" tabindex="-1"></a><span class="in">- AI is your tool, not your crutch</span></span>
+<span id="cb15-363"><a href="#cb15-363" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-364"><a href="#cb15-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-365"><a href="#cb15-365" aria-hidden="true" tabindex="-1"></a>Progress through these levels by maintaining your independent capability while using AI appropriately.</span>
 <span id="cb15-366"><a href="#cb15-366" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-367"><a href="#cb15-367" aria-hidden="true" tabindex="-1"></a>Progress through these levels by maintaining your independent capability while leveraging AI appropriately.</span>
+<span id="cb15-367"><a href="#cb15-367" aria-hidden="true" tabindex="-1"></a><span class="fu">## Business Applications</span></span>
 <span id="cb15-368"><a href="#cb15-368" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-369"><a href="#cb15-369" aria-hidden="true" tabindex="-1"></a><span class="fu">## Business Applications</span></span>
+<span id="cb15-369"><a href="#cb15-369" aria-hidden="true" tabindex="-1"></a><span class="fu">### Productivity and Quality</span></span>
 <span id="cb15-370"><a href="#cb15-370" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-371"><a href="#cb15-371" aria-hidden="true" tabindex="-1"></a><span class="fu">### Productivity and Quality</span></span>
+<span id="cb15-371"><a href="#cb15-371" aria-hidden="true" tabindex="-1"></a>AI-assisted development can improve both speed and quality, if used well:</span>
 <span id="cb15-372"><a href="#cb15-372" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-373"><a href="#cb15-373" aria-hidden="true" tabindex="-1"></a>AI-assisted development can improve both speed and quality, if used well:</span>
-<span id="cb15-374"><a href="#cb15-374" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-375"><a href="#cb15-375" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Speed**: Faster prototyping, less boilerplate</span>
-<span id="cb15-376"><a href="#cb15-376" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Quality**: More time for design and review</span>
-<span id="cb15-377"><a href="#cb15-377" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Learning**: Faster skill acquisition</span>
-<span id="cb15-378"><a href="#cb15-378" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Exploration**: Try more approaches</span>
+<span id="cb15-373"><a href="#cb15-373" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Speed**: Faster prototyping, less boilerplate</span>
+<span id="cb15-374"><a href="#cb15-374" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Quality**: More time for design and review</span>
+<span id="cb15-375"><a href="#cb15-375" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Learning**: Faster skill acquisition</span>
+<span id="cb15-376"><a href="#cb15-376" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Exploration**: Try more approaches</span>
+<span id="cb15-377"><a href="#cb15-377" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-378"><a href="#cb15-378" aria-hidden="true" tabindex="-1"></a>Time saved on rote tasks should be invested in higher-value activities (design, testing, user research), not just producing more code faster.</span>
 <span id="cb15-379"><a href="#cb15-379" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-380"><a href="#cb15-380" aria-hidden="true" tabindex="-1"></a>The key: time saved on rote tasks should be invested in higher-value activities (design, testing, user research), not just producing more code faster.</span>
+<span id="cb15-380"><a href="#cb15-380" aria-hidden="true" tabindex="-1"></a><span class="fu">### Team Dynamics</span></span>
 <span id="cb15-381"><a href="#cb15-381" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-382"><a href="#cb15-382" aria-hidden="true" tabindex="-1"></a><span class="fu">### Team Dynamics</span></span>
+<span id="cb15-382"><a href="#cb15-382" aria-hidden="true" tabindex="-1"></a>AI changes how teams work:</span>
 <span id="cb15-383"><a href="#cb15-383" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-384"><a href="#cb15-384" aria-hidden="true" tabindex="-1"></a>AI changes how teams work:</span>
-<span id="cb15-385"><a href="#cb15-385" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-386"><a href="#cb15-386" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Review processes**: Now include AI-generated code review</span>
-<span id="cb15-387"><a href="#cb15-387" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Skill distribution**: AI democratises some capabilities</span>
-<span id="cb15-388"><a href="#cb15-388" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Communication**: More emphasis on clear requirements</span>
-<span id="cb15-389"><a href="#cb15-389" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Training**: Onboarding includes AI tool proficiency</span>
+<span id="cb15-384"><a href="#cb15-384" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Review processes**: Now include AI-generated code review</span>
+<span id="cb15-385"><a href="#cb15-385" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Skill distribution**: AI democratises some capabilities</span>
+<span id="cb15-386"><a href="#cb15-386" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Communication**: More emphasis on clear requirements</span>
+<span id="cb15-387"><a href="#cb15-387" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Training**: Onboarding includes AI tool proficiency</span>
+<span id="cb15-388"><a href="#cb15-388" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-389"><a href="#cb15-389" aria-hidden="true" tabindex="-1"></a><span class="fu">### Client Communication</span></span>
 <span id="cb15-390"><a href="#cb15-390" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-391"><a href="#cb15-391" aria-hidden="true" tabindex="-1"></a><span class="fu">### Client Communication</span></span>
+<span id="cb15-391"><a href="#cb15-391" aria-hidden="true" tabindex="-1"></a>Explaining AI involvement to clients:</span>
 <span id="cb15-392"><a href="#cb15-392" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-393"><a href="#cb15-393" aria-hidden="true" tabindex="-1"></a>Explaining AI involvement to clients:</span>
+<span id="cb15-393"><a href="#cb15-393" aria-hidden="true" tabindex="-1"></a>**Honest framing**: "We use AI tools to enhance our productivity. All AI-generated code is reviewed and tested by our developers. The AI assists; humans remain responsible for quality."</span>
 <span id="cb15-394"><a href="#cb15-394" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-395"><a href="#cb15-395" aria-hidden="true" tabindex="-1"></a>**Honest framing**: "We use AI tools to enhance our productivity. All AI-generated code is reviewed and tested by our developers. The AI assists; humans remain responsible for quality."</span>
+<span id="cb15-395"><a href="#cb15-395" aria-hidden="true" tabindex="-1"></a>**Value focus**: "AI helps us explore more options and iterate faster. This means you get better solutions, not just faster delivery."</span>
 <span id="cb15-396"><a href="#cb15-396" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-397"><a href="#cb15-397" aria-hidden="true" tabindex="-1"></a>**Value focus**: "AI helps us explore more options and iterate faster. This means you get better solutions, not just faster delivery."</span>
+<span id="cb15-397"><a href="#cb15-397" aria-hidden="true" tabindex="-1"></a><span class="fu">### Career Positioning</span></span>
 <span id="cb15-398"><a href="#cb15-398" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-399"><a href="#cb15-399" aria-hidden="true" tabindex="-1"></a><span class="fu">### Career Positioning</span></span>
+<span id="cb15-399"><a href="#cb15-399" aria-hidden="true" tabindex="-1"></a>In an AI-augmented field:</span>
 <span id="cb15-400"><a href="#cb15-400" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-401"><a href="#cb15-401" aria-hidden="true" tabindex="-1"></a>In an AI-augmented field:</span>
-<span id="cb15-402"><a href="#cb15-402" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-403"><a href="#cb15-403" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Differentiate on judgment**: Anyone can generate code; not everyone can evaluate it</span>
-<span id="cb15-404"><a href="#cb15-404" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Emphasise communication**: Translating between humans and systems gains value</span>
-<span id="cb15-405"><a href="#cb15-405" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Build domain expertise**: AI is generic; domain knowledge is specific</span>
-<span id="cb15-406"><a href="#cb15-406" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Demonstrate responsibility**: Show you can be trusted with AI tools</span>
-<span id="cb15-407"><a href="#cb15-407" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-408"><a href="#cb15-408" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb15-409"><a href="#cb15-409" aria-hidden="true" tabindex="-1"></a><span class="fu">## Skills You Are Building</span></span>
-<span id="cb15-410"><a href="#cb15-410" aria-hidden="true" tabindex="-1"></a>This develops all the core professional skills, particularly **evaluating and improving solutions** and **assessing emerging technologies**. Working effectively with AI is now a core professional skill, requiring the judgment, communication, and evaluation abilities developed throughout this book.</span>
-<span id="cb15-411"><a href="#cb15-411" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb15-401"><a href="#cb15-401" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Differentiate on judgment**: Anyone can generate code; not everyone can evaluate it</span>
+<span id="cb15-402"><a href="#cb15-402" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Emphasise communication**: Translating between humans and systems gains value</span>
+<span id="cb15-403"><a href="#cb15-403" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Build domain expertise**: AI is generic; domain knowledge is specific</span>
+<span id="cb15-404"><a href="#cb15-404" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Demonstrate responsibility**: Show you can be trusted with AI tools</span>
+<span id="cb15-405"><a href="#cb15-405" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-406"><a href="#cb15-406" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb15-407"><a href="#cb15-407" aria-hidden="true" tabindex="-1"></a><span class="fu">## Skills You Are Building</span></span>
+<span id="cb15-408"><a href="#cb15-408" aria-hidden="true" tabindex="-1"></a>This develops all the core professional skills, particularly **evaluating and improving solutions** and **assessing emerging technologies**. Working effectively with AI is now a core professional skill, requiring the judgment, communication, and evaluation abilities developed throughout this book.</span>
+<span id="cb15-409"><a href="#cb15-409" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb15-410"><a href="#cb15-410" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-411"><a href="#cb15-411" aria-hidden="true" tabindex="-1"></a><span class="fu">## Practice Exercises</span></span>
 <span id="cb15-412"><a href="#cb15-412" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-413"><a href="#cb15-413" aria-hidden="true" tabindex="-1"></a><span class="fu">## Practice Exercises</span></span>
-<span id="cb15-414"><a href="#cb15-414" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-415"><a href="#cb15-415" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb15-416"><a href="#cb15-416" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise Levels</span></span>
-<span id="cb15-417"><a href="#cb15-417" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 1**: Direct application</span>
-<span id="cb15-418"><a href="#cb15-418" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 2**: Minor modifications</span>
-<span id="cb15-419"><a href="#cb15-419" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 3**: Combining concepts</span>
-<span id="cb15-420"><a href="#cb15-420" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 4**: Problem-solving</span>
-<span id="cb15-421"><a href="#cb15-421" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 5**: Open-ended design</span>
-<span id="cb15-422"><a href="#cb15-422" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb15-413"><a href="#cb15-413" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb15-414"><a href="#cb15-414" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise Levels</span></span>
+<span id="cb15-415"><a href="#cb15-415" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 1**: Direct application</span>
+<span id="cb15-416"><a href="#cb15-416" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 2**: Minor modifications</span>
+<span id="cb15-417"><a href="#cb15-417" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 3**: Combining concepts</span>
+<span id="cb15-418"><a href="#cb15-418" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 4**: Problem-solving</span>
+<span id="cb15-419"><a href="#cb15-419" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 5**: Open-ended design</span>
+<span id="cb15-420"><a href="#cb15-420" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb15-421"><a href="#cb15-421" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-422"><a href="#cb15-422" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 21.1: AI Interaction Analysis (Level 1)</span></span>
 <span id="cb15-423"><a href="#cb15-423" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-424"><a href="#cb15-424" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 14.1: AI Interaction Analysis (Level 1)</span></span>
+<span id="cb15-424"><a href="#cb15-424" aria-hidden="true" tabindex="-1"></a>Review your AI conversations from throughout this book:</span>
 <span id="cb15-425"><a href="#cb15-425" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-426"><a href="#cb15-426" aria-hidden="true" tabindex="-1"></a>Review your AI conversations from throughout this book:</span>
-<span id="cb15-427"><a href="#cb15-427" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-428"><a href="#cb15-428" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Find three conversations where AI was most helpful</span>
-<span id="cb15-429"><a href="#cb15-429" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Find one conversation where AI led you astray</span>
-<span id="cb15-430"><a href="#cb15-430" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>For each, identify what made the interaction effective or ineffective</span>
-<span id="cb15-431"><a href="#cb15-431" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Write patterns you'll use going forward</span>
+<span id="cb15-426"><a href="#cb15-426" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Find three conversations where AI was most helpful</span>
+<span id="cb15-427"><a href="#cb15-427" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Find one conversation where AI led you astray</span>
+<span id="cb15-428"><a href="#cb15-428" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>For each, identify what made the interaction effective or ineffective</span>
+<span id="cb15-429"><a href="#cb15-429" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Write patterns you'll use going forward</span>
+<span id="cb15-430"><a href="#cb15-430" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-431"><a href="#cb15-431" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 21.2: Manual Implementation (Level 2)</span></span>
 <span id="cb15-432"><a href="#cb15-432" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-433"><a href="#cb15-433" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 14.2: Manual Implementation (Level 2)</span></span>
+<span id="cb15-433"><a href="#cb15-433" aria-hidden="true" tabindex="-1"></a>Build a small component **without** AI assistance:</span>
 <span id="cb15-434"><a href="#cb15-434" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-435"><a href="#cb15-435" aria-hidden="true" tabindex="-1"></a>Build a small component **without** AI assistance:</span>
-<span id="cb15-436"><a href="#cb15-436" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-437"><a href="#cb15-437" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Choose something you previously built with AI help</span>
-<span id="cb15-438"><a href="#cb15-438" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Implement it from scratch using only documentation</span>
-<span id="cb15-439"><a href="#cb15-439" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Compare: What was harder? What did you understand better?</span>
-<span id="cb15-440"><a href="#cb15-440" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Reflect on the value of both approaches</span>
+<span id="cb15-435"><a href="#cb15-435" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Choose something you previously built with AI help</span>
+<span id="cb15-436"><a href="#cb15-436" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Implement it from scratch using only documentation</span>
+<span id="cb15-437"><a href="#cb15-437" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Compare: What was harder? What did you understand better?</span>
+<span id="cb15-438"><a href="#cb15-438" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Reflect on the value of both approaches</span>
+<span id="cb15-439"><a href="#cb15-439" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-440"><a href="#cb15-440" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 21.3: AI Code Review (Level 3)</span></span>
 <span id="cb15-441"><a href="#cb15-441" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-442"><a href="#cb15-442" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 14.3: AI Code Review (Level 3)</span></span>
+<span id="cb15-442"><a href="#cb15-442" aria-hidden="true" tabindex="-1"></a>Practice reviewing AI-generated code:</span>
 <span id="cb15-443"><a href="#cb15-443" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-444"><a href="#cb15-444" aria-hidden="true" tabindex="-1"></a>Practice reviewing AI-generated code:</span>
-<span id="cb15-445"><a href="#cb15-445" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-446"><a href="#cb15-446" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Ask AI to generate a moderately complex component</span>
-<span id="cb15-447"><a href="#cb15-447" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Review it using the checklist provided</span>
-<span id="cb15-448"><a href="#cb15-448" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Identify at least three improvements</span>
-<span id="cb15-449"><a href="#cb15-449" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Discuss the improvements with AI</span>
-<span id="cb15-450"><a href="#cb15-450" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Implement the final version</span>
+<span id="cb15-444"><a href="#cb15-444" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Ask AI to generate a moderately complex component</span>
+<span id="cb15-445"><a href="#cb15-445" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Review it using the checklist provided</span>
+<span id="cb15-446"><a href="#cb15-446" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Identify at least three improvements</span>
+<span id="cb15-447"><a href="#cb15-447" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Discuss the improvements with AI</span>
+<span id="cb15-448"><a href="#cb15-448" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Implement the final version</span>
+<span id="cb15-449"><a href="#cb15-449" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-450"><a href="#cb15-450" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 21.4: Partnership Optimisation (Level 4)</span></span>
 <span id="cb15-451"><a href="#cb15-451" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-452"><a href="#cb15-452" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 14.4: Partnership Optimisation (Level 4)</span></span>
+<span id="cb15-452"><a href="#cb15-452" aria-hidden="true" tabindex="-1"></a>Develop your personal AI collaboration framework:</span>
 <span id="cb15-453"><a href="#cb15-453" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-454"><a href="#cb15-454" aria-hidden="true" tabindex="-1"></a>Develop your personal AI collaboration framework:</span>
-<span id="cb15-455"><a href="#cb15-455" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-456"><a href="#cb15-456" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Document your most effective prompting patterns</span>
-<span id="cb15-457"><a href="#cb15-457" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Create a personal checklist for AI-generated code</span>
-<span id="cb15-458"><a href="#cb15-458" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Define boundaries (when you will/won't use AI)</span>
-<span id="cb15-459"><a href="#cb15-459" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Write guidelines for a team member new to AI tools</span>
+<span id="cb15-454"><a href="#cb15-454" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Document your most effective prompting patterns</span>
+<span id="cb15-455"><a href="#cb15-455" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Create a personal checklist for AI-generated code</span>
+<span id="cb15-456"><a href="#cb15-456" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Define boundaries (when you will/won't use AI)</span>
+<span id="cb15-457"><a href="#cb15-457" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Write guidelines for a team member new to AI tools</span>
+<span id="cb15-458"><a href="#cb15-458" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-459"><a href="#cb15-459" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 21.5: Future Preparation (Level 5)</span></span>
 <span id="cb15-460"><a href="#cb15-460" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-461"><a href="#cb15-461" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 14.5: Future Preparation (Level 5)</span></span>
+<span id="cb15-461"><a href="#cb15-461" aria-hidden="true" tabindex="-1"></a>Create a 12-month professional development plan that accounts for AI:</span>
 <span id="cb15-462"><a href="#cb15-462" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-463"><a href="#cb15-463" aria-hidden="true" tabindex="-1"></a>Create a 12-month professional development plan that accounts for AI:</span>
-<span id="cb15-464"><a href="#cb15-464" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-465"><a href="#cb15-465" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Identify skills that will gain value with AI assistance</span>
-<span id="cb15-466"><a href="#cb15-466" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Identify skills you need to maintain independently</span>
-<span id="cb15-467"><a href="#cb15-467" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Plan specific learning activities for each</span>
-<span id="cb15-468"><a href="#cb15-468" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Define how you'll measure your progress</span>
-<span id="cb15-469"><a href="#cb15-469" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Write 500 words explaining your strategy</span>
+<span id="cb15-463"><a href="#cb15-463" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Identify skills that will gain value with AI assistance</span>
+<span id="cb15-464"><a href="#cb15-464" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Identify skills you need to maintain independently</span>
+<span id="cb15-465"><a href="#cb15-465" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Plan specific learning activities for each</span>
+<span id="cb15-466"><a href="#cb15-466" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Define how you'll measure your progress</span>
+<span id="cb15-467"><a href="#cb15-467" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Write 500 words explaining your strategy</span>
+<span id="cb15-468"><a href="#cb15-468" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-469"><a href="#cb15-469" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chapter Summary</span></span>
 <span id="cb15-470"><a href="#cb15-470" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-471"><a href="#cb15-471" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chapter Summary</span></span>
-<span id="cb15-472"><a href="#cb15-472" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-473"><a href="#cb15-473" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AI amplifies human capability; it doesn't replace human judgment</span>
-<span id="cb15-474"><a href="#cb15-474" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Effective AI partnership requires understanding, evaluation, and adaptation</span>
-<span id="cb15-475"><a href="#cb15-475" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Maintaining independent skills prevents over-reliance</span>
-<span id="cb15-476"><a href="#cb15-476" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The value shifts to problem definition, communication, and judgment</span>
-<span id="cb15-477"><a href="#cb15-477" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ethical use requires honesty, quality responsibility, and integrity</span>
-<span id="cb15-478"><a href="#cb15-478" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Career success depends on how well you collaborate with AI, not whether</span>
+<span id="cb15-471"><a href="#cb15-471" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AI amplifies human capability; it doesn't replace human judgment</span>
+<span id="cb15-472"><a href="#cb15-472" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Effective AI partnership requires understanding, evaluation, and adaptation</span>
+<span id="cb15-473"><a href="#cb15-473" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Maintaining independent skills prevents over-reliance</span>
+<span id="cb15-474"><a href="#cb15-474" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The value shifts to problem definition, communication, and judgment</span>
+<span id="cb15-475"><a href="#cb15-475" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ethical use requires honesty, quality responsibility, and integrity</span>
+<span id="cb15-476"><a href="#cb15-476" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Career success depends on how well you collaborate with AI, not whether</span>
+<span id="cb15-477"><a href="#cb15-477" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-478"><a href="#cb15-478" aria-hidden="true" tabindex="-1"></a><span class="fu">## Final Reflection</span></span>
 <span id="cb15-479"><a href="#cb15-479" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-480"><a href="#cb15-480" aria-hidden="true" tabindex="-1"></a><span class="fu">## Final Reflection</span></span>
+<span id="cb15-480"><a href="#cb15-480" aria-hidden="true" tabindex="-1"></a>As you complete this book, reflect on your journey:</span>
 <span id="cb15-481"><a href="#cb15-481" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-482"><a href="#cb15-482" aria-hidden="true" tabindex="-1"></a>As you complete this book, reflect on your journey:</span>
+<span id="cb15-482"><a href="#cb15-482" aria-hidden="true" tabindex="-1"></a>**Technical Growth**:</span>
 <span id="cb15-483"><a href="#cb15-483" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-484"><a href="#cb15-484" aria-hidden="true" tabindex="-1"></a>**Technical Growth**:</span>
-<span id="cb15-485"><a href="#cb15-485" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-486"><a href="#cb15-486" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Can you build web applications with HTML, CSS, and JavaScript?</span>
-<span id="cb15-487"><a href="#cb15-487" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Can you work with WordPress as both a CMS and an API?</span>
-<span id="cb15-488"><a href="#cb15-488" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Can you create React components and manage state?</span>
-<span id="cb15-489"><a href="#cb15-489" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Can you evaluate and adopt CSS frameworks appropriately?</span>
+<span id="cb15-484"><a href="#cb15-484" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Can you build web applications with HTML, CSS, and JavaScript?</span>
+<span id="cb15-485"><a href="#cb15-485" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Can you work with WordPress as both a CMS and an API?</span>
+<span id="cb15-486"><a href="#cb15-486" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Can you create React components and manage state?</span>
+<span id="cb15-487"><a href="#cb15-487" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Can you evaluate and adopt CSS frameworks appropriately?</span>
+<span id="cb15-488"><a href="#cb15-488" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-489"><a href="#cb15-489" aria-hidden="true" tabindex="-1"></a>**Professional Development**:</span>
 <span id="cb15-490"><a href="#cb15-490" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-491"><a href="#cb15-491" aria-hidden="true" tabindex="-1"></a>**Professional Development**:</span>
-<span id="cb15-492"><a href="#cb15-492" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-493"><a href="#cb15-493" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Can you make and defend technology decisions?</span>
-<span id="cb15-494"><a href="#cb15-494" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Can you communicate technical concepts to non-technical stakeholders?</span>
-<span id="cb15-495"><a href="#cb15-495" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Can you use version control and professional practices?</span>
-<span id="cb15-496"><a href="#cb15-496" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Can you evaluate emerging technologies systematically?</span>
+<span id="cb15-491"><a href="#cb15-491" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Can you make and defend technology decisions?</span>
+<span id="cb15-492"><a href="#cb15-492" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Can you communicate technical concepts to non-technical stakeholders?</span>
+<span id="cb15-493"><a href="#cb15-493" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Can you use version control and professional practices?</span>
+<span id="cb15-494"><a href="#cb15-494" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Can you evaluate emerging technologies systematically?</span>
+<span id="cb15-495"><a href="#cb15-495" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-496"><a href="#cb15-496" aria-hidden="true" tabindex="-1"></a>**AI Partnership**:</span>
 <span id="cb15-497"><a href="#cb15-497" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-498"><a href="#cb15-498" aria-hidden="true" tabindex="-1"></a>**AI Partnership**:</span>
-<span id="cb15-499"><a href="#cb15-499" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-500"><a href="#cb15-500" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Can you collaborate effectively with AI tools?</span>
-<span id="cb15-501"><a href="#cb15-501" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Do you maintain your own understanding and skills?</span>
-<span id="cb15-502"><a href="#cb15-502" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Can you evaluate AI output critically?</span>
-<span id="cb15-503"><a href="#cb15-503" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Are you positioned to adapt as AI capabilities evolve?</span>
+<span id="cb15-498"><a href="#cb15-498" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Can you collaborate effectively with AI tools?</span>
+<span id="cb15-499"><a href="#cb15-499" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Do you maintain your own understanding and skills?</span>
+<span id="cb15-500"><a href="#cb15-500" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Can you evaluate AI output critically?</span>
+<span id="cb15-501"><a href="#cb15-501" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Are you positioned to adapt as AI capabilities evolve?</span>
+<span id="cb15-502"><a href="#cb15-502" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-503"><a href="#cb15-503" aria-hidden="true" tabindex="-1"></a><span class="fu">## Your Final Learning Journal Entry</span></span>
 <span id="cb15-504"><a href="#cb15-504" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-505"><a href="#cb15-505" aria-hidden="true" tabindex="-1"></a><span class="fu">## Your Final Learning Journal Entry</span></span>
+<span id="cb15-505"><a href="#cb15-505" aria-hidden="true" tabindex="-1"></a>Record your thoughts on completing this course:</span>
 <span id="cb15-506"><a href="#cb15-506" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-507"><a href="#cb15-507" aria-hidden="true" tabindex="-1"></a>Record your thoughts on completing this course:</span>
+<span id="cb15-507"><a href="#cb15-507" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Your Journey**: What surprised you most about learning web development? What was harder than expected? Easier?</span>
 <span id="cb15-508"><a href="#cb15-508" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-509"><a href="#cb15-509" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Your Journey**: What surprised you most about learning web development? What was harder than expected? Easier?</span>
+<span id="cb15-509"><a href="#cb15-509" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**AI Partnership Evolution**: How did your relationship with AI tools change from the beginning to now? What patterns work best for you?</span>
 <span id="cb15-510"><a href="#cb15-510" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-511"><a href="#cb15-511" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**AI Partnership Evolution**: How did your relationship with AI tools change from the beginning to now? What patterns work best for you?</span>
+<span id="cb15-511"><a href="#cb15-511" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Business Thinking**: How do you now approach technology decisions differently than when you started?</span>
 <span id="cb15-512"><a href="#cb15-512" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-513"><a href="#cb15-513" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Business Thinking**: How do you now approach technology decisions differently than when you started?</span>
+<span id="cb15-513"><a href="#cb15-513" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Identity**: How do you see yourself as a developer? What kind of professional do you want to become?</span>
 <span id="cb15-514"><a href="#cb15-514" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-515"><a href="#cb15-515" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Identity**: How do you see yourself as a developer? What kind of professional do you want to become?</span>
+<span id="cb15-515"><a href="#cb15-515" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Next Steps**: What will you build next? What will you learn? How will you continue growing?</span>
 <span id="cb15-516"><a href="#cb15-516" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-517"><a href="#cb15-517" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Next Steps**: What will you build next? What will you learn? How will you continue growing?</span>
+<span id="cb15-517"><a href="#cb15-517" aria-hidden="true" tabindex="-1"></a><span class="fu">## Looking Forward</span></span>
 <span id="cb15-518"><a href="#cb15-518" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-519"><a href="#cb15-519" aria-hidden="true" tabindex="-1"></a><span class="fu">## Looking Forward</span></span>
+<span id="cb15-519"><a href="#cb15-519" aria-hidden="true" tabindex="-1"></a>This book ends, but your development journey continues.</span>
 <span id="cb15-520"><a href="#cb15-520" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-521"><a href="#cb15-521" aria-hidden="true" tabindex="-1"></a>This book ends, but your development journey continues.</span>
+<span id="cb15-521"><a href="#cb15-521" aria-hidden="true" tabindex="-1"></a>You now have:</span>
 <span id="cb15-522"><a href="#cb15-522" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-523"><a href="#cb15-523" aria-hidden="true" tabindex="-1"></a>You now have:</span>
-<span id="cb15-524"><a href="#cb15-524" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-525"><a href="#cb15-525" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Technical foundations** across the modern web stack</span>
-<span id="cb15-526"><a href="#cb15-526" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Business thinking** for technology decisions</span>
-<span id="cb15-527"><a href="#cb15-527" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**AI collaboration skills** for enhanced productivity</span>
-<span id="cb15-528"><a href="#cb15-528" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Professional practices** for quality work</span>
-<span id="cb15-529"><a href="#cb15-529" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Career frameworks** for ongoing growth</span>
+<span id="cb15-523"><a href="#cb15-523" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Technical foundations** across the modern web stack</span>
+<span id="cb15-524"><a href="#cb15-524" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Business thinking** for technology decisions</span>
+<span id="cb15-525"><a href="#cb15-525" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**AI collaboration skills** for enhanced productivity</span>
+<span id="cb15-526"><a href="#cb15-526" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Professional practices** for quality work</span>
+<span id="cb15-527"><a href="#cb15-527" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Career frameworks** for ongoing growth</span>
+<span id="cb15-528"><a href="#cb15-528" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-529"><a href="#cb15-529" aria-hidden="true" tabindex="-1"></a>You also have **the ability to learn**. Technologies will change. Frameworks will evolve. AI capabilities will expand. But your foundation, understanding how to think about problems, evaluate solutions, communicate with stakeholders, and collaborate with tools, remains valuable.</span>
 <span id="cb15-530"><a href="#cb15-530" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-531"><a href="#cb15-531" aria-hidden="true" tabindex="-1"></a>More importantly, you have **the ability to learn**. Technologies will change. Frameworks will evolve. AI capabilities will expand. But your foundation, understanding how to think about problems, evaluate solutions, communicate with stakeholders, and collaborate with tools, remains valuable.</span>
+<span id="cb15-531"><a href="#cb15-531" aria-hidden="true" tabindex="-1"></a>The developers who thrive in the AI era won't be those who resist AI or those who depend on AI. They'll be those who partner with AI thoughtfully, maintaining their own judgment, understanding, and skills while using AI to amplify their capability.</span>
 <span id="cb15-532"><a href="#cb15-532" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-533"><a href="#cb15-533" aria-hidden="true" tabindex="-1"></a>The developers who thrive in the AI era won't be those who resist AI or those who depend on AI. They'll be those who partner with AI thoughtfully, maintaining their own judgment, understanding, and skills while leveraging AI to amplify their capability.</span>
+<span id="cb15-533"><a href="#cb15-533" aria-hidden="true" tabindex="-1"></a>Now build something, learn from your mistakes, collaborate with AI, and contribute to the community.</span>
 <span id="cb15-534"><a href="#cb15-534" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-535"><a href="#cb15-535" aria-hidden="true" tabindex="-1"></a>You've built that foundation here.</span>
-<span id="cb15-536"><a href="#cb15-536" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-537"><a href="#cb15-537" aria-hidden="true" tabindex="-1"></a>Now go build something. Make mistakes. Learn from them. Collaborate with AI. Create value for others. Contribute to the community. Keep growing.</span>
-<span id="cb15-538"><a href="#cb15-538" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-539"><a href="#cb15-539" aria-hidden="true" tabindex="-1"></a>**Welcome to your career as a web professional.**</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb15-535"><a href="#cb15-535" aria-hidden="true" tabindex="-1"></a>**Welcome to your career as a web professional.**</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

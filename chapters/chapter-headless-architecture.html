@@ -2,21 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="A practical approach to web development that embraces AI as your development partner while building real business solutions with HTML, CSS, JavaScript, WordPress, and React.">
+<meta name="description" content="A practical approach to web development that teaches you to specify, direct, check and hand over AI-built business websites with HTML, CSS, JavaScript, WordPress and React.">
 
-<title>10&nbsp; Headless Architecture – Build Web, Guide AI</title>
+<title>13&nbsp; Headless Architecture – Build Web, Guide AI</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -78,14 +81,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-6453f418aeef366c23116eb9cb0b6816.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-36d1909bcb541879de504f1ebcc96011.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-9950bca906ef9bb3ea288c0af376aad5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-36d1909bcb541879de504f1ebcc96011.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-b146b0f11fcb9d7b327ea38bc2e11b34.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-8bc080b4f13ff5280c11423cbe489c26.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-b146b0f11fcb9d7b327ea38bc2e11b34.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -116,6 +119,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../assets/custom.css">
+<link rel="stylesheet" href="../book-design.css">
 </head>
 
 <body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -289,7 +293,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-why-cms.html">Content Management for Business</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-headless-architecture.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Headless Architecture</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-why-cms.html">Content Management for Business</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-headless-architecture.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Headless Architecture</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -363,7 +367,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Web Foundations</span></a>
+ <span class="menu-text">The Practice Spine</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -371,32 +375,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-structure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></span></a>
+  <a href="../chapters/chapter-specify-before-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Specify Before You Build</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-presentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></span></a>
+  <a href="../chapters/chapter-checks-that-run.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Checks That Run</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-behaviour.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Behaviour: JavaScript as User Interaction</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-connection.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Connection: APIs as Business Integration</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../projects/project-portfolio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Project: Portfolio Website</span></span></a>
+  <a href="../chapters/chapter-agent-ready-repo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The Agent-Ready Repo and Handover</span></span></a>
   </div>
 </li>
       </ul>
@@ -404,7 +396,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Content Management for Business</span></a>
+ <span class="menu-text">Web Foundations</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -412,32 +404,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-why-cms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Why CMS? The Business Value of Managed Content</span></span></a>
+  <a href="../chapters/chapter-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-wordpress-platform.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">WordPress as Platform</span></span></a>
+  <a href="../chapters/chapter-presentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-extending-platforms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Extending Platforms</span></span></a>
+  <a href="../chapters/chapter-behaviour.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Behaviour: JavaScript as User Interaction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-headless-architecture.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Headless Architecture</span></span></a>
+  <a href="../chapters/chapter-connection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Connection: APIs as Business Integration</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../projects/project-business-site.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Project: Business Website with WordPress</span></span></a>
+  <a href="../projects/project-portfolio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Project: Portfolio Website</span></span></a>
   </div>
 </li>
       </ul>
@@ -445,7 +437,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Modern Frontend Development</span></a>
+ <span class="menu-text">Content Management for Business</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -453,26 +445,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-component-thinking.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Component Thinking: React</span></span></a>
+  <a href="../chapters/chapter-why-cms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Why CMS? The Business Value of Managed Content</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-rapid-development.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Rapid Development: CSS Frameworks</span></span></a>
+  <a href="../chapters/chapter-wordpress-platform.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">WordPress as Platform</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-professional-practices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Professional Practices</span></span></a>
+  <a href="../chapters/chapter-extending-platforms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Extending Platforms</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../projects/project-react-integration.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Project: React Integration</span></span></a>
+  <a href="../chapters/chapter-headless-architecture.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Headless Architecture</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/project-business-site.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Project: Business Website with WordPress</span></span></a>
   </div>
 </li>
       </ul>
@@ -480,7 +478,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">The Professional Developer</span></a>
+ <span class="menu-text">Modern Frontend Development</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -488,20 +486,78 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-component-thinking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Component Thinking: React</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-rapid-development.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Rapid Development: CSS Frameworks</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-professional-practices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Professional Practices</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/project-react-integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Project: React Integration</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">The Professional Developer</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/chapter-emerging-technologies.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Evaluating Emerging Technologies</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Evaluating Emerging Technologies</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter-development-career.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Your Development Career</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Your Development Career</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter-ai-era-developer.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">The AI-Era Developer</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">The AI-Era Developer</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/how-to-use-this-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to Use This Book</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/2027-course-map.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2027 Course Map</span></a>
   </div>
 </li>
       </ul>
@@ -520,7 +576,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
     </ul>
     </div>
-</nav>
+<div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
+<p>Paperback ISBN 979-8-255-17415-7</p>
+</div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -528,15 +586,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-concept-first" id="toc-the-concept-first" class="nav-link active" data-scroll-target="#the-concept-first"><span class="header-section-number">10.1</span> The Concept First</a></li>
-  <li><a href="#understanding-through-separation" id="toc-understanding-through-separation" class="nav-link" data-scroll-target="#understanding-through-separation"><span class="header-section-number">10.2</span> Understanding Through Separation</a></li>
-  <li><a href="#discovering-headless-with-your-ai-partner" id="toc-discovering-headless-with-your-ai-partner" class="nav-link" data-scroll-target="#discovering-headless-with-your-ai-partner"><span class="header-section-number">10.3</span> Discovering Headless with Your AI Partner</a>
+  <li><a href="#the-concept-first" id="toc-the-concept-first" class="nav-link active" data-scroll-target="#the-concept-first"><span class="header-section-number">13.1</span> The Concept First</a></li>
+  <li><a href="#understanding-through-separation" id="toc-understanding-through-separation" class="nav-link" data-scroll-target="#understanding-through-separation"><span class="header-section-number">13.2</span> Understanding Through Separation</a></li>
+  <li><a href="#discovering-headless-with-your-ai-partner" id="toc-discovering-headless-with-your-ai-partner" class="nav-link" data-scroll-target="#discovering-headless-with-your-ai-partner"><span class="header-section-number">13.3</span> Discovering Headless with Your AI Partner</a>
   <ul class="collapse">
   <li><a href="#exploration-1-architecture-trade-offs" id="toc-exploration-1-architecture-trade-offs" class="nav-link" data-scroll-target="#exploration-1-architecture-trade-offs">Exploration 1: Architecture Trade-offs</a></li>
   <li><a href="#exploration-2-apis-as-contracts" id="toc-exploration-2-apis-as-contracts" class="nav-link" data-scroll-target="#exploration-2-apis-as-contracts">Exploration 2: APIs as Contracts</a></li>
   <li><a href="#exploration-3-business-cases" id="toc-exploration-3-business-cases" class="nav-link" data-scroll-target="#exploration-3-business-cases">Exploration 3: Business Cases</a></li>
   </ul></li>
-  <li><a href="#from-concept-to-code" id="toc-from-concept-to-code" class="nav-link" data-scroll-target="#from-concept-to-code"><span class="header-section-number">10.4</span> From Concept to Code</a>
+  <li><a href="#from-concept-to-code" id="toc-from-concept-to-code" class="nav-link" data-scroll-target="#from-concept-to-code"><span class="header-section-number">13.4</span> From Concept to Code</a>
   <ul class="collapse">
   <li><a href="#the-wordpress-rest-api" id="toc-the-wordpress-rest-api" class="nav-link" data-scroll-target="#the-wordpress-rest-api">The WordPress REST API</a></li>
   <li><a href="#fetching-posts-from-wordpress" id="toc-fetching-posts-from-wordpress" class="nav-link" data-scroll-target="#fetching-posts-from-wordpress">Fetching Posts from WordPress</a></li>
@@ -548,42 +606,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#authentication-for-protected-content" id="toc-authentication-for-protected-content" class="nav-link" data-scroll-target="#authentication-for-protected-content">Authentication for Protected Content</a></li>
   <li><a href="#cors-considerations" id="toc-cors-considerations" class="nav-link" data-scroll-target="#cors-considerations">CORS Considerations</a></li>
   </ul></li>
-  <li><a href="#building-your-mental-model" id="toc-building-your-mental-model" class="nav-link" data-scroll-target="#building-your-mental-model"><span class="header-section-number">10.5</span> Building Your Mental Model</a>
+  <li><a href="#building-your-mental-model" id="toc-building-your-mental-model" class="nav-link" data-scroll-target="#building-your-mental-model"><span class="header-section-number">13.5</span> Building Your Mental Model</a>
   <ul class="collapse">
   <li><a href="#traditional-vs-headless-architecture" id="toc-traditional-vs-headless-architecture" class="nav-link" data-scroll-target="#traditional-vs-headless-architecture">Traditional vs Headless Architecture</a></li>
   <li><a href="#when-headless-makes-sense" id="toc-when-headless-makes-sense" class="nav-link" data-scroll-target="#when-headless-makes-sense">When Headless Makes Sense</a></li>
   <li><a href="#when-traditional-makes-sense" id="toc-when-traditional-makes-sense" class="nav-link" data-scroll-target="#when-traditional-makes-sense">When Traditional Makes Sense</a></li>
   <li><a href="#the-complexity-cost" id="toc-the-complexity-cost" class="nav-link" data-scroll-target="#the-complexity-cost">The Complexity Cost</a></li>
   </ul></li>
-  <li><a href="#business-applications" id="toc-business-applications" class="nav-link" data-scroll-target="#business-applications"><span class="header-section-number">10.6</span> Business Applications</a>
+  <li><a href="#business-applications" id="toc-business-applications" class="nav-link" data-scroll-target="#business-applications"><span class="header-section-number">13.6</span> Business Applications</a>
   <ul class="collapse">
   <li><a href="#multi-channel-content" id="toc-multi-channel-content" class="nav-link" data-scroll-target="#multi-channel-content">Multi-Channel Content</a></li>
   <li><a href="#performance-and-seo" id="toc-performance-and-seo" class="nav-link" data-scroll-target="#performance-and-seo">Performance and SEO</a></li>
   <li><a href="#security-benefits" id="toc-security-benefits" class="nav-link" data-scroll-target="#security-benefits">Security Benefits</a></li>
   <li><a href="#developer-experience" id="toc-developer-experience" class="nav-link" data-scroll-target="#developer-experience">Developer Experience</a></li>
   </ul></li>
-  <li><a href="#practice-exercises" id="toc-practice-exercises" class="nav-link" data-scroll-target="#practice-exercises"><span class="header-section-number">10.7</span> Practice Exercises</a>
+  <li><a href="#practice-exercises" id="toc-practice-exercises" class="nav-link" data-scroll-target="#practice-exercises"><span class="header-section-number">13.7</span> Practice Exercises</a>
   <ul class="collapse">
-  <li><a href="#exercise-8.1-explore-the-api-level-1" id="toc-exercise-8.1-explore-the-api-level-1" class="nav-link" data-scroll-target="#exercise-8.1-explore-the-api-level-1">Exercise 8.1: Explore the API (Level 1)</a></li>
-  <li><a href="#exercise-8.2-build-a-post-list-level-2" id="toc-exercise-8.2-build-a-post-list-level-2" class="nav-link" data-scroll-target="#exercise-8.2-build-a-post-list-level-2">Exercise 8.2: Build a Post List (Level 2)</a></li>
-  <li><a href="#exercise-8.3-filter-and-search-level-3" id="toc-exercise-8.3-filter-and-search-level-3" class="nav-link" data-scroll-target="#exercise-8.3-filter-and-search-level-3">Exercise 8.3: Filter and Search (Level 3)</a></li>
-  <li><a href="#exercise-8.4-architecture-recommendation-level-4" id="toc-exercise-8.4-architecture-recommendation-level-4" class="nav-link" data-scroll-target="#exercise-8.4-architecture-recommendation-level-4">Exercise 8.4: Architecture Recommendation (Level 4)</a></li>
-  <li><a href="#exercise-8.5-architecture-design-level-5" id="toc-exercise-8.5-architecture-design-level-5" class="nav-link" data-scroll-target="#exercise-8.5-architecture-design-level-5">Exercise 8.5: Architecture Design (Level 5)</a></li>
+  <li><a href="#exercise-13.1-explore-the-api-level-1" id="toc-exercise-13.1-explore-the-api-level-1" class="nav-link" data-scroll-target="#exercise-13.1-explore-the-api-level-1">Exercise 13.1: Explore the API (Level 1)</a></li>
+  <li><a href="#exercise-13.2-build-a-post-list-level-2" id="toc-exercise-13.2-build-a-post-list-level-2" class="nav-link" data-scroll-target="#exercise-13.2-build-a-post-list-level-2">Exercise 13.2: Build a Post List (Level 2)</a></li>
+  <li><a href="#exercise-13.3-filter-and-search-level-3" id="toc-exercise-13.3-filter-and-search-level-3" class="nav-link" data-scroll-target="#exercise-13.3-filter-and-search-level-3">Exercise 13.3: Filter and Search (Level 3)</a></li>
+  <li><a href="#exercise-13.4-architecture-recommendation-level-4" id="toc-exercise-13.4-architecture-recommendation-level-4" class="nav-link" data-scroll-target="#exercise-13.4-architecture-recommendation-level-4">Exercise 13.4: Architecture Recommendation (Level 4)</a></li>
+  <li><a href="#exercise-13.5-architecture-design-level-5" id="toc-exercise-13.5-architecture-design-level-5" class="nav-link" data-scroll-target="#exercise-13.5-architecture-design-level-5">Exercise 13.5: Architecture Design (Level 5)</a></li>
   </ul></li>
-  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary"><span class="header-section-number">10.8</span> Chapter Summary</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">10.9</span> Reflection</a></li>
-  <li><a href="#your-learning-journal" id="toc-your-learning-journal" class="nav-link" data-scroll-target="#your-learning-journal"><span class="header-section-number">10.10</span> Your Learning Journal</a></li>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">10.11</span> Next Steps</a></li>
+  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary"><span class="header-section-number">13.8</span> Chapter Summary</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">13.9</span> Reflection</a></li>
+  <li><a href="#your-learning-journal" id="toc-your-learning-journal" class="nav-link" data-scroll-target="#your-learning-journal"><span class="header-section-number">13.10</span> Your Learning Journal</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">13.11</span> Next Steps</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/build-web-guide-ai/edit/main/chapters/chapter-headless-architecture.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="build-web-guide-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="build-web-guide-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/build-web-guide-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/build-web-guide-ai/edit/main/chapters/chapter-headless-architecture.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/build-web-guide-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/build-web-guide-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/build-web-guide-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-why-cms.html">Content Management for Business</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-headless-architecture.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Headless Architecture</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-why-cms.html">Content Management for Business</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-headless-architecture.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Headless Architecture</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span id="sec-headless-architecture" class="quarto-section-identifier"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Headless Architecture</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span id="sec-headless-architecture" class="quarto-section-identifier"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Headless Architecture</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -600,8 +658,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="the-concept-first" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="the-concept-first"><span class="header-section-number">10.1</span> The Concept First</h2>
+<section id="the-concept-first" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="the-concept-first"><span class="header-section-number">13.1</span> The Concept First</h2>
 <p>In previous chapters, WordPress handled everything: it stored content, managed users, and generated the HTML visitors see. The content management and the website delivery were one unified system.</p>
 <p><strong>Headless architecture</strong> separates these concerns. WordPress becomes a <em>content backend</em>, storing and managing content, while a separate <em>frontend</em> application handles presentation. They communicate through APIs.</p>
 <p>Why would you do this? Because sometimes you want:</p>
@@ -614,8 +672,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>This approach is increasingly common for larger projects, media companies, and organisations with sophisticated frontend needs.</p>
 </section>
-<section id="understanding-through-separation" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="understanding-through-separation"><span class="header-section-number">10.2</span> Understanding Through Separation</h2>
+<section id="understanding-through-separation" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="understanding-through-separation"><span class="header-section-number">13.2</span> Understanding Through Separation</h2>
 <p>Imagine a restaurant operation:</p>
 <p><strong>Traditional restaurant</strong> (traditional WordPress):</p>
 <ul>
@@ -646,11 +704,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="discovering-headless-with-your-ai-partner" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="discovering-headless-with-your-ai-partner"><span class="header-section-number">10.3</span> Discovering Headless with Your AI Partner</h2>
+<section id="discovering-headless-with-your-ai-partner" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="discovering-headless-with-your-ai-partner"><span class="header-section-number">13.3</span> Discovering Headless with Your AI Partner</h2>
 <section id="exploration-1-architecture-trade-offs" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-1-architecture-trade-offs">Exploration 1: Architecture Trade-offs</h3>
-<p>Every architecture has trade-offs. Let’s explore them:</p>
+<p>Every architecture has trade-offs:</p>
 <pre class="text"><code>Ask your AI:
 Compare traditional WordPress versus headless WordPress architecture.
 What does each approach do well? What problems does each create?
@@ -713,9 +771,9 @@ What about a local bakery's website? Would headless make sense there?
 Why or why not?</code></pre>
 </section>
 </section>
-<section id="from-concept-to-code" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="from-concept-to-code"><span class="header-section-number">10.4</span> From Concept to Code</h2>
-<p>Let’s explore the WordPress REST API and understand how to consume content from an external frontend.</p>
+<section id="from-concept-to-code" class="level2" data-number="13.4">
+<h2 data-number="13.4" class="anchored" data-anchor-id="from-concept-to-code"><span class="header-section-number">13.4</span> From Concept to Code</h2>
+<p>The sections below use the WordPress REST API to feed content to an external frontend.</p>
 <section id="the-wordpress-rest-api" class="level3">
 <h3 class="anchored" data-anchor-id="the-wordpress-rest-api">The WordPress REST API</h3>
 <p>WordPress includes a built-in REST API. Every WordPress site (version 4.7+) automatically exposes content through standardised endpoints.</p>
@@ -758,7 +816,7 @@ Why or why not?</code></pre>
 </section>
 <section id="fetching-posts-from-wordpress" class="level3">
 <h3 class="anchored" data-anchor-id="fetching-posts-from-wordpress">Fetching Posts from WordPress</h3>
-<p>Using the JavaScript skills from <a href="chapter-connection.html" class="quarto-xref"><span>Chapter 5</span></a>:</p>
+<p>Using the JavaScript skills from <a href="chapter-connection.html" class="quarto-xref"><span>Chapter 8</span></a>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">async</span> <span class="kw">function</span> <span class="fu">getWordPressPosts</span>() {</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> response <span class="op">=</span> <span class="cf">await</span> <span class="fu">fetch</span>(<span class="st">'http://your-site.local/wp-json/wp/v2/posts'</span>)<span class="op">;</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -967,7 +1025,7 @@ Why or why not?</code></pre>
 <span id="cb12-82"><a href="#cb12-82" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
 <span id="cb12-83"><a href="#cb12-83" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
 <span id="cb12-84"><a href="#cb12-84" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Save this as an HTML file and open it in a browser. It fetches posts from your local WordPress site and displays them, completely independently of WordPress themes.</p>
+<p>Save this as an HTML file and open it in a browser. It fetches posts from your local WordPress site and displays them independently of WordPress themes.</p>
 <pre class="text"><code>Ask your AI:
 Walk me through this code. What happens at each step? How would I
 modify it to also show the post date and author name?</code></pre>
@@ -1041,8 +1099,8 @@ modify it to also show the post date and author name?</code></pre>
 <p>For local development, both often run on localhost (different ports), which typically works without extra configuration.</p>
 </section>
 </section>
-<section id="building-your-mental-model" class="level2" data-number="10.5">
-<h2 data-number="10.5" class="anchored" data-anchor-id="building-your-mental-model"><span class="header-section-number">10.5</span> Building Your Mental Model</h2>
+<section id="building-your-mental-model" class="level2" data-number="13.5">
+<h2 data-number="13.5" class="anchored" data-anchor-id="building-your-mental-model"><span class="header-section-number">13.5</span> Building Your Mental Model</h2>
 <section id="traditional-vs-headless-architecture" class="level3">
 <h3 class="anchored" data-anchor-id="traditional-vs-headless-architecture">Traditional vs Headless Architecture</h3>
 <p><strong>Traditional WordPress:</strong></p>
@@ -1148,11 +1206,11 @@ modify it to also show the post date and author name?</code></pre>
 <li>Some WordPress plugins don’t work</li>
 <li>More technical expertise required</li>
 </ul>
-<p>This complexity has costs. Headless is a tool, use it when benefits outweigh costs.</p>
+<p>This complexity has costs, so use headless when the benefits outweigh them.</p>
 </section>
 </section>
-<section id="business-applications" class="level2" data-number="10.6">
-<h2 data-number="10.6" class="anchored" data-anchor-id="business-applications"><span class="header-section-number">10.6</span> Business Applications</h2>
+<section id="business-applications" class="level2" data-number="13.6">
+<h2 data-number="13.6" class="anchored" data-anchor-id="business-applications"><span class="header-section-number">13.6</span> Business Applications</h2>
 <section id="multi-channel-content" class="level3">
 <h3 class="anchored" data-anchor-id="multi-channel-content">Multi-Channel Content</h3>
 <p>Organisations increasingly need content everywhere:</p>
@@ -1195,7 +1253,7 @@ modify it to also show the post date and author name?</code></pre>
 <li>TypeScript</li>
 <li>Modern build tools</li>
 </ul>
-<p>Headless lets them use their preferred tools while leveraging WordPress’s content management.</p>
+<p>Headless lets them use their preferred tools while using WordPress’s content management.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1211,8 +1269,8 @@ modify it to also show the post date and author name?</code></pre>
 </div>
 </section>
 </section>
-<section id="practice-exercises" class="level2" data-number="10.7">
-<h2 data-number="10.7" class="anchored" data-anchor-id="practice-exercises"><span class="header-section-number">10.7</span> Practice Exercises</h2>
+<section id="practice-exercises" class="level2" data-number="13.7">
+<h2 data-number="13.7" class="anchored" data-anchor-id="practice-exercises"><span class="header-section-number">13.7</span> Practice Exercises</h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1232,8 +1290,8 @@ modify it to also show the post date and author name?</code></pre>
 </ul>
 </div>
 </div>
-<section id="exercise-8.1-explore-the-api-level-1" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-8.1-explore-the-api-level-1">Exercise 8.1: Explore the API (Level 1)</h3>
+<section id="exercise-13.1-explore-the-api-level-1" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-13.1-explore-the-api-level-1">Exercise 13.1: Explore the API (Level 1)</h3>
 <p>Using your local WordPress site:</p>
 <ol type="1">
 <li>Open a browser and visit <code>/wp-json/wp/v2/posts</code></li>
@@ -1243,8 +1301,8 @@ modify it to also show the post date and author name?</code></pre>
 </ol>
 <p>Document your findings with screenshots.</p>
 </section>
-<section id="exercise-8.2-build-a-post-list-level-2" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-8.2-build-a-post-list-level-2">Exercise 8.2: Build a Post List (Level 2)</h3>
+<section id="exercise-13.2-build-a-post-list-level-2" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-13.2-build-a-post-list-level-2">Exercise 13.2: Build a Post List (Level 2)</h3>
 <p>Create an HTML page that:</p>
 <ol type="1">
 <li>Fetches the 3 most recent posts from your WordPress site</li>
@@ -1254,8 +1312,8 @@ modify it to also show the post date and author name?</code></pre>
 </ol>
 <p>Test it in your browser.</p>
 </section>
-<section id="exercise-8.3-filter-and-search-level-3" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-8.3-filter-and-search-level-3">Exercise 8.3: Filter and Search (Level 3)</h3>
+<section id="exercise-13.3-filter-and-search-level-3" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-13.3-filter-and-search-level-3">Exercise 13.3: Filter and Search (Level 3)</h3>
 <p>Extend your post list to include:</p>
 <ol type="1">
 <li>A search input that filters posts by search term</li>
@@ -1264,8 +1322,8 @@ modify it to also show the post date and author name?</code></pre>
 </ol>
 <p>This combines API parameters with JavaScript event handling.</p>
 </section>
-<section id="exercise-8.4-architecture-recommendation-level-4" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-8.4-architecture-recommendation-level-4">Exercise 8.4: Architecture Recommendation (Level 4)</h3>
+<section id="exercise-13.4-architecture-recommendation-level-4" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-13.4-architecture-recommendation-level-4">Exercise 13.4: Architecture Recommendation (Level 4)</h3>
 <p>A regional newspaper wants to modernise their digital presence. They have:</p>
 <ul>
 <li>A 15-year-old WordPress site with 10,000+ articles</li>
@@ -1282,8 +1340,8 @@ modify it to also show the post date and author name?</code></pre>
 <li>How would you handle the transition?</li>
 </ul>
 </section>
-<section id="exercise-8.5-architecture-design-level-5" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-8.5-architecture-design-level-5">Exercise 8.5: Architecture Design (Level 5)</h3>
+<section id="exercise-13.5-architecture-design-level-5" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-13.5-architecture-design-level-5">Exercise 13.5: Architecture Design (Level 5)</h3>
 <p>Design a headless architecture for a restaurant group with:</p>
 <ul>
 <li>5 restaurant locations (different brands)</li>
@@ -1302,8 +1360,8 @@ modify it to also show the post date and author name?</code></pre>
 <p>Write a 500-word explanation of your design decisions.</p>
 </section>
 </section>
-<section id="chapter-summary" class="level2" data-number="10.8">
-<h2 data-number="10.8" class="anchored" data-anchor-id="chapter-summary"><span class="header-section-number">10.8</span> Chapter Summary</h2>
+<section id="chapter-summary" class="level2" data-number="13.8">
+<h2 data-number="13.8" class="anchored" data-anchor-id="chapter-summary"><span class="header-section-number">13.8</span> Chapter Summary</h2>
 <ul>
 <li>Headless architecture separates content management from presentation</li>
 <li>The WordPress REST API exposes content as JSON data</li>
@@ -1313,8 +1371,8 @@ modify it to also show the post date and author name?</code></pre>
 <li>Architecture choice depends on requirements, resources, and trade-offs</li>
 </ul>
 </section>
-<section id="reflection" class="level2" data-number="10.9">
-<h2 data-number="10.9" class="anchored" data-anchor-id="reflection"><span class="header-section-number">10.9</span> Reflection</h2>
+<section id="reflection" class="level2" data-number="13.9">
+<h2 data-number="13.9" class="anchored" data-anchor-id="reflection"><span class="header-section-number">13.9</span> Reflection</h2>
 <p>Before moving to the Business Website Project, ensure you can:</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Explain headless architecture without jargon</label></li>
@@ -1325,8 +1383,8 @@ modify it to also show the post date and author name?</code></pre>
 <li><label><input type="checkbox">Describe the trade-offs of headless vs.&nbsp;traditional WordPress</label></li>
 </ul>
 </section>
-<section id="your-learning-journal" class="level2" data-number="10.10">
-<h2 data-number="10.10" class="anchored" data-anchor-id="your-learning-journal"><span class="header-section-number">10.10</span> Your Learning Journal</h2>
+<section id="your-learning-journal" class="level2" data-number="13.10">
+<h2 data-number="13.10" class="anchored" data-anchor-id="your-learning-journal"><span class="header-section-number">13.10</span> Your Learning Journal</h2>
 <p>Record your responses to these prompts:</p>
 <ol type="1">
 <li><p><strong>Architecture Thinking</strong>: When you visit websites, can you guess which might be using headless architecture? What clues suggest headless vs.&nbsp;traditional?</p></li>
@@ -1335,17 +1393,17 @@ modify it to also show the post date and author name?</code></pre>
 <li><p><strong>Trade-off Assessment</strong>: Think of a website you might build. Would headless be appropriate? Why or why not?</p></li>
 </ol>
 </section>
-<section id="next-steps" class="level2" data-number="10.11">
-<h2 data-number="10.11" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">10.11</span> Next Steps</h2>
-<p>You’ve completed Part II: Content Management for Business. You understand:</p>
+<section id="next-steps" class="level2" data-number="13.11">
+<h2 data-number="13.11" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">13.11</span> Next Steps</h2>
+<p>You’ve completed the content management chapters. You understand:</p>
 <ul>
 <li>Why CMS matters and when to use one</li>
 <li>WordPress as a platform with an ecosystem</li>
 <li>How to extend WordPress professionally</li>
 <li>Headless architecture and the REST API</li>
 </ul>
-<p>In <a href="../projects/project-business-site.html" class="quarto-xref"><span>Chapter 11</span></a>, you’ll build a complete WordPress business site, applying everything from this part. This project demonstrates your ability to make and implement technology decisions for real business needs.</p>
-<p>Then, in Part III, we’ll build on the API knowledge from this chapter to create React frontends, bringing modern frontend development into your skillset.</p>
+<p>In <a href="../projects/project-business-site.html" class="quarto-xref"><span>Chapter 14</span></a>, you’ll build a complete WordPress business site, applying everything from this part. This project demonstrates your ability to make and implement technology decisions for real business needs.</p>
+<p>Then, in the modern frontend chapters, we’ll build on the API knowledge from this chapter to create React frontends, bringing modern frontend development into your skillset.</p>
 
 
 <!-- -->
@@ -1460,16 +1518,16 @@ modify it to also show the post date and author name?</code></pre>
     }
     function toggleCodeHandler(show) {
       return function(e) {
-        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-        for (let i=0; i<detailsSrc.length; i++) {
-          const details = detailsSrc[i].parentElement;
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
           if (show) {
             details.open = true;
           } else {
             details.removeAttribute("open");
           }
         }
-        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
         const fromCls = show ? "hidden" : "unhidden";
         const toCls = show ? "unhidden" : "hidden";
         for (let i=0; i<cellCodeDivs.length; i++) {
@@ -1822,12 +1880,12 @@ modify it to also show the post date and author name?</code></pre>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../chapters/chapter-extending-platforms.html" class="pagination-link" aria-label="Extending Platforms">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Extending Platforms</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Extending Platforms</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../projects/project-business-site.html" class="pagination-link" aria-label="Project: Business Website with WordPress">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Project: Business Website with WordPress</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Project: Business Website with WordPress</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
@@ -1878,7 +1936,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-45"><a href="#cb21-45" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-46"><a href="#cb21-46" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exploration 1: Architecture Trade-offs</span></span>
 <span id="cb21-47"><a href="#cb21-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-48"><a href="#cb21-48" aria-hidden="true" tabindex="-1"></a>Every architecture has trade-offs. Let's explore them:</span>
+<span id="cb21-48"><a href="#cb21-48" aria-hidden="true" tabindex="-1"></a>Every architecture has trade-offs:</span>
 <span id="cb21-49"><a href="#cb21-49" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-50"><a href="#cb21-50" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb21-51"><a href="#cb21-51" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
@@ -1962,7 +2020,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-129"><a href="#cb21-129" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-130"><a href="#cb21-130" aria-hidden="true" tabindex="-1"></a><span class="fu">## From Concept to Code</span></span>
 <span id="cb21-131"><a href="#cb21-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-132"><a href="#cb21-132" aria-hidden="true" tabindex="-1"></a>Let's explore the WordPress REST API and understand how to consume content from an external frontend.</span>
+<span id="cb21-132"><a href="#cb21-132" aria-hidden="true" tabindex="-1"></a>The sections below use the WordPress REST API to feed content to an external frontend.</span>
 <span id="cb21-133"><a href="#cb21-133" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-134"><a href="#cb21-134" aria-hidden="true" tabindex="-1"></a><span class="fu">### The WordPress REST API</span></span>
 <span id="cb21-135"><a href="#cb21-135" aria-hidden="true" tabindex="-1"></a></span>
@@ -2175,7 +2233,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-342"><a href="#cb21-342" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>html<span class="op">&gt;</span></span>
 <span id="cb21-343"><a href="#cb21-343" aria-hidden="true" tabindex="-1"></a>```</span>
 <span id="cb21-344"><a href="#cb21-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-345"><a href="#cb21-345" aria-hidden="true" tabindex="-1"></a>Save <span class="kw">this</span> as an <span class="bu">HTML</span> file and open it in a browser<span class="op">.</span> <span class="fu">It</span> fetches posts from your local WordPress site and displays them<span class="op">,</span> completely independently of WordPress themes<span class="op">.</span></span>
+<span id="cb21-345"><a href="#cb21-345" aria-hidden="true" tabindex="-1"></a>Save <span class="kw">this</span> as an <span class="bu">HTML</span> file and open it in a browser<span class="op">.</span> <span class="fu">It</span> fetches posts from your local WordPress site and displays them independently of WordPress themes<span class="op">.</span></span>
 <span id="cb21-346"><a href="#cb21-346" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-347"><a href="#cb21-347" aria-hidden="true" tabindex="-1"></a>```text</span>
 <span id="cb21-348"><a href="#cb21-348" aria-hidden="true" tabindex="-1"></a>Ask your AI<span class="op">:</span></span>
@@ -2326,7 +2384,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-493"><a href="#cb21-493" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Some WordPress plugins don<span class="er">'</span>t work</span>
 <span id="cb21-494"><a href="#cb21-494" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> More technical expertise required</span>
 <span id="cb21-495"><a href="#cb21-495" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-496"><a href="#cb21-496" aria-hidden="true" tabindex="-1"></a>This complexity has costs<span class="op">.</span> <span class="fu">Headless</span> is a tool<span class="op">,</span> use it when benefits outweigh costs<span class="op">.</span></span>
+<span id="cb21-496"><a href="#cb21-496" aria-hidden="true" tabindex="-1"></a>This complexity has costs<span class="op">,</span> so use headless when the benefits outweigh them<span class="op">.</span></span>
 <span id="cb21-497"><a href="#cb21-497" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-498"><a href="#cb21-498" aria-hidden="true" tabindex="-1"></a>## Business Applications</span>
 <span id="cb21-499"><a href="#cb21-499" aria-hidden="true" tabindex="-1"></a></span>
@@ -2372,7 +2430,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-539"><a href="#cb21-539" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> TypeScript</span>
 <span id="cb21-540"><a href="#cb21-540" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Modern build tools</span>
 <span id="cb21-541"><a href="#cb21-541" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-542"><a href="#cb21-542" aria-hidden="true" tabindex="-1"></a>Headless lets them use their preferred tools <span class="cf">while</span> leveraging WordPress<span class="er">'</span>s content management<span class="op">.</span></span>
+<span id="cb21-542"><a href="#cb21-542" aria-hidden="true" tabindex="-1"></a>Headless lets them use their preferred tools <span class="cf">while</span> using WordPress<span class="er">'</span>s content management<span class="op">.</span></span>
 <span id="cb21-543"><a href="#cb21-543" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-544"><a href="#cb21-544" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span> <span class="op">{.</span><span class="fu">callout</span><span class="op">-</span>note<span class="op">}</span></span>
 <span id="cb21-545"><a href="#cb21-545" aria-hidden="true" tabindex="-1"></a>## Skills You Are Building</span>
@@ -2390,7 +2448,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-557"><a href="#cb21-557" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span><span class="bu">Level</span> <span class="dv">5</span><span class="op">**:</span> Open<span class="op">-</span>ended design</span>
 <span id="cb21-558"><a href="#cb21-558" aria-hidden="true" tabindex="-1"></a><span class="op">:::</span></span>
 <span id="cb21-559"><a href="#cb21-559" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-560"><a href="#cb21-560" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">8.1</span><span class="op">:</span> Explore the <span class="fu">API</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">1</span><span class="op">)</span></span>
+<span id="cb21-560"><a href="#cb21-560" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">13.1</span><span class="op">:</span> Explore the <span class="fu">API</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">1</span><span class="op">)</span></span>
 <span id="cb21-561"><a href="#cb21-561" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-562"><a href="#cb21-562" aria-hidden="true" tabindex="-1"></a>Using your local WordPress site<span class="op">:</span></span>
 <span id="cb21-563"><a href="#cb21-563" aria-hidden="true" tabindex="-1"></a></span>
@@ -2401,7 +2459,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-568"><a href="#cb21-568" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-569"><a href="#cb21-569" aria-hidden="true" tabindex="-1"></a><span class="bu">Document</span> your findings with screenshots<span class="op">.</span></span>
 <span id="cb21-570"><a href="#cb21-570" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-571"><a href="#cb21-571" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">8.2</span><span class="op">:</span> Build a Post <span class="bu">List</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">2</span><span class="op">)</span></span>
+<span id="cb21-571"><a href="#cb21-571" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">13.2</span><span class="op">:</span> Build a Post <span class="bu">List</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">2</span><span class="op">)</span></span>
 <span id="cb21-572"><a href="#cb21-572" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-573"><a href="#cb21-573" aria-hidden="true" tabindex="-1"></a>Create an <span class="bu">HTML</span> page that<span class="op">:</span></span>
 <span id="cb21-574"><a href="#cb21-574" aria-hidden="true" tabindex="-1"></a></span>
@@ -2412,7 +2470,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-579"><a href="#cb21-579" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-580"><a href="#cb21-580" aria-hidden="true" tabindex="-1"></a>Test it in your browser<span class="op">.</span></span>
 <span id="cb21-581"><a href="#cb21-581" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-582"><a href="#cb21-582" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">8.3</span><span class="op">:</span> <span class="bu">Filter</span> and <span class="fu">Search</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">3</span><span class="op">)</span></span>
+<span id="cb21-582"><a href="#cb21-582" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">13.3</span><span class="op">:</span> <span class="bu">Filter</span> and <span class="fu">Search</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">3</span><span class="op">)</span></span>
 <span id="cb21-583"><a href="#cb21-583" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-584"><a href="#cb21-584" aria-hidden="true" tabindex="-1"></a>Extend your post list to include<span class="op">:</span></span>
 <span id="cb21-585"><a href="#cb21-585" aria-hidden="true" tabindex="-1"></a></span>
@@ -2422,7 +2480,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-589"><a href="#cb21-589" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-590"><a href="#cb21-590" aria-hidden="true" tabindex="-1"></a>This combines API parameters with JavaScript event handling<span class="op">.</span></span>
 <span id="cb21-591"><a href="#cb21-591" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-592"><a href="#cb21-592" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">8.4</span><span class="op">:</span> Architecture <span class="fu">Recommendation</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">4</span><span class="op">)</span></span>
+<span id="cb21-592"><a href="#cb21-592" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">13.4</span><span class="op">:</span> Architecture <span class="fu">Recommendation</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">4</span><span class="op">)</span></span>
 <span id="cb21-593"><a href="#cb21-593" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-594"><a href="#cb21-594" aria-hidden="true" tabindex="-1"></a>A regional newspaper wants to modernise their digital presence<span class="op">.</span> <span class="fu">They</span> have<span class="op">:</span></span>
 <span id="cb21-595"><a href="#cb21-595" aria-hidden="true" tabindex="-1"></a></span>
@@ -2439,7 +2497,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-606"><a href="#cb21-606" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> What would you implement first<span class="op">?</span></span>
 <span id="cb21-607"><a href="#cb21-607" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> How would you handle the transition<span class="op">?</span></span>
 <span id="cb21-608"><a href="#cb21-608" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-609"><a href="#cb21-609" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">8.5</span><span class="op">:</span> Architecture <span class="fu">Design</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">5</span><span class="op">)</span></span>
+<span id="cb21-609"><a href="#cb21-609" aria-hidden="true" tabindex="-1"></a>### Exercise <span class="fl">13.5</span><span class="op">:</span> Architecture <span class="fu">Design</span> <span class="op">(</span><span class="bu">Level</span> <span class="dv">5</span><span class="op">)</span></span>
 <span id="cb21-610"><a href="#cb21-610" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-611"><a href="#cb21-611" aria-hidden="true" tabindex="-1"></a>Design a headless architecture <span class="cf">for</span> a restaurant group with<span class="op">:</span></span>
 <span id="cb21-612"><a href="#cb21-612" aria-hidden="true" tabindex="-1"></a></span>
@@ -2492,7 +2550,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-659"><a href="#cb21-659" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-660"><a href="#cb21-660" aria-hidden="true" tabindex="-1"></a>## Next Steps</span>
 <span id="cb21-661"><a href="#cb21-661" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-662"><a href="#cb21-662" aria-hidden="true" tabindex="-1"></a>You<span class="er">'</span>ve completed Part II<span class="op">:</span> Content Management <span class="cf">for</span> Business<span class="op">.</span> <span class="fu">You</span> understand<span class="op">:</span></span>
+<span id="cb21-662"><a href="#cb21-662" aria-hidden="true" tabindex="-1"></a>You<span class="er">'</span>ve completed the content management chapters<span class="op">.</span> <span class="fu">You</span> understand<span class="op">:</span></span>
 <span id="cb21-663"><a href="#cb21-663" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-664"><a href="#cb21-664" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Why CMS matters and when to use one</span>
 <span id="cb21-665"><a href="#cb21-665" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> WordPress as a platform with an ecosystem</span>
@@ -2501,7 +2559,7 @@ modify it to also show the post date and author name?</code></pre>
 <span id="cb21-668"><a href="#cb21-668" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-669"><a href="#cb21-669" aria-hidden="true" tabindex="-1"></a>In <span class="at">@sec</span><span class="op">-</span>project<span class="op">-</span>business<span class="op">-</span>site<span class="op">,</span> you<span class="er">'</span>ll build a complete WordPress business site<span class="op">,</span> applying everything from <span class="kw">this</span> part<span class="op">.</span> <span class="fu">This</span> project demonstrates your ability to make and implement technology decisions <span class="cf">for</span> real business needs<span class="op">.</span></span>
 <span id="cb21-670"><a href="#cb21-670" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-671"><a href="#cb21-671" aria-hidden="true" tabindex="-1"></a><span class="fu">Then</span><span class="op">,</span> in Part III<span class="op">,</span> we<span class="er">'</span>ll build on the API knowledge from <span class="kw">this</span> chapter to create React frontends<span class="op">,</span> bringing modern frontend development into your skillset<span class="op">.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb21-671"><a href="#cb21-671" aria-hidden="true" tabindex="-1"></a><span class="fu">Then</span><span class="op">,</span> in the modern frontend chapters<span class="op">,</span> we<span class="er">'</span>ll build on the API knowledge from <span class="kw">this</span> chapter to create React frontends<span class="op">,</span> bringing modern frontend development into your skillset<span class="op">.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

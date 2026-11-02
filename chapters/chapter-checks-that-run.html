@@ -1,0 +1,2337 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="A practical approach to web development that teaches you to specify, direct, check and hand over AI-built business websites with HTML, CSS, JavaScript, WordPress and React.">
+
+<title>3&nbsp; Checks That Run – Build Web, Guide AI</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/chapter-agent-ready-repo.html" rel="next">
+<link href="../chapters/chapter-specify-before-build.html" rel="prev">
+<link href="../favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-6453f418aeef366c23116eb9cb0b6816.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b146b0f11fcb9d7b327ea38bc2e11b34.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-8bc080b4f13ff5280c11423cbe489c26.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-b146b0f11fcb9d7b327ea38bc2e11b34.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../assets/custom.css">
+<link rel="stylesheet" href="../book-design.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-specify-before-build.html">The Practice Spine</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-checks-that-run.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Checks That Run</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Build Web, Guide AI</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/michael-borck/build-web-guide-ai" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+    <a href="https://github.com/michael-borck/build-web-guide-ai" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../copyright.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Copyright</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/reading-list.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Recommended Resources</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Acknowledgments</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Your AI Development Partnership</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-ai-web-partner.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Understanding Your AI Web Development Partner</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">The Practice Spine</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-specify-before-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Specify Before You Build</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-checks-that-run.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Checks That Run</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-agent-ready-repo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The Agent-Ready Repo and Handover</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Web Foundations</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-presentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-behaviour.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Behaviour: JavaScript as User Interaction</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-connection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Connection: APIs as Business Integration</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/project-portfolio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Project: Portfolio Website</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Content Management for Business</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-why-cms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Why CMS? The Business Value of Managed Content</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-wordpress-platform.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">WordPress as Platform</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-extending-platforms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Extending Platforms</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-headless-architecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Headless Architecture</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/project-business-site.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Project: Business Website with WordPress</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Modern Frontend Development</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-component-thinking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Component Thinking: React</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-rapid-development.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Rapid Development: CSS Frameworks</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-professional-practices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Professional Practices</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/project-react-integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Project: React Integration</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">The Professional Developer</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-emerging-technologies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Evaluating Emerging Technologies</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-development-career.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Your Development Career</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-ai-era-developer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">The AI-Era Developer</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/how-to-use-this-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to Use This Book</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/2027-course-map.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2027 Course Map</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../about-author.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About the Author</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+<div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
+<p>Paperback ISBN 979-8-255-17415-7</p>
+</div></div></nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-concept-first" id="toc-the-concept-first" class="nav-link active" data-scroll-target="#the-concept-first"><span class="header-section-number">3.1</span> The Concept First</a></li>
+  <li><a href="#understanding-through-a-fire-drill" id="toc-understanding-through-a-fire-drill" class="nav-link" data-scroll-target="#understanding-through-a-fire-drill"><span class="header-section-number">3.2</span> Understanding Through a Fire Drill</a></li>
+  <li><a href="#the-four-principles" id="toc-the-four-principles" class="nav-link" data-scroll-target="#the-four-principles"><span class="header-section-number">3.3</span> The Four Principles</a></li>
+  <li><a href="#what-the-tools-catch" id="toc-what-the-tools-catch" class="nav-link" data-scroll-target="#what-the-tools-catch"><span class="header-section-number">3.4</span> What the Tools Catch</a>
+  <ul class="collapse">
+  <li><a href="#what-no-automated-check-can-see" id="toc-what-no-automated-check-can-see" class="nav-link" data-scroll-target="#what-no-automated-check-can-see">What No Automated Check Can See</a></li>
+  </ul></li>
+  <li><a href="#from-criterion-to-check" id="toc-from-criterion-to-check" class="nav-link" data-scroll-target="#from-criterion-to-check"><span class="header-section-number">3.5</span> From Criterion to Check</a>
+  <ul class="collapse">
+  <li><a href="#example-the-booking-action-at-375px" id="toc-example-the-booking-action-at-375px" class="nav-link" data-scroll-target="#example-the-booking-action-at-375px">Example: The Booking Action at 375px</a></li>
+  <li><a href="#example-every-page-has-a-title" id="toc-example-every-page-has-a-title" class="nav-link" data-scroll-target="#example-every-page-has-a-title">Example: Every Page Has a Title</a></li>
+  <li><a href="#example-the-api-failure" id="toc-example-the-api-failure" class="nav-link" data-scroll-target="#example-the-api-failure">Example: The API Failure</a></li>
+  </ul></li>
+  <li><a href="#working-with-your-ai-partner" id="toc-working-with-your-ai-partner" class="nav-link" data-scroll-target="#working-with-your-ai-partner"><span class="header-section-number">3.6</span> Working with Your AI Partner</a>
+  <ul class="collapse">
+  <li><a href="#exploration-1-draft-a-check-from-a-criterion" id="toc-exploration-1-draft-a-check-from-a-criterion" class="nav-link" data-scroll-target="#exploration-1-draft-a-check-from-a-criterion">Exploration 1: Draft a Check from a Criterion</a></li>
+  <li><a href="#exploration-2-ask-how-the-check-could-be-gamed" id="toc-exploration-2-ask-how-the-check-could-be-gamed" class="nav-link" data-scroll-target="#exploration-2-ask-how-the-check-could-be-gamed">Exploration 2: Ask How the Check Could Be Gamed</a></li>
+  <li><a href="#exploration-3-find-the-proxy" id="toc-exploration-3-find-the-proxy" class="nav-link" data-scroll-target="#exploration-3-find-the-proxy">Exploration 3: Find the Proxy</a></li>
+  </ul></li>
+  <li><a href="#the-failure-the-agent-games-the-check" id="toc-the-failure-the-agent-games-the-check" class="nav-link" data-scroll-target="#the-failure-the-agent-games-the-check"><span class="header-section-number">3.7</span> The Failure: The Agent Games the Check</a>
+  <ul class="collapse">
+  <li><a href="#weakening-the-assertion" id="toc-weakening-the-assertion" class="nav-link" data-scroll-target="#weakening-the-assertion">Weakening the Assertion</a></li>
+  <li><a href="#skipping-the-check" id="toc-skipping-the-check" class="nav-link" data-scroll-target="#skipping-the-check">Skipping the Check</a></li>
+  <li><a href="#hiding-the-problem" id="toc-hiding-the-problem" class="nav-link" data-scroll-target="#hiding-the-problem">Hiding the Problem</a></li>
+  <li><a href="#hiding-the-symptom" id="toc-hiding-the-symptom" class="nav-link" data-scroll-target="#hiding-the-symptom">Hiding the Symptom</a></li>
+  <li><a href="#editing-the-page-list" id="toc-editing-the-page-list" class="nav-link" data-scroll-target="#editing-the-page-list">Editing the Page List</a></li>
+  <li><a href="#waiting-for-luck" id="toc-waiting-for-luck" class="nav-link" data-scroll-target="#waiting-for-luck">Waiting for Luck</a></li>
+  <li><a href="#how-to-catch-a-shortcut" id="toc-how-to-catch-a-shortcut" class="nav-link" data-scroll-target="#how-to-catch-a-shortcut">How to Catch a Shortcut</a></li>
+  </ul></li>
+  <li><a href="#git-evidence" id="toc-git-evidence" class="nav-link" data-scroll-target="#git-evidence"><span class="header-section-number">3.8</span> Git Evidence</a></li>
+  <li><a href="#a-worked-375px-audit" id="toc-a-worked-375px-audit" class="nav-link" data-scroll-target="#a-worked-375px-audit"><span class="header-section-number">3.9</span> A Worked 375px Audit</a></li>
+  <li><a href="#a-worked-api-failure" id="toc-a-worked-api-failure" class="nav-link" data-scroll-target="#a-worked-api-failure"><span class="header-section-number">3.10</span> A Worked API Failure</a></li>
+  <li><a href="#building-your-mental-model" id="toc-building-your-mental-model" class="nav-link" data-scroll-target="#building-your-mental-model"><span class="header-section-number">3.11</span> Building Your Mental Model</a>
+  <ul class="collapse">
+  <li><a href="#the-check-pyramid" id="toc-the-check-pyramid" class="nav-link" data-scroll-target="#the-check-pyramid">The Check Pyramid</a></li>
+  <li><a href="#the-criterion-chain" id="toc-the-criterion-chain" class="nav-link" data-scroll-target="#the-criterion-chain">The Criterion Chain</a></li>
+  <li><a href="#what-the-check-proves" id="toc-what-the-check-proves" class="nav-link" data-scroll-target="#what-the-check-proves">What the Check Proves</a></li>
+  </ul></li>
+  <li><a href="#business-applications" id="toc-business-applications" class="nav-link" data-scroll-target="#business-applications"><span class="header-section-number">3.12</span> Business Applications</a></li>
+  <li><a href="#practice-exercises" id="toc-practice-exercises" class="nav-link" data-scroll-target="#practice-exercises"><span class="header-section-number">3.13</span> Practice Exercises</a>
+  <ul class="collapse">
+  <li><a href="#exercise-3.1-run-and-read-level-1" id="toc-exercise-3.1-run-and-read-level-1" class="nav-link" data-scroll-target="#exercise-3.1-run-and-read-level-1">Exercise 3.1: Run and Read (Level 1)</a></li>
+  <li><a href="#exercise-3.2-one-criterion-one-check-level-2" id="toc-exercise-3.2-one-criterion-one-check-level-2" class="nav-link" data-scroll-target="#exercise-3.2-one-criterion-one-check-level-2">Exercise 3.2: One Criterion, One Check (Level 2)</a></li>
+  <li><a href="#exercise-3.3-the-375px-outcome-check-level-3" id="toc-exercise-3.3-the-375px-outcome-check-level-3" class="nav-link" data-scroll-target="#exercise-3.3-the-375px-outcome-check-level-3">Exercise 3.3: The 375px Outcome Check (Level 3)</a></li>
+  <li><a href="#exercise-3.4-the-unhappy-path-level-4" id="toc-exercise-3.4-the-unhappy-path-level-4" class="nav-link" data-scroll-target="#exercise-3.4-the-unhappy-path-level-4">Exercise 3.4: The Unhappy Path (Level 4)</a></li>
+  <li><a href="#exercise-3.5-catch-the-gaming-diff-level-4" id="toc-exercise-3.5-catch-the-gaming-diff-level-4" class="nav-link" data-scroll-target="#exercise-3.5-catch-the-gaming-diff-level-4">Exercise 3.5: Catch the Gaming Diff (Level 4)</a></li>
+  <li><a href="#exercise-3.6-what-the-check-cannot-see-level-5" id="toc-exercise-3.6-what-the-check-cannot-see-level-5" class="nav-link" data-scroll-target="#exercise-3.6-what-the-check-cannot-see-level-5">Exercise 3.6: What the Check Cannot See (Level 5)</a></li>
+  </ul></li>
+  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary"><span class="header-section-number">3.14</span> Chapter Summary</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">3.15</span> Reflection</a></li>
+  <li><a href="#your-learning-journal" id="toc-your-learning-journal" class="nav-link" data-scroll-target="#your-learning-journal"><span class="header-section-number">3.16</span> Your Learning Journal</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">3.17</span> Next Steps</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/build-web-guide-ai/edit/main/chapters/chapter-checks-that-run.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/build-web-guide-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/build-web-guide-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/build-web-guide-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-specify-before-build.html">The Practice Spine</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-checks-that-run.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Checks That Run</span></a></li></ol></nav>
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title"><span id="sec-checks" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Checks That Run</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>The agent says the site is done. The page looks right on your laptop. A customer opens it on a phone and cannot find the booking button. Nothing in the build failed. No one had written a check for that.</p>
+<p>A check is how you turn “it looks fine” into evidence. It is also how you stop the same defect from returning next week.</p>
+<section id="the-concept-first" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="the-concept-first"><span class="header-section-number">3.1</span> The Concept First</h2>
+<p>A check is a claim about the build that can fail. A manual check is a person looking. A check that runs is a command that repeats the same judgement every time. The command gives you evidence you can show. The person gives you an opinion you have to trust.</p>
+<p>A check does not prove the site is good. It proves that one claim held under one set of conditions. That is enough to catch regressions, and not enough to sign off the site.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>A check is evidence only if it can fail
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If a check passes on a broken page, it is not testing the thing you care about. Before you trust a check, break the page on purpose and watch the check fail.</p>
+</div>
+</div>
+</section>
+<section id="understanding-through-a-fire-drill" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="understanding-through-a-fire-drill"><span class="header-section-number">3.2</span> Understanding Through a Fire Drill</h2>
+<p>A fire drill tests whether the alarm sounds and the exits open. It cannot tell you whether the exit sign points the right way.</p>
+<p>Automated checks are the drill. They test specific paths under specific conditions. They run every time, and they only test what someone thought to test. The exit sign still needs a person to look at it.</p>
+<p>Tools catch a useful subset. You decide what the subset means, and you check the rest yourself. The rest of this chapter shows how.</p>
+</section>
+<section id="the-four-principles" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="the-four-principles"><span class="header-section-number">3.3</span> The Four Principles</h2>
+<p>WCAG organises accessibility under four principles: Perceivable, Operable, Understandable, Robust. The principles give a person a checklist and give the tools a map.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Principle</th>
+<th>Question</th>
+<th>Northbridge example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Perceivable</td>
+<td>Can everyone perceive the content?</td>
+<td>The menu photo has alt text that describes the dish, not “image”.</td>
+</tr>
+<tr class="even">
+<td>Operable</td>
+<td>Can everyone operate it?</td>
+<td>The booking button can be reached by keyboard and has a visible focus ring.</td>
+</tr>
+<tr class="odd">
+<td>Understandable</td>
+<td>Can everyone understand it?</td>
+<td>The form says “Party size” and explains what happens after submission.</td>
+</tr>
+<tr class="even">
+<td>Robust</td>
+<td>Does it work with different browsers and assistive technology?</td>
+<td>The form uses a real <code>button</code> and <code>label</code>, not a clickable <code>div</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>The principles are not a score. A page can pass a tool and still fail a person. The tool checks a rule. The principle asks whether the page works.</p>
+</section>
+<section id="what-the-tools-catch" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="what-the-tools-catch"><span class="header-section-number">3.4</span> What the Tools Catch</h2>
+<p>A practical check suite uses four tools. Each one looks at a different layer.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tool</th>
+<th>What it checks</th>
+<th>What it misses</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>html-validate</td>
+<td>HTML structure, duplicate IDs, invalid nesting, some missing attributes</td>
+<td>Whether the content is meaningful</td>
+</tr>
+<tr class="even">
+<td>axe</td>
+<td>A subset of WCAG A and AA: contrast, labels, roles, names, some heading order</td>
+<td>Whether alt text is meaningful, whether the heading order makes sense, whether the copy is clear</td>
+</tr>
+<tr class="odd">
+<td>Playwright</td>
+<td>Behaviour, layout, keyboard access, responsive layout, API failure</td>
+<td>Whether the behaviour is right for the business</td>
+</tr>
+<tr class="even">
+<td>Lighthouse CI</td>
+<td>Performance, accessibility score, best practices, budgets</td>
+<td>Whether the site is usable on a cheap phone with a cracked screen, whether the data is correct</td>
+</tr>
+</tbody>
+</table>
+<p>The tools overlap, which is useful, and they share blind spots.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>What it runs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>npm run validate</code></td>
+<td><code>html-validate</code> over <code>site/</code></td>
+</tr>
+<tr class="even">
+<td><code>npm test</code></td>
+<td>Playwright checks in <code>checks/</code> and <code>tests/</code></td>
+</tr>
+<tr class="odd">
+<td><code>npm run lighthouse</code></td>
+<td>Lighthouse CI</td>
+</tr>
+<tr class="even">
+<td><code>npm run check</code></td>
+<td>validate, secrets and Playwright</td>
+</tr>
+</tbody>
+</table>
+<p>Use <code>npm run check</code> before you commit. Run <code>npm run lighthouse</code> when you change images, fonts or layout.</p>
+<p>An axe check looks like this:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { test<span class="op">,</span> expect } <span class="im">from</span> <span class="st">'@playwright/test'</span><span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> AxeBuilder <span class="im">from</span> <span class="st">'@axe-core/playwright'</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">test</span>(<span class="st">'home page has no detectable WCAG A/AA violations'</span><span class="op">,</span> <span class="kw">async</span> ({ page }) <span class="kw">=&gt;</span> {</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> page<span class="op">.</span><span class="fu">goto</span>(<span class="st">'/'</span>)<span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> results <span class="op">=</span> <span class="cf">await</span> <span class="kw">new</span> <span class="fu">AxeBuilder</span>({ page })</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">withTags</span>([<span class="st">'wcag2a'</span><span class="op">,</span> <span class="st">'wcag2aa'</span><span class="op">,</span> <span class="st">'wcag21a'</span><span class="op">,</span> <span class="st">'wcag21aa'</span><span class="op">,</span> <span class="st">'wcag22aa'</span>])</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">analyze</span>()<span class="op">;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect</span>(results<span class="op">.</span><span class="at">violations</span>)<span class="op">.</span><span class="fu">toEqual</span>([])<span class="op">;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The check reports detectable violations. It does not tell you whether the page is accessible.</p>
+<section id="what-no-automated-check-can-see" class="level3">
+<h3 class="anchored" data-anchor-id="what-no-automated-check-can-see">What No Automated Check Can See</h3>
+<ul>
+<li>Whether alt text describes the image.</li>
+<li>Whether the heading order helps a person navigate.</li>
+<li>Whether the copy is clear.</li>
+<li>Whether the booking flow matches the business process.</li>
+<li>Whether the site works on a slow connection.</li>
+<li>Whether the data is correct.</li>
+<li>Whether the user can recover from an error.</li>
+</ul>
+<p>These are not edge cases. They are the parts of the experience that decide whether the client keeps the site.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>A passing axe run is not an accessibility sign-off
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>axe can find a missing <code>alt</code> attribute. It cannot tell you whether the <code>alt</code> text says anything useful. It can find a missing label. It cannot tell you whether the label uses words the customer understands.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="from-criterion-to-check" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="from-criterion-to-check"><span class="header-section-number">3.5</span> From Criterion to Check</h2>
+<p>The check starts with the acceptance criterion, not the code. If the criterion is vague, the check will be vague. <a href="chapter-specify-before-build.html" class="quarto-xref"><span>Chapter 2</span></a> gave you the criterion, and a check turns it into evidence.</p>
+<p>A useful check has four parts:</p>
+<ol type="1">
+<li>The condition. A viewport, a page, a network response, a keyboard action.</li>
+<li>The action. What the user or the test does.</li>
+<li>The observable result. What must be true.</li>
+<li>The failure message. What the output says when it is false.</li>
+</ol>
+<p>If one part is missing, the check is weak. A check that says “the page works” has no condition and no observable result.</p>
+<section id="example-the-booking-action-at-375px" class="level3">
+<h3 class="anchored" data-anchor-id="example-the-booking-action-at-375px">Example: The Booking Action at 375px</h3>
+<p>The criterion is: “The booking action is visible at 375px without scrolling.”</p>
+<p>A weak check looks for the viewport meta tag. The tag is a proxy. A page can have the tag and still overflow.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Weak: checks a proxy, not the outcome.</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">test</span>(<span class="st">'has a viewport meta tag'</span><span class="op">,</span> <span class="kw">async</span> ({ page }) <span class="kw">=&gt;</span> {</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> page<span class="op">.</span><span class="fu">goto</span>(<span class="st">'/'</span>)<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> <span class="fu">expect</span>(page<span class="op">.</span><span class="fu">locator</span>(<span class="st">'meta[name="viewport"]'</span>))<span class="op">.</span><span class="fu">toHaveAttribute</span>(</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'content'</span><span class="op">,</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="ss">/width=device-width/</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  )<span class="op">;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>A stronger check opens the page at 375px and tests the result.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { test<span class="op">,</span> expect } <span class="im">from</span> <span class="st">'@playwright/test'</span><span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">test</span>(<span class="st">'booking action is visible at 375px'</span><span class="op">,</span> <span class="kw">async</span> ({ page }) <span class="kw">=&gt;</span> {</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> page<span class="op">.</span><span class="fu">goto</span>(<span class="st">'/'</span>)<span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> cta <span class="op">=</span> page<span class="op">.</span><span class="fu">locator</span>(<span class="st">'[data-cta="primary"]'</span>)<span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> <span class="fu">expect</span>(cta)<span class="op">.</span><span class="fu">toBeVisible</span>()<span class="op">;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> box <span class="op">=</span> <span class="cf">await</span> cta<span class="op">.</span><span class="fu">boundingBox</span>()<span class="op">;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> viewport <span class="op">=</span> page<span class="op">.</span><span class="fu">viewportSize</span>()<span class="op">;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect</span>(box<span class="op">.</span><span class="at">x</span>)<span class="op">.</span><span class="fu">toBeGreaterThanOrEqual</span>(<span class="dv">0</span>)<span class="op">;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect</span>(box<span class="op">.</span><span class="at">x</span> <span class="op">+</span> box<span class="op">.</span><span class="at">width</span>)<span class="op">.</span><span class="fu">toBeLessThanOrEqual</span>(viewport<span class="op">.</span><span class="at">width</span>)<span class="op">;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="fu">test</span>(<span class="st">'no horizontal scroll at 375px'</span><span class="op">,</span> <span class="kw">async</span> ({ page }) <span class="kw">=&gt;</span> {</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> page<span class="op">.</span><span class="fu">goto</span>(<span class="st">'/'</span>)<span class="op">;</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> overflows <span class="op">=</span> <span class="cf">await</span> page<span class="op">.</span><span class="fu">evaluate</span>(</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    () <span class="kw">=&gt;</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>      <span class="bu">document</span><span class="op">.</span><span class="at">documentElement</span><span class="op">.</span><span class="at">scrollWidth</span> <span class="op">&gt;</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>      <span class="bu">document</span><span class="op">.</span><span class="at">documentElement</span><span class="op">.</span><span class="at">clientWidth</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  )<span class="op">;</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect</span>(overflows)<span class="op">.</span><span class="fu">toBe</span>(<span class="kw">false</span>)<span class="op">;</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The first check is not useless. It catches a missing tag. It does not catch the defect the customer reported.</p>
+<p><code>toBeVisible()</code> is stronger than <code>toBeAttached()</code>. An element can be attached to the page and still sit outside the viewport. The customer cannot see it, and the weak check goes green.</p>
+</section>
+<section id="example-every-page-has-a-title" class="level3">
+<h3 class="anchored" data-anchor-id="example-every-page-has-a-title">Example: Every Page Has a Title</h3>
+<p>The criterion is: “Every page has a non-empty title.”</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { test<span class="op">,</span> expect } <span class="im">from</span> <span class="st">'@playwright/test'</span><span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { readFileSync } <span class="im">from</span> <span class="st">'node:fs'</span><span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> pages <span class="op">=</span> <span class="bu">JSON</span><span class="op">.</span><span class="fu">parse</span>(</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">readFileSync</span>(<span class="kw">new</span> <span class="fu">URL</span>(<span class="st">'../pages.json'</span><span class="op">,</span> <span class="im">import</span><span class="op">.</span><span class="at">meta</span><span class="op">.</span><span class="at">url</span>)<span class="op">,</span> <span class="st">'utf8'</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>)<span class="op">;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (<span class="kw">const</span> path <span class="kw">of</span> pages) {</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">test</span>(<span class="vs">`</span><span class="sc">${</span>path<span class="sc">}</span><span class="vs"> has a non-empty title`</span><span class="op">,</span> <span class="kw">async</span> ({ page }) <span class="kw">=&gt;</span> {</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">await</span> page<span class="op">.</span><span class="fu">goto</span>(path)<span class="op">;</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">expect</span>((<span class="cf">await</span> page<span class="op">.</span><span class="fu">title</span>())<span class="op">.</span><span class="fu">trim</span>()<span class="op">.</span><span class="at">length</span>)<span class="op">.</span><span class="fu">toBeGreaterThan</span>(<span class="dv">0</span>)<span class="op">;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The check is only as good as the page list. If a page is missing from <code>pages.json</code>, the check will not visit it. Review changes to <code>pages.json</code> as carefully as changes to the site.</p>
+</section>
+<section id="example-the-api-failure" class="level3">
+<h3 class="anchored" data-anchor-id="example-the-api-failure">Example: The API Failure</h3>
+<p>The criterion is: “When the live data request fails, the page shows a friendly message and a way to retry.”</p>
+<p>The happy path is easy to check. The unhappy path is the one that protects the customer.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { test<span class="op">,</span> expect } <span class="im">from</span> <span class="st">'@playwright/test'</span><span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">test</span>(<span class="st">'live data shows a friendly message when the API fails'</span><span class="op">,</span> <span class="kw">async</span> ({ page }) <span class="kw">=&gt;</span> {</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> page<span class="op">.</span><span class="fu">route</span>(<span class="st">'**/.netlify/functions/opening-status*'</span><span class="op">,</span> route <span class="kw">=&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    route<span class="op">.</span><span class="fu">fulfill</span>({ <span class="dt">status</span><span class="op">:</span> <span class="dv">500</span><span class="op">,</span> <span class="dt">body</span><span class="op">:</span> <span class="st">'error'</span> })</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  )<span class="op">;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> page<span class="op">.</span><span class="fu">goto</span>(<span class="st">'/'</span>)<span class="op">;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> <span class="fu">expect</span>(page<span class="op">.</span><span class="fu">getByRole</span>(<span class="st">'status'</span>))<span class="op">.</span><span class="fu">toContainText</span>(<span class="ss">/unavailable</span><span class="sc">|</span><span class="ss">try again/i</span>)<span class="op">;</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Use the path of the function your page calls. The route mock makes the check fast and repeatable. It does not prove the real API works. It proves the page handles a failure. Pair it with a smoke test against the real endpoint.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>State</th>
+<th>What the user sees</th>
+<th>What the check asserts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Loading</td>
+<td>A message or a skeleton while the request is in flight</td>
+<td>The status text appears before the data resolves</td>
+</tr>
+<tr class="even">
+<td>Error</td>
+<td>A friendly message and a retry action</td>
+<td>The message appears when the route returns 500</td>
+</tr>
+<tr class="odd">
+<td>Empty</td>
+<td>A message that says there is no data</td>
+<td>The message appears when the response is an empty list</td>
+</tr>
+</tbody>
+</table>
+<p>A blank space is a defect. A spinner that never stops is a defect. An error message that says “Error” is barely better than a blank space.</p>
+<p><a href="chapter-connection.html" class="quarto-xref"><span>Chapter 8</span></a> shows how the request, the function and the response fit together. This chapter shows how to prove the page behaves when the response is bad.</p>
+</section>
+</section>
+<section id="working-with-your-ai-partner" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="working-with-your-ai-partner"><span class="header-section-number">3.6</span> Working with Your AI Partner</h2>
+<p>AI is useful at three points in this chapter. It can draft a check from a criterion, show you how a check can be gamed, and describe a page that passes a check but fails a person. It is a poor judge of whether the check is enough. That judgement is yours.</p>
+<section id="exploration-1-draft-a-check-from-a-criterion" class="level3">
+<h3 class="anchored" data-anchor-id="exploration-1-draft-a-check-from-a-criterion">Exploration 1: Draft a Check from a Criterion</h3>
+<pre class="text"><code>Ask your AI:
+Here is an acceptance criterion: "The booking action is visible at 375px
+without scrolling." Write the smallest Playwright check that would fail
+if the criterion were false. Then name one thing the check cannot see.
+Do not change the site.</code></pre>
+<p>Read the check before you run it. Does it test the outcome or a proxy? Does it use a role or a brittle selector? What happens if the button is attached but off-screen? Improve the check before you trust it.</p>
+</section>
+<section id="exploration-2-ask-how-the-check-could-be-gamed" class="level3">
+<h3 class="anchored" data-anchor-id="exploration-2-ask-how-the-check-could-be-gamed">Exploration 2: Ask How the Check Could Be Gamed</h3>
+<pre class="text"><code>Ask your AI:
+Here is a passing check. Show me three ways to make it pass without
+fixing the page. For each one, explain what it hides from the customer.</code></pre>
+<p>The answer is a catalogue of the shortcuts in the next section. Do not apply them. Use them to recognise the diff when an agent does.</p>
+</section>
+<section id="exploration-3-find-the-proxy" class="level3">
+<h3 class="anchored" data-anchor-id="exploration-3-find-the-proxy">Exploration 3: Find the Proxy</h3>
+<pre class="text"><code>Ask your AI:
+Here is a check. Is it testing the outcome or a proxy? Describe a page
+that would pass the check and still fail the user.</code></pre>
+<p>A good answer names the gap between the assertion and the experience. That gap is why the manual check still exists.</p>
+</section>
+</section>
+<section id="the-failure-the-agent-games-the-check" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="the-failure-the-agent-games-the-check"><span class="header-section-number">3.7</span> The Failure: The Agent Games the Check</h2>
+<p>An agent asked to make a check pass has three options. It can fix the site, weaken the check, or hide the problem. It will often choose the cheapest path that produces green. The agent is not malicious. It is optimising for the signal you gave it.</p>
+<p>Your job is to make sure the green means something.</p>
+<p>Each common shortcut below is a diff to read. The output alone is not enough.</p>
+<section id="weakening-the-assertion" class="level3">
+<h3 class="anchored" data-anchor-id="weakening-the-assertion">Weakening the Assertion</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode diff code-with-copy"><code class="sourceCode diff"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="st">- await expect(page.locator('[data-cta="primary"]')).toBeVisible();</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="va">+ await expect(page.locator('[data-cta="primary"]')).toBeAttached();</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>toBeAttached()</code> passes when the element is in the DOM. It can be off-screen, covered, or invisible. <code>toBeVisible()</code> tests what the customer can see.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode diff code-with-copy"><code class="sourceCode diff"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="st">- expect(results.violations).toEqual([]);</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="va">+ expect(results.violations.length).toBeLessThan(3);</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The second check allows two accessibility violations. That is not a stricter version of the first. It is a different contract.</p>
+</section>
+<section id="skipping-the-check" class="level3">
+<h3 class="anchored" data-anchor-id="skipping-the-check">Skipping the Check</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode diff code-with-copy"><code class="sourceCode diff"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="st">- test('no horizontal scroll at 375px', async ({ page }) =&gt; {</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="va">+ test.skip('no horizontal scroll at 375px', async ({ page }) =&gt; {</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>A skipped check is a green check that tests nothing. Read the output for <code>skipped</code> as well as <code>passed</code>.</p>
+</section>
+<section id="hiding-the-problem" class="level3">
+<h3 class="anchored" data-anchor-id="hiding-the-problem">Hiding the Problem</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode diff code-with-copy"><code class="sourceCode diff"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="st">- &lt;button data-cta="primary"&gt;Book a table&lt;/button&gt;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="va">+ &lt;button data-cta="primary" aria-hidden="true"&gt;Book a table&lt;/button&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The button is now hidden from screen readers. A sighted user can still click it. A screen reader user loses the action. A visibility check may pass because the page still renders. If the suite runs axe, this may be caught. If it only checks visibility, it will not. The customer is worse off.</p>
+<p><code>aria-hidden</code> is not a fix for a duplicate control or a confusing label. It is a way to remove content from the accessibility tree. Use it for decorative content. Do not use it to hide content from a check.</p>
+</section>
+<section id="hiding-the-symptom" class="level3">
+<h3 class="anchored" data-anchor-id="hiding-the-symptom">Hiding the Symptom</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>body {</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">overflow-x</span><span class="ch">:</span> <span class="dv">hidden</span><span class="op">;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This clips the horizontal scroll. The fixed-width element is still there. The customer can still lose content off the edge. Find the fixed width, the image, or the grid that causes the overflow. <a href="chapter-presentation.html" class="quarto-xref"><span>Chapter 6</span></a> covers the common causes.</p>
+</section>
+<section id="editing-the-page-list" class="level3">
+<h3 class="anchored" data-anchor-id="editing-the-page-list">Editing the Page List</h3>
+<p>A failing page is removed from <code>pages.json</code>. The checks visit fewer pages. The suite goes green.</p>
+<p>Review <code>git diff pages.json</code> after every agent change. The page list is part of the test surface.</p>
+</section>
+<section id="waiting-for-luck" class="level3">
+<h3 class="anchored" data-anchor-id="waiting-for-luck">Waiting for Luck</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="cf">await</span> page<span class="op">.</span><span class="fu">waitForTimeout</span>(<span class="dv">2000</span>)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>A fixed wait can make a flaky check pass once. It slows the suite and hides the race. Use a web-first assertion such as <code>await expect(locator).toBeVisible()</code>. Let the tool wait for the condition. A fixed delay only guesses how long that takes.</p>
+</section>
+<section id="how-to-catch-a-shortcut" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-catch-a-shortcut">How to Catch a Shortcut</h3>
+<ul>
+<li>Read the diff as well as the green output.</li>
+<li>Run <code>git log --oneline -- checks/</code>.</li>
+<li>Make the check fail on purpose before you trust it.</li>
+<li>Ask the agent for the command and the output.</li>
+<li>Review changes to <code>pages.json</code>.</li>
+<li>Check that the assertion names the observable result.</li>
+</ul>
+</section>
+</section>
+<section id="git-evidence" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="git-evidence"><span class="header-section-number">3.8</span> Git Evidence</h2>
+<p>The provided checks are a contract. The project template puts them in <code>checks/</code>. Your own checks go in <code>tests/</code>.</p>
+<p>The history should show one commit for the provided checks: the commit that added the template. Run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span> <span class="at">--</span> checks/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If there is a second commit, read it. If it edits a check, the checks were weakened. Revert the change, then fix the site. Record what happened in <code>DECISIONS.md</code>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="op">&lt;</span>commit<span class="op">&gt;</span> -- checks/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The commit hash is the one that added the checks. If you are unsure, ask the agent to show <code>git log -p -- checks/</code> and read the diff before you revert.</p>
+<p>A check is evidence only if the check itself is trustworthy. The git history is how you prove that the provided checks were not weakened.</p>
+<p>A provided check can be wrong. If you believe it is, do not edit it. Record the problem in <code>CRITIQUE.md</code>, show the evidence, and ask for a decision. The default is to fix the site.</p>
+</section>
+<section id="a-worked-375px-audit" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="a-worked-375px-audit"><span class="header-section-number">3.9</span> A Worked 375px Audit</h2>
+<p>The site passes the desktop checks. The booking page looks fine on a laptop. At 375px, the page scrolls sideways and the booking button sits off-screen.</p>
+<p>The existing check looks for the viewport meta tag. It passes. The customer still cannot book.</p>
+<ol type="1">
+<li>Open the site at 375px. Record the defect in <code>CRITIQUE.md</code>.</li>
+<li>Write the outcome check. It fails.</li>
+<li>Find the fixed width. It might be a hero image, a grid, a table, or a container with a hard-coded <code>width</code>.</li>
+<li>Fix the cause. Do not add <code>overflow-x: hidden</code>.</li>
+<li>Run the check again. It passes.</li>
+<li>Add the criterion to <code>SPEC.md</code> if it was missing. The check and the criterion should point at each other.</li>
+</ol>
+<p>The audit is not finished when the page looks better. It is finished when the check would catch the defect if it returned.</p>
+</section>
+<section id="a-worked-api-failure" class="level2" data-number="3.10">
+<h2 data-number="3.10" class="anchored" data-anchor-id="a-worked-api-failure"><span class="header-section-number">3.10</span> A Worked API Failure</h2>
+<p>The live data widget shows opening status, today’s specials, or another small piece of business data. When the API is up, the widget looks fine. When the API fails, the widget is blank.</p>
+<p>The happy-path check passes. The unhappy path has no check.</p>
+<ol type="1">
+<li>Mock a 500 response in a Playwright test.</li>
+<li>Assert that the page shows a friendly message.</li>
+<li>Run the check. It fails because the page has no error state.</li>
+<li>Add the error state. Add a loading state and an empty state while you are there.</li>
+<li>Run the check again. Then run the happy path again.</li>
+<li>Record the decision in <code>DECISIONS.md</code> and the remaining gap in <code>CRITIQUE.md</code>.</li>
+</ol>
+<p>The check does not prove the API will never fail. It proves the page does something useful when it does.</p>
+</section>
+<section id="building-your-mental-model" class="level2" data-number="3.11">
+<h2 data-number="3.11" class="anchored" data-anchor-id="building-your-mental-model"><span class="header-section-number">3.11</span> Building Your Mental Model</h2>
+<section id="the-check-pyramid" class="level3">
+<h3 class="anchored" data-anchor-id="the-check-pyramid">The Check Pyramid</h3>
+<pre class="text"><code>performance and budgets      Lighthouse CI
+behaviour and layout         Playwright
+accessibility                axe
+structure                    html-validate</code></pre>
+<p>Start at the bottom. A page with invalid HTML is harder to check. A page with no accessible names is harder to use. The layers catch different defects. None of them is enough alone.</p>
+</section>
+<section id="the-criterion-chain" class="level3">
+<h3 class="anchored" data-anchor-id="the-criterion-chain">The Criterion Chain</h3>
+<pre class="text"><code>criterion -&gt; condition -&gt; action -&gt; observable result -&gt; assertion -&gt; failure message</code></pre>
+<p>If the chain breaks at the condition, the check tests the wrong thing. If it breaks at the observable result, the check tests a proxy. If it breaks at the failure message, you will not know what failed.</p>
+</section>
+<section id="what-the-check-proves" class="level3">
+<h3 class="anchored" data-anchor-id="what-the-check-proves">What the Check Proves</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>The check proves</th>
+<th>The check does not prove</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>One claim held under one condition</td>
+<td>The site is good</td>
+</tr>
+<tr class="even">
+<td>The defect is gone for that path</td>
+<td>The defect is gone everywhere</td>
+</tr>
+<tr class="odd">
+<td>The page handles a mocked failure</td>
+<td>The real API works</td>
+</tr>
+<tr class="even">
+<td>The element is in the viewport at 375px</td>
+<td>The page is usable on a cheap phone</td>
+</tr>
+<tr class="odd">
+<td>The provided checks were not edited</td>
+<td>The student understood the check</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="business-applications" class="level2" data-number="3.12">
+<h2 data-number="3.12" class="anchored" data-anchor-id="business-applications"><span class="header-section-number">3.12</span> Business Applications</h2>
+<p>Checks reduce rework. A defect caught before the client sees it costs minutes. A defect caught after launch costs trust, support time and sometimes revenue.</p>
+<p>A fixed-price quote is easier to defend when you can name what you will verify: the booking action at 375px, the error state, the page titles, the contrast. The client knows what “done” includes.</p>
+<p>The checks are also handover evidence. The next developer can run the suite before changing anything. They do not have to trust a chat log or a colleague’s memory.</p>
+<p>For AI projects, the suite is the defence. You can show what the agent changed, what the checks proved, and what still needs a human. That is a stronger position than “the agent said it was done”.</p>
+<p>A regression caught before the customer sees it lowers the cost of change, which makes the site safer to improve.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Skills You Are Building
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This develops evaluating and improving solutions, professional communication, and the judgement to decide what evidence is enough. A check is how you show your work.</p>
+</div>
+</div>
+</section>
+<section id="practice-exercises" class="level2" data-number="3.13">
+<h2 data-number="3.13" class="anchored" data-anchor-id="practice-exercises"><span class="header-section-number">3.13</span> Practice Exercises</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Exercise Levels
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Level 1</strong>: Direct application</li>
+<li><strong>Level 2</strong>: Minor modifications</li>
+<li><strong>Level 3</strong>: Combining concepts</li>
+<li><strong>Level 4</strong>: Problem-solving</li>
+<li><strong>Level 5</strong>: Open-ended design</li>
+</ul>
+</div>
+</div>
+<section id="exercise-3.1-run-and-read-level-1" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-3.1-run-and-read-level-1">Exercise 3.1: Run and Read (Level 1)</h3>
+<p>Run the project’s check command. Record every failure in <code>CRITIQUE.md</code> under <code>## Check results</code>.</p>
+<p>For each failure, answer:</p>
+<ol type="1">
+<li>Is this a site problem or a check problem?</li>
+<li>Which user is affected?</li>
+<li>What is the smallest fix?</li>
+</ol>
+<p>Then name one thing the checks cannot see.</p>
+<p><strong>Done when:</strong> you can list every failure and explain one limit of the suite.</p>
+</section>
+<section id="exercise-3.2-one-criterion-one-check-level-2" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-3.2-one-criterion-one-check-level-2">Exercise 3.2: One Criterion, One Check (Level 2)</h3>
+<p>Choose one acceptance criterion from <code>SPEC.md</code> that the provided checks do not cover. Write a check in <code>tests/</code>.</p>
+<p>Make it fail first. Break the page or remove the feature. Then fix the site and make it pass.</p>
+<p><strong>Done when:</strong> the check fails when the criterion is false and passes when it is true.</p>
+</section>
+<section id="exercise-3.3-the-375px-outcome-check-level-3" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-3.3-the-375px-outcome-check-level-3">Exercise 3.3: The 375px Outcome Check (Level 3)</h3>
+<p>Write two checks:</p>
+<ol type="1">
+<li>No horizontal scroll at 375px.</li>
+<li>The primary action is inside the viewport at 375px.</li>
+</ol>
+<p>Run them on a page with a fixed-width element. Then fix the page and run them again. Explain why a viewport meta tag check is not enough.</p>
+<p><strong>Done when:</strong> both checks fail on the broken page and pass on the fixed page.</p>
+</section>
+<section id="exercise-3.4-the-unhappy-path-level-4" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-3.4-the-unhappy-path-level-4">Exercise 3.4: The Unhappy Path (Level 4)</h3>
+<p>Choose a page that loads live data. Write checks for three states:</p>
+<ul>
+<li>the loading state</li>
+<li>the error state</li>
+<li>the empty state</li>
+</ul>
+<p>Mock the responses. Show that the page never shows a blank space or a spinner that never stops.</p>
+<p><strong>Done when:</strong> each state has a check that fails when the state is missing.</p>
+</section>
+<section id="exercise-3.5-catch-the-gaming-diff-level-4" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-3.5-catch-the-gaming-diff-level-4">Exercise 3.5: Catch the Gaming Diff (Level 4)</h3>
+<p>Here is a diff an agent produced after being asked to make a check pass.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode diff code-with-copy"><code class="sourceCode diff"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="st">- await expect(page.locator('[data-cta="primary"]')).toBeVisible();</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="va">+ await expect(page.locator('[data-cta="primary"]')).toBeAttached();</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>And another:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode diff code-with-copy"><code class="sourceCode diff"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="st">- expect(results.violations).toEqual([]);</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="va">+ expect(results.violations.length).toBeLessThan(3);</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Answer:</p>
+<ol type="1">
+<li>What does each change hide?</li>
+<li>Why is the original assertion stronger?</li>
+<li>What would you see in the browser that the new check would miss?</li>
+</ol>
+<p>Then revert the changes, fix the site, and write a check that fails on the broken page.</p>
+<p><strong>Done when:</strong> you can explain the weakening and your replacement check fails when the defect returns.</p>
+</section>
+<section id="exercise-3.6-what-the-check-cannot-see-level-5" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-3.6-what-the-check-cannot-see-level-5">Exercise 3.6: What the Check Cannot See (Level 5)</h3>
+<p>Write a manual test script for the things automation misses:</p>
+<ul>
+<li>meaningful alt text</li>
+<li>heading order</li>
+<li>copy clarity</li>
+<li>the booking process</li>
+<li>a slow connection</li>
+<li>data correctness</li>
+</ul>
+<p>Run it on a classmate’s site. Record three findings. For each finding, name the user it affects and the change you would make.</p>
+<p><strong>Done when:</strong> another person could run the script without asking you what you meant.</p>
+</section>
+</section>
+<section id="chapter-summary" class="level2" data-number="3.14">
+<h2 data-number="3.14" class="anchored" data-anchor-id="chapter-summary"><span class="header-section-number">3.14</span> Chapter Summary</h2>
+<ul>
+<li>A check is a claim about the build that can fail.</li>
+<li>WCAG POUR gives the human checklist. Tools cover a subset.</li>
+<li>Start from the acceptance criterion, not the code.</li>
+<li>Check the outcome, not the proxy.</li>
+<li>The agent will optimise for green. Read the diff.</li>
+<li>The provided checks are a contract. <code>git log -- checks/</code> proves they were not weakened.</li>
+<li>The unhappy path needs checks too.</li>
+<li>A check is evidence only if you know what it asserts.</li>
+</ul>
+</section>
+<section id="reflection" class="level2" data-number="3.15">
+<h2 data-number="3.15" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.15</span> Reflection</h2>
+<p>Before moving on, ensure you can:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Explain POUR with one example per principle</label></li>
+<li><label><input type="checkbox">Name what axe catches and what it misses</label></li>
+<li><label><input type="checkbox">Write a check from an acceptance criterion</label></li>
+<li><label><input type="checkbox">Make a check fail before making it pass</label></li>
+<li><label><input type="checkbox">Read a diff and spot a weakened assertion</label></li>
+<li><label><input type="checkbox">Use <code>git log -- checks/</code> as evidence</label></li>
+<li><label><input type="checkbox">Write checks for loading, error and empty states</label></li>
+<li><label><input type="checkbox">Name one thing your checks cannot see</label></li>
+</ul>
+</section>
+<section id="your-learning-journal" class="level2" data-number="3.16">
+<h2 data-number="3.16" class="anchored" data-anchor-id="your-learning-journal"><span class="header-section-number">3.16</span> Your Learning Journal</h2>
+<p>Record your responses to these prompts:</p>
+<ol type="1">
+<li><p><strong>The defect I would have missed</strong>: Which check caught something you did not see?</p></li>
+<li><p><strong>The green check I did not trust</strong>: What did the agent change to make a check pass? What did you do about it?</p></li>
+<li><p><strong>The user I almost forgot</strong>: Which finding came from a person rather than a tool?</p></li>
+<li><p><strong>The proxy</strong>: Where did a check test a proxy instead of the outcome? How did you rewrite it?</p></li>
+<li><p><strong>The next check</strong>: What would you check next, and why?</p></li>
+</ol>
+</section>
+<section id="next-steps" class="level2" data-number="3.17">
+<h2 data-number="3.17" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">3.17</span> Next Steps</h2>
+<p><a href="chapter-connection.html" class="quarto-xref"><span>Chapter 8</span></a> shows how the request, the serverless function and the response fit together. The API failure check in this chapter is only useful if you understand what the page is asking for.</p>
+<p>The next practice chapter, <strong>The Agent-Ready Repo and Handover</strong>, turns the checks, the decisions and the spec into a repository that another person can run, review and maintain. It also shows how to turn a repeated task, such as writing a check, into a skill.</p>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script data-embed-id="d474a67e-e6f4-4c6c-b9ef-3c4c6ea582be" data-base-api-url="https://chat.eduserver.au/api/embed" src="https://chat.eduserver.au/embed/anythingllm-chat-widget.min.js">
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/michael-borck\.github\.io\/build-web-guide-ai");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/chapter-specify-before-build.html" class="pagination-link" aria-label="Specify Before You Build">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Specify Before You Build</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/chapter-agent-ready-repo.html" class="pagination-link" aria-label="The Agent-Ready Repo and Handover">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The Agent-Ready Repo and Handover</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Checks That Run {#sec-checks}</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>The agent says the site is done. The page looks right on your laptop. A customer opens it on a phone and cannot find the booking button. Nothing in the build failed. No one had written a check for that.</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>A check is how you turn "it looks fine" into evidence. It is also how you stop the same defect from returning next week.</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Concept First</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>A check is a claim about the build that can fail. A manual check is a person looking. A check that runs is a command that repeats the same judgement every time. The command gives you evidence you can show. The person gives you an opinion you have to trust.</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>A check does not prove the site is good. It proves that one claim held under one set of conditions. That is enough to catch regressions, and not enough to sign off the site.</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## A check is evidence only if it can fail</span></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>If a check passes on a broken page, it is not testing the thing you care about. Before you trust a check, break the page on purpose and watch the check fail.</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## Understanding Through a Fire Drill</span></span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a>A fire drill tests whether the alarm sounds and the exits open. It cannot tell you whether the exit sign points the right way.</span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a>Automated checks are the drill. They test specific paths under specific conditions. They run every time, and they only test what someone thought to test. The exit sign still needs a person to look at it.</span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a>Tools catch a useful subset. You decide what the subset means, and you check the rest yourself. The rest of this chapter shows how.</span>
+<span id="cb21-25"><a href="#cb21-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-26"><a href="#cb21-26" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Four Principles</span></span>
+<span id="cb21-27"><a href="#cb21-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-28"><a href="#cb21-28" aria-hidden="true" tabindex="-1"></a>WCAG organises accessibility under four principles: Perceivable, Operable, Understandable, Robust. The principles give a person a checklist and give the tools a map.</span>
+<span id="cb21-29"><a href="#cb21-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-30"><a href="#cb21-30" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Principle <span class="pp">|</span> Question <span class="pp">|</span> Northbridge example <span class="pp">|</span></span>
+<span id="cb21-31"><a href="#cb21-31" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb21-32"><a href="#cb21-32" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Perceivable <span class="pp">|</span> Can everyone perceive the content? <span class="pp">|</span> The menu photo has alt text that describes the dish, not "image". <span class="pp">|</span></span>
+<span id="cb21-33"><a href="#cb21-33" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Operable <span class="pp">|</span> Can everyone operate it? <span class="pp">|</span> The booking button can be reached by keyboard and has a visible focus ring. <span class="pp">|</span></span>
+<span id="cb21-34"><a href="#cb21-34" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Understandable <span class="pp">|</span> Can everyone understand it? <span class="pp">|</span> The form says "Party size" and explains what happens after submission. <span class="pp">|</span></span>
+<span id="cb21-35"><a href="#cb21-35" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Robust <span class="pp">|</span> Does it work with different browsers and assistive technology? <span class="pp">|</span> The form uses a real <span class="in">`button`</span> and <span class="in">`label`</span>, not a clickable <span class="in">`div`</span>. <span class="pp">|</span></span>
+<span id="cb21-36"><a href="#cb21-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-37"><a href="#cb21-37" aria-hidden="true" tabindex="-1"></a>The principles are not a score. A page can pass a tool and still fail a person. The tool checks a rule. The principle asks whether the page works.</span>
+<span id="cb21-38"><a href="#cb21-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-39"><a href="#cb21-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## What the Tools Catch</span></span>
+<span id="cb21-40"><a href="#cb21-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-41"><a href="#cb21-41" aria-hidden="true" tabindex="-1"></a>A practical check suite uses four tools. Each one looks at a different layer.</span>
+<span id="cb21-42"><a href="#cb21-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-43"><a href="#cb21-43" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Tool <span class="pp">|</span> What it checks <span class="pp">|</span> What it misses <span class="pp">|</span></span>
+<span id="cb21-44"><a href="#cb21-44" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb21-45"><a href="#cb21-45" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> html-validate <span class="pp">|</span> HTML structure, duplicate IDs, invalid nesting, some missing attributes <span class="pp">|</span> Whether the content is meaningful <span class="pp">|</span></span>
+<span id="cb21-46"><a href="#cb21-46" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> axe <span class="pp">|</span> A subset of WCAG A and AA: contrast, labels, roles, names, some heading order <span class="pp">|</span> Whether alt text is meaningful, whether the heading order makes sense, whether the copy is clear <span class="pp">|</span></span>
+<span id="cb21-47"><a href="#cb21-47" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Playwright <span class="pp">|</span> Behaviour, layout, keyboard access, responsive layout, API failure <span class="pp">|</span> Whether the behaviour is right for the business <span class="pp">|</span></span>
+<span id="cb21-48"><a href="#cb21-48" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Lighthouse CI <span class="pp">|</span> Performance, accessibility score, best practices, budgets <span class="pp">|</span> Whether the site is usable on a cheap phone with a cracked screen, whether the data is correct <span class="pp">|</span></span>
+<span id="cb21-49"><a href="#cb21-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-50"><a href="#cb21-50" aria-hidden="true" tabindex="-1"></a>The tools overlap, which is useful, and they share blind spots.</span>
+<span id="cb21-51"><a href="#cb21-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-52"><a href="#cb21-52" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Command <span class="pp">|</span> What it runs <span class="pp">|</span></span>
+<span id="cb21-53"><a href="#cb21-53" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
+<span id="cb21-54"><a href="#cb21-54" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`npm run validate`</span> <span class="pp">|</span> <span class="in">`html-validate`</span> over <span class="in">`site/`</span> <span class="pp">|</span></span>
+<span id="cb21-55"><a href="#cb21-55" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`npm test`</span> <span class="pp">|</span> Playwright checks in <span class="in">`checks/`</span> and <span class="in">`tests/`</span> <span class="pp">|</span></span>
+<span id="cb21-56"><a href="#cb21-56" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`npm run lighthouse`</span> <span class="pp">|</span> Lighthouse CI <span class="pp">|</span></span>
+<span id="cb21-57"><a href="#cb21-57" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`npm run check`</span> <span class="pp">|</span> validate, secrets and Playwright <span class="pp">|</span></span>
+<span id="cb21-58"><a href="#cb21-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-59"><a href="#cb21-59" aria-hidden="true" tabindex="-1"></a>Use <span class="in">`npm run check`</span> before you commit. Run <span class="in">`npm run lighthouse`</span> when you change images, fonts or layout.</span>
+<span id="cb21-60"><a href="#cb21-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-61"><a href="#cb21-61" aria-hidden="true" tabindex="-1"></a>An axe check looks like this:</span>
+<span id="cb21-62"><a href="#cb21-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-63"><a href="#cb21-63" aria-hidden="true" tabindex="-1"></a><span class="in">```js</span></span>
+<span id="cb21-64"><a href="#cb21-64" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { test<span class="op">,</span> expect } <span class="im">from</span> <span class="st">'@playwright/test'</span><span class="op">;</span></span>
+<span id="cb21-65"><a href="#cb21-65" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> AxeBuilder <span class="im">from</span> <span class="st">'@axe-core/playwright'</span><span class="op">;</span></span>
+<span id="cb21-66"><a href="#cb21-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-67"><a href="#cb21-67" aria-hidden="true" tabindex="-1"></a><span class="fu">test</span>(<span class="st">'home page has no detectable WCAG A/AA violations'</span><span class="op">,</span> <span class="kw">async</span> ({ page }) <span class="kw">=&gt;</span> {</span>
+<span id="cb21-68"><a href="#cb21-68" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> page<span class="op">.</span><span class="fu">goto</span>(<span class="st">'/'</span>)<span class="op">;</span></span>
+<span id="cb21-69"><a href="#cb21-69" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> results <span class="op">=</span> <span class="cf">await</span> <span class="kw">new</span> <span class="fu">AxeBuilder</span>({ page })</span>
+<span id="cb21-70"><a href="#cb21-70" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">withTags</span>([<span class="st">'wcag2a'</span><span class="op">,</span> <span class="st">'wcag2aa'</span><span class="op">,</span> <span class="st">'wcag21a'</span><span class="op">,</span> <span class="st">'wcag21aa'</span><span class="op">,</span> <span class="st">'wcag22aa'</span>])</span>
+<span id="cb21-71"><a href="#cb21-71" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">analyze</span>()<span class="op">;</span></span>
+<span id="cb21-72"><a href="#cb21-72" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect</span>(results<span class="op">.</span><span class="at">violations</span>)<span class="op">.</span><span class="fu">toEqual</span>([])<span class="op">;</span></span>
+<span id="cb21-73"><a href="#cb21-73" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb21-74"><a href="#cb21-74" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-75"><a href="#cb21-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-76"><a href="#cb21-76" aria-hidden="true" tabindex="-1"></a>The check reports detectable violations. It does not tell you whether the page is accessible.</span>
+<span id="cb21-77"><a href="#cb21-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-78"><a href="#cb21-78" aria-hidden="true" tabindex="-1"></a><span class="fu">### What No Automated Check Can See</span></span>
+<span id="cb21-79"><a href="#cb21-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-80"><a href="#cb21-80" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Whether alt text describes the image.</span>
+<span id="cb21-81"><a href="#cb21-81" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Whether the heading order helps a person navigate.</span>
+<span id="cb21-82"><a href="#cb21-82" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Whether the copy is clear.</span>
+<span id="cb21-83"><a href="#cb21-83" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Whether the booking flow matches the business process.</span>
+<span id="cb21-84"><a href="#cb21-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Whether the site works on a slow connection.</span>
+<span id="cb21-85"><a href="#cb21-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Whether the data is correct.</span>
+<span id="cb21-86"><a href="#cb21-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Whether the user can recover from an error.</span>
+<span id="cb21-87"><a href="#cb21-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-88"><a href="#cb21-88" aria-hidden="true" tabindex="-1"></a>These are not edge cases. They are the parts of the experience that decide whether the client keeps the site.</span>
+<span id="cb21-89"><a href="#cb21-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-90"><a href="#cb21-90" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
+<span id="cb21-91"><a href="#cb21-91" aria-hidden="true" tabindex="-1"></a><span class="fu">## A passing axe run is not an accessibility sign-off</span></span>
+<span id="cb21-92"><a href="#cb21-92" aria-hidden="true" tabindex="-1"></a>axe can find a missing <span class="in">`alt`</span> attribute. It cannot tell you whether the <span class="in">`alt`</span> text says anything useful. It can find a missing label. It cannot tell you whether the label uses words the customer understands.</span>
+<span id="cb21-93"><a href="#cb21-93" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb21-94"><a href="#cb21-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-95"><a href="#cb21-95" aria-hidden="true" tabindex="-1"></a><span class="fu">## From Criterion to Check</span></span>
+<span id="cb21-96"><a href="#cb21-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-97"><a href="#cb21-97" aria-hidden="true" tabindex="-1"></a>The check starts with the acceptance criterion, not the code. If the criterion is vague, the check will be vague. @sec-specify gave you the criterion, and a check turns it into evidence.</span>
+<span id="cb21-98"><a href="#cb21-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-99"><a href="#cb21-99" aria-hidden="true" tabindex="-1"></a>A useful check has four parts:</span>
+<span id="cb21-100"><a href="#cb21-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-101"><a href="#cb21-101" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>The condition. A viewport, a page, a network response, a keyboard action.</span>
+<span id="cb21-102"><a href="#cb21-102" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>The action. What the user or the test does.</span>
+<span id="cb21-103"><a href="#cb21-103" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>The observable result. What must be true.</span>
+<span id="cb21-104"><a href="#cb21-104" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>The failure message. What the output says when it is false.</span>
+<span id="cb21-105"><a href="#cb21-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-106"><a href="#cb21-106" aria-hidden="true" tabindex="-1"></a>If one part is missing, the check is weak. A check that says "the page works" has no condition and no observable result.</span>
+<span id="cb21-107"><a href="#cb21-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-108"><a href="#cb21-108" aria-hidden="true" tabindex="-1"></a><span class="fu">### Example: The Booking Action at 375px</span></span>
+<span id="cb21-109"><a href="#cb21-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-110"><a href="#cb21-110" aria-hidden="true" tabindex="-1"></a>The criterion is: "The booking action is visible at 375px without scrolling."</span>
+<span id="cb21-111"><a href="#cb21-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-112"><a href="#cb21-112" aria-hidden="true" tabindex="-1"></a>A weak check looks for the viewport meta tag. The tag is a proxy. A page can have the tag and still overflow.</span>
+<span id="cb21-113"><a href="#cb21-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-114"><a href="#cb21-114" aria-hidden="true" tabindex="-1"></a><span class="in">```js</span></span>
+<span id="cb21-115"><a href="#cb21-115" aria-hidden="true" tabindex="-1"></a><span class="co">// Weak: checks a proxy, not the outcome.</span></span>
+<span id="cb21-116"><a href="#cb21-116" aria-hidden="true" tabindex="-1"></a><span class="fu">test</span>(<span class="st">'has a viewport meta tag'</span><span class="op">,</span> <span class="kw">async</span> ({ page }) <span class="kw">=&gt;</span> {</span>
+<span id="cb21-117"><a href="#cb21-117" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> page<span class="op">.</span><span class="fu">goto</span>(<span class="st">'/'</span>)<span class="op">;</span></span>
+<span id="cb21-118"><a href="#cb21-118" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> <span class="fu">expect</span>(page<span class="op">.</span><span class="fu">locator</span>(<span class="st">'meta[name="viewport"]'</span>))<span class="op">.</span><span class="fu">toHaveAttribute</span>(</span>
+<span id="cb21-119"><a href="#cb21-119" aria-hidden="true" tabindex="-1"></a>    <span class="st">'content'</span><span class="op">,</span></span>
+<span id="cb21-120"><a href="#cb21-120" aria-hidden="true" tabindex="-1"></a>    <span class="ss">/width=device-width/</span></span>
+<span id="cb21-121"><a href="#cb21-121" aria-hidden="true" tabindex="-1"></a>  )<span class="op">;</span></span>
+<span id="cb21-122"><a href="#cb21-122" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb21-123"><a href="#cb21-123" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-124"><a href="#cb21-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-125"><a href="#cb21-125" aria-hidden="true" tabindex="-1"></a>A stronger check opens the page at 375px and tests the result.</span>
+<span id="cb21-126"><a href="#cb21-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-127"><a href="#cb21-127" aria-hidden="true" tabindex="-1"></a><span class="in">```js</span></span>
+<span id="cb21-128"><a href="#cb21-128" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { test<span class="op">,</span> expect } <span class="im">from</span> <span class="st">'@playwright/test'</span><span class="op">;</span></span>
+<span id="cb21-129"><a href="#cb21-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-130"><a href="#cb21-130" aria-hidden="true" tabindex="-1"></a><span class="fu">test</span>(<span class="st">'booking action is visible at 375px'</span><span class="op">,</span> <span class="kw">async</span> ({ page }) <span class="kw">=&gt;</span> {</span>
+<span id="cb21-131"><a href="#cb21-131" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> page<span class="op">.</span><span class="fu">goto</span>(<span class="st">'/'</span>)<span class="op">;</span></span>
+<span id="cb21-132"><a href="#cb21-132" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> cta <span class="op">=</span> page<span class="op">.</span><span class="fu">locator</span>(<span class="st">'[data-cta="primary"]'</span>)<span class="op">;</span></span>
+<span id="cb21-133"><a href="#cb21-133" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> <span class="fu">expect</span>(cta)<span class="op">.</span><span class="fu">toBeVisible</span>()<span class="op">;</span></span>
+<span id="cb21-134"><a href="#cb21-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-135"><a href="#cb21-135" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> box <span class="op">=</span> <span class="cf">await</span> cta<span class="op">.</span><span class="fu">boundingBox</span>()<span class="op">;</span></span>
+<span id="cb21-136"><a href="#cb21-136" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> viewport <span class="op">=</span> page<span class="op">.</span><span class="fu">viewportSize</span>()<span class="op">;</span></span>
+<span id="cb21-137"><a href="#cb21-137" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect</span>(box<span class="op">.</span><span class="at">x</span>)<span class="op">.</span><span class="fu">toBeGreaterThanOrEqual</span>(<span class="dv">0</span>)<span class="op">;</span></span>
+<span id="cb21-138"><a href="#cb21-138" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect</span>(box<span class="op">.</span><span class="at">x</span> <span class="op">+</span> box<span class="op">.</span><span class="at">width</span>)<span class="op">.</span><span class="fu">toBeLessThanOrEqual</span>(viewport<span class="op">.</span><span class="at">width</span>)<span class="op">;</span></span>
+<span id="cb21-139"><a href="#cb21-139" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb21-140"><a href="#cb21-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-141"><a href="#cb21-141" aria-hidden="true" tabindex="-1"></a><span class="fu">test</span>(<span class="st">'no horizontal scroll at 375px'</span><span class="op">,</span> <span class="kw">async</span> ({ page }) <span class="kw">=&gt;</span> {</span>
+<span id="cb21-142"><a href="#cb21-142" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> page<span class="op">.</span><span class="fu">goto</span>(<span class="st">'/'</span>)<span class="op">;</span></span>
+<span id="cb21-143"><a href="#cb21-143" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> overflows <span class="op">=</span> <span class="cf">await</span> page<span class="op">.</span><span class="fu">evaluate</span>(</span>
+<span id="cb21-144"><a href="#cb21-144" aria-hidden="true" tabindex="-1"></a>    () <span class="kw">=&gt;</span></span>
+<span id="cb21-145"><a href="#cb21-145" aria-hidden="true" tabindex="-1"></a>      <span class="bu">document</span><span class="op">.</span><span class="at">documentElement</span><span class="op">.</span><span class="at">scrollWidth</span> <span class="op">&gt;</span></span>
+<span id="cb21-146"><a href="#cb21-146" aria-hidden="true" tabindex="-1"></a>      <span class="bu">document</span><span class="op">.</span><span class="at">documentElement</span><span class="op">.</span><span class="at">clientWidth</span></span>
+<span id="cb21-147"><a href="#cb21-147" aria-hidden="true" tabindex="-1"></a>  )<span class="op">;</span></span>
+<span id="cb21-148"><a href="#cb21-148" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect</span>(overflows)<span class="op">.</span><span class="fu">toBe</span>(<span class="kw">false</span>)<span class="op">;</span></span>
+<span id="cb21-149"><a href="#cb21-149" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb21-150"><a href="#cb21-150" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-151"><a href="#cb21-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-152"><a href="#cb21-152" aria-hidden="true" tabindex="-1"></a>The first check is not useless. It catches a missing tag. It does not catch the defect the customer reported.</span>
+<span id="cb21-153"><a href="#cb21-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-154"><a href="#cb21-154" aria-hidden="true" tabindex="-1"></a><span class="in">`toBeVisible()`</span> is stronger than <span class="in">`toBeAttached()`</span>. An element can be attached to the page and still sit outside the viewport. The customer cannot see it, and the weak check goes green.</span>
+<span id="cb21-155"><a href="#cb21-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-156"><a href="#cb21-156" aria-hidden="true" tabindex="-1"></a><span class="fu">### Example: Every Page Has a Title</span></span>
+<span id="cb21-157"><a href="#cb21-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-158"><a href="#cb21-158" aria-hidden="true" tabindex="-1"></a>The criterion is: "Every page has a non-empty title."</span>
+<span id="cb21-159"><a href="#cb21-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-160"><a href="#cb21-160" aria-hidden="true" tabindex="-1"></a><span class="in">```js</span></span>
+<span id="cb21-161"><a href="#cb21-161" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { test<span class="op">,</span> expect } <span class="im">from</span> <span class="st">'@playwright/test'</span><span class="op">;</span></span>
+<span id="cb21-162"><a href="#cb21-162" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { readFileSync } <span class="im">from</span> <span class="st">'node:fs'</span><span class="op">;</span></span>
+<span id="cb21-163"><a href="#cb21-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-164"><a href="#cb21-164" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> pages <span class="op">=</span> <span class="bu">JSON</span><span class="op">.</span><span class="fu">parse</span>(</span>
+<span id="cb21-165"><a href="#cb21-165" aria-hidden="true" tabindex="-1"></a>  <span class="fu">readFileSync</span>(<span class="kw">new</span> <span class="fu">URL</span>(<span class="st">'../pages.json'</span><span class="op">,</span> <span class="im">import</span><span class="op">.</span><span class="at">meta</span><span class="op">.</span><span class="at">url</span>)<span class="op">,</span> <span class="st">'utf8'</span>)</span>
+<span id="cb21-166"><a href="#cb21-166" aria-hidden="true" tabindex="-1"></a>)<span class="op">;</span></span>
+<span id="cb21-167"><a href="#cb21-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-168"><a href="#cb21-168" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (<span class="kw">const</span> path <span class="kw">of</span> pages) {</span>
+<span id="cb21-169"><a href="#cb21-169" aria-hidden="true" tabindex="-1"></a>  <span class="fu">test</span>(<span class="vs">`</span><span class="sc">${</span>path<span class="sc">}</span><span class="vs"> has a non-empty title`</span><span class="op">,</span> <span class="kw">async</span> ({ page }) <span class="kw">=&gt;</span> {</span>
+<span id="cb21-170"><a href="#cb21-170" aria-hidden="true" tabindex="-1"></a>    <span class="cf">await</span> page<span class="op">.</span><span class="fu">goto</span>(path)<span class="op">;</span></span>
+<span id="cb21-171"><a href="#cb21-171" aria-hidden="true" tabindex="-1"></a>    <span class="fu">expect</span>((<span class="cf">await</span> page<span class="op">.</span><span class="fu">title</span>())<span class="op">.</span><span class="fu">trim</span>()<span class="op">.</span><span class="at">length</span>)<span class="op">.</span><span class="fu">toBeGreaterThan</span>(<span class="dv">0</span>)<span class="op">;</span></span>
+<span id="cb21-172"><a href="#cb21-172" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb21-173"><a href="#cb21-173" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb21-174"><a href="#cb21-174" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-175"><a href="#cb21-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-176"><a href="#cb21-176" aria-hidden="true" tabindex="-1"></a>The check is only as good as the page list. If a page is missing from <span class="in">`pages.json`</span>, the check will not visit it. Review changes to <span class="in">`pages.json`</span> as carefully as changes to the site.</span>
+<span id="cb21-177"><a href="#cb21-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-178"><a href="#cb21-178" aria-hidden="true" tabindex="-1"></a><span class="fu">### Example: The API Failure</span></span>
+<span id="cb21-179"><a href="#cb21-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-180"><a href="#cb21-180" aria-hidden="true" tabindex="-1"></a>The criterion is: "When the live data request fails, the page shows a friendly message and a way to retry."</span>
+<span id="cb21-181"><a href="#cb21-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-182"><a href="#cb21-182" aria-hidden="true" tabindex="-1"></a>The happy path is easy to check. The unhappy path is the one that protects the customer.</span>
+<span id="cb21-183"><a href="#cb21-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-184"><a href="#cb21-184" aria-hidden="true" tabindex="-1"></a><span class="in">```js</span></span>
+<span id="cb21-185"><a href="#cb21-185" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { test<span class="op">,</span> expect } <span class="im">from</span> <span class="st">'@playwright/test'</span><span class="op">;</span></span>
+<span id="cb21-186"><a href="#cb21-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-187"><a href="#cb21-187" aria-hidden="true" tabindex="-1"></a><span class="fu">test</span>(<span class="st">'live data shows a friendly message when the API fails'</span><span class="op">,</span> <span class="kw">async</span> ({ page }) <span class="kw">=&gt;</span> {</span>
+<span id="cb21-188"><a href="#cb21-188" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> page<span class="op">.</span><span class="fu">route</span>(<span class="st">'**/.netlify/functions/opening-status*'</span><span class="op">,</span> route <span class="kw">=&gt;</span></span>
+<span id="cb21-189"><a href="#cb21-189" aria-hidden="true" tabindex="-1"></a>    route<span class="op">.</span><span class="fu">fulfill</span>({ <span class="dt">status</span><span class="op">:</span> <span class="dv">500</span><span class="op">,</span> <span class="dt">body</span><span class="op">:</span> <span class="st">'error'</span> })</span>
+<span id="cb21-190"><a href="#cb21-190" aria-hidden="true" tabindex="-1"></a>  )<span class="op">;</span></span>
+<span id="cb21-191"><a href="#cb21-191" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> page<span class="op">.</span><span class="fu">goto</span>(<span class="st">'/'</span>)<span class="op">;</span></span>
+<span id="cb21-192"><a href="#cb21-192" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> <span class="fu">expect</span>(page<span class="op">.</span><span class="fu">getByRole</span>(<span class="st">'status'</span>))<span class="op">.</span><span class="fu">toContainText</span>(<span class="ss">/unavailable</span><span class="sc">|</span><span class="ss">try again/i</span>)<span class="op">;</span></span>
+<span id="cb21-193"><a href="#cb21-193" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb21-194"><a href="#cb21-194" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-195"><a href="#cb21-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-196"><a href="#cb21-196" aria-hidden="true" tabindex="-1"></a>Use the path of the function your page calls. The route mock makes the check fast and repeatable. It does not prove the real API works. It proves the page handles a failure. Pair it with a smoke test against the real endpoint.</span>
+<span id="cb21-197"><a href="#cb21-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-198"><a href="#cb21-198" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> State <span class="pp">|</span> What the user sees <span class="pp">|</span> What the check asserts <span class="pp">|</span></span>
+<span id="cb21-199"><a href="#cb21-199" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb21-200"><a href="#cb21-200" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Loading <span class="pp">|</span> A message or a skeleton while the request is in flight <span class="pp">|</span> The status text appears before the data resolves <span class="pp">|</span></span>
+<span id="cb21-201"><a href="#cb21-201" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Error <span class="pp">|</span> A friendly message and a retry action <span class="pp">|</span> The message appears when the route returns 500 <span class="pp">|</span></span>
+<span id="cb21-202"><a href="#cb21-202" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Empty <span class="pp">|</span> A message that says there is no data <span class="pp">|</span> The message appears when the response is an empty list <span class="pp">|</span></span>
+<span id="cb21-203"><a href="#cb21-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-204"><a href="#cb21-204" aria-hidden="true" tabindex="-1"></a>A blank space is a defect. A spinner that never stops is a defect. An error message that says "Error" is barely better than a blank space.</span>
+<span id="cb21-205"><a href="#cb21-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-206"><a href="#cb21-206" aria-hidden="true" tabindex="-1"></a>@sec-connection shows how the request, the function and the response fit together. This chapter shows how to prove the page behaves when the response is bad.</span>
+<span id="cb21-207"><a href="#cb21-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-208"><a href="#cb21-208" aria-hidden="true" tabindex="-1"></a><span class="fu">## Working with Your AI Partner</span></span>
+<span id="cb21-209"><a href="#cb21-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-210"><a href="#cb21-210" aria-hidden="true" tabindex="-1"></a>AI is useful at three points in this chapter. It can draft a check from a criterion, show you how a check can be gamed, and describe a page that passes a check but fails a person. It is a poor judge of whether the check is enough. That judgement is yours.</span>
+<span id="cb21-211"><a href="#cb21-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-212"><a href="#cb21-212" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exploration 1: Draft a Check from a Criterion</span></span>
+<span id="cb21-213"><a href="#cb21-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-214"><a href="#cb21-214" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
+<span id="cb21-215"><a href="#cb21-215" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
+<span id="cb21-216"><a href="#cb21-216" aria-hidden="true" tabindex="-1"></a><span class="in">Here is an acceptance criterion: "The booking action is visible at 375px</span></span>
+<span id="cb21-217"><a href="#cb21-217" aria-hidden="true" tabindex="-1"></a><span class="in">without scrolling." Write the smallest Playwright check that would fail</span></span>
+<span id="cb21-218"><a href="#cb21-218" aria-hidden="true" tabindex="-1"></a><span class="in">if the criterion were false. Then name one thing the check cannot see.</span></span>
+<span id="cb21-219"><a href="#cb21-219" aria-hidden="true" tabindex="-1"></a><span class="in">Do not change the site.</span></span>
+<span id="cb21-220"><a href="#cb21-220" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-221"><a href="#cb21-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-222"><a href="#cb21-222" aria-hidden="true" tabindex="-1"></a>Read the check before you run it. Does it test the outcome or a proxy? Does it use a role or a brittle selector? What happens if the button is attached but off-screen? Improve the check before you trust it.</span>
+<span id="cb21-223"><a href="#cb21-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-224"><a href="#cb21-224" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exploration 2: Ask How the Check Could Be Gamed</span></span>
+<span id="cb21-225"><a href="#cb21-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-226"><a href="#cb21-226" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
+<span id="cb21-227"><a href="#cb21-227" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
+<span id="cb21-228"><a href="#cb21-228" aria-hidden="true" tabindex="-1"></a><span class="in">Here is a passing check. Show me three ways to make it pass without</span></span>
+<span id="cb21-229"><a href="#cb21-229" aria-hidden="true" tabindex="-1"></a><span class="in">fixing the page. For each one, explain what it hides from the customer.</span></span>
+<span id="cb21-230"><a href="#cb21-230" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-231"><a href="#cb21-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-232"><a href="#cb21-232" aria-hidden="true" tabindex="-1"></a>The answer is a catalogue of the shortcuts in the next section. Do not apply them. Use them to recognise the diff when an agent does.</span>
+<span id="cb21-233"><a href="#cb21-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-234"><a href="#cb21-234" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exploration 3: Find the Proxy</span></span>
+<span id="cb21-235"><a href="#cb21-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-236"><a href="#cb21-236" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
+<span id="cb21-237"><a href="#cb21-237" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
+<span id="cb21-238"><a href="#cb21-238" aria-hidden="true" tabindex="-1"></a><span class="in">Here is a check. Is it testing the outcome or a proxy? Describe a page</span></span>
+<span id="cb21-239"><a href="#cb21-239" aria-hidden="true" tabindex="-1"></a><span class="in">that would pass the check and still fail the user.</span></span>
+<span id="cb21-240"><a href="#cb21-240" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-241"><a href="#cb21-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-242"><a href="#cb21-242" aria-hidden="true" tabindex="-1"></a>A good answer names the gap between the assertion and the experience. That gap is why the manual check still exists.</span>
+<span id="cb21-243"><a href="#cb21-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-244"><a href="#cb21-244" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Failure: The Agent Games the Check</span></span>
+<span id="cb21-245"><a href="#cb21-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-246"><a href="#cb21-246" aria-hidden="true" tabindex="-1"></a>An agent asked to make a check pass has three options. It can fix the site, weaken the check, or hide the problem. It will often choose the cheapest path that produces green. The agent is not malicious. It is optimising for the signal you gave it.</span>
+<span id="cb21-247"><a href="#cb21-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-248"><a href="#cb21-248" aria-hidden="true" tabindex="-1"></a>Your job is to make sure the green means something.</span>
+<span id="cb21-249"><a href="#cb21-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-250"><a href="#cb21-250" aria-hidden="true" tabindex="-1"></a>Each common shortcut below is a diff to read. The output alone is not enough.</span>
+<span id="cb21-251"><a href="#cb21-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-252"><a href="#cb21-252" aria-hidden="true" tabindex="-1"></a><span class="fu">### Weakening the Assertion</span></span>
+<span id="cb21-253"><a href="#cb21-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-254"><a href="#cb21-254" aria-hidden="true" tabindex="-1"></a><span class="in">```diff</span></span>
+<span id="cb21-255"><a href="#cb21-255" aria-hidden="true" tabindex="-1"></a><span class="in">- await expect(page.locator('[data-cta="primary"]')).toBeVisible();</span></span>
+<span id="cb21-256"><a href="#cb21-256" aria-hidden="true" tabindex="-1"></a><span class="in">+ await expect(page.locator('[data-cta="primary"]')).toBeAttached();</span></span>
+<span id="cb21-257"><a href="#cb21-257" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-258"><a href="#cb21-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-259"><a href="#cb21-259" aria-hidden="true" tabindex="-1"></a><span class="in">`toBeAttached()`</span> passes when the element is in the DOM. It can be off-screen, covered, or invisible. <span class="in">`toBeVisible()`</span> tests what the customer can see.</span>
+<span id="cb21-260"><a href="#cb21-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-261"><a href="#cb21-261" aria-hidden="true" tabindex="-1"></a><span class="in">```diff</span></span>
+<span id="cb21-262"><a href="#cb21-262" aria-hidden="true" tabindex="-1"></a><span class="in">- expect(results.violations).toEqual([]);</span></span>
+<span id="cb21-263"><a href="#cb21-263" aria-hidden="true" tabindex="-1"></a><span class="in">+ expect(results.violations.length).toBeLessThan(3);</span></span>
+<span id="cb21-264"><a href="#cb21-264" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-265"><a href="#cb21-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-266"><a href="#cb21-266" aria-hidden="true" tabindex="-1"></a>The second check allows two accessibility violations. That is not a stricter version of the first. It is a different contract.</span>
+<span id="cb21-267"><a href="#cb21-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-268"><a href="#cb21-268" aria-hidden="true" tabindex="-1"></a><span class="fu">### Skipping the Check</span></span>
+<span id="cb21-269"><a href="#cb21-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-270"><a href="#cb21-270" aria-hidden="true" tabindex="-1"></a><span class="in">```diff</span></span>
+<span id="cb21-271"><a href="#cb21-271" aria-hidden="true" tabindex="-1"></a><span class="in">- test('no horizontal scroll at 375px', async ({ page }) =&gt; {</span></span>
+<span id="cb21-272"><a href="#cb21-272" aria-hidden="true" tabindex="-1"></a><span class="in">+ test.skip('no horizontal scroll at 375px', async ({ page }) =&gt; {</span></span>
+<span id="cb21-273"><a href="#cb21-273" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-274"><a href="#cb21-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-275"><a href="#cb21-275" aria-hidden="true" tabindex="-1"></a>A skipped check is a green check that tests nothing. Read the output for <span class="in">`skipped`</span> as well as <span class="in">`passed`</span>.</span>
+<span id="cb21-276"><a href="#cb21-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-277"><a href="#cb21-277" aria-hidden="true" tabindex="-1"></a><span class="fu">### Hiding the Problem</span></span>
+<span id="cb21-278"><a href="#cb21-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-279"><a href="#cb21-279" aria-hidden="true" tabindex="-1"></a><span class="in">```diff</span></span>
+<span id="cb21-280"><a href="#cb21-280" aria-hidden="true" tabindex="-1"></a><span class="in">- &lt;button data-cta="primary"&gt;Book a table&lt;/button&gt;</span></span>
+<span id="cb21-281"><a href="#cb21-281" aria-hidden="true" tabindex="-1"></a><span class="in">+ &lt;button data-cta="primary" aria-hidden="true"&gt;Book a table&lt;/button&gt;</span></span>
+<span id="cb21-282"><a href="#cb21-282" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-283"><a href="#cb21-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-284"><a href="#cb21-284" aria-hidden="true" tabindex="-1"></a>The button is now hidden from screen readers. A sighted user can still click it. A screen reader user loses the action. A visibility check may pass because the page still renders. If the suite runs axe, this may be caught. If it only checks visibility, it will not. The customer is worse off.</span>
+<span id="cb21-285"><a href="#cb21-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-286"><a href="#cb21-286" aria-hidden="true" tabindex="-1"></a><span class="in">`aria-hidden`</span> is not a fix for a duplicate control or a confusing label. It is a way to remove content from the accessibility tree. Use it for decorative content. Do not use it to hide content from a check.</span>
+<span id="cb21-287"><a href="#cb21-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-288"><a href="#cb21-288" aria-hidden="true" tabindex="-1"></a><span class="fu">### Hiding the Symptom</span></span>
+<span id="cb21-289"><a href="#cb21-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-290"><a href="#cb21-290" aria-hidden="true" tabindex="-1"></a><span class="in">```css</span></span>
+<span id="cb21-291"><a href="#cb21-291" aria-hidden="true" tabindex="-1"></a>body <span class="op">{</span></span>
+<span id="cb21-292"><a href="#cb21-292" aria-hidden="true" tabindex="-1"></a>  overflow<span class="op">-</span>x<span class="op">:</span> hidden<span class="op">;</span></span>
+<span id="cb21-293"><a href="#cb21-293" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb21-294"><a href="#cb21-294" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-295"><a href="#cb21-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-296"><a href="#cb21-296" aria-hidden="true" tabindex="-1"></a>This clips the horizontal scroll. The fixed-width element is still there. The customer can still lose content off the edge. Find the fixed width, the image, or the grid that causes the overflow. @sec-presentation covers the common causes.</span>
+<span id="cb21-297"><a href="#cb21-297" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-298"><a href="#cb21-298" aria-hidden="true" tabindex="-1"></a><span class="fu">### Editing the Page List</span></span>
+<span id="cb21-299"><a href="#cb21-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-300"><a href="#cb21-300" aria-hidden="true" tabindex="-1"></a>A failing page is removed from <span class="in">`pages.json`</span>. The checks visit fewer pages. The suite goes green.</span>
+<span id="cb21-301"><a href="#cb21-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-302"><a href="#cb21-302" aria-hidden="true" tabindex="-1"></a>Review <span class="in">`git diff pages.json`</span> after every agent change. The page list is part of the test surface.</span>
+<span id="cb21-303"><a href="#cb21-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-304"><a href="#cb21-304" aria-hidden="true" tabindex="-1"></a><span class="fu">### Waiting for Luck</span></span>
+<span id="cb21-305"><a href="#cb21-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-306"><a href="#cb21-306" aria-hidden="true" tabindex="-1"></a><span class="in">```js</span></span>
+<span id="cb21-307"><a href="#cb21-307" aria-hidden="true" tabindex="-1"></a><span class="cf">await</span> page<span class="op">.</span><span class="fu">waitForTimeout</span>(<span class="dv">2000</span>)<span class="op">;</span></span>
+<span id="cb21-308"><a href="#cb21-308" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-309"><a href="#cb21-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-310"><a href="#cb21-310" aria-hidden="true" tabindex="-1"></a>A fixed wait can make a flaky check pass once. It slows the suite and hides the race. Use a web-first assertion such as <span class="in">`await expect(locator).toBeVisible()`</span>. Let the tool wait for the condition. A fixed delay only guesses how long that takes.</span>
+<span id="cb21-311"><a href="#cb21-311" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-312"><a href="#cb21-312" aria-hidden="true" tabindex="-1"></a><span class="fu">### How to Catch a Shortcut</span></span>
+<span id="cb21-313"><a href="#cb21-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-314"><a href="#cb21-314" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Read the diff as well as the green output.</span>
+<span id="cb21-315"><a href="#cb21-315" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Run <span class="in">`git log --oneline -- checks/`</span>.</span>
+<span id="cb21-316"><a href="#cb21-316" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Make the check fail on purpose before you trust it.</span>
+<span id="cb21-317"><a href="#cb21-317" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ask the agent for the command and the output.</span>
+<span id="cb21-318"><a href="#cb21-318" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Review changes to <span class="in">`pages.json`</span>.</span>
+<span id="cb21-319"><a href="#cb21-319" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check that the assertion names the observable result.</span>
+<span id="cb21-320"><a href="#cb21-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-321"><a href="#cb21-321" aria-hidden="true" tabindex="-1"></a><span class="fu">## Git Evidence</span></span>
+<span id="cb21-322"><a href="#cb21-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-323"><a href="#cb21-323" aria-hidden="true" tabindex="-1"></a>The provided checks are a contract. The project template puts them in <span class="in">`checks/`</span>. Your own checks go in <span class="in">`tests/`</span>.</span>
+<span id="cb21-324"><a href="#cb21-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-325"><a href="#cb21-325" aria-hidden="true" tabindex="-1"></a>The history should show one commit for the provided checks: the commit that added the template. Run:</span>
+<span id="cb21-326"><a href="#cb21-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-327"><a href="#cb21-327" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb21-328"><a href="#cb21-328" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span> <span class="at">--</span> checks/</span>
+<span id="cb21-329"><a href="#cb21-329" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-330"><a href="#cb21-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-331"><a href="#cb21-331" aria-hidden="true" tabindex="-1"></a>If there is a second commit, read it. If it edits a check, the checks were weakened. Revert the change, then fix the site. Record what happened in <span class="in">`DECISIONS.md`</span>.</span>
+<span id="cb21-332"><a href="#cb21-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-333"><a href="#cb21-333" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb21-334"><a href="#cb21-334" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="op">&lt;</span>commit<span class="op">&gt;</span> -- checks/</span>
+<span id="cb21-335"><a href="#cb21-335" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-336"><a href="#cb21-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-337"><a href="#cb21-337" aria-hidden="true" tabindex="-1"></a>The commit hash is the one that added the checks. If you are unsure, ask the agent to show <span class="in">`git log -p -- checks/`</span> and read the diff before you revert.</span>
+<span id="cb21-338"><a href="#cb21-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-339"><a href="#cb21-339" aria-hidden="true" tabindex="-1"></a>A check is evidence only if the check itself is trustworthy. The git history is how you prove that the provided checks were not weakened.</span>
+<span id="cb21-340"><a href="#cb21-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-341"><a href="#cb21-341" aria-hidden="true" tabindex="-1"></a>A provided check can be wrong. If you believe it is, do not edit it. Record the problem in <span class="in">`CRITIQUE.md`</span>, show the evidence, and ask for a decision. The default is to fix the site.</span>
+<span id="cb21-342"><a href="#cb21-342" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-343"><a href="#cb21-343" aria-hidden="true" tabindex="-1"></a><span class="fu">## A Worked 375px Audit</span></span>
+<span id="cb21-344"><a href="#cb21-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-345"><a href="#cb21-345" aria-hidden="true" tabindex="-1"></a>The site passes the desktop checks. The booking page looks fine on a laptop. At 375px, the page scrolls sideways and the booking button sits off-screen.</span>
+<span id="cb21-346"><a href="#cb21-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-347"><a href="#cb21-347" aria-hidden="true" tabindex="-1"></a>The existing check looks for the viewport meta tag. It passes. The customer still cannot book.</span>
+<span id="cb21-348"><a href="#cb21-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-349"><a href="#cb21-349" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Open the site at 375px. Record the defect in <span class="in">`CRITIQUE.md`</span>.</span>
+<span id="cb21-350"><a href="#cb21-350" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Write the outcome check. It fails.</span>
+<span id="cb21-351"><a href="#cb21-351" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Find the fixed width. It might be a hero image, a grid, a table, or a container with a hard-coded <span class="in">`width`</span>.</span>
+<span id="cb21-352"><a href="#cb21-352" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Fix the cause. Do not add <span class="in">`overflow-x: hidden`</span>.</span>
+<span id="cb21-353"><a href="#cb21-353" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Run the check again. It passes.</span>
+<span id="cb21-354"><a href="#cb21-354" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>Add the criterion to <span class="in">`SPEC.md`</span> if it was missing. The check and the criterion should point at each other.</span>
+<span id="cb21-355"><a href="#cb21-355" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-356"><a href="#cb21-356" aria-hidden="true" tabindex="-1"></a>The audit is not finished when the page looks better. It is finished when the check would catch the defect if it returned.</span>
+<span id="cb21-357"><a href="#cb21-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-358"><a href="#cb21-358" aria-hidden="true" tabindex="-1"></a><span class="fu">## A Worked API Failure</span></span>
+<span id="cb21-359"><a href="#cb21-359" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-360"><a href="#cb21-360" aria-hidden="true" tabindex="-1"></a>The live data widget shows opening status, today's specials, or another small piece of business data. When the API is up, the widget looks fine. When the API fails, the widget is blank.</span>
+<span id="cb21-361"><a href="#cb21-361" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-362"><a href="#cb21-362" aria-hidden="true" tabindex="-1"></a>The happy-path check passes. The unhappy path has no check.</span>
+<span id="cb21-363"><a href="#cb21-363" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-364"><a href="#cb21-364" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Mock a 500 response in a Playwright test.</span>
+<span id="cb21-365"><a href="#cb21-365" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Assert that the page shows a friendly message.</span>
+<span id="cb21-366"><a href="#cb21-366" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Run the check. It fails because the page has no error state.</span>
+<span id="cb21-367"><a href="#cb21-367" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Add the error state. Add a loading state and an empty state while you are there.</span>
+<span id="cb21-368"><a href="#cb21-368" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Run the check again. Then run the happy path again.</span>
+<span id="cb21-369"><a href="#cb21-369" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>Record the decision in <span class="in">`DECISIONS.md`</span> and the remaining gap in <span class="in">`CRITIQUE.md`</span>.</span>
+<span id="cb21-370"><a href="#cb21-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-371"><a href="#cb21-371" aria-hidden="true" tabindex="-1"></a>The check does not prove the API will never fail. It proves the page does something useful when it does.</span>
+<span id="cb21-372"><a href="#cb21-372" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-373"><a href="#cb21-373" aria-hidden="true" tabindex="-1"></a><span class="fu">## Building Your Mental Model</span></span>
+<span id="cb21-374"><a href="#cb21-374" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-375"><a href="#cb21-375" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Check Pyramid</span></span>
+<span id="cb21-376"><a href="#cb21-376" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-377"><a href="#cb21-377" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
+<span id="cb21-378"><a href="#cb21-378" aria-hidden="true" tabindex="-1"></a><span class="in">performance and budgets      Lighthouse CI</span></span>
+<span id="cb21-379"><a href="#cb21-379" aria-hidden="true" tabindex="-1"></a><span class="in">behaviour and layout         Playwright</span></span>
+<span id="cb21-380"><a href="#cb21-380" aria-hidden="true" tabindex="-1"></a><span class="in">accessibility                axe</span></span>
+<span id="cb21-381"><a href="#cb21-381" aria-hidden="true" tabindex="-1"></a><span class="in">structure                    html-validate</span></span>
+<span id="cb21-382"><a href="#cb21-382" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-383"><a href="#cb21-383" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-384"><a href="#cb21-384" aria-hidden="true" tabindex="-1"></a>Start at the bottom. A page with invalid HTML is harder to check. A page with no accessible names is harder to use. The layers catch different defects. None of them is enough alone.</span>
+<span id="cb21-385"><a href="#cb21-385" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-386"><a href="#cb21-386" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Criterion Chain</span></span>
+<span id="cb21-387"><a href="#cb21-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-388"><a href="#cb21-388" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
+<span id="cb21-389"><a href="#cb21-389" aria-hidden="true" tabindex="-1"></a><span class="in">criterion -&gt; condition -&gt; action -&gt; observable result -&gt; assertion -&gt; failure message</span></span>
+<span id="cb21-390"><a href="#cb21-390" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-391"><a href="#cb21-391" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-392"><a href="#cb21-392" aria-hidden="true" tabindex="-1"></a>If the chain breaks at the condition, the check tests the wrong thing. If it breaks at the observable result, the check tests a proxy. If it breaks at the failure message, you will not know what failed.</span>
+<span id="cb21-393"><a href="#cb21-393" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-394"><a href="#cb21-394" aria-hidden="true" tabindex="-1"></a><span class="fu">### What the Check Proves</span></span>
+<span id="cb21-395"><a href="#cb21-395" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-396"><a href="#cb21-396" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> The check proves <span class="pp">|</span> The check does not prove <span class="pp">|</span></span>
+<span id="cb21-397"><a href="#cb21-397" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
+<span id="cb21-398"><a href="#cb21-398" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> One claim held under one condition <span class="pp">|</span> The site is good <span class="pp">|</span></span>
+<span id="cb21-399"><a href="#cb21-399" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> The defect is gone for that path <span class="pp">|</span> The defect is gone everywhere <span class="pp">|</span></span>
+<span id="cb21-400"><a href="#cb21-400" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> The page handles a mocked failure <span class="pp">|</span> The real API works <span class="pp">|</span></span>
+<span id="cb21-401"><a href="#cb21-401" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> The element is in the viewport at 375px <span class="pp">|</span> The page is usable on a cheap phone <span class="pp">|</span></span>
+<span id="cb21-402"><a href="#cb21-402" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> The provided checks were not edited <span class="pp">|</span> The student understood the check <span class="pp">|</span></span>
+<span id="cb21-403"><a href="#cb21-403" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-404"><a href="#cb21-404" aria-hidden="true" tabindex="-1"></a><span class="fu">## Business Applications</span></span>
+<span id="cb21-405"><a href="#cb21-405" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-406"><a href="#cb21-406" aria-hidden="true" tabindex="-1"></a>Checks reduce rework. A defect caught before the client sees it costs minutes. A defect caught after launch costs trust, support time and sometimes revenue.</span>
+<span id="cb21-407"><a href="#cb21-407" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-408"><a href="#cb21-408" aria-hidden="true" tabindex="-1"></a>A fixed-price quote is easier to defend when you can name what you will verify: the booking action at 375px, the error state, the page titles, the contrast. The client knows what "done" includes.</span>
+<span id="cb21-409"><a href="#cb21-409" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-410"><a href="#cb21-410" aria-hidden="true" tabindex="-1"></a>The checks are also handover evidence. The next developer can run the suite before changing anything. They do not have to trust a chat log or a colleague's memory.</span>
+<span id="cb21-411"><a href="#cb21-411" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-412"><a href="#cb21-412" aria-hidden="true" tabindex="-1"></a>For AI projects, the suite is the defence. You can show what the agent changed, what the checks proved, and what still needs a human. That is a stronger position than "the agent said it was done".</span>
+<span id="cb21-413"><a href="#cb21-413" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-414"><a href="#cb21-414" aria-hidden="true" tabindex="-1"></a>A regression caught before the customer sees it lowers the cost of change, which makes the site safer to improve.</span>
+<span id="cb21-415"><a href="#cb21-415" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-416"><a href="#cb21-416" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb21-417"><a href="#cb21-417" aria-hidden="true" tabindex="-1"></a><span class="fu">## Skills You Are Building</span></span>
+<span id="cb21-418"><a href="#cb21-418" aria-hidden="true" tabindex="-1"></a>This develops evaluating and improving solutions, professional communication, and the judgement to decide what evidence is enough. A check is how you show your work.</span>
+<span id="cb21-419"><a href="#cb21-419" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb21-420"><a href="#cb21-420" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-421"><a href="#cb21-421" aria-hidden="true" tabindex="-1"></a><span class="fu">## Practice Exercises</span></span>
+<span id="cb21-422"><a href="#cb21-422" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-423"><a href="#cb21-423" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb21-424"><a href="#cb21-424" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise Levels</span></span>
+<span id="cb21-425"><a href="#cb21-425" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 1**: Direct application</span>
+<span id="cb21-426"><a href="#cb21-426" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 2**: Minor modifications</span>
+<span id="cb21-427"><a href="#cb21-427" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 3**: Combining concepts</span>
+<span id="cb21-428"><a href="#cb21-428" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 4**: Problem-solving</span>
+<span id="cb21-429"><a href="#cb21-429" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 5**: Open-ended design</span>
+<span id="cb21-430"><a href="#cb21-430" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb21-431"><a href="#cb21-431" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-432"><a href="#cb21-432" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 3.1: Run and Read (Level 1)</span></span>
+<span id="cb21-433"><a href="#cb21-433" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-434"><a href="#cb21-434" aria-hidden="true" tabindex="-1"></a>Run the project's check command. Record every failure in <span class="in">`CRITIQUE.md`</span> under <span class="in">`## Check results`</span>.</span>
+<span id="cb21-435"><a href="#cb21-435" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-436"><a href="#cb21-436" aria-hidden="true" tabindex="-1"></a>For each failure, answer:</span>
+<span id="cb21-437"><a href="#cb21-437" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-438"><a href="#cb21-438" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Is this a site problem or a check problem?</span>
+<span id="cb21-439"><a href="#cb21-439" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Which user is affected?</span>
+<span id="cb21-440"><a href="#cb21-440" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>What is the smallest fix?</span>
+<span id="cb21-441"><a href="#cb21-441" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-442"><a href="#cb21-442" aria-hidden="true" tabindex="-1"></a>Then name one thing the checks cannot see.</span>
+<span id="cb21-443"><a href="#cb21-443" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-444"><a href="#cb21-444" aria-hidden="true" tabindex="-1"></a>**Done when:** you can list every failure and explain one limit of the suite.</span>
+<span id="cb21-445"><a href="#cb21-445" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-446"><a href="#cb21-446" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 3.2: One Criterion, One Check (Level 2)</span></span>
+<span id="cb21-447"><a href="#cb21-447" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-448"><a href="#cb21-448" aria-hidden="true" tabindex="-1"></a>Choose one acceptance criterion from <span class="in">`SPEC.md`</span> that the provided checks do not cover. Write a check in <span class="in">`tests/`</span>.</span>
+<span id="cb21-449"><a href="#cb21-449" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-450"><a href="#cb21-450" aria-hidden="true" tabindex="-1"></a>Make it fail first. Break the page or remove the feature. Then fix the site and make it pass.</span>
+<span id="cb21-451"><a href="#cb21-451" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-452"><a href="#cb21-452" aria-hidden="true" tabindex="-1"></a>**Done when:** the check fails when the criterion is false and passes when it is true.</span>
+<span id="cb21-453"><a href="#cb21-453" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-454"><a href="#cb21-454" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 3.3: The 375px Outcome Check (Level 3)</span></span>
+<span id="cb21-455"><a href="#cb21-455" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-456"><a href="#cb21-456" aria-hidden="true" tabindex="-1"></a>Write two checks:</span>
+<span id="cb21-457"><a href="#cb21-457" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-458"><a href="#cb21-458" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>No horizontal scroll at 375px.</span>
+<span id="cb21-459"><a href="#cb21-459" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>The primary action is inside the viewport at 375px.</span>
+<span id="cb21-460"><a href="#cb21-460" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-461"><a href="#cb21-461" aria-hidden="true" tabindex="-1"></a>Run them on a page with a fixed-width element. Then fix the page and run them again. Explain why a viewport meta tag check is not enough.</span>
+<span id="cb21-462"><a href="#cb21-462" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-463"><a href="#cb21-463" aria-hidden="true" tabindex="-1"></a>**Done when:** both checks fail on the broken page and pass on the fixed page.</span>
+<span id="cb21-464"><a href="#cb21-464" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-465"><a href="#cb21-465" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 3.4: The Unhappy Path (Level 4)</span></span>
+<span id="cb21-466"><a href="#cb21-466" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-467"><a href="#cb21-467" aria-hidden="true" tabindex="-1"></a>Choose a page that loads live data. Write checks for three states:</span>
+<span id="cb21-468"><a href="#cb21-468" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-469"><a href="#cb21-469" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>the loading state</span>
+<span id="cb21-470"><a href="#cb21-470" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>the error state</span>
+<span id="cb21-471"><a href="#cb21-471" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>the empty state</span>
+<span id="cb21-472"><a href="#cb21-472" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-473"><a href="#cb21-473" aria-hidden="true" tabindex="-1"></a>Mock the responses. Show that the page never shows a blank space or a spinner that never stops.</span>
+<span id="cb21-474"><a href="#cb21-474" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-475"><a href="#cb21-475" aria-hidden="true" tabindex="-1"></a>**Done when:** each state has a check that fails when the state is missing.</span>
+<span id="cb21-476"><a href="#cb21-476" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-477"><a href="#cb21-477" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 3.5: Catch the Gaming Diff (Level 4)</span></span>
+<span id="cb21-478"><a href="#cb21-478" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-479"><a href="#cb21-479" aria-hidden="true" tabindex="-1"></a>Here is a diff an agent produced after being asked to make a check pass.</span>
+<span id="cb21-480"><a href="#cb21-480" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-481"><a href="#cb21-481" aria-hidden="true" tabindex="-1"></a><span class="in">```diff</span></span>
+<span id="cb21-482"><a href="#cb21-482" aria-hidden="true" tabindex="-1"></a><span class="in">- await expect(page.locator('[data-cta="primary"]')).toBeVisible();</span></span>
+<span id="cb21-483"><a href="#cb21-483" aria-hidden="true" tabindex="-1"></a><span class="in">+ await expect(page.locator('[data-cta="primary"]')).toBeAttached();</span></span>
+<span id="cb21-484"><a href="#cb21-484" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-485"><a href="#cb21-485" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-486"><a href="#cb21-486" aria-hidden="true" tabindex="-1"></a>And another:</span>
+<span id="cb21-487"><a href="#cb21-487" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-488"><a href="#cb21-488" aria-hidden="true" tabindex="-1"></a><span class="in">```diff</span></span>
+<span id="cb21-489"><a href="#cb21-489" aria-hidden="true" tabindex="-1"></a><span class="in">- expect(results.violations).toEqual([]);</span></span>
+<span id="cb21-490"><a href="#cb21-490" aria-hidden="true" tabindex="-1"></a><span class="in">+ expect(results.violations.length).toBeLessThan(3);</span></span>
+<span id="cb21-491"><a href="#cb21-491" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-492"><a href="#cb21-492" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-493"><a href="#cb21-493" aria-hidden="true" tabindex="-1"></a>Answer:</span>
+<span id="cb21-494"><a href="#cb21-494" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-495"><a href="#cb21-495" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>What does each change hide?</span>
+<span id="cb21-496"><a href="#cb21-496" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Why is the original assertion stronger?</span>
+<span id="cb21-497"><a href="#cb21-497" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>What would you see in the browser that the new check would miss?</span>
+<span id="cb21-498"><a href="#cb21-498" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-499"><a href="#cb21-499" aria-hidden="true" tabindex="-1"></a>Then revert the changes, fix the site, and write a check that fails on the broken page.</span>
+<span id="cb21-500"><a href="#cb21-500" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-501"><a href="#cb21-501" aria-hidden="true" tabindex="-1"></a>**Done when:** you can explain the weakening and your replacement check fails when the defect returns.</span>
+<span id="cb21-502"><a href="#cb21-502" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-503"><a href="#cb21-503" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 3.6: What the Check Cannot See (Level 5)</span></span>
+<span id="cb21-504"><a href="#cb21-504" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-505"><a href="#cb21-505" aria-hidden="true" tabindex="-1"></a>Write a manual test script for the things automation misses:</span>
+<span id="cb21-506"><a href="#cb21-506" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-507"><a href="#cb21-507" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>meaningful alt text</span>
+<span id="cb21-508"><a href="#cb21-508" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>heading order</span>
+<span id="cb21-509"><a href="#cb21-509" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>copy clarity</span>
+<span id="cb21-510"><a href="#cb21-510" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>the booking process</span>
+<span id="cb21-511"><a href="#cb21-511" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>a slow connection</span>
+<span id="cb21-512"><a href="#cb21-512" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>data correctness</span>
+<span id="cb21-513"><a href="#cb21-513" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-514"><a href="#cb21-514" aria-hidden="true" tabindex="-1"></a>Run it on a classmate's site. Record three findings. For each finding, name the user it affects and the change you would make.</span>
+<span id="cb21-515"><a href="#cb21-515" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-516"><a href="#cb21-516" aria-hidden="true" tabindex="-1"></a>**Done when:** another person could run the script without asking you what you meant.</span>
+<span id="cb21-517"><a href="#cb21-517" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-518"><a href="#cb21-518" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chapter Summary</span></span>
+<span id="cb21-519"><a href="#cb21-519" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-520"><a href="#cb21-520" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A check is a claim about the build that can fail.</span>
+<span id="cb21-521"><a href="#cb21-521" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>WCAG POUR gives the human checklist. Tools cover a subset.</span>
+<span id="cb21-522"><a href="#cb21-522" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Start from the acceptance criterion, not the code.</span>
+<span id="cb21-523"><a href="#cb21-523" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check the outcome, not the proxy.</span>
+<span id="cb21-524"><a href="#cb21-524" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The agent will optimise for green. Read the diff.</span>
+<span id="cb21-525"><a href="#cb21-525" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The provided checks are a contract. <span class="in">`git log -- checks/`</span> proves they were not weakened.</span>
+<span id="cb21-526"><a href="#cb21-526" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The unhappy path needs checks too.</span>
+<span id="cb21-527"><a href="#cb21-527" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A check is evidence only if you know what it asserts.</span>
+<span id="cb21-528"><a href="#cb21-528" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-529"><a href="#cb21-529" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reflection</span></span>
+<span id="cb21-530"><a href="#cb21-530" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-531"><a href="#cb21-531" aria-hidden="true" tabindex="-1"></a>Before moving on, ensure you can:</span>
+<span id="cb21-532"><a href="#cb21-532" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-533"><a href="#cb21-533" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Explain POUR with one example per principle</span>
+<span id="cb21-534"><a href="#cb21-534" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Name what axe catches and what it misses</span>
+<span id="cb21-535"><a href="#cb21-535" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Write a check from an acceptance criterion</span>
+<span id="cb21-536"><a href="#cb21-536" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Make a check fail before making it pass</span>
+<span id="cb21-537"><a href="#cb21-537" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Read a diff and spot a weakened assertion</span>
+<span id="cb21-538"><a href="#cb21-538" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Use <span class="in">`git log -- checks/`</span> as evidence</span>
+<span id="cb21-539"><a href="#cb21-539" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Write checks for loading, error and empty states</span>
+<span id="cb21-540"><a href="#cb21-540" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Name one thing your checks cannot see</span>
+<span id="cb21-541"><a href="#cb21-541" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-542"><a href="#cb21-542" aria-hidden="true" tabindex="-1"></a><span class="fu">## Your Learning Journal</span></span>
+<span id="cb21-543"><a href="#cb21-543" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-544"><a href="#cb21-544" aria-hidden="true" tabindex="-1"></a>Record your responses to these prompts:</span>
+<span id="cb21-545"><a href="#cb21-545" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-546"><a href="#cb21-546" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**The defect I would have missed**: Which check caught something you did not see?</span>
+<span id="cb21-547"><a href="#cb21-547" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-548"><a href="#cb21-548" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**The green check I did not trust**: What did the agent change to make a check pass? What did you do about it?</span>
+<span id="cb21-549"><a href="#cb21-549" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-550"><a href="#cb21-550" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**The user I almost forgot**: Which finding came from a person rather than a tool?</span>
+<span id="cb21-551"><a href="#cb21-551" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-552"><a href="#cb21-552" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**The proxy**: Where did a check test a proxy instead of the outcome? How did you rewrite it?</span>
+<span id="cb21-553"><a href="#cb21-553" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-554"><a href="#cb21-554" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**The next check**: What would you check next, and why?</span>
+<span id="cb21-555"><a href="#cb21-555" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-556"><a href="#cb21-556" aria-hidden="true" tabindex="-1"></a><span class="fu">## Next Steps</span></span>
+<span id="cb21-557"><a href="#cb21-557" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-558"><a href="#cb21-558" aria-hidden="true" tabindex="-1"></a>@sec-connection shows how the request, the serverless function and the response fit together. The API failure check in this chapter is only useful if you understand what the page is asking for.</span>
+<span id="cb21-559"><a href="#cb21-559" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-560"><a href="#cb21-560" aria-hidden="true" tabindex="-1"></a>The next practice chapter, **The Agent-Ready Repo and Handover**, turns the checks, the decisions and the spec into a repository that another person can run, review and maintain. It also shows how to turn a repeated task, such as writing a check, into a skill.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/michael-borck/build-web-guide-ai/edit/main/chapters/chapter-checks-that-run.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

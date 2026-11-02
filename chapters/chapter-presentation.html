@@ -2,21 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="A practical approach to web development that embraces AI as your development partner while building real business solutions with HTML, CSS, JavaScript, WordPress, and React.">
+<meta name="description" content="A practical approach to web development that teaches you to specify, direct, check and hand over AI-built business websites with HTML, CSS, JavaScript, WordPress and React.">
 
-<title>3&nbsp; Presentation: CSS as Visual Communication – Build Web, Guide AI</title>
+<title>6&nbsp; Presentation: CSS as Visual Communication – Build Web, Guide AI</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -78,14 +81,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-6453f418aeef366c23116eb9cb0b6816.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-36d1909bcb541879de504f1ebcc96011.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-9950bca906ef9bb3ea288c0af376aad5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-36d1909bcb541879de504f1ebcc96011.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-b146b0f11fcb9d7b327ea38bc2e11b34.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-8bc080b4f13ff5280c11423cbe489c26.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-b146b0f11fcb9d7b327ea38bc2e11b34.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -116,6 +119,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../assets/custom.css">
+<link rel="stylesheet" href="../book-design.css">
 </head>
 
 <body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -289,7 +293,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-structure.html">Web Foundations</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-presentation.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-structure.html">Web Foundations</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-presentation.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -363,7 +367,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Web Foundations</span></a>
+ <span class="menu-text">The Practice Spine</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -371,32 +375,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-structure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></span></a>
+  <a href="../chapters/chapter-specify-before-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Specify Before You Build</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-presentation.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></span></a>
+  <a href="../chapters/chapter-checks-that-run.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Checks That Run</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-behaviour.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Behaviour: JavaScript as User Interaction</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-connection.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Connection: APIs as Business Integration</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../projects/project-portfolio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Project: Portfolio Website</span></span></a>
+  <a href="../chapters/chapter-agent-ready-repo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The Agent-Ready Repo and Handover</span></span></a>
   </div>
 </li>
       </ul>
@@ -404,7 +396,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Content Management for Business</span></a>
+ <span class="menu-text">Web Foundations</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -412,32 +404,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-why-cms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Why CMS? The Business Value of Managed Content</span></span></a>
+  <a href="../chapters/chapter-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-wordpress-platform.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">WordPress as Platform</span></span></a>
+  <a href="../chapters/chapter-presentation.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-extending-platforms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Extending Platforms</span></span></a>
+  <a href="../chapters/chapter-behaviour.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Behaviour: JavaScript as User Interaction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-headless-architecture.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Headless Architecture</span></span></a>
+  <a href="../chapters/chapter-connection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Connection: APIs as Business Integration</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../projects/project-business-site.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Project: Business Website with WordPress</span></span></a>
+  <a href="../projects/project-portfolio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Project: Portfolio Website</span></span></a>
   </div>
 </li>
       </ul>
@@ -445,7 +437,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Modern Frontend Development</span></a>
+ <span class="menu-text">Content Management for Business</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -453,26 +445,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-component-thinking.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Component Thinking: React</span></span></a>
+  <a href="../chapters/chapter-why-cms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Why CMS? The Business Value of Managed Content</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-rapid-development.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Rapid Development: CSS Frameworks</span></span></a>
+  <a href="../chapters/chapter-wordpress-platform.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">WordPress as Platform</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-professional-practices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Professional Practices</span></span></a>
+  <a href="../chapters/chapter-extending-platforms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Extending Platforms</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../projects/project-react-integration.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Project: React Integration</span></span></a>
+  <a href="../chapters/chapter-headless-architecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Headless Architecture</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/project-business-site.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Project: Business Website with WordPress</span></span></a>
   </div>
 </li>
       </ul>
@@ -480,7 +478,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">The Professional Developer</span></a>
+ <span class="menu-text">Modern Frontend Development</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -488,20 +486,78 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-component-thinking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Component Thinking: React</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-rapid-development.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Rapid Development: CSS Frameworks</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-professional-practices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Professional Practices</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/project-react-integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Project: React Integration</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">The Professional Developer</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/chapter-emerging-technologies.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Evaluating Emerging Technologies</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Evaluating Emerging Technologies</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter-development-career.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Your Development Career</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Your Development Career</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter-ai-era-developer.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">The AI-Era Developer</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">The AI-Era Developer</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/how-to-use-this-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to Use This Book</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/2027-course-map.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2027 Course Map</span></a>
   </div>
 </li>
       </ul>
@@ -520,7 +576,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
     </ul>
     </div>
-</nav>
+<div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
+<p>Paperback ISBN 979-8-255-17415-7</p>
+</div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -528,15 +586,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-concept-first" id="toc-the-concept-first" class="nav-link active" data-scroll-target="#the-concept-first"><span class="header-section-number">3.1</span> The Concept First</a></li>
-  <li><a href="#understanding-through-design" id="toc-understanding-through-design" class="nav-link" data-scroll-target="#understanding-through-design"><span class="header-section-number">3.2</span> Understanding Through Design</a></li>
-  <li><a href="#discovering-presentation-with-your-ai-partner" id="toc-discovering-presentation-with-your-ai-partner" class="nav-link" data-scroll-target="#discovering-presentation-with-your-ai-partner"><span class="header-section-number">3.3</span> Discovering Presentation with Your AI Partner</a>
+  <li><a href="#the-concept-first" id="toc-the-concept-first" class="nav-link active" data-scroll-target="#the-concept-first"><span class="header-section-number">6.1</span> The Concept First</a></li>
+  <li><a href="#understanding-through-design" id="toc-understanding-through-design" class="nav-link" data-scroll-target="#understanding-through-design"><span class="header-section-number">6.2</span> Understanding Through Design</a></li>
+  <li><a href="#discovering-presentation-with-your-ai-partner" id="toc-discovering-presentation-with-your-ai-partner" class="nav-link" data-scroll-target="#discovering-presentation-with-your-ai-partner"><span class="header-section-number">6.3</span> Discovering Presentation with Your AI Partner</a>
   <ul class="collapse">
   <li><a href="#exploration-1-why-separate-structure-and-style" id="toc-exploration-1-why-separate-structure-and-style" class="nav-link" data-scroll-target="#exploration-1-why-separate-structure-and-style">Exploration 1: Why Separate Structure and Style?</a></li>
   <li><a href="#exploration-2-mobile-first-as-business-strategy" id="toc-exploration-2-mobile-first-as-business-strategy" class="nav-link" data-scroll-target="#exploration-2-mobile-first-as-business-strategy">Exploration 2: Mobile-First as Business Strategy</a></li>
   <li><a href="#exploration-3-visual-hierarchy" id="toc-exploration-3-visual-hierarchy" class="nav-link" data-scroll-target="#exploration-3-visual-hierarchy">Exploration 3: Visual Hierarchy</a></li>
   </ul></li>
-  <li><a href="#from-concept-to-code" id="toc-from-concept-to-code" class="nav-link" data-scroll-target="#from-concept-to-code"><span class="header-section-number">3.4</span> From Concept to Code</a>
+  <li><a href="#from-concept-to-code" id="toc-from-concept-to-code" class="nav-link" data-scroll-target="#from-concept-to-code"><span class="header-section-number">6.4</span> From Concept to Code</a>
   <ul class="collapse">
   <li><a href="#css-syntax-selectors-properties-values" id="toc-css-syntax-selectors-properties-values" class="nav-link" data-scroll-target="#css-syntax-selectors-properties-values">CSS Syntax: Selectors, Properties, Values</a></li>
   <li><a href="#connecting-css-to-html" id="toc-connecting-css-to-html" class="nav-link" data-scroll-target="#connecting-css-to-html">Connecting CSS to HTML</a></li>
@@ -546,41 +604,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#responsive-design-media-queries" id="toc-responsive-design-media-queries" class="nav-link" data-scroll-target="#responsive-design-media-queries">Responsive Design: Media Queries</a></li>
   <li><a href="#typography-and-colour-basics" id="toc-typography-and-colour-basics" class="nav-link" data-scroll-target="#typography-and-colour-basics">Typography and Colour Basics</a></li>
   </ul></li>
-  <li><a href="#building-your-mental-model" id="toc-building-your-mental-model" class="nav-link" data-scroll-target="#building-your-mental-model"><span class="header-section-number">3.5</span> Building Your Mental Model</a>
+  <li><a href="#building-your-mental-model" id="toc-building-your-mental-model" class="nav-link" data-scroll-target="#building-your-mental-model"><span class="header-section-number">6.5</span> Building Your Mental Model</a>
   <ul class="collapse">
   <li><a href="#the-cascade-why-cascading" id="toc-the-cascade-why-cascading" class="nav-link" data-scroll-target="#the-cascade-why-cascading">The Cascade: Why “Cascading”?</a></li>
   <li><a href="#the-flow-block-vs-inline" id="toc-the-flow-block-vs-inline" class="nav-link" data-scroll-target="#the-flow-block-vs-inline">The Flow: Block vs Inline</a></li>
   <li><a href="#the-mental-stack" id="toc-the-mental-stack" class="nav-link" data-scroll-target="#the-mental-stack">The Mental Stack</a></li>
   </ul></li>
-  <li><a href="#business-applications" id="toc-business-applications" class="nav-link" data-scroll-target="#business-applications"><span class="header-section-number">3.6</span> Business Applications</a>
+  <li><a href="#business-applications" id="toc-business-applications" class="nav-link" data-scroll-target="#business-applications"><span class="header-section-number">6.6</span> Business Applications</a>
   <ul class="collapse">
   <li><a href="#brand-consistency" id="toc-brand-consistency" class="nav-link" data-scroll-target="#brand-consistency">Brand Consistency</a></li>
   <li><a href="#user-experience-and-trust" id="toc-user-experience-and-trust" class="nav-link" data-scroll-target="#user-experience-and-trust">User Experience and Trust</a></li>
   <li><a href="#mobile-reach" id="toc-mobile-reach" class="nav-link" data-scroll-target="#mobile-reach">Mobile Reach</a></li>
   <li><a href="#conversion-and-visual-hierarchy" id="toc-conversion-and-visual-hierarchy" class="nav-link" data-scroll-target="#conversion-and-visual-hierarchy">Conversion and Visual Hierarchy</a></li>
   </ul></li>
-  <li><a href="#practice-exercises" id="toc-practice-exercises" class="nav-link" data-scroll-target="#practice-exercises"><span class="header-section-number">3.7</span> Practice Exercises</a>
+  <li><a href="#practice-exercises" id="toc-practice-exercises" class="nav-link" data-scroll-target="#practice-exercises"><span class="header-section-number">6.7</span> Practice Exercises</a>
   <ul class="collapse">
-  <li><a href="#exercise-2.1-style-inspection-level-1" id="toc-exercise-2.1-style-inspection-level-1" class="nav-link" data-scroll-target="#exercise-2.1-style-inspection-level-1">Exercise 2.1: Style Inspection (Level 1)</a></li>
-  <li><a href="#exercise-2.2-basic-styling-level-2" id="toc-exercise-2.2-basic-styling-level-2" class="nav-link" data-scroll-target="#exercise-2.2-basic-styling-level-2">Exercise 2.2: Basic Styling (Level 2)</a></li>
-  <li><a href="#exercise-2.3-responsive-layout-level-3" id="toc-exercise-2.3-responsive-layout-level-3" class="nav-link" data-scroll-target="#exercise-2.3-responsive-layout-level-3">Exercise 2.3: Responsive Layout (Level 3)</a></li>
-  <li><a href="#exercise-2.4-design-analysis-level-4" id="toc-exercise-2.4-design-analysis-level-4" class="nav-link" data-scroll-target="#exercise-2.4-design-analysis-level-4">Exercise 2.4: Design Analysis (Level 4)</a></li>
-  <li><a href="#exercise-2.5-design-system-level-5" id="toc-exercise-2.5-design-system-level-5" class="nav-link" data-scroll-target="#exercise-2.5-design-system-level-5">Exercise 2.5: Design System (Level 5)</a></li>
+  <li><a href="#exercise-6.1-style-inspection-level-1" id="toc-exercise-6.1-style-inspection-level-1" class="nav-link" data-scroll-target="#exercise-6.1-style-inspection-level-1">Exercise 6.1: Style Inspection (Level 1)</a></li>
+  <li><a href="#exercise-6.2-basic-styling-level-2" id="toc-exercise-6.2-basic-styling-level-2" class="nav-link" data-scroll-target="#exercise-6.2-basic-styling-level-2">Exercise 6.2: Basic Styling (Level 2)</a></li>
+  <li><a href="#exercise-6.3-responsive-layout-level-3" id="toc-exercise-6.3-responsive-layout-level-3" class="nav-link" data-scroll-target="#exercise-6.3-responsive-layout-level-3">Exercise 6.3: Responsive Layout (Level 3)</a></li>
+  <li><a href="#exercise-6.4-design-analysis-level-4" id="toc-exercise-6.4-design-analysis-level-4" class="nav-link" data-scroll-target="#exercise-6.4-design-analysis-level-4">Exercise 6.4: Design Analysis (Level 4)</a></li>
+  <li><a href="#exercise-6.5-design-system-level-5" id="toc-exercise-6.5-design-system-level-5" class="nav-link" data-scroll-target="#exercise-6.5-design-system-level-5">Exercise 6.5: Design System (Level 5)</a></li>
   </ul></li>
-  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary"><span class="header-section-number">3.8</span> Chapter Summary</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">3.9</span> Reflection</a></li>
-  <li><a href="#your-learning-journal" id="toc-your-learning-journal" class="nav-link" data-scroll-target="#your-learning-journal"><span class="header-section-number">3.10</span> Your Learning Journal</a></li>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">3.11</span> Next Steps</a></li>
+  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary"><span class="header-section-number">6.8</span> Chapter Summary</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">6.9</span> Reflection</a></li>
+  <li><a href="#your-learning-journal" id="toc-your-learning-journal" class="nav-link" data-scroll-target="#your-learning-journal"><span class="header-section-number">6.10</span> Your Learning Journal</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">6.11</span> Next Steps</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/build-web-guide-ai/edit/main/chapters/chapter-presentation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="build-web-guide-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="build-web-guide-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/build-web-guide-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/build-web-guide-ai/edit/main/chapters/chapter-presentation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/build-web-guide-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/build-web-guide-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/build-web-guide-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-structure.html">Web Foundations</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-presentation.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-structure.html">Web Foundations</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-presentation.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span id="sec-presentation" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span id="sec-presentation" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -597,14 +655,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="the-concept-first" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="the-concept-first"><span class="header-section-number">3.1</span> The Concept First</h2>
-<p>In <a href="chapter-structure.html" class="quarto-xref"><span>Chapter 2</span></a>, you learned to describe what content <em>is</em>. Now we’ll control how content <em>looks</em>, but this isn’t decoration. It’s <strong>visual communication</strong>.</p>
+<section id="the-concept-first" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="the-concept-first"><span class="header-section-number">6.1</span> The Concept First</h2>
+<p>In <a href="chapter-structure.html" class="quarto-xref"><span>Chapter 5</span></a>, you learned to describe what content <em>is</em>. Now we’ll control how content <em>looks</em>: its <strong>visual communication</strong>.</p>
 <p>CSS (Cascading Style Sheets) determines colours, fonts, spacing, and layout. But these choices aren’t arbitrary. Every visual decision communicates something: professionalism, playfulness, urgency, calm. A hospital website and a children’s toy store might have identical HTML structure, but their CSS tells completely different stories.</p>
-<p>Here’s the key insight: <strong>structure and presentation are deliberately separate</strong>. Your HTML says “this is a heading”, it doesn’t say “this should be blue and 24 pixels tall.” CSS handles appearance. This separation means you can completely redesign a website without touching its content, or update content without breaking the design.</p>
+<p><strong>Structure and presentation are deliberately separate</strong>. Your HTML says “this is a heading”, it doesn’t say “this should be blue and 24 pixels tall.” CSS handles appearance. This separation means you can completely redesign a website without touching its content, or update content without breaking the design.</p>
 </section>
-<section id="understanding-through-design" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="understanding-through-design"><span class="header-section-number">3.2</span> Understanding Through Design</h2>
+<section id="understanding-through-design" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="understanding-through-design"><span class="header-section-number">6.2</span> Understanding Through Design</h2>
 <p>Think of two cafés with identical menus. Same coffee, same pastries, same prices.</p>
 <p><strong>Café A</strong>: Exposed brick, warm lighting, comfortable armchairs, handwritten chalkboard menu, soft jazz playing.</p>
 <p><strong>Café B</strong>: White walls, fluorescent lights, plastic chairs, printed menu in a laminated folder, no music.</p>
@@ -624,15 +682,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="discovering-presentation-with-your-ai-partner" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="discovering-presentation-with-your-ai-partner"><span class="header-section-number">3.3</span> Discovering Presentation with Your AI Partner</h2>
+<section id="discovering-presentation-with-your-ai-partner" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="discovering-presentation-with-your-ai-partner"><span class="header-section-number">6.3</span> Discovering Presentation with Your AI Partner</h2>
 <section id="exploration-1-why-separate-structure-and-style" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-1-why-separate-structure-and-style">Exploration 1: Why Separate Structure and Style?</h3>
 <pre class="text"><code>Ask your AI:
 Why do we keep HTML (structure) and CSS (presentation) in separate
 languages? Explain using a newspaper analogy, the same news stories
 might appear in a broadsheet and a tabloid.</code></pre>
-<p>This conversation should reveal the power of separation: one set of content, many possible presentations. News services send identical stories to papers worldwide, but each paper styles them differently. Similarly, your HTML content can have different CSS applied for screen, print, mobile, or accessibility needs.</p>
+<p>This conversation should show why separation helps: one set of content, many possible presentations. News services send identical stories to papers worldwide, but each paper styles them differently. Similarly, your HTML content can have different CSS applied for screen, print, mobile, or accessibility needs.</p>
 <p>Follow up:</p>
 <pre class="text"><code>Continue the conversation:
 What problems would occur if we put styling directly into HTML?
@@ -640,7 +698,7 @@ What if every heading had to specify its own colour and size?</code></pre>
 </section>
 <section id="exploration-2-mobile-first-as-business-strategy" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-2-mobile-first-as-business-strategy">Exploration 2: Mobile-First as Business Strategy</h3>
-<p>More than half of web traffic comes from mobile devices. But mobile-first isn’t just about phones, it’s a design philosophy.</p>
+<p>More than half of web traffic comes from mobile devices. But mobile-first is a design philosophy as much as a phone layout.</p>
 <pre class="text"><code>Ask your AI:
 Explain mobile-first design as a business strategy, not just a
 technical approach. Why would designing for mobile first lead to
@@ -664,8 +722,8 @@ paragraph, button) arranged with different visual hierarchies
 for different purposes.</code></pre>
 </section>
 </section>
-<section id="from-concept-to-code" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="from-concept-to-code"><span class="header-section-number">3.4</span> From Concept to Code</h2>
+<section id="from-concept-to-code" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="from-concept-to-code"><span class="header-section-number">6.4</span> From Concept to Code</h2>
 <p>Let’s build your CSS understanding progressively, from basic syntax to practical layouts.</p>
 <section id="css-syntax-selectors-properties-values" class="level3">
 <h3 class="anchored" data-anchor-id="css-syntax-selectors-properties-values">CSS Syntax: Selectors, Properties, Values</h3>
@@ -695,7 +753,7 @@ for different purposes.</code></pre>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Inline styles</strong> (on individual elements, generally avoid):</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h1</span><span class="ot"> style</span><span class="op">=</span><span class="st">"color: navy;"</span><span class="dt">&gt;</span>Welcome<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>External stylesheets keep presentation separate from structure. One CSS file can style an entire website, and changes propagate everywhere instantly.</p>
+<p>External stylesheets keep presentation separate from structure. One CSS file can style an entire website, and changes apply everywhere.</p>
 <pre class="text"><code>Ask your AI:
 What are the advantages and disadvantages of each method of adding
 CSS? When might you use each one?</code></pre>
@@ -778,7 +836,7 @@ border, and margin?</code></pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.container</span> {</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">display</span><span class="ch">:</span> <span class="dv">flex</span><span class="op">;</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>This single line transforms the container. Its children become “flex items” that can be arranged in powerful ways:</p>
+<p>This single line changes the container. Its children become “flex items” that you can arrange in rows or columns:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.container</span> {</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">display</span><span class="ch">:</span> <span class="dv">flex</span><span class="op">;</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">justify-content</span><span class="ch">:</span> <span class="dv">space-between</span><span class="op">;</span>  <span class="co">/* Horizontal distribution */</span></span>
@@ -888,8 +946,8 @@ and why?</code></pre>
 <span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>p  { <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span> }      <span class="co">/* 16px */</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="building-your-mental-model" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="building-your-mental-model"><span class="header-section-number">3.5</span> Building Your Mental Model</h2>
+<section id="building-your-mental-model" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="building-your-mental-model"><span class="header-section-number">6.5</span> Building Your Mental Model</h2>
 <section id="the-cascade-why-cascading" class="level3">
 <h3 class="anchored" data-anchor-id="the-cascade-why-cascading">The Cascade: Why “Cascading”?</h3>
 <p>CSS rules can conflict. When multiple rules target the same element, the cascade determines which wins:</p>
@@ -918,13 +976,13 @@ when developers don't understand how the cascade works?</code></pre>
 <ol type="1">
 <li><strong>Content layer</strong> (HTML): What exists</li>
 <li><strong>Style layer</strong> (CSS): How it looks</li>
-<li><strong>Behaviour layer</strong> (JavaScript, Chapter 3): How it responds</li>
+<li><strong>Behaviour layer</strong> (JavaScript, Chapter 7): How it responds</li>
 </ol>
 <p>CSS only controls layer 2. It can’t create content or make things interactive, it controls visual presentation of whatever HTML provides.</p>
 </section>
 </section>
-<section id="business-applications" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="business-applications"><span class="header-section-number">3.6</span> Business Applications</h2>
+<section id="business-applications" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="business-applications"><span class="header-section-number">6.6</span> Business Applications</h2>
 <section id="brand-consistency" class="level3">
 <h3 class="anchored" data-anchor-id="brand-consistency">Brand Consistency</h3>
 <p>CSS variables (custom properties) enforce brand standards across an entire site:</p>
@@ -943,14 +1001,14 @@ when developers don't understand how the cascade works?</code></pre>
 </section>
 <section id="user-experience-and-trust" class="level3">
 <h3 class="anchored" data-anchor-id="user-experience-and-trust">User Experience and Trust</h3>
-<p>Studies consistently show that users judge website credibility in milliseconds, based primarily on visual design. Professional presentation builds trust; amateur presentation creates suspicion, regardless of how good the actual content is.</p>
+<p>Users judge website credibility in milliseconds, based primarily on visual design. Professional presentation builds trust; amateur presentation creates suspicion, regardless of how good the actual content is.</p>
 <pre class="text"><code>Ask your AI:
 What visual characteristics make a website feel "trustworthy" versus
 "suspicious"? Think about spacing, typography, colour, and layout.</code></pre>
 </section>
 <section id="mobile-reach" class="level3">
 <h3 class="anchored" data-anchor-id="mobile-reach">Mobile Reach</h3>
-<p>If your site doesn’t work on mobile, you’re excluding over half your potential audience. Responsive design isn’t a feature, it’s a baseline requirement for any business website.</p>
+<p>If your site doesn’t work on mobile, you’re excluding over half your potential audience. Responsive design is a baseline requirement for any business website.</p>
 </section>
 <section id="conversion-and-visual-hierarchy" class="level3">
 <h3 class="anchored" data-anchor-id="conversion-and-visual-hierarchy">Conversion and Visual Hierarchy</h3>
@@ -970,8 +1028,8 @@ What visual characteristics make a website feel "trustworthy" versus
 </div>
 </section>
 </section>
-<section id="practice-exercises" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="practice-exercises"><span class="header-section-number">3.7</span> Practice Exercises</h2>
+<section id="practice-exercises" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="practice-exercises"><span class="header-section-number">6.7</span> Practice Exercises</h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -991,8 +1049,8 @@ What visual characteristics make a website feel "trustworthy" versus
 </ul>
 </div>
 </div>
-<section id="exercise-2.1-style-inspection-level-1" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-2.1-style-inspection-level-1">Exercise 2.1: Style Inspection (Level 1)</h3>
+<section id="exercise-6.1-style-inspection-level-1" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-6.1-style-inspection-level-1">Exercise 6.1: Style Inspection (Level 1)</h3>
 <p>Using browser DevTools (right-click → Inspect), examine a website you use regularly:</p>
 <ol type="1">
 <li>Find an element and identify its box model (content, padding, border, margin)</li>
@@ -1002,9 +1060,9 @@ What visual characteristics make a website feel "trustworthy" versus
 </ol>
 <p>Document your findings with screenshots.</p>
 </section>
-<section id="exercise-2.2-basic-styling-level-2" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-2.2-basic-styling-level-2">Exercise 2.2: Basic Styling (Level 2)</h3>
-<p>Take the semantic HTML page from Chapter 1’s exercises. Create an external stylesheet that:</p>
+<section id="exercise-6.2-basic-styling-level-2" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-6.2-basic-styling-level-2">Exercise 6.2: Basic Styling (Level 2)</h3>
+<p>Take the semantic HTML page from Chapter 5’s exercises. Create an external stylesheet that:</p>
 <ol type="1">
 <li>Sets a readable base font and line height</li>
 <li>Styles the header with a background colour</li>
@@ -1013,14 +1071,14 @@ What visual characteristics make a website feel "trustworthy" versus
 </ol>
 <p>Focus on readability and visual hierarchy, not decoration.</p>
 </section>
-<section id="exercise-2.3-responsive-layout-level-3" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-2.3-responsive-layout-level-3">Exercise 2.3: Responsive Layout (Level 3)</h3>
+<section id="exercise-6.3-responsive-layout-level-3" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-6.3-responsive-layout-level-3">Exercise 6.3: Responsive Layout (Level 3)</h3>
 <p>Create a “features” section with three items. Each item has: - An icon or emoji placeholder - A heading - A short description</p>
 <p>Using flexbox, make this: - Single column on mobile (under 768px) - Three columns on desktop</p>
 <p>Write the CSS mobile-first, adding complexity with media queries.</p>
 </section>
-<section id="exercise-2.4-design-analysis-level-4" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-2.4-design-analysis-level-4">Exercise 2.4: Design Analysis (Level 4)</h3>
+<section id="exercise-6.4-design-analysis-level-4" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-6.4-design-analysis-level-4">Exercise 6.4: Design Analysis (Level 4)</h3>
 <p>Find two competing businesses in the same industry (e.g., two accounting firms, two coffee shops). Analyse their websites:</p>
 <ol type="1">
 <li>How does each use visual hierarchy? What’s emphasised?</li>
@@ -1030,8 +1088,8 @@ What visual characteristics make a website feel "trustworthy" versus
 </ol>
 <p>Write a 300-word comparison explaining how CSS choices reflect (or undermine) each brand’s positioning.</p>
 </section>
-<section id="exercise-2.5-design-system-level-5" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-2.5-design-system-level-5">Exercise 2.5: Design System (Level 5)</h3>
+<section id="exercise-6.5-design-system-level-5" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-6.5-design-system-level-5">Exercise 6.5: Design System (Level 5)</h3>
 <p>Create a mini design system for a hypothetical business. Define:</p>
 <ol type="1">
 <li>A colour palette (primary, secondary, accent, text, background)</li>
@@ -1043,20 +1101,20 @@ What visual characteristics make a website feel "trustworthy" versus
 <p>Apply your system to style a simple page, then have your AI partner critique it.</p>
 </section>
 </section>
-<section id="chapter-summary" class="level2" data-number="3.8">
-<h2 data-number="3.8" class="anchored" data-anchor-id="chapter-summary"><span class="header-section-number">3.8</span> Chapter Summary</h2>
+<section id="chapter-summary" class="level2" data-number="6.8">
+<h2 data-number="6.8" class="anchored" data-anchor-id="chapter-summary"><span class="header-section-number">6.8</span> Chapter Summary</h2>
 <ul>
 <li>CSS controls visual presentation separately from HTML structure</li>
 <li>The box model (content, padding, border, margin) explains how elements take space</li>
-<li>Flexbox provides powerful, intuitive layout capabilities</li>
+<li>Flexbox provides flexible layout capabilities</li>
 <li>Media queries enable responsive design that adapts to any device</li>
 <li>Visual design communicates brand, builds trust, and guides user attention</li>
 <li>Mobile-first design creates better experiences for everyone</li>
 </ul>
 </section>
-<section id="reflection" class="level2" data-number="3.9">
-<h2 data-number="3.9" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.9</span> Reflection</h2>
-<p>Before moving to Chapter 3, ensure you can:</p>
+<section id="reflection" class="level2" data-number="6.9">
+<h2 data-number="6.9" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.9</span> Reflection</h2>
+<p>Before moving on, ensure you can:</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Explain why structure and presentation are separate</label></li>
 <li><label><input type="checkbox">Write CSS selectors to target specific elements</label></li>
@@ -1067,8 +1125,8 @@ What visual characteristics make a website feel "trustworthy" versus
 <li><label><input type="checkbox">Use browser DevTools to inspect and understand CSS</label></li>
 </ul>
 </section>
-<section id="your-learning-journal" class="level2" data-number="3.10">
-<h2 data-number="3.10" class="anchored" data-anchor-id="your-learning-journal"><span class="header-section-number">3.10</span> Your Learning Journal</h2>
+<section id="your-learning-journal" class="level2" data-number="6.10">
+<h2 data-number="6.10" class="anchored" data-anchor-id="your-learning-journal"><span class="header-section-number">6.10</span> Your Learning Journal</h2>
 <p>Record your responses to these prompts:</p>
 <ol type="1">
 <li><p><strong>Design Awareness</strong>: Look at three websites with very different visual styles. How does each CSS approach reflect its purpose and audience?</p></li>
@@ -1077,11 +1135,11 @@ What visual characteristics make a website feel "trustworthy" versus
 <li><p><strong>Business Connection</strong>: Think of a business you might create a website for. What visual atmosphere would best serve that business? Why?</p></li>
 </ol>
 </section>
-<section id="next-steps" class="level2" data-number="3.11">
-<h2 data-number="3.11" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">3.11</span> Next Steps</h2>
-<p>You now control both structure (HTML) and presentation (CSS). But websites today aren’t just documents to read, they’re applications to interact with.</p>
-<p>In <a href="chapter-behaviour.html" class="quarto-xref"><span>Chapter 4</span></a>, we’ll add JavaScript, the third pillar of web development. JavaScript lets pages respond to user actions: clicks, scrolls, form submissions. It transforms static documents into dynamic experiences.</p>
-<p>The HTML structure and CSS styling you’ve learned become the canvas that JavaScript brings to life.</p>
+<section id="next-steps" class="level2" data-number="6.11">
+<h2 data-number="6.11" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">6.11</span> Next Steps</h2>
+<p>You now control both structure (HTML) and presentation (CSS). But websites today are applications to interact with as well as documents to read.</p>
+<p>In <a href="chapter-behaviour.html" class="quarto-xref"><span>Chapter 7</span></a>, we’ll add JavaScript, the third pillar of web development. JavaScript lets pages respond to user actions: clicks, scrolls, form submissions. That turns static documents into interactive pages.</p>
+<p>JavaScript works on the HTML structure and CSS styling you have learned.</p>
 
 
 <!-- -->
@@ -1196,16 +1254,16 @@ What visual characteristics make a website feel "trustworthy" versus
     }
     function toggleCodeHandler(show) {
       return function(e) {
-        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-        for (let i=0; i<detailsSrc.length; i++) {
-          const details = detailsSrc[i].parentElement;
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
           if (show) {
             details.open = true;
           } else {
             details.removeAttribute("open");
           }
         }
-        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
         const fromCls = show ? "hidden" : "unhidden";
         const toCls = show ? "unhidden" : "hidden";
         for (let i=0; i<cellCodeDivs.length; i++) {
@@ -1558,12 +1616,12 @@ What visual characteristics make a website feel "trustworthy" versus
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../chapters/chapter-structure.html" class="pagination-link" aria-label="Structure: HTML as Information Architecture">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../chapters/chapter-behaviour.html" class="pagination-link" aria-label="Behaviour: JavaScript as User Interaction">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Behaviour: JavaScript as User Interaction</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Behaviour: JavaScript as User Interaction</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
@@ -1571,11 +1629,11 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Concept First</span></span>
 <span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>In @sec-structure, you learned to describe what content *is*. Now we'll control how content *looks*, but this isn't decoration. It's **visual communication**.</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>In @sec-structure, you learned to describe what content *is*. Now we'll control how content *looks*: its **visual communication**.</span>
 <span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>CSS (Cascading Style Sheets) determines colours, fonts, spacing, and layout. But these choices aren't arbitrary. Every visual decision communicates something: professionalism, playfulness, urgency, calm. A hospital website and a children's toy store might have identical HTML structure, but their CSS tells completely different stories.</span>
 <span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>Here's the key insight: **structure and presentation are deliberately separate**. Your HTML says "this is a heading", it doesn't say "this should be blue and 24 pixels tall." CSS handles appearance. This separation means you can completely redesign a website without touching its content, or update content without breaking the design.</span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>**Structure and presentation are deliberately separate**. Your HTML says "this is a heading", it doesn't say "this should be blue and 24 pixels tall." CSS handles appearance. This separation means you can completely redesign a website without touching its content, or update content without breaking the design.</span>
 <span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Understanding Through Design</span></span>
 <span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a></span>
@@ -1605,7 +1663,7 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-36"><a href="#cb33-36" aria-hidden="true" tabindex="-1"></a><span class="in">might appear in a broadsheet and a tabloid.</span></span>
 <span id="cb33-37"><a href="#cb33-37" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb33-38"><a href="#cb33-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-39"><a href="#cb33-39" aria-hidden="true" tabindex="-1"></a>This conversation should reveal the power of separation: one set of content, many possible presentations. News services send identical stories to papers worldwide, but each paper styles them differently. Similarly, your HTML content can have different CSS applied for screen, print, mobile, or accessibility needs.</span>
+<span id="cb33-39"><a href="#cb33-39" aria-hidden="true" tabindex="-1"></a>This conversation should show why separation helps: one set of content, many possible presentations. News services send identical stories to papers worldwide, but each paper styles them differently. Similarly, your HTML content can have different CSS applied for screen, print, mobile, or accessibility needs.</span>
 <span id="cb33-40"><a href="#cb33-40" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-41"><a href="#cb33-41" aria-hidden="true" tabindex="-1"></a>Follow up:</span>
 <span id="cb33-42"><a href="#cb33-42" aria-hidden="true" tabindex="-1"></a></span>
@@ -1617,7 +1675,7 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-48"><a href="#cb33-48" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-49"><a href="#cb33-49" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exploration 2: Mobile-First as Business Strategy</span></span>
 <span id="cb33-50"><a href="#cb33-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-51"><a href="#cb33-51" aria-hidden="true" tabindex="-1"></a>More than half of web traffic comes from mobile devices. But mobile-first isn't just about phones, it's a design philosophy.</span>
+<span id="cb33-51"><a href="#cb33-51" aria-hidden="true" tabindex="-1"></a>More than half of web traffic comes from mobile devices. But mobile-first is a design philosophy as much as a phone layout.</span>
 <span id="cb33-52"><a href="#cb33-52" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-53"><a href="#cb33-53" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb33-54"><a href="#cb33-54" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
@@ -1704,7 +1762,7 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-135"><a href="#cb33-135" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>h1 style<span class="op">=</span><span class="st">"color: navy;"</span><span class="op">&gt;</span>Welcome<span class="op">&lt;/</span>h1<span class="op">&gt;</span></span>
 <span id="cb33-136"><a href="#cb33-136" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb33-137"><a href="#cb33-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-138"><a href="#cb33-138" aria-hidden="true" tabindex="-1"></a>External stylesheets keep presentation separate from structure. One CSS file can style an entire website, and changes propagate everywhere instantly.</span>
+<span id="cb33-138"><a href="#cb33-138" aria-hidden="true" tabindex="-1"></a>External stylesheets keep presentation separate from structure. One CSS file can style an entire website, and changes apply everywhere.</span>
 <span id="cb33-139"><a href="#cb33-139" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-140"><a href="#cb33-140" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb33-141"><a href="#cb33-141" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
@@ -1802,7 +1860,7 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-233"><a href="#cb33-233" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb33-234"><a href="#cb33-234" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb33-235"><a href="#cb33-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-236"><a href="#cb33-236" aria-hidden="true" tabindex="-1"></a>This single line transforms the container. Its children become "flex items" that can be arranged in powerful ways:</span>
+<span id="cb33-236"><a href="#cb33-236" aria-hidden="true" tabindex="-1"></a>This single line changes the container. Its children become "flex items" that you can arrange in rows or columns:</span>
 <span id="cb33-237"><a href="#cb33-237" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-238"><a href="#cb33-238" aria-hidden="true" tabindex="-1"></a><span class="in">```css</span></span>
 <span id="cb33-239"><a href="#cb33-239" aria-hidden="true" tabindex="-1"></a><span class="op">.</span><span class="fu">container</span> <span class="op">{</span></span>
@@ -1988,7 +2046,7 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-419"><a href="#cb33-419" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-420"><a href="#cb33-420" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Content layer** (HTML): What exists</span>
 <span id="cb33-421"><a href="#cb33-421" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Style layer** (CSS): How it looks</span>
-<span id="cb33-422"><a href="#cb33-422" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Behaviour layer** (JavaScript, Chapter 3): How it responds</span>
+<span id="cb33-422"><a href="#cb33-422" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Behaviour layer** (JavaScript, Chapter 7): How it responds</span>
 <span id="cb33-423"><a href="#cb33-423" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-424"><a href="#cb33-424" aria-hidden="true" tabindex="-1"></a>CSS only controls layer 2. It can't create content or make things interactive, it controls visual presentation of whatever HTML provides.</span>
 <span id="cb33-425"><a href="#cb33-425" aria-hidden="true" tabindex="-1"></a></span>
@@ -2016,7 +2074,7 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-447"><a href="#cb33-447" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-448"><a href="#cb33-448" aria-hidden="true" tabindex="-1"></a><span class="fu">### User Experience and Trust</span></span>
 <span id="cb33-449"><a href="#cb33-449" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-450"><a href="#cb33-450" aria-hidden="true" tabindex="-1"></a>Studies consistently show that users judge website credibility in milliseconds, based primarily on visual design. Professional presentation builds trust; amateur presentation creates suspicion, regardless of how good the actual content is.</span>
+<span id="cb33-450"><a href="#cb33-450" aria-hidden="true" tabindex="-1"></a>Users judge website credibility in milliseconds, based primarily on visual design. Professional presentation builds trust; amateur presentation creates suspicion, regardless of how good the actual content is.</span>
 <span id="cb33-451"><a href="#cb33-451" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-452"><a href="#cb33-452" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb33-453"><a href="#cb33-453" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
@@ -2026,7 +2084,7 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-457"><a href="#cb33-457" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-458"><a href="#cb33-458" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mobile Reach</span></span>
 <span id="cb33-459"><a href="#cb33-459" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-460"><a href="#cb33-460" aria-hidden="true" tabindex="-1"></a>If your site doesn't work on mobile, you're excluding over half your potential audience. Responsive design isn't a feature, it's a baseline requirement for any business website.</span>
+<span id="cb33-460"><a href="#cb33-460" aria-hidden="true" tabindex="-1"></a>If your site doesn't work on mobile, you're excluding over half your potential audience. Responsive design is a baseline requirement for any business website.</span>
 <span id="cb33-461"><a href="#cb33-461" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-462"><a href="#cb33-462" aria-hidden="true" tabindex="-1"></a><span class="fu">### Conversion and Visual Hierarchy</span></span>
 <span id="cb33-463"><a href="#cb33-463" aria-hidden="true" tabindex="-1"></a></span>
@@ -2048,7 +2106,7 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-479"><a href="#cb33-479" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 5**: Open-ended design</span>
 <span id="cb33-480"><a href="#cb33-480" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb33-481"><a href="#cb33-481" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-482"><a href="#cb33-482" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 2.1: Style Inspection (Level 1)</span></span>
+<span id="cb33-482"><a href="#cb33-482" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 6.1: Style Inspection (Level 1)</span></span>
 <span id="cb33-483"><a href="#cb33-483" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-484"><a href="#cb33-484" aria-hidden="true" tabindex="-1"></a>Using browser DevTools (right-click → Inspect), examine a website you use regularly:</span>
 <span id="cb33-485"><a href="#cb33-485" aria-hidden="true" tabindex="-1"></a></span>
@@ -2059,9 +2117,9 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-490"><a href="#cb33-490" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-491"><a href="#cb33-491" aria-hidden="true" tabindex="-1"></a>Document your findings with screenshots.</span>
 <span id="cb33-492"><a href="#cb33-492" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-493"><a href="#cb33-493" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 2.2: Basic Styling (Level 2)</span></span>
+<span id="cb33-493"><a href="#cb33-493" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 6.2: Basic Styling (Level 2)</span></span>
 <span id="cb33-494"><a href="#cb33-494" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-495"><a href="#cb33-495" aria-hidden="true" tabindex="-1"></a>Take the semantic HTML page from Chapter 1's exercises. Create an external stylesheet that:</span>
+<span id="cb33-495"><a href="#cb33-495" aria-hidden="true" tabindex="-1"></a>Take the semantic HTML page from Chapter 5's exercises. Create an external stylesheet that:</span>
 <span id="cb33-496"><a href="#cb33-496" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-497"><a href="#cb33-497" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Sets a readable base font and line height</span>
 <span id="cb33-498"><a href="#cb33-498" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Styles the header with a background colour</span>
@@ -2070,7 +2128,7 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-501"><a href="#cb33-501" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-502"><a href="#cb33-502" aria-hidden="true" tabindex="-1"></a>Focus on readability and visual hierarchy, not decoration.</span>
 <span id="cb33-503"><a href="#cb33-503" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-504"><a href="#cb33-504" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 2.3: Responsive Layout (Level 3)</span></span>
+<span id="cb33-504"><a href="#cb33-504" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 6.3: Responsive Layout (Level 3)</span></span>
 <span id="cb33-505"><a href="#cb33-505" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-506"><a href="#cb33-506" aria-hidden="true" tabindex="-1"></a>Create a "features" section with three items. Each item has:</span>
 <span id="cb33-507"><a href="#cb33-507" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>An icon or emoji placeholder</span>
@@ -2083,7 +2141,7 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-514"><a href="#cb33-514" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-515"><a href="#cb33-515" aria-hidden="true" tabindex="-1"></a>Write the CSS mobile-first, adding complexity with media queries.</span>
 <span id="cb33-516"><a href="#cb33-516" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-517"><a href="#cb33-517" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 2.4: Design Analysis (Level 4)</span></span>
+<span id="cb33-517"><a href="#cb33-517" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 6.4: Design Analysis (Level 4)</span></span>
 <span id="cb33-518"><a href="#cb33-518" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-519"><a href="#cb33-519" aria-hidden="true" tabindex="-1"></a>Find two competing businesses in the same industry (e.g., two accounting firms, two coffee shops). Analyse their websites:</span>
 <span id="cb33-520"><a href="#cb33-520" aria-hidden="true" tabindex="-1"></a></span>
@@ -2094,7 +2152,7 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-525"><a href="#cb33-525" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-526"><a href="#cb33-526" aria-hidden="true" tabindex="-1"></a>Write a 300-word comparison explaining how CSS choices reflect (or undermine) each brand's positioning.</span>
 <span id="cb33-527"><a href="#cb33-527" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-528"><a href="#cb33-528" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 2.5: Design System (Level 5)</span></span>
+<span id="cb33-528"><a href="#cb33-528" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 6.5: Design System (Level 5)</span></span>
 <span id="cb33-529"><a href="#cb33-529" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-530"><a href="#cb33-530" aria-hidden="true" tabindex="-1"></a>Create a mini design system for a hypothetical business. Define:</span>
 <span id="cb33-531"><a href="#cb33-531" aria-hidden="true" tabindex="-1"></a></span>
@@ -2111,14 +2169,14 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-542"><a href="#cb33-542" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-543"><a href="#cb33-543" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CSS controls visual presentation separately from HTML structure</span>
 <span id="cb33-544"><a href="#cb33-544" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The box model (content, padding, border, margin) explains how elements take space</span>
-<span id="cb33-545"><a href="#cb33-545" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Flexbox provides powerful, intuitive layout capabilities</span>
+<span id="cb33-545"><a href="#cb33-545" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Flexbox provides flexible layout capabilities</span>
 <span id="cb33-546"><a href="#cb33-546" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Media queries enable responsive design that adapts to any device</span>
 <span id="cb33-547"><a href="#cb33-547" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Visual design communicates brand, builds trust, and guides user attention</span>
 <span id="cb33-548"><a href="#cb33-548" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mobile-first design creates better experiences for everyone</span>
 <span id="cb33-549"><a href="#cb33-549" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-550"><a href="#cb33-550" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reflection</span></span>
 <span id="cb33-551"><a href="#cb33-551" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-552"><a href="#cb33-552" aria-hidden="true" tabindex="-1"></a>Before moving to Chapter 3, ensure you can:</span>
+<span id="cb33-552"><a href="#cb33-552" aria-hidden="true" tabindex="-1"></a>Before moving on, ensure you can:</span>
 <span id="cb33-553"><a href="#cb33-553" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-554"><a href="#cb33-554" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Explain why structure and presentation are separate</span>
 <span id="cb33-555"><a href="#cb33-555" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Write CSS selectors to target specific elements</span>
@@ -2142,11 +2200,11 @@ What visual characteristics make a website feel "trustworthy" versus
 <span id="cb33-573"><a href="#cb33-573" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-574"><a href="#cb33-574" aria-hidden="true" tabindex="-1"></a><span class="fu">## Next Steps</span></span>
 <span id="cb33-575"><a href="#cb33-575" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-576"><a href="#cb33-576" aria-hidden="true" tabindex="-1"></a>You now control both structure (HTML) and presentation (CSS). But websites today aren't just documents to read, they're applications to interact with.</span>
+<span id="cb33-576"><a href="#cb33-576" aria-hidden="true" tabindex="-1"></a>You now control both structure (HTML) and presentation (CSS). But websites today are applications to interact with as well as documents to read.</span>
 <span id="cb33-577"><a href="#cb33-577" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-578"><a href="#cb33-578" aria-hidden="true" tabindex="-1"></a>In @sec-behaviour, we'll add JavaScript, the third pillar of web development. JavaScript lets pages respond to user actions: clicks, scrolls, form submissions. It transforms static documents into dynamic experiences.</span>
+<span id="cb33-578"><a href="#cb33-578" aria-hidden="true" tabindex="-1"></a>In @sec-behaviour, we'll add JavaScript, the third pillar of web development. JavaScript lets pages respond to user actions: clicks, scrolls, form submissions. That turns static documents into interactive pages.</span>
 <span id="cb33-579"><a href="#cb33-579" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-580"><a href="#cb33-580" aria-hidden="true" tabindex="-1"></a>The HTML structure and CSS styling you've learned become the canvas that JavaScript brings to life.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb33-580"><a href="#cb33-580" aria-hidden="true" tabindex="-1"></a>JavaScript works on the HTML structure and CSS styling you have learned.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

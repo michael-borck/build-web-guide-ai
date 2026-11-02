@@ -2,21 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="A practical approach to web development that embraces AI as your development partner while building real business solutions with HTML, CSS, JavaScript, WordPress, and React.">
+<meta name="description" content="A practical approach to web development that teaches you to specify, direct, check and hand over AI-built business websites with HTML, CSS, JavaScript, WordPress and React.">
 
-<title>2&nbsp; Structure: HTML as Information Architecture – Build Web, Guide AI</title>
+<title>5&nbsp; Structure: HTML as Information Architecture – Build Web, Guide AI</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -70,7 +73,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../chapters/chapter-presentation.html" rel="next">
-<link href="../chapters/chapter-ai-web-partner.html" rel="prev">
+<link href="../chapters/chapter-agent-ready-repo.html" rel="prev">
 <link href="../favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -78,14 +81,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-6453f418aeef366c23116eb9cb0b6816.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-36d1909bcb541879de504f1ebcc96011.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-9950bca906ef9bb3ea288c0af376aad5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-36d1909bcb541879de504f1ebcc96011.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-b146b0f11fcb9d7b327ea38bc2e11b34.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-8bc080b4f13ff5280c11423cbe489c26.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-b146b0f11fcb9d7b327ea38bc2e11b34.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -116,6 +119,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../assets/custom.css">
+<link rel="stylesheet" href="../book-design.css">
 </head>
 
 <body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -289,7 +293,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-structure.html">Web Foundations</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-structure.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-structure.html">Web Foundations</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-structure.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -363,7 +367,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Web Foundations</span></a>
+ <span class="menu-text">The Practice Spine</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -371,32 +375,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-structure.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></span></a>
+  <a href="../chapters/chapter-specify-before-build.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Specify Before You Build</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-presentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></span></a>
+  <a href="../chapters/chapter-checks-that-run.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Checks That Run</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-behaviour.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Behaviour: JavaScript as User Interaction</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-connection.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Connection: APIs as Business Integration</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../projects/project-portfolio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Project: Portfolio Website</span></span></a>
+  <a href="../chapters/chapter-agent-ready-repo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The Agent-Ready Repo and Handover</span></span></a>
   </div>
 </li>
       </ul>
@@ -404,7 +396,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Content Management for Business</span></a>
+ <span class="menu-text">Web Foundations</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -412,32 +404,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-why-cms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Why CMS? The Business Value of Managed Content</span></span></a>
+  <a href="../chapters/chapter-structure.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-wordpress-platform.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">WordPress as Platform</span></span></a>
+  <a href="../chapters/chapter-presentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-extending-platforms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Extending Platforms</span></span></a>
+  <a href="../chapters/chapter-behaviour.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Behaviour: JavaScript as User Interaction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-headless-architecture.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Headless Architecture</span></span></a>
+  <a href="../chapters/chapter-connection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Connection: APIs as Business Integration</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../projects/project-business-site.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Project: Business Website with WordPress</span></span></a>
+  <a href="../projects/project-portfolio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Project: Portfolio Website</span></span></a>
   </div>
 </li>
       </ul>
@@ -445,7 +437,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Modern Frontend Development</span></a>
+ <span class="menu-text">Content Management for Business</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -453,26 +445,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-component-thinking.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Component Thinking: React</span></span></a>
+  <a href="../chapters/chapter-why-cms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Why CMS? The Business Value of Managed Content</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-rapid-development.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Rapid Development: CSS Frameworks</span></span></a>
+  <a href="../chapters/chapter-wordpress-platform.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">WordPress as Platform</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter-professional-practices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Professional Practices</span></span></a>
+  <a href="../chapters/chapter-extending-platforms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Extending Platforms</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../projects/project-react-integration.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Project: React Integration</span></span></a>
+  <a href="../chapters/chapter-headless-architecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Headless Architecture</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/project-business-site.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Project: Business Website with WordPress</span></span></a>
   </div>
 </li>
       </ul>
@@ -480,7 +478,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">The Professional Developer</span></a>
+ <span class="menu-text">Modern Frontend Development</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -488,20 +486,78 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-component-thinking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Component Thinking: React</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-rapid-development.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Rapid Development: CSS Frameworks</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/chapter-professional-practices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Professional Practices</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/project-react-integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Project: React Integration</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">The Professional Developer</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/chapter-emerging-technologies.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Evaluating Emerging Technologies</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Evaluating Emerging Technologies</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter-development-career.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Your Development Career</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Your Development Career</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter-ai-era-developer.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">The AI-Era Developer</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">The AI-Era Developer</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/how-to-use-this-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to Use This Book</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/2027-course-map.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2027 Course Map</span></a>
   </div>
 </li>
       </ul>
@@ -520,7 +576,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
     </ul>
     </div>
-</nav>
+<div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
+<p>Paperback ISBN 979-8-255-17415-7</p>
+</div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -528,15 +586,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-concept-first" id="toc-the-concept-first" class="nav-link active" data-scroll-target="#the-concept-first"><span class="header-section-number">2.1</span> The Concept First</a></li>
-  <li><a href="#understanding-through-architecture" id="toc-understanding-through-architecture" class="nav-link" data-scroll-target="#understanding-through-architecture"><span class="header-section-number">2.2</span> Understanding Through Architecture</a></li>
-  <li><a href="#discovering-structure-with-your-ai-partner" id="toc-discovering-structure-with-your-ai-partner" class="nav-link" data-scroll-target="#discovering-structure-with-your-ai-partner"><span class="header-section-number">2.3</span> Discovering Structure with Your AI Partner</a>
+  <li><a href="#the-concept-first" id="toc-the-concept-first" class="nav-link active" data-scroll-target="#the-concept-first"><span class="header-section-number">5.1</span> The Concept First</a></li>
+  <li><a href="#understanding-through-architecture" id="toc-understanding-through-architecture" class="nav-link" data-scroll-target="#understanding-through-architecture"><span class="header-section-number">5.2</span> Understanding Through Architecture</a></li>
+  <li><a href="#discovering-structure-with-your-ai-partner" id="toc-discovering-structure-with-your-ai-partner" class="nav-link" data-scroll-target="#discovering-structure-with-your-ai-partner"><span class="header-section-number">5.3</span> Discovering Structure with Your AI Partner</a>
   <ul class="collapse">
   <li><a href="#exploration-1-document-anatomy" id="toc-exploration-1-document-anatomy" class="nav-link" data-scroll-target="#exploration-1-document-anatomy">Exploration 1: Document Anatomy</a></li>
   <li><a href="#exploration-2-semantic-meaning" id="toc-exploration-2-semantic-meaning" class="nav-link" data-scroll-target="#exploration-2-semantic-meaning">Exploration 2: Semantic Meaning</a></li>
   <li><a href="#exploration-3-the-simplest-valid-page" id="toc-exploration-3-the-simplest-valid-page" class="nav-link" data-scroll-target="#exploration-3-the-simplest-valid-page">Exploration 3: The Simplest Valid Page</a></li>
   </ul></li>
-  <li><a href="#from-concept-to-code" id="toc-from-concept-to-code" class="nav-link" data-scroll-target="#from-concept-to-code"><span class="header-section-number">2.4</span> From Concept to Code</a>
+  <li><a href="#from-concept-to-code" id="toc-from-concept-to-code" class="nav-link" data-scroll-target="#from-concept-to-code"><span class="header-section-number">5.4</span> From Concept to Code</a>
   <ul class="collapse">
   <li><a href="#the-document-container" id="toc-the-document-container" class="nav-link" data-scroll-target="#the-document-container">The Document Container</a></li>
   <li><a href="#the-two-main-sections" id="toc-the-two-main-sections" class="nav-link" data-scroll-target="#the-two-main-sections">The Two Main Sections</a></li>
@@ -544,41 +602,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#common-semantic-elements" id="toc-common-semantic-elements" class="nav-link" data-scroll-target="#common-semantic-elements">Common Semantic Elements</a></li>
   <li><a href="#headings-create-hierarchy" id="toc-headings-create-hierarchy" class="nav-link" data-scroll-target="#headings-create-hierarchy">Headings Create Hierarchy</a></li>
   </ul></li>
-  <li><a href="#building-your-mental-model" id="toc-building-your-mental-model" class="nav-link" data-scroll-target="#building-your-mental-model"><span class="header-section-number">2.5</span> Building Your Mental Model</a>
+  <li><a href="#building-your-mental-model" id="toc-building-your-mental-model" class="nav-link" data-scroll-target="#building-your-mental-model"><span class="header-section-number">5.5</span> Building Your Mental Model</a>
   <ul class="collapse">
   <li><a href="#the-tree-structure" id="toc-the-tree-structure" class="nav-link" data-scroll-target="#the-tree-structure">The Tree Structure</a></li>
   <li><a href="#tags-elements-and-attributes" id="toc-tags-elements-and-attributes" class="nav-link" data-scroll-target="#tags-elements-and-attributes">Tags, Elements, and Attributes</a></li>
   <li><a href="#the-box-model-preview" id="toc-the-box-model-preview" class="nav-link" data-scroll-target="#the-box-model-preview">The Box Model Preview</a></li>
   </ul></li>
-  <li><a href="#business-applications" id="toc-business-applications" class="nav-link" data-scroll-target="#business-applications"><span class="header-section-number">2.6</span> Business Applications</a>
+  <li><a href="#business-applications" id="toc-business-applications" class="nav-link" data-scroll-target="#business-applications"><span class="header-section-number">5.6</span> Business Applications</a>
   <ul class="collapse">
   <li><a href="#search-engine-optimisation-seo" id="toc-search-engine-optimisation-seo" class="nav-link" data-scroll-target="#search-engine-optimisation-seo">Search Engine Optimisation (SEO)</a></li>
   <li><a href="#accessibility" id="toc-accessibility" class="nav-link" data-scroll-target="#accessibility">Accessibility</a></li>
   <li><a href="#maintainability" id="toc-maintainability" class="nav-link" data-scroll-target="#maintainability">Maintainability</a></li>
   <li><a href="#professional-credibility" id="toc-professional-credibility" class="nav-link" data-scroll-target="#professional-credibility">Professional Credibility</a></li>
   </ul></li>
-  <li><a href="#practice-exercises" id="toc-practice-exercises" class="nav-link" data-scroll-target="#practice-exercises"><span class="header-section-number">2.7</span> Practice Exercises</a>
+  <li><a href="#practice-exercises" id="toc-practice-exercises" class="nav-link" data-scroll-target="#practice-exercises"><span class="header-section-number">5.7</span> Practice Exercises</a>
   <ul class="collapse">
-  <li><a href="#exercise-1.1-document-analysis-level-1" id="toc-exercise-1.1-document-analysis-level-1" class="nav-link" data-scroll-target="#exercise-1.1-document-analysis-level-1">Exercise 1.1: Document Analysis (Level 1)</a></li>
-  <li><a href="#exercise-1.2-structure-first-level-2" id="toc-exercise-1.2-structure-first-level-2" class="nav-link" data-scroll-target="#exercise-1.2-structure-first-level-2">Exercise 1.2: Structure First (Level 2)</a></li>
-  <li><a href="#exercise-1.3-fix-the-structure-level-3" id="toc-exercise-1.3-fix-the-structure-level-3" class="nav-link" data-scroll-target="#exercise-1.3-fix-the-structure-level-3">Exercise 1.3: Fix the Structure (Level 3)</a></li>
-  <li><a href="#exercise-1.4-business-requirements-level-4" id="toc-exercise-1.4-business-requirements-level-4" class="nav-link" data-scroll-target="#exercise-1.4-business-requirements-level-4">Exercise 1.4: Business Requirements (Level 4)</a></li>
-  <li><a href="#exercise-1.5-semantic-debate-level-5" id="toc-exercise-1.5-semantic-debate-level-5" class="nav-link" data-scroll-target="#exercise-1.5-semantic-debate-level-5">Exercise 1.5: Semantic Debate (Level 5)</a></li>
+  <li><a href="#exercise-5.1-document-analysis-level-1" id="toc-exercise-5.1-document-analysis-level-1" class="nav-link" data-scroll-target="#exercise-5.1-document-analysis-level-1">Exercise 5.1: Document Analysis (Level 1)</a></li>
+  <li><a href="#exercise-5.2-structure-first-level-2" id="toc-exercise-5.2-structure-first-level-2" class="nav-link" data-scroll-target="#exercise-5.2-structure-first-level-2">Exercise 5.2: Structure First (Level 2)</a></li>
+  <li><a href="#exercise-5.3-fix-the-structure-level-3" id="toc-exercise-5.3-fix-the-structure-level-3" class="nav-link" data-scroll-target="#exercise-5.3-fix-the-structure-level-3">Exercise 5.3: Fix the Structure (Level 3)</a></li>
+  <li><a href="#exercise-5.4-business-requirements-level-4" id="toc-exercise-5.4-business-requirements-level-4" class="nav-link" data-scroll-target="#exercise-5.4-business-requirements-level-4">Exercise 5.4: Business Requirements (Level 4)</a></li>
+  <li><a href="#exercise-5.5-semantic-debate-level-5" id="toc-exercise-5.5-semantic-debate-level-5" class="nav-link" data-scroll-target="#exercise-5.5-semantic-debate-level-5">Exercise 5.5: Semantic Debate (Level 5)</a></li>
   </ul></li>
-  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary"><span class="header-section-number">2.8</span> Chapter Summary</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">2.9</span> Reflection</a></li>
-  <li><a href="#your-learning-journal" id="toc-your-learning-journal" class="nav-link" data-scroll-target="#your-learning-journal"><span class="header-section-number">2.10</span> Your Learning Journal</a></li>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">2.11</span> Next Steps</a></li>
+  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary"><span class="header-section-number">5.8</span> Chapter Summary</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">5.9</span> Reflection</a></li>
+  <li><a href="#your-learning-journal" id="toc-your-learning-journal" class="nav-link" data-scroll-target="#your-learning-journal"><span class="header-section-number">5.10</span> Your Learning Journal</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">5.11</span> Next Steps</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/build-web-guide-ai/edit/main/chapters/chapter-structure.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="build-web-guide-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="build-web-guide-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/build-web-guide-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/build-web-guide-ai/edit/main/chapters/chapter-structure.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/build-web-guide-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/build-web-guide-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/build-web-guide-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/build-web-guide-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-structure.html">Web Foundations</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-structure.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter-structure.html">Web Foundations</a></li><li class="breadcrumb-item"><a href="../chapters/chapter-structure.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span id="sec-structure" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span id="sec-structure" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Structure: HTML as Information Architecture</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -595,15 +653,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="the-concept-first" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="the-concept-first"><span class="header-section-number">2.1</span> The Concept First</h2>
-<p>Before we write any HTML, let’s understand what we’re really doing: <strong>organising information so both humans and machines can understand it</strong>.</p>
-<p>Every document you’ve ever read has structure. A book has chapters, sections, and paragraphs. A business report has headings, bullet points, and tables. A restaurant menu has categories, items, and descriptions. This structure isn’t decoration, it’s how we communicate meaning.</p>
+<section id="the-concept-first" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="the-concept-first"><span class="header-section-number">5.1</span> The Concept First</h2>
+<p>Before we write any HTML, consider what it does: <strong>organising information so both humans and machines can understand it</strong>.</p>
+<p>Every document you’ve ever read has structure. A book has chapters, sections, and paragraphs. A business report has headings, bullet points, and tables. A restaurant menu has categories, items, and descriptions. Structure is how documents communicate meaning.</p>
 <p>HTML (HyperText Markup Language) is simply the language we use to describe document structure for the web. When you write HTML, you’re not designing how something looks, you’re declaring what something <em>is</em>.</p>
-<p>This distinction matters enormously. A heading isn’t big, bold text. A heading <em>is</em> a heading, a structural element that indicates hierarchy and importance. How it appears is a separate concern entirely.</p>
+<p>A heading isn’t big, bold text. A heading <em>is</em> a heading, a structural element that indicates hierarchy and importance. How it appears is a separate concern.</p>
 </section>
-<section id="understanding-through-architecture" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="understanding-through-architecture"><span class="header-section-number">2.2</span> Understanding Through Architecture</h2>
+<section id="understanding-through-architecture" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="understanding-through-architecture"><span class="header-section-number">5.2</span> Understanding Through Architecture</h2>
 <p>Think of a well-designed building:</p>
 <ul>
 <li>The <strong>foundation</strong> supports everything above it</li>
@@ -620,7 +678,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Links</strong> connect pages and resources</li>
 <li><strong>Web standards</strong> ensure accessibility across devices</li>
 </ul>
-<p>The parallel is precise. An architect doesn’t just make a building that stands, they create spaces that people can navigate, understand, and use. A web developer doesn’t just make a page that displays, they create documents that humans can read and machines can process.</p>
+<p>An architect doesn’t just make a building that stands, they create spaces that people can navigate, understand, and use. A web developer doesn’t just make a page that displays, they create documents that humans can read and machines can process.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -635,9 +693,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="discovering-structure-with-your-ai-partner" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="discovering-structure-with-your-ai-partner"><span class="header-section-number">2.3</span> Discovering Structure with Your AI Partner</h2>
-<p>Let’s use AI to explore these concepts before we see any code. Remember from Chapter 0: we’re using AI to build understanding, not to avoid learning.</p>
+<section id="discovering-structure-with-your-ai-partner" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="discovering-structure-with-your-ai-partner"><span class="header-section-number">5.3</span> Discovering Structure with Your AI Partner</h2>
+<p>Let’s use AI to explore these concepts before we see any code. Remember from Chapter 1: we’re using AI to build understanding, not to avoid learning.</p>
 <section id="exploration-1-document-anatomy" class="level3">
 <h3 class="anchored" data-anchor-id="exploration-1-document-anatomy">Exploration 1: Document Anatomy</h3>
 <p>Before we think about HTML at all, let’s think about documents:</p>
@@ -692,8 +750,8 @@ What happens if I leave out the DOCTYPE? Would the page still display?</code></p
 <p>These conversations build understanding that copying code never provides.</p>
 </section>
 </section>
-<section id="from-concept-to-code" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="from-concept-to-code"><span class="header-section-number">2.4</span> From Concept to Code</h2>
+<section id="from-concept-to-code" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="from-concept-to-code"><span class="header-section-number">5.4</span> From Concept to Code</h2>
 <p>Let’s build your HTML understanding progressively, starting from the absolute basics.</p>
 <section id="the-document-container" class="level3">
 <h3 class="anchored" data-anchor-id="the-document-container">The Document Container</h3>
@@ -817,7 +875,7 @@ What happens if I leave out the DOCTYPE? Would the page still display?</code></p
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Don’t choose elements based on how they look by default. Choose them based on what the content <em>is</em>. A <code>&lt;section&gt;</code> isn’t “a box”, it’s a thematic grouping of content. Appearance is CSS’s job (Chapter 2).</p>
+<p>Don’t choose elements based on how they look by default. Choose them based on what the content <em>is</em>. A <code>&lt;section&gt;</code> isn’t “a box”, it’s a thematic grouping of content. Appearance is CSS’s job (Chapter 6).</p>
 </div>
 </div>
 </section>
@@ -837,8 +895,8 @@ website with pages for Home, Services, About, and Contact. Then show
 me a common mistake beginners make with headings.</code></pre>
 </section>
 </section>
-<section id="building-your-mental-model" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="building-your-mental-model"><span class="header-section-number">2.5</span> Building Your Mental Model</h2>
+<section id="building-your-mental-model" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="building-your-mental-model"><span class="header-section-number">5.5</span> Building Your Mental Model</h2>
 <section id="the-tree-structure" class="level3">
 <h3 class="anchored" data-anchor-id="the-tree-structure">The Tree Structure</h3>
 <p>HTML forms a tree, like a family tree or organisation chart:</p>
@@ -877,15 +935,15 @@ company organisational chart as an analogy.</code></pre>
 </section>
 <section id="the-box-model-preview" class="level3">
 <h3 class="anchored" data-anchor-id="the-box-model-preview">The Box Model Preview</h3>
-<p>Every HTML element creates an invisible box on the page. These boxes stack and nest according to the document structure. In Chapter 2, we’ll learn to control these boxes with CSS. For now, understand that structure creates boxes, and boxes create layout.</p>
+<p>Every HTML element creates an invisible box on the page. These boxes stack and nest according to the document structure. In Chapter 6, we will learn to control these boxes with CSS. For now, understand that structure creates boxes, and boxes create layout.</p>
 <pre class="text"><code>Ask your AI:
 If I put a section inside a main element, and two paragraphs inside
 that section, how many "boxes" have I created? Describe how they
 would stack.</code></pre>
 </section>
 </section>
-<section id="business-applications" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="business-applications"><span class="header-section-number">2.6</span> Business Applications</h2>
+<section id="business-applications" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="business-applications"><span class="header-section-number">5.6</span> Business Applications</h2>
 <section id="search-engine-optimisation-seo" class="level3">
 <h3 class="anchored" data-anchor-id="search-engine-optimisation-seo">Search Engine Optimisation (SEO)</h3>
 <p>Search engines read your HTML structure to understand your content. A well-structured page with clear headings, semantic sections, and meaningful hierarchy ranks better than a soup of <code>&lt;div&gt;</code> elements.</p>
@@ -897,7 +955,7 @@ confusing?</code></pre>
 <section id="accessibility" class="level3">
 <h3 class="anchored" data-anchor-id="accessibility">Accessibility</h3>
 <p>Screen readers, software used by visually impaired people, navigate by structure. Users can jump between headings, skip to main content, or list all navigation links. Without semantic HTML, this navigation is impossible.</p>
-<p>This isn’t just ethical, it’s often legal. Many jurisdictions require accessible websites for businesses, government, and education.</p>
+<p>Many jurisdictions also require accessible websites for businesses, government, and education, so accessibility carries legal as well as ethical weight.</p>
 </section>
 <section id="maintainability" class="level3">
 <h3 class="anchored" data-anchor-id="maintainability">Maintainability</h3>
@@ -905,7 +963,7 @@ confusing?</code></pre>
 </section>
 <section id="professional-credibility" class="level3">
 <h3 class="anchored" data-anchor-id="professional-credibility">Professional Credibility</h3>
-<p>When potential employers or clients view your page source, structure tells them about your professionalism. Clean, semantic HTML signals someone who understands web fundamentals, not just someone who copied code until something worked.</p>
+<p>When potential employers or clients view your page source, structure tells them about your professionalism. Clean, semantic HTML signals that you understand web fundamentals.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -921,8 +979,8 @@ confusing?</code></pre>
 </div>
 </section>
 </section>
-<section id="practice-exercises" class="level2" data-number="2.7">
-<h2 data-number="2.7" class="anchored" data-anchor-id="practice-exercises"><span class="header-section-number">2.7</span> Practice Exercises</h2>
+<section id="practice-exercises" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="practice-exercises"><span class="header-section-number">5.7</span> Practice Exercises</h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -942,8 +1000,8 @@ confusing?</code></pre>
 </ul>
 </div>
 </div>
-<section id="exercise-1.1-document-analysis-level-1" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-1.1-document-analysis-level-1">Exercise 1.1: Document Analysis (Level 1)</h3>
+<section id="exercise-5.1-document-analysis-level-1" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-5.1-document-analysis-level-1">Exercise 5.1: Document Analysis (Level 1)</h3>
 <p>Find a simple webpage (a local business, a restaurant, a small company). View its source (right-click → View Page Source). Identify:</p>
 <ol type="1">
 <li>The <code>&lt;!DOCTYPE&gt;</code> declaration</li>
@@ -953,8 +1011,8 @@ confusing?</code></pre>
 </ol>
 <p>Document your findings. Is this page well-structured or poorly structured? Why?</p>
 </section>
-<section id="exercise-1.2-structure-first-level-2" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-1.2-structure-first-level-2">Exercise 1.2: Structure First (Level 2)</h3>
+<section id="exercise-5.2-structure-first-level-2" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-5.2-structure-first-level-2">Exercise 5.2: Structure First (Level 2)</h3>
 <p>Without writing any HTML, create a structural outline for a personal portfolio page. List:</p>
 <ul>
 <li>What would go in the header?</li>
@@ -962,10 +1020,10 @@ confusing?</code></pre>
 <li>What information belongs in the footer?</li>
 <li>What’s the heading hierarchy?</li>
 </ul>
-<p>Then, with your AI partner, translate your outline into semantic HTML. Compare your outline with the final code, did the structure remain clear?</p>
+<p>Then, with your AI partner, translate your outline into semantic HTML. Compare your outline with the final code. Did the structure remain clear?</p>
 </section>
-<section id="exercise-1.3-fix-the-structure-level-3" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-1.3-fix-the-structure-level-3">Exercise 1.3: Fix the Structure (Level 3)</h3>
+<section id="exercise-5.3-fix-the-structure-level-3" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-5.3-fix-the-structure-level-3">Exercise 5.3: Fix the Structure (Level 3)</h3>
 <p>Here’s a poorly structured page. Identify the problems and rewrite it with proper semantic HTML:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="dt">&gt;</span></span>
@@ -979,8 +1037,8 @@ confusing?</code></pre>
 <span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>List each problem you find and explain why it matters.</p>
 </section>
-<section id="exercise-1.4-business-requirements-level-4" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-1.4-business-requirements-level-4">Exercise 1.4: Business Requirements (Level 4)</h3>
+<section id="exercise-5.4-business-requirements-level-4" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-5.4-business-requirements-level-4">Exercise 5.4: Business Requirements (Level 4)</h3>
 <p>A local bakery asks you to create their website. They mention:</p>
 <ul>
 <li>They want their hours prominently displayed</li>
@@ -988,17 +1046,17 @@ confusing?</code></pre>
 <li>They want to show their story and values</li>
 <li>They need contact information and a map</li>
 </ul>
-<p>Create a structural plan that addresses their requirements. Which semantic elements would you use for each requirement? Justify your choices in business terms, why does proper structure benefit this bakery?</p>
+<p>Create a structural plan that addresses their requirements. Which semantic elements would you use for each requirement? Justify your choices in business terms: why does proper structure benefit this bakery?</p>
 </section>
-<section id="exercise-1.5-semantic-debate-level-5" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-1.5-semantic-debate-level-5">Exercise 1.5: Semantic Debate (Level 5)</h3>
+<section id="exercise-5.5-semantic-debate-level-5" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-5.5-semantic-debate-level-5">Exercise 5.5: Semantic Debate (Level 5)</h3>
 <p>Should a “team members” section on an About page use <code>&lt;article&gt;</code> for each person, or <code>&lt;section&gt;</code>, or neither?</p>
 <p>Research the HTML specification’s definitions for both elements. Have a conversation with your AI partner exploring arguments for each choice. Write a short recommendation (200-300 words) defending your position with evidence from web standards.</p>
-<p>This exercise has no single correct answer, it develops your ability to make and defend technical decisions (making and defending technology choices).</p>
+<p>This exercise has no single correct answer. It develops your ability to make and defend technical decisions (making and defending technology choices).</p>
 </section>
 </section>
-<section id="chapter-summary" class="level2" data-number="2.8">
-<h2 data-number="2.8" class="anchored" data-anchor-id="chapter-summary"><span class="header-section-number">2.8</span> Chapter Summary</h2>
+<section id="chapter-summary" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="chapter-summary"><span class="header-section-number">5.8</span> Chapter Summary</h2>
 <ul>
 <li>HTML describes document structure, not appearance</li>
 <li>Semantic elements convey meaning to humans and machines</li>
@@ -1008,9 +1066,9 @@ confusing?</code></pre>
 <li>The structure you create is as important as the content you write</li>
 </ul>
 </section>
-<section id="reflection" class="level2" data-number="2.9">
-<h2 data-number="2.9" class="anchored" data-anchor-id="reflection"><span class="header-section-number">2.9</span> Reflection</h2>
-<p>Before moving to Chapter 2, ensure you can:</p>
+<section id="reflection" class="level2" data-number="5.9">
+<h2 data-number="5.9" class="anchored" data-anchor-id="reflection"><span class="header-section-number">5.9</span> Reflection</h2>
+<p>Before moving on, ensure you can:</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Explain HTML’s purpose without using technical jargon</label></li>
 <li><label><input type="checkbox">Identify at least six semantic HTML elements and their purposes</label></li>
@@ -1021,8 +1079,8 @@ confusing?</code></pre>
 <li><label><input type="checkbox">Have a productive conversation with AI about HTML concepts</label></li>
 </ul>
 </section>
-<section id="your-learning-journal" class="level2" data-number="2.10">
-<h2 data-number="2.10" class="anchored" data-anchor-id="your-learning-journal"><span class="header-section-number">2.10</span> Your Learning Journal</h2>
+<section id="your-learning-journal" class="level2" data-number="5.10">
+<h2 data-number="5.10" class="anchored" data-anchor-id="your-learning-journal"><span class="header-section-number">5.10</span> Your Learning Journal</h2>
 <p>Record your responses to these prompts:</p>
 <ol type="1">
 <li><p><strong>Structure Spotting</strong>: Look at three websites you use regularly. What structural patterns do they share? What semantic elements can you identify?</p></li>
@@ -1031,10 +1089,10 @@ confusing?</code></pre>
 <li><p><strong>Lingering Questions</strong>: What aspects of HTML structure are still unclear? Write these as questions to explore with your AI partner.</p></li>
 </ol>
 </section>
-<section id="next-steps" class="level2" data-number="2.11">
-<h2 data-number="2.11" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">2.11</span> Next Steps</h2>
+<section id="next-steps" class="level2" data-number="5.11">
+<h2 data-number="5.11" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">5.11</span> Next Steps</h2>
 <p>You now understand how to describe what content <em>is</em>. But a page with only HTML looks plain, black text on white background, default fonts, minimal layout.</p>
-<p>In <a href="chapter-presentation.html" class="quarto-xref"><span>Chapter 3</span></a>, we’ll explore CSS, how to control the visual presentation of our structured content. Structure and presentation are deliberately separate in web development, and understanding why is key to professional practice.</p>
+<p>In <a href="chapter-presentation.html" class="quarto-xref"><span>Chapter 6</span></a>, we’ll explore CSS, how to control the visual presentation of our structured content. Structure and presentation are deliberately separate in web development.</p>
 <p>The structure you’ve learned to create becomes the foundation that CSS styles. Good structure makes styling straightforward; poor structure makes it a struggle.</p>
 
 
@@ -1150,16 +1208,16 @@ confusing?</code></pre>
     }
     function toggleCodeHandler(show) {
       return function(e) {
-        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-        for (let i=0; i<detailsSrc.length; i++) {
-          const details = detailsSrc[i].parentElement;
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
           if (show) {
             details.open = true;
           } else {
             details.removeAttribute("open");
           }
         }
-        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
         const fromCls = show ? "hidden" : "unhidden";
         const toCls = show ? "unhidden" : "hidden";
         for (let i=0; i<cellCodeDivs.length; i++) {
@@ -1511,13 +1569,13 @@ confusing?</code></pre>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/chapter-ai-web-partner.html" class="pagination-link" aria-label="Understanding Your AI Web Development Partner">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Understanding Your AI Web Development Partner</span></span>
+      <a href="../chapters/chapter-agent-ready-repo.html" class="pagination-link" aria-label="The Agent-Ready Repo and Handover">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The Agent-Ready Repo and Handover</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../chapters/chapter-presentation.html" class="pagination-link" aria-label="Presentation: CSS as Visual Communication">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Presentation: CSS as Visual Communication</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
@@ -1525,13 +1583,13 @@ confusing?</code></pre>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Concept First</span></span>
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>Before we write any HTML, let's understand what we're really doing: **organising information so both humans and machines can understand it**.</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>Before we write any HTML, consider what it does: **organising information so both humans and machines can understand it**.</span>
 <span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>Every document you've ever read has structure. A book has chapters, sections, and paragraphs. A business report has headings, bullet points, and tables. A restaurant menu has categories, items, and descriptions. This structure isn't decoration, it's how we communicate meaning.</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>Every document you've ever read has structure. A book has chapters, sections, and paragraphs. A business report has headings, bullet points, and tables. A restaurant menu has categories, items, and descriptions. Structure is how documents communicate meaning.</span>
 <span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>HTML (HyperText Markup Language) is simply the language we use to describe document structure for the web. When you write HTML, you're not designing how something looks, you're declaring what something *is*.</span>
 <span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>This distinction matters enormously. A heading isn't big, bold text. A heading *is* a heading, a structural element that indicates hierarchy and importance. How it appears is a separate concern entirely.</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>A heading isn't big, bold text. A heading *is* a heading, a structural element that indicates hierarchy and importance. How it appears is a separate concern.</span>
 <span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Understanding Through Architecture</span></span>
 <span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a></span>
@@ -1551,7 +1609,7 @@ confusing?</code></pre>
 <span id="cb20-28"><a href="#cb20-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Links** connect pages and resources</span>
 <span id="cb20-29"><a href="#cb20-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Web standards** ensure accessibility across devices</span>
 <span id="cb20-30"><a href="#cb20-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-31"><a href="#cb20-31" aria-hidden="true" tabindex="-1"></a>The parallel is precise. An architect doesn't just make a building that stands, they create spaces that people can navigate, understand, and use. A web developer doesn't just make a page that displays, they create documents that humans can read and machines can process.</span>
+<span id="cb20-31"><a href="#cb20-31" aria-hidden="true" tabindex="-1"></a>An architect doesn't just make a building that stands, they create spaces that people can navigate, understand, and use. A web developer doesn't just make a page that displays, they create documents that humans can read and machines can process.</span>
 <span id="cb20-32"><a href="#cb20-32" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-33"><a href="#cb20-33" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
 <span id="cb20-34"><a href="#cb20-34" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Architecture Mindset</span></span>
@@ -1560,7 +1618,7 @@ confusing?</code></pre>
 <span id="cb20-37"><a href="#cb20-37" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-38"><a href="#cb20-38" aria-hidden="true" tabindex="-1"></a><span class="fu">## Discovering Structure with Your AI Partner</span></span>
 <span id="cb20-39"><a href="#cb20-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-40"><a href="#cb20-40" aria-hidden="true" tabindex="-1"></a>Let's use AI to explore these concepts before we see any code. Remember from Chapter 0: we're using AI to build understanding, not to avoid learning.</span>
+<span id="cb20-40"><a href="#cb20-40" aria-hidden="true" tabindex="-1"></a>Let's use AI to explore these concepts before we see any code. Remember from Chapter 1: we're using AI to build understanding, not to avoid learning.</span>
 <span id="cb20-41"><a href="#cb20-41" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-42"><a href="#cb20-42" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exploration 1: Document Anatomy</span></span>
 <span id="cb20-43"><a href="#cb20-43" aria-hidden="true" tabindex="-1"></a></span>
@@ -1743,7 +1801,7 @@ confusing?</code></pre>
 <span id="cb20-220"><a href="#cb20-220" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-221"><a href="#cb20-221" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
 <span id="cb20-222"><a href="#cb20-222" aria-hidden="true" tabindex="-1"></a><span class="fu">## Common Mistake</span></span>
-<span id="cb20-223"><a href="#cb20-223" aria-hidden="true" tabindex="-1"></a>Don't choose elements based on how they look by default. Choose them based on what the content *is*. A <span class="in">`&lt;section&gt;`</span> isn't "a box", it's a thematic grouping of content. Appearance is CSS's job (Chapter 2).</span>
+<span id="cb20-223"><a href="#cb20-223" aria-hidden="true" tabindex="-1"></a>Don't choose elements based on how they look by default. Choose them based on what the content *is*. A <span class="in">`&lt;section&gt;`</span> isn't "a box", it's a thematic grouping of content. Appearance is CSS's job (Chapter 6).</span>
 <span id="cb20-224"><a href="#cb20-224" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb20-225"><a href="#cb20-225" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-226"><a href="#cb20-226" aria-hidden="true" tabindex="-1"></a><span class="fu">### Headings Create Hierarchy</span></span>
@@ -1817,7 +1875,7 @@ confusing?</code></pre>
 <span id="cb20-294"><a href="#cb20-294" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-295"><a href="#cb20-295" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Box Model Preview</span></span>
 <span id="cb20-296"><a href="#cb20-296" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-297"><a href="#cb20-297" aria-hidden="true" tabindex="-1"></a>Every HTML element creates an invisible box on the page. These boxes stack and nest according to the document structure. In Chapter 2, we'll learn to control these boxes with CSS. For now, understand that structure creates boxes, and boxes create layout.</span>
+<span id="cb20-297"><a href="#cb20-297" aria-hidden="true" tabindex="-1"></a>Every HTML element creates an invisible box on the page. These boxes stack and nest according to the document structure. In Chapter 6, we will learn to control these boxes with CSS. For now, understand that structure creates boxes, and boxes create layout.</span>
 <span id="cb20-298"><a href="#cb20-298" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-299"><a href="#cb20-299" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
 <span id="cb20-300"><a href="#cb20-300" aria-hidden="true" tabindex="-1"></a><span class="in">Ask your AI:</span></span>
@@ -1843,7 +1901,7 @@ confusing?</code></pre>
 <span id="cb20-320"><a href="#cb20-320" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-321"><a href="#cb20-321" aria-hidden="true" tabindex="-1"></a>Screen readers, software used by visually impaired people, navigate by structure. Users can jump between headings, skip to main content, or list all navigation links. Without semantic HTML, this navigation is impossible.</span>
 <span id="cb20-322"><a href="#cb20-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-323"><a href="#cb20-323" aria-hidden="true" tabindex="-1"></a>This isn't just ethical, it's often legal. Many jurisdictions require accessible websites for businesses, government, and education.</span>
+<span id="cb20-323"><a href="#cb20-323" aria-hidden="true" tabindex="-1"></a>Many jurisdictions also require accessible websites for businesses, government, and education, so accessibility carries legal as well as ethical weight.</span>
 <span id="cb20-324"><a href="#cb20-324" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-325"><a href="#cb20-325" aria-hidden="true" tabindex="-1"></a><span class="fu">### Maintainability</span></span>
 <span id="cb20-326"><a href="#cb20-326" aria-hidden="true" tabindex="-1"></a></span>
@@ -1851,7 +1909,7 @@ confusing?</code></pre>
 <span id="cb20-328"><a href="#cb20-328" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-329"><a href="#cb20-329" aria-hidden="true" tabindex="-1"></a><span class="fu">### Professional Credibility</span></span>
 <span id="cb20-330"><a href="#cb20-330" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-331"><a href="#cb20-331" aria-hidden="true" tabindex="-1"></a>When potential employers or clients view your page source, structure tells them about your professionalism. Clean, semantic HTML signals someone who understands web fundamentals, not just someone who copied code until something worked.</span>
+<span id="cb20-331"><a href="#cb20-331" aria-hidden="true" tabindex="-1"></a>When potential employers or clients view your page source, structure tells them about your professionalism. Clean, semantic HTML signals that you understand web fundamentals.</span>
 <span id="cb20-332"><a href="#cb20-332" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-333"><a href="#cb20-333" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
 <span id="cb20-334"><a href="#cb20-334" aria-hidden="true" tabindex="-1"></a><span class="fu">## Skills You Are Building</span></span>
@@ -1869,7 +1927,7 @@ confusing?</code></pre>
 <span id="cb20-346"><a href="#cb20-346" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Level 5**: Open-ended design</span>
 <span id="cb20-347"><a href="#cb20-347" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb20-348"><a href="#cb20-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-349"><a href="#cb20-349" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 1.1: Document Analysis (Level 1)</span></span>
+<span id="cb20-349"><a href="#cb20-349" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 5.1: Document Analysis (Level 1)</span></span>
 <span id="cb20-350"><a href="#cb20-350" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-351"><a href="#cb20-351" aria-hidden="true" tabindex="-1"></a>Find a simple webpage (a local business, a restaurant, a small company). View its source (right-click → View Page Source). Identify:</span>
 <span id="cb20-352"><a href="#cb20-352" aria-hidden="true" tabindex="-1"></a></span>
@@ -1880,7 +1938,7 @@ confusing?</code></pre>
 <span id="cb20-357"><a href="#cb20-357" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-358"><a href="#cb20-358" aria-hidden="true" tabindex="-1"></a>Document your findings. Is this page well-structured or poorly structured? Why?</span>
 <span id="cb20-359"><a href="#cb20-359" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-360"><a href="#cb20-360" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 1.2: Structure First (Level 2)</span></span>
+<span id="cb20-360"><a href="#cb20-360" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 5.2: Structure First (Level 2)</span></span>
 <span id="cb20-361"><a href="#cb20-361" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-362"><a href="#cb20-362" aria-hidden="true" tabindex="-1"></a>Without writing any HTML, create a structural outline for a personal portfolio page. List:</span>
 <span id="cb20-363"><a href="#cb20-363" aria-hidden="true" tabindex="-1"></a></span>
@@ -1889,9 +1947,9 @@ confusing?</code></pre>
 <span id="cb20-366"><a href="#cb20-366" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What information belongs in the footer?</span>
 <span id="cb20-367"><a href="#cb20-367" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What's the heading hierarchy?</span>
 <span id="cb20-368"><a href="#cb20-368" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-369"><a href="#cb20-369" aria-hidden="true" tabindex="-1"></a>Then, with your AI partner, translate your outline into semantic HTML. Compare your outline with the final code, did the structure remain clear?</span>
+<span id="cb20-369"><a href="#cb20-369" aria-hidden="true" tabindex="-1"></a>Then, with your AI partner, translate your outline into semantic HTML. Compare your outline with the final code. Did the structure remain clear?</span>
 <span id="cb20-370"><a href="#cb20-370" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-371"><a href="#cb20-371" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 1.3: Fix the Structure (Level 3)</span></span>
+<span id="cb20-371"><a href="#cb20-371" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 5.3: Fix the Structure (Level 3)</span></span>
 <span id="cb20-372"><a href="#cb20-372" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-373"><a href="#cb20-373" aria-hidden="true" tabindex="-1"></a>Here's a poorly structured page. Identify the problems and rewrite it with proper semantic HTML:</span>
 <span id="cb20-374"><a href="#cb20-374" aria-hidden="true" tabindex="-1"></a></span>
@@ -1910,7 +1968,7 @@ confusing?</code></pre>
 <span id="cb20-387"><a href="#cb20-387" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-388"><a href="#cb20-388" aria-hidden="true" tabindex="-1"></a>List each problem you find and explain why it matters.</span>
 <span id="cb20-389"><a href="#cb20-389" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-390"><a href="#cb20-390" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 1.4: Business Requirements (Level 4)</span></span>
+<span id="cb20-390"><a href="#cb20-390" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 5.4: Business Requirements (Level 4)</span></span>
 <span id="cb20-391"><a href="#cb20-391" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-392"><a href="#cb20-392" aria-hidden="true" tabindex="-1"></a>A local bakery asks you to create their website. They mention:</span>
 <span id="cb20-393"><a href="#cb20-393" aria-hidden="true" tabindex="-1"></a></span>
@@ -1919,15 +1977,15 @@ confusing?</code></pre>
 <span id="cb20-396"><a href="#cb20-396" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>They want to show their story and values</span>
 <span id="cb20-397"><a href="#cb20-397" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>They need contact information and a map</span>
 <span id="cb20-398"><a href="#cb20-398" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-399"><a href="#cb20-399" aria-hidden="true" tabindex="-1"></a>Create a structural plan that addresses their requirements. Which semantic elements would you use for each requirement? Justify your choices in business terms, why does proper structure benefit this bakery?</span>
+<span id="cb20-399"><a href="#cb20-399" aria-hidden="true" tabindex="-1"></a>Create a structural plan that addresses their requirements. Which semantic elements would you use for each requirement? Justify your choices in business terms: why does proper structure benefit this bakery?</span>
 <span id="cb20-400"><a href="#cb20-400" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-401"><a href="#cb20-401" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 1.5: Semantic Debate (Level 5)</span></span>
+<span id="cb20-401"><a href="#cb20-401" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 5.5: Semantic Debate (Level 5)</span></span>
 <span id="cb20-402"><a href="#cb20-402" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-403"><a href="#cb20-403" aria-hidden="true" tabindex="-1"></a>Should a "team members" section on an About page use <span class="in">`&lt;article&gt;`</span> for each person, or <span class="in">`&lt;section&gt;`</span>, or neither?</span>
 <span id="cb20-404"><a href="#cb20-404" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-405"><a href="#cb20-405" aria-hidden="true" tabindex="-1"></a>Research the HTML specification's definitions for both elements. Have a conversation with your AI partner exploring arguments for each choice. Write a short recommendation (200-300 words) defending your position with evidence from web standards.</span>
 <span id="cb20-406"><a href="#cb20-406" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-407"><a href="#cb20-407" aria-hidden="true" tabindex="-1"></a>This exercise has no single correct answer, it develops your ability to make and defend technical decisions (making and defending technology choices).</span>
+<span id="cb20-407"><a href="#cb20-407" aria-hidden="true" tabindex="-1"></a>This exercise has no single correct answer. It develops your ability to make and defend technical decisions (making and defending technology choices).</span>
 <span id="cb20-408"><a href="#cb20-408" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-409"><a href="#cb20-409" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chapter Summary</span></span>
 <span id="cb20-410"><a href="#cb20-410" aria-hidden="true" tabindex="-1"></a></span>
@@ -1940,7 +1998,7 @@ confusing?</code></pre>
 <span id="cb20-417"><a href="#cb20-417" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-418"><a href="#cb20-418" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reflection</span></span>
 <span id="cb20-419"><a href="#cb20-419" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-420"><a href="#cb20-420" aria-hidden="true" tabindex="-1"></a>Before moving to Chapter 2, ensure you can:</span>
+<span id="cb20-420"><a href="#cb20-420" aria-hidden="true" tabindex="-1"></a>Before moving on, ensure you can:</span>
 <span id="cb20-421"><a href="#cb20-421" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-422"><a href="#cb20-422" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Explain HTML's purpose without using technical jargon</span>
 <span id="cb20-423"><a href="#cb20-423" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Identify at least six semantic HTML elements and their purposes</span>
@@ -1966,7 +2024,7 @@ confusing?</code></pre>
 <span id="cb20-443"><a href="#cb20-443" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-444"><a href="#cb20-444" aria-hidden="true" tabindex="-1"></a>You now understand how to describe what content *is*. But a page with only HTML looks plain, black text on white background, default fonts, minimal layout.</span>
 <span id="cb20-445"><a href="#cb20-445" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-446"><a href="#cb20-446" aria-hidden="true" tabindex="-1"></a>In @sec-presentation, we'll explore CSS, how to control the visual presentation of our structured content. Structure and presentation are deliberately separate in web development, and understanding why is key to professional practice.</span>
+<span id="cb20-446"><a href="#cb20-446" aria-hidden="true" tabindex="-1"></a>In @sec-presentation, we'll explore CSS, how to control the visual presentation of our structured content. Structure and presentation are deliberately separate in web development.</span>
 <span id="cb20-447"><a href="#cb20-447" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-448"><a href="#cb20-448" aria-hidden="true" tabindex="-1"></a>The structure you've learned to create becomes the foundation that CSS styles. Good structure makes styling straightforward; poor structure makes it a struggle.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
