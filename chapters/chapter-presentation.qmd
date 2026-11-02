@@ -2,11 +2,11 @@
 
 ## The Concept First
 
-In @sec-structure, you learned to describe what content *is*. Now we'll control how content *looks*, but this isn't decoration. It's **visual communication**.
+In @sec-structure, you learned to describe what content *is*. Now we'll control how content *looks*: its **visual communication**.
 
 CSS (Cascading Style Sheets) determines colours, fonts, spacing, and layout. But these choices aren't arbitrary. Every visual decision communicates something: professionalism, playfulness, urgency, calm. A hospital website and a children's toy store might have identical HTML structure, but their CSS tells completely different stories.
 
-Here's the key insight: **structure and presentation are deliberately separate**. Your HTML says "this is a heading", it doesn't say "this should be blue and 24 pixels tall." CSS handles appearance. This separation means you can completely redesign a website without touching its content, or update content without breaking the design.
+**Structure and presentation are deliberately separate**. Your HTML says "this is a heading", it doesn't say "this should be blue and 24 pixels tall." CSS handles appearance. This separation means you can completely redesign a website without touching its content, or update content without breaking the design.
 
 ## Understanding Through Design
 
@@ -36,7 +36,7 @@ languages? Explain using a newspaper analogy, the same news stories
 might appear in a broadsheet and a tabloid.
 ```
 
-This conversation should reveal the power of separation: one set of content, many possible presentations. News services send identical stories to papers worldwide, but each paper styles them differently. Similarly, your HTML content can have different CSS applied for screen, print, mobile, or accessibility needs.
+This conversation should show why separation helps: one set of content, many possible presentations. News services send identical stories to papers worldwide, but each paper styles them differently. Similarly, your HTML content can have different CSS applied for screen, print, mobile, or accessibility needs.
 
 Follow up:
 
@@ -48,7 +48,7 @@ What if every heading had to specify its own colour and size?
 
 ### Exploration 2: Mobile-First as Business Strategy
 
-More than half of web traffic comes from mobile devices. But mobile-first isn't just about phones, it's a design philosophy.
+More than half of web traffic comes from mobile devices. But mobile-first is a design philosophy as much as a phone layout.
 
 ```text
 Ask your AI:
@@ -135,7 +135,7 @@ CSS can live in three places:
 <h1 style="color: navy;">Welcome</h1>
 ```
 
-External stylesheets keep presentation separate from structure. One CSS file can style an entire website, and changes propagate everywhere instantly.
+External stylesheets keep presentation separate from structure. One CSS file can style an entire website, and changes apply everywhere.
 
 ```text
 Ask your AI:
@@ -233,7 +233,7 @@ Flexbox is the modern way to arrange elements. It makes previously difficult tas
 }
 ```
 
-This single line transforms the container. Its children become "flex items" that can be arranged in powerful ways:
+This single line changes the container. Its children become "flex items" that you can arrange in rows or columns:
 
 ```css
 .container {
@@ -419,7 +419,7 @@ When you look at a webpage, think in layers:
 
 1. **Content layer** (HTML): What exists
 2. **Style layer** (CSS): How it looks
-3. **Behaviour layer** (JavaScript, Chapter 4): How it responds
+3. **Behaviour layer** (JavaScript, Chapter 7): How it responds
 
 CSS only controls layer 2. It can't create content or make things interactive, it controls visual presentation of whatever HTML provides.
 
@@ -447,7 +447,7 @@ Change the variable once, and every element using it updates instantly. This is 
 
 ### User Experience and Trust
 
-Studies consistently show that users judge website credibility in milliseconds, based primarily on visual design. Professional presentation builds trust; amateur presentation creates suspicion, regardless of how good the actual content is.
+Users judge website credibility in milliseconds, based primarily on visual design. Professional presentation builds trust; amateur presentation creates suspicion, regardless of how good the actual content is.
 
 ```text
 Ask your AI:
@@ -457,7 +457,7 @@ What visual characteristics make a website feel "trustworthy" versus
 
 ### Mobile Reach
 
-If your site doesn't work on mobile, you're excluding over half your potential audience. Responsive design isn't a feature, it's a baseline requirement for any business website.
+If your site doesn't work on mobile, you're excluding over half your potential audience. Responsive design is a baseline requirement for any business website.
 
 ### Conversion and Visual Hierarchy
 
@@ -479,7 +479,7 @@ This develops **evaluating and improving solutions** and **making and defending 
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 3.1: Style Inspection (Level 1)
+### Exercise 6.1: Style Inspection (Level 1)
 
 Using browser DevTools (right-click → Inspect), examine a website you use regularly:
 
@@ -490,9 +490,9 @@ Using browser DevTools (right-click → Inspect), examine a website you use regu
 
 Document your findings with screenshots.
 
-### Exercise 3.2: Basic Styling (Level 2)
+### Exercise 6.2: Basic Styling (Level 2)
 
-Take the semantic HTML page from Chapter 2's exercises. Create an external stylesheet that:
+Take the semantic HTML page from Chapter 5's exercises. Create an external stylesheet that:
 
 1. Sets a readable base font and line height
 2. Styles the header with a background colour
@@ -501,7 +501,7 @@ Take the semantic HTML page from Chapter 2's exercises. Create an external style
 
 Focus on readability and visual hierarchy, not decoration.
 
-### Exercise 3.3: Responsive Layout (Level 3)
+### Exercise 6.3: Responsive Layout (Level 3)
 
 Create a "features" section with three items. Each item has:
 - An icon or emoji placeholder
@@ -514,7 +514,7 @@ Using flexbox, make this:
 
 Write the CSS mobile-first, adding complexity with media queries.
 
-### Exercise 3.4: Design Analysis (Level 4)
+### Exercise 6.4: Design Analysis (Level 4)
 
 Find two competing businesses in the same industry (e.g., two accounting firms, two coffee shops). Analyse their websites:
 
@@ -525,7 +525,7 @@ Find two competing businesses in the same industry (e.g., two accounting firms, 
 
 Write a 300-word comparison explaining how CSS choices reflect (or undermine) each brand's positioning.
 
-### Exercise 3.5: Design System (Level 5)
+### Exercise 6.5: Design System (Level 5)
 
 Create a mini design system for a hypothetical business. Define:
 
@@ -542,7 +542,7 @@ Apply your system to style a simple page, then have your AI partner critique it.
 
 - CSS controls visual presentation separately from HTML structure
 - The box model (content, padding, border, margin) explains how elements take space
-- Flexbox provides powerful, intuitive layout capabilities
+- Flexbox provides flexible layout capabilities
 - Media queries enable responsive design that adapts to any device
 - Visual design communicates brand, builds trust, and guides user attention
 - Mobile-first design creates better experiences for everyone
@@ -573,8 +573,8 @@ Record your responses to these prompts:
 
 ## Next Steps
 
-You now control both structure (HTML) and presentation (CSS). But websites today aren't just documents to read, they're applications to interact with.
+You now control both structure (HTML) and presentation (CSS). But websites today are applications to interact with as well as documents to read.
 
-In @sec-behaviour, we'll add JavaScript, the third pillar of web development. JavaScript lets pages respond to user actions: clicks, scrolls, form submissions. It transforms static documents into dynamic experiences.
+In @sec-behaviour, we'll add JavaScript, the third pillar of web development. JavaScript lets pages respond to user actions: clicks, scrolls, form submissions. That turns static documents into interactive pages.
 
-The HTML structure and CSS styling you've learned become the canvas that JavaScript brings to life.
+JavaScript works on the HTML structure and CSS styling you have learned.

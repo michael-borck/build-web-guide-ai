@@ -2,11 +2,11 @@
 
 ## The Concept First
 
-In @sec-presentation, you learned CSS from scratch, selectors, box model, flexbox, media queries. That foundation matters. But building every project from zero is slow, and consistency across large applications is hard.
+In @sec-presentation, you learned CSS from scratch, selectors, box model, flexbox, media queries. But building every project from zero is slow, and consistency across large applications is hard.
 
 **CSS frameworks** solve this by providing pre-built styles, components, and design decisions. Instead of designing every button, input, and card yourself, you adopt tested patterns that work together.
 
-This isn't laziness, it's **leverage**. Professional developers use frameworks to move faster while maintaining quality. The skill is knowing when to use them, which to choose, and how to customise them for specific needs.
+Using a framework is **leverage**. Professional developers use frameworks to move faster while maintaining quality. The skill is knowing when to use them, which to choose, and how to customise them for specific needs.
 
 ## Understanding Through Design Systems
 
@@ -20,7 +20,7 @@ CSS frameworks are design systems you can adopt immediately:
 - **Tailwind CSS**: Utility-focused system with building blocks for custom designs
 - **Foundation**, **Bulma**, **Chakra UI**: Other popular options
 
-Each makes different trade-offs. Understanding those trade-offs is how you choose wisely.
+Each makes different trade-offs. Understanding those trade-offs is how you choose between them.
 
 ::: {.callout-tip}
 ## Constraints Enable Speed
@@ -31,7 +31,7 @@ Paradoxically, constraints often speed up creative work. When you don't have to 
 
 ### Exploration 1: Framework Philosophies
 
-Bootstrap and Tailwind represent fundamentally different approaches:
+Bootstrap and Tailwind represent different approaches:
 
 ```text
 Ask your AI:
@@ -88,11 +88,9 @@ A client says their Bootstrap site "looks like every other Bootstrap
 site." How would you respond? What can be done?
 ```
 
-This reveals that frameworks are starting points, not endpoints. Customisation, colours, typography, spacing, transforms a generic framework site into something unique.
+This reveals that frameworks are starting points, not endpoints. Customisation (colours, typography, spacing) makes a generic framework site distinctive.
 
 ## From Concept to Code
-
-Let's explore both Bootstrap and Tailwind practically.
 
 ### Bootstrap: Component-Based Framework
 
@@ -448,7 +446,7 @@ teams keep Tailwind codebases maintainable on large projects?
 
 ### Development Speed
 
-Frameworks dramatically reduce time-to-market:
+Frameworks reduce time-to-market:
 
 - Pre-built responsive grids
 - Tested browser compatibility
@@ -479,7 +477,7 @@ New team members can contribute faster when using standard frameworks:
 
 ### Mobile-First by Default
 
-Modern frameworks are mobile-responsive out of the box. Bootstrap's grid and Tailwind's responsive prefixes handle responsive design that would take significant custom CSS.
+Modern frameworks are mobile-responsive out of the box. Bootstrap's grid and Tailwind's responsive prefixes handle responsive design that would take a lot of custom CSS.
 
 ::: {.callout-note}
 ## Skills You Are Building
@@ -497,7 +495,7 @@ This develops **making and defending technology choices** and **evaluating and i
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 13.1: Bootstrap Basics (Level 1)
+### Exercise 16.1: Bootstrap Basics (Level 1)
 
 Create an HTML page using Bootstrap that includes:
 
@@ -508,9 +506,9 @@ Create an HTML page using Bootstrap that includes:
 
 Use only Bootstrap classes, no custom CSS.
 
-### Exercise 13.2: Tailwind Basics (Level 2)
+### Exercise 16.2: Tailwind Basics (Level 2)
 
-Recreate the same layout from Exercise 13.1 using Tailwind:
+Recreate the same layout from Exercise 16.1 using Tailwind:
 
 1. Navigation bar
 2. Hero section
@@ -519,7 +517,7 @@ Recreate the same layout from Exercise 13.1 using Tailwind:
 
 Compare the experience. Which felt faster? Which gave more control?
 
-### Exercise 13.3: React + Framework (Level 3)
+### Exercise 16.3: React + Framework (Level 3)
 
 In a React project:
 
@@ -529,9 +527,9 @@ In a React project:
 4. Make it responsive (single column on mobile, grid on desktop)
 5. Add a "Featured" variant of the card with different styling
 
-### Exercise 13.4: Customisation (Level 4)
+### Exercise 16.4: Customisation (Level 4)
 
-Take your Exercise 13.3 project and customise the framework:
+Take your Exercise 16.3 project and customise the framework:
 
 1. Change the primary colour to a custom brand colour
 2. Adjust the border radius across components
@@ -540,7 +538,7 @@ Take your Exercise 13.3 project and customise the framework:
 
 Write 200 words explaining how customisation changes the "generic" feel.
 
-### Exercise 13.5: Framework Recommendation (Level 5)
+### Exercise 16.5: Framework Recommendation (Level 5)
 
 A startup is building a SaaS product dashboard. They have:
 
@@ -564,7 +562,7 @@ Write a 500-word recommendation:
 - Tailwind offers utility-based development with maximum flexibility
 - Both work well with React
 - Framework choice depends on project needs, team skills, and timeline
-- Customisation transforms generic frameworks into branded experiences
+- Customisation makes generic frameworks feel branded
 
 ## Reflection
 
@@ -591,6 +589,6 @@ Record your responses to these prompts:
 
 ## Next Steps
 
-You now have tools for rapid, consistent UI development. But professional work requires more than just building features, it requires practices that ensure quality, collaboration, and maintainability.
+You now have tools for rapid, consistent UI development. But professional work also requires practices that ensure quality, collaboration, and maintainability.
 
 In @sec-professional-practices, we'll cover version control with Git, testing basics, and code quality practices. These professional practices separate hobby projects from production-ready work and are expected in any development role.

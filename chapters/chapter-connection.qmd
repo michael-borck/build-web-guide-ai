@@ -4,13 +4,13 @@
 
 So far, everything you've built lives in isolation. Your HTML, CSS, and JavaScript create an experience, but that experience is self-contained, it doesn't connect to anything beyond itself.
 
-Real business applications are different. They display live weather data. They process payments. They show inventory levels. They sync with customer databases. They pull content from external services. How?
+Real business applications are different. They display live weather data. They process payments. They show inventory levels. They sync with customer databases. They pull content from external services.
 
-**APIs**. Application Programming Interfaces.
+They do it through **APIs** (Application Programming Interfaces).
 
 An API is a defined way for two systems to communicate. When your JavaScript asks a weather service "What's the temperature in Perth?", it's using an API. When a customer's payment details go to Stripe for processing, that's an API. When your portfolio site pulls your latest GitHub projects, that's an API.
 
-APIs transform your website from a standalone document into a connected application that interacts with the wider world.
+APIs connect your website to those services instead of leaving it standalone.
 
 ## Understanding Through Contracts
 
@@ -28,7 +28,7 @@ Imagine a restaurant:
 - The kitchen prepares your food and the waiter delivers it (response)
 - If something's unavailable, they tell you (error response)
 
-You don't need to know how the kitchen works. You just need to know how to order and what to expect. That's the power of a well-defined interface.
+You don't need to know how the kitchen works. You just need to know how to order and what to expect.
 
 ::: {.callout-tip}
 ## The Contract Mindset
@@ -66,7 +66,7 @@ Why is JSON the standard format for web API data? What problem does
 it solve, and what did people use before JSON?
 ```
 
-JSON (JavaScript Object Notation) is readable by humans and easily parsed by machines. It's become the universal format for web data exchange.
+JSON (JavaScript Object Notation) is readable by humans and easily parsed by machines. It's become the standard format for web data exchange.
 
 ```text
 Continue the conversation:
@@ -234,7 +234,7 @@ const firstElectronic = products.find(p => p.category === 'electronics');
 
 ### Error Handling in Depth
 
-Robust applications handle multiple failure scenarios:
+Applications need to handle several failure scenarios:
 
 ```javascript
 async function loadData() {
@@ -429,7 +429,7 @@ No one stores credit cards themselves (the liability is enormous). Payment APIs 
 
 ### Third-Party Services
 
-Maps (Google Maps, Mapbox), analytics (Google Analytics), authentication (Auth0), email (SendGrid). APIs let you leverage sophisticated services without building them yourself.
+Maps (Google Maps, Mapbox), analytics (Google Analytics), authentication (Auth0), email (SendGrid). APIs let you use sophisticated services without building them yourself.
 
 ### Scalability and Architecture
 
@@ -442,8 +442,6 @@ Connect your website to:
 - Customer relationship management (CRM)
 - Email marketing platforms
 - Accounting software
-
-APIs are how modern businesses connect their systems.
 
 ::: {.callout-note}
 ## Skills You Are Building
@@ -461,7 +459,7 @@ This develops **making and defending technology choices** and **evaluating and i
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 5.1: Your First API Call (Level 1)
+### Exercise 8.1: Your First API Call (Level 1)
 
 Use the JSONPlaceholder API (`https://jsonplaceholder.typicode.com/posts/1`) to:
 
@@ -471,7 +469,7 @@ Use the JSONPlaceholder API (`https://jsonplaceholder.typicode.com/posts/1`) to:
 
 Open DevTools Network tab to see the request and response.
 
-### Exercise 5.2: Displaying a List (Level 2)
+### Exercise 8.2: Displaying a List (Level 2)
 
 Fetch multiple posts from `https://jsonplaceholder.typicode.com/posts?_limit=5` and:
 
@@ -481,7 +479,7 @@ Fetch multiple posts from `https://jsonplaceholder.typicode.com/posts?_limit=5` 
 
 Handle what happens if the fetch fails.
 
-### Exercise 5.3: Dynamic Filtering (Level 3)
+### Exercise 8.3: Dynamic Filtering (Level 3)
 
 Using the JSONPlaceholder posts API:
 
@@ -492,7 +490,7 @@ Using the JSONPlaceholder posts API:
 
 This combines API fetching with JavaScript event handling and DOM manipulation.
 
-### Exercise 5.4: Error Handling Scenarios (Level 4)
+### Exercise 8.4: Error Handling Scenarios (Level 4)
 
 Create a page that fetches from an API and handles all these scenarios gracefully:
 
@@ -503,7 +501,7 @@ Create a page that fetches from an API and handles all these scenarios gracefull
 
 Test each scenario and document how you handled them. Take screenshots showing each state.
 
-### Exercise 5.5: API Integration Proposal (Level 5)
+### Exercise 8.5: API Integration Proposal (Level 5)
 
 A local gym wants to display class schedules from their booking system on their website. The booking system has an API.
 
@@ -553,7 +551,7 @@ Record your responses to these prompts:
 
 ## Next Steps
 
-You've now completed Part I: Web Foundations. You understand:
+You've now completed the Web Foundations chapters. You understand:
 
 - **Structure** (HTML): What content exists
 - **Presentation** (CSS): How content looks
@@ -562,4 +560,4 @@ You've now completed Part I: Web Foundations. You understand:
 
 In @sec-project-portfolio, you'll combine these skills to build a complete portfolio website, your first substantial web project. This portfolio will demonstrate your capabilities to future employers or clients.
 
-Then, in Part II, we shift focus from building pages to managing content at scale with content management systems.
+Then, in the content management chapters, we shift focus from building pages to managing content at scale with content management systems.

@@ -4,14 +4,14 @@
 
 In @sec-wordpress-platform, you learned that WordPress's value lies in its ecosystem. Now we'll learn to extend WordPress professionally, using plugins wisely, customising safely, and making business decisions about when to build versus when to buy.
 
-Here's the tension: plugins make WordPress powerful, but plugins also create risk. Every plugin you add:
+Plugins make WordPress more capable, but they also create risk. Every plugin you add:
 
 - Depends on someone else maintaining it
 - Could conflict with other plugins
 - Might introduce security vulnerabilities
 - Adds complexity to troubleshoot
 
-Professional WordPress development isn't about installing the most plugins, it's about installing the *right* plugins and knowing when custom development makes more sense.
+Professional WordPress development means installing the *right* plugins and knowing when custom development makes more sense.
 
 ## Understanding Through Build vs Buy
 
@@ -21,7 +21,7 @@ Every feature request presents a choice:
 
 - Faster to implement
 - Someone else maintains it
-- Battle-tested by thousands of users
+- Tested by thousands of users
 - May not fit exact requirements
 
 **Build (Custom development):**
@@ -348,7 +348,7 @@ Syntax errors in functions.php can break your entire site. Test on staging, and 
 
 ### PHP Fundamentals for WordPress
 
-WordPress is built on PHP. While you can accomplish a lot without writing PHP, understanding the basics opens up powerful customisation options, and AI is excellent at helping you write WordPress PHP code.
+WordPress is built on PHP. While you can accomplish a lot without writing PHP, understanding the basics opens up more customisation options, and AI is excellent at helping you write WordPress PHP code.
 
 **PHP basics:**
 
@@ -469,7 +469,7 @@ Understanding this pattern helps you customise how posts display.
 
 WordPress uses "hooks" to let you modify behaviour without editing core files. There are two types:
 
-**Actions** – Do something at a specific point:
+**Actions:** do something at a specific point:
 
 ```php
 <?php
@@ -492,7 +492,7 @@ function notify_on_publish($post_id) {
 add_action('publish_post', 'notify_on_publish');
 ```
 
-**Filters** – Modify data before it's used:
+**Filters:** modify data before it's used:
 
 ```php
 <?php
@@ -527,7 +527,7 @@ my child theme's functions.php.
 
 ### Building a Simple Plugin with AI
 
-AI excels at writing WordPress plugins. Here's how to approach it:
+AI is good at writing WordPress plugins.
 
 **Example: A plugin to display business hours**
 
@@ -831,7 +831,7 @@ When clients want custom features:
 
 "We can definitely build that custom. But let me show you how three existing plugins handle similar needs. If any of these work for you, you'll save significant money and get something battle-tested by thousands of users."
 
-This positions you as an advisor, not just an implementer.
+That positions you as an advisor as well as an implementer.
 
 ### Security Responsibility
 
@@ -859,7 +859,7 @@ This develops **making and defending technology choices** and **evaluating and i
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 9.1: Plugin Research (Level 1)
+### Exercise 12.1: Plugin Research (Level 1)
 
 On your local WordPress site:
 
@@ -868,7 +868,7 @@ On your local WordPress site:
 3. Install one and explore its settings
 4. Write a brief summary of which you'd recommend and why
 
-### Exercise 9.2: Create a Child Theme (Level 2)
+### Exercise 12.2: Create a Child Theme (Level 2)
 
 Create a child theme for your local site:
 
@@ -879,7 +879,7 @@ Create a child theme for your local site:
 
 Document the process with screenshots.
 
-### Exercise 9.3: PHP Customisation with AI (Level 3)
+### Exercise 12.3: PHP Customisation with AI (Level 3)
 
 Use AI to add a custom feature to your WordPress site:
 
@@ -899,7 +899,7 @@ Use AI to add a custom feature to your WordPress site:
 
 4. Write 200 words explaining: What did the code do? What PHP concepts were used? What would you modify?
 
-### Exercise 9.4: Build a Plugin with AI (Level 4)
+### Exercise 12.4: Build a Plugin with AI (Level 4)
 
 Create a simple WordPress plugin using AI assistance:
 
@@ -919,7 +919,7 @@ Create a simple WordPress plugin using AI assistance:
    - Any modifications you made
    - What you learned about WordPress plugin structure
 
-### Exercise 9.5: Plugin Audit (Level 3)
+### Exercise 12.5: Plugin Audit (Level 3)
 
 Your local site probably has several plugins now. Conduct an audit:
 
@@ -929,7 +929,7 @@ Your local site probably has several plugins now. Conduct an audit:
 4. Identify any that should be replaced with better alternatives
 5. Create a recommendation document
 
-### Exercise 9.6: Build vs Buy Analysis (Level 4)
+### Exercise 12.6: Build vs Buy Analysis (Level 4)
 
 A client needs an event calendar for their community centre. Events have dates, times, locations, descriptions, and categories. Visitors should be able to filter by category and view a monthly calendar.
 
@@ -941,7 +941,7 @@ Research options and write a 400-word recommendation:
 4. Make a recommendation with justification
 5. Address risks and mitigation
 
-### Exercise 9.7: Extension Strategy (Level 5)
+### Exercise 12.7: Extension Strategy (Level 5)
 
 You're taking over a WordPress site for a small marketing agency. They need:
 
@@ -971,7 +971,7 @@ This exercise develops professional consulting skills.
 - Child themes allow safe customisation that survives updates
 - PHP is WordPress's foundation, understanding basics enables deeper customisation
 - The Loop and hooks (actions/filters) are core WordPress patterns
-- AI excels at writing WordPress plugins and theme customisations
+- AI is good at writing WordPress plugins and theme customisations
 - Technical debt from plugins accumulates silently
 - Professional judgment means recommending the *right* solution, not the most impressive one
 
@@ -1005,4 +1005,4 @@ Record your responses to these prompts:
 
 You now know how to extend WordPress wisely with plugins and child themes. But there's another approach entirely: using WordPress as a content backend while building the frontend with modern tools.
 
-In @sec-headless-architecture, we'll explore headless WordPress, using the WordPress REST API to power a React frontend. This bridges your CMS knowledge with the modern frontend skills from Part III and represents how many larger organisations use WordPress today.
+In @sec-headless-architecture, we'll explore headless WordPress, using the WordPress REST API to power a React frontend. This bridges your CMS knowledge with the modern frontend skills from the next part and represents how many larger organisations use WordPress today.

@@ -1,0 +1,30 @@
+# 2027 Course Map {.unnumbered}
+
+This appendix maps the 2027 modules to the chapters in this book. The unit materials are the source of truth. When the course map and this appendix disagree, the course map wins.
+
+The module order is fixed. Calendar breaks do not change the numbering.
+
+| Module | Core question | Book chapters | Assessment artefact |
+|---|---|---|---|
+| 01 Ship by Friday | What is a website, and how does it exist? | Chapter 1, AI as Partner; Chapter 4, The Agent-Ready Repo and Handover; Chapter 5, Structure | Personal site; client site v0; `SPEC.md` v0 |
+| 02 The 375px Problem | Why does it break on a phone? | Chapter 5, Structure; Chapter 6, Presentation | 375px audit and three fixes |
+| 03 Say What You Mean | What does the client actually need? | Chapter 2, Specify Before You Build; Chapter 5, Structure | `SPEC.md` v1 and replication test |
+| 04 Checks It Can't Charm | How do you know it works? | Chapter 3, Checks That Run; Chapter 17, Professional Practices | Checks passing and one new check |
+| 05 Keys in the Window | Where does the data come from, and who can see it? | Chapter 8, Connection | API integration, secrets and the unhappy path |
+| 06 The Taste Test | Which build would the client pay for? | Chapter 6, Presentation; Chapter 17, Professional Practices | Client site final and viva |
+| 07 Who Chose React? | Who maintains this on Monday? | Chapter 10, Why CMS?; Chapter 11, WordPress as Platform; Chapter 13, Headless Architecture | Platform spike and decision record |
+| 08 The Inherited Site | What did the previous developer leave? | Chapter 11, WordPress as Platform; Chapter 12, Extending Platforms | Sprint review and inherited-site audit |
+| 09 Data Behind the Glass | Who can see the data? | Chapter 8, Connection; Chapter 13, Headless Architecture | REST data integration |
+| 10 Pocket-Sized | Does the client need an app? | Chapter 19, Evaluating Emerging Technologies | Installable app |
+| 11 The Last 20% | What is the hard part? | Chapter 16, Rapid Development; Chapter 17, Professional Practices | Final app and viva |
+| 12 Tech Radar | What would you recommend, and why? | Chapter 19, Evaluating Emerging Technologies; Chapter 20, Your Development Career; Chapter 21, The AI-Era Developer | Audit practice and mock viva |
+
+## Where the practice chapters sit
+
+The practice spine is designed to be read in order:
+
+1. Chapter 2, **Specify Before You Build**.
+2. Chapter 3, **Checks That Run**.
+3. Chapter 4, **The Agent-Ready Repo and Handover**.
+
+The concept chapters can be read in any order after that. The module map above shows which ones a module uses.

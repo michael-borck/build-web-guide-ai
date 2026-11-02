@@ -6,7 +6,7 @@ The online edition at [books.borck.education](https://books.borck.education) inc
 
 ## Project Overview
 
-Part II taught you to think about content management strategically: when to use a CMS, how to evaluate platforms and plugins, and how WordPress architecture works. Now you'll apply that knowledge to build a complete business website.
+The content management chapters taught you to think strategically: when to use a CMS, how to evaluate platforms and plugins, and how WordPress architecture works. Now you'll apply that knowledge to build a complete business website.
 
 This project simulates a real client engagement. You'll analyse requirements, make technology decisions, implement a solution, and document your choices professionally. The deliverables mirror what you'd provide to an actual client.
 
@@ -345,4 +345,4 @@ Your WordPress project demonstrates:
 - Practical WordPress implementation
 - Professional documentation
 
-Consider these as portfolio pieces, they show employers you can think beyond just code.
+Consider these as portfolio pieces. They show employers you can think beyond code.

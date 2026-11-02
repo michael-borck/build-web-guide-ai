@@ -4,13 +4,13 @@
 
 Right now, AI can write HTML, CSS, and JavaScript in seconds. It can create entire websites, debug code, and explain complex concepts. So why learn web development at all?
 
-Here's the truth: **AI is incredible at writing code, but it doesn't understand what your business needs**. You're the architect, the translator between business requirements and technical solutions. AI is your highly skilled assistant who needs clear direction.
+**AI is fast at writing code, but it doesn't understand what your business needs**. You're the architect, the translator between business requirements and technical solutions. AI is your highly skilled assistant who needs clear direction.
 
 This book teaches you to be that architect.
 
 ## The Partnership Experiment
 
-Let's discover how AI really works as a web development partner. This experiment will shape how you learn throughout this book.
+This experiment shows how AI works as a web development partner, and it will shape how you learn throughout this book.
 
 ### Round 1: The Vague Request
 
@@ -30,7 +30,7 @@ Now try:
 Make a business website
 ```
 
-You likely got a massive amount of HTML, CSS, maybe JavaScript – a complete but generic template. **This is AI's default: give you everything at once**.
+You likely got a massive amount of HTML, CSS, maybe JavaScript: a complete but generic template. **This is AI's default: give you everything at once**.
 
 ### Round 3: The Learning Request
 
@@ -66,14 +66,14 @@ Finally, try:
 Explain how a web page is structured, using a building analogy, before showing any code
 ```
 
-Now you're using AI to build understanding, not just generate code.
+Now you're using AI to build understanding as well as generate code.
 
 ## What This Experiment Teaches Us
 
-1. **AI defaults to complexity** – It assumes you want a "complete" solution
-2. **Your prompts shape your learning** – Clear learning goals get clearer responses
-3. **Concepts before code** – You can use AI to understand ideas before syntax
-4. **You're in control** – AI follows your lead, not the other way around
+1. **AI defaults to complexity:** it assumes you want a "complete" solution
+2. **Your prompts shape your learning:** clear learning goals get clearer responses
+3. **Concepts before code:** you can use AI to understand ideas before syntax
+4. **You're in control:** AI follows your lead, not the other way around
 
 ## The Three Learning Strategies
 
@@ -96,7 +96,7 @@ AI is your exploration tool. Use it to:
 
 ### Strategy 3: Build Mental Models, Not Just Working Websites
 
-A working website isn't the goal. Understanding how and why it works is. Use AI to build these mental models.
+Aim to understand how and why a website works, and use AI to build those mental models.
 
 **Example**: Ask "Draw a diagram showing how HTML, CSS, and JavaScript work together" or "Explain responsive design using a newspaper analogy."
 
@@ -121,7 +121,25 @@ A working website isn't the goal. Understanding how and why it works is. Use AI 
 
 ## Your Progressive AI Journey
 
-### Part I (Chapters 1-4): AI as Concept Explorer
+### Part I (Your AI Development Partnership): AI as Partner
+
+```text
+Example prompts:
+- "Explain how you approach a web build, and what you need from me before you start"
+- "What assumptions are you making about this client?"
+- "What should I check before I trust that answer?"
+```
+
+### Part II (The Practice Spine): AI as Practice Partner
+
+```text
+Example prompts:
+- "Turn this client email into five checkable acceptance criteria"
+- "Write a check that would fail if the booking action were invisible at 375px"
+- "Review this diff for scope creep and tell me what changed outside the task"
+```
+
+### Part III (Web Foundations): AI as Concept Explorer
 
 ```text
 Example prompts:
@@ -130,7 +148,7 @@ Example prompts:
 - "What happens when a user clicks a button? Explain the event flow"
 ```
 
-### Part II (Chapters 5-8): AI as Implementation Assistant
+### Part IV (Content Management for Business): AI as Implementation Assistant
 
 ```text
 Example prompts:
@@ -139,7 +157,7 @@ Example prompts:
 - "Explain REST APIs as if I'm explaining to a business stakeholder"
 ```
 
-### Part III (Chapters 9-11): AI as Code Producer
+### Part V (Modern Frontend Development): AI as Code Producer
 
 ```text
 Example prompts:
@@ -148,7 +166,7 @@ Example prompts:
 - "Review this code for accessibility issues"
 ```
 
-### Part IV (Chapters 12-14): AI as Strategic Advisor
+### Part VI (The Professional Developer): AI as Strategic Advisor
 
 ```text
 Example prompts:
@@ -168,7 +186,7 @@ By the end of this book:
 - **You'll explain it to stakeholders** ✓
 - **You'll be the architect, not the typist** ✓
 
-This is not a consolation prize. This is the actual job of a modern web developer.
+This is the actual job of a modern web developer.
 
 ## Exercises
 
@@ -246,7 +264,7 @@ Start your learning journal now. For this chapter, record:
 
 ## Related Materials
 
-This book is part of a comprehensive series for mastering modern software development in the AI era:
+This book is part of a series on software development in the AI era:
 
 **Foundational Methodology**
 
@@ -264,6 +282,6 @@ This book is part of a comprehensive series for mastering modern software develo
 
 ## Next Steps
 
-In the next chapter, we will explore how web pages are structured using HTML. You'll use your new prompt skills to discover semantic markup – the foundation of everything we build. We'll start with the concept of "documents as structured information" before writing a single line of code.
+In the next chapter, we will explore how web pages are structured using HTML. You'll use your new prompt skills to discover semantic markup, the foundation of everything we build. We'll start with the concept of "documents as structured information" before writing a single line of code.
 
-Remember: You're not learning to code. You're learning to think like a web professional who directs AI to help build solutions. Let's begin!
+You are learning to think like a web professional who directs AI to help build solutions.

@@ -1,0 +1,578 @@
+# The Agent-Ready Repo and Handover {#sec-agent-ready}
+
+An agent can only work with what the repository tells it. The next developer can only maintain what the repository explains. A repository that is ready for an agent is also ready for a handover.
+
+If someone else can open the repository, run it, change it and diagnose it without asking you, the repo is ready. If they need your chat history, it is not.
+
+## The Concept First
+
+A repository is three things at once. It is the workspace where the build happens. It is the record of what changed and why. It is the handover pack that lets someone else take over.
+
+Most students treat the repo as a folder for files. An agent-ready repo is a set of instructions and evidence. It tells the agent what to do before it starts. It tells the next person what happened after you leave.
+
+The evidence files are the handover:
+
+- `SPEC.md` says what done means.
+- `DECISIONS.md` says what was chosen, why, and what was rejected.
+- `CRITIQUE.md` says what is still wrong or unverified.
+- `AI-USE.md` says which tools were used, for what, and what was verified.
+- `README.md` says how to run and deploy the project.
+- A runbook says what to do when it breaks.
+- The checks say how to prove it still works.
+
+A chat log is not a handover. It is a transcript of a conversation that the next person cannot search, trust or reproduce.
+
+## Understanding Through a Shared Workshop
+
+A workshop with labelled drawers, a job card, a logbook and a clean bench can be used by someone else. A workshop where everything is in one person's head cannot.
+
+The labelled drawers are the README and the folder structure. The job card is the spec and the agent instructions. The logbook is the decision record and the commit history. The clean bench is the small diff, the removed secret and the closed branch.
+
+A workspace that explains itself is a business asset. A workspace that only one person understands is a liability.
+
+## The Files That Do the Work
+
+| File | Question it answers | Who reads it |
+|---|---|---|
+| `AGENTS.md` | How should an agent work here? What is allowed, what is forbidden, and what proves the work is done? | The agent, and the next developer |
+| `SPEC.md` | What does the client need, and what counts as done? | The client, the builder, the checker |
+| `DECISIONS.md` | What did we choose, why, and what did we reject? | The next developer, the assessor, the client |
+| `CRITIQUE.md` | What is still wrong or unverified? | The next developer, the client |
+| `AI-USE.md` | Which tools did we use, for what, and what was verified? | The assessor, the next developer |
+| `README.md` | What is this, how do I run it, and how do I deploy it? | Anyone opening the repo |
+| `runbook.md` | What do I do when it breaks? | The maintainer, the IT vendor, future you |
+| `checks/` and `tests/` | How do we know it still works? | The builder, the reviewer, the next developer |
+
+Each file removes a question that would otherwise become a meeting, a message or a defect.
+
+## AGENTS.md
+
+`AGENTS.md` is the project instruction file for an AI agent. It lives in the repository. The agent reads it before it starts work. It is not a prompt you paste once. It is a standing contract for every session.
+
+A useful `AGENTS.md` is short enough to read and specific enough to act on.
+
+```markdown
+# Instructions for AI agents working in this repository
+
+## Stack
+
+- Plain HTML, CSS and JavaScript. No frameworks, no build step.
+- The site lives in `site/`.
+- The provided checks live in `checks/`. Your checks live in `tests/`.
+
+## Rules
+
+1. Do not create, edit or delete anything in `checks/`. Fix the site, not the check.
+2. Never put API keys, tokens or secrets in `site/`.
+3. Make one logical change per commit, with a message that says what changed and why.
+4. Do only what you are asked. Suggest other changes and wait.
+5. When you say something is done, show the command and its output.
+6. Read `SPEC.md` before starting. If the task conflicts with it, stop.
+7. Add every new page to `pages.json`.
+8. Do not add a dependency, a framework or a build step without asking.
+```
+
+The rules are testable. "Write clean code" is not a rule. "Do not edit `checks/`" is a rule you can check in the diff.
+
+The agent will fill any gap with a default. If the file does not say which folder holds the site, the agent will choose one. If the file does not say which commands prove the work, the agent will claim success without evidence.
+
+Update `AGENTS.md` after a failure. Add the rule that would have prevented it. The file should get better as the project gets harder.
+
+::: {.callout-tip}
+## The rule that would have helped
+After a bad agent change, ask one question: "What sentence in `AGENTS.md` would have stopped this?" Add it. That is a better use of five minutes than rewriting the prompt.
+:::
+
+## Working with Your AI Partner
+
+AI is useful at three points in this chapter. It can find the gaps in `AGENTS.md`, plan a small change with a stop condition, and review a diff for scope creep. It is a poor judge of whether the work is ready to hand over. That judgement is yours.
+
+### Exploration 1: Find the Missing Rules
+
+```text
+Ask your AI:
+Here is my AGENTS.md. List every decision you would have to guess before
+you could work safely in this repo. For each guess, write the rule that
+would remove it. Do not edit any files.
+```
+
+Add the rules that are specific and testable. Ignore generic advice such as "write clean code". A rule the agent cannot check is not a rule.
+
+### Exploration 2: Plan Before You Act
+
+```text
+Ask your AI:
+Here is one acceptance criterion and the file it affects. Write a plan
+with one change, the check that proves it, and the conditions that
+should stop you. Do not write code yet.
+```
+
+A good plan names the file, the criterion, the check and the stop condition. If the plan is vague, the diff will be large.
+
+### Exploration 3: Review a Diff for Scope Creep
+
+```text
+Ask your AI:
+Here is a diff. List every change that is outside the stated task. Do
+not fix it. Name the scope creep and the risk it adds.
+```
+
+Scope creep is easier to see in a diff than in a chat. Review the diff before you review the result.
+
+## Small Diffs
+
+The diff is the unit of review. A large diff hides mistakes, mixes unrelated changes and makes the work impossible to explain. A small diff shows one decision at a time.
+
+One logical change per commit. A logical change is one behaviour, one fix, one content update or one refactor. If the message needs the word "and" to describe two unrelated things, the commit is probably too large.
+
+Ask the agent for one change at a time. Name the file, the acceptance criterion and the stop condition. Ask it to show the diff before applying it.
+
+```text
+Ask your AI:
+Change only the booking form in site/contact.html so that the party size
+field has a visible label and a helpful error message. The acceptance
+criterion is "The form labels every input." Do not change the layout,
+the copy or any other page. Show me the diff before you apply it.
+```
+
+The commit message is evidence. It says what changed and why. The body can say what was rejected and which check proves the change.
+
+| Weak message | Useful message |
+|---|---|
+| update | Fix 375px overflow in the menu grid |
+| fix | Add a label to the party size field |
+| final | Add loading and error states to the opening status widget |
+| changes | Replace the hero image with the client's photo and update the alt text |
+
+`git log --oneline` should read like a story. A reader should be able to see the build progress without opening every commit.
+
+If the agent makes one giant commit, you can still recover. Read it with `git show`. Split it with `git add -p`, which lets you stage one hunk at a time. Or revert it and redo the work in small commits. The history is worth the effort because the history is the evidence.
+
+### Commit Messages as Evidence
+
+A commit message answers three questions:
+
+1. What changed?
+2. Why did it change?
+3. What proves it?
+
+```text
+Add a visible label to the party size field
+
+The booking form used a placeholder as the only label. Screen reader
+users could not tell what the field was for. The new label is visible
+and connected with for/id.
+
+Checked with npm test and a screen reader pass.
+```
+
+The body is not a diary. It is the reason the change exists. The next developer will read it when the code no longer makes sense.
+
+## Plan, Act, Verify
+
+An agent-ready workflow has three steps. They are short, and they prevent most of the mess.
+
+**Plan.** Restate the task in one sentence. Name the files. Name the acceptance criterion. Name the check. Name the stop condition.
+
+**Act.** Make one small change. Commit it with a message that explains the change.
+
+**Verify.** Run the check. Read the diff. Open the page at 375px. Check the console. Show the evidence.
+
+A plan sounds like this:
+
+> The task is to make the booking action visible at 375px. The file is `site/css/styles.css`. The criterion is "The booking action is visible at 375px without scrolling." The check is `tests/booking.spec.js`. Stop if the change touches `checks/` or adds a dependency.
+
+Name a stop condition, because the agent will keep going if you do not define the edge of the task.
+
+### When to Stop the Agent
+
+Stop when the agent:
+
+- wants to change the stack;
+- wants to edit `checks/`;
+- wants to add a dependency or a build step;
+- wants to touch secrets or environment variables;
+- wants to rewrite a file wholesale;
+- wants to do something outside the task;
+- says it is done without showing the command and the output.
+
+Stopping is a normal decision. Record it in `DECISIONS.md`. The agent can be wrong. You own the commit.
+
+## Skills and Reusable Instructions
+
+A skill is a short, reusable instruction file for a repeated task. It tells the agent how to do one job in this project.
+
+A skill has five parts:
+
+1. When to use it.
+2. The inputs.
+3. The steps.
+4. The files it may touch.
+5. The definition of done.
+
+```markdown
+# Skill: Add a page
+
+## When to use
+
+A new page is added to the site.
+
+## Steps
+
+1. Create `site/<page>.html` from the shared layout.
+2. Add the page to `pages.json`.
+3. Add a link from the navigation.
+4. Run `npm run check`.
+5. Commit with a message that names the page and the criterion.
+
+## Done when
+
+The page is in `pages.json`, the navigation links to it, and the checks pass.
+```
+
+### From Workflow to Skill
+
+The first time you do a task, you are learning it. The second time, you are checking whether the steps are stable enough to reuse. That is when you write the skill.
+
+| Pass | Purpose | Output |
+|---|---|---|
+| First | Learn the workflow | A rough log of the steps, files, checks and failure points |
+| Second | Confirm the steps are stable | A skill file, or a note that the task changes too much |
+| Test | Prove the skill works without you | A fresh agent session and a diff you can review |
+
+The first pass is not wasted. It is the research. Keep a rough log while you work: which files the agent touched, which check proved the change, where it went wrong, what you had to explain twice.
+
+The first time you add a page, you might ask the agent to create `site/contact.html`. You notice that the page also needs a line in `pages.json` and a link in the navigation. The check fails if the page is missing from the list. Those are the steps that belong in the skill.
+
+On the second pass, follow the log. If the steps are the same, write the skill. If the steps change, the task is not stable enough to codify yet. Narrow the task or keep learning.
+
+Test the skill in a fresh session with no chat history. If the agent needs extra explanation, the skill is missing a step. Add it or narrow the task.
+
+A skill for "add a page" is portable. A skill for "update the Northbridge menu" is project-specific. Both are useful. Keep them small.
+
+`AGENTS.md` is the project contract. Skills are task recipes. A skill that tries to cover the whole project is an `AGENTS.md` file with a different name.
+
+Skills make the agent more consistent. They do not make it correct. You still read the diff and run the check.
+
+::: {.callout-note}
+## Where this idea comes from
+The Human Edge treats a saved brief as a skill in Chapter 8 and places the agent inside a gate in Chapter 10. Conversation, Not Delegation covers the loop, permissions and stopping conditions. Build AI, Understand AI shows the folder-as-workflow version in "Workflows as Folders". This chapter adds the project-level version: the skill file, the repo rules and the handover.
+:::
+
+## Permissions and Secrets
+
+The agent needs enough access to do the work and no more. That is the principle of least privilege.
+
+- Give the agent the workspace. Do not give it the production account.
+- Do not put a production key on a laptop or in a repository.
+- Use environment variables and a serverless function for anything secret (@sec-connection).
+- Keep `.env` in `.gitignore`. Commit `.env.example` with names only.
+- Do not paste secrets into a prompt, a screenshot or a README.
+- Read a command before you approve it. Do not approve a command you do not understand.
+
+If a secret is committed, rotate it. Deleting the file does not remove it from history. `git log -p` can still find it. A secrets check is a teaching tool. It does not prove the repo is clean.
+
+The same rule applies to permissions. The agent does not need admin rights, a production database or a payment account. It needs the files, the checks and a way to run them. Many managed machines have no admin rights for a reason. The browser path is the baseline, and the desktop path is an optional convenience.
+
+## The Handover Pack
+
+A handover pack is what you give the next person so they can run, deploy, change and diagnose the site. It is the repo made legible.
+
+| Part | What it contains |
+|---|---|
+| `README.md` | What the project is, how to run it, how to deploy it, where the data lives, who to contact, known limitations |
+| Runbook | Local setup, deploy steps, data sources, common failures, rollback, contacts |
+| `DECISIONS.md` | Architecture choices, rejected options, costs, dates |
+| `CRITIQUE.md` | Known issues, unverified areas, what to fix next |
+| `AI-USE.md` | Tools, what was verified, what was rejected, where AI was not used |
+| `SPEC.md` | The contract the build was judged against |
+| Checks | The command that proves the site still works |
+| Known issues | Severity, workaround, owner, next action |
+| Contribution map | Who did what, for a team project or a handover |
+
+The handover pack is also a business document. It reduces the cost of maintenance, the risk of a single person leaving, and the time a new developer spends asking questions.
+
+### A Worked Handover to Alex
+
+Alex is the IT vendor who will maintain the site after the project ends. Alex is busy, cautious and has seen too many abandoned sites. A good handover is the difference between a site that survives and a site that gets rebuilt.
+
+A weak handover sounds like this:
+
+> It works on my laptop. The chat has the details. The password is in the repo. Ask me if you get stuck.
+
+A useful handover sounds like this:
+
+> The site is in `site/`. `README.md` has the local and deploy steps. `runbook.md` covers the data sources, the common failures and the rollback. `DECISIONS.md` explains why the front end is static and why the booking form posts to a function. `CRITIQUE.md` lists the known issues, including the missing empty state on the opening status widget. `npm run check` proves the checks still pass. There are no secrets in the repo. The deploy URL and the rollback steps are in the runbook.
+
+The second handover lets Alex run the site, deploy it, diagnose it and know what is still wrong. The first handover makes Alex open a chat and start from zero.
+
+`README.md` might open like this:
+
+```markdown
+# Harbour & Hearth Northbridge
+
+A static site for the Northbridge cafe. The site is in `site/`.
+
+## Run locally
+
+npm install
+npm run serve
+
+## Deploy
+
+Push to `main`. Netlify deploys `site/`.
+
+## Data
+
+The opening status widget calls `/.netlify/functions/opening-status`. The key is an
+environment variable in Netlify.
+
+## Checks
+
+npm run check
+
+## Known issues
+
+See `CRITIQUE.md`.
+```
+
+`runbook.md` might open like this:
+
+```markdown
+# Runbook
+
+## If the deploy fails
+
+1. Open the Netlify deploy log.
+2. Check that the publish directory is `site`.
+3. Run `npm run check` locally.
+
+## If the opening status widget is blank
+
+1. Open the browser console.
+2. Check the function URL.
+3. Check the environment variable in Netlify.
+```
+
+### The Handover Test
+
+Give the repo to someone who has never seen it. Ask them to run it, deploy it and fix one small issue. Record every question they ask.
+
+Each question is a missing line in the documentation. Add the line. Run the test again with someone else if you can.
+
+The replication test in @sec-specify tests the spec. The handover test tests the repo. Both are ways to measure whether your written record is enough for a stranger.
+
+## The Failure: The Agent-Made Mess
+
+The agent-made mess is easy to recognise. The git log is a list of "update", "fix" and "final". One commit changes forty files. `checks/` has been edited. A key is in `site/js/config.js`. There is no README. The only record of the decisions is a chat that has already been closed.
+
+```text
+a1b2c3d final
+d4e5f6g update
+h7i8j9k fix
+```
+
+You cannot explain the diff in the assessment conversation. The client cannot maintain the site. The next developer starts from zero.
+
+The fix is not a better prompt. The fix is a better repo:
+
+1. Write `AGENTS.md` before the next task.
+2. Ask for one logical change at a time.
+3. Commit each change with a message that says what and why.
+4. Keep the evidence files current.
+5. Remove the secret, rotate it and check the history.
+6. Write the handover pack before the last week, not after it.
+
+## Building Your Mental Model
+
+### Three Audiences, One Repo
+
+| Audience | What they need | Where they find it |
+|---|---|---|
+| The agent | Stack, folders, rules, commands, stop conditions | `AGENTS.md`, `SPEC.md`, skills |
+| The next developer | How to run, deploy, change and diagnose | `README.md`, runbook, `DECISIONS.md`, `CRITIQUE.md` |
+| The client | What was built, what it costs to maintain, what is still wrong | `SPEC.md`, `CRITIQUE.md`, the handover pack |
+
+If one audience cannot answer their question, the repo is incomplete for that audience.
+
+### The Evidence Loop
+
+```text
+SPEC.md ---> build ---> checks
+   ^                       |
+   |                       v
+DECISIONS.md <--- review <--- CRITIQUE.md
+   |
+   v
+AI-USE.md ---> handover pack
+```
+
+The spec sets the standard. The checks prove the build. The critique records the gap. The decision record explains the choices. The handover pack lets someone else continue.
+
+### The Five Questions
+
+A repo is ready when a stranger can answer these five questions from the repo alone:
+
+1. What is this, and who is it for?
+2. How do I run it?
+3. How do I deploy it?
+4. How do I know it still works?
+5. What is still wrong, and what should I do next?
+
+If any answer is missing, the handover is incomplete.
+
+## Business Applications
+
+A maintainable site is worth more than a clever one. The client is buying the ability to change the site after the launch as well as the launch itself.
+
+The cost of maintenance falls when the next developer can spend time on the work instead of reconstructing the history. The risk of a single person leaving falls when the client is not dependent on one contractor's memory or chat history.
+
+A clean repo also supports procurement. A vendor can inspect the evidence, run the checks and price the work. The same evidence protects the client in a dispute about what was delivered.
+
+For AI projects, the repo is the defence. `AI-USE.md` and the commit history show what was verified, what was rejected and where the human made the call.
+
+::: {.callout-note}
+## Skills You Are Building
+This develops professional communication and project management, evaluating and improving solutions, and the judgement to decide when a build is ready to hand over.
+:::
+
+## Practice Exercises
+
+::: {.callout-note}
+## Exercise Levels
+- **Level 1**: Direct application
+- **Level 2**: Minor modifications
+- **Level 3**: Combining concepts
+- **Level 4**: Problem-solving
+- **Level 5**: Open-ended design
+:::
+
+### Exercise 4.1: Three Rules That Would Have Helped (Level 1)
+
+Think of a failure in your last build. It might be a secret in the wrong file, a check that was edited, a giant commit, or a page that was never added to the page list.
+
+Write three rules for `AGENTS.md` that would have prevented it. Each rule must be specific and testable. Then explain how you would check that the agent followed each rule.
+
+**Done when:** each rule names the behaviour, the file or command, and the evidence.
+
+### Exercise 4.2: Recover a Messy History (Level 2)
+
+Here is a git log from an agent-built project:
+
+```text
+a1b2c3d final
+d4e5f6g update
+h7i8j9k fix
+m0n1o2p changes
+q3r4s5t update again
+```
+
+The final commit changes forty files. Inspect the diff with `git show`. Identify at least three logical changes. Write a commit message for each one.
+
+If you want to go further, create a branch and redo the commits with `git add -p`. Do not rewrite the main branch until you can explain every change.
+
+**Done when:** the new messages read like a story, and each message says what changed and why.
+
+### Exercise 4.3: README and Runbook (Level 3)
+
+Write a one-page `README.md` and a one-page `runbook.md` for your repo.
+
+The README must cover:
+
+- what the project is
+- how to run it locally
+- how to deploy it
+- where the data lives
+- who to contact
+
+The runbook must cover:
+
+- local setup
+- deploy steps
+- common failures
+- rollback
+- contacts
+
+Test both from a clean clone. Record every question you had to answer from memory, then add the answer to the docs.
+
+**Done when:** someone else can run and deploy the project without asking you.
+
+### Exercise 4.4: A Decision Record (Level 4)
+
+Write a `DECISIONS.md` entry for one override or significant choice. Include:
+
+- the decision
+- the options you considered
+- why you chose this one
+- what you rejected and what it cost
+- the check or evidence that proves it works
+
+**Done when:** a reader can understand the choice without reading the chat.
+
+### Exercise 4.5: The Handover Audit (Level 4)
+
+Swap repositories with a classmate. Do not ask them questions. Follow their README from a clean clone.
+
+Record every point where you had to guess, open a file to understand a step, or ask a question. Then add the missing information to their docs and return the repo with a short known-issues register.
+
+**Done when:** the next person can follow the docs without the author in the room.
+
+### Exercise 4.6: Secrets and Permissions Review (Level 5)
+
+Review your repo for secrets and unnecessary access.
+
+1. Run the project's secrets check.
+2. Search the current files for keys, tokens and passwords.
+3. Inspect the history with `git log -p` for anything that was removed but not rotated.
+4. List what the agent can read, write and run.
+5. Write a short permissions policy for the project.
+
+Use a test key or a placeholder. Do not expose a real secret.
+
+**Done when:** the repo has no live secret, the history is clean or the exposed key has been rotated, and the policy says what the agent may access.
+
+## Chapter Summary
+
+- A repo is the workspace, the record and the handover.
+- `AGENTS.md` is a standing contract for the agent, applied to every session.
+- Small diffs and useful commit messages make the work reviewable.
+- Plan, act, verify. Define the stop condition before the agent starts.
+- Skills are reusable task recipes. `AGENTS.md` is the project contract.
+- Least privilege and environment variables keep secrets out of the repo.
+- The handover pack lets someone else run, deploy, change and diagnose the site.
+- If a stranger cannot answer the five questions from the repo, the handover is incomplete.
+
+## Reflection
+
+Before moving on, ensure you can:
+
+- [ ] Explain what an agent needs from `AGENTS.md`
+- [ ] Write a specific, testable rule
+- [ ] Split a large change into logical commits
+- [ ] Write a commit message that says what changed and why
+- [ ] Plan a task with a stop condition
+- [ ] Explain the difference between `AGENTS.md` and a skill
+- [ ] Keep a secret out of the repo and rotate it if it leaks
+- [ ] Assemble a handover pack that a stranger can use
+
+## Your Learning Journal
+
+Record your responses to these prompts:
+
+1. **The missing rule**: What did the agent do that a better `AGENTS.md` rule would have prevented?
+
+2. **The giant commit**: What made a change hard to review? How would you split it next time?
+
+3. **The stop**: When did you stop the agent? What did you decide instead?
+
+4. **The handover**: What question did a stranger ask that your repo could not answer?
+
+5. **The secret**: What would you do first if a key appeared in the repository?
+
+## Next Steps
+
+@sec-professional-practices covers the git fundamentals behind this chapter: commits, branches, diffs and the reason a history matters.
+
+@sec-checks covers the checks that make the handover credible. A handover pack without a way to prove the site still works is only a description.
+
+@sec-connection covers the serverless function and environment variable that keep a secret out of the client.

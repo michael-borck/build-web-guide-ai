@@ -1,6 +1,6 @@
 # Recommended Resources {.unnumbered}
 
-This reading list accompanies the book, combining curated external resources organised by topic. Use it alongside the chapters for different perspectives and official documentation.
+This reading list accompanies the book and collects external resources organised by topic. Use it alongside the chapters for different perspectives and official documentation.
 
 ::: {.callout-tip}
 ## Reading Strategy

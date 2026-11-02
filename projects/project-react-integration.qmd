@@ -6,7 +6,7 @@ The online edition at [books.borck.education](https://books.borck.education) inc
 
 ## Project Overview
 
-Part III taught you component thinking, CSS frameworks, and professional practices. Now you'll bring it together: build a React frontend that consumes content from WordPress via the REST API, demonstrating headless architecture in action.
+The modern frontend chapters taught you component thinking, CSS frameworks, and professional practices. Now you'll bring it together: build a React frontend that consumes content from WordPress via the REST API, demonstrating headless architecture in action.
 
 This project bridges backend content management with modern frontend development. You'll make architectural decisions, implement a complete application, and document your approach, skills that directly translate to professional frontend development roles.
 
@@ -39,7 +39,7 @@ Choose one scenario that builds on your WordPress site from the Business Site Pr
 
 ### Option A: Blog Frontend
 
-Transform your WordPress blog into a modern React single-page application:
+Rebuild your WordPress blog as a modern React single-page application:
 
 - Post listing with categories
 - Individual post pages
@@ -250,7 +250,7 @@ Be clear about AI involvement:
 - Concepts you learned through AI conversation
 - Documentation created with AI assistance
 
-This isn't about restricting AI use, it's about demonstrating that you **understood** what you built.
+The purpose is evidence that you **understood** what you built.
 
 ## Evaluation Criteria
 

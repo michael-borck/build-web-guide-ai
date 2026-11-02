@@ -2,21 +2,21 @@
 
 ## The Concept First
 
-In @sec-rapid-development, you learned to build interfaces quickly with CSS frameworks. But professional development isn't just about building features, it's about building **sustainable, reliable, collaborative systems**.
+In @sec-rapid-development, you learned to build interfaces quickly with CSS frameworks. But professional development is about building **systems that keep working and that a team can maintain**.
 
 Consider the difference:
 
 - **Hobbyist**: Gets the feature working, moves on
 - **Professional**: Gets the feature working, ensures it stays working, makes it easy for others to understand and modify
 
-Professional practices aren't bureaucracy, they're **risk management**. Every project eventually faces:
+Professional practices are **risk management**. Every project eventually faces:
 
 - "It was working yesterday. What changed?"
 - "I can't remember why I wrote this code."
 - "Someone else needs to fix this while I'm on holiday."
 - "The client changed their mind. Can we undo this?"
 
-Professional practices answer these questions before they become crises. They're the difference between code that works today and code that **keeps working** tomorrow.
+Professional practices answer these questions before they become crises, so code **keeps working** tomorrow as well as today.
 
 ## Understanding Through Craftsmanship
 
@@ -67,7 +67,7 @@ should I have for how Git works?
 
 ### Exploration 2: The Testing Mindset
 
-Testing isn't about distrust, it's about **confidence**.
+Testing gives you **confidence** to change code.
 
 ```text
 Ask your AI:
@@ -76,7 +76,7 @@ enough for professional work? What's the difference between manual
 testing and automated tests?
 ```
 
-Key insights:
+Points to notice:
 
 - Manual testing doesn't scale
 - Humans miss things, especially when tired
@@ -508,7 +508,7 @@ Each layer builds on the one below. You can't effectively review code that isn't
                     project                project
 ```
 
-Professional practices have upfront cost but prevent exponential debugging later.
+Professional practices have upfront cost but prevent much larger debugging costs later.
 
 ### When Each Practice Matters Most
 
@@ -526,7 +526,7 @@ Even solo projects benefit from version control and testing. The "team" includes
 
 ### Risk Reduction
 
-Version control isn't just convenience, it's business continuity:
+Version control supports business continuity:
 
 - Roll back problematic deployments
 - Trace when bugs were introduced
@@ -583,7 +583,7 @@ This develops **professional communication and project management** and **evalua
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 14.1: Git Fundamentals (Level 1)
+### Exercise 17.1: Git Fundamentals (Level 1)
 
 Create a new project with Git:
 
@@ -596,9 +596,9 @@ Create a new project with Git:
 
 Document the commands you used and what each did.
 
-### Exercise 14.2: Branching Workflow (Level 2)
+### Exercise 17.2: Branching Workflow (Level 2)
 
-Extend Exercise 14.1:
+Extend Exercise 17.1:
 
 1. Create a branch called `feature/styling`
 2. Add a `styles.css` file and link it in HTML
@@ -610,7 +610,7 @@ Extend Exercise 14.1:
 
 Document when you'd use this workflow in a real project.
 
-### Exercise 14.3: First Tests (Level 3)
+### Exercise 17.3: First Tests (Level 3)
 
 Create a JavaScript module with tests:
 
@@ -625,7 +625,7 @@ Create a JavaScript module with tests:
    - Error cases (invalid input)
 4. Run tests and ensure they pass
 
-### Exercise 14.4: Testing a Component (Level 4)
+### Exercise 17.4: Testing a Component (Level 4)
 
 Create a React component with tests:
 
@@ -641,7 +641,7 @@ Create a React component with tests:
 
 Focus on testing behaviour from the user's perspective.
 
-### Exercise 14.5: Professional Project Setup (Level 5)
+### Exercise 17.5: Professional Project Setup (Level 5)
 
 Set up a complete project with professional practices:
 
@@ -662,7 +662,7 @@ Write 300 words explaining each decision you made and why these practices matter
 - Testing provides confidence that code works correctly
 - Code quality practices make code readable and maintainable
 - Documentation serves future developers (including yourself)
-- Professional practices have upfront cost but prevent exponential debugging later
+- Professional practices have upfront cost but prevent much larger debugging costs later
 - These practices are expected in professional development roles
 
 ## Reflection
@@ -693,4 +693,4 @@ Record your responses to these prompts:
 
 You now have both the technical skills (HTML, CSS, JavaScript, React, CSS frameworks) and professional practices (version control, testing, documentation) to build production-quality applications.
 
-In the **React Integration Project** (@sec-project-react-integration), you'll bring everything together: build a React frontend that consumes WordPress content via API, styled with a CSS framework, using professional version control and documentation practices. This capstone project demonstrates your complete frontend development capabilities.
+In the **React Integration Project** (@sec-project-react-integration), you'll bring everything together: build a React frontend that consumes WordPress content via API, styled with a CSS framework, using professional version control and documentation practices.

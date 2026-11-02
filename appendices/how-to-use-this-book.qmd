@@ -1,0 +1,28 @@
+# How to Use This Book {.unnumbered}
+
+This book is a reference, not a reading schedule for every module. The unit sets the order. The book supports the work.
+
+The 2027 edition adds three practice chapters at the front of the build:
+
+- Chapter 2, **Specify Before You Build**, turns a client brief into a contract with acceptance criteria.
+- Chapter 3, **Checks That Run**, turns those criteria into evidence that the site still works.
+- Chapter 4, **The Agent-Ready Repo and Handover**, turns the build into a repository that another person can run and maintain.
+
+Read those three when you are building. Read the concept chapter you need when you need it.
+
+| If you need to | Read |
+|---|---|
+| Understand the client and write the spec | Chapter 2, then Chapter 5 |
+| Audit the site at 375px | Chapters 5 and 6 |
+| Write a check and read the output | Chapter 3 |
+| Integrate live data and handle failure | Chapter 8 |
+| Choose a content platform | Chapters 10 and 11 |
+| Extend or audit a WordPress site | Chapters 11 and 12 |
+| Present data from an API | Chapters 8 and 13 |
+| Build a component front end | Chapter 15 |
+| Polish, hand over and defend the build | Chapters 16 and 17 |
+| Evaluate a technology and recommend it | Chapters 19, 20 and 21 |
+
+The 2027 course map appendix maps each module to the chapters that support it. When the course map and this book disagree, the course map wins.
+
+This edition supports ISYS3004 Business Web and Mobile Technologies, S1 2027.

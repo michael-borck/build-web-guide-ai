@@ -4,6 +4,6 @@ This book grew out of teaching business web and mobile technologies to students 
 
 Colleagues in business and information systems provided the cross-disciplinary perspective that kept the technical content grounded in professional reality. The book is better for every conversation about what employers actually need graduates to know.
 
-The web development community's commitment to open documentation. MDN Web Docs, the WordPress documentation, the React documentation, makes resources like this possible. The open source community behind Quarto, GitHub, and GitHub Pages made it possible to write, build, and publish across multiple formats without a traditional publisher.
+The web development community's open documentation (MDN Web Docs, the WordPress documentation, the React documentation) makes resources like this possible. The open source community behind Quarto, GitHub, and GitHub Pages made it possible to write, build, and publish across multiple formats without a traditional publisher.
 
 AI tools were used throughout the writing process. Claude (Anthropic) served as a conversation partner for drafting, iterating, and refining. The process was the same one the book teaches: guide the AI, evaluate its output, and maintain professional judgement throughout. Every chapter reflects the author's decisions. The AI made the work faster. It did not make the decisions.

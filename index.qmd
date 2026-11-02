@@ -8,7 +8,9 @@ AI can write HTML, CSS, and JavaScript faster than you ever will. If your only s
 
 This book teaches web development as a business decision-making skill. Every chapter starts with the concept, not the code. You explore ideas through AI conversation before writing a single line. By the time you reach the syntax, you understand what it means and why it exists. That understanding is what lets you evaluate AI output, choose the right technology for the problem, and communicate your reasoning to people who do not write code.
 
-The book covers the full spectrum of web decisions: hand-coded HTML/CSS/JavaScript for control, WordPress for rapid deployment, headless architecture for flexibility, React for modern applications. You learn when to use each one, not just how.
+The 2027 edition adds the practices around the build: specify what the client needs, write checks that run, and hand over a repository another person can maintain. An agent can produce a site from a sentence. It cannot know what the client meant, test it on a phone on a bus, or tell you whether it is any good. Those judgements remain yours.
+
+The book covers the full spectrum of web decisions: hand-coded HTML/CSS/JavaScript for control, WordPress for rapid deployment, headless architecture for flexibility, React for modern applications. You learn when to use each one as well as how.
 
 ## If You Have Been Vibe Coding Websites
 
@@ -49,13 +51,17 @@ The book progresses from foundations to full applications:
 
 **Part I: Your AI Development Partnership** introduces how to work with AI effectively from day one.
 
-**Part II: Web Foundations** covers web fundamentals using vanilla HTML, CSS, and JavaScript. No frameworks, no build tools. This is deliberate. Every framework, React included, ultimately produces HTML, CSS, and JavaScript that a browser renders. Understanding these fundamentals means you can debug anything built on top of them. It also teaches you to control AI. If you delegate a web project to AI without constraints, it will probably choose React, set up a build system, and produce something that works but that you cannot modify or explain. Part II gives you practice guiding AI within constraints, building the habit of directing rather than delegating.
+**Part II: The Practice Spine** covers the practices that make an AI-built site trustworthy: specifying before you build, checks that run, and the agent-ready repo and handover. These are the working chapters for the 2027 edition. Read them when you are building, and return to them at handover.
 
-**Part III: Content Management for Business** moves to platforms: WordPress for rapid development, content management, and extending with plugins and themes.
+**Part III: Web Foundations** covers web fundamentals using vanilla HTML, CSS, and JavaScript. No frameworks, no build tools. This is deliberate. Every framework, React included, ultimately produces HTML, CSS, and JavaScript that a browser renders. Understanding these fundamentals means you can debug anything built on top of them. It also teaches you to control AI. If you delegate a web project to AI without constraints, it will probably choose React, set up a build system, and produce something that works but that you cannot modify or explain. Part III gives you practice guiding AI within constraints, building the habit of directing rather than delegating.
 
-**Part IV: Modern Frontend Development** introduces React for component-based applications, headless architecture, and modern development patterns.
+**Part IV: Content Management for Business** moves to platforms: WordPress for rapid development, content management, and extending with plugins and themes.
 
-**Part V: The Professional Developer** ties it all together: professional practices, emerging technologies, and building a development career.
+**Part V: Modern Frontend Development** introduces React for component-based applications, headless architecture, and modern development patterns.
+
+**Part VI: The Professional Developer** ties it all together: professional practices, emerging technologies, and building a development career.
+
+This edition supports ISYS3004 Business Web and Mobile Technologies, S1 2027. The unit materials are the source of truth; this book is the reference. The 2027 course map appendix shows which chapters support each module.
 
 Each chapter follows a consistent pattern:
 
@@ -105,7 +111,7 @@ Two ways in:
 - **Converse Python, Partner AI**: the intentional prompting methodology applied to software development. A companion you can read alongside any Python book.
 - **Code Python, Consult AI**: focused Python fundamentals through AI conversation.
 - **Ship Python, Orchestrate AI**: professional Python development practices and tooling.
-- **The Absolute Minimum You Must Know**: the free, always-current web companion at [minimum.borck.education](https://minimum.borck.education) — quick primers on every topic this series covers in depth.
+- **The Absolute Minimum You Must Know**: the free, always-current web companion at [minimum.borck.education](https://minimum.borck.education), with quick primers on every topic this series covers in depth.
 - **Build Web, Guide AI** (this book): web development with AI as your development partner.
 
 All titles are available at [books.borck.education](https://books.borck.education).

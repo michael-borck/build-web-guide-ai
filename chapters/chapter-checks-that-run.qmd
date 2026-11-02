@@ -1,0 +1,560 @@
+# Checks That Run {#sec-checks}
+
+The agent says the site is done. The page looks right on your laptop. A customer opens it on a phone and cannot find the booking button. Nothing in the build failed. No one had written a check for that.
+
+A check is how you turn "it looks fine" into evidence. It is also how you stop the same defect from returning next week.
+
+## The Concept First
+
+A check is a claim about the build that can fail. A manual check is a person looking. A check that runs is a command that repeats the same judgement every time. The command gives you evidence you can show. The person gives you an opinion you have to trust.
+
+A check does not prove the site is good. It proves that one claim held under one set of conditions. That is enough to catch regressions, and not enough to sign off the site.
+
+::: {.callout-tip}
+## A check is evidence only if it can fail
+If a check passes on a broken page, it is not testing the thing you care about. Before you trust a check, break the page on purpose and watch the check fail.
+:::
+
+## Understanding Through a Fire Drill
+
+A fire drill tests whether the alarm sounds and the exits open. It cannot tell you whether the exit sign points the right way.
+
+Automated checks are the drill. They test specific paths under specific conditions. They run every time, and they only test what someone thought to test. The exit sign still needs a person to look at it.
+
+Tools catch a useful subset. You decide what the subset means, and you check the rest yourself. The rest of this chapter shows how.
+
+## The Four Principles
+
+WCAG organises accessibility under four principles: Perceivable, Operable, Understandable, Robust. The principles give a person a checklist and give the tools a map.
+
+| Principle | Question | Northbridge example |
+|---|---|---|
+| Perceivable | Can everyone perceive the content? | The menu photo has alt text that describes the dish, not "image". |
+| Operable | Can everyone operate it? | The booking button can be reached by keyboard and has a visible focus ring. |
+| Understandable | Can everyone understand it? | The form says "Party size" and explains what happens after submission. |
+| Robust | Does it work with different browsers and assistive technology? | The form uses a real `button` and `label`, not a clickable `div`. |
+
+The principles are not a score. A page can pass a tool and still fail a person. The tool checks a rule. The principle asks whether the page works.
+
+## What the Tools Catch
+
+A practical check suite uses four tools. Each one looks at a different layer.
+
+| Tool | What it checks | What it misses |
+|---|---|---|
+| html-validate | HTML structure, duplicate IDs, invalid nesting, some missing attributes | Whether the content is meaningful |
+| axe | A subset of WCAG A and AA: contrast, labels, roles, names, some heading order | Whether alt text is meaningful, whether the heading order makes sense, whether the copy is clear |
+| Playwright | Behaviour, layout, keyboard access, responsive layout, API failure | Whether the behaviour is right for the business |
+| Lighthouse CI | Performance, accessibility score, best practices, budgets | Whether the site is usable on a cheap phone with a cracked screen, whether the data is correct |
+
+The tools overlap, which is useful, and they share blind spots.
+
+| Command | What it runs |
+|---|---|
+| `npm run validate` | `html-validate` over `site/` |
+| `npm test` | Playwright checks in `checks/` and `tests/` |
+| `npm run lighthouse` | Lighthouse CI |
+| `npm run check` | validate, secrets and Playwright |
+
+Use `npm run check` before you commit. Run `npm run lighthouse` when you change images, fonts or layout.
+
+An axe check looks like this:
+
+```js
+import { test, expect } from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright';
+
+test('home page has no detectable WCAG A/AA violations', async ({ page }) => {
+  await page.goto('/');
+  const results = await new AxeBuilder({ page })
+    .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'])
+    .analyze();
+  expect(results.violations).toEqual([]);
+});
+```
+
+The check reports detectable violations. It does not tell you whether the page is accessible.
+
+### What No Automated Check Can See
+
+- Whether alt text describes the image.
+- Whether the heading order helps a person navigate.
+- Whether the copy is clear.
+- Whether the booking flow matches the business process.
+- Whether the site works on a slow connection.
+- Whether the data is correct.
+- Whether the user can recover from an error.
+
+These are not edge cases. They are the parts of the experience that decide whether the client keeps the site.
+
+::: {.callout-warning}
+## A passing axe run is not an accessibility sign-off
+axe can find a missing `alt` attribute. It cannot tell you whether the `alt` text says anything useful. It can find a missing label. It cannot tell you whether the label uses words the customer understands.
+:::
+
+## From Criterion to Check
+
+The check starts with the acceptance criterion, not the code. If the criterion is vague, the check will be vague. @sec-specify gave you the criterion, and a check turns it into evidence.
+
+A useful check has four parts:
+
+1. The condition. A viewport, a page, a network response, a keyboard action.
+2. The action. What the user or the test does.
+3. The observable result. What must be true.
+4. The failure message. What the output says when it is false.
+
+If one part is missing, the check is weak. A check that says "the page works" has no condition and no observable result.
+
+### Example: The Booking Action at 375px
+
+The criterion is: "The booking action is visible at 375px without scrolling."
+
+A weak check looks for the viewport meta tag. The tag is a proxy. A page can have the tag and still overflow.
+
+```js
+// Weak: checks a proxy, not the outcome.
+test('has a viewport meta tag', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('meta[name="viewport"]')).toHaveAttribute(
+    'content',
+    /width=device-width/
+  );
+});
+```
+
+A stronger check opens the page at 375px and tests the result.
+
+```js
+import { test, expect } from '@playwright/test';
+
+test('booking action is visible at 375px', async ({ page }) => {
+  await page.goto('/');
+  const cta = page.locator('[data-cta="primary"]');
+  await expect(cta).toBeVisible();
+
+  const box = await cta.boundingBox();
+  const viewport = page.viewportSize();
+  expect(box.x).toBeGreaterThanOrEqual(0);
+  expect(box.x + box.width).toBeLessThanOrEqual(viewport.width);
+});
+
+test('no horizontal scroll at 375px', async ({ page }) => {
+  await page.goto('/');
+  const overflows = await page.evaluate(
+    () =>
+      document.documentElement.scrollWidth >
+      document.documentElement.clientWidth
+  );
+  expect(overflows).toBe(false);
+});
+```
+
+The first check is not useless. It catches a missing tag. It does not catch the defect the customer reported.
+
+`toBeVisible()` is stronger than `toBeAttached()`. An element can be attached to the page and still sit outside the viewport. The customer cannot see it, and the weak check goes green.
+
+### Example: Every Page Has a Title
+
+The criterion is: "Every page has a non-empty title."
+
+```js
+import { test, expect } from '@playwright/test';
+import { readFileSync } from 'node:fs';
+
+const pages = JSON.parse(
+  readFileSync(new URL('../pages.json', import.meta.url), 'utf8')
+);
+
+for (const path of pages) {
+  test(`${path} has a non-empty title`, async ({ page }) => {
+    await page.goto(path);
+    expect((await page.title()).trim().length).toBeGreaterThan(0);
+  });
+}
+```
+
+The check is only as good as the page list. If a page is missing from `pages.json`, the check will not visit it. Review changes to `pages.json` as carefully as changes to the site.
+
+### Example: The API Failure
+
+The criterion is: "When the live data request fails, the page shows a friendly message and a way to retry."
+
+The happy path is easy to check. The unhappy path is the one that protects the customer.
+
+```js
+import { test, expect } from '@playwright/test';
+
+test('live data shows a friendly message when the API fails', async ({ page }) => {
+  await page.route('**/.netlify/functions/opening-status*', route =>
+    route.fulfill({ status: 500, body: 'error' })
+  );
+  await page.goto('/');
+  await expect(page.getByRole('status')).toContainText(/unavailable|try again/i);
+});
+```
+
+Use the path of the function your page calls. The route mock makes the check fast and repeatable. It does not prove the real API works. It proves the page handles a failure. Pair it with a smoke test against the real endpoint.
+
+| State | What the user sees | What the check asserts |
+|---|---|---|
+| Loading | A message or a skeleton while the request is in flight | The status text appears before the data resolves |
+| Error | A friendly message and a retry action | The message appears when the route returns 500 |
+| Empty | A message that says there is no data | The message appears when the response is an empty list |
+
+A blank space is a defect. A spinner that never stops is a defect. An error message that says "Error" is barely better than a blank space.
+
+@sec-connection shows how the request, the function and the response fit together. This chapter shows how to prove the page behaves when the response is bad.
+
+## Working with Your AI Partner
+
+AI is useful at three points in this chapter. It can draft a check from a criterion, show you how a check can be gamed, and describe a page that passes a check but fails a person. It is a poor judge of whether the check is enough. That judgement is yours.
+
+### Exploration 1: Draft a Check from a Criterion
+
+```text
+Ask your AI:
+Here is an acceptance criterion: "The booking action is visible at 375px
+without scrolling." Write the smallest Playwright check that would fail
+if the criterion were false. Then name one thing the check cannot see.
+Do not change the site.
+```
+
+Read the check before you run it. Does it test the outcome or a proxy? Does it use a role or a brittle selector? What happens if the button is attached but off-screen? Improve the check before you trust it.
+
+### Exploration 2: Ask How the Check Could Be Gamed
+
+```text
+Ask your AI:
+Here is a passing check. Show me three ways to make it pass without
+fixing the page. For each one, explain what it hides from the customer.
+```
+
+The answer is a catalogue of the shortcuts in the next section. Do not apply them. Use them to recognise the diff when an agent does.
+
+### Exploration 3: Find the Proxy
+
+```text
+Ask your AI:
+Here is a check. Is it testing the outcome or a proxy? Describe a page
+that would pass the check and still fail the user.
+```
+
+A good answer names the gap between the assertion and the experience. That gap is why the manual check still exists.
+
+## The Failure: The Agent Games the Check
+
+An agent asked to make a check pass has three options. It can fix the site, weaken the check, or hide the problem. It will often choose the cheapest path that produces green. The agent is not malicious. It is optimising for the signal you gave it.
+
+Your job is to make sure the green means something.
+
+Each common shortcut below is a diff to read. The output alone is not enough.
+
+### Weakening the Assertion
+
+```diff
+- await expect(page.locator('[data-cta="primary"]')).toBeVisible();
++ await expect(page.locator('[data-cta="primary"]')).toBeAttached();
+```
+
+`toBeAttached()` passes when the element is in the DOM. It can be off-screen, covered, or invisible. `toBeVisible()` tests what the customer can see.
+
+```diff
+- expect(results.violations).toEqual([]);
++ expect(results.violations.length).toBeLessThan(3);
+```
+
+The second check allows two accessibility violations. That is not a stricter version of the first. It is a different contract.
+
+### Skipping the Check
+
+```diff
+- test('no horizontal scroll at 375px', async ({ page }) => {
++ test.skip('no horizontal scroll at 375px', async ({ page }) => {
+```
+
+A skipped check is a green check that tests nothing. Read the output for `skipped` as well as `passed`.
+
+### Hiding the Problem
+
+```diff
+- <button data-cta="primary">Book a table</button>
++ <button data-cta="primary" aria-hidden="true">Book a table</button>
+```
+
+The button is now hidden from screen readers. A sighted user can still click it. A screen reader user loses the action. A visibility check may pass because the page still renders. If the suite runs axe, this may be caught. If it only checks visibility, it will not. The customer is worse off.
+
+`aria-hidden` is not a fix for a duplicate control or a confusing label. It is a way to remove content from the accessibility tree. Use it for decorative content. Do not use it to hide content from a check.
+
+### Hiding the Symptom
+
+```css
+body {
+  overflow-x: hidden;
+}
+```
+
+This clips the horizontal scroll. The fixed-width element is still there. The customer can still lose content off the edge. Find the fixed width, the image, or the grid that causes the overflow. @sec-presentation covers the common causes.
+
+### Editing the Page List
+
+A failing page is removed from `pages.json`. The checks visit fewer pages. The suite goes green.
+
+Review `git diff pages.json` after every agent change. The page list is part of the test surface.
+
+### Waiting for Luck
+
+```js
+await page.waitForTimeout(2000);
+```
+
+A fixed wait can make a flaky check pass once. It slows the suite and hides the race. Use a web-first assertion such as `await expect(locator).toBeVisible()`. Let the tool wait for the condition. A fixed delay only guesses how long that takes.
+
+### How to Catch a Shortcut
+
+- Read the diff as well as the green output.
+- Run `git log --oneline -- checks/`.
+- Make the check fail on purpose before you trust it.
+- Ask the agent for the command and the output.
+- Review changes to `pages.json`.
+- Check that the assertion names the observable result.
+
+## Git Evidence
+
+The provided checks are a contract. The project template puts them in `checks/`. Your own checks go in `tests/`.
+
+The history should show one commit for the provided checks: the commit that added the template. Run:
+
+```bash
+git log --oneline -- checks/
+```
+
+If there is a second commit, read it. If it edits a check, the checks were weakened. Revert the change, then fix the site. Record what happened in `DECISIONS.md`.
+
+```bash
+git checkout <commit> -- checks/
+```
+
+The commit hash is the one that added the checks. If you are unsure, ask the agent to show `git log -p -- checks/` and read the diff before you revert.
+
+A check is evidence only if the check itself is trustworthy. The git history is how you prove that the provided checks were not weakened.
+
+A provided check can be wrong. If you believe it is, do not edit it. Record the problem in `CRITIQUE.md`, show the evidence, and ask for a decision. The default is to fix the site.
+
+## A Worked 375px Audit
+
+The site passes the desktop checks. The booking page looks fine on a laptop. At 375px, the page scrolls sideways and the booking button sits off-screen.
+
+The existing check looks for the viewport meta tag. It passes. The customer still cannot book.
+
+1. Open the site at 375px. Record the defect in `CRITIQUE.md`.
+2. Write the outcome check. It fails.
+3. Find the fixed width. It might be a hero image, a grid, a table, or a container with a hard-coded `width`.
+4. Fix the cause. Do not add `overflow-x: hidden`.
+5. Run the check again. It passes.
+6. Add the criterion to `SPEC.md` if it was missing. The check and the criterion should point at each other.
+
+The audit is not finished when the page looks better. It is finished when the check would catch the defect if it returned.
+
+## A Worked API Failure
+
+The live data widget shows opening status, today's specials, or another small piece of business data. When the API is up, the widget looks fine. When the API fails, the widget is blank.
+
+The happy-path check passes. The unhappy path has no check.
+
+1. Mock a 500 response in a Playwright test.
+2. Assert that the page shows a friendly message.
+3. Run the check. It fails because the page has no error state.
+4. Add the error state. Add a loading state and an empty state while you are there.
+5. Run the check again. Then run the happy path again.
+6. Record the decision in `DECISIONS.md` and the remaining gap in `CRITIQUE.md`.
+
+The check does not prove the API will never fail. It proves the page does something useful when it does.
+
+## Building Your Mental Model
+
+### The Check Pyramid
+
+```text
+performance and budgets      Lighthouse CI
+behaviour and layout         Playwright
+accessibility                axe
+structure                    html-validate
+```
+
+Start at the bottom. A page with invalid HTML is harder to check. A page with no accessible names is harder to use. The layers catch different defects. None of them is enough alone.
+
+### The Criterion Chain
+
+```text
+criterion -> condition -> action -> observable result -> assertion -> failure message
+```
+
+If the chain breaks at the condition, the check tests the wrong thing. If it breaks at the observable result, the check tests a proxy. If it breaks at the failure message, you will not know what failed.
+
+### What the Check Proves
+
+| The check proves | The check does not prove |
+|---|---|
+| One claim held under one condition | The site is good |
+| The defect is gone for that path | The defect is gone everywhere |
+| The page handles a mocked failure | The real API works |
+| The element is in the viewport at 375px | The page is usable on a cheap phone |
+| The provided checks were not edited | The student understood the check |
+
+## Business Applications
+
+Checks reduce rework. A defect caught before the client sees it costs minutes. A defect caught after launch costs trust, support time and sometimes revenue.
+
+A fixed-price quote is easier to defend when you can name what you will verify: the booking action at 375px, the error state, the page titles, the contrast. The client knows what "done" includes.
+
+The checks are also handover evidence. The next developer can run the suite before changing anything. They do not have to trust a chat log or a colleague's memory.
+
+For AI projects, the suite is the defence. You can show what the agent changed, what the checks proved, and what still needs a human. That is a stronger position than "the agent said it was done".
+
+A regression caught before the customer sees it lowers the cost of change, which makes the site safer to improve.
+
+::: {.callout-note}
+## Skills You Are Building
+This develops evaluating and improving solutions, professional communication, and the judgement to decide what evidence is enough. A check is how you show your work.
+:::
+
+## Practice Exercises
+
+::: {.callout-note}
+## Exercise Levels
+- **Level 1**: Direct application
+- **Level 2**: Minor modifications
+- **Level 3**: Combining concepts
+- **Level 4**: Problem-solving
+- **Level 5**: Open-ended design
+:::
+
+### Exercise 3.1: Run and Read (Level 1)
+
+Run the project's check command. Record every failure in `CRITIQUE.md` under `## Check results`.
+
+For each failure, answer:
+
+1. Is this a site problem or a check problem?
+2. Which user is affected?
+3. What is the smallest fix?
+
+Then name one thing the checks cannot see.
+
+**Done when:** you can list every failure and explain one limit of the suite.
+
+### Exercise 3.2: One Criterion, One Check (Level 2)
+
+Choose one acceptance criterion from `SPEC.md` that the provided checks do not cover. Write a check in `tests/`.
+
+Make it fail first. Break the page or remove the feature. Then fix the site and make it pass.
+
+**Done when:** the check fails when the criterion is false and passes when it is true.
+
+### Exercise 3.3: The 375px Outcome Check (Level 3)
+
+Write two checks:
+
+1. No horizontal scroll at 375px.
+2. The primary action is inside the viewport at 375px.
+
+Run them on a page with a fixed-width element. Then fix the page and run them again. Explain why a viewport meta tag check is not enough.
+
+**Done when:** both checks fail on the broken page and pass on the fixed page.
+
+### Exercise 3.4: The Unhappy Path (Level 4)
+
+Choose a page that loads live data. Write checks for three states:
+
+- the loading state
+- the error state
+- the empty state
+
+Mock the responses. Show that the page never shows a blank space or a spinner that never stops.
+
+**Done when:** each state has a check that fails when the state is missing.
+
+### Exercise 3.5: Catch the Gaming Diff (Level 4)
+
+Here is a diff an agent produced after being asked to make a check pass.
+
+```diff
+- await expect(page.locator('[data-cta="primary"]')).toBeVisible();
++ await expect(page.locator('[data-cta="primary"]')).toBeAttached();
+```
+
+And another:
+
+```diff
+- expect(results.violations).toEqual([]);
++ expect(results.violations.length).toBeLessThan(3);
+```
+
+Answer:
+
+1. What does each change hide?
+2. Why is the original assertion stronger?
+3. What would you see in the browser that the new check would miss?
+
+Then revert the changes, fix the site, and write a check that fails on the broken page.
+
+**Done when:** you can explain the weakening and your replacement check fails when the defect returns.
+
+### Exercise 3.6: What the Check Cannot See (Level 5)
+
+Write a manual test script for the things automation misses:
+
+- meaningful alt text
+- heading order
+- copy clarity
+- the booking process
+- a slow connection
+- data correctness
+
+Run it on a classmate's site. Record three findings. For each finding, name the user it affects and the change you would make.
+
+**Done when:** another person could run the script without asking you what you meant.
+
+## Chapter Summary
+
+- A check is a claim about the build that can fail.
+- WCAG POUR gives the human checklist. Tools cover a subset.
+- Start from the acceptance criterion, not the code.
+- Check the outcome, not the proxy.
+- The agent will optimise for green. Read the diff.
+- The provided checks are a contract. `git log -- checks/` proves they were not weakened.
+- The unhappy path needs checks too.
+- A check is evidence only if you know what it asserts.
+
+## Reflection
+
+Before moving on, ensure you can:
+
+- [ ] Explain POUR with one example per principle
+- [ ] Name what axe catches and what it misses
+- [ ] Write a check from an acceptance criterion
+- [ ] Make a check fail before making it pass
+- [ ] Read a diff and spot a weakened assertion
+- [ ] Use `git log -- checks/` as evidence
+- [ ] Write checks for loading, error and empty states
+- [ ] Name one thing your checks cannot see
+
+## Your Learning Journal
+
+Record your responses to these prompts:
+
+1. **The defect I would have missed**: Which check caught something you did not see?
+
+2. **The green check I did not trust**: What did the agent change to make a check pass? What did you do about it?
+
+3. **The user I almost forgot**: Which finding came from a person rather than a tool?
+
+4. **The proxy**: Where did a check test a proxy instead of the outcome? How did you rewrite it?
+
+5. **The next check**: What would you check next, and why?
+
+## Next Steps
+
+@sec-connection shows how the request, the serverless function and the response fit together. The API failure check in this chapter is only useful if you understand what the page is asking for.
+
+The next practice chapter, **The Agent-Ready Repo and Handover**, turns the checks, the decisions and the spec into a repository that another person can run, review and maintain. It also shows how to turn a repeated task, such as writing a check, into a skill.

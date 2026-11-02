@@ -8,13 +8,14 @@ project:
     - tools/**
 
 book:
+  cover-image: cover.png
   title: "Build Web, Guide AI"
   subtitle: "Business Web Development with AI"
   author: "Michael Borck"
   isbn: "979-8-255-17415-7"
   date: "last-modified"
   license: "CC BY 4.0 International"
-  description: "A practical approach to web development that embraces AI as your development partner while building real business solutions with HTML, CSS, JavaScript, WordPress, and React."
+  description: "A practical approach to web development that teaches you to specify, direct, check and hand over AI-built business websites with HTML, CSS, JavaScript, WordPress and React."
   favicon: favicon.svg
   site-url: https://michael-borck.github.io/build-web-guide-ai
   repo-url: https://github.com/michael-borck/build-web-guide-ai
@@ -28,6 +29,11 @@ book:
     - part: "Your AI Development Partnership"
       chapters:
         - chapters/chapter-ai-web-partner.qmd
+    - part: "The Practice Spine"
+      chapters:
+        - chapters/chapter-specify-before-build.qmd
+        - chapters/chapter-checks-that-run.qmd
+        - chapters/chapter-agent-ready-repo.qmd
     - part: "Web Foundations"
       chapters:
         - chapters/chapter-structure.qmd
@@ -53,6 +59,10 @@ book:
         - chapters/chapter-emerging-technologies.qmd
         - chapters/chapter-development-career.qmd
         - chapters/chapter-ai-era-developer.qmd
+    - part: "Appendices"
+      chapters:
+        - appendices/how-to-use-this-book.qmd
+        - appendices/2027-course-map.qmd
     - references.qmd
     - about-author.qmd
   page-navigation: true
@@ -91,7 +101,7 @@ format:
     theme:
       light: cosmo
       dark: darkly
-    css: assets/custom.css
+    css: [assets/custom.css, book-design.css]
     cover-image: cover.png
     include-after-body: chatbot.html
     code-fold: false
@@ -105,6 +115,9 @@ format:
     number-depth: 2
     highlight-style: github
   pdf:
+    pdf-engine: lualatex
+    fontsize: 11pt
+    linestretch: 1.08
     documentclass: book
     toc: true
     toc-depth: 1
@@ -117,13 +130,14 @@ format:
       - outer=0.75in
       - top=0.75in
       - bottom=0.75in
-    include-in-header: pdf-header.tex
+    include-in-header: [pdf-header.tex, book-design.tex]
     include-before-body:
       - copyright-page.tex
   epub:
+    epub-cover-image: cover.png
     toc: true
     toc-depth: 1
-    css: epub-styles.css
+    css: [epub-styles.css, book-design-epub.css]
 
 crossref:
   chapters: true

@@ -2,14 +2,14 @@
 
 ## The Concept First
 
-In @sec-emerging-technologies, you learned to evaluate technologies systematically. But technical skills alone don't build careers, they create potential. Converting that potential into opportunities requires a different skill set: **professional development**.
+In @sec-emerging-technologies, you learned to evaluate technologies systematically. But technical skills alone don't build careers; they create potential. Converting that potential into opportunities requires a different skill set: **professional development**.
 
 Consider two developers with identical technical abilities:
 
 - **Developer A**: Strong skills, no online presence, applies to jobs cold, waits for opportunities
-- **Developer B**: Strong skills, portfolio showcasing work, active in communities, creates opportunities
+- **Developer B**: Strong skills, portfolio showing work, active in communities, creates opportunities
 
-Developer B will have more options, better offers, and a clearer path forward. Not because they're more talented, but because they've made their talent **visible and accessible**.
+Developer B will have more options, better offers, and a clearer path forward, because they have made their talent **visible and accessible**.
 
 This chapter isn't about self-promotion or personal branding gimmicks. It's about the practical work of building a professional presence that accurately represents your capabilities and connects you with opportunities that match your goals.
 
@@ -50,7 +50,7 @@ should I include? How do I make projects stand out when thousands
 of developers have similar portfolios?
 ```
 
-Key insights:
+Points to notice:
 
 **Quality over quantity**: Three excellent projects beat ten mediocre ones
 
@@ -81,7 +81,7 @@ What does "positioning" mean for a developer's career? How do I
 choose what to be known for when I'm just starting out?
 ```
 
-Positioning isn't limiting, it's focusing:
+Positioning focuses your message:
 
 - **Generalist trap**: "I do everything" means "Hire me for anything" which often means "Hire someone else who specialises"
 - **Specialist value**: "I build accessible React applications" is memorable and referable
@@ -142,8 +142,6 @@ How do I prioritise without chasing every trend?
 ```
 
 ## From Concept to Code
-
-Let's make this practical.
 
 ### Building Your Portfolio
 
@@ -450,7 +448,7 @@ Think beyond the first job:
 - **Year 3-5**: Develop specialisation, build reputation
 - **Year 5+**: Leadership opportunities, consulting, teaching
 
-Each stage requires different strategies. Early career is about learning and visibility. Later career is about leverage and impact.
+Each stage requires different strategies. Early career is about learning and visibility. Later career is about influence and impact.
 
 ::: {.callout-note}
 ## Skills You Are Building
@@ -468,7 +466,7 @@ This develops **professional communication and project management**. Career deve
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 17.1: Portfolio Audit (Level 1)
+### Exercise 20.1: Portfolio Audit (Level 1)
 
 Evaluate your current portfolio presence:
 
@@ -477,7 +475,7 @@ Evaluate your current portfolio presence:
 3. Check your LinkedIn, is it complete and current?
 4. List three things you could improve immediately
 
-### Exercise 17.2: Project Case Study (Level 2)
+### Exercise 20.2: Project Case Study (Level 2)
 
 Write a case study for one of your projects using the template provided:
 
@@ -486,7 +484,7 @@ Write a case study for one of your projects using the template provided:
 3. Get feedback from a peer
 4. Revise based on feedback
 
-### Exercise 17.3: Professional Positioning (Level 3)
+### Exercise 20.3: Professional Positioning (Level 3)
 
 Develop your professional positioning:
 
@@ -496,7 +494,7 @@ Develop your professional positioning:
 4. Write a positioning statement (one sentence that describes what you do)
 5. Get feedback, is it clear? Memorable? Accurate?
 
-### Exercise 17.4: Content Creation (Level 4)
+### Exercise 20.4: Content Creation (Level 4)
 
 Create professional content:
 
@@ -505,7 +503,7 @@ Create professional content:
 3. Share it on one social platform
 4. Reflect: What was harder than expected? What did you learn from writing?
 
-### Exercise 17.5: Career Strategy (Level 5)
+### Exercise 20.5: Career Strategy (Level 5)
 
 Develop a 12-month career strategy:
 

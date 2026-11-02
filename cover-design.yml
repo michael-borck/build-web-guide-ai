@@ -1,0 +1,13 @@
+version: 1
+style: editorial-c
+art: cover-art.png
+family: PROGRAMMING / WEB
+accent: '#326E55'
+background: '#E1EAE1'
+title_lines:
+- Build Web,
+- Guide AI
+dark: false
+pixel: false
+scene: web
+art_origin: Locally constructed editable vector illustration.

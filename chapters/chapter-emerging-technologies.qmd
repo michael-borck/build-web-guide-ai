@@ -2,11 +2,11 @@
 
 ## The Concept First
 
-In @sec-professional-practices, you learned practices that make developers effective. But the technology landscape changes constantly. The frameworks popular today may be legacy tomorrow. The "best practices" of five years ago may now be anti-patterns.
+In @sec-professional-practices, you learned practices that make developers effective. But technologies change constantly. The frameworks popular today may be legacy tomorrow. The "best practices" of five years ago may now be anti-patterns.
 
 This creates a challenge: **how do you evaluate new technologies without getting swept up in hype?**
 
-The answer isn't to know every new tool, that's impossible. The answer is developing a **systematic evaluation framework** that works for any technology. This meta-skill outlasts any specific tool.
+You cannot know every new tool. Instead, develop a **systematic evaluation framework** that works for any technology.
 
 Consider the difference:
 
@@ -157,8 +157,6 @@ This develops healthy scepticism. Technologies that seemed essential often:
 - Were driven by specific company interests
 
 ## From Concept to Code
-
-Let's explore practical examples of emerging patterns.
 
 ### TypeScript: Adding Types to JavaScript
 
@@ -457,7 +455,7 @@ This develops **assessing emerging technologies**. The ability to evaluate techn
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 16.1: Framework Application (Level 1)
+### Exercise 19.1: Framework Application (Level 1)
 
 Apply the evaluation framework to a technology of your choice:
 
@@ -466,7 +464,7 @@ Apply the evaluation framework to a technology of your choice:
 3. Document your findings for each category
 4. Write a one-paragraph recommendation
 
-### Exercise 16.2: Historical Analysis (Level 2)
+### Exercise 19.2: Historical Analysis (Level 2)
 
 Research a technology that was popular 5 years ago but is less used now:
 
@@ -477,7 +475,7 @@ Research a technology that was popular 5 years ago but is less used now:
 
 Write 300 words on lessons learned.
 
-### Exercise 16.3: Comparative Evaluation (Level 3)
+### Exercise 19.3: Comparative Evaluation (Level 3)
 
 You need to choose between two competing technologies (e.g., two CSS frameworks, two state management libraries, two build tools):
 
@@ -487,7 +485,7 @@ You need to choose between two competing technologies (e.g., two CSS frameworks,
 4. Make a recommendation with clear reasoning
 5. Note what would change your recommendation
 
-### Exercise 16.4: Context-Dependent Recommendation (Level 4)
+### Exercise 19.4: Context-Dependent Recommendation (Level 4)
 
 A client asks whether they should adopt a specific new technology. Create three different recommendations based on three different client contexts:
 
@@ -497,7 +495,7 @@ A client asks whether they should adopt a specific new technology. Create three 
 
 For each, explain how context changes the recommendation.
 
-### Exercise 16.5: Technology Radar (Level 5)
+### Exercise 19.5: Technology Radar (Level 5)
 
 Create your own "Technology Radar" for web development:
 
@@ -545,4 +543,4 @@ Record your responses to these prompts:
 
 You now have tools to evaluate any technology that emerges. But technology skills alone don't build a career.
 
-In @sec-development-career, we'll focus on your professional development, building a portfolio, positioning yourself in the market, networking effectively, and planning continuous growth. Technical skill opens doors; professional skill keeps them open.
+In @sec-development-career, we'll focus on your professional development, building a portfolio, positioning yourself in the market, networking effectively, and planning continuous growth.

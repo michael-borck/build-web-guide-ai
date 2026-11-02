@@ -1,0 +1,661 @@
+# Specify Before You Build {#sec-specify}
+
+An agent will build whatever you describe, including the parts you did not mean. Give it a sentence and it fills the gaps with the most common pattern it has seen. That pattern might be a carousel, a contact form, three pricing cards, or a stock photo of strangers laughing at a salad. The agent is doing what the brief allows.
+
+Maria's first email contains one sentence of need wrapped in a launch date. The distance between that email and a working site is where projects succeed or fail. This chapter is about closing that distance before the build starts.
+
+## The Concept First
+
+A specification is a written contract for a build. It records who the site serves, what those people need to do, what content exists, which design decisions are fixed, what counts as done, and what is excluded. You write it before the build and use it during the build. When the client asks for a change, the spec tells you whether the change is inside the agreement or a new request.
+
+A wish list has a different job. It records what the client likes. A contract records what the build must do.
+
+| Wish list | Contract |
+|---|---|
+| A gallery | Six photos, owned by Maria, each with alt text, on the home page |
+| Mobile friendly | At 375px, no page scrolls horizontally and the booking action is visible without scrolling |
+| Easy to update | Dev can update the menu in under five minutes without editing code |
+| Professional | Brand palette and type scale applied, no stock photos, hours correct on every page |
+
+A contract can be tested. A wish can only be discussed.
+
+The test of a spec is direct. Give it to a builder who has never met the client. If that builder produces something the client would accept, the spec did its job. If the builder has to ask what the client meant, the spec has a gap.
+
+## Understanding Through a Renovation Brief
+
+A cafe renovation has the same problem. The owner says she wants the room to feel warmer. The builder can install a heater, paint a wall, or add lamps. All three might make the room warmer. None of them can be accepted or rejected against the word "warmer" alone.
+
+A useful renovation brief says which walls are moving, which lights are being replaced, which finishes are approved, which parts of the room stay, and what the client will inspect before paying. The builder still makes design decisions. The brief sets the boundaries those decisions must respect.
+
+A web spec works the same way. "Make it professional" is the feeling. "Brand palette, type scale, six photos, booking action above the fold at 375px, hours correct on every page" is the brief. The first gives the agent room to invent. The second gives the agent a standard to meet.
+
+::: {.callout-tip}
+## A spec sets the boundary
+You do not need to tell the agent which HTML element to use. You need to tell it what the result must do. The boundary is the contract. The implementation is the agent's job.
+:::
+
+## The Client's Brief
+
+This is Maria's email. It is the brief that starts the client project.
+
+> From: Maria
+> To: Contractor
+> Subject: Website for the new place
+>
+> Hi,
+>
+> We're opening the [suburb] store and I need a website. Nothing fancy. People
+> should be able to find us, see the menu, and book a table. That's it.
+>
+> My nephew did one for his mum's salon in an afternoon with one of those AI
+> things, so I don't think this is a big job. I've told the local paper we launch
+> on [date]. Can you make that?
+>
+> I'll send you the logo and a few photos. Dev has the menu.
+>
+> Thanks,
+> Maria
+
+The brief gives you a purpose, a rough scope, a launch date, and a budget signal. It does not give you the things a builder needs.
+
+It does not say who updates the menu, how often the menu changes, which device customers use, what "book" means, what happens after a booking, which content is current, or what "professional" looks like. It does not say what Maria would drop if the date slipped. It does not say how the site connects to the phone bookings the cafe already takes.
+
+None of these gaps are Maria's fault. She is describing her business. She is not writing a technical document. Your job is to ask.
+
+::: {.callout-warning}
+## Do not fill a gap with a guess
+A guess in the spec becomes a defect in the build. Write the question down. Ask the person who knows. "I assumed" is not a requirement.
+:::
+
+This chapter uses Harbour & Hearth Northbridge as a teaching example. Your fact sheet and interviews are the source of truth for your own franchise. Do not copy the example's content into your assessment. The method is the same.
+
+## Working with Your AI Partner
+
+AI is useful in three places in this chapter. It can find the gaps in a brief, role-play the people who know the answers, and test whether a criterion can be read two ways. AI is a poor tool for writing the spec. The spec records your judgement, and your judgement is what your assessment rewards.
+
+### Exploration 1: Find the Gaps Without Filling Them
+
+Paste Maria's email and ask for questions. Do not ask it to answer them.
+
+```text
+Ask your AI:
+Here is a client email. List every question you would need answered before
+you could build the site. Do not answer the questions. Group them by the
+person most likely to know: the owner, the office manager, the customer,
+or the IT vendor.
+```
+
+A useful answer will include questions about content ownership, update frequency, devices, the booking process, brand assets, hosting, and what happens when the site is wrong. If the AI starts answering its own questions, stop it. You want the gaps. Plausible filler hides them.
+
+### Exploration 2: Interview a Persona
+
+A client simulator uses one persona per conversation. You can do the same with any AI tool.
+
+```text
+Ask your AI:
+Role-play Dev, the office manager at Harbour & Hearth. I am the
+contractor for this franchise. Answer only from the fact sheet I
+provide. Do not volunteer information. If I ask a vague question, give
+a vague answer. If I ask about your work, answer as someone who updates
+the menu and hours.
+
+Fact sheet:
+[paste your fact sheet here]
+```
+
+Then ask Dev what changes, how often, and who does it. Ask what changes in a normal week, and what catches her out. Ask what she would stop using the site over. The requirements that matter usually sit inside those answers. A feature list hides them.
+
+### Exploration 3: Test a Criterion for Ambiguity
+
+Take a weak criterion and ask the AI to build two different sites that would both pass it.
+
+```text
+Ask your AI:
+Read this acceptance criterion: "The site is easy to use on a phone."
+Describe two different websites that would both pass it. Then tell me
+which words are doing too much work.
+```
+
+The answer should expose the problem. "Easy" has no observable result, and "phone" does not name a screen width, a device, or a context. A criterion that allows two unrelated builds cannot settle a disagreement.
+
+## From Brief to Spec
+
+A practical spec template has seven parts, plus a log for the replication test. Each part answers a question a builder would otherwise have to guess.
+
+```markdown
+# Spec: Harbour & Hearth Northbridge
+
+**Version:** v1
+**Client:** Maria, owner; Dev, office manager
+**Last replication test:** v1
+
+## Purpose
+
+## Users and top tasks
+
+## Content
+
+### Content model
+
+### Design tokens
+
+## Must / Should / Won't
+
+## Constraints
+
+## Acceptance criteria
+
+## Out of scope
+
+## Replication test log
+```
+
+### Purpose
+
+Write one or two sentences from the client's point of view. Name the audience, the job and the outcome. Leave out the technology.
+
+> Let local customers find the current menu, hours and booking action on a phone, and let Dev update the menu without calling the contractor.
+
+Three requirements are carried in those two sentences. "Current" carries the weekly update. "On a phone" carries Sam's context. "Without calling the contractor" carries Dev's constraint. The purpose does not mention a framework, a plugin, or a page count.
+
+### Users and Top Tasks
+
+Define users by what they need to do. Age and job title say less than context. Include the people inside the business. Maria pays for the site, but Sam uses it. Both belong in the spec.
+
+| User | Task | Device and context |
+|---|---|---|
+| Local customer | Find the current menu and hours | Phone, on the bus, often one-handed |
+| Local customer | Book a table | Phone, about 30 seconds, possibly poor signal |
+| Dev | Update the menu and opening hours | Desktop, during the working week, no code |
+| Maria | Check that the site looks professional and current | Phone, in the store, between customers |
+| Alex | Keep the site maintained | Occasional, remote, low tolerance for plugin sprawl |
+
+The context column changes the requirement. A booking at a desk with a fast connection is a different task from a booking on a bus with one bar of signal. The first can tolerate a long form. The second cannot.
+
+### Content and the Content Model
+
+Content is what the site says. A content model is what the client edits.
+
+Start with the content the business already has: the menu, the hours, the photos, the staff bios, the contact details. For each item, ask who owns it, how often it changes, which fields it needs, and where it appears.
+
+| Content type | Fields | Owner | Changes | Appears on |
+|---|---|---|---|---|
+| Menu | Sections; item name, description, price, dietary tags | Dev | To confirm in the interview | Menu, Home |
+| Opening hours | Day, open, close, note | Dev | Rarely; public holidays | Home, Contact, Footer |
+| Booking enquiry | Name, phone, party size, date, time, notes | Front of house | Per booking | Booking page, staff inbox |
+| Photo | Image, alt text, caption, credit | Maria | Occasionally | Home, About |
+| Promotion | Title, dates, image, link | Maria | Occasionally | Home |
+| Site details | Address, phone, email, social links | Dev | Rarely | Everywhere |
+
+Maria says "see the menu". The brief does not say how often the menu changes or who updates it. The content model forces those questions. A spec that records "to confirm" is more honest than one that guesses. The interview replaces the placeholder with a frequency and an owner.
+
+A content model is not a database schema. It is a list of the things the client edits and the fields each thing needs. You will meet the same idea in WordPress as custom post types and fields (@sec-why-cms).
+
+Every field needs a reason. If nobody can say where a field appears or who changes it, remove it. A content model with twelve fields Dev never fills is a maintenance cost disguised as thoroughness.
+
+### Design Tokens
+
+Maria wants the site to look professional and warm, and she does not want it to feel corporate. That is a direction. A builder cannot apply it consistently without decisions. Design tokens turn the direction into named values.
+
+Tokens are the small set of decisions that every page reuses: colour roles, typefaces, type scale, spacing, radius, borders, shadows, motion and focus. A first set for Northbridge might look like this.
+
+| Token | Value | Rule |
+|---|---|---|
+| `--colour-ink` | `#2b2118` | Body text. At least 7:1 contrast on `--colour-paper` |
+| `--colour-paper` | `#f7f1e7` | Page background |
+| `--colour-accent` | `#b4552d` | Primary action only. At least 4.5:1 with white text |
+| `--font-display` | Fraunces, Georgia, serif | Headings |
+| `--font-body` | Source Sans 3, system-ui, sans-serif | Body text |
+| `--space-1` to `--space-6` | `0.25rem` to `1.5rem` | A spacing scale; every gap uses one of these values |
+| `--radius` | `4px` | Buttons, cards, images |
+| `--focus-ring` | `3px solid #1f5c99` | Every interactive element |
+
+```css
+:root {
+  /* Colour roles. Pages refer to the role, not the hex value. */
+  --colour-ink: #2b2118;
+  --colour-paper: #f7f1e7;
+  --colour-accent: #b4552d;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+
+  /* Spacing scale. Every gap uses one of these values. */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --radius: 4px;
+  --focus-ring: 3px solid #1f5c99;
+}
+```
+
+The spec names the roles and the constraints. The build applies them. @sec-presentation shows how CSS uses tokens; this section is about deciding them before the agent starts.
+
+Contrast belongs in the token decision. A warm accent that fails contrast is not usable for text, however good it looks in the brand guide. Two font families are also a performance decision. If the brand allows, use one family and a system fallback.
+
+### Must, Should and Won't
+
+Priorities are how a spec survives a bad week. If everything is a must, the first slip becomes a negotiation about everything.
+
+| Priority | Meaning | Northbridge examples |
+|---|---|---|
+| Must | Without it, the site fails its purpose | Current menu, correct hours, booking action at 375px, Dev can update the menu, brand palette and type |
+| Should | Valuable, and can slip without breaking the contract | Six photos, a short story, a live music section, a map embed |
+| Won't | Explicitly excluded from this version | Online payments, customer accounts, a native app, a loyalty scheme, a blog, online ordering |
+
+The stakeholders disagree. Maria wants a gallery first. Sam wants the booking action first. Dev wants the menu to be correct. Alex wants fewer parts that can break.
+
+The spec resolves the disagreement in writing. Booking is a Must because Sam will not complain twice. The menu update is a Must because a wrong menu loses trust. The gallery is a Should, limited to six photos owned by Maria, with no third-party gallery plugin. Maria gets the look she asked for, Sam gets the booking action, Dev gets a maintenance load she can carry, and Alex gets one less plugin to update.
+
+Record the decision and the rejected option in `DECISIONS.md`. The spec says what will be built. The decision record says why this option was chosen and what it cost.
+
+### Constraints
+
+Constraints are requirements that limit the solution.
+
+| Constraint | Why it exists | What it forces |
+|---|---|---|
+| Plain HTML, CSS and JavaScript | Static site scope | No framework, no build step |
+| Works from 375px | Sam books on a phone | Layout and type are tested at 375px |
+| WCAG 2.2 AA | Public site, low-vision user | Contrast, focus, headings, alt text, target size |
+| No paid tools | Unit budget | Free hosting and open fonts only |
+| Static hosting | No server to maintain | Booking is an enquiry. Staff confirm it later |
+| Launch date | Maria's newspaper promise | Scope can shrink; Must items cannot |
+
+Constraints can conflict. A static site cannot confirm a booking without a server. The spec has to say what "book" means, or the build will invent a confirmation the business cannot honour.
+
+### Acceptance Criteria
+
+An acceptance criterion is a statement about the build that a person can mark pass or fail. It describes an observable result and the condition under which it must hold. Write criteria for the Must items. A criterion that cannot fail is not a criterion.
+
+| Test | Question | Weak example | Why it fails |
+|---|---|---|---|
+| Observable | Can you see the result? | Looks professional | No observable result |
+| Specific | Does it name one condition? | Works on mobile and desktop | Two conditions, neither defined |
+| Implementation-free | Does it allow any suitable build? | Uses a hamburger menu | Names a solution |
+| Decidable | Would two reviewers agree? | Easy to use | Depends on the reviewer |
+
+These criteria pass all four tests:
+
+| Acceptance criterion | How it is checked |
+|---|---|
+| A customer can see today's opening hours on the home page at 375px without scrolling. | Open the home page at 375px. Compare the hours with the fact sheet. |
+| A customer can start a booking enquiry from any page in one tap, and the form asks for party size, date and time. | Visit each page at 375px. Count the taps to the form. Check the fields. |
+| Dev can update the menu in under five minutes without editing code. | Time Dev doing it with the agreed fields. |
+| Every page has one `h1` and a logical heading order. | Read the heading outline for each page. |
+| Every interactive element has a visible focus ring of at least 3px. | Tab through each page and watch the focus indicator. |
+| The booking action is visible at 375px without horizontal scrolling. | Open each page at 375px. Check for horizontal scroll and the action's position. |
+
+A useful pattern is a person doing a task, under a condition, with an observable result. The pattern is a guide. Do not apply it as a formula. Some criteria describe a property of the whole site, such as heading order or contrast.
+
+One criterion can need several checks. "No horizontal scroll at 375px" is one criterion. The check might visit every page and every interactive state. @sec-professional-practices introduces checks; the next practice chapter turns criteria into checks that run.
+
+Six to ten criteria are enough for a static client site. Thirty criteria become a document nobody checks. Add a criterion when a real defect appears. Do not add one because the list looks thin.
+
+Acceptance criteria also protect the client. Maria can reject a build that misses a Must criterion. She cannot reject a build for failing a feeling she never defined.
+
+::: {.callout-note}
+## A criterion can expose a stack limit
+A static site cannot give Dev a full content management screen. If a Must criterion needs one, the spec and the build disagree. Record the gap in `CRITIQUE.md`, agree with the client whether it is a Must for this version, and carry the requirement into the content-managed version. Do not drop it without recording the decision.
+:::
+
+### Out of Scope, Assumptions and Change
+
+Out of scope protects the launch. It names what a reasonable person might expect but this version will not do.
+
+For Northbridge: online payments, customer accounts, a native app, a loyalty scheme, a blog, online ordering, and multi-language content.
+
+Assumptions are facts you need but do not control. Write them down.
+
+- The brand office supplies the logo and palette before the build starts.
+- Dev supplies the menu in the agreed fields. A photo of the chalkboard is not enough.
+- The host supports a static site and a form endpoint.
+- Booking is an enquiry. Staff confirm by phone.
+- Maria can approve content within two working days.
+
+If an assumption fails, the spec changes. Writing it down makes the change visible.
+
+A change clause keeps the contract usable after sign-off.
+
+> A change that adds a Must item, a page, or a content type is a change request. Record it in `DECISIONS.md`, update the spec version, and re-run the replication test if it changes a Must criterion.
+
+Version the spec. Use v0 after the first brief, v1 after the interviews and the replication test, and v1.1 after a material change. The version number is evidence of what was agreed.
+
+## The Failure: Describing the Current Build
+
+The most common bad spec is an accurate description of the site you already have.
+
+| Describes the build | Describes the client's need |
+|---|---|
+| A hero carousel with three slides | A first-time visitor can tell what the business is and whether it is open now |
+| A sticky navigation bar with a hamburger menu | A phone user can reach the menu and the booking action from any page in one tap |
+| A grid of six menu cards with hover effects | Dev can publish the menu without calling a developer |
+| A contact form with name, email and message | Sam can request a table for four on Friday at 7pm and knows what happens next |
+
+The drift happens in four steps. The agent builds something. It looks complete. The spec is rewritten to match it. The spec now passes the replication test because it describes what the agent already built. The client's need is still unmet.
+
+The spec has become a receipt. It records what was bought. The requirement is missing.
+
+Use one question to separate the two.
+
+> If the build disappeared, would this sentence still tell a new builder what the client needs?
+
+"The site has a hero carousel with three slides" fails. Delete the build and the need disappears with it. "A first-time visitor can tell whether the cafe is open now and start a booking in one tap" passes. It still describes the client's need when no build exists.
+
+The build is evidence. The spec is the standard the evidence is judged against.
+
+Agents default to the common pattern. If the spec says "menu", the agent builds a static menu. If it says "booking", the agent builds a contact form. The agent is filling a gap with the average of the web. The gap is yours to close.
+
+### A Worked Failure
+
+The first `SPEC.md` for Northbridge said: "The site must be responsive."
+
+The agent produced a desktop layout that shrank. At 375px the booking button sat below three screens of gallery. The student asked the agent to "make it more mobile". The next build moved the button. The booking form was still a general contact form, and the gallery still autoplayed.
+
+The agent's CSS was not the main problem. The spec had no criterion for the booking action at 375px and no rule for the gallery's motion. The fix was two sentences in the spec. A longer chat would not have helped.
+
+Change the spec, then rebuild. A chat fix disappears when the session ends. A spec fix survives the next agent, the next developer and the handover.
+
+## The Replication Test
+
+The replication test measures the spec. It does not measure the agent.
+
+You give the spec alone to a fresh agent and measure the gap between what the spec says and what the client needs. The agent reads the spec as a stranger would. If the reader has to guess, the spec is incomplete.
+
+### The Procedure
+
+| Step | What to do |
+|---|---|
+| 1. Freeze | Commit `SPEC.md` and note the version. |
+| 2. Start fresh | Open a new agent session and an empty folder outside your repo. |
+| 3. Remove context | Do not show the agent your site, your screenshots, your repository or your earlier chat. |
+| 4. Give the spec | Provide `SPEC.md`, the fact sheet and the fixed constraints. |
+| 5. Build without coaching | If the agent asks a question the spec answers, answer from the spec. If the spec does not answer it, record the question and tell the agent to use its judgement. |
+| 6. Compare | Judge the replica against the acceptance criteria. Your site is not the standard. |
+| 7. Classify | Label each gap: missing, ambiguous, unstated constraint, or builder error. |
+| 8. Revise | Change the spec, not the chat. Bump the version. Run again if time allows. |
+
+The comparison grid is the acceptance criteria. A replica that looks different can still pass. A replica that looks similar can still fail a criterion.
+
+### A Worked Replication Test
+
+The v1 spec produced a plausible home page, a menu page, a contact form, and a three-slide autoplay gallery. The first impression was good. The criteria told a different story.
+
+| Acceptance criterion | Replica result | Gap type | Spec change |
+|---|---|---|---|
+| Menu items show dietary tags | No dietary tags on any item | Missing | Added dietary tags to the menu fields |
+| Booking asks for party size, date and time | Contact form with name and message | Ambiguous | Defined booking as an enquiry and listed its fields |
+| Opening hours include public holiday notes | Hours table omits public holidays | Missing | Added a note field and named the fact sheet as the source |
+| Booking action visible at 375px | Button below the gallery | Ambiguous | Added "visible without scrolling at 375px" |
+| Every interactive element has visible focus | No focus styles | Missing | Added the focus token and a criterion |
+
+Each gap in the table was a spec problem. The replica did what the spec allowed.
+
+The gallery deserves a second look. Maria asked for a gallery. The spec did not say how many photos, who owns them, or whether they may autoplay. The agent chose the common pattern: three slides, automatic movement, no pause control. The fix belongs in the spec. Complaining about the agent's taste changes nothing.
+
+### Classifying the Gap
+
+| Gap type | Meaning | What to change |
+|---|---|---|
+| Missing | The spec never said it | Add the requirement or criterion |
+| Ambiguous | The spec allowed two readings | Define the term and add a condition |
+| Unstated constraint | The spec assumed something outside the builder's control | Add the assumption and its consequence |
+| Builder error | The spec was clear and the replica ignored it | Keep the spec; add or strengthen a check |
+
+Only the first three lead to a spec change. A builder error is still useful evidence. It tells you which criteria need a check that runs.
+
+### What Counts as a Pass
+
+A pass means every Must criterion is met, and no gap depends on knowledge that only you have. Two good builders will differ in details and agree on the contract. That is a pass.
+
+Do not score the replica out of ten. A number hides which criterion failed and why. Record the biggest gap, the gap type, and the sentence you added.
+
+### Limits of the Test
+
+Treat one run as a sample. The same agent family may share the same blind spots, so use a different tool when you can. The replica may be better than your build in one place; copy the better idea or record why you rejected it. The test does not replace client review. It tests whether the spec communicates the client's need.
+
+The test takes about 25 to 30 minutes. Run it when a Must criterion changes. Do not run it after every commit.
+
+::: {.callout-tip}
+## Keep the replica
+Keep the replica folder and the gap table. They are evidence for the assessment conversation, and they show the spec improving across versions. A spec that never failed a replication test has probably never been tested seriously.
+:::
+
+## Building Your Mental Model
+
+### The Artefacts
+
+| File | Question it answers | Written when |
+|---|---|---|
+| `SPEC.md` | What does the client need, and what counts as done? | Before the build |
+| `DECISIONS.md` | Which option did we choose, and what did we reject? | During the build |
+| `CRITIQUE.md` | What is still wrong or unverified? | After the build |
+| `checks/` | Does the build still meet the criteria? | During and after the build |
+
+These artefacts answer different questions. None of them is an essay. The spec sets the standard. `DECISIONS.md` records the trail, `CRITIQUE.md` records the honest gap, and the checks provide evidence.
+
+### The Loop
+
+```text
+client need
+    |
+    v
+  SPEC.md ------------> build ------------> checks
+    ^                                        |
+    |                                        v
+    +-------- replication test <-------- CRITIQUE.md
+```
+
+The replication test is the arrow that returns to the spec. It is the feedback loop that most projects skip.
+
+### The Readers
+
+| Reader | What they need from the spec |
+|---|---|
+| Maria | Scope, cost, what she will get, and what she will not |
+| Dev | Content fields, update effort, and who owns each item |
+| Alex | Maintenance load, hosting constraints, and plugin count |
+| The builder | Tasks, constraints, and acceptance criteria |
+| The checker | Criteria that can become checks |
+
+If one reader cannot answer their question, the spec is incomplete for that reader. The client, the content owner, the maintainer, the builder and the checker need the same decisions, even when they need different documents.
+
+### The One-Page Test
+
+Can a stranger answer these five questions from the spec alone?
+
+1. Who is the site for?
+2. What must each person be able to do?
+3. What content exists, and who changes it?
+4. What does done look like?
+5. What is excluded?
+
+If any answer is missing, the spec is not ready for a replication test.
+
+## Business Applications
+
+A spec is a quoting tool. A fixed-price quote without one is a guess. With one, the vendor prices the Must items, lists assumptions, and states what a change will cost.
+
+It also controls change. The out-of-scope list turns "can you just add online ordering" into a conversation about budget and date. The change clause gives both sides a procedure.
+
+The same document supports handover. The next developer can rebuild or maintain the site without your chat history. A replication test is part of the handover. It shows whether the written record is enough for a stranger.
+
+The cheapest time to find a missing requirement is before the build. The assessment conversation is an expensive place to discover it. The replication test is a pre-mortem with a stopwatch.
+
+For AI projects, the spec is the difference between directing an agent and discovering what it decided. The agent can produce a site in an afternoon. The spec decides whether that site is the one the client needed.
+
+::: {.callout-note}
+## Skills You Are Building
+This develops evaluating and improving solutions, analysing stakeholder requirements, and professional communication. A clear spec is how a business student turns a client conversation into a build that can be checked.
+:::
+
+## Practice Exercises
+
+::: {.callout-note}
+## Exercise Levels
+- **Level 1**: Direct application
+- **Level 2**: Minor modifications
+- **Level 3**: Combining concepts
+- **Level 4**: Problem-solving
+- **Level 5**: Open-ended design
+:::
+
+### Exercise 2.1: Label the Parts (Level 1)
+
+Read this excerpt from a `SPEC.md`.
+
+```markdown
+## Purpose
+Let local customers find the current menu, hours and booking action on a phone.
+
+## Users and top tasks
+| User | Task | Context |
+|---|---|---|
+| Local customer | Book a table | Phone, on the bus |
+
+## Content
+- Weekly menu: week starting, sections, items, prices.
+- Opening hours: day, open, close.
+
+## Design tokens
+--colour-ink: #2b2118
+--space-unit: 4px
+
+## Acceptance criteria
+1. The booking action is visible at 375px without scrolling.
+2. The site feels warm and professional.
+
+## Out of scope
+Online payments, accounts, a native app.
+```
+
+Label each part: purpose, user, task, content type, token, acceptance criterion, out of scope. Then answer:
+
+1. Which content type is missing, given that the site takes bookings?
+2. Which acceptance criterion fails the four tests, and why?
+3. Rewrite the weak criterion so it can be marked pass or fail.
+
+**Done when:** every part is labelled, the missing content type is named, and the weak criterion is rewritten.
+
+### Exercise 2.2: From Vague to Checkable (Level 2)
+
+Rewrite each statement as an acceptance criterion that passes the four tests.
+
+1. The site should look professional.
+2. It needs to work on mobile.
+3. The menu should be easy to update.
+4. The site should be accessible.
+5. Booking should be quick.
+
+For each criterion, name the condition and the observable result. Then swap with a classmate and mark each other's criteria pass or fail without asking what they meant.
+
+**Done when:** a classmate can mark every criterion without asking you a question.
+
+### Exercise 2.3: Five Criteria from Maria's Brief (Level 3)
+
+Use Maria's email and your franchise fact sheet. Write five Must acceptance criteria for your site. Include at least one for each area:
+
+- the menu
+- the booking flow
+- the 375px layout
+- content editing by Dev
+- accessibility
+
+Then add one Should item and one Won't item. Identify one conflict between Maria, Dev, Sam and Alex, and state how the spec resolves it.
+
+**Done when:** all five criteria pass the four tests, and the conflict is resolved in writing.
+
+### Exercise 2.4: Run a Replication Test (Level 4)
+
+Swap specs with a classmate. Do not show them your site, your repository, your screenshots or your chat. Use a fresh agent session and an empty folder. Give the agent only the spec and the fact sheet.
+
+Record:
+
+- which Must criteria were met
+- the biggest gap
+- the gap type
+- the one sentence you would add
+
+Revise your classmate's spec. The chat is not the deliverable. Return the spec with the gap table and a new version number.
+
+**Done when:** you can name the sentence that would have prevented the biggest gap, and the spec has a new version.
+
+::: {.callout-warning}
+## A replica with the original open is not a test
+If the agent can see the original site, it will copy the original. Use an empty folder and a fresh session. The test measures the spec. It does not measure the agent's ability to browse your repository.
+:::
+
+### Exercise 2.5: The Current-Build Trap (Level 4)
+
+Take your `SPEC.md` v0. Mark every sentence that describes the build rather than the client's need. Rewrite three of them. For each, explain what a new builder would do differently after the rewrite.
+
+**Done when:** the rewritten sentences still make sense if the current build is deleted.
+
+### Exercise 2.6: The Contract (Level 5)
+
+Write `SPEC.md` v1 for your franchise. Include:
+
+- purpose
+- users and top tasks
+- content model
+- design tokens
+- Must, Should and Won't
+- constraints
+- at least six acceptance criteria
+- out of scope
+- assumptions
+- a change clause
+- sign-off
+
+Then write 300 words defending one trade-off among the competing priorities of Maria, Dev, Sam and Alex. Name what you gave up and why. Record the decision in `DECISIONS.md`.
+
+**Done when:** a stranger could build from the spec, and the trade-off is recorded with the rejected option.
+
+## Chapter Summary
+
+- A spec is a contract. It records who the site serves, what done means, and what is excluded.
+- Users are defined by their tasks and context. Internal users belong in the spec.
+- A content model names what the client edits, how often, and which fields each item needs.
+- Design tokens turn taste into named decisions that can be applied and checked.
+- Acceptance criteria are observable, specific, implementation-free and decidable.
+- The current build is evidence. The spec describes the client's need.
+- The replication test measures the spec by giving it to a fresh builder and classifying the gaps.
+- Revise the spec after a failed test. A chat fix does not survive the session.
+
+## Reflection
+
+Before moving on, ensure you can:
+
+- [ ] Explain the difference between a wish list and a contract
+- [ ] Write a user task with a device and a context
+- [ ] Model content by type, fields, owner and update frequency
+- [ ] Turn a mood adjective into design tokens and a checkable criterion
+- [ ] Write five criteria that pass the four tests
+- [ ] Tell a sentence that describes the build from one that describes the need
+- [ ] Run a replication test and classify the gaps
+- [ ] Name one thing your spec still does not settle
+
+## Your Learning Journal
+
+Record your responses to these prompts:
+
+1. **The gap I almost filled**: Which question did you answer with a guess? What would you ask instead?
+
+2. **The conflict**: Where did two stakeholders disagree? What did you choose, and what did you give up?
+
+3. **The replication**: What did the fresh builder misunderstand? What did that teach you about your words?
+
+4. **The current build**: Which sentence in your spec described what you had already built? How did you rewrite it?
+
+5. **Client translation**: How would you explain the value of a spec to Maria in two sentences, without technical language?
+
+## Next Steps
+
+@sec-structure shows how to turn the content model into semantic HTML. Start with the content model and let the page structure follow it.
+
+@sec-presentation shows how to apply the design tokens consistently. The tokens you agreed in the spec become the only values the build should use.
+
+The next practice chapter, **Checks That Run**, turns acceptance criteria into checks that a machine can run. The spec tells you what to check. The checks tell you whether the build still meets it.
+
+@sec-agent-ready shows how to turn a repeated workflow, such as the replication test, into a reusable skill.

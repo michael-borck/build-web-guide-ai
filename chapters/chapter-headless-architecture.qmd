@@ -45,7 +45,7 @@ The central kitchen can supply a fine dining restaurant, a casual café, and a f
 
 ### Exploration 1: Architecture Trade-offs
 
-Every architecture has trade-offs. Let's explore them:
+Every architecture has trade-offs:
 
 ```text
 Ask your AI:
@@ -129,7 +129,7 @@ Why or why not?
 
 ## From Concept to Code
 
-Let's explore the WordPress REST API and understand how to consume content from an external frontend.
+The sections below use the WordPress REST API to feed content to an external frontend.
 
 ### The WordPress REST API
 
@@ -342,7 +342,7 @@ Let's build a simple frontend that displays WordPress posts:
 </html>
 ```
 
-Save this as an HTML file and open it in a browser. It fetches posts from your local WordPress site and displays them, completely independently of WordPress themes.
+Save this as an HTML file and open it in a browser. It fetches posts from your local WordPress site and displays them independently of WordPress themes.
 
 ```text
 Ask your AI:
@@ -493,7 +493,7 @@ Headless adds complexity:
 - Some WordPress plugins don't work
 - More technical expertise required
 
-This complexity has costs. Headless is a tool, use it when benefits outweigh costs.
+This complexity has costs, so use headless when the benefits outweigh them.
 
 ## Business Applications
 
@@ -539,7 +539,7 @@ Modern frontend developers often prefer:
 - TypeScript
 - Modern build tools
 
-Headless lets them use their preferred tools while leveraging WordPress's content management.
+Headless lets them use their preferred tools while using WordPress's content management.
 
 ::: {.callout-note}
 ## Skills You Are Building
@@ -557,7 +557,7 @@ This develops **making and defending technology choices** and **assessing emergi
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 10.1: Explore the API (Level 1)
+### Exercise 13.1: Explore the API (Level 1)
 
 Using your local WordPress site:
 
@@ -568,7 +568,7 @@ Using your local WordPress site:
 
 Document your findings with screenshots.
 
-### Exercise 10.2: Build a Post List (Level 2)
+### Exercise 13.2: Build a Post List (Level 2)
 
 Create an HTML page that:
 
@@ -579,7 +579,7 @@ Create an HTML page that:
 
 Test it in your browser.
 
-### Exercise 10.3: Filter and Search (Level 3)
+### Exercise 13.3: Filter and Search (Level 3)
 
 Extend your post list to include:
 
@@ -589,7 +589,7 @@ Extend your post list to include:
 
 This combines API parameters with JavaScript event handling.
 
-### Exercise 10.4: Architecture Recommendation (Level 4)
+### Exercise 13.4: Architecture Recommendation (Level 4)
 
 A regional newspaper wants to modernise their digital presence. They have:
 
@@ -606,7 +606,7 @@ Write a 400-word recommendation addressing:
 - What would you implement first?
 - How would you handle the transition?
 
-### Exercise 10.5: Architecture Design (Level 5)
+### Exercise 13.5: Architecture Design (Level 5)
 
 Design a headless architecture for a restaurant group with:
 
@@ -659,7 +659,7 @@ Record your responses to these prompts:
 
 ## Next Steps
 
-You've completed Part II: Content Management for Business. You understand:
+You've completed the content management chapters. You understand:
 
 - Why CMS matters and when to use one
 - WordPress as a platform with an ecosystem
@@ -668,4 +668,4 @@ You've completed Part II: Content Management for Business. You understand:
 
 In @sec-project-business-site, you'll build a complete WordPress business site, applying everything from this part. This project demonstrates your ability to make and implement technology decisions for real business needs.
 
-Then, in Part III, we'll build on the API knowledge from this chapter to create React frontends, bringing modern frontend development into your skillset.
+Then, in the modern frontend chapters, we'll build on the API knowledge from this chapter to create React frontends, bringing modern frontend development into your skillset.

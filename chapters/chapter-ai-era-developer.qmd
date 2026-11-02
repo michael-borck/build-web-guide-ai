@@ -2,9 +2,9 @@
 
 ## The Concept First
 
-Throughout this book, you've learned web development with AI as your partner. You've used AI to explore concepts, debug problems, generate code, and build understanding. Now, as we conclude, let's step back and ask: **What does it mean to be a developer in an era where AI can write code?**
+Throughout this book, you've learned web development with AI as your partner. You've used AI to explore concepts, debug problems, generate code, and build understanding. Now ask: **What does it mean to be a developer in an era where AI can write code?**
 
-This isn't a question about job security, though that concern is understandable. It's a deeper question about **value, identity, and skill**.
+Job security is part of that question, but the larger part is where your value lies and which skills matter.
 
 Consider what you've actually done in this course:
 
@@ -17,29 +17,29 @@ Consider what you've actually done in this course:
 
 AI assisted with all of this. But AI didn't do any of this **for** you. The judgment, understanding, and decision-making were yours.
 
-That's the core insight: AI amplifies human capability. It doesn't replace human judgment.
+AI amplifies human capability rather than replacing human judgment.
 
 ## Understanding Through Partnership Evolution
 
 Think about how your relationship with AI has evolved through this book.
 
-**Early in your journey** (Part II: Web Foundations):
+**Early in your journey** (the Web Foundations chapters):
 - AI explained concepts
 - You asked "how does this work?"
 - AI provided examples
 - You learned fundamentals
 
-**As you grew** (Parts III–IV: platforms and components):
+**As you grew** (the platform and component chapters):
 - You asked "which approach is better?"
 - AI provided options with trade-offs
 - You made decisions based on context
 - AI helped implement your decisions
 
-**Now** (Part V: The Professional Developer):
+**Now** (the professional developer chapters):
 - You ask "is this appropriate for this situation?"
 - AI provides analysis
 - You evaluate and judge
-- The partnership is truly collaborative
+- The partnership is collaborative
 
 This evolution reflects how professionals actually work with AI. Beginners need more guidance. Experts need thinking partners. The AI adapts to where you are.
 
@@ -61,7 +61,7 @@ automated by AI in the foreseeable future? Be specific about why
 each aspect resists automation.
 ```
 
-Key areas that remain human:
+Areas that remain human:
 
 **Problem definition**: AI can solve problems; it struggles to identify which problems matter. "We need better user engagement" is a human judgment. AI can't determine what "better" means for your specific business.
 
@@ -155,7 +155,7 @@ What remains constant:
 
 ### Patterns for AI Collaboration
 
-Throughout this course, you've developed patterns for working with AI. Let's make them explicit.
+Throughout this course, you've developed patterns for working with AI:
 
 **Pattern 1: Exploration Before Implementation**
 
@@ -195,7 +195,7 @@ Better:
 4. [Continue incrementally]
 ```
 
-Complex systems are built incrementally. AI helps with each step, not magic solutions.
+Complex systems are built incrementally. AI helps with each step.
 
 **Pattern 4: Context-Rich Requests**
 
@@ -209,17 +209,15 @@ too small and doesn't stand out enough. Suggest improvements that
 maintain accessibility."
 ```
 
-Context enables better AI assistance.
-
 **Pattern 5: Critical Review**
 
 When AI generates code:
 
-1. **Read it** – Don't copy blindly
-2. **Understand it** – Can you explain each line?
-3. **Test it** – Does it actually work?
-4. **Evaluate it** – Is this the right approach?
-5. **Adapt it** – Modify for your specific needs
+1. **Read it:** don't copy blindly
+2. **Understand it:** can you explain each line?
+3. **Test it:** does it actually work?
+4. **Evaluate it:** is this the right approach?
+5. **Adapt it:** modify it for your specific needs
 
 ### Maintaining Your Skills
 
@@ -364,7 +362,7 @@ Level 4: Director
 - AI is your tool, not your crutch
 ```
 
-Progress through these levels by maintaining your independent capability while leveraging AI appropriately.
+Progress through these levels by maintaining your independent capability while using AI appropriately.
 
 ## Business Applications
 
@@ -377,7 +375,7 @@ AI-assisted development can improve both speed and quality, if used well:
 - **Learning**: Faster skill acquisition
 - **Exploration**: Try more approaches
 
-The key: time saved on rote tasks should be invested in higher-value activities (design, testing, user research), not just producing more code faster.
+Time saved on rote tasks should be invested in higher-value activities (design, testing, user research), not just producing more code faster.
 
 ### Team Dynamics
 
@@ -421,7 +419,7 @@ This develops all the core professional skills, particularly **evaluating and im
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 18.1: AI Interaction Analysis (Level 1)
+### Exercise 21.1: AI Interaction Analysis (Level 1)
 
 Review your AI conversations from throughout this book:
 
@@ -430,7 +428,7 @@ Review your AI conversations from throughout this book:
 3. For each, identify what made the interaction effective or ineffective
 4. Write patterns you'll use going forward
 
-### Exercise 18.2: Manual Implementation (Level 2)
+### Exercise 21.2: Manual Implementation (Level 2)
 
 Build a small component **without** AI assistance:
 
@@ -439,7 +437,7 @@ Build a small component **without** AI assistance:
 3. Compare: What was harder? What did you understand better?
 4. Reflect on the value of both approaches
 
-### Exercise 18.3: AI Code Review (Level 3)
+### Exercise 21.3: AI Code Review (Level 3)
 
 Practice reviewing AI-generated code:
 
@@ -449,7 +447,7 @@ Practice reviewing AI-generated code:
 4. Discuss the improvements with AI
 5. Implement the final version
 
-### Exercise 18.4: Partnership Optimisation (Level 4)
+### Exercise 21.4: Partnership Optimisation (Level 4)
 
 Develop your personal AI collaboration framework:
 
@@ -458,7 +456,7 @@ Develop your personal AI collaboration framework:
 3. Define boundaries (when you will/won't use AI)
 4. Write guidelines for a team member new to AI tools
 
-### Exercise 18.5: Future Preparation (Level 5)
+### Exercise 21.5: Future Preparation (Level 5)
 
 Create a 12-month professional development plan that accounts for AI:
 
@@ -528,12 +526,10 @@ You now have:
 - **Professional practices** for quality work
 - **Career frameworks** for ongoing growth
 
-More importantly, you have **the ability to learn**. Technologies will change. Frameworks will evolve. AI capabilities will expand. But your foundation, understanding how to think about problems, evaluate solutions, communicate with stakeholders, and collaborate with tools, remains valuable.
+You also have **the ability to learn**. Technologies will change. Frameworks will evolve. AI capabilities will expand. But your foundation, understanding how to think about problems, evaluate solutions, communicate with stakeholders, and collaborate with tools, remains valuable.
 
-The developers who thrive in the AI era won't be those who resist AI or those who depend on AI. They'll be those who partner with AI thoughtfully, maintaining their own judgment, understanding, and skills while leveraging AI to amplify their capability.
+The developers who thrive in the AI era won't be those who resist AI or those who depend on AI. They'll be those who partner with AI thoughtfully, maintaining their own judgment, understanding, and skills while using AI to amplify their capability.
 
-You've built that foundation here.
-
-Now go build something. Make mistakes. Learn from them. Collaborate with AI. Create value for others. Contribute to the community. Keep growing.
+Now build something, learn from your mistakes, collaborate with AI, and contribute to the community.
 
 **Welcome to your career as a web professional.**

@@ -6,13 +6,13 @@ HTML provides structure. CSS provides presentation. JavaScript provides **behavi
 
 Consider a contact form. HTML creates the fields and the submit button. CSS makes it look professional. But what happens when someone clicks "Submit"? What validates their input? What shows them a success message? That's JavaScript.
 
-JavaScript transforms static documents into dynamic applications. It's what makes modern web experiences feel responsive and alive, dropdown menus that expand, forms that validate as you type, content that loads without page refreshes.
+JavaScript makes pages respond without a reload: dropdown menus expand, forms validate as you type, and content loads in place.
 
-But here's an important perspective: **JavaScript should enhance, not replace, structure and presentation**. A well-built page works without JavaScript. JavaScript makes it work *better*.
+But **JavaScript should enhance, not replace, structure and presentation**. A well-built page works without JavaScript. JavaScript makes it work *better*.
 
 ## Understanding Through Conversation
 
-A static webpage is like a poster on a wall. You can look at it, but it can't respond to you. It just... sits there.
+A static webpage is like a poster on a wall. You can look at it, but it can't respond to you.
 
 JavaScript makes your page more like a conversation:
 
@@ -72,8 +72,6 @@ what actually happens.
 ```
 
 ### Exploration 3: Progressive Enhancement
-
-Here's a philosophy that separates professional developers from amateurs:
 
 ```text
 Ask your AI:
@@ -217,7 +215,7 @@ const firstCard = document.querySelector('.card');
 const allCards = document.querySelectorAll('.card');
 ```
 
-`querySelector` uses CSS selector syntax, the same patterns you learned in Chapter 3. This consistency makes finding elements intuitive.
+`querySelector` uses CSS selector syntax, the same patterns you learned in Chapter 6. This consistency makes finding elements intuitive.
 
 ### Changing Elements
 
@@ -340,7 +338,7 @@ form.addEventListener('submit', function(event) {
 });
 ```
 
-This validates as the user types and again on submission. Note: HTML5 provides `type="email"` validation too. JavaScript enhances the feedback, not replaces the baseline.
+This validates as the user types and again on submission. Note: HTML5 provides `type="email"` validation too. JavaScript improves the feedback on top of that baseline.
 
 ```text
 Ask your AI:
@@ -386,7 +384,7 @@ Each layer builds on the one below. JavaScript manipulates the DOM (HTML structu
 
 ### Debugging with Console
 
-The browser console is your debugging friend:
+The browser console is your main debugging tool:
 
 ```javascript
 console.log('The value is:', someVariable);  // Print values
@@ -427,7 +425,7 @@ Client-side validation improves user experience, but *never* trust it for securi
 
 ### Dynamic Content
 
-Loading content without page refreshes (covered more in Chapter 5) makes applications feel faster. Users don't wait for full page reloads when they just need one small update.
+Loading content without page refreshes (covered more in Chapter 8) makes applications feel faster. Users don't wait for full page reloads when they just need one small update.
 
 ### Analytics and User Behaviour
 
@@ -449,7 +447,7 @@ This develops **evaluating and improving solutions** and **translating stakehold
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 4.1: Console Exploration (Level 1)
+### Exercise 7.1: Console Exploration (Level 1)
 
 Open any webpage and open the browser console (F12 → Console). Try these:
 
@@ -459,7 +457,7 @@ Open any webpage and open the browser console (F12 → Console). Try these:
 
 What happened? Refresh the page, is your change permanent? Why or why not?
 
-### Exercise 4.2: Button Interaction (Level 2)
+### Exercise 7.2: Button Interaction (Level 2)
 
 Create an HTML page with a button and a paragraph. Write JavaScript that:
 
@@ -469,7 +467,7 @@ Create an HTML page with a button and a paragraph. Write JavaScript that:
 
 Test it in your browser. Use `console.log()` to confirm your click handler runs.
 
-### Exercise 4.3: Character Counter (Level 3)
+### Exercise 7.3: Character Counter (Level 3)
 
 Create a textarea with a character limit display, like social media post composers:
 
@@ -480,7 +478,7 @@ Create a textarea with a character limit display, like social media post compose
 
 This combines DOM queries, event listeners, conditionals, and class manipulation.
 
-### Exercise 4.4: Progressive Enhancement Audit (Level 4)
+### Exercise 7.4: Progressive Enhancement Audit (Level 4)
 
 Find a website that heavily uses JavaScript (a web application). Disable JavaScript in your browser (Settings → Privacy → JavaScript) and try to use the site.
 
@@ -490,7 +488,7 @@ Find a website that heavily uses JavaScript (a web application). Disable JavaScr
 
 Write a 300-word assessment of this site's JavaScript dependency and its business implications.
 
-### Exercise 4.5: Interactive Feature Design (Level 5)
+### Exercise 7.5: Interactive Feature Design (Level 5)
 
 A local bookshop wants their website to have an interactive "Book Finder" feature. Users should be able to filter books by genre, search by title, and sort by price or rating.
 
@@ -538,6 +536,6 @@ Record your responses to these prompts:
 
 You can now build pages that respond to users. But modern web applications do more, they connect to services, fetch data, and send information to servers.
 
-In @sec-connection, we'll explore APIs, how your JavaScript can request data from external services and submit data to be processed. This transforms your pages from standalone documents into connected applications that interact with the wider web.
+In @sec-connection, we'll explore APIs, how your JavaScript can request data from external services and submit data to be processed. That connects your pages to external services and the wider web.
 
 The JavaScript fundamentals you've learned become the foundation for asynchronous programming and data-driven interfaces.

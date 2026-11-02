@@ -2,9 +2,9 @@
 
 ## The Concept First
 
-In Part I, you built websites by writing code. Every heading, every paragraph, every image, you placed them precisely where they belonged. You had complete control.
+In the Web Foundations chapters, you built websites by writing code. Every heading, every paragraph, every image, you placed them precisely where they belonged. You had complete control.
 
-But here's the business reality: most websites need regular content updates, and most content updates shouldn't require a developer.
+Most business websites need regular content updates, and most content updates shouldn't require a developer.
 
 Consider a small business website. The owner wants to:
 
@@ -17,7 +17,7 @@ If every change requires editing HTML files and redeploying, that business has a
 
 A **Content Management System (CMS)** solves this by separating content from code. The developer builds the structure and design once. Then, the business owner, without touching code, can create, edit, and publish content through a friendly interface.
 
-This isn't a technical convenience. It's a **business architecture decision** that affects costs, maintenance, and who controls what.
+That makes a CMS a **business architecture decision**, one that affects costs, maintenance, and who controls what.
 
 ## Understanding Through Roles
 
@@ -28,7 +28,7 @@ Think about how a newspaper works:
 - **Designers** create the newspaper's visual templates and structure.
 - **Printers** produce the physical paper at scale.
 
-Each role has expertise. Each focuses on their domain. The journalist doesn't need to understand printing presses; they need a system that accepts their article and handles everything else.
+Each role has its own expertise and focuses on its domain. The journalist doesn't need to understand printing presses; they need a system that accepts their article and handles everything else.
 
 A CMS creates similar role separation for websites:
 
@@ -37,7 +37,7 @@ A CMS creates similar role separation for websites:
 - **Developers** build themes, extend functionality, and handle technical concerns
 - **Visitors** see the published result
 
-The magic is that content creators never see code. Developers rarely touch content. Each role works in their comfort zone, and the system coordinates.
+Content creators never see code. Developers rarely touch content. Each role works in their comfort zone, and the system coordinates.
 
 ::: {.callout-tip}
 ## The Handoff Test
@@ -116,7 +116,7 @@ This should reveal that technology decisions come *after* understanding:
 
 ## From Concept to Code (Understanding CMS Architecture)
 
-While this chapter focuses on concepts, let's understand what a CMS actually does technically.
+While this chapter focuses on concepts, let's understand what a CMS does technically.
 
 ### The Core Separation
 
@@ -162,7 +162,7 @@ Not all CMSs work the same way:
 
 ### WordPress: The Dominant CMS
 
-WordPress powers over 40% of all websites. That's not a typo, nearly half of the web runs on this one platform.
+WordPress powers over 40% of all websites: nearly half of the web runs on this one platform.
 
 Why? Because it hits a sweet spot:
 
@@ -172,7 +172,7 @@ Why? Because it hits a sweet spot:
 - **Accessible**: Non-developers can manage content
 - **Extensible**: Developers can customise deeply
 
-We'll spend Chapters 6-8 learning WordPress properly, not just how to use it, but how to evaluate it professionally and extend it when needed.
+We'll spend the WordPress chapters learning to use WordPress properly, evaluate it professionally, and extend it when needed.
 
 ### The CMS Decision Framework
 
@@ -199,7 +199,7 @@ and what type might be appropriate.
 
 ### Content as Structured Data
 
-In a CMS, content isn't just text, it's structured data with defined fields:
+In a CMS, content is structured data with defined fields:
 
 ```text
 Blog Post:
@@ -242,7 +242,7 @@ Template: "Single Blog Post"
 
 The template pulls fields from the content and arranges them. Change the template, and every post's appearance changes. Change one post's content, and only that post changes.
 
-This separation is powerful: designers work on templates, writers work on content, neither needs to understand the other's domain.
+This separation lets designers work on templates while writers work on content, and neither needs to understand the other's domain.
 
 ### The Permission Layer
 
@@ -259,7 +259,7 @@ These roles prevent accidents ("The intern deleted the homepage") and enable wor
 
 ### Client Handoff
 
-The true measure of a successful website project isn't launch day, it's whether the client can maintain it independently. A CMS-based site can be handed off with training:
+A website project succeeds when the client can maintain the site independently after launch. A CMS-based site can be handed off with training:
 
 "Here's how you add a new blog post. Here's how you update your hours. Here's how you add a team member."
 
@@ -278,7 +278,7 @@ Without a CMS:
 - Content changes: Developer required ($$$)
 - Everything requires technical involvement
 
-Over years, this difference compounds significantly.
+Over years, this difference compounds.
 
 ### Content Governance
 
@@ -317,7 +317,7 @@ This develops **translating stakeholder needs into technical requirements** and 
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 7.1: CMS Identification (Level 1)
+### Exercise 10.1: CMS Identification (Level 1)
 
 Visit five local business websites. For each:
 
@@ -327,7 +327,7 @@ Visit five local business websites. For each:
 
 Document your findings. What patterns do you notice about businesses that use CMS versus those that don't?
 
-### Exercise 7.2: Stakeholder Analysis (Level 2)
+### Exercise 10.2: Stakeholder Analysis (Level 2)
 
 For a hypothetical dental practice website, identify:
 
@@ -338,7 +338,7 @@ For a hypothetical dental practice website, identify:
 
 Create a stakeholder matrix mapping needs to CMS requirements.
 
-### Exercise 7.3: Content Audit (Level 3)
+### Exercise 10.3: Content Audit (Level 3)
 
 Choose a small business website (could be a local business or a fictional scenario). Conduct a content audit:
 
@@ -349,7 +349,7 @@ Choose a small business website (could be a local business or a fictional scenar
 
 Based on your audit, would you recommend a CMS? Why or why not?
 
-### Exercise 7.4: CMS Recommendation (Level 4)
+### Exercise 10.4: CMS Recommendation (Level 4)
 
 A boutique fitness studio approaches you. They want a website with:
 
@@ -368,7 +368,7 @@ Write a 300-word recommendation addressing:
 - What content types you'd create
 - What the client could manage versus what needs developer involvement
 
-### Exercise 7.5: Build vs Buy Analysis (Level 5)
+### Exercise 10.5: Build vs Buy Analysis (Level 5)
 
 A tech startup wants a unique, highly interactive product landing page with animated demonstrations, custom calculators, and unusual layouts. They update content quarterly and have developers on staff.
 
@@ -380,12 +380,12 @@ For each:
 2. Argue the case against using a CMS
 3. Make and defend your recommendation
 
-This exercise has no single correct answer, develop your ability to weigh trade-offs and justify decisions (making and defending technology choices).
+This exercise has no single correct answer. Develop your ability to weigh trade-offs and justify decisions (making and defending technology choices).
 
 ## Chapter Summary
 
 - A CMS separates content from code, enabling non-technical users to manage websites
-- The decision to use a CMS is a business architecture decision, not just a technical one
+- Choosing a CMS is a business architecture decision as well as a technical one
 - Different stakeholders have different needs; CMS choice should balance these
 - Content strategy (what content, who creates it, how often it changes) precedes technology choice
 - WordPress dominates the CMS market due to its flexibility, ecosystem, and accessibility
@@ -416,6 +416,6 @@ Record your responses to these prompts:
 
 ## Next Steps
 
-You now understand why CMS matters and when to use one. In @sec-wordpress-platform, we'll dive deep into WordPress, not as a blogging tool, but as a professional platform.
+You now understand why CMS matters and when to use one. In @sec-wordpress-platform, we'll look closely at WordPress as a professional platform.
 
-We'll set up a local development environment, understand WordPress's architecture, and learn to evaluate it critically. This isn't about clicking through menus, it's about understanding a platform that powers nearly half the web and knowing when it's the right (or wrong) choice for a project.
+We'll set up a local development environment, understand WordPress's architecture, and learn to evaluate it critically. You will learn how the platform works and when it is the right (or wrong) choice for a project.

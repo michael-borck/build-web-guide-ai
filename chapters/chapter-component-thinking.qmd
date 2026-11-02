@@ -15,7 +15,7 @@ Components are self-contained pieces of UI. Each component:
 - Renders its own output
 - Can be reused anywhere
 
-This isn't just a technical convenience, it's a fundamentally different way of building interfaces. Once you think in components, you'll see every UI as a composition of reusable pieces.
+That changes how you build interfaces. Once you think in components, you'll see every UI as a composition of reusable pieces.
 
 ## Understanding Through LEGO
 
@@ -27,7 +27,7 @@ Consider how LEGO works:
 - You can **replace** one brick without rebuilding everything
 - Instructions show **composition**, not monolithic assembly
 
-React components work identically:
+React components work the same way:
 
 - Each component is self-contained with consistent interfaces (props)
 - Complex UIs emerge from combining simple components
@@ -35,7 +35,7 @@ React components work identically:
 - You can update one component without touching others
 - Your code shows composition: components containing components
 
-A webpage isn't a monolithic HTML document, it's a tree of components, each responsible for its own piece of the interface.
+Treat a webpage as a tree of components, each responsible for its own piece of the interface.
 
 ::: {.callout-tip}
 ## The Decomposition Instinct
@@ -545,7 +545,7 @@ Build a `Button` component once with variants (primary, secondary, danger). Use 
 
 ### Maintainability
 
-When a feature needs updating, you know exactly which component to modify. Components are isolated, changes don't ripple unexpectedly.
+When a feature needs updating, you know which component to modify. Components are isolated, changes don't ripple unexpectedly.
 
 ### Team Collaboration
 
@@ -575,7 +575,7 @@ This develops **evaluating and improving solutions** and **making and defending 
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 12.1: First Component (Level 1)
+### Exercise 15.1: First Component (Level 1)
 
 Create a React project with Vite and build a `Greeting` component that:
 
@@ -583,7 +583,7 @@ Create a React project with Vite and build a `Greeting` component that:
 2. Displays "Hello, {name}!"
 3. Is used three times in `App` with different names
 
-### Exercise 12.2: Stateful Component (Level 2)
+### Exercise 15.2: Stateful Component (Level 2)
 
 Build a `LikeButton` component that:
 
@@ -592,7 +592,7 @@ Build a `LikeButton` component that:
 3. Increments the count when clicked
 4. Changes colour when count > 0
 
-### Exercise 12.3: List Rendering (Level 3)
+### Exercise 15.3: List Rendering (Level 3)
 
 Build a `TaskList` component that:
 
@@ -601,7 +601,7 @@ Build a `TaskList` component that:
 3. Each `TaskItem` shows the task text and a "Complete" button
 4. Clicking "Complete" removes the task (hint: lift state up)
 
-### Exercise 12.4: Data Fetching (Level 4)
+### Exercise 15.4: Data Fetching (Level 4)
 
 Build a `UserList` component that:
 
@@ -611,7 +611,7 @@ Build a `UserList` component that:
 4. Renders each user as a `UserCard` with name and email
 5. Allows clicking a user to show more details
 
-### Exercise 12.5: WordPress Integration (Level 5)
+### Exercise 15.5: WordPress Integration (Level 5)
 
 Build a mini blog frontend that:
 
@@ -660,4 +660,4 @@ Record your responses to these prompts:
 
 You can now build component-based interfaces and fetch data from APIs. But styling components from scratch takes time.
 
-In @sec-rapid-development, we'll explore CSS frameworks. Bootstrap and Tailwind, that provide pre-built styles and utilities. Combined with React, these tools enable rapid professional development without designing every button and layout from scratch.
+In @sec-rapid-development, we'll explore CSS frameworks such as Bootstrap and Tailwind, which provide pre-built styles and utilities. Combined with React, these tools enable rapid professional development without designing every button and layout from scratch.

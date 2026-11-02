@@ -2,13 +2,13 @@
 
 ## The Concept First
 
-Before we write any HTML, let's understand what we're really doing: **organising information so both humans and machines can understand it**.
+Before we write any HTML, consider what it does: **organising information so both humans and machines can understand it**.
 
-Every document you've ever read has structure. A book has chapters, sections, and paragraphs. A business report has headings, bullet points, and tables. A restaurant menu has categories, items, and descriptions. This structure isn't decoration, it's how we communicate meaning.
+Every document you've ever read has structure. A book has chapters, sections, and paragraphs. A business report has headings, bullet points, and tables. A restaurant menu has categories, items, and descriptions. Structure is how documents communicate meaning.
 
 HTML (HyperText Markup Language) is simply the language we use to describe document structure for the web. When you write HTML, you're not designing how something looks, you're declaring what something *is*.
 
-This distinction matters enormously. A heading isn't big, bold text. A heading *is* a heading, a structural element that indicates hierarchy and importance. How it appears is a separate concern entirely.
+A heading isn't big, bold text. A heading *is* a heading, a structural element that indicates hierarchy and importance. How it appears is a separate concern.
 
 ## Understanding Through Architecture
 
@@ -28,7 +28,7 @@ Now think about a web page:
 - **Links** connect pages and resources
 - **Web standards** ensure accessibility across devices
 
-The parallel is precise. An architect doesn't just make a building that stands, they create spaces that people can navigate, understand, and use. A web developer doesn't just make a page that displays, they create documents that humans can read and machines can process.
+An architect doesn't just make a building that stands, they create spaces that people can navigate, understand, and use. A web developer doesn't just make a page that displays, they create documents that humans can read and machines can process.
 
 ::: {.callout-tip}
 ## The Architecture Mindset
@@ -220,7 +220,7 @@ Here are the structural elements you'll use most often:
 
 ::: {.callout-warning}
 ## Common Mistake
-Don't choose elements based on how they look by default. Choose them based on what the content *is*. A `<section>` isn't "a box", it's a thematic grouping of content. Appearance is CSS's job (Chapter 3).
+Don't choose elements based on how they look by default. Choose them based on what the content *is*. A `<section>` isn't "a box", it's a thematic grouping of content. Appearance is CSS's job (Chapter 6).
 :::
 
 ### Headings Create Hierarchy
@@ -294,7 +294,7 @@ Let's clarify terminology:
 
 ### The Box Model Preview
 
-Every HTML element creates an invisible box on the page. These boxes stack and nest according to the document structure. In Chapter 3, we will learn to control these boxes with CSS. For now, understand that structure creates boxes, and boxes create layout.
+Every HTML element creates an invisible box on the page. These boxes stack and nest according to the document structure. In Chapter 6, we will learn to control these boxes with CSS. For now, understand that structure creates boxes, and boxes create layout.
 
 ```text
 Ask your AI:
@@ -320,7 +320,7 @@ confusing?
 
 Screen readers, software used by visually impaired people, navigate by structure. Users can jump between headings, skip to main content, or list all navigation links. Without semantic HTML, this navigation is impossible.
 
-This isn't just ethical, it's often legal. Many jurisdictions require accessible websites for businesses, government, and education.
+Many jurisdictions also require accessible websites for businesses, government, and education, so accessibility carries legal as well as ethical weight.
 
 ### Maintainability
 
@@ -328,7 +328,7 @@ Well-structured HTML is easier to update. When sections are clearly marked, find
 
 ### Professional Credibility
 
-When potential employers or clients view your page source, structure tells them about your professionalism. Clean, semantic HTML signals someone who understands web fundamentals, not just someone who copied code until something worked.
+When potential employers or clients view your page source, structure tells them about your professionalism. Clean, semantic HTML signals that you understand web fundamentals.
 
 ::: {.callout-note}
 ## Skills You Are Building
@@ -346,7 +346,7 @@ This develops **evaluating and improving solutions** and **professional communic
 - **Level 5**: Open-ended design
 :::
 
-### Exercise 2.1: Document Analysis (Level 1)
+### Exercise 5.1: Document Analysis (Level 1)
 
 Find a simple webpage (a local business, a restaurant, a small company). View its source (right-click → View Page Source). Identify:
 
@@ -357,7 +357,7 @@ Find a simple webpage (a local business, a restaurant, a small company). View it
 
 Document your findings. Is this page well-structured or poorly structured? Why?
 
-### Exercise 2.2: Structure First (Level 2)
+### Exercise 5.2: Structure First (Level 2)
 
 Without writing any HTML, create a structural outline for a personal portfolio page. List:
 
@@ -366,9 +366,9 @@ Without writing any HTML, create a structural outline for a personal portfolio p
 - What information belongs in the footer?
 - What's the heading hierarchy?
 
-Then, with your AI partner, translate your outline into semantic HTML. Compare your outline with the final code, did the structure remain clear?
+Then, with your AI partner, translate your outline into semantic HTML. Compare your outline with the final code. Did the structure remain clear?
 
-### Exercise 2.3: Fix the Structure (Level 3)
+### Exercise 5.3: Fix the Structure (Level 3)
 
 Here's a poorly structured page. Identify the problems and rewrite it with proper semantic HTML:
 
@@ -387,7 +387,7 @@ Here's a poorly structured page. Identify the problems and rewrite it with prope
 
 List each problem you find and explain why it matters.
 
-### Exercise 2.4: Business Requirements (Level 4)
+### Exercise 5.4: Business Requirements (Level 4)
 
 A local bakery asks you to create their website. They mention:
 
@@ -396,15 +396,15 @@ A local bakery asks you to create their website. They mention:
 - They want to show their story and values
 - They need contact information and a map
 
-Create a structural plan that addresses their requirements. Which semantic elements would you use for each requirement? Justify your choices in business terms, why does proper structure benefit this bakery?
+Create a structural plan that addresses their requirements. Which semantic elements would you use for each requirement? Justify your choices in business terms: why does proper structure benefit this bakery?
 
-### Exercise 2.5: Semantic Debate (Level 5)
+### Exercise 5.5: Semantic Debate (Level 5)
 
 Should a "team members" section on an About page use `<article>` for each person, or `<section>`, or neither?
 
 Research the HTML specification's definitions for both elements. Have a conversation with your AI partner exploring arguments for each choice. Write a short recommendation (200-300 words) defending your position with evidence from web standards.
 
-This exercise has no single correct answer, it develops your ability to make and defend technical decisions (making and defending technology choices).
+This exercise has no single correct answer. It develops your ability to make and defend technical decisions (making and defending technology choices).
 
 ## Chapter Summary
 
@@ -443,6 +443,6 @@ Record your responses to these prompts:
 
 You now understand how to describe what content *is*. But a page with only HTML looks plain, black text on white background, default fonts, minimal layout.
 
-In @sec-presentation, we'll explore CSS, how to control the visual presentation of our structured content. Structure and presentation are deliberately separate in web development, and understanding why is key to professional practice.
+In @sec-presentation, we'll explore CSS, how to control the visual presentation of our structured content. Structure and presentation are deliberately separate in web development.
 
 The structure you've learned to create becomes the foundation that CSS styles. Good structure makes styling straightforward; poor structure makes it a struggle.
