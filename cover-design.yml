@@ -7,7 +7,7 @@ background: '#E1EAE1'
 title_lines:
 - Build Web,
 - Guide AI
-dark: false
+dark: true
 pixel: false
 scene: web
 art_origin: Locally constructed editable vector illustration.
