@@ -12,6 +12,8 @@ The 2027 edition adds the practices around the build: specify what the client ne
 
 The book covers the full spectrum of web decisions: hand-coded HTML/CSS/JavaScript for control, WordPress for rapid deployment, headless architecture for flexibility, React for modern applications. You learn when to use each one as well as how.
 
+The fundamentals in this book are not there to compete with AI-generated HTML. They are there because you need enough of the layer to specify what the client needs, evaluate whether AI built it correctly, and know when the output is plausible but wrong. That judgement is the trust infrastructure that makes AI-generated web work safe.
+
 ## If You Have Been Vibe Coding Websites
 
 You may have already built a website by prompting AI. For a simple landing page or portfolio, that works. AI generates the HTML, you paste it into a file, it looks fine.
